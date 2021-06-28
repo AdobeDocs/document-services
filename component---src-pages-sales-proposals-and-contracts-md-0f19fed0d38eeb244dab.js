@@ -1,0 +1,2 @@
+(self.webpackChunkdev_site_product_template=self.webpackChunkdev_site_product_template||[]).push([[4971],{5609:function(t,e,n){"use strict";n.r(e),n.d(e,{_frontmatter:function(){return s},default:function(){return f}});var o=n(2122),r=n(9756),u=(n(5007),n(4983)),c=n(9536),p=["components"],s={},a={_frontmatter:s},m=c.Z;function f(t){var e=t.components,n=(0,r.Z)(t,p);return(0,u.mdx)(m,(0,o.Z)({},a,n,{components:e,mdxType:"MDXLayout"}))}f.isMDXComponent=!0}}]);
+//# sourceMappingURL=component---src-pages-sales-proposals-and-contracts-md-0f19fed0d38eeb244dab.js.map
