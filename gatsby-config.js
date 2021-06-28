@@ -195,5 +195,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/pdfservices-api/'
+  pathPrefix: process.env.PATH_PREFIX || '/document-services/'
 };
