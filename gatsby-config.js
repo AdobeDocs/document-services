@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     docs: {
       title: 'View Docs',
-      path: 'https://www.adobe.io/apis/documentcloud/dcsdk/docs.html'
+      path: '/document-services/docs/'
     },
     pages: [
       {
