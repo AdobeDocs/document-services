@@ -3,6 +3,8 @@ title: Adobe Developer — SDK Developer Kit | PDF Library | Adobe Document Serv
 description: Own the end-to-end customer experience. Our SDK Developer kits are customizable & built to last. Find an innovative solution with our PDF SDK here.
 ---
 
+import Carousel from '../components/Carousel'
+
 <Hero slots="image, heading, text1, text2, buttons" variant="fullwidth" background="rgb(250, 105, 85)"/>  
 
 ![](images/bg-hero.jpeg)
@@ -198,3 +200,5 @@ and Adobe enables us to do exactly that.”
 Start free trial with 1,000 PDF transactions for up to 6 months
 
 * [Start free trial](/src/pages/gettingstarted.md)
+
+<Carousel/>
