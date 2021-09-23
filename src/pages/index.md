@@ -5,9 +5,9 @@ description: Own the end-to-end customer experience. Our SDK Developer kits are 
 
 <Hero slots="image, icon, heading, text1" variant="halfwidth" />
 
-![Creative Cloud banner](images/homeHeroImg.png)
+![Creative Cloud banner](images/home_hero_img.png)
 
-![Creative Cloud icon](images/homeIcon.png)
+![Creative Cloud icon](images/home_icon.png)
 
 # Reimagine document experiences with PDF APIs designed for developers
 
