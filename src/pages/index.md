@@ -3,20 +3,15 @@ title: Adobe Developer — SDK Developer Kit | PDF Library | Adobe Document Serv
 description: Own the end-to-end customer experience. Our SDK Developer kits are customizable & built to last. Find an innovative solution with our PDF SDK here.
 ---
 
-<Hero slots="image, heading, text1, text2, buttons" variant="fullwidth" background="rgb(250, 105, 85)"/>  
+<Hero slots="image, icon, heading, text1" variant="halfwidth" />
 
-![](images/bg-hero.jpeg)
+![Creative Cloud banner](images/homeHeroImg.png)
+
+![Creative Cloud icon](images/homeIcon.png)
 
 # Reimagine document experiences with PDF APIs designed for developers
 
-From the company who created the PDF standard. 
-
-Embedded PDF Viewing, Collaboration, and Analytics Integration. 
-Document Generation from Word templates. Create, Combine, Export, and OCR PDF Documents.
-Unlock content structure in any PDF for NLP, RPA, and more.
-
-* [Learn more](/src/pages/pdf-extract.md)    
-
+From the company who created the PDF standard.
 
 
 
