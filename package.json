@@ -15,7 +15,8 @@
     "@adobe/gatsby-theme-aio": "^3.20.0",
     "gatsby": "^3.6.0",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "swiper": "^7.0.7"
   },
   "scripts": {
     "start": "gatsby build && gatsby serve",
@@ -26,5 +27,9 @@
     "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
+  },
+  "devDependencies": {
+    "gatsby-plugin-sass": "^4.14.0",
+    "sass": "^1.42.1"
   }
 }
