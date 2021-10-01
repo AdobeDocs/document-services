@@ -26,13 +26,15 @@ From the company who created the PDF standard.
 
 ![MSFT Teams logo](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-* ![AdobeIcon](images/adobe_trifoil.svg) [PDF Embed API](https://www.adobe.com/products/aftereffects.html)
+* ![AdobeIcon](images/adobe_trifoil.svg)
+ [PDF Embed API](https://www.adobe.com/products/aftereffects.html)
 
 ### PDF Embed API to insert PDFs and enable collaboration in web apps
 
 Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
 
-- [Demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
+- [Demo](https://www.adobe.com/go/pdfEmbedAPI_demo) 
+- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)
 
 
 
@@ -44,7 +46,8 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 
 Use the PDF Tools API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
 
-- [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
+- [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/) 
+- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
 
 ![](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
@@ -62,6 +65,7 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
 
 - [Demo](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
+- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
 
 
 
@@ -75,6 +79,7 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 Use the PDF Tools API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
 
 - [Demo](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
+- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
 
 ![dummy image](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
@@ -118,7 +123,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <TitleBlock slots="heading" theme="lightest" />
 
-## Why Document Services?
+## Why document services?
 
 
 
@@ -129,7 +134,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <TitleBlock slots="heading" theme="light" />
 
-## Use Cases for Document Services API
+## Use Case for Document Services API
 
 
 
@@ -144,7 +149,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <TextBlock slots="buttons" isCentered theme="light"  className='blade-bottom-content'/>
 
-- [See all Use Cases](/src/pages/use-cases)
+- [View all Use Case](/src/pages/use-cases)
 
 
 
@@ -201,7 +206,7 @@ and Adobe enables us to do exactly that.”
 
 <TitleBlock slots="heading" theme="light" />
 
-## Explore other Adobe Document Cloud Services
+## Explore Adobe Document Cloud Services
 
 
 
@@ -216,6 +221,7 @@ and Adobe enables us to do exactly that.”
 
 ### We'r ready to help 
 
-Have questions about the Document Services APIs? [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)
+Have questions about the Document Services APIs.
 
-* [Contact us](/src/pages/gettingstarted.md)
+- [Go to the Adobe Forum](/src/pages/gettingstarted.md)
+- [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)

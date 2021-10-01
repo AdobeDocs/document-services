@@ -168,7 +168,7 @@ const Carousel = ({
     >
       <div
         css={css`
-          max-width: calc(${layoutColumns(12)});
+          width:75%;
           margin: auto;
           @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
             padding-bottom: 0;

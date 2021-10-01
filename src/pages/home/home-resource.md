@@ -9,7 +9,7 @@ title: Adobe Developer — Wrapper Components  —  Home Resource Card
 
 ![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-### Content Processing
+### Sales proposals and contracts
 
 Accelerate reusing content in systems of record and downstream processes, such as RPA, NLP, ML and search by quickly extracting content from native and scanned PDFs
 
@@ -20,7 +20,7 @@ Accelerate reusing content in systems of record and downstream processes, such a
 
 ![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-### Legal Contracts
+### Legal contracts
 
 Generate legal contracts with dynamic terms and signatures
 
@@ -34,19 +34,19 @@ Generate legal contracts with dynamic terms and signatures
 
 ![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-### Data Analysis
+### Data analysis
 
 Extract data from complex tables including cell data, column and row headers, and table properties for use in machine learning models, analysis, or storage
 
 
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='light'   />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='light' />
 
 [](/use-cases/content-publishing/)
 
 ![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-### Content Republishing
+### Digital content publishing
 
-Easily republish in different formats by extracting structured content elements such as headings, lists, paragraphs, fonts, and character styling.
+Easily republish in different formats by extracting structured content elements such as headings, lists, paragraphs, fonts, and character styling
