@@ -93,18 +93,23 @@ h1 {
 
 .bgBlue {
     background-color: #202947 !important;
-  .tabItem:hover, .tabItem.is-selected {
-    background-color: #2E3C6A !important;
-    color: var(--spectrum-global-color-gray-900) !important;
-    
-  }
-  [class$="-CodeBlock"]{
+    .tabItem:hover, .tabItem.is-selected {
+      background-color:  #2E3C6A !important;
+      color: var(--spectrum-global-color-gray-900) !important;
+    }
+  
+  .tabView div[class^="spectrum"] > div:first-child{
     background-color: #111A35 !important;
     border-bottom: 2px solid #1D2643 !important;
   }
   & pre.prism-code {
     background-color: #111A35 !important;
+    
   }
+  & pre.prism-code span:first-child{
+    color: #ffffff;
+}
+
   & h3 {
     color: var(--spectrum-global-color-gray-900) !important;
   }
@@ -114,9 +119,10 @@ h1 {
 }
 
 @media screen and (max-width:375px) {
-  [class$="-CodeBlock"]{
-    display: none;
-  }
+
+    .tabView div[class^="spectrum"]{
+      display: none;
+    }
   .bgBlue {
     .tabItem:hover, .tabItem.is-selected {
       background-color: #202947 !important;
@@ -227,11 +233,39 @@ padding-bottom: var(--spectrum-global-dimension-size-600) !important;
 
 }
 
-.bottom-summar-block-align .css-1sgndtw-SummaryBlock{
-  padding-left: var(--spectrum-global-dimension-size-3600) !important;
-  @media screen and (max-width:768px) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.bottom-summary-block-align {
+  h2{  
+      padding-left: calc(var(--spectrum-global-dimension-size-3000) + var(--spectrum-global-dimension-size-1000)) !important;
+      @media screen and (max-width:768px) {
+        padding-left: var(--spectrum-global-dimension-size-125) !important;
+        padding-right: var(--spectrum-global-dimension-size-125) !important;
+      }
+    }
+  div {
+      p {
+        padding-left: calc(var(--spectrum-global-dimension-size-3000) + var(--spectrum-global-dimension-size-1000)) !important;
+        @media screen and (max-width:768px) {
+          padding-left: var(--spectrum-global-dimension-size-125) !important;
+          padding-right: var(--spectrum-global-dimension-size-125) !important;
+        }
+      }
+   }
+  div:last-child {
+    padding-left: var(--spectrum-global-dimension-size-0) !important;
+    @media screen and (max-width:768px) {
+      padding-left: var(--spectrum-global-dimension-size-125) !important;
+      padding-right: var(--spectrum-global-dimension-size-125) !important;
+      } 
+    }
+  }
+
+.bottom-summary-button-align {
+  div:first-child{
+    padding-left: var(--spectrum-global-dimension-size-2000) !important;
+    @media screen and (max-width:768px) {
+      padding-left: var(--spectrum-global-dimension-size-125) !important;
+      padding-right: var(--spectrum-global-dimension-size-125) !important;
+    }
   }
 }
 

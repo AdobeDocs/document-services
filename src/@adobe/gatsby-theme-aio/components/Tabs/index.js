@@ -71,6 +71,7 @@ const Icons = ({ icon, styles }) => {
   return(
     icon
       ? cloneElement(icon, {
+        alt:'',
         css: css`
           height: var(--spectrum-global-dimension-size-600);
           width: var(--spectrum-global-dimension-size-600);
@@ -130,8 +131,8 @@ const Item = forwardRef(({
     <Element
       {...props}
       ref={ref}
-      role="tab"
-      aria-selected={isSelected ? true : false}
+      role="link"
+      // aria-selected={isSelected ? true : false}
       disabled={isDisabled ? true : false}
       className={classNames(className, 'spectrum-Tabs-item', { 'is-selected': isSelected }, { 'is-disabled': isDisabled })}>
       {icon ? <TabItemIcon icon={icon} isSelected={isSelected} isDisabled={isDisabled}></TabItemIcon> : null }
@@ -187,7 +188,6 @@ const TabView = forwardRef(({ elementType = 'div', isHidden, className, children
     <Element
       {...props}
       ref={ref}
-      role="tabview"
       hidden={isHidden}
       className={classNames(className)}>
       {children}

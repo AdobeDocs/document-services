@@ -13,16 +13,22 @@ import { DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 
 
 const WrapperComponent = ({ theme = 'lightest',className,content }) => {
+
   return (
     <section
       className={classNames(className,`spectrum--${theme}`)}
       css={css`
         background: var(--spectrum-global-color-gray-100);
-        @media only screen and (min-width: ${DESKTOP_SCREEN_WIDTH}) {
-          padding:0  var(--spectrum-global-dimension-size-3000) !important;
-        }
-      `}>
+        `}>
+          <div
+          css={css`
+          @media only screen and (min-width: ${DESKTOP_SCREEN_WIDTH}) {
+            margin:auto;
+              width:${DESKTOP_SCREEN_WIDTH}
+            }
+          `}>
       {content}
+      </div>
     </section>
   );
 };

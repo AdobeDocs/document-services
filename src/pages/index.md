@@ -10,6 +10,7 @@ import ExtractPdfContentStructure from './home/pdf-content-structure.md';
 import EmbedPdfViewingAnalytics from './home/embed-pdf-viewing-analytics.md';
 import HomeResourceCard from './home/home-resource.md'
 import HomeProduct from './home/home-product.md'
+import WhyDocument from './home/why-document.md'
 
 <Hero slots="image, icon, heading, text1" variant="halfwidth" />
 
@@ -25,7 +26,7 @@ From the company who created the PDF standard.
 
 ![MSFT Teams logo](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-* ![](images/adobe_trifoil.svg) [PDF Embed API](https://www.adobe.com/products/aftereffects.html)
+* ![AdobeIcon](images/adobe_trifoil.svg) [PDF Embed API](https://www.adobe.com/products/aftereffects.html)
 
 ### PDF Embed API to insert PDFs and enable collaboration in web apps
 
@@ -37,7 +38,7 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 
 <TextBlock slots="icons,heading,text,buttons,image" theme="lightest"  className="link-align text-blade-padding"/>
 
-* ![](images/adobe_trifoil.svg) [Document Generation API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+* ![AdobeIcon](images/adobe_trifoil.svg) [Document Generation API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
 
 ### Generate PDF and Word documents from Word templates and JSON data
 
@@ -54,7 +55,7 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 
 ![MSFT Teams logo](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-* ![](images/adobe_trifoil.svg) [PDF Extract API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
+* ![AdobeIcon](images/adobe_trifoil.svg) [PDF Extract API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
 
 ### Unluck content structure in any PDF for NLP, RPA, and more
 
@@ -67,7 +68,7 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 
 <TextBlock slots="icons,heading,text,buttons,image" theme="lightest" className="link-align text-blade-padding"/>
 
-* ![](images/adobe_trifoil.svg) [PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
+* ![AdobeIcon](images/adobe_trifoil.svg) [PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
 
 ### PDF APIs with SDKs for Node.js, .Net, and java to create, convert, OCR PDFs, and more
 
@@ -75,7 +76,7 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 
 - [Demo](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
 
-![](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![dummy image](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 
 <SummaryBlock slots="heading, text" background="rgb(31, 42, 73)"  className='align-left-codeblock-title align-left-codeblock-0 '/>
@@ -90,25 +91,25 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 ### Create PDF from URL
 
-![](images/s_createpdf_color_24.svg)
+![creativePDF](images/s_createpdf_color_24.svg)
 
 <CreatePdfFromUrl/>
 
 ### Dynamic PDF Document Generation
 
-![](images/ic-dynamic-pdf-gen-40.svg)
+![Document Generation](images/ic-dynamic-pdf-gen-40.svg)
 
 <DynamicPdfDocumentGeneration/>
 
 ### Extract PDF Content & Structure
 
-![](images/ic-extract-40.svg)
+![PDF Content & Structure](images/ic-extract-40.svg)
 
 <ExtractPdfContentStructure/>
 
 ### Embed PDF for viewing and analytics
 
-![](images/embed.svg)
+![viewing and analytics](images/embed.svg)
 
 <EmbedPdfViewingAnalytics/>
 
@@ -122,40 +123,9 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 
 
-<TextBlock slots="image,heading,text" width="33%" theme="lightest"  className="align-left img-m-size"/>
+<WrapperComponent slots="content" theme="lightest" className="why-docment-services"/>
 
-![](images/img-consistent-hifi@2x.png)
-
-### Invent New Document Experiences
-
-Unlock productivity through APIs and integrations.Use Microsoft Power Automate connectors to build without code.Leverage integrations with AEM, Adobe Analytics and Adobe Sign.
-
-
-
-
-
-<TextBlock slots="image,heading,text" width="33%" theme="lightest"   className="align-left img-m-size"/>
-
-![](images/img-customized-experiences@2x.png)
-
-### Built for Developers
-
-Easy to implement REST APIs and SDKs. Secure, reliable, and scalable. Pay only for what you need.
-
-
-
-
-<TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-m-size"/>
-
-![](images/img-workflow-automation@2x.png)
-
-### From the Leader
-
-25+ years of PDF expertise. Battle tested by 20M+ users. Innovating with AI/ML in digital documents powered by Adobe Sensei.
-
-
-
-
+<WhyDocument />
 
 <TitleBlock slots="heading" theme="light" />
 
@@ -240,7 +210,7 @@ and Adobe enables us to do exactly that.”
 <HomeProduct />
 
 
-<SummaryBlock slots="image, heading, text, buttons" background="rgb(250, 105, 85)" className="bottom-summar-block-align"/>
+<SummaryBlock slots="image, heading, text, buttons" background="rgb(250, 105, 85)" className="bottom-summary-block-align bottom-summary-button-align"/>
 
 ![](images/bg-hero.jpeg)
 
