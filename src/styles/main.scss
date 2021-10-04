@@ -76,14 +76,14 @@ right: 0 !important;
   }
 }
 
-.tabItem:hover, .tabItem.is-selected {
+.tabsBlock .tabItem:hover, .tabsBlock .tabItem.is-selected {
   background-color: var(--spectrum-alias-background-color-gray-50, var(--spectrum-global-color-gray-50, var(--spectrum-semantic-gray-50-color-background)));
   color: var(--spectrum-global-color-gray-900);
   box-shadow: 0 3px 16px #46303029;
   border-radius: var(--spectrum-global-dimension-size-50);
 }
 
-.spectrum--dark .spectrum-Tabs .spectrum-Tabs-item.tabItem:hover, .spectrum--dark .spectrum-Tabs .spectrum-Tabs-item.is-selected.tabItem {
+.spectrum--dark.tabsBlock .spectrum-Tabs .spectrum-Tabs-item.tabItem:hover, .spectrum--dark.tabsBlock .spectrum-Tabs .spectrum-Tabs-item.is-selected.tabItem {
   background-color: var(--spectrum-alias-background-color-gray-900, var(--spectrum-global-color-gray-900, var(--spectrum-semantic-gray-900-color-background)));
   color: var(--spectrum-global-color-gray-50);
 }
@@ -94,14 +94,14 @@ right: 0 !important;
       background-color:  #2E3C6A !important;
       color: var(--spectrum-global-color-gray-900) !important;
     }
-  
+
   .tabView div[class^="spectrum"] > div:first-child{
     background-color: #111A35 !important;
     border-bottom: 2px solid #1D2643 !important;
   }
   & pre.prism-code {
     background-color: #111A35 !important;
-    
+
   }
   & pre.prism-code span:first-child{
     color: #ffffff;
@@ -144,15 +144,15 @@ right: 0 !important;
   margin-left:var(--spectrum-global-dimension-size-1700) !important;
   max-width: 100vw !important;
 
-  @media screen and (min-width:"1280px") and (max-width: "1480px" ) { 
+  @media screen and (min-width:"1280px") and (max-width: "1480px" ) {
     margin-left:1.5vw !important;
   }
-  @media screen and (min-width:"1480px") and (max-width: "1680px" ) { 
+  @media screen and (min-width:"1480px") and (max-width: "1680px" ) {
     margin-left:2vw !important;
   }
 
   @media screen and (max-width:"768px") {
-    margin-left:var(--spectrum-global-dimension-size-100);
+    margin-left:var(--spectrum-global-dimension-size-100) !important;
       }
 }
 
@@ -161,9 +161,11 @@ right: 0 !important;
   height:var(--spectrum-global-dimension-size-3000) !important;
   padding-top: var(--spectrum-global-dimension-size-700) !important;
   padding-bottom:  var(--spectrum-global-dimension-size-0) !important;
+
   @media screen and (max-width:768px) {
     height: 100vh !important;
   }
+
 }
 
 .code-block-summary-card-height{
@@ -248,13 +250,13 @@ padding-bottom: var(--spectrum-global-dimension-size-600) !important;
 }
 
 .bottom-summary-block-align {
-  h2{  
+  h2{
       padding-left: calc(var(--spectrum-global-dimension-size-3000) + var(--spectrum-global-dimension-size-1000)) !important;
-       @media screen and (min-width:"1280px") and (max-width: "1680px" ) { 
+       @media screen and (min-width:"1280px") and (max-width: "1680px" ) {
         padding-left: var(--spectrum-global-dimension-size-1200) !important;
         padding-right: var(--spectrum-global-dimension-size-1200) !important;
       }
-      
+
       @media screen and (max-width:768px) {
         padding-left: var(--spectrum-global-dimension-size-125) !important;
         padding-right: var(--spectrum-global-dimension-size-125) !important;
@@ -264,7 +266,7 @@ padding-bottom: var(--spectrum-global-dimension-size-600) !important;
   div {
       p {
         padding-left: calc(var(--spectrum-global-dimension-size-3000) + var(--spectrum-global-dimension-size-1000)) !important;
-         @media screen and (min-width:"1280px") and (max-width: "1680px" ) { 
+         @media screen and (min-width:"1280px") and (max-width: "1680px" ) {
           padding-left: var(--spectrum-global-dimension-size-1200) !important;
           padding-right: var(--spectrum-global-dimension-size-1200) !important;
         }
@@ -272,7 +274,7 @@ padding-bottom: var(--spectrum-global-dimension-size-600) !important;
           padding-left: var(--spectrum-global-dimension-size-125) !important;
           padding-right: var(--spectrum-global-dimension-size-125) !important;
         }
-   
+
       }
    }
   div:last-child {
@@ -281,9 +283,9 @@ padding-bottom: var(--spectrum-global-dimension-size-600) !important;
     @media screen and (max-width:768px) {
       padding-left: var(--spectrum-global-dimension-size-125) !important;
       padding-right: var(--spectrum-global-dimension-size-125) !important;
-      } 
+      }
 
-       @media screen and (min-width:"1280px") and (max-width: "1680px" ) { 
+       @media screen and (min-width:"1280px") and (max-width: "1680px" ) {
         padding-left: var(--spectrum-global-dimension-size-0) !important;
         padding-right: var(--spectrum-global-dimension-size-0) !important;
       }
@@ -293,8 +295,8 @@ padding-bottom: var(--spectrum-global-dimension-size-600) !important;
   .bottom-summary-button-align {
   div:first-child{
     padding-left: var(--spectrum-global-dimension-size-2000) !important;
-    
-     @media screen and (min-width:"1280px") and (max-width: "1680px" ) { 
+
+     @media screen and (min-width:"1280px") and (max-width: "1680px" ) {
       padding-left: var(--spectrum-global-dimension-size-600) !important;
       padding-right: var(--spectrum-global-dimension-size-1200) !important;
     }
@@ -319,12 +321,12 @@ padding-bottom: var(--spectrum-global-dimension-size-600) !important;
 
 
 .textblockWidth {
-  padding: 0 50px !important; 
+  padding: 0 50px !important;
   div:first-child{
-  width: 50% !important;  
+  width: 50% !important;
   }
   div:last-child{
-    width: 50% !important;  
+    width: 50% !important;
   }
 }
 
@@ -339,7 +341,7 @@ padding-bottom: var(--spectrum-global-dimension-size-600) !important;
 }
 
 .code-block-0 {
-    padding-top :0 !important; 
+    padding-top :0 !important;
 }
 
 .tabView div[class^="spectrum"]{

@@ -226,133 +226,144 @@ const TabsBlock = ({
 
   return (
     <section
-      className={classNames(className, `spectrum--${theme}`)}
+      className={classNames(className, `tabsBlock spectrum--${theme}`)}
       css={css`
         background: var(--spectrum-global-color-gray-100);
-        width: 100%;
-        padding: var(--spectrum-global-dimension-size-600) 0
-        var(--spectrum-global-dimension-size-200) 0;
+        max-width: 100%;
+        margin:0;
+        padding-bottom: 7.5rem;
       `}
       >
       <div
         css={css`
-          display: ${orientation === 'vertical' ? 'inline-flex': ''};
+        display: ${orientation === 'vertical' ? 'inline-flex': ''};
+          @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
+            max-width: 1280px;
+            margin: 0 auto !important
+          }
           @media only screen and (max-width: 480px) {
             flex-direction: column;
           }
         `}
       >
-        {menuItems?.length > 0 ?
-          <Tabs
-            orientation={orientation}
-            isQuiet={true}
-            onFontsReady={positionSelectedTabIndicator}
-          >
-            {menuItems.map((data, index) => {
-              const ref = createRef();
-              tabs.push(ref);
-              const isSelected = selectedIndex.tab === index;
-              return (
-                <Item
-                  className={"tabItem"}
-                  key={`tabItem_${index}`}
-                  tabIndex={0}
-                  ref={ref}
-                  isSelected={isSelected}
-                  label={<b>{data['heading']}</b>}
-                  icon={data['image']}
-                  onClick={() => {
-                    setSelectedIndex({
-                      tab: index,
-                    });
-                    positionSelectedTabIndicator(index);
-                  }}
-                  css={css`
-                    text-align: left;
-                    white-space: normal;
-                    display: flex !important;
-                    height: auto !important;
-                    padding: var(--spectrum-global-dimension-size-200) var(--spectrum-global-dimension-size-200) var(--spectrum-global-dimension-size-250) !important;
-                    margin-bottom: var(--spectrum-global-dimension-size-350) !important;
-                    width:${layoutColumns(3)} !important;
-                    .spectrum-Tabs-itemLabel{
-                      font-size:var(--spectrum-global-dimension-size-185);
-                      font-weight:bold;
-                      margin-left: var(--spectrum-global-dimension-size-200);
+        <div
+          css={css`
+            display: ${orientation === 'vertical' ? 'grid': 'initial'};
+            position: relative;
+            grid-template-columns: 300px calc(100% - 300px);
+            margin-top: 1.5rem;
+            width:${layoutColumns(12)} !important;
+            @media only screen and (max-width: 480px) {
+              display: initial !important;
+              width:${layoutColumns(2.5)} !important;
+            }
+            @media only screen and (device-width: ${MOBILE_SCREEN_WIDTH}) {
+              width:${layoutColumns(6.4)} !important;
+            }
+            @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
+              width:${layoutColumns(8)} !important;
+            }
+          `}
+        >
+          {menuItems?.length > 0 ?
+            <Tabs
+              orientation={orientation}
+              isQuiet={true}
+              onFontsReady={positionSelectedTabIndicator}
+            >
+              {menuItems.map((data, index) => {
+                const ref = createRef();
+                tabs.push(ref);
+                const isSelected = selectedIndex.tab === index;
+                return (
+                  <Item
+                    className={"tabItem"}
+                    key={`tabItem_${index}`}
+                    tabIndex={0}
+                    ref={ref}
+                    isSelected={isSelected}
+                    label={<b>{data['heading']}</b>}
+                    icon={data['image']}
+                    onClick={() => {
+                      setSelectedIndex({
+                        tab: index,
+                      });
+                      positionSelectedTabIndicator(index);
+                    }}
+                    css={css`
+                      text-align: left;
+                      white-space: normal;
+                      width: 260px !important;
+                      font-size: 1rem;
+                      margin-bottom: ${orientation === 'vertical' ? '2.4rem !important' : '0rem'};
+                      display: flex !important;
+                      padding: 0.625rem !important;
+                      height: auto !important;
                       line-height: initial;
-                      margin-top:var(--spectrum-global-dimension-size-100);
-                    }
-
-                    .spectrum-Icon{
-                      width: 40px;
-                      height: 40px;
-                    }
-
-                    @media only screen and (max-width: 480px) {
-                      max-width: ${layoutColumns(2.5)} !important;
-                      justify-content: left;
-                      margin-bottom: var(--spectrum-global-dimension-size-150) !important;
 
                       .spectrum-Tabs-itemLabel{
-                        margin-top:var(--spectrum-global-dimension-size-50) !important;
+                        margin-top:5px;
+                        margin-bottom:5px;
                       }
+                      .spectrum-Icon{
+                        background-size: 18px 21px;
+                        width: 40px;
+                        height: 30px;
+                      }
+
+                      &.is-disabled {
+                        pointer-events:none;
+                      }
+                      &::before {
+                        left:0px !important;
+                        right:0px !important;
+                      }
+                      @media only screen and (max-width: 480px) {
+                        margin-top:2px !important;
+                        margin-bottom:2px !important;
+                      }
+                      @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
+                        left: var(--spectrum-global-dimension-size-250) !important;
+                      }
+                    `}
+                  />
+                )
+              })}
+              <TabsIndicator ref={selectedTabIndicator} />
+            </Tabs>
+          : null}
+          {menuItems?.length > 0 ?
+            menuItems.map((data, index) => {
+              const isHidden = selectedIndex.tab === index;
+              return(
+                <TabView
+                  key={`tabView_${index}`}
+                  className={"tabView"}
+                  isHidden={!isHidden}
+                  css={css`
+                    text-align: left;
+                    max-width: ${layoutColumns(8.5)} !important;
+                    @media only screen and (max-width: 480px) {
+                      padding-left: inherit !important;
+                      max-width: ${layoutColumns(3)} !important;
                     }
 
-                    @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
-                      max-width: ${layoutColumns(2)} !important;
-                    }
                     @media only screen and (device-width: ${MOBILE_SCREEN_WIDTH}) {
-                      max-width: ${layoutColumns(2)} !important;
+                      max-width: ${layoutColumns(3.5)} !important;
                     }
-                    &.is-disabled {
-                      pointer-events:none;
+                    @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
+                      max-width: ${layoutColumns(6.5)} !important;
+                      padding-left:var(--spectrum-global-dimension-size-500);
                     }
-                    img {
-                      max-width: var(--spectrum-global-dimension-size-500);
-                      max-height: var(--spectrum-global-dimension-size-500);
-                    }
+
                   `}
-                />
+                >
+                  {data['tabViewContent'] ? data['tabViewContent'] : null}
+                </TabView>
               )
-            })}
-            <TabsIndicator ref={selectedTabIndicator} />
-          </Tabs>
-        : null}
-        {menuItems?.length > 0 ?
-          menuItems.map((data, index) => {
-            const isHidden = selectedIndex.tab === index;
-            return(
-              <TabView
-                key={`tabView_${index}`}
-                className={"tabView"}
-                isHidden={!isHidden}
-                css={css`
-                  text-align: left;
-                  width:${layoutColumns(8)};
-                  padding-left:var(--spectrum-global-dimension-size-700);
-                  padding-right:var(--spectrum-global-dimension-size-200);
-
-                  @media only screen and (max-width: 480px) {
-                    padding-left: inherit !important;
-                    max-width: ${layoutColumns(3)} !important;
-                  }
-
-                  @media only screen and (device-width: ${MOBILE_SCREEN_WIDTH}) {
-                    max-width: ${layoutColumns(3.5)} !important;
-                  }
-                  @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
-                    max-width: ${layoutColumns(6.5)} !important;
-                    padding-left:var(--spectrum-global-dimension-size-500);
-                  }
-
-                `}
-
-              >
-                {data['tabViewContent'] ? data['tabViewContent'] : null}
-              </TabView>
-            )
-          })
-        : null}
+            })
+          : null}
+        </div>
       </div>
     </section>
   )
