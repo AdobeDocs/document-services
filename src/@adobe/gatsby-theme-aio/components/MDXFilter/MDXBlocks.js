@@ -13,7 +13,6 @@
 import React from "react";
 import globalTheme from "@adobe/gatsby-theme-aio/src/theme";
 
-import { Hero } from "@adobe/gatsby-theme-aio/src/components/Hero";
 import { DiscoverBlock } from "@adobe/gatsby-theme-aio/src/components/DiscoverBlock";
 import { Resources } from "@adobe/gatsby-theme-aio/src/components/Resources";
 import { InlineAlert } from "@adobe/gatsby-theme-aio/src/components/InlineAlert";
@@ -21,6 +20,7 @@ import { CodeBlock } from "@adobe/gatsby-theme-aio/src/components/CodeBlock";
 import { Variant } from "@adobe/gatsby-theme-aio/src/components/Variant";
 import { TitleBlock } from "@adobe/gatsby-theme-aio/src/components/TitleBlock";
 import { TextBlock } from "@adobe/gatsby-theme-aio/src/components/TextBlock";
+import { Divider } from "@adobe/gatsby-theme-aio/src/components/Divider";
 import { AnnouncementBlock } from "@adobe/gatsby-theme-aio/src/components/AnnouncementBlock";
 import { SummaryBlock } from "@adobe/gatsby-theme-aio/src/components/SummaryBlock";
 import { ProductCard } from "@adobe/gatsby-theme-aio/src/components/ProductCard";
@@ -30,7 +30,8 @@ import { JsDocParameters } from "@adobe/gatsby-theme-aio/src/components/JsDocPar
 import { ProductCardGrid } from "@adobe/gatsby-theme-aio/src/components/ProductCardGrid";
 import { Carousel } from "../Carousel";
 import { TabsBlock } from "../Tabs";
-import {WrapperComponent} from '../WrapperComponent';
+import { WrapperComponent } from '../WrapperComponent';
+import {Hero} from '../Hero';
 
 export const MDXBlocks = {
   Hero,
@@ -43,6 +44,7 @@ export const MDXBlocks = {
   Variant,
   TitleBlock,
   TextBlock,
+  Divider,
   AnnouncementBlock,
   SummaryBlock,
   ProductCard,

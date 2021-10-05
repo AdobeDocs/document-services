@@ -53,7 +53,7 @@ const SwiperContent = ({
         display: flex;
         ${backgroundColor}
         flex-direction: row;
-        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+        @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
           flex-direction: column;
         }
         margin: var(--spectrum-global-dimension-size-500);
@@ -168,15 +168,16 @@ const Carousel = ({
     >
       <div
         css={css`
-          width:75%;
+        max-width: calc(${layoutColumns(12)});
           margin: auto;
-          @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+         
+          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+            max-width: calc(${layoutColumns(3)});
+          }
+          @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
             padding-bottom: 0;
             margin-top: 0;
             max-width: calc(${layoutColumns(6)});
-          }
-          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            max-width: calc(${layoutColumns(3)});
           }
         `}
       >

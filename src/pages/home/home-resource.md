@@ -2,6 +2,10 @@
 title: Adobe Developer — Wrapper Components  —  Home Resource Card
 ---
 
+<TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
+
+## Use case for document services API
+
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' />
 

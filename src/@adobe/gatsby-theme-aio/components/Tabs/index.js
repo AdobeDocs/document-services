@@ -14,11 +14,12 @@
 
 import React, { useEffect, useState, useRef, createRef, forwardRef, cloneElement } from 'react';
 import classNames from 'classnames';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
 import '@spectrum-css/tabs';
+import nextId from 'react-id-generator';
 
-import { cloneChildren, MOBILE_SCREEN_WIDTH, TABLET_SCREEN_WIDTH, layoutColumns } from '@adobe/gatsby-theme-aio/src/utils';
+import { cloneChildren, MOBILE_SCREEN_WIDTH, DESKTOP_SCREEN_WIDTH, TABLET_SCREEN_WIDTH, layoutColumns } from '@adobe/gatsby-theme-aio/src/utils';
 
 const positionIndicator = (indicator, selectedTab) => {
   indicator.current.style.transform = `translate(${selectedTab.current.offsetLeft}px, 0px)`;
@@ -30,16 +31,18 @@ const animateIndicator = (indicator, animate) => {
 };
 
 const setTabItemIcon = (child, className, iconSize) => {
-  if ( child?.props?.children?.props?.mdxType === "img") {
+  if ( child?.props?.children?.props?.mdxType === 'img') {
     return <IconImage image={child} className={classNames(className, `spectrum-Icon--spectrum-icon-size-${iconSize}`)}/>;
   }
   return <Icons icon={child} className={classNames(className, `spectrum-Icon--spectrum-icon-size-${iconSize}`)}/>;
 };
 
+const mobileMinWidth = '480px';
+
 const setImageLoading = (child) => {
-  if (child?.props?.mdxType === "img") {
+  if (child?.props?.mdxType === 'img') {
     return cloneElement(child, {
-      loading: "eager"
+      loading: 'eager'
     });
   }
   return child;
@@ -55,7 +58,7 @@ const IconImage = ({ image = '', styles=''}) => {
           justify-content: center;
           height: 100%;
           width: 100%;
-          margin-top: 0;
+          margin-top: var(--spectrum-global-dimension-size-0);
 
           img {
             display: block;
@@ -75,7 +78,7 @@ const Icons = ({ icon, styles }) => {
         css: css`
           height: var(--spectrum-global-dimension-size-600);
           width: var(--spectrum-global-dimension-size-600);
-          margin-top: 0;
+          margin-top: var(--spectrum-global-dimension-size-0);
 
           img {
             display: block;
@@ -109,6 +112,8 @@ const Tabs = forwardRef(({
     <div
       ref={ref}
       {...props}
+      role='tablist'
+      aria-orientation={orientation}
       className={classNames(className, 'spectrum-Tabs', `spectrum-Tabs--${orientation}`, { 'spectrum-Tabs--quiet' : isQuiet }, { 'spectrum-Tabs--compact': density === 'compact' })}
     >
       {children}
@@ -127,13 +132,15 @@ const Item = forwardRef(({
   ...props }, ref
 ) => {
   const Element = elementType;
+  const id = nextId();
   return (
     <Element
       {...props}
       ref={ref}
-      role="link"
-      // aria-selected={isSelected ? true : false}
-      disabled={isDisabled ? true : false}
+      role='tab'
+      aria-selected={isSelected}
+      disabled={isDisabled}
+      aria-controls={id}
       className={classNames(className, 'spectrum-Tabs-item', { 'is-selected': isSelected }, { 'is-disabled': isDisabled })}>
       {icon ? <TabItemIcon icon={icon} isSelected={isSelected} isDisabled={isDisabled}></TabItemIcon> : null }
       {label ? <Label> {label} </Label>: null}
@@ -180,7 +187,7 @@ const TabsIndicator = forwardRef(({ className, ...props }, ref) => {
   );
 });
 
-const Label = ({ children }) => <span className="spectrum-Tabs-itemLabel">{children}</span>;
+const Label = ({ children }) => <span className='spectrum-Tabs-itemLabel'>{children}</span>;
 
 const TabView = forwardRef(({ elementType = 'div', isHidden, className, children, ...props }, ref) => {
   const Element = elementType;
@@ -199,6 +206,7 @@ const TabsBlock = ({
   theme='light',
   orientation='horizontal',
   className,
+  APIReference = "",
   ...props
 }) => {
 
@@ -209,12 +217,12 @@ const TabsBlock = ({
   });
 
   const propKeys = Object.keys(props);
-  let filteredMenuProps = propKeys.filter((key) => key.startsWith("heading")).map(menu=>menu);
+  let filteredMenuProps = propKeys.filter((key) => key.startsWith('heading')).map(menu=>menu);
 
   let menuItems = filteredMenuProps.map((_, index) => {
     return {
       heading: props?.[`heading${index}`]?.props?.children || props?.[`heading`],
-      tabViewContent: props?.[`tabViewContent${index}`] ||  props?.[`tabViewContent`],
+      content: props?.[`content${index}`] ||  props?.[`content`],
       image: props?.[`image${index}`] || props?.[`image`]
     };
   });
@@ -223,25 +231,24 @@ const TabsBlock = ({
     const selectedTab = tabs.filter((tab) => tab?.current)[index];
     positionIndicator(selectedTabIndicator, selectedTab);
   };
-
   return (
     <section
       className={classNames(className, `tabsBlock spectrum--${theme}`)}
       css={css`
         background: var(--spectrum-global-color-gray-100);
         max-width: 100%;
-        margin:0;
-        padding-bottom: 7.5rem;
+        margin: 0;
+        padding-bottom: calc(var(--spectrum-global-dimension-size-1250) + var(--spectrum-global-dimension-size-250));
       `}
       >
       <div
         css={css`
         display: ${orientation === 'vertical' ? 'inline-flex': ''};
           @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
-            max-width: 1280px;
+            max-width: ${DESKTOP_SCREEN_WIDTH};
             margin: 0 auto !important
           }
-          @media only screen and (max-width: 480px) {
+          @media only screen and (max-width: ${mobileMinWidth}) {
             flex-direction: column;
           }
         `}
@@ -251,9 +258,9 @@ const TabsBlock = ({
             display: ${orientation === 'vertical' ? 'grid': 'initial'};
             position: relative;
             grid-template-columns: 300px calc(100% - 300px);
-            margin-top: 1.5rem;
+            margin-top: var(--spectrum-global-dimension-size-300);
             width:${layoutColumns(12)} !important;
-            @media only screen and (max-width: 480px) {
+            @media only screen and (max-width: ${mobileMinWidth}) {
               display: initial !important;
               width:${layoutColumns(2.5)} !important;
             }
@@ -275,13 +282,15 @@ const TabsBlock = ({
                 const ref = createRef();
                 tabs.push(ref);
                 const isSelected = selectedIndex.tab === index;
+                const itemPopoverId = nextId();
                 return (
                   <Item
-                    className={"tabItem"}
+                    className={'tabItem'}
                     key={`tabItem_${index}`}
                     tabIndex={0}
                     ref={ref}
                     isSelected={isSelected}
+                    aria-controls={itemPopoverId}
                     label={<b>{data['heading']}</b>}
                     icon={data['image']}
                     onClick={() => {
@@ -293,11 +302,11 @@ const TabsBlock = ({
                     css={css`
                       text-align: left;
                       white-space: normal;
-                      width: 260px !important;
-                      font-size: 1rem;
+                      width: calc(var(--spectrum-global-dimension-size-2000) + var(--spectrum-global-dimension-size-600)) !important;
+                      font-size: var(--spectrum-global-dimension-size-200);
                       margin-bottom: ${orientation === 'vertical' ? '2.4rem !important' : '0rem'};
                       display: flex !important;
-                      padding: 0.625rem !important;
+                      padding: var(--spectrum-global-dimension-size-125) !important;
                       height: auto !important;
                       line-height: initial;
 
@@ -306,23 +315,24 @@ const TabsBlock = ({
                         margin-bottom:5px;
                       }
                       .spectrum-Icon{
-                        background-size: 18px 21px;
-                        width: 40px;
-                        height: 30px;
+                        background-size: var(--spectrum-global-dimension-size-225) var(--spectrum-global-dimension-size-275);
+                        width: var(--spectrum-global-dimension-size-500);
+                        height: var(--spectrum-global-dimension-size-400);
                       }
 
                       &.is-disabled {
                         pointer-events:none;
                       }
                       &::before {
-                        left:0px !important;
-                        right:0px !important;
+                        left: var(--spectrum-global-dimension-size-0) !important;
+                        right: var(--spectrum-global-dimension-size-0) !important;
                       }
-                      @media only screen and (max-width: 480px) {
-                        margin-top:2px !important;
-                        margin-bottom:2px !important;
+                      @media only screen and (max-width: ${mobileMinWidth}) {
+                        margin-top:var(--spectrum-global-dimension-size-25) !important;
+                        margin-bottom:var(--spectrum-global-dimension-size-25) !important;
                       }
                       @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
+                        width: calc(var(--spectrum-global-dimension-size-2000) + var(--spectrum-global-dimension-size-750)) !important;
                         left: var(--spectrum-global-dimension-size-250) !important;
                       }
                     `}
@@ -330,6 +340,53 @@ const TabsBlock = ({
                 )
               })}
               <TabsIndicator ref={selectedTabIndicator} />
+              {APIReference !== "" && (
+                <div
+                  css={css`
+                    text-align: left;
+                    white-space: normal;
+                    width: calc(var(--spectrum-global-dimension-size-2500) + var(--spectrum-global-dimension-size-750)) !important;
+                    font-size: var(--spectrum-global-dimension-size-200);
+                    padding: var(--spectrum-global-dimension-size-125) !important;
+
+                    @media only screen and (max-width: ${mobileMinWidth}) {
+                      left: var(--spectrum-global-dimension-size-100) !important;
+                      margin-top: var(--spectrum-global-dimension-size-125) !important;
+                      margin-bottom: var(--spectrum-global-dimension-size-125) !important;
+                    }
+                    @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
+                      left: var(--spectrum-global-dimension-size-250) !important;
+                    }
+                  `}
+                >
+                  <span
+                    css={css`
+                      text-align: left;
+                      cursor: pointer;
+                      margin-top: var(--spectrum-global-dimension-size-85);
+                      margin-left: var(--spectrum-global-dimension-size-400);
+
+                      @media only screen and (max-width: ${mobileMinWidth}) {
+                        margin-left: var(--spectrum-global-dimension-size-100) !important;;
+                      }
+                      @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                        margin-left: var(--spectrum-global-dimension-size-100) !important;;
+                      }
+                    `}
+                  >
+                    <a
+                      href={APIReference}
+                      css={css`
+                        color: #4b9cf5;
+                      `}
+                      target={"_blank"}
+                      rel="noreferrer"
+                    >
+                      API Reference
+                    </a>
+                  </span>
+                </div>
+              )}
             </Tabs>
           : null}
           {menuItems?.length > 0 ?
@@ -338,12 +395,13 @@ const TabsBlock = ({
               return(
                 <TabView
                   key={`tabView_${index}`}
-                  className={"tabView"}
+                  className={'tabView'}
                   isHidden={!isHidden}
                   css={css`
                     text-align: left;
+                    padding: 0 0 var(--spectrum-global-dimension-size-100) 0 !important;
                     max-width: ${layoutColumns(8.5)} !important;
-                    @media only screen and (max-width: 480px) {
+                    @media only screen and (max-width: ${mobileMinWidth}) {
                       padding-left: inherit !important;
                       max-width: ${layoutColumns(3)} !important;
                     }
@@ -358,7 +416,7 @@ const TabsBlock = ({
 
                   `}
                 >
-                  {data['tabViewContent'] ? data['tabViewContent'] : null}
+                  {data['content'] ? data['content'] : null}
                 </TabView>
               )
             })
@@ -371,8 +429,8 @@ const TabsBlock = ({
 
 
 Tabs.propTypes = {
-  orientation: PropTypes.oneOf(["horizontal", "vertical"]),
-  density: PropTypes.oneOf(["regular", "compact"]),
+  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
+  density: PropTypes.oneOf(['regular', 'compact']),
   isQuiet: PropTypes.boolean,
   className: PropTypes.string,
 };
@@ -400,12 +458,13 @@ TabView.propTypes = {
 };
 
 TabsBlock.propTypes = {
-  theme: PropTypes.oneOf(["light", "dark", "lightest"]),
-  orientation: PropTypes.oneOf(["horizontal", "vertical"]),
+  theme: PropTypes.oneOf(['light', 'dark', 'lightest']),
+  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
   heading: PropTypes.string,
-  tabViewContent: PropTypes.string,
+  content: PropTypes.string,
   image: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  APIReference: PropTypes.string,
 };
 
 

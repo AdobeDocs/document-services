@@ -8,26 +8,30 @@ import CreatePdfFromUrl from './home/create-pdf-from-url.md';
 import DynamicPdfDocumentGeneration from './home/dynamic-pdf-document-generation.md';
 import ExtractPdfContentStructure from './home/pdf-content-structure.md';
 import EmbedPdfViewingAnalytics from './home/embed-pdf-viewing-analytics.md';
-import HomeResourceCard from './home/home-resource.md'
-import HomeProduct from './home/home-product.md'
-import WhyDocument from './home/why-document.md'
+import HomeResourceCard from './home/home-resource.md';
+import HomeProduct from './home/home-product.md';
+import WhyDocument from './home/why-document.md';
+import HomeCarousel from './home/home-carousel.md'
 
-<Hero slots="image, icon, heading, text1" variant="halfwidth" />
 
-![Creative Cloud banner](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+<Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
 
-![Creative Cloud icon](images/adobe_trifoil.svg)
+![](images/bg-hero-doc-gen.jpeg)
 
 # Reimagine document experiences with PDF APIs designed for developers
 
 From the company who created the PDF standard.
 
-<TextBlock slots="image,icons,heading,text,buttons" theme="light"  className="link-align text-blade-padding"/>
 
-![MSFT Teams logo](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![](images/doc-gen-hero-desktop@2x.png)
 
-* ![AdobeIcon](images/adobe_trifoil.svg)
- [PDF Embed API](https://www.adobe.com/products/aftereffects.html)
+- [Try the demo](/src/pages/pdf-extract.md)
+
+
+
+<TextBlock slots="image,heading,text,buttons" theme="light"  />
+
+![MSFT Teams logo](images/hero1.png)
 
 ### PDF Embed API to insert PDFs and enable collaboration in web apps
 
@@ -38,9 +42,7 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 
 
 
-<TextBlock slots="icons,heading,text,buttons,image" theme="lightest"  className="link-align text-blade-padding"/>
-
-* ![AdobeIcon](images/adobe_trifoil.svg) [Document Generation API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+<TextBlock slots="heading,text,buttons,image" theme="lightest"  />
 
 ### Generate PDF and Word documents from Word templates and JSON data
 
@@ -49,16 +51,14 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 - [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/) 
 - [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
 
-![](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![](images/hero2.png)
 
 
 
 
-<TextBlock slots="image,icons,heading,text,buttons" theme="light" className="link-align text-blade-padding"/>
+<TextBlock slots="image,heading,text,buttons" theme="light" />
 
-![MSFT Teams logo](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
-
-* ![AdobeIcon](images/adobe_trifoil.svg) [PDF Extract API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
+![MSFT Teams logo](images/hero3.png)
 
 ### Unluck content structure in any PDF for NLP, RPA, and more
 
@@ -70,9 +70,7 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 
 
 
-<TextBlock slots="icons,heading,text,buttons,image" theme="lightest" className="link-align text-blade-padding"/>
-
-* ![AdobeIcon](images/adobe_trifoil.svg) [PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
+<TextBlock slots="heading,text,buttons,image" theme="lightest" />
 
 ### PDF APIs with SDKs for Node.js, .Net, and java to create, convert, OCR PDFs, and more
 
@@ -81,18 +79,21 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 - [Demo](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
 - [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
 
-![dummy image](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![dummy image](images/hero4.png)
 
 
-<SummaryBlock slots="heading, text" background="rgb(31, 42, 73)"  className='align-left-codeblock-title align-left-codeblock-0 '/>
 
-## Designed for Developers
+<SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight />
+
+## Designed for developers
 
 Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
 
+- [Start free trial](/src/pages/gettingstarted.md)
 
 
-<TabsBlock orientation="vertical" slots="heading, image, tabViewContent" repeat="4"  theme="dark" className='bgBlue code-block-0' />
+
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://www.adobe.com/go/dcsdk_APIdocs"  repeat="4"  theme="dark" className='bgBlue code-block-0' />
 
 ### Create PDF from URL
 
@@ -120,22 +121,9 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 
 
-
-<TitleBlock slots="heading" theme="lightest" />
-
-## Why document services?
-
-
-
-
 <WrapperComponent slots="content" theme="lightest" className="why-docment-services"/>
 
 <WhyDocument />
-
-<TitleBlock slots="heading" theme="light" />
-
-## Use Case for Document Services API
-
 
 
 
@@ -153,61 +141,9 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 
 
-<TitleBlock slots="heading" theme="dark" className="padding_top_align"/>
+<WrapperComponent slots="content" repeat="1" theme="lightest"/>
 
-## Customer Success Block
-
-<Carousel slots="image, text1, text2" repeat="5"  theme="dark" enableNavigation slideTheme='light' className="carousel-padding-top-zero"/>
-
-![](images/social_status_2x.png)
-
-“Our clients wanted to create PDFs of our reports and the open source solution we tried was difficult to work with and unreliable. We switched to the Adobe Services SDK because it produced higher quality PDFs and also let our clients convert to PowerPoint to customize reports for their audience.”
-
-**– Tim Hill, CEO & Co-Founder, Social Status**
-
-![](images/acumatica_2x.png)
-
-“We are committed to building superior collaboration and user experiences on our platform, and with PDF APIs from Adobe, we enabled the world’s best document experiences with ease — right within the Acumatica ERP solution.”
-
-**– John Roskill, CEO, Acumatica Cloud ERP**
-
-![](images/k2_2x.png)
-
-“Adobe Document Services helped us extend K2’s intelligent process automation solution to enable
-integrated PDF document creation with a rich, interactive web experience for document review,
-approval, and e-signature processes with Adobe Sign. Our developers were able to easily extend K2
-workflows that collect information from multiple data sources using Adobe Document Services APIs,
-enabling us to quickly deliver a solution for our customers to automate their document-oriented business processes in a more secure and scalable way.”
-
-**– Alex Cobb, VP Product Management, K2**
-
-![](images/ninetynine_u_2x.png)
-
-“With the 99U Conference shifting to an all-virtual format this year, we wanted to make all aspects of the
-event accessible to our attendees — especially The Creative Self Workbook, a workbook offering a
-chance for deep self-discovery and exploration. The Adobe PDF Embed API allowed us to create an
-accessible, seamless PDF experience with live form filling, notes, drawing, downloading, and printing
-options with just a few lines of code.”
-
-**– Andrea Rosen, Head of 99U**
-
-![](images/infodesk_2x.png)
-
-“InfoDesk provides AI-driven technology and tools that ena ble organizations to make the smartest
-decisions confidently. This involves delivering highly relevant insights to our customers in a format that
-suits them best so they can harness the value of their information. By using Adobe’s Document Service
-API, our customers can easily convert PDF reports to PowerPoint for use in client presentations and
-internal stakeholder meetings. At InfoDesk, we are always looking for ways to add value for our clients
-and Adobe enables us to do exactly that.”
-
-**– Lynn Epstein, COO, InfoDesk**
-
-
-
-<TitleBlock slots="heading" theme="light" />
-
-## Explore Adobe Document Cloud Services
-
+<HomeCarousel />
 
 
 <WrapperComponent slots="content" repeat="1" theme="light"/>
@@ -215,7 +151,8 @@ and Adobe enables us to do exactly that.”
 <HomeProduct />
 
 
-<SummaryBlock slots="image, heading, text, buttons" background="rgb(250, 105, 85)" className="bottom-summary-block-align bottom-summary-button-align"/>
+
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
 
 ![](images/bg-hero.jpeg)
 
