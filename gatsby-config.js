@@ -24,21 +24,21 @@ module.exports = {
       {
         title: 'APIs',
         menu: [{
-          title: 'Document Generation',
-          description: 'Generate PDF and Word documents from custom Word templates',
-          path: 'doc-generation.md'
-        }, {
-          title: 'PDF Extract',
-          description: 'Extract text, tables, images, and document structure',
-          path: 'pdf-extract.md'
-        }, {
-          title: 'PDF Embed',
-          description: 'Embed high-fidelity PDFs in web apps with analytics',
-          path: 'pdf-embed.md'
-        }, {
           title: 'PDF Services',
           description: 'Create, combine and export PDFs',
           path: 'pdf-services.md'
+        },{
+          title: 'PDF Extract',
+          description: 'Extract text, tables, images, and document structure',
+          path: 'pdf-extract.md'
+        },{
+          title: 'Document Generation',
+          description: 'Generate PDF and Word documents from custom Word templates',
+          path: 'doc-generation.md'
+        },{
+          title: 'PDF Embed',
+          description: 'Embed high-fidelity PDFs in web apps with analytics',
+          path: 'pdf-embed.md'
         }]
       },
       {
