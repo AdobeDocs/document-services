@@ -36,13 +36,13 @@ Collaboration and analytics
 
 <TitleBlock slots="heading" theme="light" />
 
-## <div id = "adobe-pdf-services-api">Adobe PDF Services API</div>
+## <span id = "adobe-pdf-services-api">Adobe PDF Services API</span>
 
 
 
 <TextBlock slots="heading, text, buttons" width="50%" theme="light" />
 
-### <div id = "pay-as-you-go">Pay-as-you-go</div>
+### <span id = "pay-as-you-go">Pay-as-you-go</span>
 
 You only pay for what you use each month with this simple pricing model through our partnership with AWS Marketplace. You’ll have full access to all PDF Services APIs, with no prepaid fees, no commitments, and the flexibility to easily manage your subscription through AWS console. Choose the listing below for United States subscribers only or International subscribers.<br/><br/>
 $0.05 per [Document Transaction](https://www.adobe.com/go/pdftoolsapi_licensing)<br/><br/>
