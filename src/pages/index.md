@@ -16,61 +16,21 @@ import HomeCarousel from './home/home-carousel.md'
 
 <Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
 
-![](images/bg-hero-doc-gen.jpeg)
+![hero image](images/bg-hero-doc-gen.jpeg)
 
 # Reimagine document experiences with PDF APIs designed for developers
 
 From the company who created the PDF standard.
 
 
-![](images/doc-gen-hero-desktop@2x.png)
+![hero asset image](images/doc-gen-hero-desktop@2x.png)
 
 - [Try the demo](/src/pages/pdf-extract.md)
 
 
+<TextBlock slots="image, heading,text,buttons" theme="lightest" />
 
-<TextBlock slots="image,heading,text,buttons" theme="light"  />
-
-![MSFT Teams logo](images/hero1.png)
-
-### PDF Embed API to insert PDFs and enable collaboration in web apps
-
-Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
-
-- [Demo](https://www.adobe.com/go/pdfEmbedAPI_demo) 
-- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)
-
-
-
-<TextBlock slots="heading,text,buttons,image" theme="lightest"  />
-
-### Generate PDF and Word documents from Word templates and JSON data
-
-Use the PDF Tools API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
-
-- [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/) 
-- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
-
-![](images/hero2.png)
-
-
-
-
-<TextBlock slots="image,heading,text,buttons" theme="light" />
-
-![MSFT Teams logo](images/hero3.png)
-
-### Unluck content structure in any PDF for NLP, RPA, and more
-
-Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
-
-- [Demo](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
-- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
-
-
-
-
-<TextBlock slots="heading,text,buttons,image" theme="lightest" />
+![dummy image](images/services.png)
 
 ### PDF APIs with SDKs for Node.js, .Net, and java to create, convert, OCR PDFs, and more
 
@@ -79,8 +39,45 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 - [Demo](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
 - [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-services.html)
 
-![dummy image](images/hero4.png)
 
+
+
+<TextBlock slots="heading,text,buttons,image" theme="light" />
+
+### Unluck content structure in any PDF for NLP, RPA, and more
+
+Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
+
+- [Demo](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
+- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
+
+![MSFT Teams logo](images/extractAPI.png)
+
+
+
+<TextBlock slots="image,heading,text,buttons" theme="lightest"  />
+
+![documnet image](images/documentGenerationAPI.png)
+
+### Generate PDF and Word documents from Word templates and JSON data
+
+Use the PDF Tools API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
+
+- [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/) 
+- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+
+
+
+<TextBlock slots="heading,text,buttons,image" theme="light"  />
+
+### PDF Embed API to insert PDFs and enable collaboration in web apps
+
+Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
+
+- [Demo](https://www.adobe.com/go/pdfEmbedAPI_demo) 
+- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)
+
+![MSFT Teams logo](images/Embed.png)
 
 
 <SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight />
@@ -154,9 +151,9 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
 
-![](images/bg-hero.jpeg)
+![summary block bg img](images/bg-hero.jpeg)
 
-### We'r ready to help 
+### We're ready to help 
 
 Have questions about the Document Services APIs.
 
