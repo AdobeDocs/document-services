@@ -10,7 +10,7 @@ title: Adobe Developer — Wrapper Components  —  Home Product Card
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" />
 
-![CC icon](../images/accurate_rendering.svg)
+![CC icon](../images/document-structure-understanding.svg)
 
 #### Services
 

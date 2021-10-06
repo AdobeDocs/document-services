@@ -11,7 +11,7 @@ import {
   layoutColumns,
   MOBILE_SCREEN_WIDTH,
   DESKTOP_SCREEN_WIDTH,
-} from "@adobe/gatsby-theme-aio/src/utils"; // need to use relative path while creating PR
+} from "@adobe/gatsby-theme-aio/src/utils"; 
 import {
   HeroButtons,
   HeroImage,
@@ -138,6 +138,8 @@ const Carousel = ({
   slideTheme,
   bulletActiveClass = "swiper-pagination-bullet-active",
   bulletClass = "swiper-pagination-bullet",
+  navigationPre= "swiper-button-prev",
+  navigationNext = "swiper-button-next" ,
   ...props
 }) => {
   const propKeys = Object.keys(props);
@@ -193,8 +195,8 @@ const Carousel = ({
             clickable: true,
           }}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: `.${navigationNext}`,
+            prevEl: `.${navigationPre}`,
           }}
         >
           {carouselProps.map((data, index) => {
@@ -214,8 +216,8 @@ const Carousel = ({
                 />
                 {enableNavigation ? (
                   <>
-                    <div className="swiper-button-prev"></div>
-                    <div className="swiper-button-next" />
+                    <div className={navigationPre}></div>
+                    <div className={navigationNext} ></div>
                   </>
                 ) : null}
               </SwiperSlide>
@@ -237,6 +239,8 @@ Carousel.propTypes = {
   slideTheme: PropTypes.oneOf(["light", "dark"]),
   bulletActiveClass: PropTypes.string,
   bulletClass: PropTypes.string,
+  navigationNext:PropTypes.string,
+  navigationPre:PropTypes.string
 };
 
 export { Carousel };

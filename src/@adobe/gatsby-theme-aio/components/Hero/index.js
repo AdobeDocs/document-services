@@ -151,6 +151,7 @@ const HeroAssets = ({ image }) =>
           height: 60%;
           box-sizing: border-box;
           margin-top: 0;
+          padding-top:var(--spectrum-global-dimension-size-200);
           margin-bottom: 0;
           .gatsby-resp-image-wrapper {
             max-width: none !important;

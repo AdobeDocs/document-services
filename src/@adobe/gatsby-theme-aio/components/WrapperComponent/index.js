@@ -12,13 +12,13 @@ import classNames from "classnames";
 import { DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 
 
-const WrapperComponent = ({ theme = 'lightest',className,content }) => {
-
+const WrapperComponent = ({ theme = 'lightest',className,content,background }) => {
+const backgroundColor =background?`background:${background}`:'background: var(--spectrum-global-color-gray-100)'
   return (
     <section
       className={classNames(className,`spectrum--${theme}`)}
       css={css`
-        background: var(--spectrum-global-color-gray-100);
+        ${backgroundColor}
         `}>
           <div
           css={css`

@@ -3,266 +3,130 @@ title: Adobe Developer — PDF Embed API | Embed PDF in HTML | Adobe Document Se
 description: Adobe PDF Embed API is a free JavaScript library that allows you to quickly and easily embed PDFs in web applications with only a few lines of code. Learn more now.
 ---
 
+import EmbedModes from './embed/embed-modes.md';
+import Annotations from './embed/annotations.md';
+import PDFAnalytics from './embed/pdf-Analytics';
+import Collaborative from './embed/collaborative-settings.md';
+import SaveControls from './embed/save-controls.md';
+import MenuTool from './embed/menu-tool-options';
+import UseCase from './embed/use-case.md';
+import StartEmbedding from './embed/start-embedding.md';
+import WhyPdfEmbed from './embed/why-pdf-embed.md';
+import KeyFeatures from './embed/key-features.md'
+import ExploreAdobe from './embed/explore-adobe.md'
 
-<Hero slots="image, heading, text, buttons" variant="halfwidth" />  
 
-![](images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+
+<Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
+
+![](images/bg-hero-doc-gen.jpeg)
 
 # Adobe PDF Embed API
 
-Free JavaScript API to embed high-fidelity PDFs, enable collaboration, and see analytics
-
-* [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
+Free JavaScript API to embed high-fidelity PDFs, enable collaboration, and see analytics.
 
 
+![embed](images/pdf-embed.png)
 
-
-<TextBlock slots="image, heading, text" width="33%" theme="light" />
-
-![](images/accurate_rendering.svg)
-
-### Accurate, consistent PDF rendering
-
-Whether on dynamic or static pages, deliver the highest quality PDF rendering available
+- [Get started](/src/pages/gettingstarted.md)
+- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo) 
 
 
 
-<TextBlock slots="image, heading, text" width="33%" theme="light" />
+<WrapperComponent slots="content" theme="light"/>
 
-![](images/customizable_experience.svg)
-
-### Customizable user experience
-
-Choose exactly how to display a PDF and use the callbacks and annotations APIs to provide programmatic control and enable digital collaboration
+<WhyPdfEmbed />
 
 
+<WrapperComponent slots="content" theme="dark" background="rgb(31, 42, 73)"/>
 
+<KeyFeatures />
 
-<TextBlock slots="image, heading, text" width="33%" theme="light" />
+<TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0' />
 
-![](images/analytics.svg)
+### Embed Modes
 
-### Analytics on PDF usage
+![embed](images/embed.svg)
 
-Use analytics to understand how users interact with PDFs, including time spent on a page and searches
+<EmbedModes />
 
+### Annotation
 
+![annotation](images/annotations.svg)
 
-<TextBlock slots="buttons" isCentered theme="light"/>
+<Annotations />
 
-* [Get Free Credentials](/src/pages/gettingstarted.md)
-
-
-
-
-<TitleBlock slots="heading" theme="lightest" />
-
-## Key Features of Our free PDF Embed API
-
-
-
-
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
-
-![](images/embed.svg)
-
-### Embed modes
-
-Control how you embed PDFs, with support for full-sized windows, sized containers, in-line display, and lightboxes
-
-
-
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
-
-![](images/annotations.svg)
-
-### Annotations
-
-Full support for import, create, delete, update, exporting of comments, and more; programmatically add, update, and delete annotations with the option to save; events can be triggered based on user actions
-
-
-
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
-
-![](images/analytics-green.svg)
 
 ### PDF Analytics
 
-Easily integrate Adobe Analytics with only a few steps, or leverage the user events to push data to other analytics tools
+![analytics](images/analytics-green.svg)
 
-
-
-
-
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
-
-![](images/collaborative_settings.svg)
+<PDFAnalytics />
 
 ### Collaborative Settings
 
-For multi-user document collaboration, identify reviewers by name or email address and save annotation settings through custom callbacks (default settings display GUEST as the reviewer name for all comments)
+![collaborative](images/collaborative_settings.svg)
 
+<Collaborative />
 
+### Save Controls
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
+![savecontrols](images/save_control.svg)
 
-![](images/save_control.svg)
-
-### Save controls
-
-Support auto-save to local drives or external storage, with options for frequency and polling, along with success/fail events capture; use file modification and status polling events for multi-user workflows
-
-
-
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
-
-![](images/menu_tool_options.svg)
+<SaveControls />
 
 ### Menu & Tool Options
 
-Programmatically enable or disable the left-hand panel, comments pane, toolbars, print, and download options
+![menu-options](images/menu_tool_options.svg)
+
+<MenuTool />
 
 
+<Carousel slots="image,heading, text, buttons" repeat="2"  theme="lightest" enableNavigation imageStyle="height:250px;width:250px;margin:auto !important;" className="vertical-padding" />
 
-<TextBlock slots="buttons" isCentered />
+![Integration](images/adobe_exerience_manager_logo@2x.png)
 
-* [See Documentation](https://www.adobe.com/go/pdfembedapi_docs)
-
-
-
-
-
-<TitleBlock slots="heading, text" theme="light" />
-
-## Start Embedding PDFs in Minutes
-
-Start your free 6-month trial today with 1,000 PDF transactions
-
-
-
-
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" />
-
-### Step 1
-
-Obtain free credentials
-
-* [Get started](/src/pages/gettingstarted.md)
-
-
-
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" />
-
-### Step 2
-
-Copy JavaScript code or download samples for React and Angular
-
-* [Get JavaScript](https://www.adobe.com/go/pdfembedapi_docs)
-* [Get Samples](https://github.com/adobe/pdf-embed-api-samples)
-
-
-
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" />
-
-### Step 3
-
-Add credentials to your code and run!
-
-* [See Documentation](https://www.adobe.com/go/pdfembedapi_docs)
-
-
-
-<TitleBlock slots="heading" theme="lightest" />
-
-## Integrations
-
-
-
-<TextBlock slots="heading, text, links" width="50%" theme="lightest" />
-
-### Adobe Experience Manager
+Integration with Adobe Experience Manager  
 
 Adobe Experience Manager customers can easily drag and drop a high-fidelity PDF viewer directly into web applications without the need for additional code or customizations. Includes pre-configurable settings for comments, printing, downloading, and integrated Adobe Analytics.
 
 * [Learn more](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/pdf-viewer.html)
 
 
+![Analytics](images/adobe-analytics@2x.png)
 
-<TextBlock slots="heading, text, links" width="50%" theme="lightest" />
-
-### Adobe Analytics
+Integration with Adobe Analytics  
 
 Out of the box Adobe Analytics integration allows customers to seamlessly enable rich analytics and gain insights on end user experience. Extend functionality with chatbots or calls to action based on user interactions.
 
-* [Learn more](https://medium.com/adobetech/pdf-analytics-get-insights-onembedded-pdfs-on-your-website-44e6a314fb1f)
+ 
+* [Learn more](https://medium.com/adobetech/pdf-analytics-get-insights-on-embedded-pdfs-on-your-website-44e6a314fb1f)
+
+
+<WrapperComponent slots="content" theme="light"/>
+
+<StartEmbedding/>
 
 
 
+<WrapperComponent slots="content" theme="lightest"/>
 
-<TitleBlock slots="heading" theme="dark" />
-
-## Use Cases for PDF Embed API
-
+<UseCase />
 
 
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
-
-![](images/ic-sales-proposals.svg)
-
-## Student Teacher Collaboration
-
-Accelerate digital learning programs with embedded PDF viewing for teacher and peer document collaboration.
-
-* [See Use Case](/src/pages/use-cases/collaboration/index.md)
-
-
-
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
-
-![](images/ic-legal-contracts.svg)
-
-## Reviews and Approvals
-
-Maximize remote worker productivity with multi-user document collaboration including commenting, markup, text edits, and more.
-
-* [See Use Case](/src/pages/use-cases/collaboration/review-and-approval.md)
-
-
-
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
-
-![](images/ic-invoices.svg)
-
-## Digital Content Publishing
-
-Publish whitepapers and marketing content with end-user interactivity, security controls, and analytics.
-
-* [See Use Case](/src/pages/use-cases/content-publishing/index.md)
-
-
-
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
-
-![](images/ic-nda.svg)
-
-## Report Creation and Editing
-
-Create and embed reports for internal or external consumption, sharing, and review.
-
-* [See Use Case](/src/pages/use-cases/content-publishing/on-demand-report-creation.md)
-
-
-
-<TextBlock slots="buttons" isCentered theme="dark" />
+<TextBlock slots="buttons" isCentered theme="lightest" className='margin-top-zero'/>
 
 * [See all Use Case](/src/pages/use-cases)
 
 
 
- 
-<SummaryBlock slots="image, heading, text, buttons" background="rgb(250, 105, 85)" />
+<WrapperComponent slots="content" theme="light"/>
 
-![](images/bg-hero-doc-gen.jpeg)
+<ExploreAdobe />
+
+
+ 
+<SummaryBlock slots=" heading, text, buttons"  theme='lightest' className="vertical-padding"/>
 
 ### We're ready to help    
 
@@ -270,15 +134,5 @@ Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 * [Contact us](https://www.adobe.com/go/pdftoolsapi_requestform)
-
-
-
-
-
-
-
-
-
-
 
 
