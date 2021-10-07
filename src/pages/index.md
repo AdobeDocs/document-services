@@ -3,7 +3,7 @@ title: Adobe Developer — SDK Developer Kit | PDF Library | Adobe Document Serv
 description: Own the end-to-end customer experience. Our SDK Developer kits are customizable & built to last. Find an innovative solution with our PDF SDK here.
 ---
 
-import '../styles/main.scss'
+import '../styles/main.css'
 import CreatePdfFromUrl from './home/create-pdf-from-url.md';
 import DynamicPdfDocumentGeneration from './home/dynamic-pdf-document-generation.md';
 import ExtractPdfContentStructure from './home/pdf-content-structure.md';

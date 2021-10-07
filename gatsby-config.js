@@ -194,6 +194,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [`@adobe/gatsby-theme-aio`,`gatsby-plugin-sass`],
+  plugins: [`@adobe/gatsby-theme-aio`],
   pathPrefix: process.env.PATH_PREFIX || '/document-services/'
 };

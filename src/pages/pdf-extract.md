@@ -2,7 +2,7 @@
 title: Adobe Developer — Extract PDF Content | PDF Content Extraction API | Adobe Document Services
 description: Unlock PDFs by extracting all document elements with positioning and reading order into JSON format for a variety of downstream solutions such as RPA and NLP. Learn more today.
 ---
-import '../styles/main.scss'
+
 import PdfExtractResource from './pdf-extract/pdf-extract-resource.md';
 import ExtractStepperComponent from './pdf-extract/extract-stepper.md';
 import WhyExtractAPI from './pdf-extract/why-extract-api.md';
