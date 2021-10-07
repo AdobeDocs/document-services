@@ -25,7 +25,7 @@ import RotatePDFPages from './rotate-pdf-pages.md';
 
 <SummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight />
 
-## Key Features of Adobe PDF Services API
+## Key features of adobe PDF services API
 
 - [Start free trial](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK)
 

@@ -151,19 +151,6 @@
 }
 
 
-
-.align-left-steper-title *{
-  text-align:left;
-  margin-left:calc(var(--spectrum-global-dimension-size-2000) + var(--spectrum-global-dimension-size-160)) !important;
-  max-width: 100vw !important;
-
-  @media screen and (max-width:768px) {
-    margin-left:var(--spectrum-global-dimension-size-100) !important;
-      }
-}
-
-
-
 .code-block-summary-card-height {
   height: var(--spectrum-global-dimension-size-3000) !important;
 
@@ -188,8 +175,8 @@
   }
 }
 
-.padding_bottom_align .css-yhr1an-TextBlock {
-  padding-top: 50 !important;
+.media-horizantal-align .css-yhr1an-TextBlock {
+  padding-top: var(--spectrum-global-dimension-size-500) !important;
   padding-bottom: var(--spectrum-global-dimension-size-500) !important;
 }
 
@@ -287,6 +274,28 @@
       margin: 0px;
     }
   }
+  .pricing-desc > div {
+    padding: 0 var(--spectrum-global-dimension-size-400) !important;
+  }
+  .pricing-desc {
+    padding-bottom: 0px !important;
+  }
+  .div-flex > div {
+    display: block !important;
+  }
+  .w-50 {
+    width: 100% !important;
+  }
+  .left-content > div > div > div {
+    padding-left: var(--spectrum-global-dimension-size-550) !important;
+    margin-bottom: 0px !important;
+  }
+  .border-right > div > div > div {
+    border-right: 0px !important;
+  }
+  .volume-content {
+    padding-left: var(--spectrum-global-dimension-size-0) !important;
+  } 
 }
 
 .bg-grey {
@@ -508,3 +517,60 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child{
   font-weight: 800;
 }
 
+
+.mediaSize {
+  div:first-child{
+   display: block !important;
+ }
+ div:first-child > div {
+  margin: 0 auto !important;
+  width: 100% !important;
+ }
+}
+
+
+@media (max-width: 1280px) {
+  .left-content > div > div > div {
+    width: 100% !important;
+  }
+}
+.left-content > div > div > div {
+  padding-left: var(--spectrum-global-dimension-size-150);
+}
+.bg-grey > div {
+  margin: auto;
+}
+
+.border-right > div > div > div {
+  border-right: 1px solid var(--spectrum-global-color-gray-500);
+}
+
+.pb-1 {
+  padding-bottom: var(--spectrum-global-dimension-size-300) !important;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.div-flex > div {
+  display: flex;
+  padding-bottom: var(--spectrum-global-dimension-size-300) !important;
+}
+
+.div-p-0 > div {
+  padding: 0px !important ;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pricing-desc > div {
+  padding-left: var(--spectrum-global-dimension-size-0);
+  margin-left: var(--spectrum-global-dimension-size-150) !important;
+}
+
+.volume-content{
+  padding-left: var(--spectrum-global-dimension-size-400);
+}

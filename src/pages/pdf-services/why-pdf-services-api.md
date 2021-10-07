@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  —  Why PDF Services API
 
 <TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
 
-## Why pdf services API?
+## Why PDF services API?
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-m-size"/>
 

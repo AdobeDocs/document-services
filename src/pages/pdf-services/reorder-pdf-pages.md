@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  — Render PDF Pages
 
 <TextBlock slots="heading, buttons, text, tetx1" theme="dark" className="bgBlue"/>
 
-##### Reorder pages within pdf files
+##### Reorder pages within PDF files
 
 - [See documentation](/src/pages/gettingstarted.md)
 

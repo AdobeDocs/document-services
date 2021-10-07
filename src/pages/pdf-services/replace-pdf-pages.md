@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  — Replace PDF Pages
 
 <TextBlock slots="heading, buttons, text, tetx1" theme="dark" className="bgBlue"/>
 
-##### Replace a page within a pdf file
+##### Replace a page within a PDF file
 
 - [See documentation](/src/pages/gettingstarted.md)
 

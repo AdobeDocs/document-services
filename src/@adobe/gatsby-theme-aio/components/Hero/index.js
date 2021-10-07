@@ -79,8 +79,8 @@ const HeroButtons = ({ buttons, variants = ['cta', 'primary'], quiets = [true, t
 const HeroImage = ({ image, styles }) =>
   image
     ? cloneElement(image, {
-        children: cloneChildren(image.props.children, setImageLoading),
-        css: css`
+      children: cloneChildren(image.props.children, setImageLoading),
+      css: css`
           display: flex;
           align-items: center;
           justify-content: center;
@@ -99,7 +99,7 @@ const HeroImage = ({ image, styles }) =>
             object-fit: cover;
           }
         `
-      })
+    })
     : null;
 
 const HeroTexts = ({ texts }) => {
@@ -120,15 +120,15 @@ const HeroTexts = ({ texts }) => {
   );
 };
 
-const HeroHeading = ({ heading, variant ,customLayout}) =>
+const HeroHeading = ({ heading, variant, customLayout }) =>
   heading
     ? cloneElement(heading, {
-        // force h1 to support gdocs
-        mdxType: 'h1',
-        originalType: 'h1',
-        className:
-          (variant === 'default' || customLayout) ? customLayout ? 'spectrum-Heading--sizeXL spectrum-Heading--serif' :'spectrum-Heading--sizeXL' : 'spectrum-Heading--sizeXXL spectrum-Heading--serif',
-        css: css`
+      // force h1 to support gdocs
+      mdxType: 'h1',
+      originalType: 'h1',
+      className:
+        (variant === 'default' || customLayout) ? customLayout ? 'spectrum-Heading--sizeXL spectrum-Heading--serif' : 'spectrum-Heading--sizeXL' : 'spectrum-Heading--sizeXXL spectrum-Heading--serif',
+      css: css`
           margin-top: 0;
           margin-bottom: var(--spectrum-global-dimension-size-200);
 
@@ -136,14 +136,14 @@ const HeroHeading = ({ heading, variant ,customLayout}) =>
             margin-bottom: var(--spectrum-global-dimension-size-200);
           }
         `
-      })
+    })
     : null;
 
 const HeroAssets = ({ image }) =>
   image
     ? cloneElement(image, {
-        children: cloneChildren(image.props.children, setImageLoading),
-        css: css`
+      children: cloneChildren(image.props.children, setImageLoading),
+      css: css`
           display: flex;
           align-items: center;
           justify-content: center;
@@ -168,7 +168,7 @@ const HeroAssets = ({ image }) =>
             width: 100%;
           }
         `,
-      })
+    })
     : null;
 
 const Hero = ({
@@ -181,13 +181,80 @@ const Hero = ({
   buttons,
   assets,
   variant = 'default',
+  headingOnly = false,
+  containerHeight = 1000,
   width = DESKTOP_SCREEN_WIDTH,
   customLayout = false,
   ...props
 }) => {
   const { siteMetadata, location } = useContext(Context);
+  if (headingOnly) {
+    const height = `calc(var(--spectrum-global-dimension-size-${containerHeight}) + var(--spectrum-global-dimension-size-350))`;
+    return (
+      <section
+        className={classNames(className, `spectrum--${theme}`)}
+        css={css`
+          position: relative;
+          width: 100%;
+          height: ${height};
+          background: ${background ?? "var(--spectrum-global-color-gray-100)"};
 
-  if (!variant || variant === 'default') {
+          @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+            overflow: auto;
+          }
+
+          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+            height: 100vh;
+
+            .spectrum-Heading--sizeXXL {
+              font-size: var(--spectrum-alias-heading-xl-text-size);
+            }
+          }
+        `}
+      >
+        {image && <HeroImage image={image} />}
+
+        <div
+          css={css`
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0
+              calc(
+                var(--spectrum-global-dimension-size-3600) +
+                  var(--spectrum-global-dimension-size-125)
+              );
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+              padding: 0 var(--spectrum-global-dimension-size-400);
+            }
+          `}
+        >
+          <HeroHeading
+            heading={heading}
+            variant={variant}
+          />
+          <HeroTexts texts={props} />
+          {buttons && (
+            <HeroButtons
+              buttons={buttons}
+              variants={["cta", "overBackground"]}
+              css={css`
+                margin-top: var(--spectrum-global-dimension-size-400);
+              `}
+            />
+          )}
+        </div>
+      </section>
+    );
+  } else if (!variant || variant === 'default') {
     const { home, pages } = siteMetadata;
     const pathWithRootFix = rootFix(location.pathname);
     const pagesWithRootFix = rootFixPages(pages);
@@ -266,7 +333,7 @@ const Hero = ({
     );
   } else {
     const height = 'calc(var(--spectrum-global-dimension-size-6000) + var(--spectrum-global-dimension-size-250))';
-    if (variant === 'fullwidth' && customLayout){
+    if (variant === 'fullwidth' && customLayout) {
       return (
         <section
           className={classNames(className, `spectrum--${theme}`)}
@@ -320,7 +387,7 @@ const Hero = ({
               />
             )}
 
-            <HeroTexts texts={props}  />
+            <HeroTexts texts={props} />
 
             {buttons ? (
               <HeroButtons
@@ -383,7 +450,7 @@ const Hero = ({
                 padding: 0 var(--spectrum-global-dimension-size-400);
               }
             `}>
-            <HeroHeading heading={heading} variant={variant}  />
+            <HeroHeading heading={heading} variant={variant} />
 
             <HeroTexts texts={props} />
 
@@ -493,7 +560,8 @@ Hero.propTypes = {
   variant: PropTypes.string,
   width: PropTypes.string,
   theme: PropTypes.string,
-  customLayout:PropTypes.bool
+  customLayout: PropTypes.bool,
+  headingOnly: PropTypes.bool
 };
 
 HeroButtons.propTypes = {

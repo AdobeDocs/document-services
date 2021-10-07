@@ -1,6 +1,6 @@
 <TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
 
-##### Secure a pdf file and set restrictions
+##### Secure a PDf file and set restrictions
 
 - [See documentation](/src/pages/gettingstarted.md)
 

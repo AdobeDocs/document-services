@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  — Split PDF Pages
 
 <TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
 
-##### Split a pdf into multiple files
+##### Split a PDF into multiple files
 
 - [See documentation](/src/pages/gettingstarted.md)
 

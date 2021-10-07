@@ -7,7 +7,7 @@ title: Adobe Developer — PDF Services API  —  Explore other Adobe Document s
 
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
-## Explore other adobe document services.
+## Explore other adobe document services
 
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" />

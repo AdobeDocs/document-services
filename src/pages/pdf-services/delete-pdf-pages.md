@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  —  Delete PDF
 
 <TextBlock slots="heading, buttons, text, text1"  theme="dark" className="bgBlue"/>
 
-##### Delete a page from a pdf file
+##### Delete a page from a PDF file
 
 - [See documentation](/src/pages/gettingstarted.md)
 

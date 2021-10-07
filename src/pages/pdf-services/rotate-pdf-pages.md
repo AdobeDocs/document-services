@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  — Rotate PDF Pages
 
 <TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
 
-##### Rotate a page in a pdf file
+##### Rotate a page in a PDF file
 
 - [See documentation](/src/pages/gettingstarted.md)
 

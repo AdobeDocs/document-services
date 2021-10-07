@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  —  Convert PDF
 
 <TextBlock slots="heading, buttons, text, text1" theme="dark"  className="bgBlue"/>
 
-##### Convert a pdf file to other formats
+##### Convert a PDF file to other formats
 
 - [See documentation](/src/pages/gettingstarted.md)
 

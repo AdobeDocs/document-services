@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 <TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
 
-##### Create a pdf file
+##### Create a PDF file
 
 - [See documentation](/src/pages/gettingstarted.md)
 

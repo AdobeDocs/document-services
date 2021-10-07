@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  — Get PDF
 
 <TextBlock slots="heading, buttons, text, text1, text2"  theme="dark" className="bgBlue"/>
 
-##### Get the properties of a pdf file
+##### Get the properties of a PDF file
 
 - [See documentation](/src/pages/gettingstarted.md)
 

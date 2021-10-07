@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  — OCR PDF
 
 <TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
 
-##### Ocr a pdf file
+##### OCR a PDF file
 
 - [See documentation](/src/pages/gettingstarted.md)
 
