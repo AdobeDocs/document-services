@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     docs: {
       title: 'View Docs',
-      path: '/document-services/docs/'
+      path: '/document-services/docs/overview'
     },
     pages: [
       {
