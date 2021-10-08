@@ -401,6 +401,7 @@ const TabsBlock = ({
                     text-align: left;
                     padding: 0 0 var(--spectrum-global-dimension-size-100) 0 !important;
                     max-width: ${layoutColumns(8.5)} !important;
+                    overflow: hidden;
                     @media only screen and (max-width: ${mobileMinWidth}) {
                       padding-left: inherit !important;
                       max-width: ${layoutColumns(3)} !important;
@@ -413,7 +414,6 @@ const TabsBlock = ({
                       max-width: ${layoutColumns(6.5)} !important;
                       padding-left:var(--spectrum-global-dimension-size-500);
                     }
-
                   `}
                 >
                   {data['content'] ? data['content'] : null}
