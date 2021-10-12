@@ -3,341 +3,104 @@ title: Adobe Developer — Automate Document Generation | Contract Generation | 
 description: Automatically generate custom branded sales proposals, legal contracts, and invoices from Word templates and your dynamic data. Learn more today.
 ---
 
+import DgDownloadSample from './doc-generation/dg-download-sample'
+import DgUseCaseDocServiceAPI from './doc-generation/dg-use-case-doc-service-api'
+import DgStartModifyingTitle from './doc-generation/dg-start-modifying-pdf.md'
+import DgWhyDocTitle from './doc-generation/dg-why-doc-gen-api.md'
+import DgKeyFeatures from './doc-generation/dg-key-features.md'
+import DgExploreOtherAdobeDoc from './doc-generation/dg-explore-other-adobe-doc.md'
 
-<Hero slots="image, heading, text" variant="fullwidth" background="rgb(250, 105, 85)"/>  
+<Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
 
 ![](images/bg-hero-doc-gen.jpeg)
 
-# Adobe Document Generation API
+# Adobe document generation API
 
-Generate PDF and Word documents from Word templates and JSON data 
+Generate PDF and Word documents from World templates and JSON data
 
+![](images/doc-gen-hero-desktop@2x.png)
 
-<TitleBlock slots="heading"/>
+- [Get Started](https://www.adobe.com/go/pdfEmbedAPI_demo) 
+- [View docs](https://www.adobe.com/go/dcsdk_APIdocs)
 
-## Why Document Generation API?
 
+<!-- Why Document Generation API -->
 
+<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+<DgWhyDocTitle/>
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
+<TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn"/>
 
-![](images/rapid-results.svg)
+- [Get Started](https://www.adobe.com/go/pdfEmbedAPI_demo) 
+- [View docs](https://www.adobe.com/go/dcsdk_APIdocs)
 
-### Authoring Tools for Improved Productivity
+<!-- Key Features of Adobe Document Generation API -->
+<WrapperComponent slots="content" repeat="1" theme="light"/>
+<DgKeyFeatures/>
 
-Use our Adobe Document Generation Tagger to quickly build your custom branded Microsoft Word templates
+<!-- Carousel -->
+<Carousel slots="image, heading, text1, buttons" repeat="2"  theme="dark" enableNavigation slideTheme='dark' imageStyle=" margin:auto !important; max-height:350px !important;"/>
 
+![adobe_ms_logo](images/adobe_ms_logo_2.png)
 
+## Microsoft power automate integration
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
+Quickly automate document processes without writing any code using the new Adobe PDF Services Connector.
 
-![](images/modify-pages.svg)
+- [Get Started](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
-### Manipulate and Merge Dynamic Data
 
-Process text tags, calculations, repeating elements, and conditional statements at runtime    
+<!-- ![](images/adobe_ms_logo_2.png) -->
+![thumbnail](images/liquid-mode-mobile.png)
 
+## Liquid mode PDF creation coming soon
 
+EASY TO READ ON MOBILE<br/>
+Leverage A1 to easily reformat documents for viewing on small screens<br/><br/>
+IMPROVED ACCESSIBILITY<br/>
+Documents are tagged for improved accessibility with assistive technologies<br/><br/>
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" />
+- [Get Started](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
-![](images/high-fidelity.svg)
 
-### High Fidelity Document Generation
+<!-- Download Sample Templates and Data to Get Started -->
 
-Generate pixel perfect documents with signatures using Adobe Sign    
+<WrapperComponent slots="content" repeat="1" theme="lightest"/>
 
+<DgDownloadSample/>
 
+<TextBlock slots="buttons" theme="lightest" isCentered className='blade-bottom-content ms-word-add-in-title'/>
 
-<TextBlock slots="buttons" isCentered theme="lightest" />
+- [Get Microsoft Word add-in](https://www.adobe.com/go/pdfEmbedAPI_demo)
+- [See all templates](./doc-gen-api-template.md)
 
-* [Product overview video](https://video.tv.adobe.com/v/332120)    
-* [Start free trial](/src/pages/gettingstarted.md)
+<!--  Start Modifying PDFs in a few Minutes -->
+<WrapperComponent slots="content" theme="light"/>
+<DgStartModifyingTitle/>
 
 
+<!-- Use case for Document Services API -->
+<WrapperComponent slots="content" repeat="1" theme="lightest"/>
 
-<TitleBlock slots="heading" theme="dark" />
+<DgUseCaseDocServiceAPI/>
 
-## Key Features of Adobe Document Generation API
+<TextBlock slots="buttons" theme="lightest" isCentered className="view-all-use-case-btn"/>
 
+- [View all use case](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
+<!-- Explore other Adobe Document Cloud services -->
 
+<WrapperComponent slots="content" repeat="1" theme="light"/>
+<DgExploreOtherAdobeDoc/>
 
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
+<!-- Summary Block -->
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
 
-![](images/ic-msword.svg)
+![summary block bg img](images/bg-hero.jpeg)
 
-### Rapid template tagging from uploaded JSON data
+### We're ready to help 
 
-Automatically generate text tags from your JSON data model using our Document Generation Tagger Microsoft Word add-in
+Have questions about the Document Services APIs.
 
-* [Get Microsoft Word add-in](https://www.adobe.com/go/dcdg_Tagger)
-
-
-<TextBlock slots="image, heading, text" width="25%" theme="dark" />
-
-![](images/ic-insert.svg)
-
-### Insert elements during document generation
-
-Dynamically insert tags, images, lists, and generate tables based on data inputs and conditions for granular content customization.
-
-
-<TextBlock slots="image, heading, text" width="25%" theme="dark" />
-
-![](images/ic-sign.svg)
-
-### Out of the box integration with Adobe Sign
-
-Accelerated text tag creation to generate documents that are ready for processing in Adobe Sign.
-
-
-<TextBlock slots="image, heading, text" width="25%" theme="dark" />
-
-![](images/ic-cloud-rest-api.svg)
-
-### Cloud-based REST API integrates with any application
-
-Embed document generation into any application in minutes with our SDKs for Node.js, .Net, and Java. Postman collection provides a QuickStart for API calls.
-
-
-
-<TextBlock slots="buttons" isCentered theme="dark" />
-
-* [Start free trial](/src/pages/gettingstarted.md)
-
-
-
-
-
-<TextBlock slots="image" theme="darkest" width="50%" theme="darkest" />
-
-![](images/adobe_logo_partnership@2x.png)
-
-
-
-<TextBlock slots="image" theme="darkest" width="50%" theme="darkest" />
-
-![](images/ms_power_logo.svg)
-
-
-
-
-
-<TextBlock slots="heading, text, buttons" isCentered theme="darkest"/>
-
-**Available on Microsoft Power Automate**
-
-Automate document generation processes across CRMs, forms, and apps using our PDF Services Connector						
-
-* [Learn more](http://www.adobe.com/go/powerautomate_help)
-
-
-
-<TitleBlock slots="heading" theme="dark" />
-
-## Use Cases for Document Generation API
-
-
-
-
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
-
-![](images/ic-sales-proposals.svg)
-
-### Sales Proposals
-
-Create custom branded proposals and contracts
-
-* [See use case](/src/pages/use-cases/index.md)
-
-
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
-
-![](images/ic-legal-contracts.svg)
-
-### Legal Contracts
-
-Generate legal contracts with dynamic terms and signatures
-
-* [See use case](/src/pages/use-cases/agreements-and-contracts/legal-contracts.md)
-
-
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
-
-![](images/ic-invoices.svg)
-
-### Invoices
-
-Automate invoice generation with various data inputs
-
-* [See use case](/src/pages/use-cases/financial/invoices.md)
-
-
-<TextBlock slots="image, heading, text, links" width="25%" theme="dark" />
-
-![](images/ic-nda.svg)
-
-### NDA
-
-Generate standardized NDA documents with custom data and signatures
-
-* [See use case](/src/pages/use-cases/agreements-and-contracts/nda-creation.md)
-
-
-<TextBlock slots="buttons" isCentered theme="dark"/>
-
-* [See all Use Cases](/src/pages/use-cases)
-
-
-
-
-<TitleBlock slots="heading, text" theme="light" />
-
-## Download Sample Templates and Data to Get Started
-
-Review our sample Word templates with JSON data and [get Microsoft Word add-in](https://www.adobe.com/go/dcdg_Tagger)
-
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" /> 
-
-![](images/agreement.png)
-
-### Agreement
-
-* [Download](https://www.adobe.com/go/dcdg_sampleagreement)
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" />
-
-![](images/grant_funding.png)
-
-### Grant application
-
-* [Download](https://www.adobe.com/go/dcdg_samplegrant)
-
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" />
-
-![](images/sales_invoice.png)
-
-### Invoice
-
-* [Download](https://www.adobe.com/go/dcdg_sampleinvoice)
-
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" />
-
-![](images/project_proposal.png)
-
-### Sales proposal
-
-* [Download](https://www.adobe.com/go/dcdg_sampleproposal)
-
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" />
-
-![](images/lms_report.png)
-
-### Certification report
-
-* [Download](https://www.adobe.com/go/dcdg_samplereport)
-
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" />
-
-![](images/offer_letter.png)
-
-### Offer letter
-
-* [Download](https://www.adobe.com/go/dcdg_sampleofferletter)
-
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" />
-
-![](images/service_receipt.png)
-
-### Receipt template
-
-* [Download](https://www.adobe.com/go/dcdg_samplereceipt)
-
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" />
-
-![](images/sales_order.png)
-
-### Sales order
-
-* [Download](https://www.adobe.com/go/dcdg_samplesalesorder)
-
-
-
-<TextBlock slots="image, heading, buttons" width="33%" theme="light" />
-
-![](images/lms_certificate.png)
-
-### Certificate
-
-* [Download](https://www.adobe.com/go/dcdg_samplecertificate)
-
-
-
-
-<TitleBlock slots="heading, text" theme="lightest" />
-
-## Get started in minutes
-
-Start free trial with 1,000 Document Transactions for up to 6 months
-
-
-
-<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" />
-
-## Step 1
-
-Start a free trial and download code samples for Node.js, Java, and .Net
-
-* [Start a free trial](/src/pages/gettingstarted.md)
-
-
-
-<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" />
-
-## Step 2
-
-Get the Adobe Document Tagger Microsoft Word add-in and check out our [sample templates](/src/pages/doc-generation.md).
-
-* [Get Word add-in](https://www.adobe.com/go/dcdg_Tagger)
-
-
-
-<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" />
-
-## Step 3
-
-Add credentials to your code and run!
-
-* [See documentation](https://www.adobe.com/go/dcdocgen_overview_doc)
-* [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-documentGeneration)
-
-
-
-<SummaryBlock slots="image, heading, text, buttons" background="rgb(250, 105, 85)" />
-
-![](images/bg-hero-doc-gen.jpeg)
-
-### We're ready to help    
-
-Have questions about the Document Services APIs? 
-
-* [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-* [Contact us](https://www.adobe.com/go/pdftoolsapi_requestform)
-
- 
+- [Go to the Adobe Forum](/src/pages/gettingstarted.md)
+- [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)

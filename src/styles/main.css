@@ -447,3 +447,8 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
   margin: 0 auto !important;
   width: 100% !important;
 }
+
+img[alt=thumbnail] {
+    max-width:226px !important;
+    max-height:316px !important;
+ }

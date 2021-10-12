@@ -1,0 +1,26 @@
+---
+title: Adobe Developer — Automate Document Generation | Contract Generation | Adobe
+description: Automatically generate custom branded sales proposals, legal contracts, and invoices from Word templates and your dynamic data. Learn more today.
+---
+
+
+import { products,clouds } from '../components/product.js';
+
+<Hero slots="image, heading" layout="section" variant="fullwidth" headingOnly={true} containerHeight={1200} background="rgb(250, 105, 85)"/>
+
+![bg-hero-doc-gen](images/bg-hero-doc-gen.jpeg)
+
+### Adobe document generation API templates
+
+<ProductCardGrid clouds={clouds} products={products} showName={true} showDescription={false} interaction={true} buttonName="Download" showBorder={false} imgHeight="1300" isCentered={true} theme="light"/>
+
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
+
+![summary block bg img](images/bg-hero.jpeg)
+
+### We're ready to help 
+
+Have questions about the Document Services APIs.
+
+- [Go to the Adobe Forum](/src/pages/gettingstarted.md)
+- [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)

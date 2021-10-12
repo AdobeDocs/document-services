@@ -1,0 +1,42 @@
+
+.contentAlignLeft {
+  text-align: left !important;
+}
+.contentAlignLeft div:last-child {
+  justify-content: left !important;
+}
+
+.start-modify-pdf-header > div {
+  margin-left: 0px !important;
+  text-align: left !important;
+}
+
+.padding-bottom-zero {
+  padding-bottom: 0px !important;
+}
+.padding-top-zero {
+  padding-top: 0px !important;
+}
+
+.margin-zero div:last-child {
+  margin: 0px !important;
+}
+
+.pt-grid-title-padding-bottom {
+  padding-bottom: calc(var(--spectrum-global-dimension-size-600) + var(--spectrum-global-dimension-size-200)) !important;
+
+}
+
+
+.view-all-use-case-btn {
+  padding-top: var(--spectrum-global-dimension-size-200) !important;
+  padding-bottom: var(--spectrum-global-dimension-size-500) !important;
+}
+.ms-word-add-in-title {
+  padding-top: var(--spectrum-global-dimension-size-200) !important;
+  padding-bottom: var(--spectrum-global-dimension-size-500) !important;
+}
+
+.why-doc-get-started-btn {
+  padding-bottom: var(--spectrum-global-dimension-size-500) !important;
+}
