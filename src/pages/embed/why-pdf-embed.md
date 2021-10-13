@@ -4,7 +4,7 @@
 
 <TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left img-xl-size"  />
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Accurate, consistent PDF rendering
 
@@ -13,7 +13,7 @@ Whether on dynamic or static pages, deliver the highest quality PDF rendering av
 
 <TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left img-xl-size" />
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Customizable user experience
 
@@ -21,7 +21,7 @@ Choose exactly how to display a PDF and use the callbacks and annotations APIs t
 
 <TextBlock slots="image, heading, text" width="33%" theme="light"  className="align-left img-xl-size" />
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Analytics on PDF usage
 

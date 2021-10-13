@@ -39,7 +39,7 @@ Generate PDF and Word documents from World templates and JSON data
 <DgKeyFeatures/>
 
 <!-- Carousel -->
-<Carousel slots="image, heading, text1, buttons" repeat="2"  theme="dark" enableNavigation slideTheme='dark' imageStyle=" margin:auto !important; max-height:350px !important;"/>
+<Carousel slots="image, heading, text1, buttons" repeat="2"  theme="dark" enableNavigation slideTheme='dark' imageStyle=" margin:auto !important; max-height:350px !important;" className="carousel-padding-top-zero" navigationNext="white-swiper-button-next" navigationPre="white-swiper-button-prev" />
 
 ![adobe_ms_logo](images/adobe_ms_logo_2.png)
 

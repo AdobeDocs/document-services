@@ -9,7 +9,7 @@ title: Adobe Developer — Automate Document Generation | Document Explore | Ado
 <ProductCard slots="icon, heading, text, buttons" buttonDisplay  borderRadious gradients  toColor='#5fc2d3'
 bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable />
 
-![](../images/document-structure-understanding.svg)
+![document-structure-understanding](../images/document-structure-understanding.svg)
 
 ### Generate
 Generate PDF and Word documents from custom Word templates

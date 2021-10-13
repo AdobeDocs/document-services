@@ -22,6 +22,7 @@ const backgroundColor =background?`background:${background}`:'background: var(--
         `}>
           <div
           css={css`
+          overflow-x:hidden !important;
           @media only screen and (min-width: ${DESKTOP_SCREEN_WIDTH}) {
             margin:auto;
               width:${DESKTOP_SCREEN_WIDTH}

@@ -19,7 +19,7 @@ import ExploreAdobe from './embed/explore-adobe.md'
 
 <Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
 
-![](images/bg-hero-doc-gen.jpeg)
+![bg-hero-doc-gen](images/bg-hero-doc-gen.jpeg)
 
 # Adobe PDF Embed API
 

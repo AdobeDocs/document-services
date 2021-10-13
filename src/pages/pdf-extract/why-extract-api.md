@@ -10,7 +10,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 
 <TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left img-xl-size"/>
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![extract_API_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Rapid template tagging from uploaded JSON data
 
@@ -21,7 +21,7 @@ Automatically generate text tags from your JSON date model using our [Document G
 
 <TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left img-xl-size"/>
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![extract_API_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Insert elements during document generation
 
@@ -32,7 +32,7 @@ Dynamically insert tags, images, lists, and generate tables based on data inputs
 
 <TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left img-xl-size"/>
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![extract_API_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Out of the box integration with Adobe sign
 
@@ -43,7 +43,7 @@ Accelerated text tag creation to generate documents that are ready for processin
 
 <TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left img-xl-size"/>
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![extract_API_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Cloud-based REST API integrates with any application
 

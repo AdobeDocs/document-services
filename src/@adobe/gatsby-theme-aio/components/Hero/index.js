@@ -148,7 +148,7 @@ const HeroAssets = ({ image }) =>
           align-items: center;
           justify-content: center;
           width: 100%;
-          height: 60%;
+          height: 70%;
           box-sizing: border-box;
           margin-top: 0;
           padding-top:var(--spectrum-global-dimension-size-200);
@@ -332,7 +332,7 @@ const Hero = ({
       </section>
     );
   } else {
-    const height = 'calc(var(--spectrum-global-dimension-size-6000) + var(--spectrum-global-dimension-size-250))';
+    const height = 'calc(var(--spectrum-global-dimension-size-6000) + var(--spectrum-global-dimension-size-1800))';
     if (variant === 'fullwidth' && customLayout) {
       return (
         <section
@@ -340,7 +340,7 @@ const Hero = ({
           css={css`
             position: relative;
             width: 100%;
-            height: ${height};  
+            height: ${height};
             background: ${background ?? "var(--spectrum-global-color-gray-50)"};
             
             @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
@@ -394,13 +394,13 @@ const Hero = ({
                 buttons={buttons}
                 variants={["cta", "overBackground"]}
                 css={css`
-                  margin-top: var(--spectrum-global-dimension-size-400);
+                  margin-top: var(--spectrum-global-dimension-size-200);
                 `}
               />
             ) : (
               <div
                 css={css`
-                  margin-top: var(--spectrum-global-dimension-size-400);
+                  margin-top: var(--spectrum-global-dimension-size-200);
                 `}
               />
             )}

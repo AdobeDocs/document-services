@@ -237,6 +237,7 @@ const TabsBlock = ({
       css={css`
         background: var(--spectrum-global-color-gray-100);
         max-width: 100%;
+        overflow-x:hidden !important;
         margin: 0;
         padding-bottom: calc(var(--spectrum-global-dimension-size-1250) + var(--spectrum-global-dimension-size-250));
       `}
@@ -401,7 +402,7 @@ const TabsBlock = ({
                     text-align: left;
                     padding: 0 0 var(--spectrum-global-dimension-size-100) 0 !important;
                     max-width: ${layoutColumns(8.5)} !important;
-                    overflow: hidden;
+                    overflow-x: hidden !important;
                     @media only screen and (max-width: ${mobileMinWidth}) {
                       padding-left: inherit !important;
                       max-width: ${layoutColumns(3)} !important;
@@ -414,6 +415,7 @@ const TabsBlock = ({
                       max-width: ${layoutColumns(6.5)} !important;
                       padding-left:var(--spectrum-global-dimension-size-500);
                     }
+
                   `}
                 >
                   {data['content'] ? data['content'] : null}

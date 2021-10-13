@@ -9,7 +9,7 @@ description: Own the end-to-end customer experience. Our SDK Developer kits are 
 
 <TextBlock slots="image,heading,text" width="33%" theme="lightest"  className="align-left img-m-size"/>
 
-![](../images/img-consistent-hifi@2x.png)
+![img-consistent](../images/img-consistent-hifi@2x.png)
 
 ### Invent new document experiences
 
@@ -21,7 +21,7 @@ Unlock productivity through APIs and integrations.Use Microsoft Power Automate c
 
 <TextBlock slots="image,heading,text" width="33%" theme="lightest"   className="align-left img-m-size"/>
 
-![](../images/img-customized-experiences@2x.png)
+![img-consistent](../images/img-customized-experiences@2x.png)
 
 ### Built for developers
 
@@ -32,7 +32,7 @@ Easy to implement REST APIs and SDKs. Secure, reliable, and scalable. Pay only f
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-m-size"/>
 
-![](../images/img-workflow-automation@2x.png)
+![img-consistent](../images/img-workflow-automation@2x.png)
 
 ### From the leader
 

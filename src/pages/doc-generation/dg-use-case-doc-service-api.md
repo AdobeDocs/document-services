@@ -10,7 +10,7 @@ title: Adobe Developer — Automate Document Generation | Document Use case | Ad
 
 [](use-cases)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ## Sales proposals and contracts
 Accelerate reusing content in systems of record and downstream processes, such as RPA, NLP, ML and search by quickly extracting content from native and scanned PDFs
@@ -20,7 +20,7 @@ Accelerate reusing content in systems of record and downstream processes, such a
 
 [](use-cases)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Legal contracts
 Generate legal contracts with dynamic terms and signatures
@@ -30,7 +30,7 @@ Generate legal contracts with dynamic terms and signatures
 
 [](use-cases)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Data analysis
 Extract data from complex tables including cell data, column and row headers, and table properties for use in machine learning analysis, or storage
@@ -40,7 +40,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 [](use-cases)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Digital content publishing
 Easily republish in different formats by extracting structured content elements such as headings, lists, paragraphs, fonts, and character styling

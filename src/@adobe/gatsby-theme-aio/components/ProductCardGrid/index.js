@@ -293,7 +293,6 @@ const ProductCardGrid = ({
               <div
                 key={product.id}
                 role="figure"
-                tabIndex="0"
                 className="spectrum-Card"
                 css={css`
                   width: ${width};

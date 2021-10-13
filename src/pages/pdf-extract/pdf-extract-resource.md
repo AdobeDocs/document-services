@@ -12,7 +12,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Resource Card
 
 [](use-cases)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![use_cases_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Content processing
 
@@ -23,7 +23,7 @@ Quickly and accurately extract data and context from native and scanned PDFs to 
 
 [](/use-cases/agreements-and-contracts/legal-contracts/)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![use_cases_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Data Analysis
 
@@ -34,7 +34,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![use_cases_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Content Republishing
 

@@ -11,7 +11,7 @@ title: Adobe Developer — PDF-embed  —  Use cases
 
 [](use-cases)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Sales proposals and contracts
 
@@ -22,7 +22,7 @@ Accelerate reusing content in systems of record and downstream processes, such a
 
 [](/use-cases/agreements-and-contracts/legal-contracts/)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Legal contracts
 
@@ -34,7 +34,7 @@ Generate legal contracts with dynamic terms and signatures
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Data analysis
 
@@ -47,7 +47,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 [](/use-cases/content-publishing/)
 
-![](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
 ### Digital content publishing
 
