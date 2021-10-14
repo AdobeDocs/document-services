@@ -82,5 +82,5 @@ Extracted content is output in a structured JSON file – with tables optionally
 Have questions about the Document Services APIs.
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
-- [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)
+- [Contact us](./contact-us.md)
 

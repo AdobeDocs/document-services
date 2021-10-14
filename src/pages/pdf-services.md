@@ -134,4 +134,4 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 Have questions about the Document Services APIs.
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
-- [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)
+- [Contact us](./contact-us.md)

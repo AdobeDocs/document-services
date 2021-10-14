@@ -42,10 +42,10 @@ const DynamicContentLoader = ({
       `}
     >
       {content === "usingAdobePDFService" && resData?.data?.length > 0 && (
-        <section class="sdk-rsrc-release">
-          <div class="release-container">
-            <div class="release-wrapper">
-              <div class="release-wrapper-img">
+        <section className="sdk-rsrc-release">
+          <div className="release-container">
+            <div className="release-wrapper">
+              <div className="release-wrapper-img">
                 <a href={resData?.data[0].URL} target="_parent">
                   <img
                     src={getImageURl(resData?.data[0].Thumbnail)}
@@ -53,15 +53,15 @@ const DynamicContentLoader = ({
                   />
                 </a>
               </div>
-              <div class="release-copy-wrapper">
+              <div className="release-copy-wrapper">
 
                 <h3 className="spectrum-Heading spectrum-Heading--sizeL">{resData.data[0].Title}</h3>
                 <p>{resData.data[0].Description}</p>
-                <div class="release-cta">
+                <div className="release-cta">
                   <a
                     href={resData?.data[0].URL}
                     target="_parent"
-                    class="button-link"
+                    className="button-link"
                   >
                     Read more
                   </a>
@@ -73,22 +73,22 @@ const DynamicContentLoader = ({
       )}
       {content === "feature" && resData?.data?.length > 0 && (
         <>
-          <section class="sdk-rsrc-anchor">
-            <div class="anchor-container">
-              <div class="anchor-wrapper">
-                <div class="anchor">
+          <section className="sdk-rsrc-anchor">
+            <div className="anchor-container">
+              <div className="anchor-wrapper">
+                <div className="anchor">
                   <span>
-                    <a href="#tuts" class="quiet-btn">
+                    <a href="#tuts" className="quiet-btn">
                       Tutorials
                     </a>
                   </span>
                   <span>
-                    <a href="#blog" class="quiet-btn">
+                    <a href="#blog" className="quiet-btn">
                       Blog
                     </a>
                   </span>
                   <span>
-                    <a href="#customer" class="quiet-btn">
+                    <a href="#customer" className="quiet-btn">
                       Customer stories
                     </a>
                   </span>
@@ -97,19 +97,19 @@ const DynamicContentLoader = ({
             </div>
           </section>
 
-          <section class="sdk-rsrc-featured">
-            <div class="featured-container">
+          <section className="sdk-rsrc-featured">
+            <div className="featured-container">
               <h3>Featured</h3>
-              <div class="featured-wrapper">
+              <div className="featured-wrapper">
                 {resData?.data?.map((data, index) => (
-                  <a href={data.URL} target="_parent">
+                  <a href={data.URL} target="_parent" key={data.Title}>
                     <div
-                      class="featured-thumb feat1"
+                      className="featured-thumb feat1"
                       style={`background: url(${getImageURl(data.Thumbnail)})`}
                     ></div>
-                    <div class="featured-copy-wrapper">
-                      <div class="featured-title">Tutorial</div>
-                      <div class="featured-text">{data.Title}</div>
+                    <div className="featured-copy-wrapper">
+                      <div className="featured-title">Tutorial</div>
+                      <div className="featured-text">{data.Title}</div>
                     </div>
                   </a>
                 ))}
@@ -120,21 +120,21 @@ const DynamicContentLoader = ({
       )}
       {content === "tutorial"  && resData?.data?.length > 0 && (
         <div className="main secondary-page">
-        <section class="sdk-rsrc-tutorial" id="tuts" >
-          <div class="tutorial-container">
-            <div class="header-and-more">
+        <section className="sdk-rsrc-tutorial" id="tuts" >
+          <div className="tutorial-container">
+             <div className="header-and-more">
               <h3 className="spectrum-Heading spectrum-Heading--sizeL">
-                Tutorials
+              Tutorials
               </h3>
               <a
-                href="https://experienceleague.adobe.com/docs/document-services/document-services/overview.html"
+               href="https://experienceleague.adobe.com/docs/document-services/document-services/overview.html"
                 target="_parent"
                 css={css`text-decoration:none;`}
               >
-                <div class="more-items">
+                <div className="more-items">
                   <span>All tutorials</span>
-                  <div class="more-arrow1">
-                    <div class="arrow1 right"></div>
+                  <div className="more-arrow1">
+                    <div className="arrow1 right"></div>
                   </div>
                 </div>
               </a>
@@ -146,12 +146,12 @@ const DynamicContentLoader = ({
                 skills.
             </div>
 
-            <div class="tutorial-wrapper">
+            <div className="tutorial-wrapper">
               {resData?.data?.map((data, index) => (
-                <div class="tutorial">
-                  <a href={data.URL} target="_parent">
+                <div className="tutorial">
+                  <a href={data.URL} target="_parent" key={data.Title}>
                     <div
-                      class="tut-thumb1"
+                      className="tut-thumb1"
                       style={`background: url(${getImageURl(data.Thumbnail)})`}
                     ></div>
                     <p>{data.Title}</p>
@@ -163,11 +163,11 @@ const DynamicContentLoader = ({
         </section>
         </div>
       )}
-      {content === "blog" && (
-        <div class="masterblog">
-        <section class="sdk-rsrc-blog" id="blog" >
-          <div class="blog-container">
-            <div class="header-and-more">
+      {content === "blog" &&resData.responseData?.feed&& (
+        <div className="masterblog">
+        <section className="sdk-rsrc-blog" id="blog" >
+          <div className="blog-container">
+            <div className="header-and-more">
               <h3 className="spectrum-Heading spectrum-Heading--sizeL">
                 Blog
               </h3>
@@ -176,33 +176,31 @@ const DynamicContentLoader = ({
                 target="_parent"
                 css={css`text-decoration:none;`}
               >
-                <div class="more-items">
+                <div className="more-items">
                   <span>More Blogs</span>
-                  <div class="more-arrow1">
-                    <div class="arrow1 right"></div>
+                  <div className="more-arrow1">
+                    <div className="arrow1 right"></div>
                   </div>
                 </div>
               </a>
             </div>
 
-            <div class="blog-wrapper"  
+            <div className="blog-wrapper"  
             >
               {resData.responseData?.feed?.entries.map((data, index) => {
                  return (
-                   <>{
                   <div>
-                    <a href={data.link} target="_parent">
-                      <div class="blog-img-container">
+                    <a href={data.link} target="_parent" >
+                      <div className="blog-img-container">
                         <img
                           src={getIframeImage(data.content)}
                           alt="Illustration"
                         />
                       </div>
-                      <p class="blog-title">{data.title}</p>
+                      <p className="blog-title">{data.title}</p>
                     </a>
-                    <p class="blog-text">{data.contentSnippet}</p>
-                  </div>}
-                  </>
+                    <p className="blog-text">{data.contentSnippet}</p>
+                  </div>
                 );
               })}
             </div>

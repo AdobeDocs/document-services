@@ -31,6 +31,7 @@ import { ProductCardGrid } from "@adobe/gatsby-theme-aio/src/components/ProductC
 import { Carousel } from "../Carousel";
 import { TabsBlock } from "../Tabs";
 import { WrapperComponent } from '../WrapperComponent';
+import {FormWrapperComponent} from '../FormWrapperComponent';
 import {Hero} from '../Hero';
 
 export const MDXBlocks = {
@@ -54,6 +55,7 @@ export const MDXBlocks = {
   ProductCardGrid,
   Carousel,
   WrapperComponent,
+  FormWrapperComponent,
   TabsBlock: ({ theme, ...props }) => (
     <TabsBlock theme={theme ?? globalTheme.code} {...props} />
   ),

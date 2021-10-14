@@ -8,7 +8,7 @@ title: Adobe Developer — Wrapper Components  —  Home Product Card
 ## Explore adobe document cloud services
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" />
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" className="product-card-compact"/>
 
 ![CC icon](../images/document-structure-understanding.svg)
 
@@ -20,7 +20,7 @@ Services high-fidelity PDFs in web apps with analytics
 * [Demo](https://adobe.io)
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" />
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" className="product-card-compact"/>
 
 ![CC icon](../images/comprehensive-content-extraction.svg)
 
@@ -32,7 +32,7 @@ Extract text, tables, images, and document structure
 * [Demo](https://adobe.io)
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" />
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" className="product-card-compact"/>
 
 ![CC icon](../images/high-fidelity.svg)
 
@@ -44,7 +44,7 @@ Generate PDF and Word documents from custom Word templates
 * [Demo](https://adobe.io)
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" />
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" className="product-card-compact"/>
 
 ![CC icon](../images/document-structure-understanding.svg)
 

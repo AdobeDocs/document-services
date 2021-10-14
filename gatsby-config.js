@@ -13,8 +13,8 @@
 module.exports = {
   siteMetadata: {
     docs: {
-      title: 'View Docs',
-      path: '/document-services/docs/overview'
+      title: 'Get credentials',
+      path: 'coming-soon.md'
     },
     pages: [
       {
@@ -25,19 +25,15 @@ module.exports = {
         title: 'APIs',
         menu: [{
           title: 'PDF Services',
-          description: 'Create, combine and export PDFs',
           path: 'pdf-services.md'
         },{
           title: 'PDF Extract',
-          description: 'Extract text, tables, images, and document structure',
           path: 'pdf-extract.md'
         },{
           title: 'Document Generation',
-          description: 'Generate PDF and Word documents from custom Word templates',
           path: 'doc-generation.md'
         },{
           title: 'PDF Embed',
-          description: 'Embed high-fidelity PDFs in web apps with analytics',
           path: 'pdf-embed.md'
         }]
       },
@@ -50,6 +46,25 @@ module.exports = {
         path: 'pdf-pricing.md'
       },
       {
+        title: 'Documentaion',
+        menu: [{
+          title: 'Overview',
+          path: 'coming-soon.md'
+        },{
+          title: 'PDF Services',
+          path: 'coming-soon.md'
+        },{
+          title: 'PDF Extract',
+          path: 'coming-soon.md'
+        },{
+          title: 'Document Generation',
+          path: 'coming-soon.md'
+        },{
+          title: 'PDF Embed',
+          path: 'coming-soon.md'
+        }]
+      },
+      {
         title: 'Resources',
         menu: [{
           title: 'Developer Resources',
@@ -60,11 +75,10 @@ module.exports = {
         }, {
           title: 'Use Cases',
           path: 'sales-proposals-and-contracts.md'
+        }, {
+          title: 'Licensing',
+          path: 'coming-soon.md'
         }]
-      },
-      {
-        title: 'Get Started',
-        path: 'gettingstarted.md'
       }
     ],
     subPages: [

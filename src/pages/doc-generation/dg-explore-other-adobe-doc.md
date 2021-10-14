@@ -7,7 +7,7 @@ title: Adobe Developer — Automate Document Generation | Document Explore | Ado
 ## Explore other adobe document cloud services
 
 <ProductCard slots="icon, heading, text, buttons" buttonDisplay  borderRadious gradients  toColor='#5fc2d3'
-bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable />
+bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable className="product-card-compact"/>
 
 ![document-structure-understanding](../images/document-structure-understanding.svg)
 
@@ -18,7 +18,7 @@ Generate PDF and Word documents from custom Word templates
 
 
 <ProductCard slots="icon, heading, text, buttons" buttonDisplay  borderRadious gradients  toColor='#5fc2d3'
-bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable />
+bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable className="product-card-compact"/>
 
 ![document-structure-understanding](../images/document-structure-understanding.svg)
 
@@ -29,7 +29,7 @@ Extract text, tables, images, and document structure
 
 
 <ProductCard slots="icon, heading, text, buttons" buttonDisplay  borderRadious gradients  toColor='#5fc2d3'
-bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable />
+bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable className="product-card-compact"/>
 
 ![document-structure-understanding](../images/document-structure-understanding.svg)
 

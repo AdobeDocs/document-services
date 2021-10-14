@@ -103,4 +103,4 @@ Documents are tagged for improved accessibility with assistive technologies<br/>
 Have questions about the Document Services APIs.
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
-- [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)
+- [Contact us](./contact-us.md)

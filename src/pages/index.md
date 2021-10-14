@@ -158,4 +158,4 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 Have questions about the Document Services APIs.
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
-- [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)
+- [Contact us](./contact-us.md)

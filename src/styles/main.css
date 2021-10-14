@@ -452,3 +452,15 @@ img[alt=thumbnail] {
     max-width:226px !important;
     max-height:316px !important;
  }
+
+#form {
+    border: 0px !important;
+}
+
+.product-card-compact .spectrum-Card-body {
+    height: calc(var(--spectrum-global-dimension-size-2000)) !important;
+}
+
+.product-card-compact .spectrum-Card{
+    height: auto !important;
+}

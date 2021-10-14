@@ -23,4 +23,4 @@ import { products,clouds } from '../components/product.js';
 Have questions about the Document Services APIs.
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
-- [Contact us](https://www.adobe.com/in/creativecloud/business/teams.html)
+- [Contact us](./contact-us.md)

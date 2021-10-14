@@ -14,6 +14,15 @@
     display: flex;
     justify-content: space-between;
 }
+@media (min-width: 320px) and (max-width:400px)  {
+    .header-and-more {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 1rem 0;
+    } 
+}
 .header-and-more h3 {
     /* font-family: 'Adobe Clean Black' !important; */
     font-size: 1.75rem !important;
@@ -179,6 +188,8 @@ section.sdk-rsrc-anchor .anchor-container .anchor-wrapper .anchor {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+
 section.sdk-rsrc-anchor .anchor-container .anchor-wrapper .anchor span {
     font-size: 0.875rem;
     color: #6e6e6e;
@@ -361,31 +372,21 @@ section.sdk-rsrc-featured .featured-container .featured-wrapper a .featured-copy
 section.sdk-rsrc-tutorial {
     margin-top: 3.125rem !important;
     margin-bottom: 0 !important;
-    /* margin-right: 2.75rem;
-    margin-left: 2.75rem; */
+    margin-right: 2.75rem;
+    margin-left: 2.75rem;
 }
 
 section.sdk-rsrc-tutorial .tutorial-container {
     max-width: 1280px;
     margin: 0 auto;
     padding-bottom: 6.25rem;
-    
-
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     section.sdk-rsrc-tutorial .tutorial-container{
         max-width: auto;
-        margin: 4.375rem 2.75rem;
     }
 }
-@media (max-width: 320px)   {
-     .tutorial-container{
-        max-width: 300px;
-        /* margin: 4.375rem 2.75rem; */
-        /* background-color: red; */
-        padding: 0 0.5rem !important;
-    }
-}
+
 section.sdk-rsrc-tutorial .tutorial-container .headliner {
     margin-top: 3.125rem;
     margin-bottom: 0.625rem;
@@ -625,6 +626,20 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
     overflow-x: hidden;
     word-wrap: break-word;
     color: #505050;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+  
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 @media screen and (min-width: 1024px) {
     section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
