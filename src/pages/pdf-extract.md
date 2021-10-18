@@ -79,7 +79,7 @@ Extracted content is output in a structured JSON file – with tables optionally
 
 ### We're ready to help 
 
-Have questions about the Document Services APIs.
+Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
 - [Contact us](./contact-us.md)

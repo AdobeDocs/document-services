@@ -33,7 +33,7 @@ const Menu = forwardRef(({ children, ...props }, ref) => {
     <ul
       ref={ref}
       className="spectrum-Menu"
-      role="menu"
+      // role="menu"
       css={css`
         display: block;
       `}
@@ -111,7 +111,7 @@ function useDynamicSVGImport(name, options = {}) {
         }
       };
         importIcon();
-    }, [name, onCompleted, onError]);
+    }, [name, onCompleted, onError,error]);
     return { error, loading, SvgIcon: ImportedIconRef.current?.default };
   }
 
@@ -253,7 +253,8 @@ const MenusBlock = ({
               { 'is-open':  selectedMenus[selectedMenus.length - 1] === menu && isSelected},
             ])}
             role="menuitem"
-            aria-level={level}>
+            // aria-level={level}
+            >
               { level === 1 ?
                 <>
                   {<div>

@@ -3,27 +3,27 @@ title: Adobe Developer — Wrapper Components  —  Home Carousel
 ---
 
 
-<TitleBlock slots="heading" theme="lightest" className="padding_top_align titleBlock-align-left"/>
+<TitleBlock slots="heading" theme="light" className="padding_top_align titleBlock-align-left"/>
 
 ## Customer success block
 
 
 
-<Carousel slots="image, text1, text2" repeat="5"  theme="lightest" enableNavigation slideTheme='light' className="carousel-padding-top-zero"/>
+<Carousel slots="image, text1, text2" repeat="5"  theme="light" enableNavigation slideTheme='lightest' className="carousel-padding-top-zero"/>
 
-![Carousel_Img](../images/social_status_2x.png)
+![Social status](../images/social_status_2x.png)
 
 “Our clients wanted to create PDFs of our reports and the open source solution we tried was difficult to work with and unreliable. We switched to the Adobe Services SDK because it produced higher quality PDFs and also let our clients convert to PowerPoint to customize reports for their audience.”
 
 **– Tim Hill, CEO & Co-Founder, Social Status**
 
-![Carousel_Img](../images/acumatica_2x.png)
+![Acumatica](../images/acumatica_2x.png)
 
 “We are committed to building superior collaboration and user experiences on our platform, and with PDF APIs from Adobe, we enabled the world’s best document experiences with ease — right within the Acumatica ERP solution.”
 
 **– John Roskill, CEO, Acumatica Cloud ERP**
 
-![Carousel_Img](../images/k2_2x.png)
+![k2](../images/k2_2x.png)
 
 “Adobe Document Services helped us extend K2’s intelligent process automation solution to enable
 integrated PDF document creation with a rich, interactive web experience for document review,
@@ -33,7 +33,7 @@ enabling us to quickly deliver a solution for our customers to automate their do
 
 **– Alex Cobb, VP Product Management, K2**
 
-![Carousel_Img](../images/ninetynine_u_2x.png)
+![Ninetynine u](../images/ninetynine_u_2x.png)
 
 “With the 99U Conference shifting to an all-virtual format this year, we wanted to make all aspects of the
 event accessible to our attendees — especially The Creative Self Workbook, a workbook offering a
@@ -43,7 +43,7 @@ options with just a few lines of code.”
 
 **– Andrea Rosen, Head of 99U**
 
-![Carousel_Img](../images/infodesk_2x.png)
+![Infodesk](../images/infodesk_2x.png)
 
 “InfoDesk provides AI-driven technology and tools that ena ble organizations to make the smartest
 decisions confidently. This involves delivering highly relevant insights to our customers in a format that

@@ -2,26 +2,26 @@
 
 ## Why PDF Embed API?
 
-<TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left img-xl-size"  />
+<TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left icon-xl-size"  />
 
-![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![CC icon](../images/accurate_rendering.svg)
 
 ### Accurate, consistent PDF rendering
 
 Whether on dynamic or static pages, deliver the highest quality PDF rendering available
 
 
-<TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left img-xl-size" />
+<TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left icon-xl-size" />
 
-![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/customizable_experience.svg)
 
 ### Customizable user experience
 
 Choose exactly how to display a PDF and use the callbacks and annotations APIs to provide programmatic control and enable digital collaboration
 
-<TextBlock slots="image, heading, text" width="33%" theme="light"  className="align-left img-xl-size" />
+<TextBlock slots="image, heading, text" width="33%" theme="light"  className="align-left icon-xl-size" />
 
-![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![discovery_banner_img](../images/analytics.svg)
 
 ### Analytics on PDF usage
 
@@ -29,5 +29,4 @@ Use analytics to understand how users interact with PDFs, including time spent o
 
 <TextBlock slots="buttons" isCentered theme="light" className="margin-top-zero" />
 
-* [Get started](/src/pages/gettingstarted.md)
-* [View Docs](/src/pages/gettingstarted.md)
+* [Get free credentials](/src/pages/gettingstarted.md)

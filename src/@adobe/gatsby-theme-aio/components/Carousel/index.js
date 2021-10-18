@@ -79,7 +79,9 @@ const SwiperContent = ({
             }
           `}
         >
+           <h2>
           <HeroImage image={image} styles={imageStyle} />
+           </h2> 
         </div>
       ) : null}
       {textKeys.length > 0 || heading || buttons ? (

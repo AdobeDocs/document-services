@@ -6,9 +6,9 @@
 ## Explore other adobe document services
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![CC icon](../images/document-structure-understanding.svg)
+![CC icon](../images/create_secure_support.svg)
 
 #### Services
 
@@ -17,9 +17,9 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 * [Learn more](https://adobe.io)
 * [Demo](https://adobe.io)
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img" iconStyle/>
 
-![CC icon](../images/comprehensive-content-extraction.svg)
+![CC icon](../images/high-fidelity.svg)
 
 #### Extract
 
@@ -30,13 +30,13 @@ Extract text, table, images and document structure.
 
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img"/>
 
-![CC icon](../images/document-structure-understanding.svg)
+![CC icon](../images/rapid-results.svg)
 
 #### Generate
 
 Generate PDF and word documents from custom word templates 
 
 * [Learn more](https://adobe.io)
-* [Demo](https://adobe.io)
+* [Demo](https://adobe.io)ss
