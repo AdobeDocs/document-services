@@ -73,18 +73,16 @@ module.exports = {
           title: 'Forum',
           path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'
         }, {
-          title: 'Use Cases',
-          path: 'sales-proposals-and-contracts.md'
-        }, {
           title: 'Licensing',
           path: 'coming-soon.md'
         }]
       }
     ],
-    subPages: [
+    subMenus: [
       {
         title: 'Agreements and Contracts',
         path: 'use-cases',
+        icon:'ic-category-agreements',
         pages: [
           {
             title: 'Sales Proposals and Contracts',
@@ -105,12 +103,17 @@ module.exports = {
           {
             title: 'Legal Letters and Statements',
             path: 'use-cases/agreements-and-contracts/legal-letters-and-statements.md'
+          },
+          {
+            title: 'Loan Document Workflows',
+            path: 'use-cases/agreements-and-contracts/loan-documents-workflows.md'
           }
         ]
       },
       {
         title: 'Content & Data Extraction',
         path: 'use-cases/content-and-data-extraction',
+        icon:'ic-extract-40',
         pages: [
           {
             title: 'Content Based Process Automation',
@@ -129,14 +132,15 @@ module.exports = {
       {
         title: 'Content Publishing',
         path: 'use-cases/content-publishing',
+        icon:'ic-category-content-publishing',
         pages: [
           {
             title: 'Digital Content Publishing',
-            path: 'use-cases/content-publishing/index.md'
+            path: 'use-cases/content-publishing/on-demand-report-creation.md'
           },
           {
             title: 'On-Demand Report Creation',
-            path: 'use-cases/content-publishing/on-demand-report-creation.md'
+            path: 'use-cases/content-publishing/index.md'
           },
           {
             title: 'Job Posting',
@@ -163,6 +167,7 @@ module.exports = {
       {
         title: 'Collaboration',
         path: 'use-cases/collaboration',
+        icon:'ic-category-collaboration',
         pages: [
           {
             title: 'Student-Teacher Collaboration',
@@ -177,6 +182,7 @@ module.exports = {
       {
         title: 'Financial',
         path: 'use-cases/financial',
+        icon:'ic-category-financial',
         pages: [
           {
             title: 'Data Analysis',
@@ -199,6 +205,7 @@ module.exports = {
       {
         title: 'Archiving and Retrieval',
         path: 'use-cases/archiving-and-retrieval',
+        icon:'ic-category-archiving',
         pages: [
           {
             title: 'Search and Indexing',

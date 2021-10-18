@@ -45,46 +45,6 @@ Create, convert, transform, OCR PDFs and more
 
 
 
-<TextBlock slots="heading,text,buttons,image" theme="light" />
-
-### Unluck content structure in any PDF for NLP, RPA, and more
-
-Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
-
-- [Demo](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
-- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
-
-![MSFT Teams logo](images/extractAPI.png)
-
-
-
-<TextBlock slots="image,heading,text,buttons" theme="lightest"  />
-
-![documnet image](images/documentGenerationAPI.png)
-
-### Generate PDF and Word documents from Word templates and JSON data
-
-Use the PDF Tools API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
-
-- [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
-- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
-
-
-
-<TextBlock slots="heading,text,buttons,image" theme="light"  />
-
-### PDF Embed API to insert PDFs and enable collaboration in web apps
-
-Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
-
-- [Demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
-- [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)
-
-![MSFT Teams logo](images/Embed.png)
-
-
-
-
 <!--Adobe PDF Extract API -->
 
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>

@@ -162,7 +162,7 @@ const HeroAssets = ({ image }) =>
           .gatsby-resp-image-image {
             object-fit: contain;
           }
-   
+
           @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
             height: auto;
             width: 100%;
@@ -204,7 +204,7 @@ const Hero = ({
           }
 
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            height: 100vh;
+            height: 60vh;
 
             .spectrum-Heading--sizeXXL {
               font-size: var(--spectrum-alias-heading-xl-text-size);
@@ -342,7 +342,7 @@ const Hero = ({
             width: 100%;
             height: ${height};
             background: ${background ?? "var(--spectrum-global-color-gray-50)"};
-            
+
             @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
               overflow: auto;
             }
@@ -373,7 +373,7 @@ const Hero = ({
               align-items: center;
               justify-content: flex-end;
               text-align: center;
-              
+
               @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
                 padding: 0 var(--spectrum-global-dimension-size-400);
               }

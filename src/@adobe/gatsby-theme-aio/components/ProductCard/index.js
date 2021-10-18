@@ -72,7 +72,7 @@ const ProductCard = ({ theme = 'lightest', width = '100%', icon, heading, text, 
       `}>
       <div
         role="figure"
-        tabIndex="0"
+        // tabIndex="0"
         className="spectrum-Card"
         css={css`
           margin: 0 var(--spectrum-global-dimension-size-300);

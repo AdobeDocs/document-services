@@ -213,7 +213,7 @@ const TabsBlock = ({
   const [tabs] = useState([]);
   const selectedTabIndicator = useRef(null);
    const [selectedIndex, setSelectedIndex] = useState({
-    tab: 0,
+    tab: 0
   });
 
   const propKeys = Object.keys(props);

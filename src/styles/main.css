@@ -464,3 +464,11 @@ img[alt=thumbnail] {
 .product-card-compact .spectrum-Card{
     height: auto !important;
 }
+
+.page-content hr {
+    display: none;
+}
+
+.page-content h2 {
+    margin-top: var(--spectrum-global-dimension-size-0) !important;
+}
