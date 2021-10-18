@@ -205,7 +205,7 @@ const MenusBlock = ({
       if (isSelected && !expandedMenus.includes(menu.href)) {
         setExpandedMenus((menus) => [...menus, menu.href]);
       }
-
+      console.log('menu', menu);
       return(
         <li
           key={index}
