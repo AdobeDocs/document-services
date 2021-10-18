@@ -78,7 +78,7 @@ module.exports = {
         }]
       }
     ],
-    subMenus: [
+    subMenuPages: [
       {
         title: 'Agreements and Contracts',
         path: 'use-cases',

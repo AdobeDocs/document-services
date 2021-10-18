@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import React, { forwardRef, useState, useRef, useEffect, useCallback } from 'react';
+import React, { forwardRef, useState, useRef, useEffect, useCallback, useContext } from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -19,9 +19,12 @@ import { GatsbyLink } from '@adobe/gatsby-theme-aio/src/components/GatsbyLink';
 import '@spectrum-css/menu';
 import { CheckMark, ChevronDown, ChevronRight } from '@adobe/gatsby-theme-aio/src/components/Icons';
 import { graphql, useStaticQuery } from "gatsby";
+import Context from '@adobe/gatsby-theme-aio/src/components/Context';
 
 import {
   rootFix,
+  rootFixPages,
+  findSubPages,
   findSelectedPages,
   normalizePagePath,
 } from '@adobe/gatsby-theme-aio/src/utils';
@@ -119,7 +122,6 @@ function useDynamicSVGImport(name, options = {}) {
       onCompleted,
       onError
     });
-    console.log('SvgIcon',SvgIcon);
     if (error) {
       return error.message;
     }
@@ -143,7 +145,7 @@ const MenusBlock = ({
         id
         siteMetadata {
           title
-          subMenus {
+          subMenuPages {
             path
             title
             icon
@@ -158,7 +160,10 @@ const MenusBlock = ({
     `
   );
 
-  const {subMenus } = data.site.siteMetadata;
+  const {subMenuPages } = data.site.siteMetadata;
+  const { location } =  useContext(Context);
+
+  console.log(location, 'location Path');
 
   const normalizeSubPages = (page) => {
     normalizePagePath(page);
@@ -170,8 +175,8 @@ const MenusBlock = ({
     }
   };
 
-  if (subMenus) {
-    subMenus.forEach((subMenu) => {
+  if (subMenuPages) {
+    subMenuPages.forEach((subMenu) => {
       normalizeSubPages(subMenu);
     });
   }
@@ -183,14 +188,10 @@ const MenusBlock = ({
 
   const handleIconError = useCallback((err) => console.error(err.message), []);
 
-  let location = {pathname: "/"};
-
-  if(typeof window !== `undefined` && !!window.location.pathname){
-    location = window.location;
-  }
-
   const pathWithRootFix = rootFix(location.pathname);
-  const selectedMenus = findSelectedPages(pathWithRootFix, subMenus);
+  const pagesWithRootFix = rootFixPages(subMenuPages);
+  const selectedMenus = findSelectedPages(pathWithRootFix, subMenuPages);
+  const menuSelectedSubPages = findSubPages(pathWithRootFix, pagesWithRootFix, subMenuPages);
 
   const [expandedMenus, setExpandedMenus] = useState([]);
 
@@ -205,7 +206,7 @@ const MenusBlock = ({
       if (isSelected && !expandedMenus.includes(menu.href)) {
         setExpandedMenus((menus) => [...menus, menu.href]);
       }
-      console.log('menu', menu);
+
       return(
         <li
           key={index}
@@ -347,7 +348,7 @@ const MenusBlock = ({
         }
       `}
     >
-      {renderSubMenuItem(subMenus, 1)}
+      {renderSubMenuItem(menuSelectedSubPages, 1)}
 
    </Menu>
   </section>)
@@ -366,8 +367,7 @@ Section.propTypes = {
 };
 
 MenusBlock.propTypes = {
-  className: PropTypes.string,
-  location: PropTypes.object
+  className: PropTypes.string
 };
 
 export { Menu, Item, Section, MenusBlock };
