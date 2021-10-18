@@ -1,0 +1,2 @@
+(self.webpackChunkdev_site_product_template=self.webpackChunkdev_site_product_template||[]).push([[4924],{24924:function(e,t,c){"use strict";c.r(t),t.default=c.p+"static/awsmplogo_white-7c502c449ccf007d4a3af0e6771daeb7.svg"}}]);
+//# sourceMappingURL=4924-c11559faf22ce0b2f625.js.map
