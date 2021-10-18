@@ -18,13 +18,11 @@ import nextId from 'react-id-generator';
 import { GatsbyLink } from '@adobe/gatsby-theme-aio/src/components/GatsbyLink';
 import '@spectrum-css/menu';
 import { CheckMark, ChevronDown, ChevronRight } from '@adobe/gatsby-theme-aio/src/components/Icons';
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, withPrefix } from "gatsby";
 import Context from '@adobe/gatsby-theme-aio/src/components/Context';
 
 import {
   rootFix,
-  rootFixPages,
-  findSubPages,
   findSelectedPages,
   normalizePagePath,
 } from '@adobe/gatsby-theme-aio/src/utils';
@@ -163,8 +161,6 @@ const MenusBlock = ({
   const {subMenuPages } = data.site.siteMetadata;
   const { location } =  useContext(Context);
 
-  console.log(location, 'location Path');
-
   const normalizeSubPages = (page) => {
     normalizePagePath(page);
 
@@ -189,9 +185,7 @@ const MenusBlock = ({
   const handleIconError = useCallback((err) => console.error(err.message), []);
 
   const pathWithRootFix = rootFix(location.pathname);
-  const pagesWithRootFix = rootFixPages(subMenuPages);
   const selectedMenus = findSelectedPages(pathWithRootFix, subMenuPages);
-  const menuSelectedSubPages = findSubPages(pathWithRootFix, pagesWithRootFix, subMenuPages);
 
   const [expandedMenus, setExpandedMenus] = useState([]);
 
@@ -206,6 +200,7 @@ const MenusBlock = ({
       if (isSelected && !expandedMenus.includes(menu.href)) {
         setExpandedMenus((menus) => [...menus, menu.href]);
       }
+      const menuHref = withPrefix(menu.href);
 
       return(
         <li
@@ -252,7 +247,7 @@ const MenusBlock = ({
                 }
               }
             }}
-            to={menu.href}
+            to={menuHref}
             className={classNames([
               'spectrum-Menu-item',
               { 'is-open':  selectedMenus[selectedMenus.length - 1] === menu && isSelected},
@@ -348,7 +343,7 @@ const MenusBlock = ({
         }
       `}
     >
-      {renderSubMenuItem(menuSelectedSubPages, 1)}
+      {renderSubMenuItem(subMenuPages, 1)}
 
    </Menu>
   </section>)
