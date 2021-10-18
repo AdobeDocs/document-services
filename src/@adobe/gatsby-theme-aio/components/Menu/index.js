@@ -183,8 +183,13 @@ const MenusBlock = ({
 
   const handleIconError = useCallback((err) => console.error(err.message), []);
 
-  const location = window?.location;
-  const pathWithRootFix = rootFix(location?.pathname);
+  let location = {pathname: "/"};
+
+  if(typeof window !== `undefined` && !!window.location.pathname){
+    location = window.location;
+  }
+
+  const pathWithRootFix = rootFix(location.pathname);
   const selectedMenus = findSelectedPages(pathWithRootFix, subMenus);
 
   const [expandedMenus, setExpandedMenus] = useState([]);
@@ -361,7 +366,8 @@ Section.propTypes = {
 };
 
 MenusBlock.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  location: PropTypes.object
 };
 
 export { Menu, Item, Section, MenusBlock };
