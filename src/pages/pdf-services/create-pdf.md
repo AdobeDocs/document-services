@@ -2,16 +2,16 @@
 title: Adobe Developer — PDF Services API  —  Create PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue link"/>
 
-##### Create a PDF file
+### Create a PDF file
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/dcsdk_APIdocs)
 
-Create PDFs from a variety of formats, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, and, Zip
-Support for HTML to PDF, DOC to PDF, DOCX to PDF, PPT to PDF, PPTX to PDF, XLS to PDF, XLSX to PDF, TXT to PDF, RTF to PDF, BMP to PDF, JPEG to PDF, GIF to PDF, TIFF to PDF, PNG to PDF.
+Create PDFs from a variety of formats, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, Zip, and URL.
+Support for HTML to PDF, DOC to PDF, DOCX to PDF, PPT to PDF, PPTX to PDF, XLS to PDF, XLSX to PDF, TXT to PDF, RTF to PDF, BMP to PDF, JPEG to PDF, GIF to PDF, TIFF to PDF, PNG to PDF
 
-See our [public API](https://www.adobe.com/go/dcsdk_APIdocs#post-createPDF) Reference and quickly try our APIs using the Postman collections
+See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-createPDF) and quickly try our APIs using the Postman collections
 
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />

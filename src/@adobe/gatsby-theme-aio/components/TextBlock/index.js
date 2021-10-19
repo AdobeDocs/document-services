@@ -155,6 +155,7 @@ const TextBlock = ({
   isCentered = false,
   primaryOutline =false,
   headerElementType="h3",
+  imageOnly=false,
   ...props
 }) => {
   const Element = headerElementType;
@@ -316,7 +317,7 @@ const TextBlock = ({
             css={css`
               display: flex;
               align-items: center;
-              flex-direction: ${isReversed ? 'row-reverse' : 'row'};
+              flex-direction: ${imageOnly ?'column' : isReversed ? 'row-reverse' : 'row'};
 
               @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
                 flex-direction: column;
@@ -414,7 +415,8 @@ TextBlock.propTypes = {
   theme: PropTypes.string,
   width: PropTypes.oneOf(['100%', '50%', '33%', '25%']),
   isCentered: PropTypes.bool,
-  headerElementType:PropTypes.oneOf(['h1','h2','h3','h4','h5','h6'])
+  headerElementType:PropTypes.oneOf(['h1','h2','h3','h4','h5','h6']),
+  imageOnly: PropTypes.bool,
 };
 
 export { TextBlock };

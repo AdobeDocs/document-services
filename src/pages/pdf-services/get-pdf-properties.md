@@ -4,9 +4,9 @@ title: Adobe Developer — PDF Services API  — Get PDF
 
 <TextBlock slots="heading, buttons, text, text1, text2"  theme="dark" className="bgBlue"/>
 
-##### Get the properties of a PDF file
+### Get the properties of a PDF file
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Use this service to get the metadata properties of a PDF. Metadata including page count, PDF version, file size, compliance levels, font info, permissions and more are provided in JSON format for easy processing.
 

@@ -11,7 +11,7 @@ import {
   layoutColumns,
   MOBILE_SCREEN_WIDTH,
   DESKTOP_SCREEN_WIDTH,
-} from "@adobe/gatsby-theme-aio/src/utils"; 
+} from "@adobe/gatsby-theme-aio/src/utils";
 import {
   HeroButtons,
   HeroImage,
@@ -81,7 +81,7 @@ const SwiperContent = ({
         >
            <h2>
           <HeroImage image={image} styles={imageStyle} />
-           </h2> 
+           </h2>
         </div>
       ) : null}
       {textKeys.length > 0 || heading || buttons ? (
@@ -93,7 +93,7 @@ const SwiperContent = ({
           `}
         >
           {heading && (
-            <h3
+            <h2
               className="spectrum-Heading spectrum-Heading--sizeL"
               css={css`
                 max-width: calc(${layoutColumns(6)});
@@ -112,7 +112,7 @@ const SwiperContent = ({
               `}
             >
               {heading.props.children}
-            </h3>
+            </h2>
           )}
           {textKeys.length > 0 ? <Texts texts={props} index={index} /> : null}
           {buttons ? (
@@ -160,7 +160,7 @@ const Carousel = ({
   const backgroundColor = `background-color: var(--spectrum-global-color-gray-${
     slideTheme === "light" ? "50" : ""
   });`;
-  
+
   return (
     <section
       className={classNames(className, `spectrum--${theme}`)}
@@ -174,7 +174,7 @@ const Carousel = ({
         css={css`
         max-width: calc(${layoutColumns(12)});
           margin: auto;
-         
+
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
             max-width: calc(${layoutColumns(3)});
           }

@@ -2,16 +2,17 @@
 title: Adobe Developer — PDF Services API  —  Convert PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark"  className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark"  className="bgBlue link"/>
 
-##### Convert a PDF file to other formats
+### Convert a PDF file to other formats
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Convert existing PDFs to popular formats, such as Microsoft Word, Excel, and PowerPoint, as well as text and image
-Support for PDF to DOC, PDF to DOCX, PDF to JPEG, PDF to PNG, PDF to PPTX, PDF to RTF, PDF to XLSX.
 
-See our [public API](https://documentcloud.adobe.com/document-services/index.html#post-exportPDF) Reference and quickly try our APIs using the Postman collections
+Support for PDF to DOC, PDF to DOCX, PDF to JPEG, PDF to PNG, PDF to PPTX, PDF to RTF, PDF to XLSX
+
+See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-exportPDF) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
 

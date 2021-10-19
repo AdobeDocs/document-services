@@ -136,11 +136,11 @@ module.exports = {
         pages: [
           {
             title: 'Digital Content Publishing',
-            path: 'use-cases/content-publishing/on-demand-report-creation.md'
+            path: 'use-cases/content-publishing/index.md'
           },
           {
             title: 'On-Demand Report Creation',
-            path: 'use-cases/content-publishing/index.md'
+            path: 'use-cases/content-publishing/on-demand-report-creation.md'
           },
           {
             title: 'Job Posting',

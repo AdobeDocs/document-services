@@ -25,7 +25,9 @@ const SummaryBlock = ({
   heading,
   text,
   buttons,
-  buttonPositionRight=false
+  buttonPositionRight=false,
+  isBtnVariant=false,
+  btnVariant='overBackground'
 }) => (
   <section
     className={classNames(className, `spectrum--${theme}`)}
@@ -98,7 +100,7 @@ const SummaryBlock = ({
         align-self: flex-start;
       }
         `}>
-      <HeroButtons buttons={buttons} quiets={[false, true]}   variants={['overBackground', 'overBackground']}/> 
+      <HeroButtons buttons={buttons} quiets={[isBtnVariant, true]}   variants={[btnVariant, 'overBackground']}/>
           </div>)
           }
 
@@ -115,7 +117,9 @@ SummaryBlock.propTypes = {
   buttons: PropTypes.element,
   variant: PropTypes.string,
   theme: PropTypes.string,
-  buttonPositionRight:PropTypes.bool
+  buttonPositionRight:PropTypes.bool,
+  isBtnVariant:PropTypes.bool,
+  btnVariant: PropTypes.string,
 };
 
 export { SummaryBlock };

@@ -2,13 +2,14 @@
 title: Adobe Developer — PDF Services API  —  Compress - PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" className="bgBlue link"/>
 
-##### Compress a pdf file
+### Compress a pdf file
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Reduce the size of PDF files by compressing to smaller sizes for lower bandwidth viewing, downloading, and sharing.
+
 Support for multiple compression levels to retain the quality of images and graphics
 
 See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-compressPDF) and quickly try our APIs using the Postman collections

@@ -482,11 +482,10 @@ img[alt=thumbnail] {
     height:var(--spectrum-global-dimension-size-600);
 }
 
-@media screen and (min-width:1280px ){
 .icon-xl-size .spectrum-Body  .gatsby-resp-image-wrapper img{
     text-align: left;
-    margin-left: -110px;
-}}
+    width: auto !important;
+}
 
 
 .product-card-compact-img .spectrum-Card-body {

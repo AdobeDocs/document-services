@@ -2,13 +2,13 @@
 title: Adobe Developer — PDF Services API  —  Delete PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1"  theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1"  theme="dark" className="bgBlue link"/>
 
-##### Delete a page from a PDF file
+### Delete a page from a PDF file
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
-Delete one or more pages from a document.
+Delete one or more pages from a document
 
 See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-pageManipulation) and quickly try our APIs using the Postman collections
 

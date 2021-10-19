@@ -2,31 +2,31 @@
 title: Adobe Developer — PDF Services API  —  Why PDF Services API
 ---
 
-<TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
+<TitleBlock slots="heading" theme="lightest"  className="titleBlock-align-left" />
 
 ## Why PDF services API?
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-xl-size"/>
+<TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size"/>
 
-![Create secure export](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Create, secure, and convert PDF documents](../images/create_secure_support.svg)
 
-### Create, secure, and export PDF documents
+### Create, secure, and convert PDF documents
 
-Create a PDF from Microsoft Office documents, protect the content, and export to other formats
+Create a PDF from Microsoft Office documents, protect the content, and convert to other formats
 
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-xl-size"/>
+<TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size"/>
 
-![Modify PDF](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Modify PDFs and optimize output](../images/modify_pages.svg)
 
 ### Modify PDFs and optimize output
 
 Programmatically alter a document, such as reordering, inserting, and rotating pages, as well as compressing the file
 
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-xl-size"/>
+<TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size link"/>
 
-![cloud based services](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Cloud-based services](../images/cloud_services.svg)
 
 ### Leverage Adobe's cloud-based services
 

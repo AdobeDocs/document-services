@@ -3,19 +3,19 @@ title: Adobe Developer — PDF Services API  —  Document Generation
 ---
 
 
-<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" className="bgBlue link" primaryOutline/>
 
-##### PDF and Word document generation with dynamic data
+### PDF and Word document generation with dynamic data
 
-- [Learn more](/src/pages/gettingstarted.md)
+- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
+- [See documentation](/src/pages/gettingstarted.md)
 
-<!-- [Try the demo](/src/pages/gettingstarted.md) -->
 
 Generate PDF or Word documents from Microsoft Word templates and your data. Merge dynamic data with your custom templates to generate on brand contracts, proposals, invoices, NDAs, and more.
 
 Use our Word add-in to quickly create templates and add signatures with out of the box Adobe Sign integration.
 
-See our [public API](https://www.adobe.com/go/dcsdk_APIdocs#post-createPDF) Reference and quickly try our APIs using the Postman collections
+See our public  [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-createPDF) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />
 

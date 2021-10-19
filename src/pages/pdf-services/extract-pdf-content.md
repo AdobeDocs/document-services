@@ -2,13 +2,15 @@
 title: Adobe Developer — PDF Services API  — Extract PDF Content
 ---
 
-<TextBlock slots="heading, buttons, text" theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue link"/>
 
-##### PDF content extraction
+### PDF content extraction
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Extract text, images, tables, and more from native and scanned PDFs into a structured JSON file. PDF Extract API leverages AI technology to accurately identify text objects and understand the natural reading order of different elements such as headings, lists, and paragraphs spanning multiple columns or pages. Extract font styles with identification of metadata such as bold and italic text and their position within your PDF. Extracted content is output in a structured JSON file format with tables in CSV or XLSX and images saved as PNG.
+
+See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />
 

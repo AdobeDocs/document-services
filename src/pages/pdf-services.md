@@ -13,13 +13,13 @@ import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 
 <Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
 
-![bg-hero-doc-gen](images/bg-hero-doc-gen.jpeg)
+![Hero](images/bg-hero-doc-gen.jpeg)
 
 # Adobe PDF Services API
 
 Create, convert, transform, OCR PDFs and more
 
-![home-carousel-three](images/home-carousel-three.png)
+![Adobe PDF Services API](images/home-carousel-three.png)
 
 - [Try the demo](/src/pages/pdf-services.md)
 
@@ -89,9 +89,9 @@ Create, convert, transform, OCR PDFs and more
 
 ![We're ready](images/bg-hero.jpeg)
 
-### We're ready to help
+## We're ready to help
 
-Have questions about the Document Services APIs.
+Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
 - [Contact us](./contact-us.md)

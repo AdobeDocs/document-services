@@ -2,11 +2,11 @@
 title: Adobe Developer — PDF Services API  — Insert PDF Pages
 ---
 
-<TextBlock slots="heading, buttons, text, text1"  theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1"  theme="dark" className="bgBlue link"/>
 
-##### Insert a page into a PDF document
+### Insert a page into a PDF document
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Insert one or more pages into an existing document
 

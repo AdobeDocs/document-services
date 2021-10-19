@@ -2,15 +2,15 @@
 title: Adobe Developer — PDF Services API  — Linear size PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1"  theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1"  theme="dark" className="bgBlue link"/>
 
-##### Linearize a PDF file for fast web view
+### Linearize a PDF file for fast web view
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Optimize PDFs for quick viewing on the web, especially for mobile clients. Linearization allows your end users to view large PDF documents incrementally so that they can view pages much faster in lower bandwidth conditions.
 
-See our [public API](https://documentcloud.adobe.com/document-services/index.html#post-linearizePDF) and quickly try our APIs using the Postman collections
+See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-linearizePDF) and quickly try our APIs using the Postman collections
 
 
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />

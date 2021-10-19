@@ -10,41 +10,41 @@ title: Adobe Developer — PDF Services API  —   Use Cases for Document Servic
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" />
 
-[](use-cases)
+[](/use-cases/agreements-and-contracts/content-publishing)
 
-![Sales proposals](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Report Creation](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-### Sales proposals and contracts
+### Report Creation and Editing
 
-Accelerate reusing content in systems of record and downstream processes, such as RPA, NLP, ML and search by quickly extracting content from native and scanned PDFs
-
-<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%"/>
-
-[](/use-cases/agreements-and-contracts/legal-contracts/)
-
-![Legal Contracts](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
-
-### Legal Contracts
-
-Generate legal contracts with dynamic terms and signatures
+Create and embed reports for internal or external consumption, sharing, and review.
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%"/>
 
-[](/use-cases/content-and-data-extraction/data-analysis/)
+[](/use-cases/archiving-and-retrieval)
+
+![Search and Indexing](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+
+### Search and Indexing
+
+Create searchable indexes from digital documents to quickly locate critical content for compliance and other downstream processing.
+
+<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%"/>
+
+[](/use-cases/content-publishing)
 
 ![Data Analysis](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-### Data Analysis
+### Digital Content Publishing
 
-Extract data from complex tables including cell data, column and row headers, and table properties for use in machine learning models, analysis, or storage
+Publish whitepapers and marketing content with end-user interactivity, security controls, and analytics.
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%"/>
 
-[](/use-cases/content-publishing/)
+[](/use-cases/content-publishing/job-posting/)
 
 ![Digital content publishing](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-### Digital content publishing
+### Job Posting
 
-Easily republish in different formats by extracting structured content elements such as headings, lists, paragraphs, fonts, and character styling.
+Automate job posting with supporting documents such as PDF brochures, relevant job supplements, and company details.
 

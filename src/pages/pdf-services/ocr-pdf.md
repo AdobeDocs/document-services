@@ -2,15 +2,15 @@
 title: Adobe Developer — PDF Services API  — OCR PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue link"/>
 
-##### OCR a PDF file
+### OCR a PDF file
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Use built-in optical character recognition (OCR) to convert images to text and enable fully text searchable documents for archiving and creation of searchable indexes.
 
-See our [public API](https://documentcloud.adobe.com/document-services/index.html#post-ocr) Reference and quickly try our APIs using the Postman collections
+See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-ocr) and quickly try our APIs using the Postman collections
 
 
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />

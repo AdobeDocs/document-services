@@ -2,11 +2,11 @@
 title: Adobe Developer — PDF Services API  — Replace PDF Pages
 ---
 
-<TextBlock slots="heading, buttons, text, tetx1" theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue link"/>
 
-##### Replace a page within a PDF file
+### Replace a page within a PDF file
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Replace one or more pages with another page in an existing document
 

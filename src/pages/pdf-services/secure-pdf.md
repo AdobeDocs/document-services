@@ -1,13 +1,14 @@
-<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" className="bgBlue link"/>
 
-##### Secure a PDf file and set restrictions
+### Secure a PDf file and set restrictions
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Secure a PDF file with a password encrypt the document. Set an owner password and restrictions on certain features like printing, editing and copying in the PDF document to prevent end users from modifying it.
+
 Support for AES-128 and AES-256 encryption on PDF files, with granular permissions for high and low quality printing and fill and sign form field restrictions.
 
-See our [public API](https://documentcloud.adobe.com/document-services/index.html#post-protectPDF) Reference and quickly try our APIs using the Postman collections
+See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-protectPDF) and quickly try our APIs using the Postman collections
 
 
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />

@@ -2,11 +2,11 @@
 title: Adobe Developer — PDF Services API  — Split PDF Pages
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue"/>
+<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue link"/>
 
-##### Split a PDF into multiple files
+### Split a PDF into multiple files
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
 
 Split a PDF document into multiple smaller documents by simply specifying either the number of files, pages per file, or page ranges.
 
