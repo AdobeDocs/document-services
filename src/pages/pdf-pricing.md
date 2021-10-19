@@ -25,7 +25,7 @@ When you’re ready to purchase, flexible options to suit your needs
 
 ### We're ready to help
 
-Have questions about the Document Services APIs.
+Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
 - [Contact us](./contact-us.md)

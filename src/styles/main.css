@@ -511,3 +511,7 @@ img[alt=thumbnail] {
     width: auto;
     margin-left: var(--spectrum-global-dimension-size-250);
 }
+
+.link .spectrum-Body a {
+    text-decoration: underline;
+}

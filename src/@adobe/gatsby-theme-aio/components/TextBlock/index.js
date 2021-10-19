@@ -153,6 +153,7 @@ const TextBlock = ({
   theme = 'lightest',
   width = '100%',
   isCentered = false,
+  primaryOutline =false,
   headerElementType="h3",
   ...props
 }) => {
@@ -268,6 +269,7 @@ const TextBlock = ({
 
             <HeroButtons
               buttons={buttons}
+              quiets={[true, !primaryOutline]}
               css={css`
                 margin-top: var(--spectrum-global-dimension-size-150);
                 margin-bottom: var(--spectrum-global-dimension-size-150);
@@ -387,6 +389,7 @@ const TextBlock = ({
 
               <HeroButtons
                 buttons={buttons}
+                quiets={[true, !primaryOutline]}
                 css={css`
                   margin-top: var(--spectrum-global-dimension-size-200);
                 `}

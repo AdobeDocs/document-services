@@ -23,10 +23,10 @@ Enjoy complimentary access to our JavaScript API to easily embed PDFs with a few
 
 
 
-<TextBlock className="pricing-desc button-swap d-flex" slots="buttons" isCentered theme="light" width="25%" />
+<TextBlock className="pricing-desc button-swap d-flex" slots="buttons" isCentered theme="light" width="25%" primaryOutline />
 
-- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 - [Get started](/src/pages/gettingstarted.md)
+- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
 <Divider orientation="horizontal" size="M" className="m-0"/>
 
