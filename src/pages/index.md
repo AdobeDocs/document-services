@@ -22,14 +22,14 @@ import CustomerStory from './resources/storyies.md'
 From the company who created the PDF standard.
 
 
-![hero asset image](images/doc-gen-hero-desktop@2x.png)
+![Adobe document services](images/doc-gen-hero-desktop@2x.png)
 
 - [Try the demo](/src/pages/pdf-extract.md)
 
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2"/>
 
-![services image](images/services.png)
+![PDF services ](images/services.png)
 
 ### PDF APIs with SDKs for Node.js, .Net, and java to create, convert, OCR PDFs, and more
 

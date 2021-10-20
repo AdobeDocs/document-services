@@ -37,4 +37,4 @@ Control how you embed PDFs, with support for full-sized windows, sized container
 
 <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
-- [Get free cretentials](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
+- [Get free cretentials](/src/pages/gettingstarted.md)

@@ -31,4 +31,4 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
 
 <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
-- [Get free cretentials](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
+- [Get free cretentials](/src/pages/gettingstarted.md)

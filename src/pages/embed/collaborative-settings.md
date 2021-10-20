@@ -45,4 +45,4 @@ adobeDCView.registerCallback(
 
 <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
-- [Get free cretentials](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
+- [Get free cretentials](/src/pages/gettingstarted.md)

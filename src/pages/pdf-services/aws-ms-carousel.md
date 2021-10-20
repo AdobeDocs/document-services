@@ -10,8 +10,7 @@ title: Adobe Developer — PDF Services API  —  Carousel PDF
 
 ### We now offer all of our PDF Services APIs for purchase as a subscription in AWS console
 
-- [Learn more](https://www.adobe.com/go/pdfToolsAPI_Pricing#AWS)
-
+- [Learn more](/src/pages/pdf-pricing.md#AWS)
 
 ![MS logo](../images/adobe_ms_logo.png)
 
