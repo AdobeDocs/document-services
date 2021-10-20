@@ -7,7 +7,7 @@ title: Adobe Developer — API Extract  —  Product card
 ## Explore other adobe document cloud services
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
 ![CC icon](../images/document-structure-understanding.svg)
 
@@ -19,7 +19,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 * [Demo](https://adobe.io)
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
 ![CC icon](../images/high-fidelity.svg)
 
@@ -31,7 +31,7 @@ Generate PDF and Word documents from custom Word templates
 * [Demo](https://adobe.io)
 
 
-<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
 ![CC icon](../images/document-structure-understanding.svg)
 

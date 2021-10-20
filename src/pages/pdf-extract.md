@@ -57,7 +57,7 @@ Extracted content is output in a structured JSON file – with tables optionally
 
 ![how-it-works-desktop](images/how-it-works-desktop.png)
 
-<TextBlock slots="text" theme="light" isCentered className="media-bottom-padding"/>
+<TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link"/>
 
 We take security serously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)
 

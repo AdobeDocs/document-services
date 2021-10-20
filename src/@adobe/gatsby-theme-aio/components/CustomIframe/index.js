@@ -12,7 +12,6 @@
 
 import React from 'react';
 import { css } from '@emotion/react';
-import { TABLET_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 import '@spectrum-css/typography';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';

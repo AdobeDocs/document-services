@@ -12,7 +12,7 @@ title: Adobe Developer — PDF Services API  —   Use Cases for Document Servic
 
 [](/use-cases/agreements-and-contracts/content-publishing)
 
-![Report Creation](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Report Creation](../images/report-creation-editing.jpg)
 
 ### Report Creation and Editing
 
@@ -22,7 +22,7 @@ Create and embed reports for internal or external consumption, sharing, and revi
 
 [](/use-cases/archiving-and-retrieval)
 
-![Search and Indexing](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Search and Indexing](../images/search-indexing.jpg)
 
 ### Search and Indexing
 
@@ -32,7 +32,7 @@ Create searchable indexes from digital documents to quickly locate critical cont
 
 [](/use-cases/content-publishing)
 
-![Data Analysis](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Data Analysis](../images/content-republishing.jpg)
 
 ### Digital Content Publishing
 
@@ -42,7 +42,7 @@ Publish whitepapers and marketing content with end-user interactivity, security 
 
 [](/use-cases/content-publishing/job-posting/)
 
-![Digital content publishing](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Digital content publishing](../images/job-posting.jpg)
 
 ### Job Posting
 

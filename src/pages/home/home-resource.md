@@ -11,7 +11,7 @@ title: Adobe Developer — Wrapper Components  —  Home Resource Card
 
 [](use-cases)
 
-![Content Processing](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Content Processing](../images/content-processing.jpg)
 
 ### Content Processing
 
@@ -21,7 +21,7 @@ Accelerate reusing content in systems of record and downstream processes, such a
 
 [](/use-cases/agreements-and-contracts/legal-contracts/)
 
-![Legal contracts](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Legal contracts](../images/legal-contracts.jpg)
 
 ### Legal contracts
 
@@ -35,7 +35,7 @@ Generate legal contracts with dynamic terms and signatures
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
 
-![Data analysis](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Data analysis](../images/data-analysis.jpg)
 
 ### Data analysis
 
@@ -48,7 +48,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 [](/use-cases/content-publishing/)
 
-![Digital content](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![Digital content](../images/content-republishing.jpg)
 
 ### Content Republishing
 

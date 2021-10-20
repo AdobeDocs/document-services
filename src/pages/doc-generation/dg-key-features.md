@@ -6,13 +6,15 @@ title: Adobe Developer — Automate Document Generation | Document Key Features 
 
 ## Key features of Adobe document generation API
 
-<TextBlock slots="image,heading,text" width="25%" theme="light" className="align-left img-xl-size"/>
+<TextBlock slots="image,heading,text,buttons" width="25%" theme="light" className="align-left img-xl-size"/>
 
 ![Rapid template](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
 
-### Rapid template from uploaded JSON data
+### Rapid template tagging from uploaded JSON data
 
-Automatically generate text tags from your JSON data model using our Document Generation Tagger Microsoft Word add-in
+Automatically generate tags from your JSON data model or create reusable tags using our Document Generation Tagger Microsoft Word add-in. Preview your document by generating it within Word.
+
+- [Get Microsoft Word add-in](https://www.adobe.com/go/dcdg_Tagger)
 
 <TextBlock slots="image,heading,text" width="25%" theme="light" className="align-left img-xl-size"/>
 
@@ -28,7 +30,7 @@ Dynamically insert tags, images, lists, and generate tables based on data inputs
 
 ### Out of the box integration with Adobe Sign
 
-Accelerated text tag creation to generate documents that are ready for processing in Adobe Sign.
+Accelerated text tag creation with the ability to conditionally show and hide signatures or content, mark fields as required, read only, and generate documents that are ready for processing in Adobe Sign.
 
 <TextBlock slots="image,heading,text" width="25%" theme="light" className="align-left img-xl-size"/>
 

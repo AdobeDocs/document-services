@@ -22,8 +22,7 @@ Generate PDF and Word documents from World templates and JSON data
 
 ![](images/doc-gen-hero-desktop@2x.png)
 
-- [Get Started](https://www.adobe.com/go/pdfEmbedAPI_demo) 
-- [View docs](https://www.adobe.com/go/dcsdk_APIdocs)
+- [Try the demo](https://adobe.com/go/dcdocgen_api_demo) 
 
 
 <!-- Why Document Generation API -->
@@ -31,14 +30,18 @@ Generate PDF and Word documents from World templates and JSON data
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
 <DgWhyDocTitle/>
 
-<TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn"/>
+<TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn" primaryOutline/>
 
-- [Get Started](https://www.adobe.com/go/pdfEmbedAPI_demo) 
-- [View docs](https://www.adobe.com/go/dcsdk_APIdocs)
+- [Product overview video](https://video.tv.adobe.com/v/332120) 
+- [Start free trial](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)
 
 <!-- Key Features of Adobe Document Generation API -->
 <WrapperComponent slots="content" repeat="1" theme="light"/>
 <DgKeyFeatures/>
+
+<TextBlock slots="buttons" isCentered theme="light padding-top-zero why-doc-get-started-btn"/>
+
+- [Start free trial](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)
 
 <MobileOptimize/>
 
@@ -57,7 +60,6 @@ Generate PDF and Word documents from World templates and JSON data
 <WrapperComponent slots="content" theme="light"/>
 <DgStartModifyingTitle/>
 
-
 <!-- Use case for Document Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
 
@@ -65,7 +67,7 @@ Generate PDF and Word documents from World templates and JSON data
 
 <TextBlock slots="buttons" theme="lightest" isCentered className="view-all-use-case-btn"/>
 
-- [View all use case](https://www.adobe.com/go/pdfEmbedAPI_demo)
+- [See all Use Case](https://www.adobe.io/apis/documentcloud/dcsdk/sales-proposals-and-contracts.html)
 
 <!-- Explore other Adobe Document Cloud services -->
 
@@ -73,13 +75,13 @@ Generate PDF and Word documents from World templates and JSON data
 <DgExploreOtherAdobeDoc/>
 
 <!-- Summary Block -->
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white"/>
 
 ![summary block bg img](images/bg-hero.jpeg)
 
 ### We're ready to help 
 
-Have questions about the Document Services APIs.
+Have questions about the Document Services APIs ?
 
-- [Go to the Adobe Forum](/src/pages/gettingstarted.md)
-- [Contact us](./contact-us.md)
+- [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
+- [Contact us](src/pages/contact-us)

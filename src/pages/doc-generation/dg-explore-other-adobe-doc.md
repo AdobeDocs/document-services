@@ -6,34 +6,34 @@ title: Adobe Developer — Automate Document Generation | Document Explore | Ado
 
 ## Explore other adobe document cloud services
 
-<ProductCard slots="icon, heading, text, buttons" buttonDisplay  borderRadious gradients  toColor='#5fc2d3'
-bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![document-structure-understanding](../images/document-structure-understanding.svg)
+![CC icon](../images/create_secure_support.svg)
 
-### Generate
-Generate PDF and Word documents from custom Word templates
-- [Learn more](https://www.adobe.com/go/dcdg_Tagger)
-- [Demo](https://www.adobe.com/go/dcdg_Tagger)
+#### Services
+
+Create a PDF from Microsoft Office documents, protect the content, and export to other formats
+
+* [Learn more](https://adobe.io)
+* [Demo](https://adobe.io)
 
 
-<ProductCard slots="icon, heading, text, buttons" buttonDisplay  borderRadious gradients  toColor='#5fc2d3'
-bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![document-structure-understanding](../images/document-structure-understanding.svg)
+![CC icon](../images/high-fidelity.svg)
 
 ### Extract
 Extract text, tables, images, and document structure
-- [Learn more](https://www.adobe.com/go/dcdg_Tagger)
-- [Demo](https://www.adobe.com/go/dcdg_Tagger)
+
+* [Learn more](https://adobe.io)
+* [Demo](https://adobe.io)
 
 
-<ProductCard slots="icon, heading, text, buttons" buttonDisplay  borderRadious gradients  toColor='#5fc2d3'
-bottomColor='#565abf'  height='850' theme="light" width="25%" cursorDisable className="product-card-compact"/>
+<ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![document-structure-understanding](../images/document-structure-understanding.svg)
+![CC icon](../images/customizable_experience.svg)
 
 ### Embed
 Embed high-fidelity PDFs in web apps with analytics
-- [Learn more](https://www.adobe.com/go/dcdg_Tagger)
-- [Demo](https://www.adobe.com/go/dcdg_Tagger)
+* [Learn more](https://adobe.io)
+* [Demo](https://adobe.io)

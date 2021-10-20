@@ -6,27 +6,26 @@ title: Adobe Developer — Doc generation — Why Document Generation API
 
 ## Why document generation api?
 
-<TextBlock slots="image,heading,text" width="33%" theme="lightest" className="align-left img-xl-size"/>
+<TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size"/>
 
-![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![CC icon](../images/rapid-results.svg)
 
 ### Authoring Tools for Improved Productivity
 
-Use our Adobe Document Generation Tagger to quickly build your custom branded Microsoft Word templates
+Use our Adobe Document Generation Tagger Word add-in to quickly build custom branded Microsoft Word or PDF documents with data
 
+<TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size"/>
 
-<TextBlock slots="image,heading,text" width="33%" theme="lightest" className="align-left img-xl-size"/>
-
-![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![CC icon](../images/modify-pages.svg)
 
 ### Manipulate and Merge Dynamic Data
 
 Process text tags, calculations, repeating elements, and conditional statements at runtime
 
-<TextBlock slots="image,heading,text" width="33%" theme="lightest" className="align-left img-xl-size"/>
+<TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size"/>
 
-![discovery_banner_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![CC icon](../images/high-fidelity.svg)
 
-### High Fidelity Document Generation
+### Document Generation with Signatures
 
-Generate pixel documents with signatures using Sign
+Adobe Sign integration allows you to generate documents with signatures including conditional logic for signature text tags
