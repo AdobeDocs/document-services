@@ -40,12 +40,6 @@ const MobileOptimize = ({
 			</div>
 		</section>
 
-
-
-
-
-		  
-		  
     <section
       className={classNames(className, `spectrum--${theme} main secondary-page`)}
       css={css`
@@ -54,7 +48,7 @@ const MobileOptimize = ({
     >
       <div className="content">
 			<div>
-				<video  style={{maxHeight: 375}} muted="" preload="auto" autoplay="" loop="">
+			<video  style={{maxHeight: 375}} muted="" preload="auto" autoplay loop>
 					<source src={AppStore_NoAudio} type="video/mp4"/>
 					Your browser does not support HTML5 Video.
 				</video>

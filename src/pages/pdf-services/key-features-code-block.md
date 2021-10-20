@@ -27,7 +27,7 @@ import RotatePDFPages from './rotate-pdf-pages.md';
 
 ## Key features of adobe PDF services API
 
-- [Start free trial](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK)
+- [Start free trial](/src/pages/gettingstarted.md)
 
 
 <TabsBlock orientation="vertical" slots="heading, image, content" repeat="17"  theme="dark" className='bgBlue code-block-0' />

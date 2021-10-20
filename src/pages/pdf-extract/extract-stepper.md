@@ -4,14 +4,14 @@ title: Adobe Developer — Wrapper Components  —  API Extract Stepper Componen
 
 
 
-<TitleBlock slots="heading, text" theme="light" className="titleBlock-align-left"/>
+<TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left"/>
 
 ## Start modifying PDFs in a few minutes
 
 Start your free 6-month trial today with 1,000 PDF transactions
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light"  className='align-left'/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="lightest"  className='align-left horizontal-align'/>
 
 ## Step 1
 
@@ -22,20 +22,21 @@ Obtain free credentials
 
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" className='align-left'/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" className='align-left link'/>
 
 ## Step 2
 
-Download ready to run samples for [Node.js](https://adobe.com/go/dcExtract_node_sdk), [Java](https://adobe.com/go/dcExtract_java_sdk) and [Python](https://adobe.com/go/dcExtract_python_sdk)
+Download ready to run samples for [Node.js](https://adobe.com/go/dcExtract_node_sdk),[.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples), [Java](https://adobe.com/go/dcExtract_java_sdk) and [Python](https://adobe.com/go/dcExtract_python_sdk)
 
 - [Node.js](https://adobe.com/go/dcExtract_node_sdk)
 - [Java](https://adobe.com/go/dcExtract_java_sdk)
+- [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples)
 - [Python](https://adobe.com/go/dcExtract_python_sdk)
 
 
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" className='align-left' />
+<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" className='align-left' />
 
 ## Step 3
 

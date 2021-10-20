@@ -139,6 +139,10 @@
     padding-top: var(--spectrum-global-dimension-size-500) !important;
     padding-bottom: var(--spectrum-global-dimension-size-500) !important;
 }
+.media-horizantal-zero-padding .css-yhr1an-TextBlock {
+    padding-top: var(--spectrum-global-dimension-size-0) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-250) !important;
+}
 .img-m-size .spectrum-Body {
     height: var(--spectrum-global-dimension-size-2500);
 }
@@ -344,9 +348,17 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
     padding-bottom: 0 !important;
     padding-top: 0 !important;
 }
+.padding-5 {
+    padding-bottom: var(--spectrum-global-dimension-size-25) !important;
+    padding-top: var(--spectrum-global-dimension-size-25)  !important;
+}
 .padding-zero div:first-child {
     padding-bottom: 0 !important;
     padding-top: 0 !important;
+}
+.media-bottom-padding {
+    padding-bottom: var(--spectrum-global-dimension-size-250) !important;
+    padding-top: var(--spectrum-global-dimension-size-250)  !important;
 }
 .white-swiper-button-prev, .white-swiper-button-next {
     position: absolute;
@@ -445,7 +457,6 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
 }
 .mediaSize div:first-child > div {
   margin: 0 auto !important;
-  width: 100% !important;
 }
 
 img[alt=thumbnail] {

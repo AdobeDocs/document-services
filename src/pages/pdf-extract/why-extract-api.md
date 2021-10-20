@@ -3,48 +3,47 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 ---
 
 
-<TitleBlock slots="heading" theme="light" className="titleBlock-align-left" />
+<SummaryBlock slots="heading, buttons" theme="light" buttonPositionRight btnVariant="cta" isBtnVariant />
 
-### Why adobe PDF extract API?
+### Key Features of Adobe PDF Extract API
 
+* [Start free trial](/src/pages/gettingstarted.md)
 
-<TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left img-xl-size"/>
+<TextBlock slots="image, heading, text" width="25%" theme="light" className="align-left icon-xl-size padding-top-zero" />
 
-![extract_API_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![extract_API_img](../images/comprehensive-content-extraction.svg)
 
-### Rapid template tagging from uploaded JSON data
+### Comprehensive Content Extraction
 
-Automatically generate text tags from your JSON date model using our [Document Generation Tagger Microsoft Word add-in](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin)
-
-
-
-
-<TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left img-xl-size"/>
-
-![extract_API_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
-
-### Insert elements during document generation
-
-Dynamically insert tags, images, lists, and generate tables based on data inputs and conditions for granular content customization.
+Extract all PDF document elements including text, tables, and images within a structured JSON file to enable a variety of downstream solutions.
 
 
 
 
-<TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left img-xl-size"/>
+<TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left icon-xl-size padding-top-zero"/>
 
-![extract_API_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![extract_API_img](../images//document-structure-understanding.svg)
 
-### Out of the box integration with Adobe sign
+### Document Structure Understanding
 
-Accelerated text tag creation to generate documents that are ready for processing in Adobe Sign.
-
-
+Classify text objects such as headings, lists, footnotes, and paragraphs that may span multiple columns or pages. Capture text fonts and styles, positioning, and the natural reading order of all objects.
 
 
-<TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left img-xl-size"/>
 
-![extract_API_img](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+<TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left icon-xl-size padding-top-zero"/>
 
-### Cloud-based REST API integrates with any application
+![extract_API_img](../images/high-fidelity.svg)
 
-Embed document generation into any application in minutes with our SDKs for Node.js, .Net and Java. Postman collection provides a QuickStart for API calls.
+### Highly Accurate Results
+
+Adobe Sensei AI technology delivers highly accurate data extraction across a broad range of document types – both native and scanned PDFs – without requiring custom ML templates or model training.
+
+
+
+<TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left icon-xl-size padding-top-zero"/>
+
+![extract_API_img](../images/platform-agnostic.svg)
+
+### Platform Agnostic
+
+Adobe’s PDF Extract API is RESTful and can be used to seamlessly integrate with any cloud platform or on-premise application.

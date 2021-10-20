@@ -156,6 +156,7 @@ const TextBlock = ({
   primaryOutline =false,
   headerElementType="h3",
   imageOnly=false,
+  imgWidth="50%",
   ...props
 }) => {
   const Element = headerElementType;
@@ -329,7 +330,7 @@ const TextBlock = ({
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  width: 50%;
+                  width: ${imgWidth};
                   height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-225));
                   box-sizing: border-box;
                   padding: var(--spectrum-global-dimension-size-200);
@@ -417,6 +418,7 @@ TextBlock.propTypes = {
   isCentered: PropTypes.bool,
   headerElementType:PropTypes.oneOf(['h1','h2','h3','h4','h5','h6']),
   imageOnly: PropTypes.bool,
+  imgWidth:PropTypes.string
 };
 
 export { TextBlock };

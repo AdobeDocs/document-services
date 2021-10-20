@@ -68,9 +68,6 @@
 video {
   border-radius: 12px;
 }
-audio, video {
-  display: inline-block;
-}
 
 
 .content h2 {
