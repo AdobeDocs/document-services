@@ -18,7 +18,7 @@ Create custom branded proposals and contracts
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
 
-[](use-cases)
+[](use-cases/agreements-and-contracts/legal-contracts)
 
 ![discovery_banner_img](../images/legal-contracts.jpg)
 
@@ -28,7 +28,7 @@ Generate legal contracts with dynamic terms and signatures
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
 
-[](use-cases)
+[](use-cases/financial/invoices)
 
 ![discovery_banner_img](../images/invoice.jpg)
 
@@ -38,7 +38,7 @@ Automate invoice generation with various data inputs
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
 
-[](use-cases)
+[](use-cases/agreements-and-contracts/nda-creation)
 
 ![discovery_banner_img](../images/nda.jpg)
 
