@@ -103,6 +103,7 @@ const ProductCardGrid = ({
   imgHeight = "1000",
   isCentered = false,
   className,
+  containerWidth=DESKTOP_SCREEN_WIDTH,
   theme="light"
 }) => {
   if (filterByIds.length) {
@@ -160,7 +161,7 @@ const ProductCardGrid = ({
     >
       <div 
       css={css`
-      max-width: ${DESKTOP_SCREEN_WIDTH};
+      max-width: ${containerWidth};
       margin: auto;
 
        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {

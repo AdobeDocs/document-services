@@ -9,6 +9,8 @@ import DgStartModifyingTitle from './doc-generation/dg-start-modifying-pdf.md'
 import DgWhyDocTitle from './doc-generation/dg-why-doc-gen-api.md'
 import DgKeyFeatures from './doc-generation/dg-key-features.md'
 import DgExploreOtherAdobeDoc from './doc-generation/dg-explore-other-adobe-doc.md'
+import {MobileOptimize} from '../components/mobileOptimize'
+import '../styles/doc-generation.css'
 
 <Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
 
@@ -38,30 +40,7 @@ Generate PDF and Word documents from World templates and JSON data
 <WrapperComponent slots="content" repeat="1" theme="light"/>
 <DgKeyFeatures/>
 
-<!-- Carousel -->
-<Carousel slots="image, heading, text1, buttons" repeat="2"  theme="dark" enableNavigation slideTheme='dark' imageStyle=" margin:auto !important; max-height:350px !important;" className="carousel-padding-top-zero" navigationNext="white-swiper-button-next" navigationPre="white-swiper-button-prev" />
-
-![adobe_ms_logo](images/adobe_ms_logo_2.png)
-
-## Microsoft power automate integration
-
-Quickly automate document processes without writing any code using the new Adobe PDF Services Connector.
-
-- [Get Started](https://www.adobe.com/go/pdfEmbedAPI_demo)
-
-
-<!-- ![](images/adobe_ms_logo_2.png) -->
-![thumbnail](images/liquid-mode-mobile.png)
-
-## Liquid mode PDF creation coming soon
-
-EASY TO READ ON MOBILE<br/>
-Leverage A1 to easily reformat documents for viewing on small screens<br/><br/>
-IMPROVED ACCESSIBILITY<br/>
-Documents are tagged for improved accessibility with assistive technologies<br/><br/>
-
-- [Get Started](https://www.adobe.com/go/pdfEmbedAPI_demo)
-
+<MobileOptimize/>
 
 <!-- Download Sample Templates and Data to Get Started -->
 

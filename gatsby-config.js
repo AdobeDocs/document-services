@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     docs: {
       title: 'Get credentials',
-      path: 'coming-soon.md'
+      path: 'gettingstarted.md'
     },
     pages: [
       {
@@ -49,19 +49,19 @@ module.exports = {
         title: 'Documentaion',
         menu: [{
           title: 'Overview',
-          path: 'coming-soon.md'
+          path: 'https://developer-stage.adobe.com/document-services/docs/overview/'
         },{
           title: 'PDF Services',
-          path: 'coming-soon.md'
+          path: 'https://developer-stage.adobe.com/document-services/docs/overview/pdf-services-api/'
         },{
           title: 'PDF Extract',
-          path: 'coming-soon.md'
+          path: 'https://developer-stage.adobe.com/document-services/docs/overview/pdf-extract-api/'
         },{
           title: 'Document Generation',
-          path: 'coming-soon.md'
+          path: 'https://developer-stage.adobe.com/document-services/docs/overview/document-generation-api/'
         },{
           title: 'PDF Embed',
-          path: 'coming-soon.md'
+          path: 'https://developer-stage.adobe.com/document-services/docs/overview/pdf-embed-api/'
         }]
       },
       {
