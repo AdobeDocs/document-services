@@ -74,7 +74,7 @@ module.exports = {
           path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'
         }, {
           title: 'Licensing',
-          path: 'coming-soon.md'
+          path: 'licensing.md'
         }]
       }
     ],
