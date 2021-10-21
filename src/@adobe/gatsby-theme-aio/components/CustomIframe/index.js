@@ -26,12 +26,16 @@ const CustomIframeBlock = ({
     css={css`
       background-color:var(--spectrum-global-color-gray-100);
       padding :var(--spectrum-global-dimension-size-400);
-      justify-content:center;
-    `}>
+      `}>
+   
+        <div css={css`  
+      max-width: 52.5rem;
+      text-align: center;
+      margin: 0 auto;`}>
       <div css={css`
-        max-width:840px;
-        height:473px;
-        margin:auto;
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
       `}>
         <iframe
           title="Adobe-tv"
@@ -40,9 +44,15 @@ const CustomIframeBlock = ({
           frameborder="0"
           allowfullscreen="true"
           src={source}
+          css={css`    position: absolute;
+          border: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;`}
         >
-
         </iframe>
+      </div>
       </div>
   </section>
 );
@@ -53,3 +63,4 @@ CustomIframeBlock.propTypes = {
 };
 
 export { CustomIframeBlock };
+

@@ -79,7 +79,7 @@ video {
   line-height: 1.875rem;
   margin-bottom: 0;
 }
-.content h4 {
+.content h3 {
     color: #fff;
     font-size: 0.9375rem;
     margin: 0;
@@ -128,7 +128,7 @@ video {
   color: rgba(255,255,255,0.7);
 }
 
-.features h5 {
+.features h4 {
   font-size: 1.5em;
   font-weight: 700;
   margin: 0;

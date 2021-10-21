@@ -39,7 +39,7 @@ Generate PDF and Word documents from World templates and JSON data
 <WrapperComponent slots="content" repeat="1" theme="light"/>
 <DgKeyFeatures/>
 
-<TextBlock slots="buttons" isCentered theme="light padding-top-zero why-doc-get-started-btn"/>
+<TextBlock slots="buttons" isCentered theme="light padding-5 why-doc-get-started-btn"/>
 
 - [Start free trial](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)
 

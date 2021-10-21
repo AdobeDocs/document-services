@@ -27,7 +27,7 @@ From the company who created the PDF standard.
 - [Try the demo](/src/pages/pdf-extract.md)
 
 
-<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2"/>
+<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ![PDF services ](images/services.png)
 
@@ -39,7 +39,7 @@ Use the read PDF Services API to quickly solve specific challenges or power mult
 
 
 
-<TextBlock slots="heading,text,buttons,image" theme="light" headerElementType="h2"/>
+<TextBlock slots="heading,text,buttons,image" theme="light" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ### Unluck content structure in any PDF for NLP, RPA, and more
 
@@ -51,7 +51,7 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 
 
 
-<TextBlock slots="image,heading,text,buttons" theme="lightest"  headerElementType="h2"/>
+<TextBlock slots="image,heading,text,buttons" theme="lightest"  headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ![documentGenerationAPI](images/documentGenerationAPI.png)
 
@@ -64,7 +64,7 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 
 
 
-<TextBlock slots="heading,text,buttons,image" theme="light"  headerElementType="h2" />
+<TextBlock slots="heading,text,buttons,image" theme="light"  headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ### PDF Embed API to insert PDFs and enable collaboration in web apps
 
@@ -128,7 +128,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 
 
-<TextBlock slots="buttons" isCentered theme="light"  className='blade-bottom-content'/>
+<TextBlock slots="buttons" isCentered theme="light"  className='padding-5'/>
 
 - [View all Use Case](/src/pages/use-cases)
 

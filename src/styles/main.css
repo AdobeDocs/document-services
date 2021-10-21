@@ -136,8 +136,8 @@
     padding-top: 0 !important;
 }
 .media-horizantal-align .css-yhr1an-TextBlock {
-    padding-top: var(--spectrum-global-dimension-size-500) !important;
-    padding-bottom: var(--spectrum-global-dimension-size-500) !important;
+    padding-top: var(--spectrum-global-dimension-size-250) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-250) !important;
 }
 .media-horizantal-zero-padding .css-yhr1an-TextBlock {
     padding-top: var(--spectrum-global-dimension-size-0) !important;
@@ -524,4 +524,14 @@ img[alt=thumbnail] {
 
 .link .spectrum-Body a {
     text-decoration: underline;
+}
+
+.home-zigzag-comp-padding div:first-child {
+    padding-top: var(--spectrum-global-dimension-size-125) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-125) !important;
+}
+
+.home-zigzag-comp-padding div:first-child > div {
+    padding-top: var(--spectrum-global-dimension-size-125) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-125) !important;
 }

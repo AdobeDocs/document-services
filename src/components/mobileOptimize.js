@@ -55,22 +55,22 @@ const MobileOptimize = ({
 			</div>
 			 <div className="right-container">
 				<h2>Mobile-optimized PDFs for Liquid Mode</h2>
-				<h4>Now available to create in Document Generation API (Beta)</h4>
+				<h3>Now available to create in Document Generation API (Beta)</h3>
 				<div className="features">
 					<div>
-						<h5>Revolutionary Mobile Experience</h5>
+						<h4>Revolutionary Mobile Experience</h4>
 						<p>No more pinch and zoom to read PDFs on mobile. Tap to open images and figures.</p>
 					</div>
 					<div>
-						<h5>Easier Navigation</h5>
+						<h4>Easier Navigation</h4>
 						<p>Navigate document sections via a new outline view</p>
 					</div>
 					<div>
-						<h5>Improved Readability</h5>
+						<h4>Improved Readability</h4>
 						<p>Adjust font sizing and spacing to improve readability.</p>
 					</div>
 					<div>
-						<h5>Enhanced Accessibility</h5>
+						<h4>Enhanced Accessibility</h4>
 						<p>Tagged for improved performance with screen readers.</p>
 					</div>
 				</div>

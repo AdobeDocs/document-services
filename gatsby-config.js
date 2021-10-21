@@ -46,23 +46,29 @@ module.exports = {
         path: 'pdf-pricing.md'
       },
       {
-        title: 'Documentaion',
-        menu: [{
-          title: 'Overview',
-          path: 'https://developer-stage.adobe.com/document-services/docs/overview/'
-        },{
-          title: 'PDF Services',
-          path: 'https://developer-stage.adobe.com/document-services/docs/overview/pdf-services-api/'
-        },{
-          title: 'PDF Extract',
-          path: 'https://developer-stage.adobe.com/document-services/docs/overview/pdf-extract-api/'
-        },{
-          title: 'Document Generation',
-          path: 'https://developer-stage.adobe.com/document-services/docs/overview/document-generation-api/'
-        },{
-          title: 'PDF Embed',
-          path: 'https://developer-stage.adobe.com/document-services/docs/overview/pdf-embed-api/'
-        }]
+        title: 'Documentation',
+        menu: [
+          {
+            title: 'Overview',
+            path: 'docs/overview'
+          },
+          {
+            title: 'PDF Services API',
+            path: 'docs/overview/pdf-services-api/index.md'
+          },
+          {
+            title: 'Document Generation API',
+            path: 'docs/overview/document-generation-api/index.md'
+          },
+          {
+            title: 'PDF Extract API',
+            path: 'docs/overview/pdf-extract-api/index.md'
+          },
+          {
+            title: 'PDF Embed API',
+            path: 'docs/overview/pdf-embed-api/index.md'
+          },
+        ]
       },
       {
         title: 'Resources',
