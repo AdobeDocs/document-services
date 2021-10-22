@@ -33,7 +33,7 @@ Create, convert, transform, OCR PDFs and more
 
 
 <!-- Carousel Block -->
-<WrapperComponent slots="content" repeat="1" theme="dark"/>
+<!-- <WrapperComponent slots="content" repeat="1" theme="dark"/> -->
 
 <AWSMSCarousel />
 
@@ -71,7 +71,7 @@ Create, convert, transform, OCR PDFs and more
 
 
 
-<TextBlock slots="buttons" isCentered theme="lightest"  className='blade-bottom-content'/>
+<TextBlock slots="buttons" isCentered theme="lightest"  className='blade-bottom-content padding-top-zero'/>
 
 - [View all Use Case](/src/pages/use-cases)
 

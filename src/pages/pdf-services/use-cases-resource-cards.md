@@ -10,7 +10,7 @@ title: Adobe Developer — PDF Services API  —   Use Cases for Document Servic
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" />
 
-[](/use-cases/agreements-and-contracts/content-publishing)
+[](/use-cases/content-publishing/on-demand-report-creation)
 
 ![Report Creation](../images/report-creation-editing.jpg)
 

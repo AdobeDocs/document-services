@@ -45,6 +45,8 @@ const SwiperContent = ({
   index,
   slideTheme,
   theme,
+  centerAlignament,
+  isCenter
 }) => {
   return (
     <div
@@ -90,6 +92,7 @@ const SwiperContent = ({
             text-align: left;
             flex: 1;
             padding: var(--spectrum-global-dimension-size-200);
+            ${isCenter&&centerAlignament}
           `}
         >
           {heading && (
@@ -137,11 +140,13 @@ const Carousel = ({
   swiperSpeed = 600,
   delay = 2500,
   enableNavigation = false,
+  varient="default",
   slideTheme,
   bulletActiveClass = "swiper-pagination-bullet-active",
   bulletClass = "swiper-pagination-bullet",
   navigationPre= "swiper-button-prev",
   navigationNext = "swiper-button-next" ,
+  isCenter=false,
   ...props
 }) => {
   const propKeys = Object.keys(props);
@@ -152,6 +157,7 @@ const Carousel = ({
       image: props[data],
       heading: props[`heading${index}`],
       buttons: props[`buttons${index}`],
+      bgimage:props[`bgimage${index}`]
     };
   });
 
@@ -160,7 +166,7 @@ const Carousel = ({
   const backgroundColor = `background-color: var(--spectrum-global-color-gray-${
     slideTheme === "light" ? "50" : ""
   });`;
-
+ if (varient==="default"){
   return (
     <section
       className={classNames(className, `spectrum--${theme}`)}
@@ -174,7 +180,6 @@ const Carousel = ({
         css={css`
         max-width: calc(${layoutColumns(12)});
           margin: auto;
-
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
             max-width: calc(${layoutColumns(3)});
           }
@@ -229,6 +234,75 @@ const Carousel = ({
       </div>
     </section>
   );
+}else if( varient==='fullWidth'){
+  let centerAlignament= "margin:auto"
+  return(
+    <section
+    className={classNames(className, `spectrum--${theme}`)}
+    css={css`
+      background: var(--spectrum-global-color-gray-100);
+      padding: var(--spectrum-global-dimension-size-600) 0
+        var(--spectrum-global-dimension-size-200) 0;
+    `}
+  >
+       <Swiper
+      speed={swiperSpeed}
+      slidesPerView={"auto"}
+      autoplay={{
+        delay,
+      }}
+      pagination={{
+        bulletActiveClass,
+        bulletClass,
+        clickable: true,
+      }}
+      navigation={{
+        nextEl: `.${navigationNext}`,
+        prevEl: `.${navigationPre}`,
+      }}
+    >
+      {carouselProps.map((data, index) => {
+        return (
+          <SwiperSlide key={index}>
+            <div className={data.bgimage.props?.children}>
+              <div css={css`   max-width: calc(${layoutColumns(12)});
+          margin: auto;
+          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+            max-width: calc(${layoutColumns(3)});
+          }
+          @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
+            padding-bottom: 0;
+            margin-top: 0;
+            max-width: calc(${layoutColumns(6)});
+          }`}>
+            <SwiperContent
+              textKeys={textKeys}
+              heading={data.heading}
+              image={data.image}
+              imageStyle={imageStyle}
+              buttons={data.buttons}
+              props={props}
+              backgroundColor={backgroundColor}
+              index={index}
+              slideTheme={slideTheme}
+              theme={theme}
+              isCenter={isCenter}
+              centerAlignament={centerAlignament}
+            />
+            {enableNavigation ? (
+              <>
+                <div className={navigationPre}></div>
+                <div className={navigationNext} ></div>
+              </>
+            ) : null}
+          </div>
+          </div>
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
+      </section>
+  )}
 };
 
 Carousel.propTypes = {
@@ -242,7 +316,8 @@ Carousel.propTypes = {
   bulletActiveClass: PropTypes.string,
   bulletClass: PropTypes.string,
   navigationNext:PropTypes.string,
-  navigationPre:PropTypes.string
+  navigationPre:PropTypes.string,
+  isCenter:PropTypes.bool
 };
 
 export { Carousel };

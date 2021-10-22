@@ -143,8 +143,12 @@
     padding-top: var(--spectrum-global-dimension-size-0) !important;
     padding-bottom: var(--spectrum-global-dimension-size-250) !important;
 }
-.img-m-size .spectrum-Body {
+.img-m-size  p:first-child {
     height: var(--spectrum-global-dimension-size-2500);
+}
+
+.img-m-size  p:last-child {
+    height: var(--spectrum-global-dimension-size-1600);
 }
 
 .blue-bg {
@@ -534,4 +538,12 @@ img[alt=thumbnail] {
 .home-zigzag-comp-padding div:first-child > div {
     padding-top: var(--spectrum-global-dimension-size-125) !important;
     padding-bottom: var(--spectrum-global-dimension-size-125) !important;
+}
+
+.carousel-adobe{
+    background:url(../pages/images/mp_aws_bkg@2x.png) !important;
+}
+
+.carousel-micosoft{
+    background:url(../pages/images/ms_power_bkg.jpg) !important;
 }
