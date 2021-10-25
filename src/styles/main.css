@@ -547,3 +547,15 @@ img[alt=thumbnail] {
 .carousel-micosoft{
     background:url(../pages/images/ms_power_bkg.jpg) !important;
 }
+
+.homeherobgImage {
+    background: rgb(250, 105, 85) url('../pages/images/bg-hero.jpeg') !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+.herobgImage {
+    background: rgb(250, 105, 85) url('../pages/images/bg-hero-doc-gen.jpeg') !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}

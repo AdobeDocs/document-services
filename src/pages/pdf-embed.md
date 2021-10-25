@@ -17,19 +17,16 @@ import ExploreAdobe from './embed/explore-adobe.md'
 
 
 
-<Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
-
-![bg-hero-doc-gen](images/bg-hero-doc-gen.jpeg)
+<Hero slots="heading, text, assets, buttons" customLayout variant="fullwidth" className="herobgImage homeHeroAssetImg"/>
 
 # Adobe PDF Embed API
 
 Free JavaScript API to embed high-fidelity PDFs, enable collaboration, and see analytics.
 
-
 ![embed](images/home-carousel-one.png)
 
 <!-- - [Get started](/src/pages/gettingstarted.md) -->
-- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo) 
+- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
 
 
@@ -86,7 +83,7 @@ Free JavaScript API to embed high-fidelity PDFs, enable collaboration, and see a
 
 ![Integration](images/adobe_exerience_manager_logo@2x.png)
 
-Integration with Adobe Experience Manager  
+Integration with Adobe Experience Manager
 
 Adobe Experience Manager customers can easily drag and drop a high-fidelity PDF viewer directly into web applications without the need for additional code or customizations. Includes pre-configurable settings for comments, printing, downloading, and integrated Adobe Analytics.
 
@@ -95,11 +92,11 @@ Adobe Experience Manager customers can easily drag and drop a high-fidelity PDF 
 
 ![Analytics](images/adobe-analytics@2x.png)
 
-Integration with Adobe Analytics  
+Integration with Adobe Analytics
 
 Out of the box Adobe Analytics integration allows customers to seamlessly enable rich analytics and gain insights on end user experience. Extend functionality with chatbots or calls to action based on user interactions.
 
- 
+
 * [Learn more](https://medium.com/adobetech/pdf-analytics-get-insights-on-embedded-pdfs-on-your-website-44e6a314fb1f)
 
 
@@ -125,12 +122,12 @@ Out of the box Adobe Analytics integration allows customers to seamlessly enable
 <ExploreAdobe />
 
 
- 
+
 <SummaryBlock slots=" heading, text, buttons"  theme='lightest' className="vertical-padding"/>
 
-### We're ready to help    
+### We're ready to help
 
-Have questions about the Document Services APIs? 
+Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 * [Contact us](https://www.adobe.com/go/pdftoolsapi_requestform)

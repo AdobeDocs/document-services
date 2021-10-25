@@ -11,9 +11,8 @@ import UseCasesResourceCard from './pdf-services/use-cases-resource-cards.md';
 import DocumentServicesProductCards from './pdf-services/document-services-product-cards.md';
 import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 
-<Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
 
-![Hero](images/bg-hero-doc-gen.jpeg)
+<Hero slots="heading, text, assets, buttons" customLayout variant="fullwidth" className="herobgImage homeHeroAssetImg"/>
 
 # Adobe PDF Services API
 

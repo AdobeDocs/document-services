@@ -4,7 +4,7 @@ title: Adobe Developer — DC Platform SDK Resources
 import PDFEmbed from './pricing/pdf-embed-api.md'
 import PDFService from './pricing/pdf-services-api.md'
 
-<Hero slots="heading, text" variant="fullwidth" theme="light" headingOnly containerHeight="2000"/>
+<Hero slots="heading, text" variant="fullwidth" theme="light" customLayout background="var(--spectrum-global-color-gray-100)"/>
 
 # Adobe Document Services Pricing
 

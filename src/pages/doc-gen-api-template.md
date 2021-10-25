@@ -6,9 +6,7 @@ description: Automatically generate custom branded sales proposals, legal contra
 
 import { products,clouds } from '../components/product.js';
 
-<Hero slots="image, heading" layout="section" variant="fullwidth" headingOnly={true} containerHeight={1200} background="rgb(250, 105, 85)"/>
-
-![bg-hero-doc-gen](images/bg-hero-doc-gen.jpeg)
+<Hero slots="heading" layout="section" variant="fullwidth" customLayout className="herobgImage"/>
 
 ### Adobe document generation API templates
 
@@ -18,7 +16,7 @@ import { products,clouds } from '../components/product.js';
 
 ![summary block bg img](images/bg-hero.jpeg)
 
-### We're ready to help 
+### We're ready to help
 
 Have questions about the Document Services APIs.
 

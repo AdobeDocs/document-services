@@ -9,9 +9,7 @@ import WhyExtractAPI from './pdf-extract/why-extract-api.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';
 import HowItWorks from './pdf-extract/how-it-works.md';
 
-<Hero slots="image, heading, text, assets" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
-
-![hero image](images/bg-hero-doc-gen.jpeg)
+<Hero slots="heading, text, assets" customLayout variant="fullwidth" className="herobgImage homeHeroAssetImg"/>
 
 # Adobe PDF Extract API
 
@@ -75,7 +73,7 @@ We take security serously - check out our [security overview](https://www.adobe.
 
 ![](images/bg-hero.jpeg)
 
-### We're ready to help 
+### We're ready to help
 
 Have questions about the Document Services APIs?
 

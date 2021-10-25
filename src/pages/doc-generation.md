@@ -12,9 +12,7 @@ import DgExploreOtherAdobeDoc from './doc-generation/dg-explore-other-adobe-doc.
 import {MobileOptimize} from '../components/mobileOptimize'
 import '../styles/doc-generation.css'
 
-<Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
-
-![](images/bg-hero-doc-gen.jpeg)
+<Hero slots="heading, text, assets, buttons" customLayout variant="fullwidth" className="herobgImage homeHeroAssetImg"/>
 
 # Adobe document generation API
 
@@ -22,7 +20,7 @@ Generate PDF and Word documents from World templates and JSON data
 
 ![](images/doc-gen-hero-desktop@2x.png)
 
-- [Try the demo](https://adobe.com/go/dcdocgen_api_demo) 
+- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 
 
 <!-- Why Document Generation API -->
@@ -32,7 +30,7 @@ Generate PDF and Word documents from World templates and JSON data
 
 <TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn" primaryOutline/>
 
-- [Product overview video](https://video.tv.adobe.com/v/332120) 
+- [Product overview video](https://video.tv.adobe.com/v/332120)
 - [Start free trial](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)
 
 <!-- Key Features of Adobe Document Generation API -->
@@ -79,7 +77,7 @@ Generate PDF and Word documents from World templates and JSON data
 
 ![summary block bg img](images/bg-hero.jpeg)
 
-### We're ready to help 
+### We're ready to help
 
 Have questions about the Document Services APIs ?
 

@@ -181,79 +181,13 @@ const Hero = ({
   buttons,
   assets,
   variant = 'default',
-  headingOnly = false,
   containerHeight = 1000,
   width = DESKTOP_SCREEN_WIDTH,
   customLayout = false,
   ...props
 }) => {
   const { siteMetadata, location } = useContext(Context);
-  if (headingOnly) {
-    const height = `calc(var(--spectrum-global-dimension-size-${containerHeight}) + var(--spectrum-global-dimension-size-350))`;
-    return (
-      <section
-        className={classNames(className, `spectrum--${theme}`)}
-        css={css`
-          position: relative;
-          width: 100%;
-          height: ${height};
-          background: ${background ?? "var(--spectrum-global-color-gray-100)"};
-
-          @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-            height: 40vh !important;
-          }
-          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            height: 60vh;
-
-            .spectrum-Heading--sizeXXL {
-              font-size: var(--spectrum-alias-heading-xl-text-size);
-            }
-          }
-        `}
-      >
-        {image && <HeroImage image={image} />}
-
-        <div
-          css={css`
-            height: 100%;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            box-sizing: border-box;
-            padding: 0
-              calc(
-                var(--spectrum-global-dimension-size-3600) +
-                  var(--spectrum-global-dimension-size-125)
-              );
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-              padding: 0 var(--spectrum-global-dimension-size-400);
-            }
-          `}
-        >
-          <HeroHeading
-            heading={heading}
-            variant={variant}
-          />
-          <HeroTexts texts={props} />
-          {buttons && (
-            <HeroButtons
-              buttons={buttons}
-              variants={["cta", "overBackground"]}
-              css={css`
-                margin-top: var(--spectrum-global-dimension-size-400);
-              `}
-            />
-          )}
-        </div>
-      </section>
-    );
-  } else if (!variant || variant === 'default') {
+  if (!variant || variant === 'default') {
     const { home, pages } = siteMetadata;
     const pathWithRootFix = rootFix(location.pathname);
     const pagesWithRootFix = rootFixPages(pages);
@@ -337,9 +271,7 @@ const Hero = ({
         <section
           className={classNames(className, `spectrum--${theme}`)}
           css={css`
-            position: relative;
             width: 100%;
-            height: ${height};
             background: ${background ?? "var(--spectrum-global-color-gray-50)"};
 
             @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
@@ -347,10 +279,9 @@ const Hero = ({
             }
 
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-              height: 100vh;
 
-              .spectrum-Heading--sizeXXL {
-                font-size: var(--spectrum-alias-heading-xl-text-size);
+              .spectrum-Heading--sizeXL {
+                font-size: var(--spectrum-alias-heading-l-text-size);
               }
             }
           `}
@@ -360,7 +291,6 @@ const Hero = ({
           <div
             css={css`
               height: 100%;
-              position: absolute;
               top: 0;
               bottom: 0;
               width: 100%;
@@ -373,9 +303,19 @@ const Hero = ({
               justify-content: flex-end;
               text-align: center;
 
-              @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-                padding: 0 var(--spectrum-global-dimension-size-400);
+              h1 {
+                padding: var(--spectrum-global-dimension-size-500) var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-0) !important;
               }
+
+              @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+                padding: 0 var(--spectrum-global-dimension-size-250);
+
+                h1 {
+                  padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-200) var(--spectrum-global-dimension-size-0) !important;
+                }
+              }
+
+
             `}
           >
             {heading && (
@@ -394,6 +334,7 @@ const Hero = ({
                 variants={["cta", "overBackground"]}
                 css={css`
                   margin-top: var(--spectrum-global-dimension-size-200);
+                  margin-bottom: var(--spectrum-global-dimension-size-200);
                 `}
               />
             ) : (
@@ -559,8 +500,7 @@ Hero.propTypes = {
   variant: PropTypes.string,
   width: PropTypes.string,
   theme: PropTypes.string,
-  customLayout: PropTypes.bool,
-  headingOnly: PropTypes.bool
+  customLayout: PropTypes.bool
 };
 
 HeroButtons.propTypes = {

@@ -13,19 +13,16 @@ import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './resources/storyies.md'
 
-<Hero slots="image, heading, text, assets, buttons" customLayout variant="fullwidth" background="rgb(250, 105, 85)" className="homeHeroAssetImg"/>
 
-![bg hero image](images/bg-hero.jpeg)
+<Hero slots="heading, text, assets, buttons" customLayout variant="fullwidth" className="homeherobgImage homeHeroAssetImg"/>
 
 # Reimagine document experiences with PDF APIs designed for developers
 
 From the company who created the PDF standard.
 
-
 ![Adobe document services](images/doc-gen-hero-desktop@2x.png)
 
 - [Try the demo](/src/pages/pdf-extract.md)
-
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
