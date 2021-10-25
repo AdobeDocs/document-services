@@ -141,6 +141,7 @@ const DynamicContentLoader = ({
             </div>
 
             <div
+            className={"spectrum-Body spectrum-Body--sizeL"}
             css={css`text-align:left;`}>
                 Find tutorials from novice to expert to help you expand your
                 skills.

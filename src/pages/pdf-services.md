@@ -70,7 +70,7 @@ Create, convert, transform, OCR PDFs and more
 
 
 
-<TextBlock slots="buttons" isCentered theme="lightest"  className='blade-bottom-content padding-top-zero'/>
+<TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
 
 - [View all Use Case](/src/pages/use-cases)
 

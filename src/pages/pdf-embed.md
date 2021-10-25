@@ -111,7 +111,7 @@ Out of the box Adobe Analytics integration allows customers to seamlessly enable
 <UseCase />
 
 
-<TextBlock slots="buttons" isCentered theme="lightest" className='margin-top-zero'/>
+<TextBlock slots="buttons" isCentered theme="lightest" className='padding-5'/>
 
 * [See all Use Case](/src/pages/use-cases)
 

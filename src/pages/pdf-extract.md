@@ -29,7 +29,7 @@ Unlock the structure and content elements of any PDF with a web service powered 
 
 <PdfExtractResource/>
 
-<TextBlock slots="buttons" isCentered theme="lightest"  className='blade-bottom-content padding-top-zero'/>
+<TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
 
 - [View all Use Case](/src/pages/use-cases)
 

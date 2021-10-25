@@ -148,7 +148,10 @@
 }
 
 .img-m-size  p:last-child {
-    height: var(--spectrum-global-dimension-size-1600);
+    height: var(--spectrum-global-dimension-size-1500);
+}
+.img-m-size div:first-child {
+    overflow-y: hidden !important;
 }
 
 .blue-bg {

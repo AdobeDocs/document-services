@@ -63,7 +63,7 @@ Generate PDF and Word documents from World templates and JSON data
 
 <DgUseCaseDocServiceAPI/>
 
-<TextBlock slots="buttons" theme="lightest" isCentered className="view-all-use-case-btn"/>
+<TextBlock slots="buttons" theme="lightest" isCentered className="padding-5"/>
 
 - [See all Use Case](https://www.adobe.io/apis/documentcloud/dcsdk/sales-proposals-and-contracts.html)
 
