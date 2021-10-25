@@ -32,7 +32,7 @@ Create, convert, transform, OCR PDFs and more
 
 
 <!-- Carousel Block -->
-<!-- <WrapperComponent slots="content" repeat="1" theme="dark"/> -->
+<WrapperComponent slots="content" repeat="1" theme="dark"/>
 
 <AWSMSCarousel />
 
