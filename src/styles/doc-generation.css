@@ -309,3 +309,9 @@ section.market-place .market-place-container .market-place-wrapper .mp-copy-wrap
   text-decoration: none;
   text-decoration-style: solid !important;
 }
+
+.padding-btm-zero-left-align {
+  padding-bottom: var(--spectrum-global-dimension-size-25) !important;
+  padding-top: var(--spectrum-global-dimension-size-25)  !important;
+  text-align: left !important;
+}

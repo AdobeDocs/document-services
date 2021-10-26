@@ -54,11 +54,17 @@ const SwiperContent = ({
       css={css`
         display: flex;
         ${backgroundColor}
+        margin-bottom: var(--spectrum-global-dimension-size-500);
         flex-direction: row;
+        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+          max-width: calc(${layoutColumns(3.5)}) !important;
+          // margin:0;
+        }
         @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
           flex-direction: column;
+          max-width: calc(${layoutColumns(6)}) !important;
+
         }
-        margin: var(--spectrum-global-dimension-size-500);
       `}
     >
       {image ? (
@@ -69,15 +75,16 @@ const SwiperContent = ({
             @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
               margin: auto;
             }
-            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-              margin: 0;
-              max-width: calc(${layoutColumns(4)});
-              margin-bottom: var(--spectrum-global-dimension-size-200);
-            }
             @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
               max-width: calc(${layoutColumns(6)});
               margin: 0;
               margin-bottom: var(--spectrum-global-dimension-size-200);
+            }
+            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+              margin: 0;
+              max-width: calc(${layoutColumns(3.5)}) !important;
+              margin-bottom: var(--spectrum-global-dimension-size-200);
+              // padding: var(--spectrum-global-dimension-size-0) !important;
             }
           `}
         >
@@ -91,37 +98,58 @@ const SwiperContent = ({
           css={css`
             text-align: left;
             flex: 1;
-            padding: var(--spectrum-global-dimension-size-200);
+            padding: var(--spectrum-global-dimension-size-100);
+
+            @media only screen and (min-width: 375px) and(max-width:768px) {
+              margin: 0;
+              background:red;
+              text-align: center !important;
+              max-width: calc(${layoutColumns(3.5)}) !important;
+              padding-left:  var(--spectrum-global-dimension-size-100) !important;
+            }
             ${isCenter&&centerAlignament}
           `}
         >
           {heading && (
-            <h2
-              className="spectrum-Heading spectrum-Heading--sizeL"
+            <h3
+              className="spectrum-Heading--sizeL"
               css={css`
-                max-width: calc(${layoutColumns(6)});
-                margin-top: 0 !important;
-                margin-bottom: var(
-                  --spectrum-global-dimension-size-200
-                ) !important;
-                overflow: hidden;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                  max-width: calc(${layoutColumns(2)});
-                  padding: var(--spectrum-global-dimension-size-200) !important;
-                }
-              `}
-            >
+                @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                  font-size: var(--spectrum-alias-heading-m-text-size) !important;
+                  // padding-left: var(--spectrum-global-dimension-size-100) !important;
+
+                }`
+              }>
               {heading.props.children}
-            </h2>
+            </h3>
           )}
-          {textKeys.length > 0 ? <Texts texts={props} index={index} /> : null}
+          {textKeys.length > 0 ?
+            <div
+              className="textWrapper"
+              css={css`
+                @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                  &>h3{
+                    font-size: var(--spectrum-alias-heading-xxs-text-size) !important;
+                    
+                  }
+                }`
+              }
+            >
+              <Texts
+                texts={props}
+                index={index}
+              />
+            </div>
+          : null}
           {buttons ? (
             <div
               css={css`
                 margin-top: var(--spectrum-global-dimension-size-200);
+                @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                     div:first-child{
+                       justify-content:center !important;
+                     }
+                }
               `}
             >
               <HeroButtons buttons={buttons} />
@@ -178,7 +206,7 @@ const Carousel = ({
     >
       <div
         css={css`
-        max-width: calc(${layoutColumns(12)});
+          max-width: calc(${layoutColumns(12)});
           margin: auto;
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
             max-width: calc(${layoutColumns(3)});
@@ -238,70 +266,75 @@ const Carousel = ({
   let centerAlignament= "margin:auto"
   return(
     <section
-    className={classNames(className, `spectrum--${theme}`)}
-    css={css`
-      background: var(--spectrum-global-color-gray-100);
-      padding: var(--spectrum-global-dimension-size-600) 0
+      className={classNames(className, `spectrum--${theme}`)}
+      css={css`
+        background: var(--spectrum-global-color-gray-100);
+        padding: var(--spectrum-global-dimension-size-600) 0
         var(--spectrum-global-dimension-size-200) 0;
-    `}
-  >
-       <Swiper
-      speed={swiperSpeed}
-      slidesPerView={"auto"}
-      autoplay={{
-        delay,
-      }}
-      pagination={{
-        bulletActiveClass,
-        bulletClass,
-        clickable: true,
-      }}
-      navigation={{
-        nextEl: `.${navigationNext}`,
-        prevEl: `.${navigationPre}`,
-      }}
+      `}
     >
-      {carouselProps.map((data, index) => {
-        return (
-          <SwiperSlide key={index}>
-            <div className={data.bgimage.props?.children}>
-              <div css={css`   max-width: calc(${layoutColumns(12)});
-          margin: auto;
-          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            max-width: calc(${layoutColumns(3)});
-          }
-          @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
-            padding-bottom: 0;
-            margin-top: 0;
-            max-width: calc(${layoutColumns(6)});
-          }`}>
-            <SwiperContent
-              textKeys={textKeys}
-              heading={data.heading}
-              image={data.image}
-              imageStyle={imageStyle}
-              buttons={data.buttons}
-              props={props}
-              backgroundColor={backgroundColor}
-              index={index}
-              slideTheme={slideTheme}
-              theme={theme}
-              isCenter={isCenter}
-              centerAlignament={centerAlignament}
-            />
-            {enableNavigation ? (
-              <>
-                <div className={navigationPre}></div>
-                <div className={navigationNext} ></div>
-              </>
-            ) : null}
-          </div>
-          </div>
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
-      </section>
+      <Swiper
+        speed={swiperSpeed}
+        slidesPerView={"auto"}
+        autoplay={{
+          delay,
+        }}
+        pagination={{
+          bulletActiveClass,
+          bulletClass,
+          clickable: true,
+        }}
+        navigation={{
+          nextEl: `.${navigationNext}`,
+          prevEl: `.${navigationPre}`,
+        }}
+      >
+        {carouselProps.map((data, index) => {
+          return (
+            <SwiperSlide key={index}  >
+              <div className={data.bgimage.props?.children}>
+                <div
+                  css={css`
+                  max-width: calc(${layoutColumns(12)});
+                  margin: auto;
+                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                    width:auto;
+                    // max-width: calc(${layoutColumns(3)});
+                    // background:green;
+                  }
+                  @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
+                    // padding-bottom: 0;
+                    // margin-top: 0;
+                    max-width: calc(${layoutColumns(6)});
+                }
+                `}>
+                  <SwiperContent
+                    textKeys={textKeys}
+                    heading={data.heading}
+                    image={data.image}
+                    imageStyle={imageStyle}
+                    buttons={data.buttons}
+                    props={props}
+                    backgroundColor={backgroundColor}
+                    index={index}
+                    slideTheme={slideTheme}
+                    theme={theme}
+                    isCenter={isCenter}
+                    centerAlignament={centerAlignament}
+                  />
+                  {enableNavigation ? (
+                    <>
+                      <div className={navigationPre}></div>
+                      <div className={navigationNext} ></div>
+                    </>
+                  ) : null}
+                </div>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </section>
   )}
 };
 
