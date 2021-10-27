@@ -10,7 +10,7 @@ title: Adobe Developer — Wrapper Components  —  Home Product Card
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" className="product-card-compact"/>
 
-![CC icon](../images/document-structure-understanding.svg)
+![Services](../images/document-structure-understanding.svg)
 
 #### Services
 
@@ -22,7 +22,7 @@ Services high-fidelity PDFs in web apps with analytics
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" className="product-card-compact"/>
 
-![CC icon](../images/comprehensive-content-extraction.svg)
+![Extract](../images/comprehensive-content-extraction.svg)
 
 #### Extract
 
@@ -34,7 +34,7 @@ Extract text, tables, images, and document structure
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" className="product-card-compact"/>
 
-![CC icon](../images/high-fidelity.svg)
+![Generate](../images/high-fidelity.svg)
 
 #### Generate
 
@@ -46,7 +46,7 @@ Generate PDF and Word documents from custom Word templates
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="25%" className="product-card-compact"/>
 
-![CC icon](../images/document-structure-understanding.svg)
+![Embed](../images/document-structure-understanding.svg)
 
 #### Embed
 

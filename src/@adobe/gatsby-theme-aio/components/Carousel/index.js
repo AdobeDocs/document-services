@@ -1,7 +1,3 @@
-/*
- * Once Carousel PR will merged with Adobe theme after that we will remove this component
- */
-
 import React from "react";
 import { css } from "@emotion/react";
 import "@spectrum-css/typography";
@@ -33,6 +29,7 @@ const Texts = ({ texts, index }) => {
   return definedTextKeys.map((data) => texts[`${data}${index}`]);
 };
 
+const smallDesktopView = "1024px"
 
 const SwiperContent = ({
   textKeys,
@@ -56,15 +53,23 @@ const SwiperContent = ({
         ${backgroundColor}
         margin-bottom: var(--spectrum-global-dimension-size-500);
         flex-direction: row;
+
         @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
           max-width: calc(${layoutColumns(3.5)}) !important;
           // margin:0;
         }
+
         @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
           flex-direction: column;
           max-width: calc(${layoutColumns(6)}) !important;
-
         }
+
+        @media screen and (min-width: ${TABLET_SCREEN_WIDTH}) and (max-width: ${smallDesktopView}) {
+          max-width: calc(${layoutColumns(8)}) !important;
+        }
+         
+      
+
       `}
     >
       {image ? (
@@ -75,16 +80,21 @@ const SwiperContent = ({
             @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
               margin: auto;
             }
-            @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-              max-width: calc(${layoutColumns(6)});
-              margin: 0;
-              margin-bottom: var(--spectrum-global-dimension-size-200);
-            }
+          
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
               margin: 0;
               max-width: calc(${layoutColumns(3.5)}) !important;
               margin-bottom: var(--spectrum-global-dimension-size-200);
-              // padding: var(--spectrum-global-dimension-size-0) !important;
+            }
+
+            @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+              max-width: calc(${layoutColumns(6)}) !important;
+              margin: 0;
+              margin-bottom: var(--spectrum-global-dimension-size-200);
+            }
+
+            @media (min-width: ${TABLET_SCREEN_WIDTH}) and (max-width: ${smallDesktopView}) {
+              max-width: calc(${layoutColumns(8)}) !important;
             }
           `}
         >
@@ -208,14 +218,23 @@ const Carousel = ({
         css={css`
           max-width: calc(${layoutColumns(12)});
           margin: auto;
+
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            max-width: calc(${layoutColumns(3)});
+            max-width: calc(${layoutColumns(3)}) !important;
           }
+
+        
+
           @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
             padding-bottom: 0;
             margin-top: 0;
-            max-width: calc(${layoutColumns(6)});
+            max-width: calc(${layoutColumns(6)}) !important;
           }
+
+          @media screen and (min-width: ${TABLET_SCREEN_WIDTH}) and (max-width: ${smallDesktopView}) {
+            max-width: calc(${layoutColumns(8)}) !important;
+          }
+        
         `}
       >
         <Swiper
@@ -323,10 +342,10 @@ const Carousel = ({
                     centerAlignament={centerAlignament}
                   />
                   {enableNavigation ? (
-                    <>
+                    <div >
                       <div className={navigationPre}></div>
                       <div className={navigationNext} ></div>
-                    </>
+                    </div>
                   ) : null}
                 </div>
               </div>

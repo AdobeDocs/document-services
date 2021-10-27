@@ -33,7 +33,7 @@ import { TabsBlock } from "../Tabs";
 import { WrapperComponent } from '../WrapperComponent';
 import {FormWrapperComponent} from '../FormWrapperComponent';
 import {Hero} from '../Hero';
-import { MenusBlock } from '../Menu';
+import { CustomMenuBlock } from '../CustomMenuBlock';
 import {CustomIframeBlock} from '../CustomIframe';
 import { MenuWrapperComponent } from '../MenuWrapperComponent';
 
@@ -60,7 +60,7 @@ export const MDXBlocks = {
   WrapperComponent,
   FormWrapperComponent,
   MenuWrapperComponent,
-  MenusBlock,
+  CustomMenuBlock,
   CustomIframeBlock,
   TabsBlock: ({ theme, ...props }) => (
     <TabsBlock theme={theme ?? globalTheme.code} {...props} />

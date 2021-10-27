@@ -32,6 +32,16 @@
 .swiper-button-prev {
     left: 0 !important;
 }
+
+@media (min-width: 320px) and (max-width:768px)  {
+    .swiper-button-next {
+        display: none;
+    }
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
 .Container {
     height: 100%;
     top: 0;

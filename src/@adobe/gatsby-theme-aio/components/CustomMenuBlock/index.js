@@ -10,14 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import React, { forwardRef, useState, useRef, useEffect, useCallback, useContext } from 'react';
+import React, { useState, useRef, useEffect, useCallback, useContext } from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import nextId from 'react-id-generator';
 import { GatsbyLink } from '@adobe/gatsby-theme-aio/src/components/GatsbyLink';
 import '@spectrum-css/menu';
-import { CheckMark, ChevronDown, ChevronRight } from '@adobe/gatsby-theme-aio/src/components/Icons';
+import { ChevronDown, ChevronRight } from '@adobe/gatsby-theme-aio/src/components/Icons';
+import { Menu } from '@adobe/gatsby-theme-aio/src/components/Menu';
 import { graphql, useStaticQuery, withPrefix } from "gatsby";
 import Context from '@adobe/gatsby-theme-aio/src/components/Context';
 
@@ -26,63 +27,7 @@ import {
   findSelectedPages,
   normalizePagePath,
 } from '@adobe/gatsby-theme-aio/src/utils';
-import { TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/conf/globals';
-
-const Menu = forwardRef(({ children, ...props }, ref) => {
-  return (
-    <ul
-      ref={ref}
-      className="spectrum-Menu"
-      // role="menu"
-      css={css`
-        display: block;
-      `}
-      {...props}>
-      {children}
-    </ul>
-  );
-});
-
-const Item = ({ children, isDivider = false, isHighlighted, isSelected, href = '', ...props }) => {
-  const Element = href ? GatsbyLink : 'li';
-
-  return isDivider ? (
-    <li className="spectrum-Menu-divider" role="separator" />
-  ) : (
-    <Element
-      className={classNames('spectrum-Menu-item', { 'is-open': isHighlighted }, { 'is-selected': isSelected })}
-      to={href}
-      role="menuitem"
-      tabIndex="0"
-      css={css`
-        text-align: left;
-      `}
-      {...props}>
-      <span className="spectrum-Menu-itemLabel">{children}</span>
-      <CheckMark
-        className="spectrum-Menu-checkmark spectrum-Menu-itemIcon"
-        css={css`
-          display: none;
-        `}
-      />
-    </Element>
-  );
-};
-
-const Section = ({ children, title }) => {
-  const id = nextId();
-
-  return (
-    <li role="presentation">
-      <span className="spectrum-Menu-sectionHeading" id={id} aria-hidden="true">
-        {title}
-      </span>
-      <ul className="spectrum-Menu" role="group" aria-labelledby={id}>
-        {children}
-      </ul>
-    </li>
-  );
-};
+import { TABLET_SCREEN_WIDTH, MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/conf/globals';
 
 function useDynamicSVGImport(name, options = {}) {
     const ImportedIconRef = useRef();
@@ -130,12 +75,12 @@ function useDynamicSVGImport(name, options = {}) {
     return null;
   };
 
-const MenusBlock = ({
+const CustomMenuBlock = ({
   className,
   ...props
 }) => {
 
-  const mobile_screen_width = '767px';
+  const min_mobile_screen_width = '767px';
   const data = useStaticQuery(
     graphql`
       query MyQuery {
@@ -282,6 +227,10 @@ const MenusBlock = ({
               <div
                 css={css`
                   font-size: var(--spectrum-global-dimension-size-200);
+
+                  @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                    font-size: var(--spectrum-global-dimension-size-150); !important;
+                  }
                   padding-left: var(--spectrum-global-dimension-size-100);
                   white-space: nowrap;
                   color: var(--spectrum-listitem-m-text-color-hover, var(--spectrum-alias-text-color));
@@ -321,7 +270,7 @@ const MenusBlock = ({
       width: calc(var(--spectrum-global-dimension-size-1000) + var(--spectrum-global-dimension-size-3000));
       margin: auto;
 
-      @media only screen and (max-width: ${mobile_screen_width}) {
+      @media only screen and (max-width: ${min_mobile_screen_width}) {
         width: var(--spectrum-global-dimension-size-3000) !important;
         margin-left: 0;
       }
@@ -350,20 +299,8 @@ const MenusBlock = ({
   </section>)
 };
 
-
-Item.propTypes = {
-  isHighlighted: PropTypes.bool,
-  isSelected: PropTypes.bool,
-  isDivider: PropTypes.bool,
-  href: PropTypes.string
-};
-
-Section.propTypes = {
-  title: PropTypes.string
-};
-
-MenusBlock.propTypes = {
+CustomMenuBlock.propTypes = {
   className: PropTypes.string
 };
 
-export { Menu, Item, Section, MenusBlock };
+export { CustomMenuBlock };

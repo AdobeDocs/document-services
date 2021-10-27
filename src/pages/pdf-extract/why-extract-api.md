@@ -5,13 +5,13 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 
 <SummaryBlock slots="heading, buttons" theme="light" buttonPositionRight btnVariant="cta" isBtnVariant />
 
-### Key Features of Adobe PDF Extract API
+### Key features of Adobe PDF extract API
 
 * [Start free trial](/src/pages/gettingstarted.md)
 
 <TextBlock slots="image, heading, text" width="25%" theme="light" className="align-left icon-xl-size padding-top-zero" />
 
-![extract_API_img](../images/comprehensive-content-extraction.svg)
+![comprehensive-content-extraction](../images/comprehensive-content-extraction.svg)
 
 ### Comprehensive Content Extraction
 
@@ -22,7 +22,7 @@ Extract all PDF document elements including text, tables, and images within a st
 
 <TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left icon-xl-size padding-top-zero"/>
 
-![extract_API_img](../images//document-structure-understanding.svg)
+![document-structure-understanding](../images//document-structure-understanding.svg)
 
 ### Document Structure Understanding
 
@@ -32,7 +32,7 @@ Classify text objects such as headings, lists, footnotes, and paragraphs that ma
 
 <TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left icon-xl-size padding-top-zero"/>
 
-![extract_API_img](../images/high-fidelity.svg)
+![high-fidelity](../images/high-fidelity.svg)
 
 ### Highly Accurate Results
 
@@ -42,7 +42,7 @@ Adobe Sensei AI technology delivers highly accurate data extraction across a bro
 
 <TextBlock slots="image, heading, text" width="25%" theme="light"  className="align-left icon-xl-size padding-top-zero"/>
 
-![extract_API_img](../images/platform-agnostic.svg)
+![platform-agnostic](../images/platform-agnostic.svg)
 
 ### Platform Agnostic
 

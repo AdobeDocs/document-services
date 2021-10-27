@@ -180,7 +180,6 @@ section.sdk-rsrc-anchor .anchor-container .anchor-wrapper {
 @media (min-width: 320px) and (max-width:400px)  {
     section.sdk-rsrc-anchor .anchor-container .anchor-wrapper {
         max-width: auto !important;
-        overflow-x: hidden;
     }
 }
 section.sdk-rsrc-anchor .anchor-container .anchor-wrapper .anchor {

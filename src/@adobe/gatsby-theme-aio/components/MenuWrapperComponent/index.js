@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import { DESKTOP_SCREEN_WIDTH, TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
-import { MenusBlock } from '../Menu';
+import { CustomMenuBlock } from '../CustomMenuBlock';
 
 
 const MenuWrapperComponent = ({ theme = 'lightest',className, menuClassName, contentClassName, content, background }) => {
@@ -63,7 +63,7 @@ const MenuWrapperComponent = ({ theme = 'lightest',className, menuClassName, con
           `}
           className={classNames(menuClassName,`menu-content`)}
         >
-          <MenusBlock />
+          <CustomMenuBlock />
         </div>
 
         <div
