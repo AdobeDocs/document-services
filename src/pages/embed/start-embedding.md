@@ -1,3 +1,8 @@
+---
+title: Adobe Developer — PDF Embed API  — start-embedding
+---
+
+
 <TitleBlock slots="heading, text" theme="light" className="titleBlock-align-left" />
 
 ## Start embedding PDFs in a few minutes

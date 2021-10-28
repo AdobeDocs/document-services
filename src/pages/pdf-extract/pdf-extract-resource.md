@@ -25,7 +25,7 @@ Quickly and accurately extract data and context from native and scanned PDFs to 
 
 ![data-analysis](../images/data-analysis.jpg)
 
-### Data Analysis
+### Data analysis
 
 Extract data from complex tables including cell data, column and row headers, and table properties for use in machine learning models, analysis, or storage.
 
@@ -36,6 +36,6 @@ Extract data from complex tables including cell data, column and row headers, an
 
 ![content-republishing](../images/content-republishing.jpg)
 
-### Content Republishing
+### Content republishing
 
 Republish the content in PDF documents across different media, languages, and formats by extracting not just data but also structural context, text and table formatting, and reading order.

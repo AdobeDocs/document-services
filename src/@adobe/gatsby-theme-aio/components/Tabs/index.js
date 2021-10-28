@@ -231,6 +231,16 @@ const TabsBlock = ({
     const selectedTab = tabs.filter((tab) => tab?.current)[index];
     positionIndicator(selectedTabIndicator, selectedTab);
   };
+
+  const handleOnChange = (index) => {
+    setSelectedIndex({
+      tab: index,
+    });
+    positionSelectedTabIndicator(index);
+  };
+
+
+
   return (
     <section
       className={classNames(className, `tabsBlock spectrum--${theme}`)}
@@ -294,12 +304,21 @@ const TabsBlock = ({
                     aria-controls={itemPopoverId}
                     label={<b>{data['heading']}</b>}
                     icon={data['image']}
-                    onClick={() => {
-                      setSelectedIndex({
-                        tab: index,
-                      });
-                      positionSelectedTabIndicator(index);
+                    onKeyDown={(e) => {
+                      if (e.key === 'ArrowDown') {
+                          e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
+                      }
+                      if (e.key === 'ArrowUp') {
+                          e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
+                      }
                     }}
+                    onFocus={() => {
+                      handleOnChange(index);
+                    }}
+                    onClick={() => {
+                      handleOnChange(index);
+                    }}
+
                     css={css`
                       text-align: left;
                       white-space: normal;
@@ -327,6 +346,7 @@ const TabsBlock = ({
                       &::before {
                         left: var(--spectrum-global-dimension-size-0) !important;
                         right: var(--spectrum-global-dimension-size-0) !important;
+                        border:none !important;
                       }
                       @media only screen and (max-width: ${mobileMinWidth}) {
                         margin-top:var(--spectrum-global-dimension-size-25) !important;

@@ -1,10 +1,15 @@
+---
+title: Adobe Developer — PDF Embed API  — why-pdf-embed
+---
+
+
 <TitleBlock slots="heading" theme="light"  className="titleBlock-align-left" />
 
-## Why PDF Embed API?
+## Why PDF embed API?
 
 <TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left icon-xl-size"  />
 
-![CC icon](../images/accurate_rendering.svg)
+![Accurate_rendering](../images/accurate_rendering.svg)
 
 ### Accurate, consistent PDF rendering
 
@@ -13,7 +18,7 @@ Whether on dynamic or static pages, deliver the highest quality PDF rendering av
 
 <TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left icon-xl-size" />
 
-![discovery_banner_img](../images/customizable_experience.svg)
+![Customizable_experience](../images/customizable_experience.svg)
 
 ### Customizable user experience
 
@@ -21,7 +26,7 @@ Choose exactly how to display a PDF and use the callbacks and annotations APIs t
 
 <TextBlock slots="image, heading, text" width="33%" theme="light"  className="align-left icon-xl-size" />
 
-![discovery_banner_img](../images/analytics.svg)
+![Analytics](../images/analytics.svg)
 
 ### Analytics on PDF usage
 

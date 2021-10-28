@@ -1,5 +1,6 @@
-
-
+---
+title: Adobe Developer — PDF Embed API  — explore-adobe
+---
 
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 

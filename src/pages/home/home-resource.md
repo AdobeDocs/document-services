@@ -13,7 +13,7 @@ title: Adobe Developer — Wrapper Components  —  Home Resource Card
 
 ![Content Processing](../images/content-processing.jpg)
 
-### Content Processing
+### Content processing
 
 Accelerate reusing content in systems of record and downstream processes, such as RPA, NLP, ML and search by quickly extracting content from native and scanned PDFs
 
@@ -50,6 +50,6 @@ Extract data from complex tables including cell data, column and row headers, an
 
 ![Digital content](../images/content-republishing.jpg)
 
-### Content Republishing
+### Content republishing
 
 Easily republish in different formats by extracting structured content elements such as headings, lists,paragraphs, fonts, and character styling

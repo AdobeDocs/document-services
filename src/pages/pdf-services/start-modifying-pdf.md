@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  —  Start Modifying PDFs in a few 
 
 <TitleBlock slots="heading, text" theme="light" className="titleBlock-align-left" />
 
-## Start embedding PDFs in a few minutes
+## Start modifying PDFs in a few minutes
 
 Start your free 6-month trial today with 1,000 PDF transactions
 

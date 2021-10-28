@@ -9,39 +9,24 @@ title: Adobe Developer — PDF-embed  —  Use cases
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
 
-[](use-cases)
+[](use-cases/collaboration/)
 
-![Sales proposals](../images/sales-proposals.jpg)
+![Student Teacher Collaboration](../images/stud-teacher-col.jpg)
 
-### Sales proposals and contracts
+### Student teacher collaboration
 
-Accelerate reusing content in systems of record and downstream processes, such as RPA, NLP, ML and search by quickly extracting content from native and scanned PDFs
-
-
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
-
-[](/use-cases/agreements-and-contracts/legal-contracts/)
-
-![Legal contracts](../images/legal-contracts.jpg)
-
-### Legal contracts
-
-Generate legal contracts with dynamic terms and signatures
-
+Accelerate digital learning programs with embedded PDF viewing for teacher and peer document collaboration.
 
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
 
-[](/use-cases/content-and-data-extraction/data-analysis/)
+[](use-cases/collaboration/review-and-approval/)
 
-![Data analysis](../images/data-analysis.jpg)
+![Reviews and Approvals](../images/review-approvals.jpg)
 
-### Data analysis
+### Reviews and approvals
 
-Extract data from complex tables including cell data, column and row headers, and table properties for use in machine learning models, analysis, or storage
-
-
-
+Maximize remote worker productivity with multi-user document collaboration including commenting, markup, text edits, and more.
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
 
@@ -52,4 +37,19 @@ Extract data from complex tables including cell data, column and row headers, an
 ### Digital content publishing
 
 Easily republish in different formats by extracting structured content elements such as headings, lists, paragraphs, fonts, and character styling
+
+
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+
+<!-- [](/use-cases/report-creation-editing) Faced 404 issue-->
+
+[](use-cases)
+
+
+![Report Creation and Editing](../images/report-creation-editing.jpg)
+
+### Report creation and editing
+
+Create and embed reports for internal or external consumption, sharing, and review.
+
 

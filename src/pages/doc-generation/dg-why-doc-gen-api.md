@@ -4,7 +4,7 @@ title: Adobe Developer — Doc generation — Why Document Generation API
 
 <TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
 
-## Why document generation api?
+## Why document generation API?
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className=" icon-xl-size padding-btm-zero-left-align "/>
 

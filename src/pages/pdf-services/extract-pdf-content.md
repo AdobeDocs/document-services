@@ -12,7 +12,7 @@ Extract text, images, tables, and more from native and scanned PDFs into a struc
 
 See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs) and quickly try our APIs using the Postman collections
 
-<CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />
+<CodeBlock slots="heading, code" repeat="5" languages="curl, js,.net,java" />
 
 #### REST API
 
@@ -21,7 +21,7 @@ curl --location --request POST 'https://cpf-stage-ue1.adobe.io/ops/:create' \
 --header 'Accept: application/json, text/plain, /' \
 --header 'Authorization: Bearer ' \
 --header 'x-api-key: ' \
---form 'contentAnalyzerRequests={
+--form 'contentAnalyzerRequests={   
     \"cpf:engine\": {
         \"repo:assetId\": \"urn:aaid:cpf:58af6e2c-1f0c-400d-9188-078000185695\"
     },
@@ -86,6 +86,36 @@ extractPDFOperation.setOptions(options);
 extractPDFOperation
   .execute(executionContext)
   .then((result) => result.saveAsFile("output/extractPdf.zip"));
+```
+
+#### .Net
+
+```c#
+// Create an ExecutionContext using credentials.
+ExecutionContext executionContext = ExecutionContext.Create(credentials);
+
+// Create a new operation instance
+DeletePagesOperation deletePagesOperation = DeletePagesOperation.CreateNew();
+
+// Set operation input from a source file.
+FileRef sourceFileRef = FileRef.CreateFromLocalFile(
+    @"deletePagesInput.pdf"
+  );
+deletePagesOperation.SetInput(sourceFileRef);
+
+// Delete pages of the document
+// (as specified by PageRanges).
+PageRanges pageRangeForDeletion = GetPageRangeForDeletion();
+deletePagesOperation
+  .SetPageRanges(pageRangeForDeletion);
+
+// Execute the operation.
+FileRef result = deletePagesOperation
+  .Execute(executionContext);
+
+// Save the result to the specified location.
+result.SaveAs(Directory.GetCurrentDirectory() +
+  "/output/deletePagesOutput.pdf");
 ```
 
 #### Java

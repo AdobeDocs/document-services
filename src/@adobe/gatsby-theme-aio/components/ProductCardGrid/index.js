@@ -104,7 +104,8 @@ const ProductCardGrid = ({
   isCentered = false,
   className,
   containerWidth=DESKTOP_SCREEN_WIDTH,
-  theme="light"
+  theme="light",
+  enablePicker=false
 }) => {
   if (filterByIds.length) {
     orderBy = "id";
@@ -134,8 +135,10 @@ const ProductCardGrid = ({
     "calc(var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-600))";
   const width =
     "calc(var(--spectrum-global-dimension-size-3600) - var(--spectrum-global-dimension-size-900))";
+ 
+const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimension-size-1000)":"";
 
-  return (
+    return (
     <section
       className={classNames(className, `spectrum--${theme}`)}
       css={css`
@@ -154,24 +157,19 @@ const ProductCardGrid = ({
           background: var(--spectrum-global-color-gray-100);;
           padding-bottom: 0;
         }
-   
-
       `}
-
     >
       <div 
       css={css`
       max-width: ${containerWidth};
       margin: auto;
-
        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
           width: ${layoutColumns(3)} !important;
           background:var(--spectrum-global-color-gray-100);
         }
-
-
+        ${updatePadding}
       `}>
-      {interaction && (
+      {interaction && enablePicker && (
         <div
           css={css`
             display: flex;
@@ -179,7 +177,6 @@ const ProductCardGrid = ({
             height: var(--spectrum-global-dimension-size-800);
             justify-content: flex-end;
             margin-right: var(--spectrum-global-dimension-size-400);
-            
           `}
         >
           <Picker
@@ -451,6 +448,7 @@ ProductCardGrid.propTypes = {
   isCentered: PropTypes.bool,
   showBorder: PropTypes.bool,
   imgHeight: PropTypes.string,
+  enablePicker:PropTypes.bool,
 };
 
 export { ProductCardGrid };

@@ -14,7 +14,7 @@ title: Adobe Developer — PDF Services API  —   Use Cases for Document Servic
 
 ![Report Creation](../images/report-creation-editing.jpg)
 
-### Report Creation and Editing
+### Report creation and editing
 
 Create and embed reports for internal or external consumption, sharing, and review.
 
@@ -24,7 +24,7 @@ Create and embed reports for internal or external consumption, sharing, and revi
 
 ![Search and Indexing](../images/search-indexing.jpg)
 
-### Search and Indexing
+### Search and indexing
 
 Create searchable indexes from digital documents to quickly locate critical content for compliance and other downstream processing.
 
@@ -34,7 +34,7 @@ Create searchable indexes from digital documents to quickly locate critical cont
 
 ![Data Analysis](../images/content-republishing.jpg)
 
-### Digital Content Publishing
+### Digital content publishing
 
 Publish whitepapers and marketing content with end-user interactivity, security controls, and analytics.
 
@@ -44,7 +44,7 @@ Publish whitepapers and marketing content with end-user interactivity, security 
 
 ![Digital content publishing](../images/job-posting.jpg)
 
-### Job Posting
+### Job posting
 
 Automate job posting with supporting documents such as PDF brochures, relevant job supplements, and company details.
 
