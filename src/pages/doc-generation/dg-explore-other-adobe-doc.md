@@ -14,7 +14,7 @@ title: Adobe Developer — Automate Document Generation | Document Explore | Ado
 
 Create a PDF from Microsoft Office documents, protect the content, and export to other formats
 
-* [PDF Services](/src/pages/pdf-services.md)
+* [Learn more](/src/pages/pdf-services.md)
 
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
@@ -24,7 +24,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 ### Extract
 Extract text, tables, images, and document structure
 
-* [PDF Extract](/src/pages/pdf-extract.md)
+* [Learn more](/src/pages/pdf-extract.md)
 
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>

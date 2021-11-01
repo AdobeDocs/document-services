@@ -499,9 +499,9 @@ section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial span {
         margin: 4.375rem 2.75rem;
 } */
 section.sdk-rsrc-blog {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    
+    /* margin-top: 0 !important;
+    margin-bottom: 0 !important; */
+    margin: 0 2.75rem;
 }
 section.sdk-rsrc-blog .blog-container {
     margin: 0 auto;
@@ -516,14 +516,14 @@ section.sdk-rsrc-blog .blog-container {
 @media (min-width: 320px) and (max-width: 768px)  {
     section.sdk-rsrc-blog .blog-container {
         max-width: auto;
-        margin: 0 2.75rem;
+        /* margin: 0 2.75rem; */
         /* background-color: red; */
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     section.sdk-rsrc-blog .blog-container {
         max-width: auto;
-        margin: 0 2.75rem;
+        /* margin: 0 2.75rem; */
         overflow-x: hidden !important;
     }
 }
@@ -552,7 +552,8 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div {
 }
 @media screen and (min-width: 1024px) {
     section.sdk-rsrc-blog .blog-container .blog-wrapper > div {
-        width: 300px ;
+        width: 290px ;
+        padding-right: 0.8px;
    }
 }
 @media screen and (min-width: 1440px) {

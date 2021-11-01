@@ -52,7 +52,8 @@ const ProductCard = ({ theme = 'lightest', width = '100%', icon, heading, text, 
   if (columns === 2 || columns === 3) {
     alignment = alignMapping[counter[columns] % columns] || 'center';
   }
-
+  const MAX_MOBILE_SCREEN_WIDTH = '768px';
+  const MIN_MOBILE_SCREEN_WIDTH = '320px'
   return (
     <section
       className={classNames(className, `spectrum--${theme}`)}
@@ -64,11 +65,12 @@ const ProductCard = ({ theme = 'lightest', width = '100%', icon, heading, text, 
         padding: var(--spectrum-global-dimension-size-400) 0;
         background: var(--spectrum-global-color-gray-100);
 
-        @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+        @media screen and (min-width: ${MIN_MOBILE_SCREEN_WIDTH}) and (max-width: ${MAX_MOBILE_SCREEN_WIDTH})  {
           display: flex;
           width: 100%;
           align-items: center;
         }
+
       `}>
       <div
         role="figure"

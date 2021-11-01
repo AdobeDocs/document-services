@@ -218,7 +218,6 @@ const Carousel = ({
         css={css`
           max-width: calc(${layoutColumns(12)});
           margin: auto;
-
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
             max-width: calc(${layoutColumns(3)}) !important;
           }
@@ -233,7 +232,7 @@ const Carousel = ({
 
           @media screen and (min-width: ${TABLET_SCREEN_WIDTH}) and (max-width: ${smallDesktopView}) {
             max-width: calc(${layoutColumns(8)}) !important;
-          }
+          }.
         
         `}
       >

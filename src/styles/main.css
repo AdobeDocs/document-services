@@ -330,14 +330,14 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
         top: -52px;
     }
 }
-.homeHeroAssetImg .gatsby-resp-image-background-image {
+/* .homeHeroAssetImg .gatsby-resp-image-background-image {
     padding-bottom: 25% !important;
-}
-@media screen and (max-width: 768px) {
+} */
+/* @media screen and (max-width: 768px) {
     .homeHeroAssetImg .gatsby-resp-image-background-image {
         padding-bottom: 45% !important;
     }
-}
+} */
 .titleBlock-align-left div:first-child {
     text-align: left !important;
     margin-left: var(--spectrum-global-dimension-size-150) !important;
@@ -571,4 +571,125 @@ img[alt=thumbnail] {
     background: rgb(250, 105, 85) url('../pages/images/bg-hero-doc-gen.jpeg') !important;
     background-repeat: no-repeat;
     background-size: cover !important;
+}
+
+
+.doc-services-hero{
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image:  url('../pages/images/doc-gen-hero-mobile@2x.png');
+    background-repeat: no-repeat;
+    background-position: bottom left -2rem;
+    background-size: cover;
+    width: 24rem;
+    height: 21rem;
+    color: #fff;
+}
+
+.apiHeroAssetImg {
+    margin: 0 !important;
+    margin: 0 auto !important;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    width: 23rem;
+    height: 21rem;
+}
+
+.doc-ext-invoice {
+    background-image: url('../pages/images/extract-hero-mobile@2x.png') !important;
+}
+
+.doc-gen-invoice{
+    background-image:  url('../pages/images/doc-gen-hero-mobile@2x.png');
+}
+
+.doc-service-hero {
+    background-image: url('../pages/images/home-carousel-three.png') !important;
+}
+
+.doc-embed-hero {
+    background-image: url('../pages/images/home-carousel-one.png') !important;
+    background-position: bottom right !important;
+}
+
+
+@media screen and (min-width: 1024px){
+    .doc-services-hero {
+        background-image:  url('../pages/images/doc-gen-hero-desktop@2x.png') !important;
+        background-repeat: no-repeat;
+        margin: 0 auto !important;
+        background-position: bottom center;
+        background-size: cover;
+        width: 51rem;
+        height: 24rem;
+    }
+
+    .apiHeroAssetImg {
+        margin: 0 auto !important;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        width: 52.625rem;
+        height: 2rem;
+    }
+
+    .doc-ext-invoice {
+        margin: 0 auto !important;
+        width: 57rem !important;
+    }
+
+    .doc-service-hero {
+        background-image: url('../pages/images/home-carousel-three@2x.png') !important;
+        width: 23rem !important;
+
+    }
+
+    .doc-embed-hero {
+        background-image: url('../pages/images/home-carousel-one@2x.png') !important;
+        width: 23rem !important;
+    }
+
+    .doc-gen-invoice{
+        background-image:  url('../pages/images/doc-gen-hero-desktop@2x.png');
+    }
+}
+
+@media screen and (min-width: 767px){
+    .doc-services-hero {
+        background-image: url('../pages/images/doc-gen-hero-tablet@2x.png') !important;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: cover;
+        width: 48rem !important;
+        height: 21.125rem;
+    }
+
+    .apiHeroAssetImg {
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        width: 48rem;
+        height: 22rem;
+    }
+
+    .doc-ext-invoice {
+        background-image: url('../pages/images/extract-hero-tablet@2x.png') !important;
+        background-position: bottom right !important;
+    }
+
+    .doc-gen-invoice{
+        background-image:  url('../pages/images/doc-gen-hero-tablet@2x.png');
+    }
+
+    .doc-service-hero {
+        background-image: url('../pages/images/home-carousel-three@2x.png') !important;
+        width: 23rem !important;
+    }
+
+    .doc-embed-hero {
+        background-image: url('../pages/images/home-carousel-one@2x.png') !important;
+        width: 23rem !important;
+    }
+
 }

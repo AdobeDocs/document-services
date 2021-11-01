@@ -9,13 +9,17 @@ import WhyExtractAPI from './pdf-extract/why-extract-api.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';
 import HowItWorks from './pdf-extract/how-it-works.md';
 
-<Hero slots="heading, text, assets" customLayout variant="fullwidth" className="herobgImage homeHeroAssetImg"/>
+<Hero slots="heading, text, assetsImg" customLayout variant="fullwidth" className="herobgImage"/>
 
 # Adobe PDF Extract API
 
 Unlock the structure and content elements of any PDF with a web service powered by Adobe Sensei's machine learning.
 
-![hero asset image](images/extract-hero-tablet@2x.png)
+<!-- ![hero asset image](images/extract-hero-tablet@2x.png) -->
+
+apiHeroAssetImg doc-ext-invoice
+
+
 
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero"/>

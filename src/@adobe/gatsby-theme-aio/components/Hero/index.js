@@ -115,6 +115,10 @@ const HeroTexts = ({ texts }) => {
             margin-bottom: 0 !important;
           }
         }
+
+        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+          padding: 0 var(--spectrum-global-dimension-size-115);
+        }
       `
     })
   );
@@ -139,37 +143,37 @@ const HeroHeading = ({ heading, variant, customLayout }) =>
     })
     : null;
 
-const HeroAssets = ({ image }) =>
-  image
-    ? cloneElement(image, {
-      children: cloneChildren(image.props.children, setImageLoading),
-      css: css`
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 70%;
-          box-sizing: border-box;
-          margin-top: 0;
-          padding-top:var(--spectrum-global-dimension-size-200);
-          margin-bottom: 0;
-          .gatsby-resp-image-wrapper {
-            max-width: none !important;
-            width: 100% !important;
-            height: 100% !important;
-          }
+// const HeroAssets = ({ image }) =>
+//   image
+//     ? cloneElement(image, {
+//       children: cloneChildren(image.props.children, setImageLoading),
+//       css: css`
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           width: 100%;
+//           height: 70%;
+//           box-sizing: border-box;
+//           margin-top: 0;
+//           padding-top:var(--spectrum-global-dimension-size-200);
+//           margin-bottom: 0;
+//           .gatsby-resp-image-wrapper {
+//             max-width: none !important;
+//             width: 100% !important;
+//             height: 100% !important;
+//           }
 
-          .gatsby-resp-image-image {
-            object-fit: contain;
-          }
+//           .gatsby-resp-image-image {
+//             object-fit: contain;
+//           }
 
-          @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-            height: auto;
-            width: 100%;
-          }
-        `,
-    })
-    : null;
+//           @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+//             height: auto;
+//             width: 100%;
+//           }
+//         `,
+//     })
+//     : null;
 
 const Hero = ({
   className,
@@ -179,7 +183,7 @@ const Hero = ({
   image,
   icon,
   buttons,
-  assets,
+  assetsImg,
   variant = 'default',
   containerHeight = 1000,
   width = DESKTOP_SCREEN_WIDTH,
@@ -307,6 +311,10 @@ const Hero = ({
                 padding: var(--spectrum-global-dimension-size-500) var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-0) !important;
               }
 
+              @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                padding: 0 !important;
+              }
+
               @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
                 padding: 0 var(--spectrum-global-dimension-size-250);
 
@@ -344,7 +352,7 @@ const Hero = ({
                 `}
               />
             )}
-            <HeroAssets image={assets} />
+            <div className={assetsImg?.props?.children}/>
           </div>
         </section>
       )
@@ -500,7 +508,8 @@ Hero.propTypes = {
   variant: PropTypes.string,
   width: PropTypes.string,
   theme: PropTypes.string,
-  customLayout: PropTypes.bool
+  customLayout: PropTypes.bool,
+  assetsImg:PropTypes.string,
 };
 
 HeroButtons.propTypes = {

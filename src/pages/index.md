@@ -14,13 +14,16 @@ import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './resources/storyies.md'
 
 
-<Hero slots="heading, text, assets, buttons" customLayout variant="fullwidth" className="homeherobgImage homeHeroAssetImg"/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="homeherobgImage"/>
 
 # Reimagine document experiences with PDF APIs designed for developers
 
 From the company who created the PDF standard.
 
-![Adobe document services](images/doc-gen-hero-desktop@2x.png)
+<!-- ![Adobe document services](images/doc-gen-hero-desktop@2x.png) -->
+
+doc-services-hero
+
 
 - [Try the demo](/src/pages/pdf-extract.md)
 

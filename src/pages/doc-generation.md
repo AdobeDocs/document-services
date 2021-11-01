@@ -12,13 +12,17 @@ import DgExploreOtherAdobeDoc from './doc-generation/dg-explore-other-adobe-doc.
 import {MobileOptimize} from '../components/mobileOptimize'
 import '../styles/doc-generation.css'
 
-<Hero slots="heading, text, assets, buttons" customLayout variant="fullwidth" className="herobgImage homeHeroAssetImg"/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage"/>
 
 # Adobe document generation API
 
 Generate PDF and Word documents from World templates and JSON data
 
-![](images/doc-gen-hero-desktop@2x.png)
+<!-- ![](images/doc-gen-hero-desktop@2x.png) -->
+
+apiHeroAssetImg doc-gen-invoice
+
+
 
 - [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 

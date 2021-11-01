@@ -12,13 +12,16 @@ import DocumentServicesProductCards from './pdf-services/document-services-produ
 import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 
 
-<Hero slots="heading, text, assets, buttons" customLayout variant="fullwidth" className="herobgImage homeHeroAssetImg"/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage "/>
 
 # Adobe PDF Services API
 
 Create, convert, transform, OCR PDFs and more
 
-![Adobe PDF Services API](images/home-carousel-three.png)
+<!-- ![Adobe PDF Services API](images/home-carousel-three.png) -->
+
+apiHeroAssetImg doc-service-hero
+
 
 - [Try the demo](/src/pages/pdf-services.md)
 
