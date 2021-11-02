@@ -1,0 +1,2 @@
+(self.webpackChunkdev_site_product_template=self.webpackChunkdev_site_product_template||[]).push([[4292],{64292:function(e,t,s){"use strict";s.r(t),t.default=s.p+"static/how-it-works-mobile-4b074a7fdf09e502901ae9b942675a78.svg"}}]);
+//# sourceMappingURL=4292-eb93d1660650e086c4f5.js.map
