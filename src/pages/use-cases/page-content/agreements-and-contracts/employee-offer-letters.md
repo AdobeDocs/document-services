@@ -10,7 +10,7 @@ Employee offer letters are one of the first experiences new hires have with an o
 
 * Create templates in Word and generate PDFs based on a simple data set using the Adobe Document Generation API
 * Merge data and HTML templates into a PDF letter using the Adobe PDF Services API
-* Route offer letters to candidates and hiring managers, track consumption in real-time, verify user identities, and capture electronic signatures by leveraging Adobe Sign
+* Route offer letters to candidates and hiring managers, track consumption in real-time, verify user identities, and capture electronic signatures by leveraging [Adobe Sign](https://acrobat.adobe.com/us/en/sign.html)
 
 ### Relevant APIs
 

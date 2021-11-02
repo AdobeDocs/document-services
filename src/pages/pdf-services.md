@@ -18,12 +18,10 @@ import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 
 Create, convert, transform, OCR PDFs and more
 
-<!-- ![Adobe PDF Services API](images/home-carousel-three.png) -->
-
 apiHeroAssetImg doc-service-hero
 
-
-- [Try the demo](/src/pages/pdf-services.md)
+<!-- - [Start free trial](/src/pages/gettingstarted.md) -->
+- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-services-api)
 
 
 
@@ -35,7 +33,6 @@ apiHeroAssetImg doc-service-hero
 
 
 <!-- Carousel Block -->
-<!-- <WrapperComponent slots="content" repeat="1" theme="dark"/> -->
 
 <AWSMSCarousel />
 
@@ -95,5 +92,5 @@ apiHeroAssetImg doc-service-hero
 
 Have questions about the Document Services APIs?
 
-- [Go to the Adobe Forum](/src/pages/gettingstarted.md)
+- [Go to the Adobe Forum](https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all)
 - [Contact us](./contact-us.md)

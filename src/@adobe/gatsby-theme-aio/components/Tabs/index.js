@@ -315,7 +315,7 @@ const TabsBlock = ({
                       white-space: normal;
                       width: calc(var(--spectrum-global-dimension-size-2000) + var(--spectrum-global-dimension-size-600)) !important;
                       font-size: var(--spectrum-global-dimension-size-200);
-                      margin-bottom: ${orientation === 'vertical' ? '2.4rem !important' : '0rem'};
+                      margin-bottom: ${orientation === 'vertical' ? '1rem !important' : '0rem'};
                       display: flex !important;
                       padding: var(--spectrum-global-dimension-size-125) !important;
                       height: auto !important;
@@ -427,7 +427,7 @@ const TabsBlock = ({
                     @media only screen and (device-width: ${MOBILE_SCREEN_WIDTH}) {
                       max-width: ${layoutColumns(3.5)} !important;
                     }
-                    
+
                     @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
                       max-width: ${layoutColumns(6.5)} !important;
                       padding-left:var(--spectrum-global-dimension-size-500);

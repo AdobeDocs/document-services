@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 ### Create a PDF file
 
-- [See documentation](https://www.adobe.com/go/dcsdk_APIdocs)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Create PDFs from a variety of formats, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, Zip, and URL.
 Support for HTML to PDF, DOC to PDF, DOCX to PDF, PPT to PDF, PPTX to PDF, XLS to PDF, XLSX to PDF, TXT to PDF, RTF to PDF, BMP to PDF, JPEG to PDF, GIF to PDF, TIFF to PDF, PNG to PDF

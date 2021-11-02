@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Linear size PDF
 
 ### Linearize a PDF file for fast web view
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Optimize PDFs for quick viewing on the web, especially for mobile clients. Linearization allows your end users to view large PDF documents incrementally so that they can view pages much faster in lower bandwidth conditions.
 

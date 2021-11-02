@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Combine PDF
 
 ### Combine multiple documents into a pdf file
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Combine two or more documents into a single PDF file
 

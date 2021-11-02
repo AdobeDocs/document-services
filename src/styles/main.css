@@ -72,7 +72,6 @@
 }
 .tabView section div:first-child {
     padding: var(--spectrum-global-dimension-size-50) 0 !important;
-    margin: 0 !important;
 }
 .tabView h3 {
     font-size: 15px !important;
@@ -691,4 +690,17 @@ img[alt=thumbnail] {
         width: 23rem !important;
     }
 
+}
+
+
+.horizontal-align-heading h3{
+    height:var(--spectrum-global-dimension-size-700);
+}
+
+.tabView div[class$="-HeroButtons-TextBlock"] {
+    margin-top: var(--spectrum-global-dimension-size-350) !important;
+}
+
+.page-content span[class$="-createHeading"] {
+    display: none;
 }

@@ -176,6 +176,18 @@ module.exports = {
           {
             title: 'Course and Degree Certificate',
             path: 'use-cases/content-publishing/course-and-degree-certificate.md'
+          },
+          {
+            title: 'Managing Brand Assets',
+            path: 'use-cases/content-publishing/managing-brand-assets.md'
+          },
+          {
+            title: 'Processing Employee Resumes',
+            path: 'use-cases/content-publishing/processing-employee-resumes.md'
+          },
+          {
+            title: 'Field Service Management',
+            path: 'use-cases/content-publishing/field-service-management.md'
           }
         ]
       },
@@ -214,6 +226,10 @@ module.exports = {
           {
             title: 'Purchase Orders',
             path: 'use-cases/financial/purchase-orders.md'
+          },
+          {
+            title: 'Streamline Procurement Processes',
+            path: 'use-cases/financial/streamline-procurement-processes.md'
           }
         ]
       },

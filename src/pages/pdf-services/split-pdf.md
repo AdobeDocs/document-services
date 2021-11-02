@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Split PDF Pages
 
 ### Split a PDF into multiple files
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Split a PDF document into multiple smaller documents by simply specifying either the number of files, pages per file, or page ranges.
 

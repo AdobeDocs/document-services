@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Insert PDF Pages
 
 ### Insert a page into a PDF document
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Insert one or more pages into an existing document
 

@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Remove PDF Password
 
 ### Remove the password from a PDF file
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Remove password security from a PDF document. This can only be accomplished with the owner password of the document which must be passed in the operation.
 

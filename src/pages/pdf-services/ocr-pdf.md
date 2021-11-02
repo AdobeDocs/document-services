@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — OCR PDF
 
 ### OCR a PDF file
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Use built-in optical character recognition (OCR) to convert images to text and enable fully text searchable documents for archiving and creation of searchable indexes.
 

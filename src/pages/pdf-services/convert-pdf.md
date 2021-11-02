@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Convert PDF
 
 ### Convert a PDF file to other formats
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Convert existing PDFs to popular formats, such as Microsoft Word, Excel, and PowerPoint, as well as text and image
 

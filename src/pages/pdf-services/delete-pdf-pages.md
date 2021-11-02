@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Delete PDF
 
 ### Delete a page from a PDF file
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Delete one or more pages from a document
 

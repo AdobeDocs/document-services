@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Extract PDF Content
 
 ### PDF content extraction
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Extract text, images, tables, and more from native and scanned PDFs into a structured JSON file. PDF Extract API leverages AI technology to accurately identify text objects and understand the natural reading order of different elements such as headings, lists, and paragraphs spanning multiple columns or pages. Extract font styles with identification of metadata such as bold and italic text and their position within your PDF. Extracted content is output in a structured JSON file format with tables in CSV or XLSX and images saved as PNG.
 
@@ -21,7 +21,7 @@ curl --location --request POST 'https://cpf-stage-ue1.adobe.io/ops/:create' \
 --header 'Accept: application/json, text/plain, /' \
 --header 'Authorization: Bearer ' \
 --header 'x-api-key: ' \
---form 'contentAnalyzerRequests={   
+--form 'contentAnalyzerRequests={
     \"cpf:engine\": {
         \"repo:assetId\": \"urn:aaid:cpf:58af6e2c-1f0c-400d-9188-078000185695\"
     },

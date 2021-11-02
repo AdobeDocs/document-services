@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Replace PDF Pages
 
 ### Replace a page within a PDF file
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Replace one or more pages with another page in an existing document
 

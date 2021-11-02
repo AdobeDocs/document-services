@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Compress - PDF
 
 ### Compress a pdf file
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Reduce the size of PDF files by compressing to smaller sizes for lower bandwidth viewing, downloading, and sharing.
 

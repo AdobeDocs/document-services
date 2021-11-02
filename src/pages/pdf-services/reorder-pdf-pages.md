@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Render PDF Pages
 
 ### Reorder pages within PDF files
 
-- [See documentation](https://www.adobe.com/go/pdftoolsapi_doc)
+- [See documentation](/document-services/docs/overview/pdf-services-api/)
 
 Reorder the pages of a PDF file to reorganize.
 

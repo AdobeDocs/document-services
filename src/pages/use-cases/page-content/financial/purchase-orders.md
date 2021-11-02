@@ -26,7 +26,7 @@ The procurement team in a large manufacturing company is looking to efficiently 
 
 ### Building this Solution
 
-1 Create a simple data capture form using Microsoft Form (or another form builder)
+1. Create a simple data capture form using Microsoft Form (or another form builder)
 2. Design the purchase order template using Microsoft Word
 3. Use Adobe Document Generation Tagger in Word to place fields into the template based on the data model from the form
 4. Run the Adobe Document Generation API to merge data from the form into the template, creating a final sales quote in PDF

@@ -2,13 +2,13 @@
 title: Adobe Developer — PDF Services API  —  Adobe PDF Extract API
 ---
 
-<SummaryBlock slots="heading, text, buttons" theme="lightest" buttonPositionRight btnVariant="cta" isBtnVariant />
+<SummaryBlock slots="heading, text" theme="lightest" btnVariant="cta" isBtnVariant />
 
-## Adobe PDF extract API
+## Adobe PDF Extract API
 
 A new web service that allows you to unlock content structure and table data from any PDF document with machine learning
 
-* [Learn more](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-extract.html)
+
 
 
 <TextBlock slots="image" theme="lightest" width="100%" imageOnly className="padding_top_align padding-zero imageHightAuto"/>
@@ -29,4 +29,9 @@ Leverage Adobe Sensei for a rich understanding of **content structure** with hig
 <TextBlock slots="text" width="33%" theme="lightest" className="align-left padding-top-zero" />
 
 **Identify more document elements** than OCR with extraction of headings, paragraphs, lists, and more
+
+
+<TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn"/>
+
+* [Learn more](/src/pages/pdf-extract)
 
