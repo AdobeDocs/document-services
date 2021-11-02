@@ -4,7 +4,7 @@ title: Adobe Developer — Automate Document Generation | Document Key Features 
 
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
-## Key features of Adobe document generation API
+## Key features of Adobe Document Generation API
 
 <TextBlock slots="image,heading,text,buttons" width="25%" theme="light" className="align-left img-xl-size"/>
 

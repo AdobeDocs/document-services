@@ -4,8 +4,7 @@ title: Adobe Developer — PDF Embed API  — explore-adobe
 
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
-## Explore other adobe document services
-
+## Explore other Adobe Document Services
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 

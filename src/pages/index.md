@@ -24,7 +24,7 @@ From the company who created the PDF standard.
 doc-services-hero
 
 
-- [Try the demo](/src/pages/pdf-extract.md)
+- [Get started](/src/pages/gettingstarted.md)
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
@@ -81,7 +81,7 @@ Leverage our free javascript API to embed PDFs without the need for end users to
 
 Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
 
-- [Start free trial](/src/pages/gettingstarted.md)
+- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html)
 
 
 
@@ -129,7 +129,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <TextBlock slots="buttons" isCentered theme="light"  className='padding-5'/>
 
-- [View all Use Case](/src/pages/use-cases)
+- [View all use cases](/src/pages/use-cases)
 
 
 
@@ -156,5 +156,5 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 Start free trial with 1,000 PDF transactions for up to 6 months.
 
-- [Start free trial](./gettingstarted.md)
+- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html)
 - [Contact us](./contact-us.md)

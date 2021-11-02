@@ -7,7 +7,7 @@ title: Adobe Developer — PDF Embed API  — start-embedding
 
 ## Start embedding PDFs in a few minutes
 
-Start your free 6-month trial today with 1,000 PDF transactions
+Adobe PDF Embed API is free to use, so get started today!
 
 
 
@@ -18,7 +18,7 @@ Start your free 6-month trial today with 1,000 PDF transactions
 
 Obtain free credentials
 
-* [Get started](/src/pages/gettingstarted.md)
+* [Get started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-embed-api)
 
 
 

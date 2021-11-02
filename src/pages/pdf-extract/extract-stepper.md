@@ -6,7 +6,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Stepper Componen
 
 <TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left"/>
 
-## Start modifying PDFs in a few minutes
+## Get started in minutes
 
 Start your free 6-month trial today with 1,000 PDF transactions
 
@@ -17,7 +17,7 @@ Start your free 6-month trial today with 1,000 PDF transactions
 
 Obtain free credentials
 
-- [Get Started](/src/pages/gettingstarted.md)
+- [Get Started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-extract-api)
 
 
 
@@ -26,7 +26,7 @@ Obtain free credentials
 
 ## Step 2
 
-Download ready to run samples for [Node.js](https://adobe.com/go/dcExtract_node_sdk),[.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples), [Java](https://adobe.com/go/dcExtract_java_sdk) and [Python](https://adobe.com/go/dcExtract_python_sdk)
+Download ready to run samples for [Node.js](https://adobe.com/go/dcExtract_node_sdk),   [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples),   [Java](https://adobe.com/go/dcExtract_java_sdk) and [Python](https://adobe.com/go/dcExtract_python_sdk)
 
 - [Node.js](https://adobe.com/go/dcExtract_node_sdk)
 - [Java](https://adobe.com/go/dcExtract_java_sdk)

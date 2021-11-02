@@ -14,9 +14,9 @@ import '../styles/doc-generation.css'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage"/>
 
-# Adobe document generation API
+# Adobe Document Generation API
 
-Generate PDF and Word documents from World templates and JSON data
+Generate PDF and Word documents from Word templates and JSON data
 
 <!-- ![](images/doc-gen-hero-desktop@2x.png) -->
 
@@ -34,14 +34,13 @@ apiHeroAssetImg doc-gen-invoice
 
 <TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn" primaryOutline/>
 
-- [Product overview video](https://video.tv.adobe.com/v/332120)
-- [Start free trial](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)
+- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=document-generation-api)
 
 <!-- Key Features of Adobe Document Generation API -->
 <WrapperComponent slots="content" repeat="1" theme="light"/>
 <DgKeyFeatures/>
 
-<TextBlock slots="buttons" isCentered theme="light padding-5 why-doc-get-started-btn"/>
+<TextBlock slots="buttons" isCentered theme="light padding-top-zero why-doc-get-started-btn"/>
 
 - [Start free trial](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)
 

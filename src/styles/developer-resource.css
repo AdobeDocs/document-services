@@ -558,7 +558,7 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div {
 }
 @media screen and (min-width: 1440px) {
     section.sdk-rsrc-blog .blog-container .blog-wrapper > div {
-        width: 25rem;
+        width: 24.5rem;
         flex-shrink: 0;
    }
 }
@@ -620,6 +620,7 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div p {
     text-align: left !important;
     margin-top: 0.625rem;
 }
+
 section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
     font-size: 1.0625rem;
     line-height: 24px;
@@ -641,6 +642,7 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
     -webkit-hyphens: auto;
     hyphens: auto;
 }
+
 @media screen and (min-width: 1024px) {
     section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
         font-size: 1rem;

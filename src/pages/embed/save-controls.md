@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Embed API  — save controls
 ---
 
-<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue'/>
+<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue code-block-button-padding'/>
 
 ##### SAVE CONTROLS
 
@@ -39,7 +39,7 @@ adobeDCView.registerCallback(
 saveOptions);
 ```
 
-
+<!-- 
 <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
-- [Get free cretentials](/src/pages/gettingstarted.md)
+- [Get free cretentials](/src/pages/gettingstarted.md) -->

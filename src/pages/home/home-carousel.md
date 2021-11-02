@@ -2,13 +2,6 @@
 title: Adobe Developer — Wrapper Components  —  Home Carousel
 ---
 
-
-<TitleBlock slots="heading" theme="light" className="padding_top_align titleBlock-align-left"/>
-
-## Customer success block
-
-
-
 <Carousel slots="image, text1, text2" repeat="5"  theme="light" enableNavigation  className="carousel-padding-top-zero"/>
 
 ![Social status](../images/social_status_2x.png)

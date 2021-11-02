@@ -4,7 +4,7 @@ title: Adobe Developer — DC Platform SDK Resources
 
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
-## Adobe PDF embed API
+## Adobe PDF Embed API
 
 
 <TextBlock slots="text" theme="light" width="40%" className="pricing-desc align-left"/>
@@ -25,7 +25,7 @@ Enjoy complimentary access to our JavaScript API to easily embed PDFs with a few
 
 <TextBlock className="pricing-desc button-swap d-flex" slots="buttons" isCentered theme="light" width="25%" primaryOutline />
 
-- [Get started](/src/pages/gettingstarted.md)
+- [Get started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html)
 - [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
 <Divider orientation="horizontal" size="M" className="m-0"/>

@@ -5,7 +5,7 @@ description: Own the end-to-end customer experience. Our SDK Developer kits are 
 
 <TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
 
-## Why document services?
+## Why Document Services?
 
 <TextBlock slots="image,heading,text" width="33%" theme="lightest"  className="align-left img-m-size"/>
 

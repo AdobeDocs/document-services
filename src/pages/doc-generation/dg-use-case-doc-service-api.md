@@ -4,7 +4,7 @@ title: Adobe Developer — Automate Document Generation | Document Use case | Ad
 
 <TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
 
-## Use cases for document generation API
+## Use cases for Document Generation API
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
 

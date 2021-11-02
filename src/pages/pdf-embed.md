@@ -23,11 +23,9 @@ import ExploreAdobe from './embed/explore-adobe.md'
 
 Free JavaScript API to embed high-fidelity PDFs, enable collaboration, and see analytics.
 
-<!-- ![embed](images/home-carousel-one.png) -->
 
 apiHeroAssetImg doc-embed-hero
 
-<!-- - [Get started](/src/pages/gettingstarted.md) -->
 - [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
 

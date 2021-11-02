@@ -2,9 +2,11 @@
 title: Adobe Developer — Doc generation — Why Document Generation API
 ---
 
-<TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
+<SummaryBlock slots="heading, buttons" theme="lightest" buttonPositionRight btnVariant="cta" isBtnVariant />
 
-## Why document generation API?
+## Why Document Generation API?
+
+* [Product overview video](https://video.tv.adobe.com/v/332120)
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className=" icon-xl-size padding-btm-zero-left-align "/>
 

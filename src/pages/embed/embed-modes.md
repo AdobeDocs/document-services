@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Embed API  — Embed modes
 ---
 
-<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue'/>
+<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue code-block-button-padding'/>
 
 ##### EMBED MODES
 
@@ -35,6 +35,6 @@ Control how you embed PDFs, with support for full-sized windows, sized container
 ```
 
 
-<TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
+<!-- <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
-- [Get free cretentials](/src/pages/gettingstarted.md)
+- [Get free cretentials](/src/pages/gettingstarted.md) -->

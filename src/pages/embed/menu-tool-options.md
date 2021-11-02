@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Embed API  — menu & tool options
 ---
 
-<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue'/>
+<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue code-block-button-padding'/>
 
 ##### MENU & TOOL OPTIONS
 
@@ -29,7 +29,7 @@ Programmatically enable or disable the left-hand panel, comments pane, toolbars,
 </script>
 ```
 
-
+<!-- 
 <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
-- [Get free cretentials](/src/pages/gettingstarted.md)
+- [Get free cretentials](/src/pages/gettingstarted.md) -->

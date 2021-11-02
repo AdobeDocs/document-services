@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     docs: {
       title: 'Get credentials',
-      path: 'gettingstarted.md'
+      path: 'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html'
     },
     pages: [
       {
@@ -66,12 +66,12 @@ module.exports = {
             path: 'document-services/docs/overview/pdf-services-api/index.md'
           },
           {
-            title: 'Document Generation API',
-            path: 'document-services/docs/overview/document-generation-api/index.md'
-          },
-          {
             title: 'PDF Extract API',
             path: 'document-services/docs/overview/pdf-extract-api/index.md'
+          },
+          {
+            title: 'Document Generation API',
+            path: 'document-services/docs/overview/document-generation-api/index.md'
           },
           {
             title: 'PDF Embed API',

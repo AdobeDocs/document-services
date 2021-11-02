@@ -9,17 +9,15 @@ import WhyExtractAPI from './pdf-extract/why-extract-api.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';
 import HowItWorks from './pdf-extract/how-it-works.md';
 
-<Hero slots="heading, text, assetsImg" customLayout variant="fullwidth" className="herobgImage"/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage"/>
 
 # Adobe PDF Extract API
 
 Unlock the structure and content elements of any PDF with a web service powered by Adobe Sensei's machine learning.
 
-<!-- ![hero asset image](images/extract-hero-tablet@2x.png) -->
-
 apiHeroAssetImg doc-ext-invoice
 
-
+- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-extract-api)
 
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero"/>
@@ -49,7 +47,7 @@ apiHeroAssetImg doc-ext-invoice
 * [Download JSON samples](https://adobe.com/go/dcExtract_sample)
 
 
-<TextBlock slots="text1, text2  " theme="light" className="media-horizantal-align mediaSize link"/>
+<TextBlock slots="text1, text2  " theme="light"  className="media-horizantal-align mediaSize link"/>
 
 Adobe PDF Extract API is powered by [Adobe Sensei](https://www.adobe.com/sensei.html) industry-leading artificial intelligence (AI) and machine learning (ML). The technology enables a rich understanding of documents, such as the identification of elements, including position and connections relative to other elements. In addition, it can determine reading order. These and other capabilities ensure the most comprehensive output of structured content.
 
@@ -81,6 +79,6 @@ We take security serously - check out our [security overview](https://www.adobe.
 
 Have questions about the Document Services APIs?
 
-- [Go to the Adobe Forum](/src/pages/gettingstarted.md)
+- [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 - [Contact us](./contact-us.md)
 

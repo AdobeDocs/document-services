@@ -32,6 +32,7 @@ Choose exactly how to display a PDF and use the callbacks and annotations APIs t
 
 Use analytics to understand how users interact with PDFs, including time spent on a page and searches
 
+
 <TextBlock slots="buttons" isCentered theme="light" className="margin-top-zero" />
 
-* [Get free credentials](/src/pages/gettingstarted.md)
+* [Get free credentials](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-embed-api)

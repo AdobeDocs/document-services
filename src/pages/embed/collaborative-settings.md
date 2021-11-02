@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Embed API  — Collaborative settings
 ---
 
-<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue'/>
+<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue code-block-button-padding'/>
 
 ##### COLLABORATIVE SETTINGS
 
@@ -43,6 +43,6 @@ adobeDCView.registerCallback(
 );
 ```
 
-<TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
+<!-- <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
-- [Get free cretentials](/src/pages/gettingstarted.md)
+- [Get free cretentials](/src/pages/gettingstarted.md) -->

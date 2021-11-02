@@ -5,7 +5,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Resource Card
 
 <TitleBlock slots="heading" theme="lightest" className='titleBlock-align-left'/>
 
-## Adobe PDF extract API use cases
+## Adobe PDF Extract API use cases
 
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />

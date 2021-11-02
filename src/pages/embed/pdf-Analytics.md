@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Embed API  — pdf analytics
 
 
 
-<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue'/>
+<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue code-block-button-padding'/>
 
 ##### PDF ANALYTICS
 
@@ -33,6 +33,6 @@ adobeDCView.registerCallback(
 ```
 
 
-<TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
+<!-- <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
-- [Get free cretentials](/src/pages/gettingstarted.md)
+- [Get free cretentials](/src/pages/gettingstarted.md) -->

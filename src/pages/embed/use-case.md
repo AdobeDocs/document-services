@@ -4,7 +4,7 @@ title: Adobe Developer — PDF-embed  —  Use cases
 
 <TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
 
-## Use case for document services API
+## Use cases for PDF Embed API
 
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
