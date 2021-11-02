@@ -20,7 +20,6 @@ import CustomerStory from './resources/storyies.md'
 
 From the company who created the PDF standard.
 
-<!-- ![Adobe document services](images/doc-gen-hero-desktop@2x.png) -->
 
 doc-services-hero
 

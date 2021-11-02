@@ -1,23 +1,9 @@
-/*
- * Copyright 2021 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
-
-// Once Tabs block PR will merged with Adobe theme after that we will remove this component
-
 import React, { useEffect, useState, useRef, createRef, forwardRef, cloneElement } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import '@spectrum-css/tabs';
 import nextId from 'react-id-generator';
+import '@spectrum-css/tabs';
 
 import { cloneChildren, MOBILE_SCREEN_WIDTH, DESKTOP_SCREEN_WIDTH, TABLET_SCREEN_WIDTH, layoutColumns } from '@adobe/gatsby-theme-aio/src/utils';
 
@@ -255,10 +241,12 @@ const TabsBlock = ({
       <div
         css={css`
         display: ${orientation === 'vertical' ? 'inline-flex': ''};
+
           @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
             max-width: ${DESKTOP_SCREEN_WIDTH};
             margin: 0 auto !important
           }
+
           @media only screen and (max-width: ${mobileMinWidth}) {
             flex-direction: column;
           }
@@ -271,13 +259,16 @@ const TabsBlock = ({
             grid-template-columns: 300px calc(100% - 300px);
             margin-top: var(--spectrum-global-dimension-size-300);
             width:${layoutColumns(12)} !important;
+
             @media only screen and (max-width: ${mobileMinWidth}) {
               display: initial !important;
               width:${layoutColumns(2.5)} !important;
             }
+
             @media only screen and (device-width: ${MOBILE_SCREEN_WIDTH}) {
               width:${layoutColumns(6.4)} !important;
             }
+
             @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
               width:${layoutColumns(8)} !important;
             }
@@ -348,10 +339,12 @@ const TabsBlock = ({
                         right: var(--spectrum-global-dimension-size-0) !important;
                         border:none !important;
                       }
+
                       @media only screen and (max-width: ${mobileMinWidth}) {
                         margin-top:var(--spectrum-global-dimension-size-25) !important;
                         margin-bottom:var(--spectrum-global-dimension-size-25) !important;
                       }
+
                       @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
                         width: calc(var(--spectrum-global-dimension-size-2000) + var(--spectrum-global-dimension-size-750)) !important;
                         left: var(--spectrum-global-dimension-size-250) !important;
@@ -375,6 +368,7 @@ const TabsBlock = ({
                       margin-top: var(--spectrum-global-dimension-size-125) !important;
                       margin-bottom: var(--spectrum-global-dimension-size-125) !important;
                     }
+
                     @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
                       left: var(--spectrum-global-dimension-size-250) !important;
                     }
@@ -390,6 +384,7 @@ const TabsBlock = ({
                       @media only screen and (max-width: ${mobileMinWidth}) {
                         margin-left: var(--spectrum-global-dimension-size-100) !important;;
                       }
+
                       @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                         margin-left: var(--spectrum-global-dimension-size-100) !important;;
                       }
@@ -423,6 +418,7 @@ const TabsBlock = ({
                     padding: 0 0 var(--spectrum-global-dimension-size-100) 0 !important;
                     max-width: ${layoutColumns(8.5)} !important;
                     overflow-x: hidden !important;
+
                     @media only screen and (max-width: ${mobileMinWidth}) {
                       padding-left: inherit !important;
                       max-width: ${layoutColumns(3)} !important;
@@ -431,6 +427,7 @@ const TabsBlock = ({
                     @media only screen and (device-width: ${MOBILE_SCREEN_WIDTH}) {
                       max-width: ${layoutColumns(3.5)} !important;
                     }
+                    
                     @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
                       max-width: ${layoutColumns(6.5)} !important;
                       padding-left:var(--spectrum-global-dimension-size-500);

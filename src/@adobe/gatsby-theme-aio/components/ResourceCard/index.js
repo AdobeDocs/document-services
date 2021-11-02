@@ -1,14 +1,3 @@
-/*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
 
 import React, { cloneElement, useEffect, useState } from 'react';
 import { css } from '@emotion/react';
@@ -17,7 +6,6 @@ import {
   getElementChild,
   layoutColumns,
   getExternalLinkProps,
-//   TABLET_SCREEN_WIDTH,
   DESKTOP_SCREEN_WIDTH
 } from '@adobe/gatsby-theme-aio/src/utils';
 import '@spectrum-css/typography';
@@ -192,7 +180,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
 
 ResourceCard.propTypes = {
   theme: PropTypes.string,
-  width: PropTypes.oneOf(['100%', '50%', '33%']),
+  width: PropTypes.oneOf(['100%', '50%', '33%','25%']),
   link: PropTypes.element,
   heading: PropTypes.element,
   text: PropTypes.element,

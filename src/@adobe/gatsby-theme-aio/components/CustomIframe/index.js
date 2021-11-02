@@ -1,20 +1,10 @@
-/*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
 
 import React from 'react';
 import { css } from '@emotion/react';
-import '@spectrum-css/typography';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import '@spectrum-css/typography';
+import { TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/conf/globals';
 
 const CustomIframeBlock = ({
   className,
@@ -26,16 +16,23 @@ const CustomIframeBlock = ({
     css={css`
       background-color:var(--spectrum-global-color-gray-100);
       padding :var(--spectrum-global-dimension-size-400);
-      `}>
-   
-        <div css={css`  
-      max-width: 52.5rem;
-      text-align: center;
-      margin: 0 auto;`}>
-      <div css={css`
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
+      `
+  }>
+    <div 
+      css={css`  
+        max-width:calc(( var(--spectrum-global-dimension-size-6000) + var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-500) ));
+        text-align: center;
+        margin: 0 auto;
+
+        @media screen (max-width:${TABLET_SCREEN_WIDTH}){
+          max-width:calc(( var(--spectrum-global-dimension-size-5000) + var(--spectrum-global-dimension-size-3400) ));
+        }
+    `}>
+      <div 
+        css={css`
+          overflow: hidden;
+          padding-top: 56.25%;
+          position: relative;
       `}>
         <iframe
           title="Adobe-tv"
@@ -44,16 +41,16 @@ const CustomIframeBlock = ({
           frameborder="0"
           allowfullscreen="true"
           src={source}
-          css={css`    position: absolute;
+          css={css` 
+          position: absolute;
           border: 0;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;`}
-        >
-        </iframe>
+        />
       </div>
-      </div>
+    </div>
   </section>
 );
 

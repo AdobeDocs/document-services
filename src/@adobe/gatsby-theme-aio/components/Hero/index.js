@@ -1,14 +1,3 @@
-/*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
 
 import React, { cloneElement, Children, useContext } from "react";
 import { withPrefix } from "gatsby";
@@ -143,38 +132,6 @@ const HeroHeading = ({ heading, variant, customLayout }) =>
     })
     : null;
 
-// const HeroAssets = ({ image }) =>
-//   image
-//     ? cloneElement(image, {
-//       children: cloneChildren(image.props.children, setImageLoading),
-//       css: css`
-//           display: flex;
-//           align-items: center;
-//           justify-content: center;
-//           width: 100%;
-//           height: 70%;
-//           box-sizing: border-box;
-//           margin-top: 0;
-//           padding-top:var(--spectrum-global-dimension-size-200);
-//           margin-bottom: 0;
-//           .gatsby-resp-image-wrapper {
-//             max-width: none !important;
-//             width: 100% !important;
-//             height: 100% !important;
-//           }
-
-//           .gatsby-resp-image-image {
-//             object-fit: contain;
-//           }
-
-//           @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-//             height: auto;
-//             width: 100%;
-//           }
-//         `,
-//     })
-//     : null;
-
 const Hero = ({
   className,
   background,
@@ -283,7 +240,6 @@ const Hero = ({
             }
 
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-
               .spectrum-Heading--sizeXL {
                 font-size: var(--spectrum-alias-heading-l-text-size);
               }
@@ -300,7 +256,6 @@ const Hero = ({
               width: 100%;
               box-sizing: border-box;
               padding: 0;
-
               display: flex;
               flex-direction: column;
               align-items: center;
@@ -322,8 +277,6 @@ const Hero = ({
                   padding: var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-200) var(--spectrum-global-dimension-size-0) !important;
                 }
               }
-
-
             `}
           >
             {heading && (

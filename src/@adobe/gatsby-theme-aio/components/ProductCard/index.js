@@ -1,22 +1,10 @@
-/*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
-
 import React, { useEffect, useState, cloneElement } from 'react';
 import { css } from '@emotion/react';
 import { HeroButtons } from '@adobe/gatsby-theme-aio/src/components/Hero';
 import classNames from "classnames";
 import '@spectrum-css/typography';
 import '@spectrum-css/card';
-import { DESKTOP_SCREEN_WIDTH, TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
+import { DESKTOP_SCREEN_WIDTH, TABLET_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 import PropTypes from 'prop-types';
 
 const counter = {
@@ -52,7 +40,6 @@ const ProductCard = ({ theme = 'lightest', width = '100%', icon, heading, text, 
   if (columns === 2 || columns === 3) {
     alignment = alignMapping[counter[columns] % columns] || 'center';
   }
-  const MAX_MOBILE_SCREEN_WIDTH = '768px';
   const MIN_MOBILE_SCREEN_WIDTH = '320px'
   return (
     <section
@@ -65,7 +52,7 @@ const ProductCard = ({ theme = 'lightest', width = '100%', icon, heading, text, 
         padding: var(--spectrum-global-dimension-size-400) 0;
         background: var(--spectrum-global-color-gray-100);
 
-        @media screen and (min-width: ${MIN_MOBILE_SCREEN_WIDTH}) and (max-width: ${MAX_MOBILE_SCREEN_WIDTH})  {
+        @media screen and (min-width: ${MIN_MOBILE_SCREEN_WIDTH}) and (max-width: ${MOBILE_SCREEN_WIDTH})  {
           display: flex;
           width: 100%;
           align-items: center;

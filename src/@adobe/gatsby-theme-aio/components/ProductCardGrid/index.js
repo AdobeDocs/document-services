@@ -1,29 +1,14 @@
-/*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
-
-// TODO reuse ProductCard
-
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import { AnchorButton } from "@adobe/gatsby-theme-aio/src/components/AnchorButton";
 import { Checkbox } from "@adobe/gatsby-theme-aio/src/components/Checkbox";
 import { Picker } from "@adobe/gatsby-theme-aio/src/components/Picker";
-import "@spectrum-css/typography";
-import "@spectrum-css/card";
 import { Image } from "../Image";
 import classNames from "classnames";
-
 import { DESKTOP_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH,TABLET_SCREEN_WIDTH,layoutColumns} from "@adobe/gatsby-theme-aio/src/utils";
 import PropTypes from "prop-types";
+import "@spectrum-css/typography";
+import "@spectrum-css/card";
 
 const filterByClouds = (
   products,
@@ -163,6 +148,7 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
       css={css`
       max-width: ${containerWidth};
       margin: auto;
+
        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
           width: ${layoutColumns(3)} !important;
           background:var(--spectrum-global-color-gray-100);
@@ -199,6 +185,7 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
       <div
         css={css`
           display: flex;
+
           @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
             align-items: flex-start;
             flex-wrap: wrap;
@@ -383,9 +370,6 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
                     display: flex;
                     justify-content: ${isCentered ? "center" : "flex-end"};
                     flex-wrap: wrap;
-                    // --gap: var(--spectrum-global-dimension-size-200);
-                    // margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
-                    // width: calc(100% + var(--gap));
 
                     @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
                       justify-content: center;

@@ -1,7 +1,3 @@
-/*
- * Copyright 2021 Adobe. All rights reserved.
- */
-
 import React from "react";
 import { css } from "@emotion/react";
 import "@spectrum-css/typography";
@@ -85,6 +81,10 @@ const MenuWrapperComponent = ({ theme = 'lightest',className, menuClassName, con
 
 MenuWrapperComponent.propTypes = {
   theme: PropTypes.string,
+  menuClassName: PropTypes.string,
+  contentClassName: PropTypes.string,
+  background: PropTypes.string,
+  content: PropTypes.object,
 };
 
 export { MenuWrapperComponent };

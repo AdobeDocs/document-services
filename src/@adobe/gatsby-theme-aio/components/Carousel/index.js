@@ -12,7 +12,6 @@ import {
   HeroButtons,
   HeroImage,
 } from "@adobe/gatsby-theme-aio/src/components/Hero";
-
 import classNames from "classnames";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
@@ -22,14 +21,14 @@ import "swiper/css/navigation";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
+const smallMobileView = "375px";
+
 const Texts = ({ texts, index }) => {
   const definedTextKeys = texts.slots
     .split(',').map(key=>key.trim())
     .filter((key) => key.startsWith('text'));
   return definedTextKeys.map((data) => texts[`${data}${index}`]);
 };
-
-const smallDesktopView = "1024px"
 
 const SwiperContent = ({
   textKeys,
@@ -56,19 +55,12 @@ const SwiperContent = ({
 
         @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
           max-width: calc(${layoutColumns(3.5)}) !important;
-          // margin:0;
         }
 
         @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
           flex-direction: column;
           max-width: calc(${layoutColumns(6)}) !important;
         }
-
-        @media screen and (min-width: ${TABLET_SCREEN_WIDTH}) and (max-width: ${smallDesktopView}) {
-          max-width: calc(${layoutColumns(8)}) !important;
-        }
-         
-      
 
       `}
     >
@@ -93,16 +85,14 @@ const SwiperContent = ({
               margin-bottom: var(--spectrum-global-dimension-size-200);
             }
 
-            @media (min-width: ${TABLET_SCREEN_WIDTH}) and (max-width: ${smallDesktopView}) {
-              max-width: calc(${layoutColumns(8)}) !important;
-            }
           `}
         >
-           <h2>
-          <HeroImage image={image} styles={imageStyle} />
-           </h2>
+          <h2>
+            <HeroImage image={image} styles={imageStyle} />
+          </h2>
         </div>
       ) : null}
+      
       {textKeys.length > 0 || heading || buttons ? (
         <div
           css={css`
@@ -110,7 +100,7 @@ const SwiperContent = ({
             flex: 1;
             padding: var(--spectrum-global-dimension-size-100);
 
-            @media only screen and (min-width: 375px) and(max-width:768px) {
+            @media only screen and (min-width: ${smallMobileView}) and(max-width:${MOBILE_SCREEN_WIDTH}) {
               margin: 0;
               background:red;
               text-align: center !important;
@@ -126,8 +116,6 @@ const SwiperContent = ({
               css={css`
                 @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                   font-size: var(--spectrum-alias-heading-m-text-size) !important;
-                  // padding-left: var(--spectrum-global-dimension-size-100) !important;
-
                 }`
               }>
               {heading.props.children}
@@ -145,16 +133,14 @@ const SwiperContent = ({
                 }`
               }
             >
-              <Texts
-                texts={props}
-                index={index}
-              />
+              <Texts texts={props} index={index} />
             </div>
           : null}
           {buttons ? (
             <div
               css={css`
                 margin-top: var(--spectrum-global-dimension-size-200);
+               
                 @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                      div:first-child{
                        justify-content:center !important;
@@ -174,7 +160,7 @@ const SwiperContent = ({
 const Carousel = ({
   className,
   theme = "dark",
-  imageStyle = {},
+  imageStyle = "",
   swiperSpeed = 600,
   delay = 2500,
   enableNavigation = false,
@@ -204,6 +190,7 @@ const Carousel = ({
   const backgroundColor = `background-color: var(--spectrum-global-color-gray-${
     slideTheme === "light" ? "50" : ""
   });`;
+
  if (varient==="default"){
   return (
     <section
@@ -222,18 +209,12 @@ const Carousel = ({
             max-width: calc(${layoutColumns(3)}) !important;
           }
 
-        
-
           @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
             padding-bottom: 0;
             margin-top: 0;
             max-width: calc(${layoutColumns(6)}) !important;
           }
 
-          @media screen and (min-width: ${TABLET_SCREEN_WIDTH}) and (max-width: ${smallDesktopView}) {
-            max-width: calc(${layoutColumns(8)}) !important;
-          }.
-        
         `}
       >
         <Swiper
@@ -287,8 +268,7 @@ const Carousel = ({
       className={classNames(className, `spectrum--${theme}`)}
       css={css`
         background: var(--spectrum-global-color-gray-100);
-        padding: var(--spectrum-global-dimension-size-600) 0
-        var(--spectrum-global-dimension-size-200) 0;
+        padding: var(--spectrum-global-dimension-size-600) 0 var(--spectrum-global-dimension-size-200) 0;
       `}
     >
       <Swiper
@@ -315,16 +295,14 @@ const Carousel = ({
                   css={css`
                   max-width: calc(${layoutColumns(12)});
                   margin: auto;
+
                   @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                     width:auto;
-                    // max-width: calc(${layoutColumns(3)});
-                    // background:green;
                   }
+
                   @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
-                    // padding-bottom: 0;
-                    // margin-top: 0;
                     max-width: calc(${layoutColumns(6)});
-                }
+                  }
                 `}>
                   <SwiperContent
                     textKeys={textKeys}
@@ -368,7 +346,8 @@ Carousel.propTypes = {
   bulletClass: PropTypes.string,
   navigationNext:PropTypes.string,
   navigationPre:PropTypes.string,
-  isCenter:PropTypes.bool
+  isCenter:PropTypes.bool,
+  varient:PropTypes.string,
 };
 
 export { Carousel };

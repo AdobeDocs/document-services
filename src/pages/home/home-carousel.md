@@ -9,7 +9,7 @@ title: Adobe Developer — Wrapper Components  —  Home Carousel
 
 
 
-<Carousel slots="image, text1, text2" repeat="5"  theme="light" enableNavigation slideTheme='lightest' className="carousel-padding-top-zero"/>
+<Carousel slots="image, text1, text2" repeat="5"  theme="light" enableNavigation  className="carousel-padding-top-zero"/>
 
 ![Social status](../images/social_status_2x.png)
 

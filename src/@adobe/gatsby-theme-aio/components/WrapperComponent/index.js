@@ -1,13 +1,9 @@
-/*
- * Copyright 2021 Adobe. All rights reserved.
- */
-
 import React from "react";
 import { css } from "@emotion/react";
-import "@spectrum-css/typography";
-import "@spectrum-css/card";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import "@spectrum-css/typography";
+import "@spectrum-css/card";
 
 import { DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 
@@ -36,6 +32,8 @@ const backgroundColor =background?`background:${background}`:'background: var(--
 
 WrapperComponent.propTypes = {
   theme: PropTypes.string,
+  content: PropTypes.object,
+  background: PropTypes.string,
 };
 
 export { WrapperComponent };

@@ -9,54 +9,62 @@ import "@spectrum-css/card";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import {MOBILE_SCREEN_WIDTH} from '@adobe/gatsby-theme-aio/src/utils';
+import { MOBILE_SCREEN_WIDTH } from "@adobe/gatsby-theme-aio/src/utils";
 
-const FormWrapperComponent = ({ theme = 'lightest',className,content0,content1 }) => {
-    return (
-      <section
-        className={classNames(className,`spectrum--${theme}`)}
-        >
-        <div css={css`
-          width:100%;
-          display:flex;
-          flex-direction:row;
-          
+const FormWrapperComponent = ({
+  theme = "lightest",
+  className,
+  content0,
+  content1,
+}) => {
+  return (
+    <section className={classNames(className, `spectrum--${theme}`)}>
+      <div
+        css={css`
+          width: 100%;
+          display: flex;
+          flex-direction: row;
 
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            overflow-x:hidden !important;
-            display:flex !important;
-            flex-direction:column !important;
-            margin-top:var(--spectrum-global-dimension-size-200);
+            overflow-x: hidden !important;
+            display: flex !important;
+            flex-direction: column !important;
+            margin-top: var(--spectrum-global-dimension-size-200);
           }
-        `}>
-          <div 
+        `}
+      >
+        <div
           css={css`
-          width:60%;
-          margin-top:var(--spectrum-global-dimension-size-400);
-          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            width:100% !important;
-            background:red !important;
-            margin-bottom:var(--spectrum-global-dimension-size-400);
-          }
-        `}>
-            {content0}
-          </div> 
-          <div  css={css`
-          width:40%;
-
-          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            width:100% !important;
-          }
-          `}>
-            {content1}
-          </div>
+            width: 60%;
+            margin-top: var(--spectrum-global-dimension-size-400);
+            
+            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+              width: 100% !important;
+              background: red !important;
+              margin-bottom: var(--spectrum-global-dimension-size-400);
+            }
+          `}
+        >
+          {content0}
         </div>
-      </section>
-    );
-  };
-  
-  FormWrapperComponent.propTypes = {
-    theme: PropTypes.string,
-  };
-  
-  export { FormWrapperComponent };
+        <div
+          css={css`
+            width: 40%;
+
+            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+              width: 100% !important;
+            }
+          `}
+        >
+          {content1}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+FormWrapperComponent.propTypes = {
+  theme: PropTypes.string,
+};
+
+export { FormWrapperComponent };
