@@ -27,7 +27,7 @@ A company has a standard NDA template that they regularly use for vendor agreeme
 
 1. Within the application layer, query the database to collect relevant data for a custom NDA and create a JSON data model
 2. Design a branded NDA in Microsoft Word
-3. Send the template and data to Adobe Document Generation API to output a merged PDF which can be sent using Adobe Sign API
+3. Send the template and data to Adobe Document Generation API to output a merged PDF which can be sent using [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 4. Track engagement and understand learning needs by using analytics events tracked in embedded PDF documents
 
 ### Building in Power Automate

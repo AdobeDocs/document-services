@@ -238,21 +238,24 @@ const TabsBlock = ({
         padding-bottom: calc(var(--spectrum-global-dimension-size-1250) + var(--spectrum-global-dimension-size-250));
       `}
       >
-      <div
+     <div
+        className="tabs-wrapper"
         css={css`
         display: ${orientation === 'vertical' ? 'inline-flex': ''};
 
           @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
-            max-width: ${DESKTOP_SCREEN_WIDTH};
+            // max-width: ${DESKTOP_SCREEN_WIDTH};
             margin: 0 auto !important
           }
 
-          @media only screen and (max-width: ${mobileMinWidth}) {
+          @media screen and (max-device-width: ${MOBILE_SCREEN_WIDTH}) {
             flex-direction: column;
+            // width:100%;
           }
         `}
       >
         <div
+          className="tabs-content"
           css={css`
             display: ${orientation === 'vertical' ? 'grid': 'initial'};
             position: relative;
@@ -260,13 +263,13 @@ const TabsBlock = ({
             margin-top: var(--spectrum-global-dimension-size-300);
             width:${layoutColumns(12)} !important;
 
-            @media only screen and (max-width: ${mobileMinWidth}) {
-              display: initial !important;
-              width:${layoutColumns(2.5)} !important;
-            }
+            // @media only screen and (max-width: ${mobileMinWidth}) {
+            //   display: initial !important;
+            //   width:${layoutColumns(2.5)} !important;
+            // }
 
             @media only screen and (device-width: ${MOBILE_SCREEN_WIDTH}) {
-              width:${layoutColumns(6.4)} !important;
+              width:100% !important;
             }
 
             @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
@@ -286,6 +289,7 @@ const TabsBlock = ({
                 const isSelected = selectedIndex.tab === index;
                 const itemPopoverId = nextId();
                 return (
+                  <>
                   <Item
                     className={'tabItem'}
                     key={`tabItem_${index}`}
@@ -351,6 +355,23 @@ const TabsBlock = ({
                       }
                     `}
                   />
+                  <div
+                      key={`mobileTabView_${index}`}
+                      className="mobileTabView"
+                      hidden={!isSelected}
+                      css={css`
+                        padding: var(--spectrum-global-dimension-size-0) !important;
+                        h3 {
+                          font-size:var(--spectrum-heading-s-text-size, var(--spectrum-alias-heading-s-text-size));
+                        }
+                        p {
+                          font-size: var(--spectrum-body-s-text-size, var(--spectrum-global-dimension-font-size-150))
+                        }
+                      `}
+                    >
+                      {data['content'] ? data['content'] : null}
+                    </div>
+                  </>
                 )
               })}
               <TabsIndicator ref={selectedTabIndicator} />

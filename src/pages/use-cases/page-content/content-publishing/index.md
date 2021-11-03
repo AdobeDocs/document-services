@@ -30,10 +30,10 @@ A company plans to offer whitepapers on its website to help customers use variou
 3. Change flags to allow / disallow printing, downloading, and other user actions
 4. Enable events so that the viewer can be extended
 
-In the scenario where there needs to be negotiation between the two parties, the developer will use Document Generation API to provide a document back in Word format, which would allow for redlining in Microsoft Word. Adobe Document Generation Tagger, a Microsoft Word add-in, can be used by the developer or the vendor manager to quickly build a custom branded NDA template for the company to standardize their agreements for accuracy. Using this custom template with dynamic text tags, JSON data can be sent with the template to Document Generation API then immediately sent to Adobe Sign for signature and countersignature.
+<!-- In the scenario where there needs to be negotiation between the two parties, the developer will use Document Generation API to provide a document back in Word format, which would allow for redlining in Microsoft Word. Adobe Document Generation Tagger, a Microsoft Word add-in, can be used by the developer or the vendor manager to quickly build a custom branded NDA template for the company to standardize their agreements for accuracy. Using this custom template with dynamic text tags, JSON data can be sent with the template to Document Generation API then immediately sent to Adobe Sign for signature and countersignature.
 
 The steps for this use case include:
 
 1. Within the application layer, the developer would query the database to collect relevant data for a custom NDA such as vendor details and contact information and create a JSON data model
 2. Within the application layer, the developer would query the database to collect relevant data for a custom NDA such as vendor details and contact information and create a JSON data model The developer would use a custom branded Word document from the vendor manager to create a template with dynamic text tags using Adobe Document Generation Tagger, a Microsoft Word add-in. The JSON data model can be uploaded to the Tagger to automatically generate text tags
-3. Data is passed to Adobe Document Generation API about the vendor that the NDA is being conducted with.
+3. Data is passed to Adobe Document Generation API about the vendor that the NDA is being conducted with. -->
