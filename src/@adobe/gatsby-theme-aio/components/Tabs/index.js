@@ -239,7 +239,7 @@ const TabsBlock = ({
         padding-bottom: calc(var(--spectrum-global-dimension-size-1250) + var(--spectrum-global-dimension-size-250));
       `}
       >
-     <div
+      <div
         className="tabs-wrapper"
         css={css`
         display: ${orientation === 'vertical' ? 'inline-flex': ''};
@@ -264,13 +264,9 @@ const TabsBlock = ({
             margin-top: var(--spectrum-global-dimension-size-300);
             width:${layoutColumns(12)} !important;
 
-            // @media only screen and (max-width: ${mobileMinWidth}) {
-            //   display: initial !important;
-            //   width:${layoutColumns(2.5)} !important;
-            // }
-
-            @media only screen and (device-width: ${MOBILE_SCREEN_WIDTH}) {
-              width:100% !important;
+            @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+              // display: initial !important;
+              width: 100% !important;
             }
 
             @media only screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
@@ -355,8 +351,9 @@ const TabsBlock = ({
                         left: var(--spectrum-global-dimension-size-250) !important;
                       }
                     `}
-                  />
-                  <div
+                  >
+                  </Item>
+                    <div
                       key={`mobileTabView_${index}`}
                       className="mobileTabView"
                       hidden={!isSelected}
