@@ -8,7 +8,6 @@ import PropTypes from "prop-types";
 import {
   getElementChild,
   cloneChildren,
-  DESKTOP_SCREEN_WIDTH,
   TABLET_SCREEN_WIDTH,
   MOBILE_SCREEN_WIDTH,
   DEFAULT_HOME,
@@ -17,7 +16,7 @@ import {
   rootFix,
   findSelectedTopPageMenu,
 } from "@adobe/gatsby-theme-aio/src/utils";
-
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 import Context from "@adobe/gatsby-theme-aio/src/components/Context";
 import { Breadcrumbs } from "@adobe/gatsby-theme-aio/src/components/Breadcrumbs";
 import classNames from "classnames";

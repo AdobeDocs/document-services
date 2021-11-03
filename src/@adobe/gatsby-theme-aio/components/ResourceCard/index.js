@@ -11,6 +11,7 @@ import {
 import '@spectrum-css/typography';
 import '@spectrum-css/card';
 import PropTypes from 'prop-types';
+// import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const counter = {
   2: 0,

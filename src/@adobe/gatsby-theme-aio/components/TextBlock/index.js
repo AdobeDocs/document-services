@@ -16,8 +16,9 @@ import { HeroButtons } from '@adobe/gatsby-theme-aio/src/components/Hero';
 import { Media } from '@adobe/gatsby-theme-aio/src/components/Media';
 import '@spectrum-css/typography';
 import PropTypes from 'prop-types';
-import { layoutColumns, DESKTOP_SCREEN_WIDTH, TABLET_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
+import { layoutColumns, TABLET_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 import classNames from 'classnames';
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const counter = {
   2: 0,

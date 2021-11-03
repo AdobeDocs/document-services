@@ -5,7 +5,9 @@ import { Checkbox } from "@adobe/gatsby-theme-aio/src/components/Checkbox";
 import { Picker } from "@adobe/gatsby-theme-aio/src/components/Picker";
 import { Image } from "../Image";
 import classNames from "classnames";
-import { DESKTOP_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH,TABLET_SCREEN_WIDTH,layoutColumns} from "@adobe/gatsby-theme-aio/src/utils";
+import { MOBILE_SCREEN_WIDTH,TABLET_SCREEN_WIDTH,layoutColumns} from "@adobe/gatsby-theme-aio/src/utils";
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+
 import PropTypes from "prop-types";
 import "@spectrum-css/typography";
 import "@spectrum-css/card";

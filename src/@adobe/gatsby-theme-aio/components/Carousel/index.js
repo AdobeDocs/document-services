@@ -6,7 +6,7 @@ import {
   TABLET_SCREEN_WIDTH,
   layoutColumns,
   MOBILE_SCREEN_WIDTH,
-  DESKTOP_SCREEN_WIDTH,
+  
 } from "@adobe/gatsby-theme-aio/src/utils";
 import {
   HeroButtons,
@@ -18,6 +18,7 @@ import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 

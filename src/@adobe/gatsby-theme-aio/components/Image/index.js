@@ -12,7 +12,8 @@
 
 import React from "react";
 import { css } from "@emotion/react";
-import { DESKTOP_SCREEN_WIDTH } from "@adobe/gatsby-theme-aio/src/utils";
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+
 
 export const Image = (props) => {
   // Check if gatsby-remark-images-remote processing was skipped
