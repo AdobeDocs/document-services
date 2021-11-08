@@ -33,12 +33,7 @@ doc-services-hero
 ### Adobe PDF Services API
 ### Create, transform, OCR PDFs, and more
 
-PDF Services API is a collection of multiple services capable of quickly solving specific
-challenges and powering multi-step document workflows using SDKs for Node.js, Java,
-and .Net. With it, you gain access to basic PDF services, such as creating, securing,
-compressing, converting, combining, and splitting PDFs, as well as more advanced services,
-including Document Generation and PDF Extract. Do more with this API. 
-Primary CTA (blue button): Learn more (goes to PDF Services API page)
+PDF Services API is a collection of multiple services capable of quickly solving specific challenges and powering multi-step document workflows using SDKs for Node.js, Java, and .Net. With it, you gain access to basic PDF services, such as creating, securing, compressing, converting, combining, and splitting PDFs, as well as more advanced services,including Document Generation and PDF Extract. Do more with this API.
 
 - [Learn more](./pdf-services.md)
 

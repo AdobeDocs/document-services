@@ -161,10 +161,12 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
                 
               `}>
               <div
-                className="spectrum-Card-title"
-                style={ gradients && {  color: 'white'}}
+                // className="spectrum-Card-title"
+                style={ gradients && {  color: 'white', marginBottom:'10px'}}
                 css={css`
                   font-size: var(--spectrum-global-dimension-size-${headerSize});
+                  @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+                    font-size: var(--spectrum-global-dimension-size-185);
                 `}>
                 <strong>{heading && heading.props.children}</strong>
               </div>
