@@ -1,31 +1,23 @@
-/*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+import React, { cloneElement, useEffect, useState } from "react";
+import { css } from "@emotion/react";
+import { HeroButtons } from "@adobe/gatsby-theme-aio/src/components/Hero";
+import { Media } from "@adobe/gatsby-theme-aio/src/components/Media";
+import PropTypes from "prop-types";
+import {
+  layoutColumns,
+  TABLET_SCREEN_WIDTH,
+  DESKTOP_SCREEN_WIDTH
+} from "@adobe/gatsby-theme-aio/src/utils";
+import classNames from "classnames";
+import "@spectrum-css/typography";
 
-import React, { cloneElement, useEffect, useState } from 'react';
-import { css } from '@emotion/react';
-import { HeroButtons } from '@adobe/gatsby-theme-aio/src/components/Hero';
-import { Media } from '@adobe/gatsby-theme-aio/src/components/Media';
-import '@spectrum-css/typography';
-import PropTypes from 'prop-types';
-import { layoutColumns, TABLET_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
-import classNames from 'classnames';
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const counter = {
   2: 0,
   3: 0,
-  4: 0
+  4: 0,
 };
-const alignMapping = ['margin-left: 0;', 'margin-right: 0;'];
+const alignMapping = ["margin-left: 0;", "margin-right: 0;"];
 
 const mediaCSS = css`
   & {
@@ -49,7 +41,7 @@ const Icons = ({ icons, isCentered }) =>
           padding: 0;
           margin-bottom: var(--spectrum-global-dimension-size-400) !important;
           display: flex;
-          justify-content: ${isCentered ? 'center' : 'flex-start'};
+          justify-content: ${isCentered ? "center" : "flex-start"};
 
           & li {
             display: flex;
@@ -75,12 +67,12 @@ const Icons = ({ icons, isCentered }) =>
             height: 100%;
             object-fit: contain;
           }
-        `
+        `,
       })
     : null;
 
 const Texts = ({ texts }) => {
-  const textKeys = Object.keys(texts).filter((key) => key.startsWith('text'));
+  const textKeys = Object.keys(texts).filter((key) => key.startsWith("text"));
   return textKeys.map((textKey) => texts[textKey]);
 };
 
@@ -91,10 +83,10 @@ const Links = ({ links, isCentered }) =>
           list-style: none;
           padding: 0;
           display: flex;
-          justify-content: ${isCentered ? 'center' : 'flex-start'};
+          justify-content: ${isCentered ? "center" : "flex-start"};
           margin-top: ${isCentered
-            ? 'var(--spectrum-global-dimension-size-200) !important;'
-            : 'var(--spectrum-global-dimension-size-600) !important;'};
+            ? "var(--spectrum-global-dimension-size-200) !important;"
+            : "var(--spectrum-global-dimension-size-600) !important;"};
 
           & li {
             display: flex;
@@ -129,7 +121,7 @@ const Links = ({ links, isCentered }) =>
 
           @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
             flex-direction: column;
-            align-items: ${isCentered ? 'center' : 'left'};
+            align-items: ${isCentered ? "center" : "left"};
 
             li {
               margin-top: var(--spectrum-global-dimension-size-100);
@@ -139,33 +131,37 @@ const Links = ({ links, isCentered }) =>
               margin-right: 0;
             }
           }
-        `
+        `,
       })
     : null;
 
 const TextBlock = ({
   className,
   heading,
+  subHeading,
   links,
   buttons,
   icons,
   image,
   assetImg,
   video,
-  theme = 'lightest',
-  width = '100%',
+  theme = "lightest",
+  width = "100%",
   isCentered = false,
-  primaryOutline =false,
-  headerElementType="h3",
-  imageOnly=false,
-  imgWidth="50%",
+  primaryOutline = false,
+  headerElementType = "h3",
+  imageOnly = false,
+  imgWidth = "50%",
+  isPrimaryBtn=false,
+  variantsTypePrimary='cta',
+  variantsTypeSecondary='primary',
   ...props
 }) => {
   const Element = headerElementType;
-  
+
   let initColumns = 100 / parseFloat(width);
 
-  if (width === '33%') {
+  if (width === "33%") {
     width = `${(100 / 3).toFixed(2)}%`;
     initColumns = 3;
   }
@@ -174,39 +170,40 @@ const TextBlock = ({
 
   useEffect(() => {
     return () => {
-      if (typeof counter[columns] !== 'undefined') {
+      if (typeof counter[columns] !== "undefined") {
         counter[columns]--;
       }
     };
   }, [columns]);
 
-  if (width !== '100%') {
+  if (width !== "100%") {
     isCentered = true;
   }
 
   if (isCentered) {
-    let blockWidth = '';
-    let extraMargin = '';
+    let blockWidth = "";
+    let extraMargin = "";
 
-    if (typeof counter[columns] !== 'undefined') {
+    if (typeof counter[columns] !== "undefined") {
       counter[columns]++;
     }
 
     if (columns === 1) {
       blockWidth = `max-width: ${layoutColumns(6)};`;
     } else if (columns > 3) {
-      blockWidth = 'max-width: var(--spectrum-global-dimension-size-3600);';
+      blockWidth = "max-width: var(--spectrum-global-dimension-size-3600);";
     } else {
-      blockWidth = 'max-width: var(--spectrum-global-dimension-size-4600);';
+      blockWidth = "max-width: var(--spectrum-global-dimension-size-4600);";
       extraMargin = alignMapping[counter[columns] % columns];
     }
+
     return (
       <>
         <section
           className={classNames(className, `spectrum--${theme}`)}
           css={css`
             display: table-cell;
-            width: ${width.replace('%', 'vw')};
+            width: ${width.replace("%", "vw")};
             background: var(--spectrum-global-color-gray-100);
             padding: var(--spectrum-global-dimension-size-1000) 0;
 
@@ -214,7 +211,8 @@ const TextBlock = ({
               display: block;
               width: 100%;
             }
-          `}>
+          `}
+        >
           <div
             css={css`
               ${blockWidth}
@@ -226,7 +224,8 @@ const TextBlock = ({
                 max-width: none;
                 margin: auto;
               }
-            `}>
+            `}
+          >
             <Icons icons={icons} isCentered={isCentered} />
 
             {image &&
@@ -250,51 +249,52 @@ const TextBlock = ({
                     height: 100%;
                     object-fit: contain;
                   }
-                `
+                `,
               })}
-             {assetImg && 
-                <div  css={css`
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: ${imgWidth};
-                height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-200));
-                box-sizing: border-box;
-                padding: var(--spectrum-global-dimension-size-200);
-                margin-top: 0;
-                
-                @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                  height: 505px !important;
-                  width: 100% !important; 
-                }
-                
-                @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-                  height: auto !important;
-                  width: 100% !important;
-                }
-                `}
-                className={`${assetImg?.props?.children}`} >
-                </div>
-              }
+            {assetImg &&
+                <div className={assetImg?.props?.children}/>}
+
             {heading && (
               <Element
                 className="spectrum-Heading spectrum-Heading--sizeM"
                 css={css`
-                  margin-bottom: var(--spectrum-global-dimension-size-200) !important;
+                  margin-bottom: var(
+                    --spectrum-global-dimension-size-200
+                  ) !important;
 
                   & ~ p {
                     margin-top: 0;
                     margin-bottom: 0 !important;
                   }
-                `}>
+                `}
+              >
                 {heading.props.children}
               </Element>
+            )}
+            {subHeading && (
+              <h3
+              className="spectrum-Heading spectrum-Heading--sizeM"
+                css={css`
+                  margin-bottom: var(
+                    --spectrum-global-dimension-size-200
+                  ) !important;
+
+                  & ~ p {
+                    margin-top: 0;
+                    margin-bottom: 0 !important;
+                  }
+                `}
+              >
+                {subHeading.props.children}
+              </h3>
             )}
 
             <Texts texts={props} />
 
             <HeroButtons
-              quiets={[true, !primaryOutline]}
+              buttons={buttons}
+              quiets={[!isPrimaryBtn, !primaryOutline]}
+              variants={[variantsTypePrimary,variantsTypeSecondary]}
               css={css`
                 margin-top: var(--spectrum-global-dimension-size-150);
                 margin-bottom: var(--spectrum-global-dimension-size-150);
@@ -307,13 +307,16 @@ const TextBlock = ({
             <Media css={mediaCSS} video={video} />
           </div>
         </section>
-        {width === '100%' || (typeof counter[columns] !== 'undefined' && counter[columns] % columns === 0) ? (
+        {width === "100%" ||
+        (typeof counter[columns] !== "undefined" &&
+          counter[columns] % columns === 0) ? (
           <div aria-hidden="true" />
         ) : null}
       </>
     );
   } else {
-    const isReversed = props.slots.endsWith('image') || props.slots.endsWith('video');
+    const isReversed =
+      props.slots.endsWith("image") || props.slots.endsWith("video");
 
     return (
       <section
@@ -321,7 +324,8 @@ const TextBlock = ({
         css={css`
           width: 100%;
           background: var(--spectrum-global-color-gray-100);
-        `}>
+        `}
+      >
         <div
           css={css`
             width: ${DESKTOP_SCREEN_WIDTH};
@@ -336,17 +340,23 @@ const TextBlock = ({
                 flex-direction: column !important;
               }
             }
-          `}>
+          `}
+        >
           <div
             css={css`
               display: flex;
               align-items: center;
-              flex-direction: ${imageOnly ?'column' : isReversed ? 'row-reverse' : 'row'};
+              flex-direction: ${imageOnly
+                ? "column"
+                : isReversed
+                ? "row-reverse"
+                : "row"};
 
               @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
                 flex-direction: column;
               }
-            `}>
+            `}
+          >
             {image &&
               cloneElement(image, {
                 css: css`
@@ -354,7 +364,10 @@ const TextBlock = ({
                   align-items: center;
                   justify-content: center;
                   width: ${imgWidth};
-                  height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-225));
+                  height: calc(
+                    var(--spectrum-global-dimension-size-4600) -
+                      var(--spectrum-global-dimension-size-225)
+                  );
                   box-sizing: border-box;
                   padding: var(--spectrum-global-dimension-size-200);
                   margin-top: 0;
@@ -373,37 +386,13 @@ const TextBlock = ({
                     height: auto;
                     width: 100%;
                   }
-                `
+                `,
               })}
-              {assetImg && 
-                <div  css={css`
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: ${imgWidth};
-                height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-650));
-                box-sizing: border-box;
-                padding: var(--spectrum-global-dimension-size-100);
-                margin-top: 0;
-                
-                @media screen and (max-width: 768px) {
-                  height: 200px !important;
-                  width: 88% !important;
-                }
+             {assetImg &&
+                <div className={assetImg?.props?.children}/>}
 
-                @media screen and (max-width: 425px) {
-                  height: 505px !important;
-                  width: 100% !important; 
-                  background:yellow;
-                }
-                `}
-                className={`${assetImg?.props?.children}`} >
-
-                </div>
-              }
             <Media css={mediaCSS} video={video} />
-
-            <div
+            {!imageOnly && <div
               css={css`
                 width: 50%;
                 display: flex;
@@ -417,7 +406,8 @@ const TextBlock = ({
                   width: 100%;
                   margin: var(--spectrum-global-dimension-size-400) 0;
                 }
-              `}>
+              `}
+            >
               <Icons icons={icons} isCentered={isCentered} />
 
               {heading && (
@@ -425,28 +415,49 @@ const TextBlock = ({
                   className="spectrum-Heading spectrum-Heading--sizeM"
                   css={css`
                     margin-top: 0 !important;
-                    margin-bottom: var(--spectrum-global-dimension-size-200) !important;
+                    margin-bottom: var(
+                      --spectrum-global-dimension-size-200
+                    ) !important;
 
                     & + p {
                       margin-top: 0 !important;
                     }
-                  `}>
+                  `}
+                >
                   {heading.props.children}
                 </Element>
               )}
+              {subHeading && (
+              <h3
+              className="spectrum-Heading spectrum-Heading--sizeM"
+                css={css`
+                  margin-bottom: var(
+                    --spectrum-global-dimension-size-200
+                  ) !important;
+
+                  & ~ p {
+                    margin-top: 0;
+                    margin-bottom: 0 !important;
+                  }
+                `}
+              >
+                {subHeading.props.children}
+              </h3>
+            )}
 
               <Texts texts={props} />
 
               <HeroButtons
                 buttons={buttons}
-                quiets={[true, !primaryOutline]}
+                quiets={[!isPrimaryBtn, !primaryOutline]}
+                variants={[variantsTypePrimary,variantsTypeSecondary]}
                 css={css`
                   margin-top: var(--spectrum-global-dimension-size-200);
                 `}
               />
 
               <Links links={links} isCentered={isCentered} />
-            </div>
+            </div> }
           </div>
         </div>
       </section>
@@ -462,11 +473,12 @@ TextBlock.propTypes = {
   image: PropTypes.element,
   video: PropTypes.element,
   theme: PropTypes.string,
-  width: PropTypes.oneOf(['100%', '50%', '33%', '25%']),
+  width: PropTypes.oneOf(["100%", "50%", "33%", "25%"]),
   isCentered: PropTypes.bool,
-  headerElementType:PropTypes.oneOf(['h1','h2','h3','h4','h5','h6']),
+  headerElementType: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
   imageOnly: PropTypes.bool,
-  imgWidth:PropTypes.string
+  primaryOutline: PropTypes.bool,
+  imgWidth: PropTypes.string,
 };
 
 export { TextBlock };

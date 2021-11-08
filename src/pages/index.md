@@ -26,21 +26,28 @@ doc-services-hero
 
 - [Get started](/src/pages/gettingstarted.md)
 
-<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ![PDF services ](images/services.png)
 
-### PDF APIs with SDKs for Node.js, .Net, and java to create, convert, OCR PDFs, and more
+### Adobe PDF Services API
+### Create, transform, OCR PDFs, and more
 
-Use the read PDF Services API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
+PDF Services API is a collection of multiple services capable of quickly solving specific
+challenges and powering multi-step document workflows using SDKs for Node.js, Java,
+and .Net. With it, you gain access to basic PDF services, such as creating, securing,
+compressing, converting, combining, and splitting PDFs, as well as more advanced services,
+including Document Generation and PDF Extract. Do more with this API. 
+Primary CTA (blue button): Learn more (goes to PDF Services API page)
 
 - [Learn more](./pdf-services.md)
 
 
 
-<TextBlock slots="heading,text,buttons,image" theme="light" headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
-### Unluck content structure in any PDF for NLP, RPA, and more
+### Adobe PDF Extract API
+### Unlock content structure in any PDF
 
 Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
 
@@ -50,11 +57,12 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 
 
 
-<TextBlock slots="image,heading,text,buttons" theme="lightest"  headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ![documentGenerationAPI](images/documentGenerationAPI.png)
 
-### Generate PDF and Word documents from Word templates and JSON data
+### Adobe Document Generation API
+### Generate documents from Word templates and JSON data
 
 Use the PDF Tools API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
 
@@ -63,9 +71,10 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 
 
 
-<TextBlock slots="heading,text,buttons,image" theme="light"  headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  headerElementType="h2" className="home-zigzag-comp-padding"/>
 
-### PDF Embed API to insert PDFs and enable collaboration in web apps
+### Adobe PDF Embed API
+### Display PDFs and enable collaboration with this free API
 
 Leverage our free javascript API to embed PDFs without the need for end users to download additional plugins. Provide rich PDF viewing and easily enable digital collaboration and document analytics.
 

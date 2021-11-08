@@ -6,7 +6,7 @@ import {
   TABLET_SCREEN_WIDTH,
   layoutColumns,
   MOBILE_SCREEN_WIDTH,
-  
+  DESKTOP_SCREEN_WIDTH,
 } from "@adobe/gatsby-theme-aio/src/utils";
 import {
   HeroButtons,
@@ -18,7 +18,6 @@ import SwiperCore, { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -73,7 +72,7 @@ const SwiperContent = ({
             @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
               margin: auto;
             }
-          
+
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
               margin: 0;
               max-width: calc(${layoutColumns(3.5)}) !important;
@@ -93,7 +92,7 @@ const SwiperContent = ({
           </h2>
         </div>
       ) : null}
-      
+
       {textKeys.length > 0 || heading || buttons ? (
         <div
           css={css`
@@ -129,7 +128,7 @@ const SwiperContent = ({
                 @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                   &>h3{
                     font-size: var(--spectrum-alias-heading-xxs-text-size) !important;
-                    
+
                   }
                 }`
               }
@@ -141,7 +140,7 @@ const SwiperContent = ({
             <div
               css={css`
                 margin-top: var(--spectrum-global-dimension-size-200);
-               
+
                 @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                      div:first-child{
                        justify-content:center !important;

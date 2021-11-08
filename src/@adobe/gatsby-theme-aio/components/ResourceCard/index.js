@@ -12,6 +12,7 @@ import '@spectrum-css/typography';
 import '@spectrum-css/card';
 import PropTypes from 'prop-types';
 // import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import classNames from "classnames";
 
 const counter = {
   2: 0,
@@ -19,7 +20,7 @@ const counter = {
 };
 const alignMapping = ['margin-left: 0;', 'margin-right: 0;'];
 
-const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image }) => {
+const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image,className }) => {
   let initColumns = 100 / parseFloat(width);
 
   if (width === '33%') {
@@ -60,7 +61,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
   return (
     <>
       <section
-        className={`spectrum--${theme}`}
+        className={classNames(className, `spectrum--${theme}`)}
         css={css`
           display: ${width === '100%' ? 'block' : 'table-cell'};
           width: ${width.replace('%', 'vw')};

@@ -17,7 +17,7 @@ Obtain free credentials
 - [Get started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-services-api)
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline  className="align-left horizontal-align link" headerElementType="h2"/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline  className="align-left horizontal-align link" headerElementType="h2"/>
 
 ## Step 2
 

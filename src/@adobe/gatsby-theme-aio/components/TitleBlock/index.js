@@ -1,10 +1,9 @@
 import React, { cloneElement } from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
-import { layoutColumns, TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
+import { layoutColumns, TABLET_SCREEN_WIDTH, DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 import classNames from 'classnames';
 import '@spectrum-css/typography';
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 
 const TitleBlock = ({ className, heading, text, theme = 'lightest',id }) => (

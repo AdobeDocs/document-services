@@ -6,9 +6,9 @@ title: Adobe Developer — Automate Document Generation | Document Key Features 
 
 ## Key features of Adobe Document Generation API
 
-<TextBlock slots="image,heading,text,buttons" width="25%" theme="light" className="align-left img-xl-size"/>
+<CustomCard slots="icon,heading,text,buttons" gradients gradientsType='lightBlue' buttonDisplay width="25%"  theme="light" />
 
-![Rapid template](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![msword_icon](../images/ic-msword.svg)
 
 ### Rapid template tagging from uploaded JSON data
 
@@ -16,25 +16,25 @@ Automatically generate tags from your JSON data model or create reusable tags us
 
 - [Get Microsoft Word add-in](https://www.adobe.com/go/dcdg_Tagger)
 
-<TextBlock slots="image,heading,text" width="25%" theme="light" className="align-left img-xl-size"/>
+<CustomCard slots="icon,heading,text" gradients gradientsType='redORange' width="25%" theme="light" />
 
-![Insert elements](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![insert_icon](../images/ic-insert.svg)
 
 ### Insert elements during document generation
 
 Dynamically insert tags, images, lists, and generate tables based on data inputs and conditions for granular content customization.
 
-<TextBlock slots="image,heading,text" width="25%" theme="light" className="align-left img-xl-size"/>
+<CustomCard slots="icon,heading,text" gradients gradientsType='violetBlue' width="25%" theme="light"/>
 
-![integration](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![sign_icon](../images/ic-sign.svg)
 
 ### Out of the box integration with Adobe Sign
 
 Accelerated text tag creation with the ability to conditionally show and hide signatures or content, mark fields as required, read only, and generate documents that are ready for processing in Adobe Sign.
 
-<TextBlock slots="image,heading,text" width="25%" theme="light" className="align-left img-xl-size"/>
+<CustomCard slots="icon,heading,text" gradients gradientsType='pinkRed' width="25%" theme="light"/>
 
-![Cloud-based REST](../images/F_Illu_DevEcoDC_discovery_banner_756x500_2x.png)
+![cloud-rest-api_icon](../images/ic-cloud-rest-api.svg)
 
 ### Cloud-based REST API integrates with any application
 

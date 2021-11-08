@@ -1,4 +1,13 @@
 @charset "UTF-8";
+@font-face {
+    font-family: adobeFont;
+    src: url(../fonts/AdobeClean-Regular.otf);
+ }
+
+ * {
+    font-family: adobeFont !important;
+ }
+
 .swiper-pagination-bullet {
     height: 8px;
     width: 8px;
@@ -195,7 +204,7 @@
     }
 }
 
-.spectrum-Card-body:last-child {
+.useCaseCard .spectrum-Card-body:last-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: var(--spectrum-card-border-radius, var(--spectrum-alias-border-radius-regular));
@@ -203,7 +212,7 @@
     height: 210px;
 }
 @media screen and (max-width: 768px) {
-    .spectrum-Card-body:last-child {
+    .useCaseCard .spectrum-Card-body:last-child {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-right-radius: var(--spectrum-card-border-radius, var(--spectrum-alias-border-radius-regular));
@@ -212,7 +221,7 @@
     }
 }
 @media screen and (max-width: 480px) {
-    .spectrum-Card-body:last-child {
+    .useCaseCard .spectrum-Card-body:last-child {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-right-radius: var(--spectrum-card-border-radius, var(--spectrum-alias-border-radius-regular));
@@ -720,6 +729,15 @@ img[alt=thumbnail] {
         width: 23rem !important;
     }
 
+    .extract-img {
+        max-width: 585px;
+        width: 584px !important;
+        height: 247px !important;
+        background-image: url('../pages/images/extract-lrg.svg') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
 }
 
 
@@ -760,5 +778,36 @@ img[alt=thumbnail] {
 .code-block-button-padding  div:nth-child(3) {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
+}
 
+.extract-img {
+    width: calc(var(--spectrum-global-dimension-size-2500) + var(--spectrum-global-dimension-size-350));
+    height: calc(var(--spectrum-global-dimension-size-1000) + var(--spectrum-global-dimension-size-175));
+    background-image: url('../pages/images/extract-sm.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.how-it-work-text > div >div > div {
+    width: 75%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.how-it-work-text > div{
+    padding-top: 1px;
+    padding-bottom: 0px;
+}
+
+
+.how-it-work-image > div >div >p{
+    width: 75%;
+    margin: auto;
+}
+
+.how-it-work-image > div {
+    padding-top: 1px;
+    padding-bottom: 0px;
+}

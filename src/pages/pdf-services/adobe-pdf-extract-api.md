@@ -11,9 +11,9 @@ A new web service that allows you to unlock content structure and table data fro
 
 
 
-<TextBlock slots="image" theme="lightest" width="100%" imageOnly className="padding_top_align padding-zero imageHightAuto"/>
+<TextBlock slots="assetImg" theme="lightest" width="100%" imageOnly className="padding_top_align padding-zero imageHightAuto"/>
 
-![Adobe PDF Extract API](../images/extract-lrg.svg)
+extract-img
 
 
 <TextBlock slots="text" width="33%" theme="lightest" className="align-left padding-top-zero" />

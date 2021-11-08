@@ -4,8 +4,7 @@ import { HeroButtons } from '@adobe/gatsby-theme-aio/src/components/Hero';
 import classNames from "classnames";
 import '@spectrum-css/typography';
 import '@spectrum-css/card';
-import {  TABLET_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import {  TABLET_SCREEN_WIDTH,MOBILE_SCREEN_WIDTH, DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 
 import PropTypes from 'prop-types';
 

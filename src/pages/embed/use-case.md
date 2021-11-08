@@ -7,7 +7,7 @@ title: Adobe Developer — PDF-embed  —  Use cases
 ## Use cases for PDF Embed API
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
 [](use-cases/collaboration/)
 
@@ -18,7 +18,7 @@ title: Adobe Developer — PDF-embed  —  Use cases
 Accelerate digital learning programs with embedded PDF viewing for teacher and peer document collaboration.
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
 [](use-cases/collaboration/review-and-approval/)
 
@@ -28,7 +28,7 @@ Accelerate digital learning programs with embedded PDF viewing for teacher and p
 
 Maximize remote worker productivity with multi-user document collaboration including commenting, markup, text edits, and more.
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
 [](/use-cases/content-publishing/)
 
@@ -39,7 +39,7 @@ Maximize remote worker productivity with multi-user document collaboration inclu
 Easily republish in different formats by extracting structured content elements such as headings, lists, paragraphs, fonts, and character styling
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
 <!-- [](/use-cases/report-creation-editing) Faced 404 issue-->
 

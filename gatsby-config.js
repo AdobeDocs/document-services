@@ -48,7 +48,7 @@ module.exports = {
       },
       {
         title: 'Use Cases',
-        path: 'use-cases'
+        path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts.md'
       },
       {
         title: 'Pricing',
@@ -89,19 +89,19 @@ module.exports = {
           path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'
         }, {
           title: 'Licensing',
-          path: 'licensing.md'
+          path: 'document-services/docs/overview/pdf-services-api/dcserviceslicensing.md'
         }]
       }
     ],
     subMenuPages: [
       {
         title: 'Agreements and Contracts',
-        path: 'use-cases',
+        path: 'use-cases/agreements-and-contracts',
         icon:'ic-category-agreements',
         pages: [
           {
             title: 'Sales Proposals and Contracts',
-            path: 'use-cases/index.md'
+            path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts.md'
           },
           {
             title: 'Legal Contracts',
@@ -132,7 +132,7 @@ module.exports = {
         pages: [
           {
             title: 'Content Based Process Automation',
-            path: 'use-cases/content-and-data-extraction/index.md'
+            path: 'use-cases/content-and-data-extraction/content-based-process-automation.md'
           },
           {
             title: 'Data Analysis',
@@ -151,7 +151,7 @@ module.exports = {
         pages: [
           {
             title: 'Digital Content Publishing',
-            path: 'use-cases/content-publishing/index.md'
+            path: 'use-cases/content-publishing/digital-content-publishing.md'
           },
           {
             title: 'On-Demand Report Creation',
@@ -198,7 +198,7 @@ module.exports = {
         pages: [
           {
             title: 'Student-Teacher Collaboration',
-            path: 'use-cases/collaboration/index.md'
+            path: 'use-cases/collaboration/student-teacher-collaboration.md'
           },
           {
             title: 'Review and Approval',
@@ -213,7 +213,7 @@ module.exports = {
         pages: [
           {
             title: 'Data Analysis',
-            path: 'use-cases/financial/index.md'
+            path: 'use-cases/financial/data-analysis-financial.md'
           },
           {
             title: 'Invoices',
@@ -240,7 +240,7 @@ module.exports = {
         pages: [
           {
             title: 'Search and Indexing',
-            path: 'use-cases/archiving-and-retrieval/index.md'
+            path: 'use-cases/archiving-and-retrieval/search-and-indexing.md'
           }
         ]
       }

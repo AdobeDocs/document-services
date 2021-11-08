@@ -5,8 +5,7 @@ import { css } from '@emotion/react';
 import nextId from 'react-id-generator';
 import '@spectrum-css/tabs';
 
-import { cloneChildren, MOBILE_SCREEN_WIDTH, TABLET_SCREEN_WIDTH, layoutColumns } from '@adobe/gatsby-theme-aio/src/utils';
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import { cloneChildren, MOBILE_SCREEN_WIDTH, TABLET_SCREEN_WIDTH, layoutColumns, DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 
 const positionIndicator = (indicator, selectedTab) => {
   indicator.current.style.transform = `translate(${selectedTab.current.offsetLeft}px, 0px)`;

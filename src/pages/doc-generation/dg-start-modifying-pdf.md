@@ -13,7 +13,7 @@ Start free trial with 1,000 Document Transactions for up to 6 months
 Start a free trial and download code samples for Node.js, Java, and .Net
 - [Get Started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=document-generation-api)
 
-<TextBlock slots="heading,text,buttons" theme="light"  width="33%" className="align-left link"/>
+<TextBlock slots="heading,text,buttons" theme="light"  width="33%" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline className="align-left link"/>
 
 ## Step 2
 Get the Adobe Document Tagger Microsoft Word add-in and check out our [sample templates.](/src/pages/doc-generation#sample-blade)

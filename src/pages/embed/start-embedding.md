@@ -22,7 +22,7 @@ Obtain free credentials
 
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light"  className="align-left horizontal-align"/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light"  className="align-left horizontal-align" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline/>
 
 ### Step 2
 

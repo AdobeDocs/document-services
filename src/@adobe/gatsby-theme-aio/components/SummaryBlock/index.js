@@ -5,11 +5,11 @@ import {
   layoutColumns,
   TABLET_SCREEN_WIDTH,
   MOBILE_SCREEN_WIDTH,
+  DESKTOP_SCREEN_WIDTH
 } from "@adobe/gatsby-theme-aio/src/utils";
 import "@spectrum-css/typography";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 
 const SummaryBlock = ({
@@ -102,7 +102,7 @@ const SummaryBlock = ({
             align-self: flex-end;
             margin-right: 5%;
             padding-bottom:var(--spectrum-global-dimension-size-300)
-              
+
             @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
               align-self: flex-start;
             }

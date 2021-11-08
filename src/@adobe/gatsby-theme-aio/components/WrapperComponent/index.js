@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import "@spectrum-css/typography";
 import "@spectrum-css/card";
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import { DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 
 
 const WrapperComponent = ({ theme = 'lightest',className,content,background }) => {

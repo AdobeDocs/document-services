@@ -8,7 +8,7 @@ title: Adobe Developer — PDF Services API  —   Use Cases for Document Servic
 
 ## Use cases for PDF services API
 
-<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" />
+<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard"/>
 
 [](/use-cases/content-publishing/on-demand-report-creation)
 
@@ -18,7 +18,7 @@ title: Adobe Developer — PDF Services API  —   Use Cases for Document Servic
 
 Create and embed reports for internal or external consumption, sharing, and review.
 
-<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%"/>
+<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard"/>
 
 [](/use-cases/archiving-and-retrieval)
 
@@ -28,7 +28,7 @@ Create and embed reports for internal or external consumption, sharing, and revi
 
 Create searchable indexes from digital documents to quickly locate critical content for compliance and other downstream processing.
 
-<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%"/>
+<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard"/>
 
 [](/use-cases/content-publishing)
 
@@ -38,7 +38,7 @@ Create searchable indexes from digital documents to quickly locate critical cont
 
 Publish whitepapers and marketing content with end-user interactivity, security controls, and analytics.
 
-<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%"/>
+<ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard"/>
 
 [](/use-cases/content-publishing/job-posting/)
 

@@ -5,8 +5,7 @@ import { Checkbox } from "@adobe/gatsby-theme-aio/src/components/Checkbox";
 import { Picker } from "@adobe/gatsby-theme-aio/src/components/Picker";
 import { Image } from "../Image";
 import classNames from "classnames";
-import { MOBILE_SCREEN_WIDTH,TABLET_SCREEN_WIDTH,layoutColumns} from "@adobe/gatsby-theme-aio/src/utils";
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import { MOBILE_SCREEN_WIDTH,TABLET_SCREEN_WIDTH,layoutColumns,DESKTOP_SCREEN_WIDTH} from "@adobe/gatsby-theme-aio/src/utils";
 
 import PropTypes from "prop-types";
 import "@spectrum-css/typography";
@@ -122,7 +121,7 @@ const ProductCardGrid = ({
     "calc(var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-600))";
   const width =
     "calc(var(--spectrum-global-dimension-size-3600) - var(--spectrum-global-dimension-size-900))";
- 
+
 const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimension-size-1000)":"";
 
     return (
@@ -132,7 +131,7 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
         background: var(--spectrum-global-color-gray-100);
         padding-bottom: var(--spectrum-global-dimension-size-500);
 
-          
+
         @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
           width: ${layoutColumns(2)}  !important;
           background: var(--spectrum-global-color-gray-100);
@@ -146,7 +145,7 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
         }
       `}
     >
-      <div 
+      <div
       css={css`
       max-width: ${containerWidth};
       margin: auto;
@@ -268,7 +267,7 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
                 display: flex;
                 flex-wrap: wrap;
               }
-      
+
               @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                 overflow: hidden;
                 width: ${layoutColumns(3)};
@@ -308,7 +307,7 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
                     align-items: center;
                     display: flex;
                     flex-direction: column;
-                   
+
                   `}
                 >
                   {product.icon && (

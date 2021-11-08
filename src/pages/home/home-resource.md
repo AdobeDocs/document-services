@@ -7,7 +7,7 @@ title: Adobe Developer — Wrapper Components  —  Home Resource Card
 ## Use cases for Adobe Document Services
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='light' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 
 [](use-cases)
 
@@ -17,7 +17,7 @@ title: Adobe Developer — Wrapper Components  —  Home Resource Card
 
 Accelerate reusing content in systems of record and downstream processes, such as RPA, NLP, ML and search by quickly extracting content from native and scanned PDFs
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='light' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard"/>
 
 [](/use-cases/agreements-and-contracts/legal-contracts/)
 
@@ -31,7 +31,7 @@ Generate legal contracts with dynamic terms and signatures
 
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='light' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
 
@@ -44,7 +44,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='light' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 
 [](/use-cases/content-publishing/)
 

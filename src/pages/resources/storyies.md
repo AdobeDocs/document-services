@@ -9,7 +9,7 @@ title: Adobe Developer — PDF Embed API  — Customer stories
 See how our customers are building great experiences and succeeding with Adobe
 
 
-<ResourceCard slots="link, image, heading" width="25%" theme="lightest" />
+<ResourceCard slots="link, image, heading" width="25%" theme="lightest"  className='useCaseCard'/>
 
 [K2Nintext.pdf](K2Nintex.pdf)
 
@@ -19,7 +19,7 @@ See how our customers are building great experiences and succeeding with Adobe
 
 
 
-<ResourceCard slots="link, image, heading" width="25%" theme="lightest" />
+<ResourceCard slots="link, image, heading" width="25%" theme="lightest" className='useCaseCard'/>
 
 [AdobeInDesign.pdf](AdobeInDesign.pdf)
 
@@ -29,7 +29,7 @@ See how our customers are building great experiences and succeeding with Adobe
 
 
 
-<ResourceCard slots="link, image, heading" width="25%" theme="lightest" />
+<ResourceCard slots="link, image, heading" width="25%" theme="lightest" className='useCaseCard'/>
 
 [Cambridge-Assessment.pdf](Cambridge-Assessment.pdf)
 
@@ -38,7 +38,7 @@ See how our customers are building great experiences and succeeding with Adobe
 ### Cambridge Assessment intends to digitize more than 100 years of test material with Adobe PDF Extract API.
 
 
-<ResourceCard slots="link, image, heading" width="25%" theme="lightest" />
+<ResourceCard slots="link, image, heading" width="25%" theme="lightest" className='useCaseCard'/>
 
 [Evisort.pdf](Evisort.pdf)
 
