@@ -129,7 +129,7 @@
     .mobileTabView div[class^="spectrum"] {
         display: none;
     }
-    .mobileTabView section > div[class$="-TextBlock"]  {
+    .mobileTabView section div:first-child  {
         padding: 0 !important;
     }
     .bgBlue .tabItem:hover, .bgBlue .tabItem.is-selected {
