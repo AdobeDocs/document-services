@@ -42,7 +42,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <TextBlock slots="buttons" isCentered theme="light padding-top-zero why-doc-get-started-btn"/>
 
-- [Start free trial](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)
+- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=document-generation-api)
 
 <MobileOptimize/>
 

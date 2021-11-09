@@ -13,11 +13,11 @@ When you’re ready to purchase, flexible options to suit your needs
 
 <WrapperComponent slots="content" theme="light"/>
 
-<PDFEmbed/>
+<PDFService/>
 
 <WrapperComponent slots="content" theme="light" />
 
-<PDFService/>
+<PDFEmbed/>
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
 

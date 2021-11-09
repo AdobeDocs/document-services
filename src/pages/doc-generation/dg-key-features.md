@@ -6,7 +6,7 @@ title: Adobe Developer — Automate Document Generation | Document Key Features 
 
 ## Key features of Adobe Document Generation API
 
-<CustomCard slots="icon,heading,text,buttons" gradients gradientsType='lightBlue' buttonDisplay width="25%"  theme="light" />
+<CustomCard slots="icon,heading,text,buttons" gradients gradientsType='lightBlue' buttonDisplay cursorDisable width="25%"  theme="light" />
 
 ![msword_icon](../images/ic-msword.svg)
 
@@ -16,7 +16,7 @@ Automatically generate tags from your JSON data model or create reusable tags us
 
 - [Get Microsoft Word add-in](https://www.adobe.com/go/dcdg_Tagger)
 
-<CustomCard slots="icon,heading,text" gradients gradientsType='redORange' width="25%" theme="light" />
+<CustomCard slots="icon,heading,text" gradients gradientsType='orangeRed' cursorDisable width="25%" theme="light" />
 
 ![insert_icon](../images/ic-insert.svg)
 
@@ -24,7 +24,7 @@ Automatically generate tags from your JSON data model or create reusable tags us
 
 Dynamically insert tags, images, lists, and generate tables based on data inputs and conditions for granular content customization.
 
-<CustomCard slots="icon,heading,text" gradients gradientsType='violetBlue' width="25%" theme="light"/>
+<CustomCard slots="icon,heading,text" gradients gradientsType='violetBlue' cursorDisable width="25%" theme="light"/>
 
 ![sign_icon](../images/ic-sign.svg)
 
@@ -32,7 +32,7 @@ Dynamically insert tags, images, lists, and generate tables based on data inputs
 
 Accelerated text tag creation with the ability to conditionally show and hide signatures or content, mark fields as required, read only, and generate documents that are ready for processing in Adobe Sign.
 
-<CustomCard slots="icon,heading,text" gradients gradientsType='pinkRed' width="25%" theme="light"/>
+<CustomCard slots="icon,heading,text" gradients gradientsType='pinkRed' cursorDisable width="25%" theme="light"/>
 
 ![cloud-rest-api_icon](../images/ic-cloud-rest-api.svg)
 

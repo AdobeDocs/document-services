@@ -209,7 +209,7 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: var(--spectrum-card-border-radius, var(--spectrum-alias-border-radius-regular));
     border-bottom-left-radius: var(--spectrum-card-border-radius, var(--spectrum-alias-border-radius-regular));
-    height: 210px;
+    height: 160px;
 }
 @media screen and (max-width: 768px) {
     .useCaseCard .spectrum-Card-body:last-child {

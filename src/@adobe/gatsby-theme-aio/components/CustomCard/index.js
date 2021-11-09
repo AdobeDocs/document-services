@@ -27,7 +27,7 @@ const counter = {
 };
 const alignMapping = ['flex-start', 'flex-end'];
 
-const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, links ,borderRadious,gradients=false, gradientsType, buttons,footer =false, buttonDisplay=false, height=500, cursorDisable=false,headerSize='225',contentSize='220' ,className}) => {
+const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, links ,borderRadious,gradients=false, gradientsType, buttons,footer =false, buttonDisplay=false, height=500, cursorDisable=false,headerSize='225',contentSize='230' ,className}) => {
 
   let initColumns = 100 / parseFloat(width);
 
@@ -92,16 +92,18 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
       `}
       >
       <div
-        onClick={links ? 
+        onClick={links ?
           () => navigate(links.props.children) :()=>('javascript')}
-        role="figure"
-        tabIndex="0"
+          onKeyPress={links ? 
+            () => navigate(links.props.children) :()=>('javascript')}
+        role="tab"
+        tabIndex={0}
         className="spectrum-Card"
         style={gradients && linearGradients(gradientsType)}
         css={css`
           margin: 0 var(--spectrum-global-dimension-size-300);
           width: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-800));
-          height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-${height}));
+          // height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-${height}));
           ${ !cursorDisable && `cursor:pointer;`}
           ${borderRadious && `border-radius: 10px;`}
           &:hover { 
@@ -154,7 +156,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
               ${icon ? 'top: var(--spectrum-global-dimension-size-800);' : ''}
             `}>
             <div
-              className="spectrum-Card-header spectrum-Heading spectrum-Heading--sizeXXS"
+              // className="spectrum-Card-header spectrum-Heading spectrum-Heading--sizeXXS"
               css={css`
                 margin-top: 0 !important;
                 margin-bottom: var(--spectrum-global-dimension-size-100) !important;
@@ -162,7 +164,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
               `}>
               <div
                 // className="spectrum-Card-title"
-                style={ gradients && {  color: 'white', marginBottom:'10px'}}
+                style={ gradients && {  color: 'white'}}
                 css={css`
                   font-size: var(--spectrum-global-dimension-size-${headerSize});
                   @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {

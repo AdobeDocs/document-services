@@ -2,6 +2,8 @@
 title: Adobe Developer — DC Platform SDK Resources
 ---
 
+<Divider orientation="horizontal" size="M" className="m-0"/>
+
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
 ## Adobe PDF Embed API
@@ -28,6 +30,5 @@ Enjoy complimentary access to our JavaScript API to easily embed PDFs with a few
 - [Get started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html)
 - [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
-<Divider orientation="horizontal" size="M" className="m-0"/>
 
 
