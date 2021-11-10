@@ -86,11 +86,11 @@ apiHeroAssetImg doc-service-hero
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
 
-![We're ready](images/bg-hero.jpeg)
+![We're ready](../images/bg-hero.jpeg)
 
 ## We're ready to help
 
 Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all)
-- [Contact us](./contact-us.md)
+- [Contact us](../pricing/contact-us.md)

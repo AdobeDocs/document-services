@@ -161,4 +161,4 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 Start free trial with 1,000 PDF transactions for up to 6 months.
 
 - [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html)
-- [Contact us](./contact-us.md)
+- [Contact us](src/pages/pricing/contact-us.md)

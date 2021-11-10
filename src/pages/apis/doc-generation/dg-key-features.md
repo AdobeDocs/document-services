@@ -8,7 +8,7 @@ title: Adobe Developer — Automate Document Generation | Document Key Features 
 
 <CustomCard slots="icon,heading,text,buttons" gradients gradientsType='lightBlue' buttonDisplay cursorDisable width="25%"  theme="light" />
 
-![msword_icon](../images/ic-msword.svg)
+![msword_icon](../../images/ic-msword.svg)
 
 ### Rapid template tagging from uploaded JSON data
 
@@ -18,7 +18,7 @@ Automatically generate tags from your JSON data model or create reusable tags us
 
 <CustomCard slots="icon,heading,text" gradients gradientsType='orangeRed' cursorDisable width="25%" theme="light" />
 
-![insert_icon](../images/ic-insert.svg)
+![insert_icon](../../images/ic-insert.svg)
 
 ### Insert elements during document generation
 
@@ -26,7 +26,7 @@ Dynamically insert tags, images, lists, and generate tables based on data inputs
 
 <CustomCard slots="icon,heading,text" gradients gradientsType='violetBlue' cursorDisable width="25%" theme="light"/>
 
-![sign_icon](../images/ic-sign.svg)
+![sign_icon](../../images/ic-sign.svg)
 
 ### Out of the box integration with Adobe Sign
 
@@ -34,7 +34,7 @@ Accelerated text tag creation with the ability to conditionally show and hide si
 
 <CustomCard slots="icon,heading,text" gradients gradientsType='pinkRed' cursorDisable width="25%" theme="light"/>
 
-![cloud-rest-api_icon](../images/ic-cloud-rest-api.svg)
+![cloud-rest-api_icon](../../images/ic-cloud-rest-api.svg)
 
 ### Cloud-based REST API integrates with any application
 

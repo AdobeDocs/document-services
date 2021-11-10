@@ -4,12 +4,13 @@ import { HeroButtons } from "@adobe/gatsby-theme-aio/src/components/Hero";
 import {
   layoutColumns,
   TABLET_SCREEN_WIDTH,
-  MOBILE_SCREEN_WIDTH,
-  DESKTOP_SCREEN_WIDTH
+  MOBILE_SCREEN_WIDTH
 } from "@adobe/gatsby-theme-aio/src/utils";
 import "@spectrum-css/typography";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 
 const SummaryBlock = ({

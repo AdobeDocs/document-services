@@ -9,8 +9,8 @@ import DgStartModifyingTitle from './doc-generation/dg-start-modifying-pdf.md'
 import DgWhyDocTitle from './doc-generation/dg-why-doc-gen-api.md'
 import DgKeyFeatures from './doc-generation/dg-key-features.md'
 import DgExploreOtherAdobeDoc from './doc-generation/dg-explore-other-adobe-doc.md'
-import {MobileOptimize} from '../components/mobileOptimize'
-import '../styles/doc-generation.css'
+import {MobileOptimize} from '../../components/mobileOptimize'
+import '../../styles/doc-generation.css'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage"/>
 
@@ -18,11 +18,7 @@ import '../styles/doc-generation.css'
 
 Generate PDF and Word documents from Word templates and JSON data
 
-<!-- ![](images/doc-gen-hero-desktop@2x.png) -->
-
 apiHeroAssetImg doc-gen-invoice
-
-
 
 - [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 
@@ -38,6 +34,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <!-- Key Features of Adobe Document Generation API -->
 <WrapperComponent slots="content" repeat="1" theme="light"/>
+
 <DgKeyFeatures/>
 
 <TextBlock slots="buttons" isCentered theme="light padding-top-zero why-doc-get-started-btn"/>
@@ -78,11 +75,11 @@ apiHeroAssetImg doc-gen-invoice
 <!-- Summary Block -->
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white"/>
 
-![summary block bg img](images/bg-hero.jpeg)
+![summary block bg img](../images/bg-hero.jpeg)
 
 ### We're ready to help
 
 Have questions about the Document Services APIs ?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-- [Contact us](src/pages/contact-us)
+- [Contact us](../pricing/contact-us.md)

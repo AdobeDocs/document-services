@@ -4,7 +4,7 @@ description: Automatically generate custom branded sales proposals, legal contra
 ---
 
 
-import { products,clouds } from '../components/product.js';
+import { products,clouds } from '../../components/product.js';
 
 <Hero slots="heading" layout="section" variant="fullwidth" customLayout className="herobgImage"/>
 
@@ -14,11 +14,11 @@ import { products,clouds } from '../components/product.js';
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
 
-![summary block bg img](images/bg-hero.jpeg)
+![summary block bg img](../images/bg-hero.jpeg)
 
 ### We're ready to help
 
 Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](/src/pages/gettingstarted.md)
-- [Contact us](./contact-us.md)
+- [Contact us](../pricing/contact-us.md)

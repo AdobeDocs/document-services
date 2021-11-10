@@ -3,17 +3,17 @@ title: Adobe Developer — PDF Embed API | Embed PDF in HTML | Adobe Document Se
 description: Adobe PDF Embed API is a free JavaScript library that allows you to quickly and easily embed PDFs in web applications with only a few lines of code. Learn more now.
 ---
 
-import EmbedModes from './embed/embed-modes.md';
-import Annotations from './embed/annotations.md';
-import PDFAnalytics from './embed/pdf-Analytics';
-import Collaborative from './embed/collaborative-settings.md';
-import SaveControls from './embed/save-controls.md';
-import MenuTool from './embed/menu-tool-options';
-import UseCase from './embed/use-case.md';
-import StartEmbedding from './embed/start-embedding.md';
-import WhyPdfEmbed from './embed/why-pdf-embed.md';
-import KeyFeatures from './embed/key-features.md'
-import ExploreAdobe from './embed/explore-adobe.md'
+import EmbedModes from './pdf-embed/embed-modes.md';
+import Annotations from './pdf-embed/annotations.md';
+import PDFAnalytics from './pdf-embed/pdf-Analytics';
+import Collaborative from './pdf-embed/collaborative-settings.md';
+import SaveControls from './pdf-embed/save-controls.md';
+import MenuTool from './pdf-embed/menu-tool-options';
+import UseCase from './pdf-embed/use-case.md';
+import StartEmbedding from './pdf-embed/start-embedding.md';
+import WhyPdfEmbed from './pdf-embed/why-pdf-embed.md';
+import KeyFeatures from './pdf-embed/key-features.md'
+import ExploreAdobe from './pdf-embed/explore-adobe.md'
 
 
 
@@ -43,45 +43,45 @@ apiHeroAssetImg doc-embed-hero
 
 ### Embed Modes
 
-![embed](images/embed.svg)
+![embed](../images/embed.svg)
 
 <EmbedModes />
 
 ### Annotation
 
-![annotation](images/annotations.svg)
+![annotation](../images/annotations.svg)
 
 <Annotations />
 
 
 ### PDF Analytics
 
-![analytics](images/analytics-green.svg)
+![analytics](../images/analytics-green.svg)
 
 <PDFAnalytics />
 
 ### Collaborative Settings
 
-![collaborative](images/collaborative_settings.svg)
+![collaborative](../images/collaborative_settings.svg)
 
 <Collaborative />
 
 ### Save Controls
 
-![savecontrols](images/save_control.svg)
+![savecontrols](../images/save_control.svg)
 
 <SaveControls />
 
 ### Menu & Tool Options
 
-![menu-options](images/menu_tool_options.svg)
+![menu-options](../images/menu_tool_options.svg)
 
 <MenuTool />
 
 
 <Carousel slots="image,heading, text, buttons" repeat="2"  theme="lightest" enableNavigation imageStyle="height:250px;width:250px;margin:auto !important;" className="vertical-padding" />
 
-![Integration](images/adobe_exerience_manager_logo@2x.png)
+![Integration](../images/adobe_exerience_manager_logo@2x.png)
 
 Integration with Adobe Experience Manager
 
@@ -90,7 +90,7 @@ Adobe Experience Manager customers can easily drag and drop a high-fidelity PDF 
 * [Learn more](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/pdf-viewer.html)
 
 
-![Analytics](images/adobe-analytics@2x.png)
+![Analytics](../images/adobe-analytics@2x.png)
 
 Integration with Adobe Analytics
 
@@ -130,6 +130,6 @@ Out of the box Adobe Analytics integration allows customers to seamlessly enable
 Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-* [Contact us](https://www.adobe.com/go/pdftoolsapi_requestform)
+* [Contact us](../pricing/contact-us.md)
 
 

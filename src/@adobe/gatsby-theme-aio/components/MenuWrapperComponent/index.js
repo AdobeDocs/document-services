@@ -5,8 +5,10 @@ import "@spectrum-css/card";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import {  TABLET_SCREEN_WIDTH, DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
+import {  TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 import { CustomMenuBlock } from '../CustomMenuBlock';
+
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 
 const MenuWrapperComponent = ({ theme = 'lightest',className, menuClassName, contentClassName, content, background }) => {

@@ -4,11 +4,14 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import "@spectrum-css/typography";
 import "@spectrum-css/card";
-import { DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
+// import { DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
-const WrapperComponent = ({ theme = 'lightest',className,content,background }) => {
+const WrapperComponent = ({ theme = 'lightest',className,content,background,enableMaxHeight=false,enableMaxWidth=false }) => {
 const backgroundColor =background?`background:${background}`:'background: var(--spectrum-global-color-gray-100)'
+const maxheight = enableMaxHeight?`height:625px !important;`:''
+
   return (
     <section
       className={classNames(className,`spectrum--${theme}`)}
@@ -19,6 +22,7 @@ const backgroundColor =background?`background:${background}`:'background: var(--
           css={css`
           overflow-x:hidden !important;
           @media only screen and (min-width: ${DESKTOP_SCREEN_WIDTH}) {
+            ${maxheight}
             margin:auto;
               width:${DESKTOP_SCREEN_WIDTH}
             }
@@ -33,6 +37,7 @@ WrapperComponent.propTypes = {
   theme: PropTypes.string,
   content: PropTypes.object,
   background: PropTypes.string,
+  enableMaxHeight:PropTypes.bool,
 };
 
 export { WrapperComponent };

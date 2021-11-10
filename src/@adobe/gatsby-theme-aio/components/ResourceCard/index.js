@@ -5,13 +5,12 @@ import { GatsbyLink } from '@adobe/gatsby-theme-aio/src/components/GatsbyLink';
 import {
   getElementChild,
   layoutColumns,
-  getExternalLinkProps,
-  DESKTOP_SCREEN_WIDTH
+  getExternalLinkProps
 } from '@adobe/gatsby-theme-aio/src/utils';
 import '@spectrum-css/typography';
 import '@spectrum-css/card';
 import PropTypes from 'prop-types';
-// import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 import classNames from "classnames";
 
 const counter = {
@@ -77,7 +76,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
           @media screen and (min-width: ${MIN_MOBILE_SCREEN_WIDTH}) and (max-width: ${MAX_MOBILE_SCREEN_WIDTH}) {
             display: inline-flex !important;
             width: 50%;
-            }
+          }
         `}>
         <GatsbyLink
           className={`spectrum-Card spectrum-Card--vertical`}
@@ -98,7 +97,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
           <div
             className="spectrum-Card-preview"
             css={css`
-              height: var(--spectrum-global-dimension-size-3000);
+              height: var(--spectrum-global-dimension-size-2000);
               width: 100%;
               padding: 0 !important;
             `}>
@@ -129,7 +128,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
             className="spectrum-Card-body"
             css={css`
               flex: 1;
-              padding: var(--spectrum-global-dimension-size-300) !important;
+              padding: var(--spectrum-global-dimension-size-200) !important;
               justify-content: flex-start !important;
               overflow: hidden;
             `}>

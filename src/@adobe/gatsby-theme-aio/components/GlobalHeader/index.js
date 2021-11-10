@@ -21,7 +21,6 @@ import {
   rootFix,
   rootFixPages,
   getExternalLinkProps,
-  DESKTOP_SCREEN_WIDTH,
   MOBILE_SCREEN_WIDTH,
   DEFAULT_HOME
 } from '@adobe/gatsby-theme-aio/src/utils';
@@ -48,6 +47,7 @@ import '@spectrum-css/typography';
 import '@spectrum-css/assetlist';
 import { Divider } from '@adobe/gatsby-theme-aio/src/components/Divider';
 import DEFAULT_AVATAR from './avatar.svg';
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const getSelectedTabIndex = (location, pages) => {
   const pathWithRootFix = rootFix(location.pathname);
@@ -504,7 +504,7 @@ const GlobalHeader = ({
                             top: calc(-1 * var(--spectrum-global-dimension-size-100));
                             background-color: var(--spectrum-global-color-gray-100);
                           }
-                        
+
                         `}
                         `}
                         ref={setTabRef}
@@ -543,7 +543,7 @@ const GlobalHeader = ({
                             ${openMenuIndex === i && `transform: rotate(-90deg);`}
                           `}
                         />
-                        <div 
+                        <div
                           onMouseEnter={(event) => {
                             event.stopImmediatePropagation();
                             setOpenVersion(false);
@@ -565,7 +565,7 @@ const GlobalHeader = ({
                         <Popover
                           ref={setTabMenuRef}
                           id={menuPopoverId}
-                          
+
                           css={css`
                             margin-left: calc(-1 * var(--spectrum-global-dimension-size-65));
                             margin-top: var(--spectrum-global-dimension-size-25);

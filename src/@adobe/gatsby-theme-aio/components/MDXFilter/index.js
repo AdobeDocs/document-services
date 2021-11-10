@@ -26,9 +26,10 @@ import {
   SIDENAV_WIDTH,
   DEFAULT_HOME,
   rootFix,
-  rootFixPages,
-  DESKTOP_SCREEN_WIDTH
+  rootFixPages
 } from '@adobe/gatsby-theme-aio/src/utils';
+
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 import { Footer } from '@adobe/gatsby-theme-aio/src/components/Footer';
 import { Contributors } from '@adobe/gatsby-theme-aio/src/components/Contributors';

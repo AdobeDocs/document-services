@@ -15,10 +15,11 @@ import { css } from '@emotion/react';
 import { HeroButtons } from '@adobe/gatsby-theme-aio/src/components/Hero';
 import '@spectrum-css/typography';
 import '@spectrum-css/card';
-import { DESKTOP_SCREEN_WIDTH, TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
+import { TABLET_SCREEN_WIDTH, MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 import PropTypes from 'prop-types';
 import { navigate } from 'gatsby';
 import classNames from "classnames";
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const counter = {
   2: 0,
@@ -94,7 +95,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
       <div
         onClick={links ?
           () => navigate(links.props.children) :()=>('javascript')}
-          onKeyPress={links ? 
+          onKeyPress={links ?
             () => navigate(links.props.children) :()=>('javascript')}
         role="tab"
         tabIndex={0}
@@ -102,16 +103,17 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
         style={gradients && linearGradients(gradientsType)}
         css={css`
           margin: 0 var(--spectrum-global-dimension-size-300);
-          width: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-800));
+          width: calc(var(--spectrum-global-dimension-size-3000) - var(--spectrum-global-dimension-size-500));
+          // width: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-800));
           // height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-${height}));
           ${ !cursorDisable && `cursor:pointer;`}
           ${borderRadious && `border-radius: 10px;`}
-          &:hover { 
+          &:hover {
             border-color: var(--spectrum-card-border-color, var(--spectrum-global-color-gray-200));
           }
 
           @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-            width: calc(var(--spectrum-global-dimension-size-3600) - var(--spectrum-global-dimension-size-800));
+            width: var(--spectrum-global-dimension-size-3000);
           }
 
           @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
@@ -122,16 +124,23 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
         <div
           className="spectrum-Card-body"
           css={css`
-            height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-500));
+            // height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-500));
+           height: calc(var(--spectrum-global-dimension-size-3600) + var(--spectrum-global-dimension-size-900));
             overflow: auto;
             text-align: left;
+            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+              height: calc(var(--spectrum-global-dimension-size-3600) + var(--spectrum-global-dimension-size-150)) !important;
+            }
+            @media screen and (device-width: ${TABLET_SCREEN_WIDTH}) {
+              height: calc(var(--spectrum-global-dimension-size-3400) + var(--spectrum-global-dimension-size-900)) !important;
+            }
           `}>
           <div
             css={css`
               position: absolute;
               height: var(--spectrum-global-dimension-size-800);
               z-index: 1;
-              
+
             `}>
             {icon &&
               cloneElement(icon, {
@@ -139,7 +148,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
                   height: var(--spectrum-global-dimension-size-600);
                   width: var(--spectrum-global-dimension-size-600);
                   margin-top: 0;
-                  
+
                   img {
                     display: block;
                     height: 100%;
@@ -152,7 +161,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
             css={css`
               position: relative;
               z-index: 1;
-              ${ !gradients && `background-color: var(--spectrum-global-color-gray-50);` } 
+              ${ !gradients && `background-color: var(--spectrum-global-color-gray-50);` }
               ${icon ? 'top: var(--spectrum-global-dimension-size-800);' : ''}
             `}>
             <div
@@ -160,7 +169,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
               css={css`
                 margin-top: 0 !important;
                 margin-bottom: var(--spectrum-global-dimension-size-100) !important;
-                
+
               `}>
               <div
                 // className="spectrum-Card-title"
@@ -184,7 +193,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
               `}>
               {text && text.props.children}
             </div>
-            { buttonDisplay && 
+            { buttonDisplay &&
               <div
                style={{textAlign:'center',display:'flex',alignItems:'center',marginTop:'20px'}}
                >
@@ -198,14 +207,14 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
                       justify-content: center;
                     }
                   `}
-                />  
+                />
               </div>
             }
           </div>
-          
+
         </div>
-        
-        {footer && 
+
+        {footer &&
           <div className="spectrum-Card-footer">
             <HeroButtons
               buttons={buttons}

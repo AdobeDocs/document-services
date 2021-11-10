@@ -6,8 +6,10 @@ import {
   TABLET_SCREEN_WIDTH,
   layoutColumns,
   MOBILE_SCREEN_WIDTH,
-  DESKTOP_SCREEN_WIDTH,
 } from "@adobe/gatsby-theme-aio/src/utils";
+
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+
 import {
   HeroButtons,
   HeroImage,

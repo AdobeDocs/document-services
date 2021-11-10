@@ -20,7 +20,7 @@ apiHeroAssetImg doc-ext-invoice
 - [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-extract-api)
 
 
-<WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero"/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero" enableMaxHeight/>
 
 <WhyExtractAPI/>
 
@@ -55,7 +55,7 @@ Extracted content is output in a structured JSON file – with tables optionally
 
 <TextBlock slots="image" theme="light"  imgWidth="100%" className="media-horizantal-zero-padding  how-it-work-image mediaSize "/>
 
-![how-it-works-desktop](images/how-it-works-desktop.png)
+![how-it-works-desktop](../images/how-it-works-desktop.png)
 
 <TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link"/>
 
@@ -73,12 +73,12 @@ We take security serously - check out our [security overview](https://www.adobe.
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
 
-![](images/bg-hero.jpeg)
+![](../images/bg-hero.jpeg)
 
 ### We're ready to help
 
 Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-- [Contact us](./contact-us.md)
+- [Contact us](../pricing/contact-us.md)
 

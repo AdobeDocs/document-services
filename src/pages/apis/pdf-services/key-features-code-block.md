@@ -34,102 +34,102 @@ import RotatePDFPages from './rotate-pdf-pages.md';
 
 ### Extract PDF Content
 
-![Extract PDF Content](../images/s_createpdf_color_24.svg)
+![Extract PDF Content](../../images/s_createpdf_color_24.svg)
 
 <ExtractPDFContent/>
 
 ### Create PDF
 
-![Create PDF](../images/s_createpdf_color_24.svg)
+![Create PDF](../../images/s_createpdf_color_24.svg)
 
 <CreatePDF/>
 
 ### Document Generation
 
-![Document Generation](../images/ic-dynamic-pdf-gen-40.svg)
+![Document Generation](../../images/ic-dynamic-pdf-gen-40.svg)
 
 <DocumentGeneration/>
 
 ### Convert PDF
 
-![Convert PDF](../images/export_page.svg)
+![Convert PDF](../../images/export_page.svg)
 
 <ConvertPDF/>
 
 ### OCR PDF
 
-![OCR PDF](../images/recognize_text.svg)
+![OCR PDF](../../images/recognize_text.svg)
 
 <OcrPDF/>
 
 ### Secure PDF
 
-![Secure PDF](../images/s_protect_24.svg)
+![Secure PDF](../../images/s_protect_24.svg)
 
 <SecurePDF/>
 
 ### Remove PDF Password
 
-![Remove PDF Password](../images/s_unlock-pdf_22.svg)
+![Remove PDF Password](../../images/s_unlock-pdf_22.svg)
 
 <RemovePDFPassword/>
 
 ### Get PDF Properties
 
-![Get PDF Properties](../images/s_properties_22.svg)
+![Get PDF Properties](../../images/s_properties_22.svg)
 
 <GetPDFProperties/>
 
 ### Split PDF
 
-![Split PDF](../images/s_split-pdf_22.svg)
+![Split PDF](../../images/s_split-pdf_22.svg)
 
 <SplitPDF/>
 
 ### Combine PDF
 
-![Combine PDF](../images/s_combinefiles_color_24.svg)
+![Combine PDF](../../images/s_combinefiles_color_24.svg)
 
 <CombinePDF/>
 
 ### Compress PDF
 
-![Compress PDF](../images/compress_pdf.svg)
+![Compress PDF](../../images/compress_pdf.svg)
 
 <CompressPDF/>
 
 ### Reorder PDF Pages
 
-![Reorder PDF Pages](../images/reorder_page.svg)
+![Reorder PDF Pages](../../images/reorder_page.svg)
 
 <ReorderPDFPages/>
 
 ### Linearize PDF
 
-![Linearize PDF](../images/linearize_pdf.svg)
+![Linearize PDF](../../images/linearize_pdf.svg)
 
 <LinearizePDF/>
 
 ### Insert PDF Pages
 
-![Insert PDF Pages](../images/insert_page.svg)
+![Insert PDF Pages](../../images/insert_page.svg)
 
 <InsertPDFPages/>
 
 ### Replace PDF Pages
 
-![Replace PDF Pages](../images/replace_page.svg)
+![Replace PDF Pages](../../images/replace_page.svg)
 
 <ReplacePDFPages/>
 
 ### Delete PDF Pages
 
-![Delete PDF Pages](../images/delete_page.svg)
+![Delete PDF Pages](../../images/delete_page.svg)
 
 <DeletePDFPages/>
 
 ### Rotate PDF Pages
 
-![Rotate PDF Pages](../images/rotate_page.svg)
+![Rotate PDF Pages](../../images/rotate_page.svg)
 
 <RotatePDFPages/>

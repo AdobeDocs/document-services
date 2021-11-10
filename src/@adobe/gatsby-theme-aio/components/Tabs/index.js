@@ -5,7 +5,9 @@ import { css } from '@emotion/react';
 import nextId from 'react-id-generator';
 import '@spectrum-css/tabs';
 
-import { cloneChildren, MOBILE_SCREEN_WIDTH, TABLET_SCREEN_WIDTH, layoutColumns, DESKTOP_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
+import { cloneChildren, MOBILE_SCREEN_WIDTH, TABLET_SCREEN_WIDTH, layoutColumns } from '@adobe/gatsby-theme-aio/src/utils';
+
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const positionIndicator = (indicator, selectedTab) => {
   indicator.current.style.transform = `translate(${selectedTab.current.offsetLeft}px, 0px)`;
@@ -244,7 +246,6 @@ const TabsBlock = ({
         display: ${orientation === 'vertical' ? 'inline-flex': ''};
 
           @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
-            // max-width: ${DESKTOP_SCREEN_WIDTH};
             margin: 0 auto !important
           }
 
@@ -261,7 +262,8 @@ const TabsBlock = ({
             position: relative;
             grid-template-columns: 300px calc(100% - 300px);
             margin-top: var(--spectrum-global-dimension-size-300);
-            width:${layoutColumns(12)} !important;
+            // width:${layoutColumns(12)} !important;
+            width:${DESKTOP_SCREEN_WIDTH} !important;
 
             @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
               // display: initial !important;
@@ -296,11 +298,11 @@ const TabsBlock = ({
                     label={<b>{data['heading']}</b>}
                     icon={data['image']}
                     onKeyDown={(e) => {
-                      if (e.key === 'ArrowDown') {
-                          e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
+                      if (e.key === 'ArrowDown' || e.key === 'Enter') {
+                        e.currentTarget.nextSibling && e.currentTarget.nextSibling.nextSibling.focus();
                       }
                       if (e.key === 'ArrowUp') {
-                          e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
+                        e.currentTarget.previousSibling && e.currentTarget.previousSibling.previousSibling.focus();
                       }
                     }}
                     onFocus={() => {
@@ -357,12 +359,16 @@ const TabsBlock = ({
                       className="mobileTabView"
                       hidden={!isSelected}
                       css={css`
+                        display: none;
                         padding: var(--spectrum-global-dimension-size-0) !important;
                         h3 {
                           font-size:var(--spectrum-heading-s-text-size, var(--spectrum-alias-heading-s-text-size));
                         }
                         p {
                           font-size: var(--spectrum-body-s-text-size, var(--spectrum-global-dimension-font-size-150))
+                        }
+                        @media only screen and (max-width: ${mobileMinWidth}) {
+                          display: block;
                         }
                       `}
                     >

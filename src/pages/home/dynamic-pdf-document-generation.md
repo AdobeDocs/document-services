@@ -17,7 +17,8 @@ Merge your JSON data with custom Word templates to generate high-fidelity PDF an
 #### REST API
 
 ```bash
-curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith=%7B%22reltype%22%3A%20%22http%3A%2F%2Fns.adobe.com%2Frel%2Fprimary%22%7D' \
+curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith=
+    %7B%22reltype%22%3A%20%22http%3A%2F%2Fns.adobe.com%2Frel%2Fprimary%22%7D' \
   --header 'Authorization: Bearer ' \
   --header 'Accept: application/json, text/plain, */*' \
   --header 'x-api-key: ' \
@@ -52,7 +53,8 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
                 \"totalAmount\": 300,
                 \"previousBalance\": 50,
                 \"lastThreeBillings\": [100, 200, 300],
-                \"photograph\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88h8AAu0B9XNPCQQAAAAASUVORK5CYII=\"
+                \"photograph\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC
+                1HAwCAAAAC0lEQVR42mP88h8AAu0B9XNPCQQAAAAASUVORK5CYII=\"
               }
            }
         }

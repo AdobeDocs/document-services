@@ -21,7 +21,7 @@
         justify-content: flex-start;
         text-align: left;
         padding: 1rem 0;
-    } 
+    }
 }
 .header-and-more h3 {
     /* font-family: 'Adobe Clean Black' !important; */
@@ -58,47 +58,49 @@ section.sdk-rsrc-release {
     margin: 4.375rem 2.75rem 0 2.75rem !important;
 }
 section.sdk-rsrc-release .release-container {
-    max-width: 1280px;
+    max-width: 1060px;
     margin: 0 auto;
     min-height: 360px;
 }
+
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     section.sdk-rsrc-release .release-container{
-        /* max-width: 800px; */
         margin: 4.375rem 2.75rem;
     }
 }
+
 @media (max-width: 320px)   {
      section.sdk-rsrc-release .release-container{
         max-width: 300px;
-        /* margin: 4.375rem 2.75rem; */
     }
 }
+
 section.sdk-rsrc-release .release-container .release-wrapper {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 4.0625rem;
+    flex-direction: row;
 }
-@media screen and (min-width: 1440px) {
-    section.sdk-rsrc-release .release-container .release-wrapper {
-        flex-direction: row;
-   }
-}
+
+
 section.sdk-rsrc-release .release-container .release-wrapper .release-wrapper-img {
     width: 100%;
 }
-@media screen and (min-width: 1440px) {
+
+@media screen and (min-width: 1060px) {
     section.sdk-rsrc-release .release-container .release-wrapper .release-wrapper-img {
-        width: 48.44%;
+        width: 45.44%;
    }
 }
+
 section.sdk-rsrc-release .release-container .release-wrapper .release-wrapper-img img {
     width: 100%;
 }
 section.sdk-rsrc-release .release-container .release-wrapper .release-copy-wrapper {
     margin-top: 1.25rem;
 }
-@media screen and (min-width: 1440px) {
+
+@media screen and (min-width: 1060px) {
     section.sdk-rsrc-release .release-container .release-wrapper .release-copy-wrapper {
         text-align: left;
         margin-left: 4.375rem;
@@ -230,18 +232,26 @@ section.sdk-rsrc-featured .featured-container {
     padding-top: 3.125rem !important;
     padding-bottom: 5.625rem;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1060px) {
     section.sdk-rsrc-featured .featured-container {
-        margin: 4.375rem 2.75rem;
-
-   }
-}
-@media screen and (min-width: 1440px) {
-    section.sdk-rsrc-featured .featured-container {
-        max-width: 1280px;
+        max-width: 1060px;
         margin: 0 auto;
    }
 }
+@media screen and (width: 1440px) {
+    section.sdk-rsrc-featured .featured-container {
+        max-width: 1060px;
+        margin: 0 auto;
+   }
+}
+
+@media screen  and  (max-width:1150px)  and (min-width:1060px){
+    section.sdk-rsrc-featured .featured-container {
+        padding-left: 2.75rem;
+   }
+}
+
+
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     section.sdk-rsrc-featured .featured-container {
         /* max-width: 800px; */
@@ -270,7 +280,7 @@ section.sdk-rsrc-featured .featured-container .featured-wrapper {
     flex-direction: column;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1060px) {
     section.sdk-rsrc-featured .featured-container .featured-wrapper {
         flex-direction: row;
         margin-top: 1.875rem;
@@ -293,12 +303,12 @@ section.sdk-rsrc-featured .featured-container .featured-wrapper a {
     max-width: none;
     max-height: 8.1875rem;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1060px) {
     section.sdk-rsrc-featured .featured-container .featured-wrapper a {
         max-width: 25rem;
    }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1060px) {
     section.sdk-rsrc-featured .featured-container .featured-wrapper a:not(:last-child) {
         margin-right: 2.5rem;
    }
@@ -324,7 +334,7 @@ section.sdk-rsrc-featured .featured-container .featured-wrapper a .featured-thum
     background-position: center center;
     background-size: cover;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1060px) {
     section.sdk-rsrc-featured .featured-container .featured-wrapper a .featured-thumb {
         width: 8.125rem;
    }
@@ -376,8 +386,8 @@ section.sdk-rsrc-tutorial {
 }
 
 section.sdk-rsrc-tutorial .tutorial-container {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 1060px;
+    margin: 0 auto !important;
     padding-bottom: 6.25rem;
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -407,11 +417,7 @@ section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper {
     flex-wrap: wrap;
     text-decoration: none;
 }
-@media screen and (min-width: 767px) {
-    section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper {
-        justify-content: center;
-   }
-}
+
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper {
         justify-content: center;
@@ -435,25 +441,27 @@ section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial {
         margin-right: 0;
    }
 }
+
 @media screen and (min-width: 1024px) {
     section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial {
         width: 18.125rem;
-        /* background-color: red; */
         margin-right: 2.5rem !important;
    }
     section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial:nth-child(3n+3) {
         margin-right: 0;
    }
 }
-@media screen and (min-width: 1440px) {
+
+@media screen and (max-width: 1060px) and (min-width:1024px) {
     section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial {
-        width: 18.125rem;
+        width: 17.125rem;
         margin-right: 2.5rem !important;
    }
-    section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial:nth-child(4n+4) {
-        margin-right: 0 !important;
+    section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial:nth-child(3n+3) {
+        margin-right: 0;
    }
 }
+
 section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial a {
     text-decoration: none !important;
 }
@@ -461,11 +469,7 @@ section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial a div 
     width: 100%;
     height: 160px;
 }
-@media screen and (min-width: 1440px) {
-    section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial a div {
-        width: 290px;
-   }
-}
+
 section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial a div.tut-thumb {
     background: url("../pages/images/1_7eVhB0dKwix3bHAgxE-T5g.jpeg");
     background-repeat: no-repeat;
@@ -495,12 +499,8 @@ section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial span {
         font-size: 0.75rem;
    }
 }
-/* .masterblog{
-        margin: 4.375rem 2.75rem;
-} */
+
 section.sdk-rsrc-blog {
-    /* margin-top: 0 !important;
-    margin-bottom: 0 !important; */
     margin: 0 2.75rem;
 }
 section.sdk-rsrc-blog .blog-container {
@@ -508,22 +508,17 @@ section.sdk-rsrc-blog .blog-container {
     display: block;
     position: relative;
 }
-@media screen and (min-width: 1440px) {
     section.sdk-rsrc-blog .blog-container {
-        max-width: 1280px;
+        max-width: 1060px;
     }
-}
 @media (min-width: 320px) and (max-width: 768px)  {
     section.sdk-rsrc-blog .blog-container {
         max-width: auto;
-        /* margin: 0 2.75rem; */
-        /* background-color: red; */
     }
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     section.sdk-rsrc-blog .blog-container {
         max-width: auto;
-        /* margin: 0 2.75rem; */
         overflow-x: hidden !important;
     }
 }
@@ -540,39 +535,16 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper {
         flex-shrink: 0;
     }
 }
-/* @media (min-width: 320px) and (max-width: 768px)  {
-     .blog-wrapper {
-        flex-wrap: nowrap;
-   }
-} */
+
 section.sdk-rsrc-blog .blog-container .blog-wrapper > div {
-    /* margin-top: 1.875rem; //orginal*/ 
     margin-top: 1.875rem;
-    /* width: 100%; */
 }
-@media screen and (min-width: 1024px) {
-    section.sdk-rsrc-blog .blog-container .blog-wrapper > div {
-        width: 290px ;
-        padding-right: 0.8px;
-   }
-}
-@media screen and (min-width: 1440px) {
-    section.sdk-rsrc-blog .blog-container .blog-wrapper > div {
-        width: 24.5rem;
-        flex-shrink: 0;
-   }
-}
-/* @media (min-width: 320px) and (max-width: 770px) {
-    section.sdk-rsrc-blog .blog-container .blog-wrapper > div  {
-        max-width: 300px !important;
-   }
-} */
 @media screen and (min-width: 1024px) {
     section.sdk-rsrc-blog .blog-container .blog-wrapper > div:not(:last-child) {
         margin-right: 20;
    }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1060px) {
     section.sdk-rsrc-blog .blog-container .blog-wrapper > div:not(:last-child) {
         margin-right: 2.5rem;
    }
@@ -589,11 +561,7 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div a .blog-img-container 
         height: 163px !important;
    }
 }
-/* @media (max-width: 320px)   {
-    .blog-wrapper > div a .blog-img-container img {
-        max-width: auto;
-    }
-} */
+
 section.sdk-rsrc-blog .blog-container .blog-wrapper > div a .blog-img-container img {
     width: 100%;
     height: 100%;
@@ -605,8 +573,6 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div a .blog-img-container 
 section.sdk-rsrc-blog .blog-container .blog-wrapper > div a p {
     text-align: left !important;
     margin-top: 0.625rem;
-    /* position: relative; */
-    /* display: inline-block; */
 }
 
 
@@ -629,13 +595,13 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
     color: #505050;
     overflow-wrap: break-word;
     word-wrap: break-word;
-  
+
     -ms-word-break: break-all;
     /* This is the dangerous one in WebKit, as it breaks things wherever */
     word-break: break-all;
     /* Instead use this non-standard one: */
     word-break: break-word;
-  
+
     /* Adds a hyphen where the word breaks, if supported (No Blink) */
     -ms-hyphens: auto;
     -moz-hyphens: auto;
@@ -647,4 +613,9 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
     section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
         font-size: 1rem;
    }
+}
+
+.featured-img-dimensions {
+    width: 100%;
+    height: 100%;
 }

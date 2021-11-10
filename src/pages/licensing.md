@@ -1,3 +1,0 @@
----
-title: Adobe Developer — Licensing
----

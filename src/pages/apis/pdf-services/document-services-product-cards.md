@@ -11,7 +11,7 @@ title: Adobe Developer — PDF Services API  —  Explore other Adobe Document s
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img" iconStyle/>
 
-![Extract](../images/high-fidelity.svg)
+![Extract](../../images/high-fidelity.svg)
 
 #### Extract
 
@@ -22,7 +22,7 @@ Extract text, table, images and document structure.
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img"/>
 
-![Generate](../images/rapid-results.svg)
+![Generate](../../images/rapid-results.svg)
 
 #### Generate
 
@@ -35,7 +35,7 @@ Generate PDF and word documents from custom word templates
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Embed](../images/customizable_experience.svg)
+![Embed](../../images/customizable_experience.svg)
 
 #### Embed
 

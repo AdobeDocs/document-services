@@ -4,7 +4,7 @@ description: Automatically generate custom branded sales proposals, legal contra
 ---
 
 
-import { sampleProducts,clouds } from '../../components/product.js';
+import { sampleProducts,clouds } from '../../../components/product.js';
 
 <TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left pt-grid-title-padding-bottom"/>
 

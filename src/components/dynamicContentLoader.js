@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { css } from "@emotion/react";
 import PropTypes from "prop-types";
 import "@spectrum-css/typography";
+import heroImg from '../pages/images/resource_hero_img.jpg'
 
 const getImageURl = (url) => {
   let imageURL = url.split("/");
@@ -18,6 +19,24 @@ const getIframeImage = (iframsrc) => {
   let rawImgSrc = firstImage ? firstImage.getAttribute("src") : "";
   return rawImgSrc;
 };
+
+const featuredContent = [
+  {
+    Title :'Make PDFs Searchable (OCR)',
+    URL : 'https://medium.com/adobetech/make-pdfs-searchable-ocr-after-importing-into-sharepoint-1a8037744841',
+    Thumbnail :'https://miro.medium.com/max/2000/1*jtBGYybaNL4eUFdWGKfQhg.png'
+  },
+  {
+    Title :'Generate Documents',
+    URL :'https://medium.com/adobetech/generate-documents-and-send-in-bulk-for-signature-in-microsoft-power-automate-807838092dcf',
+    Thumbnail :'https://miro.medium.com/max/1400/1*Vo9WQpEPCneEAqhvcJGYhQ.png'
+  },
+  {
+    Title :'Digging Out Data with Adobe PDF Extract API',
+    URL:'https://medium.com/adobetech/digging-out-data-with-adobe-pdf-extract-api-cf4b1712f05a',
+    Thumbnail :'https://miro.medium.com/max/700/0*wEiusXlHRz2gm6dj'
+  }
+]
 
 const DynamicContentLoader = ({
   api = "",
@@ -51,7 +70,7 @@ const DynamicContentLoader = ({
               <div className="release-wrapper-img">
                 <a href={resData?.data[0].URL} target="_parent">
                   <img
-                    src={getImageURl(resData?.data[0].Thumbnail)}
+                    src={heroImg}
                     alt="Illustration"
                   />
                 </a>
@@ -75,7 +94,7 @@ const DynamicContentLoader = ({
           </div>
         </section>
       )}
-      {content === "feature" && resData?.data?.length > 0 && (
+      {content === "feature"  && (
         <>
           <section className="sdk-rsrc-anchor">
             <div className="anchor-container">
@@ -105,14 +124,15 @@ const DynamicContentLoader = ({
             <div className="featured-container">
               <h3>Featured</h3>
               <div className="featured-wrapper">
-                {resData?.data?.map((data) => (
+                {featuredContent.map((data) => (
                   <a href={data.URL} target="_parent" key={data.Title}>
                     <div
                       className="featured-thumb feat1"
-                      style={`background: url(${getImageURl(data.Thumbnail)})`}
-                    ></div>
+                    >
+                      <img src={data.Thumbnail}  className="featured-img-dimensions" alt={data.Title}/>
+                    </div>
                     <div className="featured-copy-wrapper">
-                      <div className="featured-title">Tutorial</div>
+                      <div className="featured-title">Featured</div>
                       <div className="featured-text">{data.Title}</div>
                     </div>
                   </a>

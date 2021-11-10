@@ -5,12 +5,11 @@ import { Media } from "@adobe/gatsby-theme-aio/src/components/Media";
 import PropTypes from "prop-types";
 import {
   layoutColumns,
-  TABLET_SCREEN_WIDTH,
-  DESKTOP_SCREEN_WIDTH
+  TABLET_SCREEN_WIDTH
 } from "@adobe/gatsby-theme-aio/src/utils";
 import classNames from "classnames";
 import "@spectrum-css/typography";
-
+import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const counter = {
   2: 0,
