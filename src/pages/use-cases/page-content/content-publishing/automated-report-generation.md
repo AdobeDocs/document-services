@@ -16,8 +16,8 @@ Adobe Document Services allows businesses to:
 
 ### Relevant APIs
 
-* [Adobe PDF Services API](/src/pages/pdf-services.md)
-* [Adobe Document Generation API](/src/pages/doc-generation.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
+* [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
 
 ### Scenario
 

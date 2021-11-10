@@ -37,4 +37,4 @@ Copy JavaScript code or download samples for React and Angular
 
 Add credentials to your code and run!
 
-* [See Documentation](https://www.adobe.com/go/pdfembedapi_docs)
+* [See documentation](/document-services/docs/overview/)

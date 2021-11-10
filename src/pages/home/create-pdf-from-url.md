@@ -7,7 +7,7 @@ description: Own the end-to-end customer experience. Our SDK Developer kits are 
 
 ##### Create PDF from URL
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](/document-services/docs/overview/)
 
 Create PDFs from a variety of formats, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, and, Zip
 

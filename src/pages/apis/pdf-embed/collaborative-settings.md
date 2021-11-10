@@ -13,7 +13,7 @@ For multi-user document collaboration, identify reviewers by name or email addre
 
 
 
-- [See documentation](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view)
+- [See documentation](/document-services/docs/overview/pdf-extract-api/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 

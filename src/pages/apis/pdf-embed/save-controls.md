@@ -10,7 +10,7 @@ title: Adobe Developer — PDF Embed API  — save controls
 Support auto-save to local drives or external storage, with options for frequency and polling, along with success/fail events capture; use file modification and status polling events for multi-user workflows
 
 
-- [See documentation](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view)
+- [See documentation](/document-services/docs/overview/pdf-extract-api/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 
@@ -35,11 +35,11 @@ adobeDCView.registerCallback(
         }
       });
     });
-  }, 
+  },
 saveOptions);
 ```
 
-<!-- 
+<!--
 <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
 - [Get free cretentials](/src/pages/gettingstarted.md) -->

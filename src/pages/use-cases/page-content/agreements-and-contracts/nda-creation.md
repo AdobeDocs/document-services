@@ -16,7 +16,7 @@ With Adobe Document Services, companies can:
 
 ### Relevant APIs
 
-* [Adobe Document Generation API](/src/pages/doc-generation.md)
+* [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
 * [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario

@@ -33,5 +33,5 @@ Leverage Adobe Sensei for a rich understanding of **content structure** with hig
 
 <TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn"/>
 
-* [Learn more](/src/pages/pdf-extract)
+* [Learn more](/src/pages/apis/pdf-extract)
 

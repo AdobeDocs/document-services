@@ -16,8 +16,8 @@ Adobe Document Services will let organizations:
 
 ### Relevant APIs
 
-* [Adobe Document Generation API](/src/pages/doc-generation.md)
-* [Adobe PDF Embed API](/src/pages/pdf-embed.md)
+* [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
+* [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
 * [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario

@@ -10,8 +10,8 @@ Analysis of the content contained in PDF documents is often required to enable b
 
 ### APIs Used
 
-* [Adobe PDF Extract API](/src/pages/pdf-extract.md)
-* [Adobe PDF Embed API](/src/pages/pdf-embed.md)
+* [Adobe PDF Extract API](/src/pages/apis/pdf-extract.md)
+* [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
 
 ### Scenario
 

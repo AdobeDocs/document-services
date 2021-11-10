@@ -9,7 +9,7 @@ title: Adobe Developer — PDF Embed API  — menu & tool options
 Programmatically enable or disable the left-hand panel, comments pane, toolbars, print, and download options
 
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](/document-services/docs/overview/pdf-extract-api/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 
@@ -29,7 +29,7 @@ Programmatically enable or disable the left-hand panel, comments pane, toolbars,
 </script>
 ```
 
-<!-- 
+<!--
 <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 
 - [Get free cretentials](/src/pages/gettingstarted.md) -->

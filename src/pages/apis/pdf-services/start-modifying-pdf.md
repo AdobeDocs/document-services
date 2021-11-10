@@ -34,5 +34,5 @@ Download ready to run samples for Node.js, Java, and .NET
 
 Add credentials to your code and run!
 
-- [See Documentation](https://www.adobe.com/go/pdfembedapi_docs)
+- [See documentation](/document-services/docs/overview/)
 - [API Reference](https://www.adobe.com/go/dcsdk_APIdocs)

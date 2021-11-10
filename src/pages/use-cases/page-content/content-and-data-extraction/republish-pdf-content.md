@@ -10,7 +10,7 @@ Content originally published in PDF documents can be repurposed to extend its re
 
 ### Relevant APIs
 
-* [Adobe PDF Extract API](/src/pages/pdf-extract.md)
+* [Adobe PDF Extract API](/src/pages/apis/pdf-extract.md)
 
 ### Scenario
 

@@ -19,9 +19,9 @@ Adobe Document Services allows organizations to:
 
 ### Relevant APIs
 
-* [Adobe PDF Services API](/src/pages/pdf-services.md)
-* [Adobe PDF Extract API](/src/pages/pdf-extract.md)
-* [Adobe PDF Embed API](/src/pages/pdf-embed.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
+* [Adobe PDF Extract API](/src/pages/apis/pdf-extract.md)
+* [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
 
 ### Scenario
 

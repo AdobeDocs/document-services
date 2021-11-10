@@ -14,9 +14,9 @@ Employee offer letters are one of the first experiences new hires have with an o
 
 ### Relevant APIs
 
-* [Adobe PDF Services API](/src/pages/pdf-services.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 * [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
-* [Adobe Document Generation API](/src/pages/doc-generation.md)
+* [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
 
 ### Scenario
 

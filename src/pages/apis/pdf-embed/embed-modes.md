@@ -10,7 +10,7 @@ title: Adobe Developer — PDF Embed API  — Embed modes
 
 Control how you embed PDFs, with support for full-sized windows, sized containers, in-line display, and lightboxes
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](/document-services/docs/overview/pdf-extract-api/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 
@@ -23,7 +23,7 @@ Control how you embed PDFs, with support for full-sized windows, sized container
   document.addEventListener("adobe_dc_view_sdk.ready", function(){
     var adobeDCView = new AdobeDC.View({clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view"});
     adobeDCView.previewFile({
-      content:{ location: 
+      content:{ location:
         { url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea%20Brochure.pdf"}},
       metaData:{fileName: "Bodea Brochure.pdf"}
     },

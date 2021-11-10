@@ -16,8 +16,8 @@ There are more than 2.5 trillion PDFs on the Internet, and one of the main reaso
 
 ### Relevant APIs
 
-* [Adobe PDF Embed API](/src/pages/pdf-embed.md)
-* [Adobe PDF Services API](/src/pages/pdf-services.md)
+* [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 
 ### Scenario
 

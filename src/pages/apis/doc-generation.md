@@ -65,7 +65,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <TextBlock slots="buttons" theme="lightest" isCentered className="padding-5"/>
 
-- [See all Use Case](https://www.adobe.io/apis/documentcloud/dcsdk/sales-proposals-and-contracts.html)
+- [See all Use Case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <!-- Explore other Adobe Document Cloud services -->
 

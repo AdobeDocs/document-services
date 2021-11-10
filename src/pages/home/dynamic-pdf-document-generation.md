@@ -8,7 +8,7 @@ description: Own the end-to-end customer experience. Our SDK Developer kits are 
 
 ##### Dynamic PDF Document Generation
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](/document-services/docs/overview/)
 
 Merge your JSON data with custom Word templates to generate high-fidelity PDF and Word documents
 

@@ -7,7 +7,7 @@ description: Own the end-to-end customer experience. Our SDK Developer kits are 
 
 ##### Embed PDF for viewing and analytics
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](/document-services/docs/overview/)
 
 Embed PDF for viewing and analytics, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, and, Zip
 

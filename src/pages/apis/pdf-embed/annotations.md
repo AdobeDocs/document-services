@@ -11,7 +11,7 @@ title: Adobe Developer — PDF Embed API  — annotations
 Full support for import, create, delete, update, exporting of comments, and more; programmatically add, update, and delete annotations with the option to save; events can be triggered based on user actions
 
 
-- [See documentation](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view)
+- [See documentation](/document-services/docs/overview/pdf-extract-api/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 

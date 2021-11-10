@@ -27,9 +27,9 @@ Adobe Document Services can help these organizations simplify the complex proces
 
 ### Relevant APIs
 
-* [Adobe PDF Embed API](/src/pages/pdf-embed.md)
-* [Adobe PDF Services API](/src/pages/pdf-services.md)
-* [Adobe PDF Extract API](/src/pages/pdf-extract.md)
+* [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
+* [Adobe PDF Extract API](/src/pages/apis/pdf-extract.md)
 
 
 ###  Scenario

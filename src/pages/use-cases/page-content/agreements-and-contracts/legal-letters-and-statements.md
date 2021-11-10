@@ -14,8 +14,8 @@ Legal firms and teams produce countless legal letters and statements for their c
 
 ### Relevant APIs
 
-* [Adobe PDF Services API](/src/pages/pdf-services.md)
-* [Adobe Document Generation API](/src/pages/doc-generation.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
+* [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
 * [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario

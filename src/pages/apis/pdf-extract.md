@@ -33,7 +33,7 @@ apiHeroAssetImg doc-ext-invoice
 
 <TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
 
-- [View all Use Case](/src/pages/use-cases)
+- [View all Use Case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" repeat="1" theme="light"/>
 

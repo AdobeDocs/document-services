@@ -17,9 +17,9 @@ Using Adobe Document Services, sales teams can:
 
 ### Relevant APIs
 
-* [Adobe Document Generation API](/src/pages/doc-generation.md)
+* [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
 * [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
-* [Adobe PDF Services API](/src/pages/pdf-services.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 
 ### Scenario
 

@@ -35,7 +35,7 @@ doc-services-hero
 
 PDF Services API is a collection of multiple services capable of quickly solving specific challenges and powering multi-step document workflows using SDKs for Node.js, Java, and .Net. With it, you gain access to basic PDF services, such as creating, securing, compressing, converting, combining, and splitting PDFs, as well as more advanced services,including Document Generation and PDF Extract. Do more with this API.
 
-- [Learn more](./pdf-services.md)
+- [Learn more](/src/pages/apis/pdf-services.md)
 
 
 
@@ -46,7 +46,7 @@ PDF Services API is a collection of multiple services capable of quickly solving
 
 Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
 
-- [Learn more](./pdf-extract.md)
+- [Learn more](/src/pages/apis/pdf-extract.md)
 
 ![ExtractAPI](images/extractAPI.png)
 
@@ -61,7 +61,7 @@ Leverage the free javascript API to embed PDFs without the need for end users to
 
 Use the PDF Tools API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
 
-- [Learn more](doc-generation.md)
+- [Learn more](/src/pages/apis/doc-generation.md)
 - [Demo](https://adobe.com/go/dcdocgen_api_demo)
 
 
@@ -73,7 +73,7 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 
 Leverage our free javascript API to embed PDFs without the need for end users to download additional plugins. Provide rich PDF viewing and easily enable digital collaboration and document analytics.
 
-- [Learn more](./pdf-embed.md)
+- [Learn more](/src/pages/apis/pdf-embed.md)
 - [Demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
 ![API Embed](images/Embed.png)
@@ -133,7 +133,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <TextBlock slots="buttons" isCentered theme="light"  className='padding-5'/>
 
-- [View all use cases](/src/pages/use-cases)
+- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 
 

@@ -16,8 +16,8 @@ Adobe Document Services lets teams:
 
 ### Relevant APIs
 
-* [Adobe PDF Embed API](/src/pages/pdf-embed.md)
-* [Adobe PDF Services API](/src/pages/pdf-services.md)
+* [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 
 ### Scenario
 

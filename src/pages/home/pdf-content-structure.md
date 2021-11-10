@@ -7,7 +7,7 @@ description: Own the end-to-end customer experience. Our SDK Developer kits are 
 
 ##### Extract PDF Content & Structure
 
-- [See documentation](/src/pages/gettingstarted.md)
+- [See documentation](/document-services/docs/overview/)
 
 Extract content from scanned and native PDFs to use for database insertion, content republishing, RPA, and more
 

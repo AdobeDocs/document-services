@@ -20,5 +20,5 @@ import { products,clouds } from '../../components/product.js';
 
 Have questions about the Document Services APIs?
 
-- [Go to the Adobe Forum](/src/pages/gettingstarted.md)
+- [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 - [Contact us](../pricing/contact-us.md)

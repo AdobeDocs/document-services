@@ -12,7 +12,7 @@ carousel-adobe
 
 ### We now offer all of our PDF Services APIs for purchase as a subscription in AWS console
 
-- [Learn more](/src/pages/pdf-pricing.md#AWS)
+- [Learn more](/src/pages/pricing/main.md#AWS)
 
 carousel-micosoft
 

@@ -72,7 +72,7 @@ apiHeroAssetImg doc-service-hero
 
 <TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
 
-- [View all Use Case](/src/pages/use-cases)
+- [View all Use Case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 
 

@@ -113,8 +113,7 @@ Out of the box Adobe Analytics integration allows customers to seamlessly enable
 
 <TextBlock slots="buttons" isCentered theme="lightest" className='padding-5'/>
 
-* [See all Use Case](/src/pages/use-cases)
-
+* [See all Use Case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 
 <WrapperComponent slots="content" theme="light"/>
