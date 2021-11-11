@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Embed API  — pdf analytics
 
 
 
-<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue code-block-button-padding'/>
+<TextBlock slots="heading, text, buttons"  theme="dark" hasCodeBlock className='bgBlue code-block-button-padding'/>
 
 ##### PDF ANALYTICS
 

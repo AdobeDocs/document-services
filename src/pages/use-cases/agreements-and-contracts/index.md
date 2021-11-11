@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Sales Proposals and Contracts
+title: 'Document Services API Use Case: Sales Proposals and Contract'
 ---
 
 import IndexConent from '../page-content/agreements-and-contracts/sales-proposals-and-contracts.md';

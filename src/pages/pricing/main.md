@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — DC Platform SDK Resources
+title: DC Platform SDK Resources
 ---
 import PDFEmbed from './pdf-embed-api.md'
 import PDFService from './pdf-services-api.md'

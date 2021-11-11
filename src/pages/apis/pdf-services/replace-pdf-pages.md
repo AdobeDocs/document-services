@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — Replace PDF Pages
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue link"/>
+<TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link"/>
 
 ### Replace a page within a PDF file
 
@@ -27,14 +27,18 @@ const baseInputFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/base
 replacePagesOperation.setBaseInput(baseInputFile);
 
 // Create a FileRef instance using a local file.
-const firstInputFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/replacePagesInput1.pdf'),
+const firstInputFile = PDFServicesSdk.FileRef.
+createFromLocalFile('resources/replacePagesInput1.pdf'),
 pageRanges = getPageRangesForFirstFile();
 
-// Adds the pages (specified by the page ranges) of the input PDF file for replacing the page of the base PDF file.
+// Adds the pages (specified by the page ranges) of the input PDF
+//file for replacing the page of the base PDF file.
+
 replacePagesOperation.addPagesForReplace(1, firstInputFile, pageRanges);
 
 // Create a FileRef instance using a local file.
-const secondInputFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/replacePagesInput2.pdf');
+const secondInputFile = PDFServicesSdk.FileRef.
+createFromLocalFile('resources/replacePagesInput2.pdf');
 
 // Adds all the pages of the input PDF file for replacing the page of the base PDF file.
 replacePagesOperation.addPagesForReplace(3, secondInputFile);
@@ -63,7 +67,9 @@ FileRef firstInputFile = FileRef.CreateFromLocalFile(
   );
 PageRanges pageRanges = GetPageRangeForFirstFile();
 
-// Adds the pages (specified by the page ranges) of the input PDF file for replacing the page of the base PDF file.
+// Adds the pages (specified by the page ranges) of the
+//input PDF file for replacing the page of the base PDF file.
+
 replacePagesOperation
   .AddPagesForReplace(firstInputFile, pageRanges, 1);
 
@@ -72,7 +78,9 @@ FileRef secondInputFile = FileRef.CreateFromLocalFile(
     @"replacePagesInput2.pdf"
   );
 
-// Adds all the pages of the input PDF file for replacing the page of the base PDF file.
+// Adds all the pages of the input PDF file
+//for replacing the page of the base PDF file.
+
 replacePagesOperation
   .AddPagesForReplace(secondInputFile, 3);
 
@@ -103,7 +111,9 @@ FileRef firstInputFile = FileRef.createFromLocalFile(
   );
 PageRanges pageRanges = getPageRangeForFirstFile();
 
-// Adds the pages (specified by the page ranges) of the input PDF file for replacing the page of the base PDF file.
+// Adds the pages (specified by the page ranges) of the
+//input PDF file for replacing the page of the base PDF file.
+
 replacePagesOperation.addPagesForReplace(
     firstInputFile, pageRanges, 1
   );

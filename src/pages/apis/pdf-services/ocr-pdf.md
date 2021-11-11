@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — OCR PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue link"/>
+<TextBlock slots="heading, buttons, text, text1" hasCodeBlock  theme="dark" className="bgBlue link"/>
 
 ### OCR a PDF file
 
@@ -23,7 +23,8 @@ const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
   ocrOperation = PDFServicesSdk.OCR.Operation.createNew();
 
 // Set operation input from a source file.
-const input = PDFServicesSdk.FileRef.createFromLocalFile( 'resources/ocrInput.pdf', PDFServicesSdk.OCR.SupportedMediaTypes.pdf );
+const input = PDFServicesSdk.FileRef.createFromLocalFile( 'resources/ocrInput.pdf',
+PDFServicesSdk.OCR.SupportedMediaTypes.pdf );
 ocrOperation.setInput(input);
 
 // Execute the operation and Save the result to the specified location.

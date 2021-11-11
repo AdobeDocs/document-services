@@ -1,6 +1,3 @@
----
-title: Adobe Developer — PDF Embed API  — Customer stories
----
 
 <TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left" id="customer" />
 

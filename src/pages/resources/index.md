@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — DC Platform SDK Resources
+title: DC Platform SDK Resources - Adobe Developer
 ---
 import '../../styles/developer-resource.css'
 

@@ -65,7 +65,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
           display: ${width === '100%' ? 'block' : 'table-cell'};
           width: ${width.replace('%', 'vw')};
           background: var(--spectrum-global-color-gray-100);
-          padding: var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-200);
+          padding: var(--spectrum-global-dimension-size-300) var(--spectrum-global-dimension-size-175);
           box-sizing: border-box;
 
           @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {

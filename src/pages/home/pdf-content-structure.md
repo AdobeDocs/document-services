@@ -1,9 +1,4 @@
----
-title: Adobe Developer — SDK Developer Kit | PDF Library | PDF Content Structure
-description: Own the end-to-end customer experience. Our SDK Developer kits are customizable & built to last. Find an innovative solution with our PDF SDK here.
----
-
-<TextBlock slots="heading, buttons, text" theme="dark" className="bgBlue showMobileView"/>
+<TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView"/>
 
 ##### Extract PDF Content & Structure
 

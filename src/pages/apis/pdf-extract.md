@@ -1,6 +1,6 @@
 ---
-title: Adobe Developer — Extract PDF Content | PDF Content Extraction API | Adobe Document Services
-description: Unlock PDFs by extracting all document elements with positioning and reading order into JSON format for a variety of downstream solutions such as RPA and NLP. Learn more today.
+title: Extract Text from PDF | Extract Data from PDF | Adobe PDF Extract API
+description: Extract the text, data and content elements of any PDF with a web service powered by Adobe Sensei's machine learning. Try a free trial of Adobe PDF Extract today!
 ---
 
 import PdfExtractResource from './pdf-extract/pdf-extract-resource.md';

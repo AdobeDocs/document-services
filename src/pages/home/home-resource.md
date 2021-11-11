@@ -1,7 +1,3 @@
----
-title: Adobe Developer — Wrapper Components  —  Home Resource Card
----
-
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
 ## Use cases for Adobe Document Services
@@ -9,7 +5,7 @@ title: Adobe Developer — Wrapper Components  —  Home Resource Card
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 
-[](use-cases)
+[](/use-cases/content-and-data-extraction/content-based-process-automation.md)
 
 ![Content Processing](../images/content-processing.jpg)
 

@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — Render PDF Pages
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" className="bgBlue link"/>
+<TextBlock slots="heading, buttons, text, text1" hasCodeBlock  theme="dark" className="bgBlue link"/>
 
 ### Reorder pages within PDF files
 
@@ -22,8 +22,11 @@ See our public [API Reference](https://documentcloud.adobe.com/document-services
 const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
   reorderPagesOperation = PDFServicesSdk.ReorderPages.Operation.createNew();
 
-// Set operation input from a source file, along with specifying the order of the pages for rearranging the pages in a PDF file.
-const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/reorderPagesInput.pdf');
+// Set operation input from a source file, along with specifying the
+//order of the pages for rearranging the pages in a PDF file.
+
+const input = PDFServicesSdk.FileRef.
+createFromLocalFile('resources/reorderPagesInput.pdf');
 const pageRanges = getPageRangeForReorder();
 reorderPagesOperation.setInput(input);
 reorderPagesOperation.setPagesOrder(pageRanges);
@@ -42,7 +45,8 @@ ExecutionContext executionContext = ExecutionContext.Create(credentials);
 // Create a new operation instance
 ReorderPagesOperation reorderPagesOperation = ReorderPagesOperation.CreateNew();
 
-// Set operation input from a source file, along with specifying the order of the pages for rearranging the pages in a PDF file.
+// Set operation input from a source file, along with specifying the order of
+// the pages for rearranging the pages in a PDF file.
 FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"reorderPagesInput.pdf");
 reorderPagesOperation.SetInput(sourceFileRef);
 PageRanges pageRanges = GetPageRangeForReorder();
@@ -63,7 +67,9 @@ result.SaveAs(Directory.GetCurrentDirectory() +
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 ReorderPagesOperation reorderPagesOperation = ReorderPagesOperation.createNew();
 
-// Set operation input from a source file, along with specifying the order of the pages for rearranging the pages in a PDF file.
+// Set operation input from a source file, along with specifying the order of
+//the pages for rearranging the pages in a PDF file.
+
 FileRef source =
   FileRef.createFromLocalFile( "src/main/resources/reorderPagesInput.pdf" );
 PageRanges pageRanges = getPageRangeForReorder();
@@ -75,4 +81,3 @@ FileRef result = reorderPagesOperation.execute(executionContext);
 
 // Save the result to the specified location.
 result.saveAs("output/reorderPagesOutput.pdf");
-```

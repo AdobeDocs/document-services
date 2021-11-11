@@ -1,6 +1,5 @@
 ---
-title: Adobe Developer — Automate Document Generation | Contract Generation | Adobe
-description: Automatically generate custom branded sales proposals, legal contracts, and invoices from Word templates and your dynamic data. Learn more today.
+title: Doc Gen API Templates
 ---
 
 

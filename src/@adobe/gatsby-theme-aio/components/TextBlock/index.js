@@ -154,6 +154,7 @@ const TextBlock = ({
   isPrimaryBtn=false,
   variantsTypePrimary='cta',
   variantsTypeSecondary='primary',
+  hasCodeBlock = false,
   ...props
 }) => {
   const Element = headerElementType;
@@ -393,7 +394,7 @@ const TextBlock = ({
             <Media css={mediaCSS} video={video} />
             {!imageOnly && <div
               css={css`
-                width: 50%;
+                ${hasCodeBlock ?`width: 70%;` : `width: 50%;`}
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -477,6 +478,7 @@ TextBlock.propTypes = {
   headerElementType: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
   imageOnly: PropTypes.bool,
   primaryOutline: PropTypes.bool,
+  hasCodeBlock: PropTypes.bool,
   imgWidth: PropTypes.string,
 };
 

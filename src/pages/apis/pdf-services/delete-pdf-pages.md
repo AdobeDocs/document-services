@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  —  Delete PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1"  theme="dark" className="bgBlue link"/>
+<TextBlock slots="heading, buttons, text, text1"  theme="dark" hasCodeBlock className="bgBlue link"/>
 
 ### Delete a page from a PDF file
 

@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Embed API  — Embed modes
 ---
 
-<TextBlock slots="heading, text, buttons"  theme="dark" className='bgBlue code-block-button-padding'/>
+<TextBlock slots="heading, text, buttons"  theme="dark" hasCodeBlock className='bgBlue code-block-button-padding'/>
 
 ##### EMBED MODES
 

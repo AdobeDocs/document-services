@@ -30,8 +30,7 @@ import {
 } from '@adobe/gatsby-theme-aio/src/utils';
 
 import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
-
-import { Footer } from '@adobe/gatsby-theme-aio/src/components/Footer';
+import { Footer } from '../Footer';
 import { Contributors } from '@adobe/gatsby-theme-aio/src/components/Contributors';
 import { Feedback } from '@adobe/gatsby-theme-aio/src/components/Feedback';
 import { GitHubActions } from '@adobe/gatsby-theme-aio/src/components/GitHubActions';

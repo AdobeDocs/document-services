@@ -6,7 +6,7 @@ title: Adobe Developer — Automate Document Generation | Document Use case | Ad
 
 ## Use cases for Document Generation API
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard-doc-gen" />
 
 [](use-cases)
 
@@ -16,7 +16,7 @@ title: Adobe Developer — Automate Document Generation | Document Use case | Ad
 Create custom branded proposals and contracts
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard-doc-gen "/>
 
 [](use-cases/agreements-and-contracts/legal-contracts)
 
@@ -26,7 +26,7 @@ Create custom branded proposals and contracts
 Generate legal contracts with dynamic terms and signatures
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard-doc-gen "/>
 
 [](use-cases/financial/invoices)
 
@@ -36,7 +36,7 @@ Generate legal contracts with dynamic terms and signatures
 Automate invoice generation with various data inputs
 
 
-<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' />
+<ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard-doc-gen "/>
 
 [](use-cases/agreements-and-contracts/nda-creation)
 

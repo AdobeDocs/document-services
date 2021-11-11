@@ -10,7 +10,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Resource Card
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
-[](use-cases)
+[](/use-cases/content-and-data-extraction/content-based-process-automation.md)
 
 ![content-processing](../../images/content-processing.jpg)
 

@@ -101,7 +101,7 @@ const SwiperContent = ({
             text-align: left;
             flex: 1;
             padding: var(--spectrum-global-dimension-size-100);
-
+            padding-right:45px;
             @media only screen and (min-width: ${smallMobileView}) and(max-width:${MOBILE_SCREEN_WIDTH}) {
               margin: 0;
               background:red;

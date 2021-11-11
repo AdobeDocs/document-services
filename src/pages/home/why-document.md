@@ -1,13 +1,8 @@
----
-title: Adobe Developer — why-document services
-description: Own the end-to-end customer experience. Our SDK Developer kits are customizable & built to last. Find an innovative solution with our PDF SDK here.
----
-
 <TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
 
 ## Why Document Services?
 
-<TextBlock slots="image,heading,text" width="33%" theme="lightest"  className="align-left img-m-size"/>
+<TextBlock slots="image,heading,text" width="33%" theme="lightest"  className="align-left img-m-size horizontal-align-heading"/>
 
 ![Invent new document experiences](../images/img-consistent-hifi@2x.png)
 
@@ -19,7 +14,7 @@ Unlock productivity through APIs and integrations.Use Microsoft Power Automate c
 
 
 
-<TextBlock slots="image,heading,text" width="33%" theme="lightest"   className="align-left img-m-size"/>
+<TextBlock slots="image,heading,text" width="33%" theme="lightest"   className="align-left img-m-size horizontal-align-heading"/>
 
 ![Built for developers](../images/img-customized-experiences@2x.png)
 
@@ -30,7 +25,7 @@ Easy to implement REST APIs and SDKs. Secure, reliable, and scalable. Pay only f
 
 
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-m-size"/>
+<TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-m-size horizontal-align-heading"/>
 
 ![From the leader](../images/img-workflow-automation@2x.png)
 
