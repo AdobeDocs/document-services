@@ -617,8 +617,13 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
 
 .featured-img-dimensions {
     height: 100%;
+    max-width: 25vw;
 }
 
 .feat1{
     overflow: hidden;
+}
+
+.stepper-horizontal-align .spectrum-Body{
+    height:var(--spectrum-global-dimension-size-900);
 }

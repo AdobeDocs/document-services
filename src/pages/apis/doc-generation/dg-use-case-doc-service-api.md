@@ -43,5 +43,5 @@ Automate invoice generation with various data inputs.
 ![nda-creation](../../images/nda.jpg)
 
 ### NDA
-Generate standardized NDA documents with custom data and signatures
+Generate standardized NDA documents with custom data and signatures.
 

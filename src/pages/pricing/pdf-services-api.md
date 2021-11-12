@@ -4,7 +4,7 @@ title: Adobe Developer — DC Platform SDK Resources
 import PDFServiceContent from './pdf-services-content.md'
 
 
-<TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
+<TitleBlock slots="heading" theme="light" className="titleBlock-align-left" id="AWS"/>
 
 ## Adobe PDF Services API
 

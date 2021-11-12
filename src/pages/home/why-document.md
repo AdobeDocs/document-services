@@ -8,11 +8,11 @@
 
 ### Invent new document experiences
 
-- Unlock productivity through APIs and integrations
+- Unlock productivity through APIs and integrations.
 
-- Use Microsoft Power Automate connectors to build without code
+- Use Microsoft Power Automate connectors to build without code.
 
-- Leverage integrations with AEM, Adobe Analytics, and Adobe Sign
+- Leverage integrations with AEM, Adobe Analytics, and Adobe Sign.
 
 
 
@@ -22,11 +22,11 @@
 
 ### Built for developers
 
-- Easy to implement REST APIs and SDKs
+- Easy to implement REST APIs and SDKs.
 
-- Secure, reliable, and scalable
+- Secure, reliable, and scalable.
 
-- Pay only for what you need
+- Pay only for what you need.
 
 
 
@@ -36,8 +36,8 @@
 
 ### From the leader
 
-- 25+ years of PDF expertise
+- 25+ years of PDF expertise.
 
-- Battle tested by 20M+ users
+- Battle tested by 20M+ users.
 
-- Innovating with AI/ML in digital documents powered by Adobe Sensei
+- Innovating with AI/ML in digital documents powered by Adobe Sensei.

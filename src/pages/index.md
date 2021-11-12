@@ -60,7 +60,7 @@ on both scanned and native PDFs and is included with PDF Services API.
 
 
 
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ![documentGenerationAPI](images/docGen.jpg)
 
@@ -73,12 +73,12 @@ dynamic documents with conditional text, images, lists, and tables. Signature wo
 a cinch with the Adobe Sign integration, and Document Generation is included with PDF
 Services API.
 
+- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 - [Learn more](/src/pages/apis/doc-generation.md)
-- [Demo](https://adobe.com/go/dcdocgen_api_demo)
 
 
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ### Adobe PDF Embed API
 ### Display PDFs and enable collaboration with this free tool.
@@ -89,8 +89,8 @@ can provide a rich PDF viewing experience and enable digital collaboration and d
 analytics for helpful user insights. Implement this API in minutes with a few lines of code and
 samples for Angular and React.
 
+- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 - [Learn more](/src/pages/apis/pdf-embed.md)
-- [Demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
 ![APIEmbed](images/pdfEmbed.jpg)
 
