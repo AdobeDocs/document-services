@@ -5,7 +5,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 
 <SummaryBlock slots="heading, buttons" theme="light" buttonPositionRight btnVariant="cta" isBtnVariant />
 
-### Key features of Adobe PDF extract API
+### Key features of Adobe PDF Extract API
 
 * [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-extract-api)
 
@@ -13,7 +13,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 
 ![comprehensive-content-extraction](../../images/comprehensive-content-extraction.svg)
 
-### Comprehensive Content Extraction
+### Comprehensive content extraction
 
 Extract all PDF document elements including text, tables, and images within a structured JSON file to enable a variety of downstream solutions.
 
@@ -24,7 +24,7 @@ Extract all PDF document elements including text, tables, and images within a st
 
 ![document-structure-understanding](../../images/document-structure-understanding.svg)
 
-### Document Structure Understanding
+### Document structure understanding
 
 Classify text objects such as headings, lists, footnotes, and paragraphs that may span multiple columns or pages. Capture text fonts and styles, positioning, and the natural reading order of all objects.
 
@@ -34,7 +34,7 @@ Classify text objects such as headings, lists, footnotes, and paragraphs that ma
 
 ![high-fidelity](../../images/high-fidelity.svg)
 
-### Highly Accurate Results
+### Highly accurate results
 
 Adobe Sensei AI technology delivers highly accurate data extraction across a broad range of document types – both native and scanned PDFs – without requiring custom ML templates or model training.
 
@@ -44,6 +44,6 @@ Adobe Sensei AI technology delivers highly accurate data extraction across a bro
 
 ![platform-agnostic](../../images/platform-agnostic.svg)
 
-### Platform Agnostic
+### Platform agnostic
 
 Adobe’s PDF Extract API is RESTful and can be used to seamlessly integrate with any cloud platform or on-premise application.

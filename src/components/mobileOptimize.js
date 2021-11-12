@@ -86,7 +86,7 @@ const MobileOptimize = ({ className, theme = "dark" }) => {
               </div>
               <div>
                 <h4>Easier Navigation</h4>
-                <p>Navigate document sections via a new outline view</p>
+                <p>Navigate document sections via a new outline view.</p>
               </div>
               <div>
                 <h4>Improved Readability</h4>

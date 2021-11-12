@@ -12,7 +12,7 @@ title: Adobe Developer — Automate Document Generation | Document Explore | Ado
 
 #### Services
 
-Create a PDF from Microsoft Office documents, protect the content, and export to other formats
+Create a PDF from Microsoft Office documents, protect the content, and export to other formats.
 
 * [Learn more](/src/pages/apis/pdf-services.md)
 
@@ -22,7 +22,8 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 ![High Fidelity](../../images/high-fidelity.svg)
 
 ### Extract
-Extract text, tables, images, and document structure
+
+Extract text, tables, images, and document structure.
 
 * [Learn more](/src/pages/apis/pdf-extract.md)
 
@@ -32,6 +33,8 @@ Extract text, tables, images, and document structure
 ![Customizable Experience](../../images/customizable_experience.svg)
 
 ### Embed
-Embed high-fidelity PDFs in web apps with analytics
+
+Embed high-fidelity PDFs in web apps with analytics.
+
 * [Learn more](/src/pages/apis/pdf-embed.md)
 * [Demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)

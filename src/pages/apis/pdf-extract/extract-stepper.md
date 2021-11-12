@@ -26,7 +26,7 @@ Obtain free credentials
 
 ## Step 2
 
-Download ready to run samples for [Node.js](https://adobe.com/go/dcExtract_node_sdk),   [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples),   [Java](https://adobe.com/go/dcExtract_java_sdk) and [Python](https://adobe.com/go/dcExtract_python_sdk)
+Download ready to run samples for Node.js, .Net, Java and Python
 
 - [Node.js](https://adobe.com/go/dcExtract_node_sdk)
 - [Java](https://adobe.com/go/dcExtract_java_sdk)

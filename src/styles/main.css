@@ -212,6 +212,9 @@
     height: 120px;
 }
 
+.useCaseCard .spectrum-Card-content{
+    margin-top: 15px;
+}
 .useCaseCard .spectrum-Card-body:last-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -818,4 +821,80 @@ img[alt=thumbnail] {
 .how-it-work-image > div {
     padding-top: 1px;
     padding-bottom: 0px;
+}
+
+.graybody .spectrum-Card-body{
+    background-color: #f7f7f7;
+}
+
+.position-up{
+ position: relative;
+}
+
+.position-up .spectrum-Body{
+    position: absolute;
+    top: -50px;
+    margin-left: 100px;
+}
+
+.pdfextractapi {
+    padding-bottom: 0 !important;
+ }
+ .pdfextractapi p {
+    margin-bottom: 0 !important;
+ }
+ .pt-grid-title-padding-bottom  {
+     padding-bottom: var(--spectrum-global-dimension-size-250) !important;
+ }
+ 
+ .productCardGrid > div:first-child {
+     padding-top: var(--spectrum-global-dimension-size-350) !important;
+ }
+ 
+
+ .card-heading-size .spectrum-Heading--sizeM{
+     font-size: 18px;
+ }
+
+ img[alt=PDFservices] {
+    height: auto !important;
+    border-radius: 15px;
+ }
+
+ img[alt=ExtractAPI] {
+    height: auto !important;
+    border-radius: 15px;
+ }
+
+ img[alt=documentGenerationAPI] {
+    height: auto !important;
+    border-radius: 15px;
+ }
+
+ img[alt=APIEmbed] {
+    height: auto !important;
+    border-radius: 15px;
+ }
+
+
+.home-list-points li {
+     margin-top: 10px;
+    text-align: left;
+}
+
+.home-list-points div > ul {
+    padding-left: var(--spectrum-global-dimension-size-185);
+}
+.home-list-points div > ul li > p {
+    margin-top: 10px;
+}
+
+.bgcolor .spectrum-Button {
+    background-color:white;
+    border: 1px solid white;
+}
+
+.bgcolor .spectrum-Button:hover{
+    background-color:#4b4b4b !important;
+    color: #fff;
 }

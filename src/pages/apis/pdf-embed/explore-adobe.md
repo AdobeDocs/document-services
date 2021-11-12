@@ -12,7 +12,7 @@ title: Adobe Developer — PDF Embed API  — explore-adobe
 
 #### Services
 
-Create a PDF from Microsoft Office documents, protect the content, and export to other formats
+Create a PDF from Microsoft Office documents, protect the content, and export to other formats.
 
 * [Learn more](/src/pages/apis/pdf-services.md)
 
@@ -34,7 +34,7 @@ Extract text, table, images and document structure.
 
 #### Generate
 
-Generate PDF and word documents from custom word templates
+Generate PDF and word documents from custom word templates.
 
 * [Learn more](/src/pages/apis/doc-generation.md)
 * [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)

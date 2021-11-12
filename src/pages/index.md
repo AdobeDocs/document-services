@@ -28,12 +28,16 @@ doc-services-hero
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
-![PDF services ](images/services.png)
+![PDFservices](images/pdfServices.jpg)
 
 ### Adobe PDF Services API
-### Create, transform, OCR PDFs, and more
+### Create, transform, OCR PDFs, and more.
 
-PDF Services API is a collection of multiple services capable of quickly solving specific challenges and powering multi-step document workflows using SDKs for Node.js, Java, and .Net. With it, you gain access to basic PDF services, such as creating, securing, compressing, converting, combining, and splitting PDFs, as well as more advanced services,including Document Generation and PDF Extract. Do more with this API.
+PDF Services API is a collection of multiple services capable of quickly solving specific challenges and
+powering multi-step document workflows using SDKs for Node.js, Java, and .Net. With it, you gain
+access to basic PDF services, such as creating, securing, compressing, converting, combining, and
+splitting PDFs, as well as more advanced services, including Document Generation and PDF Extract.
+Do more with this API.
 
 - [Learn more](/src/pages/apis/pdf-services.md)
 
@@ -42,24 +46,32 @@ PDF Services API is a collection of multiple services capable of quickly solving
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ### Adobe PDF Extract API
-### Unlock content structure in any PDF
+### Unlock content structure in any PDF.
 
-Leverage the free javascript API to embed PDFs without the need for end users to download additional plugins. Provide a rich PDF viewing and easily enable digital collaboration and document analytics.
+PDF Extract API leverages AI to parse PDFs programmatically and extract data and content for
+analysis and processing. Text, images, tables, font styling, and more are extracted with relative
+positioning and natural reading order and placed into a structured JSON file for downstream
+processing in NLP, RPA, content republishing or data analysis solutions. PDF Extract API works
+on both scanned and native PDFs and is included with PDF Services API.
 
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-![ExtractAPI](images/extractAPI.png)
+![ExtractAPI](images/pdfExtract.jpg)
 
 
 
 <TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  headerElementType="h2" className="home-zigzag-comp-padding"/>
 
-![documentGenerationAPI](images/documentGenerationAPI.png)
+![documentGenerationAPI](images/docGen.jpg)
 
 ### Adobe Document Generation API
-### Generate documents from Word templates and JSON data
+### Generate documents from Word templates and JSON data.
 
-Use the PDF Tools API to quickly solve specific challenges or power multi-step document workflows, with SDKs for Node.js, Java and .Net. Apply OCR to enable searching, easil convert files(HTML to PDF, PDF to Microsoft Word and more), or combine actions to automate workflows.
+Effortlessly create contracts, agreements, invoices, sales proposals, and more with Document
+Generation API. Using Microsoft Word templates and your own data, you can produce
+dynamic documents with conditional text, images, lists, and tables. Signature workflows are
+a cinch with the Adobe Sign integration, and Document Generation is included with PDF
+Services API.
 
 - [Learn more](/src/pages/apis/doc-generation.md)
 - [Demo](https://adobe.com/go/dcdocgen_api_demo)
@@ -69,14 +81,18 @@ Use the PDF Tools API to quickly solve specific challenges or power multi-step d
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  headerElementType="h2" className="home-zigzag-comp-padding"/>
 
 ### Adobe PDF Embed API
-### Display PDFs and enable collaboration with this free API
+### Display PDFs and enable collaboration with this free tool.
 
-Leverage our free javascript API to embed PDFs without the need for end users to download additional plugins. Provide rich PDF viewing and easily enable digital collaboration and document analytics.
+Leverage our free JavaScript API to embed PDFs and eliminate the need for end users to
+download additional plugins when opening PDFs in your applications. With PDF Embed API, you
+can provide a rich PDF viewing experience and enable digital collaboration and document
+analytics for helpful user insights. Implement this API in minutes with a few lines of code and
+samples for Angular and React.
 
 - [Learn more](/src/pages/apis/pdf-embed.md)
 - [Demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 
-![API Embed](images/Embed.png)
+![APIEmbed](images/pdfEmbed.jpg)
 
 
 <SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight />

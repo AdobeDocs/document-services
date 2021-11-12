@@ -16,7 +16,7 @@ import '../../styles/doc-generation.css'
 
 # Adobe Document Generation API
 
-Generate PDF and Word documents from Word templates and JSON data
+Generate PDF and Word documents from Word templates and JSON data.
 
 apiHeroAssetImg doc-gen-invoice
 
@@ -26,6 +26,7 @@ apiHeroAssetImg doc-gen-invoice
 <!-- Why Document Generation API -->
 
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
+
 <DgWhyDocTitle/>
 
 <TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn" primaryOutline/>
@@ -49,14 +50,16 @@ apiHeroAssetImg doc-gen-invoice
 
 <DgDownloadSample/>
 
-<TextBlock slots="buttons" theme="lightest" isCentered className='blade-bottom-content ms-word-add-in-title'/>
+<TextBlock slots="buttons" theme="lightest" isCentered className='ms-word-add-in-title'/>
 
-- [Get Microsoft Word add-in](https://www.adobe.com/go/pdfEmbedAPI_demo)
 - [See all templates](./doc-gen-api-template.md)
+
 
 <!--  Start Modifying PDFs in a few Minutes -->
 <WrapperComponent slots="content" theme="light"/>
+
 <DgStartModifyingTitle/>
+
 
 <!-- Use case for Document Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
@@ -79,7 +82,7 @@ apiHeroAssetImg doc-gen-invoice
 
 ### We're ready to help
 
-Have questions about the Document Services APIs ?
+Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 - [Contact us](../pricing/contact-us.md)

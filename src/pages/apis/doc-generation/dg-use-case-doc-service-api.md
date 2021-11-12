@@ -8,37 +8,37 @@ title: Adobe Developer — Automate Document Generation | Document Use case | Ad
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard-doc-gen" />
 
-[](use-cases)
+[](../use-cases/agreements-and-contracts/sales-proposals-and-contracts.md)
 
 ![sales-proposals](../../images/sales-proposals.jpg)
 
 ## Sales proposals
-Create custom branded proposals and contracts
+Create custom branded proposals and contracts.
 
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard-doc-gen "/>
 
-[](use-cases/agreements-and-contracts/legal-contracts)
+[](../use-cases/agreements-and-contracts/legal-contracts)
 
 ![legal-contracts](../../images/legal-contracts.jpg)
 
 ### Legal contracts
-Generate legal contracts with dynamic terms and signatures
+Generate legal contracts with dynamic terms and signatures.
 
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard-doc-gen "/>
 
-[](use-cases/financial/invoices)
+[](../use-cases/financial/invoices)
 
 ![invoice](../../images/invoice.jpg)
 
 ### Invoices
-Automate invoice generation with various data inputs
+Automate invoice generation with various data inputs.
 
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard-doc-gen "/>
 
-[](use-cases/agreements-and-contracts/nda-creation)
+[](../use-cases/agreements-and-contracts/nda-creation)
 
 ![nda-creation](../../images/nda.jpg)
 

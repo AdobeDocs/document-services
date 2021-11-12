@@ -14,7 +14,7 @@ title: Adobe Developer — Doc generation — Why Document Generation API
 
 ### Authoring Tools for Improved Productivity
 
-Use our Adobe Document Generation Tagger Word add-in to quickly build custom branded Microsoft Word or PDF documents with data
+Use our Adobe Document Generation Tagger Word add-in to quickly build custom branded Microsoft Word or PDF documents with data.
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className=" icon-xl-size padding-btm-zero-left-align horizontal-align-heading"/>
 
@@ -22,7 +22,7 @@ Use our Adobe Document Generation Tagger Word add-in to quickly build custom bra
 
 ### Manipulate and Merge Dynamic Data
 
-Process text tags, calculations, repeating elements, and conditional statements at runtime
+Process text tags, calculations, repeating elements, and conditional statements at runtime.
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className=" icon-xl-size padding-btm-zero-left-align horizontal-align-heading"/>
 
@@ -30,4 +30,4 @@ Process text tags, calculations, repeating elements, and conditional statements 
 
 ### Document Generation with Signatures
 
-Adobe Sign integration allows you to generate documents with signatures including conditional logic for signature text tags
+Adobe Sign integration allows you to generate documents with signatures including conditional logic for signature text tags.

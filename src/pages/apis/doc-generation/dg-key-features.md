@@ -6,7 +6,7 @@ title: Adobe Developer — Automate Document Generation | Document Key Features 
 
 ## Key features of Adobe Document Generation API
 
-<CustomCard slots="icon,heading,text,buttons" gradients gradientsType='lightBlue' buttonDisplay cursorDisable width="25%"  theme="light" />
+<CustomCard slots="icon,heading,text,buttons" gradients gradientsType='lightBlue' buttonDisplay cursorDisable width="25%"  theme="light" className='bgcolor' />
 
 ![msword_icon](../../images/ic-msword.svg)
 
@@ -14,7 +14,7 @@ title: Adobe Developer — Automate Document Generation | Document Key Features 
 
 Automatically generate tags from your JSON data model or create reusable tags using our Document Generation Tagger Microsoft Word add-in. Preview your document by generating it within Word.
 
-- [Get Microsoft Word add-in](https://www.adobe.com/go/dcdg_Tagger)
+- [Get Microsoft Word add-in](/document-services/docs/overview/document-generation-api/wordaddin/)
 
 <CustomCard slots="icon,heading,text" gradients gradientsType='orangeRed' cursorDisable width="25%" theme="light" />
 

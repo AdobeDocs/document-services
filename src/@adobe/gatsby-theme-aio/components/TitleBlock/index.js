@@ -8,7 +8,8 @@ import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const TitleBlock = ({ className, heading, text, theme = 'lightest',id }) => (
   <section
-    className={classNames(className, `spectrum--${theme}`)}
+  id={id}
+  className={classNames(className, `spectrum--${theme}`)}
     css={css`
       background: var(--spectrum-global-color-gray-100);
       padding: var(--spectrum-global-dimension-size-600) 0 var(--spectrum-global-dimension-size-200) 0;
@@ -31,7 +32,6 @@ const TitleBlock = ({ className, heading, text, theme = 'lightest',id }) => (
       {heading && (
         <h2
           className="spectrum-Heading spectrum-Heading--sizeL"
-          id={id}
           css={css`
             margin-bottom: var(--spectrum-global-dimension-size-200) !important;
 

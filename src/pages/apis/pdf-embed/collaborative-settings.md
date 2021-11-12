@@ -13,7 +13,7 @@ For multi-user document collaboration, identify reviewers by name or email addre
 
 
 
-- [See documentation](/document-services/docs/overview/pdf-extract-api/)
+- [See documentation](/document-services/docs/overview/pdf-embed-api/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 

@@ -16,14 +16,11 @@ import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 
 # Adobe PDF Services API
 
-Create, convert, transform, OCR PDFs and more
+Create, convert, transform, OCR PDFs and more.
 
 apiHeroAssetImg doc-service-hero
 
-<!-- - [Start free trial](/src/pages/gettingstarted.md) -->
 - [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-services-api)
-
-
 
 <!-- Why PDF Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services"/>
@@ -31,15 +28,12 @@ apiHeroAssetImg doc-service-hero
 <WhyPDFServicesAPI />
 
 
-
 <!-- Carousel Block -->
-
 <AWSMSCarousel />
 
 
 
 <!-- Key Features Code Block -->
-
 <KeyFeaturesCodeBlock />
 
 
@@ -67,22 +61,13 @@ apiHeroAssetImg doc-service-hero
 
 <UseCasesResourceCard />
 
-
-
-
 <TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
 
-- [View all Use Case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
-
-
-
+- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" repeat="1" theme="light"/>
 
 <DocumentServicesProductCards />
-
-
-
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
 

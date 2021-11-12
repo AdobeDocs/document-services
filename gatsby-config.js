@@ -12,6 +12,10 @@
 
 module.exports = {
   siteMetadata: {
+    siteUrl: process.env.SITE_URL || 'https://developer-stage.adobe.com/',
+    baseUrl: process.env.BASEURL || '',
+    productionDomain: process.env.PRODUCTION_DOMAIN || 'https://www.adobe.io',
+    pageImage: process.env.PAGE_IMAGE || 'dcsdk-main.jpg',
     docs: {
       title: 'Get credentials',
       path: 'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html'

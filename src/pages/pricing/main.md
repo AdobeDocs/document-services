@@ -8,7 +8,7 @@ import PDFService from './pdf-services-api.md'
 
 # Adobe Document Services Pricing
 
-When you’re ready to purchase, flexible options to suit your needs
+When you’re ready to purchase, flexible options to suit your needs.
 
 
 <WrapperComponent slots="content" theme="light"/>

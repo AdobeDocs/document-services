@@ -6,4 +6,4 @@ title: Adobe Developer — Wrapper Components  —  API Extract How it works
 
 ## How it works
 
-Advanced machine learning and artificial intelligence parse complex document content for reuse in a variety of critical downstream processes
+Advanced machine learning and artificial intelligence parse complex document content for reuse in a variety of critical downstream processes.

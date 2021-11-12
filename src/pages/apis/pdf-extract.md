@@ -33,7 +33,7 @@ apiHeroAssetImg doc-ext-invoice
 
 <TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
 
-- [View all Use Case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" repeat="1" theme="light"/>
 
@@ -49,15 +49,15 @@ apiHeroAssetImg doc-ext-invoice
 
 <TextBlock slots="text1, text2  " theme="light"  className="media-horizantal-align  how-it-work-text mediaSize link"/>
 
-Adobe PDF Extract API is powered by [Adobe Sensei](https://www.adobe.com/sensei.html) industry-leading artificial intelligence (AI) and machine learning (ML). The technology enables a rich understanding of documents, such as the identification of elements, including position and connections relative to other elements. In addition, it can determine reading order. These and other capabilities ensure the most comprehensive output of structured content.
+Adobe PDF Extract API is powered by [Adobe Sensei](https://www.adobe.com/sensei.html), an industry-leading Artificial Intelligence (AI) and Machine Learning (ML) network. The technology enables a rich understanding of documents, such as the identification of elements, including position and connections relative to other elements. In addition, it can determine reading order. These and other capabilities ensure the most comprehensive output of structured content.
 
-Extracted content is output in a structured JSON file – with tables optionally included as CSV or XLSX files and images saved as PNG files – so developers can easily store, analyze, and manipulate the data in a variety of downstream systems. Examples include databases, systems of record, CRM, ERP, NLP, RPA as well as machine learning models and analytic tools.
+Extracted content is output in a structured JSON file – with tables optionally included as CSV or XLSX files and images saved as PNG files – so developers can easily store, analyze, and manipulate the data in a variety of downstream systems. Examples include databases, systems of record, CRM, ERP, NLP, RPA as well as ML models and analytic tools.
 
 <TextBlock slots="image" theme="light"  imgWidth="100%" className="media-horizantal-zero-padding  how-it-work-image mediaSize "/>
 
 ![how-it-works-desktop](../images/how-it-works-desktop.png)
 
-<TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link"/>
+<TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link position-up"/>
 
 We take security serously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)
 

@@ -1,14 +1,3 @@
-/*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
 
 import React, { useEffect, useState, cloneElement } from 'react';
 import { css } from '@emotion/react';
@@ -60,7 +49,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
     if(type === 'redORange'){
       return {background: "linear-gradient(to bottom, #f19861, #cc3232)"}
     }else if(type === 'lightBlue'){
-      return {background: "linear-gradient(to bottom, #5fc2d3, #565abf)"}
+      return {background: "linear-gradient(to bottom, #50b7d6, #3a5cad)"}
     }else if(type === 'lightGreen'){
       return {background: "linear-gradient(to bottom, #6cb966, #266d71)"}
     }else if(type === 'darkBlue') {

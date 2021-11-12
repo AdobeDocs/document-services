@@ -13,7 +13,7 @@ title: Adobe Developer — PDF Embed API  — why-pdf-embed
 
 ### Accurate, consistent PDF rendering
 
-Whether on dynamic or static pages, deliver the highest quality PDF rendering available
+Whether on dynamic or static pages, deliver the highest quality PDF rendering available.
 
 
 <TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left icon-xl-size horizontal-align-heading" />
@@ -22,7 +22,7 @@ Whether on dynamic or static pages, deliver the highest quality PDF rendering av
 
 ### Customizable user experience
 
-Choose exactly how to display a PDF and use the callbacks and annotations APIs to provide programmatic control and enable digital collaboration
+Choose exactly how to display a PDF and use the callbacks and annotations APIs to provide programmatic control and enable digital collaboration.
 
 <TextBlock slots="image, heading, text" width="33%" theme="light"  className="align-left icon-xl-size horizontal-align-heading" />
 
@@ -30,7 +30,7 @@ Choose exactly how to display a PDF and use the callbacks and annotations APIs t
 
 ### Analytics on PDF usage
 
-Use analytics to understand how users interact with PDFs, including time spent on a page and searches
+Use analytics to understand how users interact with PDFs, including time spent on a page and searches.
 
 
 <TextBlock slots="buttons" isCentered theme="light" className="margin-top-zero" />

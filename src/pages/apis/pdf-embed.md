@@ -36,9 +36,12 @@ apiHeroAssetImg doc-embed-hero
 <WhyPdfEmbed />
 
 
-<WrapperComponent slots="content" theme="dark" background="rgb(31, 42, 73)"/>
+<SummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight />
 
-<KeyFeatures />
+## Key features of our free PDF Embed API 
+
+- [Get free credentials](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-embed-api)
+
 
 <TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0' />
 
@@ -98,7 +101,7 @@ apiHeroAssetImg doc-embed-hero
 
 <TextBlock slots="buttons" isCentered theme="lightest" className='padding-5'/>
 
-* [See all Use Case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+* [See all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 
 <WrapperComponent slots="content" theme="light"/>

@@ -126,6 +126,7 @@ const Item = forwardRef(({
       {...props}
       ref={ref}
       role='tab'
+      title={label?.props?.children}
       aria-selected={isSelected}
       disabled={isDisabled}
       aria-controls={id}

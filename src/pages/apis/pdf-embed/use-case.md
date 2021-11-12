@@ -9,7 +9,7 @@ title: Adobe Developer — PDF-embed  —  Use cases
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
-[](use-cases/collaboration/)
+[](../use-cases/collaboration/)
 
 ![Student Teacher Collaboration](../../images/stud-teacher-col.jpg)
 
@@ -20,7 +20,7 @@ Accelerate digital learning programs with embedded PDF viewing for teacher and p
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
-[](use-cases/collaboration/review-and-approval/)
+[](../use-cases/collaboration/review-and-approval/)
 
 ![Reviews and Approvals](../../images/review-approvals.jpg)
 
@@ -30,20 +30,20 @@ Maximize remote worker productivity with multi-user document collaboration inclu
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
-[](/use-cases/content-publishing/)
+[](../use-cases/content-publishing/)
 
 ![Digital content publishing](../../images/content-republishing.jpg)
 
 ### Digital content publishing
 
-Easily republish in different formats by extracting structured content elements such as headings, lists, paragraphs, fonts, and character styling
+Easily republish in different formats by extracting structured content elements such as headings, lists, paragraphs, fonts, and character styling.
 
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
 <!-- [](/use-cases/report-creation-editing) Faced 404 issue-->
 
-[](use-cases)
+[](../use-cases/agreements-and-contracts)
 
 
 ![Report Creation and Editing](../../images/report-creation-editing.jpg)

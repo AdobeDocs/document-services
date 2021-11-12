@@ -329,7 +329,7 @@ section.sdk-rsrc-featured .featured-container .featured-wrapper a .featured-thum
     width: 25%;
     height: 100%;
     margin: 0;
-    background: url("../pages/images/1_7eVhB0dKwix3bHAgxE-T5g.jpeg");
+    /* background: url("../pages/images/1_7eVhB0dKwix3bHAgxE-T5g.jpeg"); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -616,6 +616,9 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
 }
 
 .featured-img-dimensions {
-    width: 100%;
     height: 100%;
+}
+
+.feat1{
+    overflow: hidden;
 }

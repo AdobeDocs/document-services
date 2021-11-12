@@ -9,7 +9,7 @@ title: Adobe Developer — PDF Embed API  — menu & tool options
 Programmatically enable or disable the left-hand panel, comments pane, toolbars, print, and download options
 
 
-- [See documentation](/document-services/docs/overview/pdf-extract-api/)
+- [See documentation](/document-services/docs/overview/pdf-embed-api/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 

@@ -275,6 +275,9 @@ const TextBlock = ({
               <h3
               className="spectrum-Heading spectrum-Heading--sizeM"
                 css={css`
+                  font-size: var(
+                    --spectrum-global-dimension-size-225
+                  ) !important;
                   margin-bottom: var(
                     --spectrum-global-dimension-size-200
                   ) !important;
@@ -431,6 +434,9 @@ const TextBlock = ({
               <h3
               className="spectrum-Heading spectrum-Heading--sizeM"
                 css={css`
+                font-size: var(
+                  --spectrum-global-dimension-size-225
+                ) !important;
                   margin-bottom: var(
                     --spectrum-global-dimension-size-200
                   ) !important;

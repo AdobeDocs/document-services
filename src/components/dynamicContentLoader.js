@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { css } from "@emotion/react";
 import PropTypes from "prop-types";
 import "@spectrum-css/typography";
-import heroImg from '../pages/images/resource_hero_img.jpg'
+import { TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/conf/globals';
 
 const getImageURl = (url) => {
   let imageURL = url.split("/");
@@ -64,35 +64,47 @@ const DynamicContentLoader = ({
       `}
     >
       {content === "usingAdobePDFService" && resData?.data?.length > 0 && (
-        <section className="sdk-rsrc-release">
-          <div className="release-container">
-            <div className="release-wrapper">
-              <div className="release-wrapper-img">
-                <a href={resData?.data[0].URL} target="_parent">
-                  <img
-                    src={heroImg}
-                    alt="Illustration"
-                  />
-                </a>
-              </div>
-              <div className="release-copy-wrapper">
-                <h3 className="spectrum-Heading spectrum-Heading--sizeL">
-                  {resData.data[0].Title}
-                </h3>
-                <p>{resData.data[0].Description}</p>
-                <div className="release-cta">
-                  <a
-                    href={resData?.data[0].URL}
-                    target="_parent"
-                    className="button-link"
-                  >
-                    Read more
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+         <section
+         className={classNames(className, `spectrum--${theme}`)}
+         css={css`
+           background-color:var(--spectrum-global-color-gray-100);
+           padding :var(--spectrum-global-dimension-size-400);
+           `
+       }>
+         <div 
+           css={css`  
+             max-width:calc(( var(--spectrum-global-dimension-size-6000) + var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-500) ));
+             text-align: center;
+             margin: 0 auto;
+     
+             @media screen (max-width:${TABLET_SCREEN_WIDTH}){
+               max-width:calc(( var(--spectrum-global-dimension-size-5000) + var(--spectrum-global-dimension-size-3400) ));
+             }
+         `}>
+           <div 
+             css={css`
+               overflow: hidden;
+               padding-top: 56.25%;
+               position: relative;
+           `}>
+             <iframe
+               src="https://www.youtube.com/embed/GCpSy78IDoE?list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5" 
+               title="YouTube video player" 
+               frameborder="0" 
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              //  srcdoc={"<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?autoplay=1><img src=https://www.adobe.io/gh-assets/img/extract-hero-tablet@2x.png alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>"}
+               allowfullscreen={false}
+               css={css` 
+               position: absolute;
+               border: 0;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;`}
+             />
+           </div>
+         </div>
+       </section>
       )}
       {content === "feature"  && (
         <>

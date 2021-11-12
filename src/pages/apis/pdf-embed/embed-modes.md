@@ -10,7 +10,7 @@ title: Adobe Developer — PDF Embed API  — Embed modes
 
 Control how you embed PDFs, with support for full-sized windows, sized containers, in-line display, and lightboxes
 
-- [See documentation](/document-services/docs/overview/pdf-extract-api/)
+- [See documentation](/document-services/docs/overview/pdf-embed-api/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 

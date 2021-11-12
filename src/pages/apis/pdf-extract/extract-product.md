@@ -13,7 +13,7 @@ title: Adobe Developer — API Extract  —  Product card
 
 #### Services
 
-Create a PDF from Microsoft Office documents, protect the content, and export to other formats
+Create a PDF from Microsoft Office documents, protect the content, and export to other formats.
 
 * [Learn more](/src/pages/apis/pdf-services.md)
 
@@ -24,7 +24,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 
 #### Generate
 
-Generate PDF and Word documents from custom Word templates
+Generate PDF and Word documents from custom Word templates.
 
 * [Learn more](/src/pages/apis/doc-generation.md)
 * [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
@@ -36,7 +36,7 @@ Generate PDF and Word documents from custom Word templates
 
 #### Embed
 
-Embed high-fidelity PDFs in web apps with analytics
+Embed high-fidelity PDFs in web apps with analytics.
 
 * [Learn more](/src/pages/apis/pdf-embed.md)
 * [Demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)
