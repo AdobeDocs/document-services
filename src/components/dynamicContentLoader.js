@@ -4,6 +4,9 @@ import { css } from "@emotion/react";
 import PropTypes from "prop-types";
 import "@spectrum-css/typography";
 import { TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/conf/globals';
+import Digging_out_data from '../pages/images/Digging_out_data.jpg';
+import Generate_documents from '../pages/images/generate_documents.jpg';
+import Make_PDFs_searchable from '../pages/images/Make_PDFs_searchable.jpg';
 
 const getImageURl = (url) => {
   let imageURL = url.split("/");
@@ -24,17 +27,17 @@ const featuredContent = [
   {
     Title :'Make PDFs Searchable (OCR)',
     URL : 'https://medium.com/adobetech/make-pdfs-searchable-ocr-after-importing-into-sharepoint-1a8037744841',
-    Thumbnail :'https://miro.medium.com/max/2000/1*jtBGYybaNL4eUFdWGKfQhg.png'
+    Thumbnail :Make_PDFs_searchable
   },
   {
     Title :'Generate Documents',
     URL :'https://medium.com/adobetech/generate-documents-and-send-in-bulk-for-signature-in-microsoft-power-automate-807838092dcf',
-    Thumbnail :'https://miro.medium.com/max/1400/1*Vo9WQpEPCneEAqhvcJGYhQ.png'
+    Thumbnail : Generate_documents
   },
   {
     Title :'Digging Out Data with Adobe PDF Extract API',
     URL:'https://medium.com/adobetech/digging-out-data-with-adobe-pdf-extract-api-cf4b1712f05a',
-    Thumbnail :'https://miro.medium.com/max/700/0*wEiusXlHRz2gm6dj'
+    Thumbnail : Digging_out_data
   }
 ]
 

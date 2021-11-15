@@ -11,7 +11,7 @@ title: Adobe Developer — PDF-embed  —  Use cases
 
 [](../use-cases/collaboration/)
 
-![Student Teacher Collaboration](../../images/stud-teacher-col.jpg)
+![Student Teacher Collaboration](../../images/student-teacher-collaboration.jpg)
 
 ### Student teacher collaboration
 
@@ -22,7 +22,7 @@ Accelerate digital learning programs with embedded PDF viewing for teacher and p
 
 [](../use-cases/collaboration/review-and-approval/)
 
-![Reviews and Approvals](../../images/review-approvals.jpg)
+![Reviews and Approvals](../../images/reviews-and-approvals.jpg)
 
 ### Reviews and approvals
 

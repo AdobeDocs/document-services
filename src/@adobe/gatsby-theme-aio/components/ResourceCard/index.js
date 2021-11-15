@@ -107,7 +107,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  height: 100%;
+                  height: auto;
                   width: 100%;
                   margin-bottom: 0 !important;
                   margin-top: 0;

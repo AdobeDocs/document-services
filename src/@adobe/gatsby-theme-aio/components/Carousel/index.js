@@ -117,7 +117,7 @@ const SwiperContent = ({
               className="spectrum-Heading--sizeL"
               css={css`
                 @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                  font-size: var(--spectrum-alias-heading-m-text-size) !important;
+                  font-size: 18px !important;
                 }`
               }>
               {heading.props.children}
@@ -208,9 +208,8 @@ const Carousel = ({
           max-width: calc(${layoutColumns(12)});
           margin: auto;
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-            max-width: calc(${layoutColumns(3)}) !important;
+            max-width: calc(${layoutColumns(2.75)}) !important;
           }
-
           @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
             padding-bottom: 0;
             margin-top: 0;
@@ -292,16 +291,20 @@ const Carousel = ({
         {carouselProps.map((data, index) => {
           return (
             <SwiperSlide key={index}  >
-              <div className={data.bgimage.props?.children}>
+              <div   css={css`
+                   width:100%;
+                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                    width:100% !important;
+                  }
+                `} className={data.bgimage.props?.children}>
                 <div
                   css={css`
                   max-width: calc(${layoutColumns(12)});
                   margin: auto;
 
                   @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                    width:auto;
+                    max-width: calc(${layoutColumns(2.75)}) !important;
                   }
-
                   @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
                     max-width: calc(${layoutColumns(6)});
                   }

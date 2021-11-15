@@ -300,8 +300,9 @@ section.sdk-rsrc-featured .featured-container .featured-wrapper a {
     text-decoration: none !important;
     border: 1px solid #eaeaea;
     border-radius: 4px;
-    max-width: none;
+    /* max-width: 80vw; */
     max-height: 8.1875rem;
+    overflow:hidden;
 }
 @media screen and (min-width: 1060px) {
     section.sdk-rsrc-featured .featured-container .featured-wrapper a {
@@ -618,6 +619,7 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div p.blog-text {
 .featured-img-dimensions {
     height: 100%;
     max-width: 25vw;
+    object-fit: contain;
 }
 
 .feat1{

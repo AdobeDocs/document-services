@@ -28,7 +28,6 @@ const SEO = ({ title, description, keywords }) => {
     `
   )
   const { siteUrl, productionDomain, pageImage, baseUrl } = site.siteMetadata;
-
   return(
     <Helmet>
       <html lang="en" />
@@ -58,7 +57,7 @@ const SEO = ({ title, description, keywords }) => {
       <meta property="og:publish_date"  content={this_date} />
 
       {/* twitter */}
-      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:site" content="@adobedevs" />
       <meta property="twitter:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
       <meta property="twitter:title" content={title} />

@@ -42,5 +42,5 @@ Download ready to run samples for Node.js, .Net, Java and Python
 
 Add credentials to your code and experience the power of the API
 
-- [View docs](https://adobe.com/go/dcExtract_overview_doc)
+- [See documentation](https://adobe.com/go/dcExtract_overview_doc)
 - [View API Reference](https://www.adobe.com/go/dcsdk_APIdocs)
