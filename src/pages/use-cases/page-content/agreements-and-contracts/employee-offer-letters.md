@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Employee Offer Letters
+title: 'Document Services API Use Case: Employee Offer Letters'
 ---
 
 ## Employee Offer Letters

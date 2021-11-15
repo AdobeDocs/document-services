@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Employee Onboarding Materials
+title: 'Document Services API Use Case: Employee Onboarding Materials'
 ---
 
 ## Employee Onboarding Materials

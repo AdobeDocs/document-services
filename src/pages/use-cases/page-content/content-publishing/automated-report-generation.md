@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Job Posting
+title: 'Document Services API Use Case: Job Posting'
 ---
 
 ## Automated Report Generation

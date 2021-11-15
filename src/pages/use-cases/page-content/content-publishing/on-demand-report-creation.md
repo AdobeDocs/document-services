@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Report Creation and Editing
+title: 'Document Services API Use Case: Report Creation and Editing'
 ---
 
 ## On-Demand Report Creation

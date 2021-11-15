@@ -1,5 +1,5 @@
 ---
-title: Adobe Developers — Document Services API Use Cases — Review and Approval
+title: 'Document Services API Use Case: Review and Approval'
 ---
 
 ## Review and Approval

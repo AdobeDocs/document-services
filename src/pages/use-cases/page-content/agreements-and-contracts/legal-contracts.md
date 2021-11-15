@@ -1,5 +1,5 @@
 ---
-title: Adobe Developers — Document Services API Use Cases - Legal Contracts
+title: 'Document Services API Use Case: Legal Contracts'
 ---
 
 ## Legal Contracts

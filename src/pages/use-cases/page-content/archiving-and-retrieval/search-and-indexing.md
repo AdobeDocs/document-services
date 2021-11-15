@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Search and Indexing
+title: 'ADocument Services API Use Case: Search and Indexing'
 ---
 
 ## Search and Indexing

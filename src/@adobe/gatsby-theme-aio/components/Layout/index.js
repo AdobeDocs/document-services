@@ -342,8 +342,6 @@ export default ({ children, pageContext, location }) => {
   updatePageSrc('openAPI', frontMatter, setIsLoading);
   updatePageSrc('frame', frontMatter, setIsLoading);
 
-  console.log('frontMatter local', frontMatter);
-
   return (
     <>
       <Helmet>

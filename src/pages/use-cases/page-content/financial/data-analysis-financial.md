@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Data Analysis
+title: 'Document Services API Use Case: Data Analysis for Finance'
 ---
 
 ## Data Analysis

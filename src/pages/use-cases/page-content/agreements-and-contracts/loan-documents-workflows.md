@@ -1,5 +1,5 @@
 ---
-title: Adobe Developers — Document Services API Use Cases - Loan Document Workflows
+title: 'Document Services API Use Case: Data Analysis for Finance'
 ---
 
 ## Loan Document Workflows
