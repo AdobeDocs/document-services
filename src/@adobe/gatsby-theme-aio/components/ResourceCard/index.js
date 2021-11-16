@@ -41,7 +41,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
     counter[columns]++;
   }
 
-  const href = getElementChild(link).props.href;
+  const href = link ? getElementChild(link).props.href : null;
   let extraMargin = '';
 
   if (columns === 2) {
@@ -97,7 +97,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
           <div
             className="spectrum-Card-preview"
             css={css`
-              height: var(--spectrum-global-dimension-size-2000);
+              height: var(--spectrum-global-dimension-size-3000);
               width: 100%;
               padding: 0 !important;
             `}>

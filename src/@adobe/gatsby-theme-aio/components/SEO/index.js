@@ -18,58 +18,58 @@ const SEO = ({ title, description, keywords }) => {
       query {
         site {
           siteMetadata {
+            siteTitle
             siteUrl
             baseUrl
             pageImage
             productionDomain
+            author
           }
         }
       }
     `
   )
-  const { siteUrl, productionDomain, pageImage, baseUrl } = site.siteMetadata;
+  const { siteUrl, productionDomain, pageImage, baseUrl, siteTitle, author, creator } = site.siteMetadata;
+  const metaTitle = title ? `${title} - ${siteTitle}` : siteTitle;
   return(
     <Helmet>
       <html lang="en" />
       <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
       <meta name="robots" content="noodp"/>
       <link rel="canonical" href= {`${productionDomain}${pageURL}`}/>
+      <link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
 
       {/*  primary  */}
-      <title>{ title }</title>
-      <meta name="title" content={title} />
-      <meta name="description" content={description} />
+      <title>{metaTitle}</title>
+      <meta name="title" content={metaTitle} />
+      {description && <meta name="description" content={description} />}
       {keywords && <meta name="keywords" content={keywords.join(', ')} />}
 
       {/* props */}
-      <meta itemprop="name" content={title} />
-      <meta itemprop="description" content={description} />
+      <meta itemprop="name" content={metaTitle} />
+      {description && <meta itemprop="description" content={description} />}
       <meta itemprop="image" content={`${productionDomain}/gh-assets/img/page-thumbnails/${pageImage}`}/>
-      <meta property="article:author" content="Adobe I/O — Adobe Developers" />
-      <meta property="article:published_time" content={this_date} />
+      <meta property="article:author" content={author} />
+      {/* <meta property="article:published_time" content={this_date} /> */}
 
       {/* open graph */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={metaTitle} />
+      {description && <meta property="og:description" content={description} /> }
       <meta property="og:image" content={`${productionDomain}/gh-assets/img/page-thumbnails/${pageImage}`}/>
-      <meta property="og:publish_date"  content={this_date} />
+      {/* <meta property="og:publish_date"  content={this_date} /> */}
 
       {/* twitter */}
       <meta property="twitter:card" content="summary" />
-      <meta property="twitter:site" content="@adobedevs" />
+      <meta property="twitter:site" content={creator} />
       <meta property="twitter:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:creator" content="@adobedevs" />
-      <meta property="twitter:description" content={description} />
+      <meta property="twitter:title" content={metaTitle} />
+      <meta property="twitter:creator" content={creator} />
+      {description && <meta property="twitter:description" content={description} />}
       <meta property="twitter:image:src" content={`${productionDomain}/gh-assets/img/page-thumbnails/${pageImage}`}/>
-
-
-      <link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
-      <link rel="shortcut icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
       {process.env.GATSBY_ADOBE_LAUNCH_SRC && <script src={process.env.GATSBY_ADOBE_LAUNCH_SRC} async />}
-
     </Helmet>
   )
 };

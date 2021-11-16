@@ -1,12 +1,9 @@
 @charset "UTF-8";
-@font-face {
-    font-family: adobeFont;
-    src: url(../fonts/AdobeClean-Regular.otf);
+
+h1 {
+    font-family: "adobe-clean" !important;
  }
 
- * {
-    font-family: adobeFont !important;
- }
 
 .swiper-pagination-bullet {
     height: 8px;
@@ -603,7 +600,7 @@ img[alt=thumbnail] {
 }
 
 .carousel-adobe{
-    background:url(../pages/images/mp_aws_bkg@2x.png) !important;
+    background: #1B5496 url(../pages/images/mp_aws_bkg@2x.png) !important;
 }
 
 .carousel-micosoft{

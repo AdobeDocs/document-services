@@ -57,7 +57,7 @@ const MobileOptimize = ({ className, theme = "dark" }) => {
           `spectrum--${theme} main secondary-page`
         )}
         css={css`
-          background: linear-gradient(#e61305, #f18a72 65%);
+          background: linear-gradient(#e61305 40%, #f18a72);
         `}
       >
         <div className="content">
@@ -80,21 +80,20 @@ const MobileOptimize = ({ className, theme = "dark" }) => {
               <div>
                 <h4>Revolutionary Mobile Experience</h4>
                 <p>
-                  No more pinch and zoom to read PDFs on mobile. Tap to open
-                  images and figures.
+                  Liquid Mode lets users effortlessly read PDFs on mobile devices — no pinching and zooming necessary
                 </p>
               </div>
               <div>
                 <h4>Easier Navigation</h4>
-                <p>Navigate document sections via a new outline view.</p>
+                <p>Navigate document sections via a new outline view</p>
               </div>
               <div>
                 <h4>Improved Readability</h4>
-                <p>Adjust font sizing and spacing to improve readability.</p>
+                <p>Easily adjust font sizing and spacing on the fly</p>
               </div>
               <div>
                 <h4>Enhanced Accessibility</h4>
-                <p>Tagged for improved performance with screen readers.</p>
+                <p>Tagged for improved performance with screen readers</p>
               </div>
             </div>
             <div className="primary-button">

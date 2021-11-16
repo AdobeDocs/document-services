@@ -12,6 +12,9 @@
 
 module.exports = {
   siteMetadata: {
+    siteTitle:'Adobe Developers',
+    author: process.env.AUTHOR || 'Adobe I/O — Adobe Developers',
+    creator: process.env.CREATOR || '@adobedevs',
     siteUrl: process.env.SITE_URL || 'https://developer-stage.adobe.com/',
     baseUrl: process.env.BASEURL || '',
     productionDomain: process.env.PRODUCTION_DOMAIN || 'https://www.adobe.io',
