@@ -834,6 +834,18 @@ img[alt=thumbnail] {
     margin-left: 100px;
 }
 
+@media screen and (max-width: 765px) {
+    .position-up{
+        position: relative;
+       }
+       
+       .position-up .spectrum-Body{
+           position: absolute;
+           top: -50px;
+           margin-left: -32px;
+       }
+}
+
 .pdfextractapi {
     padding-bottom: 0 !important;
  }

@@ -297,6 +297,10 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
                   @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
                     width: 0;
                   }
+                  
+                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                    height:calc(var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-1700));
+                  }
                 `}
               >
                 <div
