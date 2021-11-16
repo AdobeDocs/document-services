@@ -97,7 +97,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
           <div
             className="spectrum-Card-preview"
             css={css`
-              height: var(--spectrum-global-dimension-size-3000);
+              height: var(--spectrum-global-dimension-size-2000);
               width: 100%;
               padding: 0 !important;
             `}>
@@ -107,7 +107,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  height: auto;
+                  height: 100%;
                   width: 100%;
                   margin-bottom: 0 !important;
                   margin-top: 0;
