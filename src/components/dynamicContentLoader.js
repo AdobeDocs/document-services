@@ -76,30 +76,30 @@ const DynamicContentLoader = ({
            padding :var(--spectrum-global-dimension-size-400);
            `
        }>
-         <div 
-           css={css`  
+         <div
+           css={css`
              max-width:calc(( var(--spectrum-global-dimension-size-6000) + var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-500) ));
              text-align: center;
              margin: 0 auto;
-     
+
              @media screen (max-width:${TABLET_SCREEN_WIDTH}){
                max-width:calc(( var(--spectrum-global-dimension-size-5000) + var(--spectrum-global-dimension-size-3400) ));
              }
          `}>
-           <div 
+           <div
              css={css`
                overflow: hidden;
                padding-top: 56.25%;
                position: relative;
            `}>
          <iframe
-               src="https://www.youtube.com/embed/GCpSy78IDoE?list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5" 
-               title="YouTube video player" 
-               frameborder="0" 
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+               src="https://www.youtube.com/embed/GCpSy78IDoE?list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5&autoplay=1&rel=0&cc_load_policy=1"
+               title="YouTube video player"
+               frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?autoplay=1><img src=${resourceImage} alt='Adobe PDF Services API Overview'><span>▶</span></a>`}
                allowfullscreen={false}
-               css={css` 
+               css={css`
                position: absolute;
                border: 0;
                top: 0;
