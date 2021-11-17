@@ -842,7 +842,9 @@ img[alt=thumbnail] {
        .position-up .spectrum-Body{
            position: absolute;
            top: -50px;
-           margin-left: -32px;
+           margin-left: 0px;
+           right: 50px;
+           left: 50px;
        }
 }
 

@@ -26,7 +26,7 @@ module.exports = {
     pages: [
       {
         title: 'Adobe Document Services',
-        path: 'index.md'
+        path: '/homepage'
       },
       {
         title: 'APIs',
@@ -59,7 +59,7 @@ module.exports = {
       },
       {
         title: 'Pricing',
-        path: '../document-services/pricing/main'
+        path: '../document-services/pricing/#main'
       },
       {
         title: 'Documentation',
@@ -108,27 +108,27 @@ module.exports = {
         pages: [
           {
             title: 'Sales Proposals and Contracts',
-            path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts.md'
+            path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts'
           },
           {
             title: 'Legal Contracts',
-            path: 'use-cases/agreements-and-contracts/legal-contracts.md'
+            path: 'use-cases/agreements-and-contracts/legal-contracts'
           },
           {
             title: 'NDA Creation',
-            path: 'use-cases/agreements-and-contracts/nda-creation.md'
+            path: 'use-cases/agreements-and-contracts/nda-creation'
           },
           {
             title: 'Employee Offer Letters',
-            path: 'use-cases/agreements-and-contracts/employee-offer-letters.md'
+            path: 'use-cases/agreements-and-contracts/employee-offer-letters'
           },
           {
             title: 'Legal Letters and Statements',
-            path: 'use-cases/agreements-and-contracts/legal-letters-and-statements.md'
+            path: 'use-cases/agreements-and-contracts/legal-letters-and-statements'
           },
           {
             title: 'Loan Document Workflows',
-            path: 'use-cases/agreements-and-contracts/loan-documents-workflows.md'
+            path: 'use-cases/agreements-and-contracts/loan-documents-workflows'
           }
         ]
       },
@@ -139,15 +139,15 @@ module.exports = {
         pages: [
           {
             title: 'Content Based Process Automation',
-            path: 'use-cases/content-and-data-extraction/content-based-process-automation.md'
+            path: 'use-cases/content-and-data-extraction/content-based-process-automation'
           },
           {
             title: 'Data Analysis',
-            path: 'use-cases/content-and-data-extraction/data-analysis.md'
+            path: 'use-cases/content-and-data-extraction/data-analysis'
           },
           {
             title: 'Republish PDF Content',
-            path: 'use-cases/content-and-data-extraction/republish-pdf-content.md'
+            path: 'use-cases/content-and-data-extraction/republish-pdf-content'
           }
         ]
       },
@@ -158,43 +158,43 @@ module.exports = {
         pages: [
           {
             title: 'Digital Content Publishing',
-            path: 'use-cases/content-publishing/digital-content-publishing.md'
+            path: 'use-cases/content-publishing/digital-content-publishing'
           },
           {
             title: 'On-Demand Report Creation',
-            path: 'use-cases/content-publishing/on-demand-report-creation.md'
+            path: 'use-cases/content-publishing/on-demand-report-creation'
           },
           {
             title: 'Job Posting',
-            path: 'use-cases/content-publishing/job-posting.md'
+            path: 'use-cases/content-publishing/job-posting'
           },
           {
             title: 'Employee Onboarding Materials',
-            path: 'use-cases/content-publishing/employee-onboarding-materials.md'
+            path: 'use-cases/content-publishing/employee-onboarding-materials'
           },
           {
             title: 'Automated Report Generation',
-            path: 'use-cases/content-publishing/automated-report-generation.md'
+            path: 'use-cases/content-publishing/automated-report-generation'
           },
           {
             title: 'Employee Letters',
-            path: 'use-cases/content-publishing/employee-letters.md'
+            path: 'use-cases/content-publishing/employee-letters'
           },
           {
             title: 'Course and Degree Certificate',
-            path: 'use-cases/content-publishing/course-and-degree-certificate.md'
+            path: 'use-cases/content-publishing/course-and-degree-certificate'
           },
           {
             title: 'Managing Brand Assets',
-            path: 'use-cases/content-publishing/managing-brand-assets.md'
+            path: 'use-cases/content-publishing/managing-brand-assets'
           },
           {
             title: 'Processing Employee Resumes',
-            path: 'use-cases/content-publishing/processing-employee-resumes.md'
+            path: 'use-cases/content-publishing/processing-employee-resumes'
           },
           {
             title: 'Field Service Management',
-            path: 'use-cases/content-publishing/field-service-management.md'
+            path: 'use-cases/content-publishing/field-service-management'
           }
         ]
       },
@@ -205,11 +205,11 @@ module.exports = {
         pages: [
           {
             title: 'Student-Teacher Collaboration',
-            path: 'use-cases/collaboration/student-teacher-collaboration.md'
+            path: 'use-cases/collaboration/student-teacher-collaboration'
           },
           {
             title: 'Review and Approval',
-            path: 'use-cases/collaboration/review-and-approval.md'
+            path: 'use-cases/collaboration/review-and-approval'
           }
         ]
       },
@@ -220,23 +220,23 @@ module.exports = {
         pages: [
           {
             title: 'Data Analysis',
-            path: 'use-cases/financial/data-analysis-financial.md'
+            path: 'use-cases/financial/data-analysis-financial'
           },
           {
             title: 'Invoices',
-            path: 'use-cases/financial/invoices.md'
+            path: 'use-cases/financial/invoices'
           },
           {
             title: 'Sales Quote',
-            path: 'use-cases/financial/sales-quote.md'
+            path: 'use-cases/financial/sales-quote'
           },
           {
             title: 'Purchase Orders',
-            path: 'use-cases/financial/purchase-orders.md'
+            path: 'use-cases/financial/purchase-orders'
           },
           {
             title: 'Streamline Procurement Processes',
-            path: 'use-cases/financial/streamline-procurement-processes.md'
+            path: 'use-cases/financial/streamline-procurement-processes'
           }
         ]
       },
@@ -247,7 +247,7 @@ module.exports = {
         pages: [
           {
             title: 'Search and Indexing',
-            path: 'use-cases/archiving-and-retrieval/search-and-indexing.md'
+            path: 'use-cases/archiving-and-retrieval/search-and-indexing'
           }
         ]
       }

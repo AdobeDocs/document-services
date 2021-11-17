@@ -86,7 +86,7 @@ const { APIs, services, community, support, developer, legal, allAPIs } = {
   support: [
     {
       title: 'Contact us',
-      path: '/contactus'
+      path: '/contact'
     },
     {
       title: 'Adobe Developer support',

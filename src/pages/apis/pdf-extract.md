@@ -29,7 +29,7 @@ apiHeroAssetImg doc-ext-invoice
 
 <PdfExtractResourceTitle/>
 
-<WrapperComponent slots="content" repeat="1" theme="lightest" enableMaxWidth maxWidth='835px'/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" enableMaxWidth maxWidth='795px'/>
 
 <PdfExtractResource/>
 
@@ -82,5 +82,5 @@ We take security serously - check out our [security overview](https://www.adobe.
 Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-- [Contact us](../pricing/contact-us.md)
+- [Contact us](../pricing/contact.md)
 

@@ -20,4 +20,4 @@ title: Adobe Developer — DC Platform SDK Resources
 
 <TextBlock slots="buttons" width="100%" theme="light"  alignment="yes" paddingTop="5" paddingBottom='5' className="pb-1 left-Contact div-p-0 left-content" />
 
-- [Contact sales](./contact-us.md)
+- [Contact sales](./contact.md)

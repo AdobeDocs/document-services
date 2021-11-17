@@ -58,17 +58,17 @@ apiHeroAssetImg doc-gen-invoice
 
 <!-- Download Sample Templates and Data to Get Started -->
 
-<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+<WrapperComponent slots="content" repeat="1" theme="light"/>
 
 <DgDownloadSample/>
 
-<TextBlock slots="buttons" theme="lightest" isCentered className='ms-word-add-in-title'/>
+<TextBlock slots="buttons" theme="light" isCentered className='ms-word-add-in-title'/>
 
 - [See all templates](./doc-gen-api-template.md)
 
 
 <!--  Start Modifying PDFs in a few Minutes -->
-<WrapperComponent slots="content" theme="light"/>
+<WrapperComponent slots="content" theme="lightest"/>
 
 <DgStartModifyingTitle/>
 
@@ -88,4 +88,4 @@ apiHeroAssetImg doc-gen-invoice
 Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-- [Contact us](../pricing/contact-us.md)
+- [Contact us](../pricing/contact.md)

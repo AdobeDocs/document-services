@@ -78,4 +78,4 @@ apiHeroAssetImg doc-service-hero
 Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all)
-- [Contact us](../pricing/contact-us.md)
+- [Contact us](../pricing/contact.md)
