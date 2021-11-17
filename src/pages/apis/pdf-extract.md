@@ -4,6 +4,7 @@ description: Extract the text, data and content elements of any PDF with a web s
 ---
 
 import PdfExtractResource from './pdf-extract/pdf-extract-resource.md';
+import PdfExtractResourceTitle from './pdf-extract/pdf-extract-resource-title.md';
 import ExtractStepperComponent from './pdf-extract/extract-stepper.md';
 import WhyExtractAPI from './pdf-extract/why-extract-api.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';
@@ -24,10 +25,11 @@ apiHeroAssetImg doc-ext-invoice
 
 <WhyExtractAPI/>
 
-
-
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
 
+<PdfExtractResourceTitle/>
+
+<WrapperComponent slots="content" repeat="1" theme="lightest" enableMaxWidth maxWidth='835px'/>
 
 <PdfExtractResource/>
 

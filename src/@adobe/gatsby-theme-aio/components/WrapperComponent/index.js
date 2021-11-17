@@ -8,9 +8,10 @@ import "@spectrum-css/card";
 
 import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
-const WrapperComponent = ({ theme = 'lightest',className,content,background,enableMaxHeight=false,enableMaxWidth=false }) => {
+const WrapperComponent = ({ theme = 'lightest',className,content,background,enableMaxHeight=false,enableMaxWidth=false,maxWidth }) => {
 const backgroundColor =background?`background:${background}`:'background: var(--spectrum-global-color-gray-100)'
 const maxheight = enableMaxHeight?`height:625px !important;`:''
+const customWidth = enableMaxWidth ?  `${maxWidth}`: `${DESKTOP_SCREEN_WIDTH}`
 
   return (
     <section
@@ -24,7 +25,7 @@ const maxheight = enableMaxHeight?`height:625px !important;`:''
           @media only screen and (min-width: ${DESKTOP_SCREEN_WIDTH}) {
             ${maxheight}
             margin:auto;
-              width:${DESKTOP_SCREEN_WIDTH}
+              width: ${customWidth}
             }
           `}>
       {content}

@@ -7,6 +7,8 @@ import { TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/conf/globals';
 import Digging_out_data from '../pages/images/Digging_out_data.jpg';
 import Generate_documents from '../pages/images/generate_documents.jpg';
 import Make_PDFs_searchable from '../pages/images/Make_PDFs_searchable.jpg';
+import resourceImage from '../pages/images/resource_hero_img.jpg'
+
 
 const getImageURl = (url) => {
   let imageURL = url.split("/");
@@ -90,12 +92,12 @@ const DynamicContentLoader = ({
                padding-top: 56.25%;
                position: relative;
            `}>
-             <iframe
+         <iframe
                src="https://www.youtube.com/embed/GCpSy78IDoE?list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5" 
                title="YouTube video player" 
                frameborder="0" 
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              //  srcdoc={"<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?autoplay=1><img src=https://www.adobe.io/gh-assets/img/extract-hero-tablet@2x.png alt='Video The Dark Knight Rises: What Went Wrong? – Wisecrack Edition'><span>▶</span></a>"}
+               srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?autoplay=1><img src=${resourceImage} alt='Adobe PDF Services API Overview'><span>▶</span></a>`}
                allowfullscreen={false}
                css={css` 
                position: absolute;

@@ -10,6 +10,7 @@ import DgWhyDocTitle from './doc-generation/dg-why-doc-gen-api.md'
 import DgKeyFeatures from './doc-generation/dg-key-features.md'
 import DgExploreOtherAdobeDoc from './doc-generation/dg-explore-other-adobe-doc.md'
 import {MobileOptimize} from '../../components/mobileOptimize'
+import {AdobeMsBlade} from '../../components/adobeMicrosoftBlade'
 import '../../styles/doc-generation.css'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage"/>
@@ -42,6 +43,17 @@ apiHeroAssetImg doc-gen-invoice
 
 - [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=document-generation-api)
 
+<AdobeMsBlade/>
+
+<!-- Use case for Document Services API -->
+<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+
+<DgUseCaseDocServiceAPI/>
+
+<TextBlock slots="buttons" theme="lightest" isCentered className="padding-5"/>
+
+- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+
 <MobileOptimize/>
 
 <!-- Download Sample Templates and Data to Get Started -->
@@ -60,15 +72,6 @@ apiHeroAssetImg doc-gen-invoice
 
 <DgStartModifyingTitle/>
 
-
-<!-- Use case for Document Services API -->
-<WrapperComponent slots="content" repeat="1" theme="lightest"/>
-
-<DgUseCaseDocServiceAPI/>
-
-<TextBlock slots="buttons" theme="lightest" isCentered className="padding-5"/>
-
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <!-- Explore other Adobe Document Cloud services -->
 
