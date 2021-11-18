@@ -5,17 +5,12 @@ import '../../styles/developer-resource.css'
 
 import CustomerStory from './storyies.md'
 import {DynamicContentLoader} from '../../components/dynamicContentLoader'
-import Videos from './videos.md'
 
 <Hero slots="heading, text" variant="fullwidth" theme="lightest" customLayout/>
 
 # Developer Resources
 
 Start integrating our APIs into your solutions
-
-<WrapperComponent slots="content" repeat="1" theme="lightest"/>
-
-<Videos/>
 
 <DynamicContentLoader theme="lightest" content='usingAdobePDFService' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Hero&page_size=1"/>
 
@@ -38,4 +33,4 @@ Start integrating our APIs into your solutions
 Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-* [Contact us](../pricing/contact.md)
+* [Contact us](../pricing/contact-us.md)

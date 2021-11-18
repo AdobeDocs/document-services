@@ -49,6 +49,7 @@ import { Divider } from '@adobe/gatsby-theme-aio/src/components/Divider';
 import DEFAULT_AVATAR from './avatar.svg';
 import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
+
 const getSelectedTabIndex = (location, pages) => {
   const pathWithRootFix = rootFix(location.pathname);
   const pagesWithRootFix = rootFixPages(pages);
@@ -532,6 +533,7 @@ const GlobalHeader = ({
                             setOpenMenuIndex(-1)
                           }
                         }
+                        
                         >
                         <TabsItemLabel>{page.title}</TabsItemLabel>
                         <ChevronDown
@@ -544,6 +546,13 @@ const GlobalHeader = ({
                           `}
                         />
                         <div
+                          onClick={(event) => {
+                            event.stopImmediatePropagation();
+  
+                            setOpenVersion(false);
+                            setOpenProfile(false);
+                            setOpenMenuIndex(openMenuIndex === i ? -1 : i);
+                          }}
                           onMouseEnter={(event) => {
                             event.stopImmediatePropagation();
                             setOpenVersion(false);
@@ -560,7 +569,10 @@ const GlobalHeader = ({
                           }
                           role="button"
                           tabIndex={0}
-
+                          aria-label='APIs'
+                          onFocus={() => {
+                            setOpenMenuIndex(i);
+                          }}
                         >
                         <Popover
                           ref={setTabMenuRef}
@@ -590,7 +602,19 @@ const GlobalHeader = ({
                                   key={k}
                                   href={menuHref}
                                   {...getExternalLinkProps(menuHref)}
-                                  isHighlighted={menu === selectedMenu}>
+                                  isHighlighted={menu === selectedMenu}
+                                  onKeyDown={(e) => {
+                                    if (e.key === 'ArrowDown') {                                      
+                                      e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
+                                    }
+                                    if (e.key === 'ArrowUp') {                                      
+                                      e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
+                                    }
+                                    if( e.key === 'Enter'){
+                                      e.currentTarget.focus();
+                                    }
+                                  }}
+                                  >
                                   {menu.description ? (
                                     <div
                                       css={css`

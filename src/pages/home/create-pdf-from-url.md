@@ -12,9 +12,7 @@ Create PDFs from a variety of formats, including static and dynamic HTML; Micros
 #### REST API
 
 ```bash
-curl --location --request POST 'https://cpf-ue1.adobe.io/ops/
-    :create?respondWith=%7B%22reltype%22%3A%20%22http%3A%2F%2
-    Fns.adobe.com%2Frel%2Fprimary%22%7D' \
+curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith=%7B%22reltype%22%3A%20%22http%3A%2F%2Fns.adobe.com%2Frel%2Fprimary%22%7D' \
   --header 'Authorization: Bearer ' \
   --header 'Accept: application/json, text/plain, */*' \
   --header 'x-api-key: ' \

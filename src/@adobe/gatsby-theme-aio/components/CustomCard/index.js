@@ -86,7 +86,6 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
           () => navigate(links.props.children) :()=>('javascript')}
           onKeyPress={links ?
             () => navigate(links.props.children) :()=>('javascript')}
-        role="tab"
         tabIndex={0}
         className="spectrum-Card"
         style={gradients && linearGradients(gradientsType)}

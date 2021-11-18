@@ -3,12 +3,10 @@ import classNames from "classnames";
 import { css } from "@emotion/react";
 import PropTypes from "prop-types";
 import "@spectrum-css/typography";
-import { TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/conf/globals';
-import Digging_out_data from '../pages/images/Digging_out_data.jpg';
-import Generate_documents from '../pages/images/generate_documents.jpg';
-import Make_PDFs_searchable from '../pages/images/Make_PDFs_searchable.jpg';
-import resourceImage from '../pages/images/resource_hero_img.jpg'
-
+import Digging_out_data from "../pages/images/Digging_out_data.jpg";
+import Generate_documents from "../pages/images/generate_documents.jpg";
+import Make_PDFs_searchable from "../pages/images/Make_PDFs_searchable.jpg";
+import resourceImage from "../pages/images/resource_hero_img.jpg";
 
 const getImageURl = (url) => {
   let imageURL = url.split("/");
@@ -27,21 +25,21 @@ const getIframeImage = (iframsrc) => {
 
 const featuredContent = [
   {
-    Title :'Make PDFs Searchable (OCR)',
-    URL : 'https://medium.com/adobetech/make-pdfs-searchable-ocr-after-importing-into-sharepoint-1a8037744841',
-    Thumbnail :Make_PDFs_searchable
+    Title: "Make PDFs Searchable (OCR)",
+    URL: "https://medium.com/adobetech/make-pdfs-searchable-ocr-after-importing-into-sharepoint-1a8037744841",
+    Thumbnail: Make_PDFs_searchable,
   },
   {
-    Title :'Generate Documents',
-    URL :'https://medium.com/adobetech/generate-documents-and-send-in-bulk-for-signature-in-microsoft-power-automate-807838092dcf',
-    Thumbnail : Generate_documents
+    Title: "Generate Documents",
+    URL: "https://medium.com/adobetech/generate-documents-and-send-in-bulk-for-signature-in-microsoft-power-automate-807838092dcf",
+    Thumbnail: Generate_documents,
   },
   {
-    Title :'Digging Out Data with Adobe PDF Extract API',
-    URL:'https://medium.com/adobetech/digging-out-data-with-adobe-pdf-extract-api-cf4b1712f05a',
-    Thumbnail : Digging_out_data
-  }
-]
+    Title: "Digging Out Data with Adobe PDF Extract API",
+    URL: "https://medium.com/adobetech/digging-out-data-with-adobe-pdf-extract-api-cf4b1712f05a",
+    Thumbnail: Digging_out_data,
+  },
+];
 
 const DynamicContentLoader = ({
   api = "",
@@ -69,49 +67,49 @@ const DynamicContentLoader = ({
       `}
     >
       {content === "usingAdobePDFService" && resData?.data?.length > 0 && (
-         <section
-         className={classNames(className, `spectrum--${theme}`)}
-         css={css`
-           background-color:var(--spectrum-global-color-gray-100);
-           padding :var(--spectrum-global-dimension-size-400);
-           `
-       }>
-         <div
-           css={css`
-             max-width:calc(( var(--spectrum-global-dimension-size-6000) + var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-500) ));
-             text-align: center;
-             margin: 0 auto;
-
-             @media screen (max-width:${TABLET_SCREEN_WIDTH}){
-               max-width:calc(( var(--spectrum-global-dimension-size-5000) + var(--spectrum-global-dimension-size-3400) ));
-             }
-         `}>
-           <div
-             css={css`
-               overflow: hidden;
-               padding-top: 56.25%;
-               position: relative;
-           `}>
-         <iframe
-               src="https://www.youtube.com/embed/GCpSy78IDoE?list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5&autoplay=1&rel=0&cc_load_policy=1"
-               title="YouTube video player"
-               frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?autoplay=1><img src=${resourceImage} alt='Adobe PDF Services API Overview'><span>▶</span></a>`}
-               allowfullscreen={false}
-               css={css`
-               position: absolute;
-               border: 0;
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;`}
-             />
-           </div>
-         </div>
-       </section>
+        <section className="sdk-rsrc-release">
+          <div className="release-container">
+            <div className="release-wrapper">
+              <div className="release-wrapper-img">
+                <a href={resData?.data[0].URL} target="_parent">
+                  <iframe
+                    src="https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1"
+                    title="YouTube video player"
+                    srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1><img src=${resourceImage} alt='Adobe PDF Services API Overview'><span >▶</span></a>`}
+                    css={css`
+                      border: 0;
+                      width: 100%;
+                      height: 100%;
+                    `}
+                  />
+                </a>
+              </div>
+              <div className="release-copy-wrapper">
+                <h3 className="spectrum-Heading spectrum-Heading--sizeL">
+                  Adobe PDF Services API Overview
+                </h3>
+                <p>
+                  Video overview of how Adobe Document Generation API, Adobe
+                  Sign API, PDF Services API, PDF Embed API, and PDF Extract API
+                  can help you automate document processes within your apps.
+                </p>
+                <div className="release-cta">
+                  <a
+                    href={
+                      "https://www.youtube.com/watch?v=GCpSy78IDoE&list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5"
+                    }
+                    target="_blank"
+                    className="button-link"
+                  >
+                    Watch the video
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       )}
-      {content === "feature"  && (
+      {content === "feature" && (
         <>
           <section className="sdk-rsrc-anchor">
             <div className="anchor-container">
@@ -143,10 +141,12 @@ const DynamicContentLoader = ({
               <div className="featured-wrapper">
                 {featuredContent.map((data) => (
                   <a href={data.URL} target="_parent" key={data.Title}>
-                    <div
-                      className="featured-thumb feat1"
-                    >
-                      <img src={data.Thumbnail}  className="featured-img-dimensions" alt={data.Title}/>
+                    <div className="featured-thumb feat1">
+                      <img
+                        src={data.Thumbnail}
+                        className="featured-img-dimensions"
+                        alt={data.Title}
+                      />
                     </div>
                     <div className="featured-copy-wrapper">
                       <div className="featured-title">Featured</div>
@@ -262,12 +262,10 @@ const DynamicContentLoader = ({
   );
 };
 
-
 DynamicContentLoader.propTypes = {
   theme: PropTypes.string,
   content: PropTypes.string,
   api: PropTypes.string,
 };
-
 
 export { DynamicContentLoader };

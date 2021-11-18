@@ -28,6 +28,7 @@ const MobileOptimize = ({ className, theme = "dark" }) => {
             >
               <source src={AppStore_NoAudio} type="video/mp4" />
               Your browser does not support HTML5 Video.
+              <track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions"/>
             </video>
           </div>
           <div className="right-container">

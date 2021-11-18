@@ -5,11 +5,11 @@ import Context from "@adobe/gatsby-theme-aio/src/components/Context";
 import { useStaticQuery, graphql } from "gatsby"
 
 const SEO = ({ title, description, keywords }) => {
-  var today = new Date();
-  var dd = today.getDate();
-  var mm = today.getMonth() + 1;
-  var yyyy = today.getFullYear();
-  const this_date = `${yyyy}-${mm}-${dd}`;
+  // var today = new Date();
+  // var dd = today.getDate();
+  // var mm = today.getMonth() + 1;
+  // var yyyy = today.getFullYear();
+  // const this_date = `${yyyy}-${mm}-${dd}`;
 
   const { location } = useContext(Context);
   const pageURL = location.pathname;

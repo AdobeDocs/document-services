@@ -820,10 +820,6 @@ img[alt=thumbnail] {
     padding-bottom: 0px;
 }
 
-.graybody .spectrum-Card-body{
-    background-color: #f7f7f7;
-}
-
 .position-up{
  position: relative;
 }
@@ -838,7 +834,7 @@ img[alt=thumbnail] {
     .position-up{
         position: relative;
        }
-       
+
        .position-up .spectrum-Body{
            position: absolute;
            top: -50px;
@@ -857,11 +853,11 @@ img[alt=thumbnail] {
  .pt-grid-title-padding-bottom  {
      padding-bottom: var(--spectrum-global-dimension-size-250) !important;
  }
- 
+
  .productCardGrid > div:first-child {
      padding-top: var(--spectrum-global-dimension-size-350) !important;
  }
- 
+
 
  .card-heading-size .spectrum-Heading--sizeM{
      font-size: 18px;
@@ -908,4 +904,23 @@ img[alt=thumbnail] {
 .bgcolor .spectrum-Button:hover{
     background-color:#4b4b4b !important;
     color: #fff;
+}
+
+pre .prism-code.spectrum-Code {
+    overflow-x: hidden !important;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 1024px) {
+    pre .prism-code.spectrum-Code {
+        overflow-x: auto !important;
+    }
+}
+
+pre .prism-code.spectrum-Code  span.token.string{
+    word-break: break-all;
 }

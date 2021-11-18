@@ -6,7 +6,7 @@
 See how our customers are building great experiences and succeeding with Adobe.
 
 
-<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest"  className='useCaseCard graybody card-heading-size'/>
+<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest"  className='useCaseCard card-heading-size'/>
 
 [K2Nintext.pdf](K2Nintex.pdf)
 
@@ -17,7 +17,7 @@ See how our customers are building great experiences and succeeding with Adobe.
 Nintex transforms K2 Cloud workflows with Adobe Document Services APIs.
 
 
-<ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard graybody card-heading-size'/>
+<ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size'/>
 
 [AdobeInDesign.pdf](AdobeInDesign.pdf)
 
@@ -29,7 +29,7 @@ Adobe InDesign brings its new Share for Review features to life with Adobe Docum
 
 
 
-<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard graybody card-heading-size'/>
+<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size'/>
 
 [Cambridge-Assessment.pdf](Cambridge-Assessment.pdf)
 
@@ -40,7 +40,7 @@ Adobe InDesign brings its new Share for Review features to life with Adobe Docum
 Cambridge Assessment intends to digitize more than 100 years of test material with Adobe PDF Extract API.
 
 
-<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard graybody card-heading-size'/>
+<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size'/>
 
 [Evisort.pdf](Evisort.pdf)
 
