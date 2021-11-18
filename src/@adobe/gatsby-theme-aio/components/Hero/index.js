@@ -96,9 +96,10 @@ const HeroTexts = ({ texts }) => {
   return textKeys.map((textKey) =>
     cloneElement(texts[textKey], {
       className: 'spectrum-Body spectrum-Body--sizeL',
-      css: css`
+      css: css`       
         &.spectrum-Body--sizeL {
           margin-top: 0 !important;
+          color:#fff !important;
 
           &:last-of-type {
             margin-bottom: 0 !important;

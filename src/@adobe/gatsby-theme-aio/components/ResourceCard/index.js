@@ -145,7 +145,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
                   text-align: left;
                 `}>
                 <h3
-                  className="spectrum-Heading spectrum-Heading--sizeM"
+                  className="spectrum-Heading spectrum-Heading--sizeS"
                   css={css`
                     margin-top: 0 !important;
                     margin-bottom: 0 !important;

@@ -85,13 +85,13 @@ section.sdk-rsrc-release .release-container .release-wrapper {
 
 section.sdk-rsrc-release .release-container .release-wrapper .release-wrapper-img {
     width: 100%;
-    height: 272px;
+    height: 271px;
 }
 
 @media screen and (min-width: 1060px) {
     section.sdk-rsrc-release .release-container .release-wrapper .release-wrapper-img {
         width: 45.44%;
-        height: 272px;
+        height: 271px;
    }
 }
 

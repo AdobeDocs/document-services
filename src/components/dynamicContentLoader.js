@@ -99,6 +99,7 @@ const DynamicContentLoader = ({
                       "https://www.youtube.com/watch?v=GCpSy78IDoE&list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5"
                     }
                     target="_blank"
+                    rel="noreferrer"
                     className="button-link"
                   >
                     Watch the video

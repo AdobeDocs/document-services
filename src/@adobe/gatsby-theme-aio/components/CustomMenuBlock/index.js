@@ -214,7 +214,6 @@ const CustomMenuBlock = ( ) => {
                     isSelected,
                 },
               ])}
-              role="menuitem"
             >
               {level === 1 ? (
                 <>
