@@ -3,8 +3,9 @@ title: DC Platform SDK Resources - Adobe Developer
 ---
 import '../../styles/developer-resource.css'
 
-import CustomerStory from './storyies.md'
-import {DynamicContentLoader} from '../../components/dynamicContentLoader'
+import CustomerStory from './storyies.md';
+import {DynamicContentLoader} from '../../components/dynamicContentLoader';
+import ResourceSummary from './summary.md';
 
 <Hero slots="heading, text" variant="fullwidth" theme="lightest" customLayout/>
 
@@ -26,11 +27,15 @@ Start integrating our APIs into your solutions
 
 <CustomerStory/>
 
-<SummaryBlock slots=" heading, text, buttons"  theme='lightest' className="vertical-padding"/>
+<WrapperComponent slots="content" theme="lightest"/>
+
+<ResourceSummary />
+
+<!-- <SummaryBlock slots=" heading, text, buttons"  theme='lightest' className="vertical-padding"/>
 
 ### We're ready to help
 
 Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-* [Contact us](../pricing/contact.md)
+* [Contact us](../pricing/contact.md) -->

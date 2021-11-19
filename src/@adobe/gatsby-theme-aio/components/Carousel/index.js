@@ -78,13 +78,13 @@ const SwiperContent = ({
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
               margin: 0;
               max-width: calc(${layoutColumns(3.5)}) !important;
-              margin-bottom: var(--spectrum-global-dimension-size-200);
+              // margin-bottom: var(--spectrum-global-dimension-size-200);  
             }
 
             @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
               max-width: calc(${layoutColumns(6)}) !important;
               margin: 0;
-              margin-bottom: var(--spectrum-global-dimension-size-200);
+              // margin-bottom: var(--spectrum-global-dimension-size-200);
             }
 
           `}
@@ -100,7 +100,7 @@ const SwiperContent = ({
           css={css`
             text-align: left;
             flex: 1;
-            padding: var(--spectrum-global-dimension-size-100);
+            padding-bottom: var(--spectrum-global-dimension-size-200);
             padding-right:45px;
             @media only screen and (min-width: ${smallMobileView}) and(max-width:${MOBILE_SCREEN_WIDTH}) {
               margin: 0;
@@ -302,9 +302,10 @@ const Carousel = ({
                   max-width: calc(${layoutColumns(12)});
                   margin: auto;
 
-                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                    max-width: calc(${layoutColumns(2.75)}) !important;
-                  }
+                  // @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+                  //   max-width: calc(${layoutColumns(2.75)}) !important;
+                  // }
+                  
                   @media screen and (min-width: ${MOBILE_SCREEN_WIDTH})  and (max-width: ${TABLET_SCREEN_WIDTH})  {
                     max-width: calc(${layoutColumns(6)});
                   }
