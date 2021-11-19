@@ -1,6 +1,6 @@
 
 
-<SummaryBlock slots=" heading, text, buttons"  theme='lightest' className="vertical-padding"/>
+<SummaryBlock slots=" heading, text, buttons"  theme='lightest' />
 
 ### We're ready to help
 
