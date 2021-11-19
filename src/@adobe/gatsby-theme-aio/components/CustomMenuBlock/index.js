@@ -165,6 +165,7 @@ const CustomMenuBlock = ( ) => {
                   isSelected,
               },
             ])}
+            role="menuitem"
           >
             <GatsbyLink
               css={css`
@@ -245,7 +246,7 @@ const CustomMenuBlock = ( ) => {
                   padding-left: var(--spectrum-global-dimension-size-100);
                   white-space: nowrap;
                   color: var(--spectrum-listitem-m-text-color-hover, var(--spectrum-alias-text-color));
-                  
+
                   @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                     font-size: var(--spectrum-global-dimension-size-150); !important;
                   }
@@ -272,6 +273,7 @@ const CustomMenuBlock = ( ) => {
                     : ""}
                 `}
                 {...(menu.heading ? { "aria-labelledby": id } : {})}
+                role="menu"
               >
                 {renderSubMenuItem(menu.pages, level + 1)}
               </ul>

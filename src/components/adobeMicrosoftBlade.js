@@ -12,7 +12,6 @@ const AdobeMsBlade = () => {
         aria-hidden="false"
         role="tabpanel"
         id="slick-slide10"
-        aria-describedby="slick-slide-control10"
         style={{ width: "100%" }}
       >
         <div class="market-place-container">

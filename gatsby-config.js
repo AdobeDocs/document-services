@@ -59,7 +59,7 @@ module.exports = {
       },
       {
         title: 'Pricing',
-        path: '../document-services/pricing/#main'
+        path: '../document-services/pricing/main'
       },
       {
         title: 'Documentation',

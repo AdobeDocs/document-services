@@ -129,7 +129,6 @@ const Item = forwardRef(({
       title={label?.props?.children}
       aria-selected={isSelected}
       disabled={isDisabled}
-      aria-controls={id}
       className={classNames(className, 'spectrum-Tabs-item', { 'is-selected': isSelected }, { 'is-disabled': isDisabled })}>
       {icon ? <TabItemIcon icon={icon} isSelected={isSelected} isDisabled={isDisabled}></TabItemIcon> : null }
       {label ? <Label> {label} </Label>: null}
@@ -286,7 +285,6 @@ const TabsBlock = ({
                 const ref = createRef();
                 tabs.push(ref);
                 const isSelected = selectedIndex.tab === index;
-                const itemPopoverId = nextId();
                 return (
                   <>
                   <Item
@@ -295,7 +293,8 @@ const TabsBlock = ({
                     tabIndex={0}
                     ref={ref}
                     isSelected={isSelected}
-                    aria-controls={itemPopoverId}
+                    aria-controls={`tabView${index}`}
+                    aria-label={data['heading']}
                     label={<b>{data['heading']}</b>}
                     icon={data['image']}
                     onKeyDown={(e) => {
@@ -436,6 +435,7 @@ const TabsBlock = ({
               return(
                 <TabView
                   key={`tabView_${index}`}
+                  id={`tabView${index}`}
                   className={'tabView'}
                   isHidden={!isHidden}
                   css={css`

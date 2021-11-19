@@ -443,7 +443,7 @@ const Footer = ({ hasSideNav = false }) => (
                         />
                       </svg>
                       <Link isQuiet={true} variant="secondary">
-                        <a {...getExternalLinkProps(path)} href={path}>
+                        <a {...getExternalLinkProps(path)} href={path} aria-label={title}>
                           {title}
                         </a>
                       </Link>
@@ -455,7 +455,7 @@ const Footer = ({ hasSideNav = false }) => (
                   return (
                     <li key={i}>
                       <Link isQuiet={true} variant="secondary">
-                        <a id={OPEN_PRIVACY_ID} href="#"></a>
+                        <a id={OPEN_PRIVACY_ID} href="#" aria-label="Cookie preferences"></a>
                       </Link>
                     </li>
                   );
@@ -464,7 +464,7 @@ const Footer = ({ hasSideNav = false }) => (
                 return (
                   <li key={i}>
                     <Link isQuiet={true} variant="secondary">
-                      <a {...getExternalLinkProps(path)} href={path}>
+                      <a {...getExternalLinkProps(path)} href={path} aria-label={title}>
                         {title}
                       </a>
                     </Link>

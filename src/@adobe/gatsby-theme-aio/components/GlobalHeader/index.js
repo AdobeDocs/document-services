@@ -511,6 +511,7 @@ const GlobalHeader = ({
                         ref={setTabRef}
                         selected={isSelectedTab}
                         aria-controls={menuPopoverId}
+                        aria-label={page.title}
                         onClick={(event) => {
                           event.stopImmediatePropagation();
 
@@ -533,7 +534,7 @@ const GlobalHeader = ({
                             setOpenMenuIndex(-1)
                           }
                         }
-                        
+
                         >
                         <TabsItemLabel>{page.title}</TabsItemLabel>
                         <ChevronDown
@@ -548,7 +549,7 @@ const GlobalHeader = ({
                         <div
                           onClick={(event) => {
                             event.stopImmediatePropagation();
-  
+
                             setOpenVersion(false);
                             setOpenProfile(false);
                             setOpenMenuIndex(openMenuIndex === i ? -1 : i);
@@ -569,7 +570,7 @@ const GlobalHeader = ({
                           }
                           role="button"
                           tabIndex={0}
-                          aria-label='APIs'
+                          aria-label={page.title}
                           onFocus={() => {
                             setOpenMenuIndex(i);
                           }}
@@ -604,10 +605,10 @@ const GlobalHeader = ({
                                   {...getExternalLinkProps(menuHref)}
                                   isHighlighted={menu === selectedMenu}
                                   onKeyDown={(e) => {
-                                    if (e.key === 'ArrowDown') {                                      
+                                    if (e.key === 'ArrowDown') {
                                       e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
                                     }
-                                    if (e.key === 'ArrowUp') {                                      
+                                    if (e.key === 'ArrowUp') {
                                       e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
                                     }
                                     if( e.key === 'Enter'){

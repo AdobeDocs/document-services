@@ -31,9 +31,9 @@ import {
 
 import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 import { Footer } from '../Footer';
-import { Contributors } from '@adobe/gatsby-theme-aio/src/components/Contributors';
+// import { Contributors } from '@adobe/gatsby-theme-aio/src/components/Contributors';
+// import { GitHubActions } from '@adobe/gatsby-theme-aio/src/components/GitHubActions';
 import { Feedback } from '@adobe/gatsby-theme-aio/src/components/Feedback';
-import { GitHubActions } from '@adobe/gatsby-theme-aio/src/components/GitHubActions';
 import { Breadcrumbs } from '@adobe/gatsby-theme-aio/src/components/Breadcrumbs';
 import { OnThisPage } from '@adobe/gatsby-theme-aio/src/components/OnThisPage';
 import { NextSteps } from '@adobe/gatsby-theme-aio/src/components/NextSteps';
@@ -126,7 +126,9 @@ const filterChildren = ({ childrenArray, query, hasSideNav }) => {
 };
 
 export default ({ children, pageContext, query }) => {
-  const { hasSideNav, siteMetadata, location, allSitePage, allMdx, allGithub, allGithubContributors } =
+  // const { hasSideNav, siteMetadata, location, allSitePage, allMdx, allGithub, allGithubContributors } =
+  //   useContext(Context);
+  const { hasSideNav, siteMetadata, location, allSitePage, allMdx} =
     useContext(Context);
   const isTranscludedContent = typeof pageContext === 'undefined';
   let childrenArray = Children.toArray(children);
@@ -154,12 +156,12 @@ export default ({ children, pageContext, query }) => {
     const tableOfContents = tableOfContentsObj?.tableOfContents ?? {};
 
     // Github
-    const { repository, default_branch: branch, root } = allGithub?.nodes[0];
-    const contributorsObj = allGithubContributors?.nodes.find(
-      ({ path: fileAbsolutePath }) => fileAbsolutePath === componentPath
-    );
-    const contributors = contributorsObj?.contributors ?? [];
-    const pagePath = componentPath.replace(/.*\/src\/pages\//g, '');
+    // const { repository, default_branch: branch, root } = allGithub?.nodes[0];
+    // const contributorsObj = allGithubContributors?.nodes.find(
+    //   ({ path: fileAbsolutePath }) => fileAbsolutePath === componentPath
+    // );
+    // // const contributors = contributorsObj?.contributors ?? [];
+    // const pagePath = componentPath.replace(/.*\/src\/pages\//g, '');
 
     // Breadcrumbs
     const { home } = siteMetadata;
@@ -321,7 +323,7 @@ export default ({ children, pageContext, query }) => {
                           margin-top: var(--spectrum-global-dimension-size-200);
                         }
                       `}>
-                      <GitHubActions repository={repository} branch={branch} root={root} pagePath={pagePath} />
+                      {/* <GitHubActions repository={repository} branch={branch} root={root} pagePath={pagePath} /> */}
                     </div>
                   </div>
                 )}
@@ -342,8 +344,8 @@ export default ({ children, pageContext, query }) => {
                       margin-top: var(--spectrum-global-dimension-size-800);
                       margin-bottom: var(--spectrum-global-dimension-size-400);
                     `}>
-                    <div>
-                      <Contributors
+                     <div>
+                     {/* <Contributors
                         repository={repository}
                         branch={branch}
                         root={root}
@@ -355,7 +357,7 @@ export default ({ children, pageContext, query }) => {
                             ? new Date(contributors[0].date).toLocaleDateString()
                             : new Date().toLocaleDateString()
                         }
-                      />
+                      />*/}
                     </div>
                     <div
                       css={css`

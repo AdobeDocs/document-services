@@ -134,7 +134,7 @@ h1 {
         color: #8194ce !important;
     }
 }
-.tabView div[class$="-TextBlock"] {
+.tabView div:last-child{
     margin-top: 0px !important;
 }
 
