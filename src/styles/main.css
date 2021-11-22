@@ -924,3 +924,7 @@ pre .prism-code.spectrum-Code {
 pre .prism-code.spectrum-Code  span.token.string{
     word-break: break-all;
 }
+
+.sub-title  div > .spectrum-Body {
+    color: var(--spectrum-global-color-gray-800)!important ;
+}

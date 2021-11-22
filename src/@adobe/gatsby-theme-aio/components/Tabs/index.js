@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, createRef, forwardRef, cloneElement
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/react';
-import nextId from 'react-id-generator';
+// import nextId from 'react-id-generator';
 import '@spectrum-css/tabs';
 
 import { cloneChildren, MOBILE_SCREEN_WIDTH, TABLET_SCREEN_WIDTH, layoutColumns } from '@adobe/gatsby-theme-aio/src/utils';
@@ -120,7 +120,7 @@ const Item = forwardRef(({
   ...props }, ref
 ) => {
   const Element = elementType;
-  const id = nextId();
+  // const id = nextId();
   return (
     <Element
       {...props}

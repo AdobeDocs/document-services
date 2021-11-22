@@ -19,7 +19,7 @@ const counter = {
 };
 const alignMapping = ['margin-left: 0;', 'margin-right: 0;'];
 
-const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image,className }) => {
+const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image,className, isCustomStories=false }) => {
   let initColumns = 100 / parseFloat(width);
 
   if (width === '33%') {
@@ -107,7 +107,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  height: 100%;
+                  height: ${isCustomStories ? '100%' : 'auto'};
                   width: 100%;
                   margin-bottom: 0 !important;
                   margin-top: 0;
