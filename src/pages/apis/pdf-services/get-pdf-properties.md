@@ -49,7 +49,7 @@ pdfPropertiesOperation.execute(executionContext)
 
 #### .Net
 
-```c#
+```clike
 // Initial setup, create credentials instance
 Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
     .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")

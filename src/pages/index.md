@@ -107,7 +107,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://www.adobe.com/go/dcsdk_APIdocs"  repeat="4"  theme="dark" className='bgBlue code-block-0' />
 
-### Create PDF from URL
+### Create PDF from Word
 
 ![creativePDF](images/s_createpdf_color_24.svg)
 

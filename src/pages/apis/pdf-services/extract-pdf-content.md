@@ -12,7 +12,7 @@ Extract text, images, tables, and more from native and scanned PDFs into a struc
 
 See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs) and quickly try our APIs using the Postman collections
 
-<CodeBlock slots="heading, code" repeat="5" languages="curl, js,.net,java" />
+<CodeBlock slots="heading, code" repeat="5" languages="curl, js,.net, Java" />
 
 #### REST API
 
@@ -90,37 +90,33 @@ extractPDFOperation
 
 #### .Net
 
-```c#
-// Create an ExecutionContext using credentials.
+```clike
+//Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.Create(credentials);
-
-// Create a new operation instance
-DeletePagesOperation deletePagesOperation = DeletePagesOperation.CreateNew();
+ExtractPDFOperation extractPdfOperation = ExtractPDFOperation.CreateNew();
 
 // Set operation input from a source file.
-FileRef sourceFileRef = FileRef.CreateFromLocalFile(
-    @"deletePagesInput.pdf"
-  );
-deletePagesOperation.SetInput(sourceFileRef);
+FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"extractPDFInput.pdf");
+extractPdfOperation.SetInputFile(sourceFileRef);
 
-// Delete pages of the document
-// (as specified by PageRanges).
-PageRanges pageRangeForDeletion = GetPageRangeForDeletion();
-deletePagesOperation
-  .SetPageRanges(pageRangeForDeletion);
-
+// Build ExtractPDF options and set them into the operation
+ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPdfOptionsBuilder()
+    .AddElementsToExtract(new List<ExtractElementType>(new []{ ExtractElementType.TEXT, ExtractElementType.TABLES}))
+    .AddElementsToExtractRenditions(new List<ExtractRenditionsElementType> (new []{ExtractRenditionsElementType.FIGURES, ExtractRenditionsElementType.TABLES}))
+    .AddAddCharInfo(true)
+    .build();
+extractPdfOperation.SetOptions(extractPdfOptions);
 // Execute the operation.
-FileRef result = deletePagesOperation
-  .Execute(executionContext);
+FileRef result = extractPdfOperation.Execute(executionContext);
 
 // Save the result to the specified location.
-result.SaveAs(Directory.GetCurrentDirectory() +
-  "/output/deletePagesOutput.pdf");
+result.SaveAs(Directory.GetCurrentDirectory() + "/output/ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF.zip");
+
 ```
 
 #### Java
 
-```java
+```language-java
 // Create an ExecutionContext using credentials and create a new operation instance
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 ExtractPDFOperation extractPDFOperation = ExtractPDFOperation.createNew();

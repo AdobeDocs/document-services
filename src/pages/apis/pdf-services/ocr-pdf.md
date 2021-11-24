@@ -34,7 +34,7 @@ ocrOperation.execute(executionContext)
 
 #### .Net
 
-```c#
+```clike
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.Create(credentials);
 OCROperation ocrOperation = OCROperation.CreateNew();
