@@ -163,12 +163,12 @@ const TabItemIcon = forwardRef(({
   );
 });
 
-const TabsIndicator = forwardRef(({ className, ...props }, ref) => {
+const TabsIndicator = forwardRef(({ className,index=0, ...props }, ref) => {
   return (
     <div
       {...props}
       ref={ref}
-      className={classNames(className, 'spectrum-Tabs-selectionIndicator')}
+      className={classNames(className, 'spectrum-Tabs-selectionIndicator',{"default":index ===0})}
       css={css`
       transition-property: transform, width;
     `}></div>
@@ -432,6 +432,8 @@ const TabsBlock = ({
           {menuItems?.length > 0 ?
             menuItems.map((data, index) => {
               const isHidden = selectedIndex.tab === index;
+              const contentData = data['content'];
+              contentData.props = {...contentData.props,index:selectedIndex.tab}
               return(
                 <TabView
                   key={`tabView_${index}`}
@@ -460,7 +462,7 @@ const TabsBlock = ({
 
                   `}
                 >
-                  {data['content'] ? data['content'] : null}
+                  { contentData }
                 </TabView>
               )
             })

@@ -24,7 +24,7 @@ From the company who created the PDF standard.
 doc-services-hero
 
 
-- [Get started](/src/pages/gettingstarted.md)
+- [Get started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html)
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
 
