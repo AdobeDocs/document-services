@@ -1,11 +1,3 @@
-<TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView"/>
-
-##### Dynamic PDF Document Generation
-
-- [See documentation](/document-services/docs/overview/document-generation-api/)
-
-Merge your JSON data with custom Word templates to generate high-fidelity PDF and Word documents
-
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />
 
 #### REST API

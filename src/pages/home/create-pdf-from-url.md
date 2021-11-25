@@ -1,12 +1,3 @@
-<TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView"/>
-
-##### Create PDF from URL
-
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
-
-Create PDFs from a variety of formats, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, and, Zip
-
-
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />
 
 #### REST API
@@ -42,22 +33,16 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
 ```js
 // Create an ExecutionContext using credentials and create a new operation instance.
 const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-    createPDF = PDFServicesSdk.CreatePDF,
-    htmlToPDFOperation = createPDF.Operation.createNew();
+    createPdfOperation = PDFServicesSdk.CreatePDF.Operation.createNew();
 
-// Set operation input from a source URL.
-const input = PDFServicesSdk.FileRef.createFromURL("https://www.adobe.io");
-htmlToPDFOperation.setInput(input);
-
-// Provide any custom configuration options for the operation.
-const options = new createPDF.options.html.CreatePDFFromHtmlOptions.Builder()
-    .includesHeaderFooter(true)
-    .build();
-htmlToPDFOperation.setOptions(options);
+// Set operation input from a source file.
+const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/createPDFInput.docx');
+createPdfOperation.setInput(input);
 
 // Execute the operation and Save the result to the specified location.
-htmlToPDFOperation.execute(executionContext)
-.then(result => result.saveAsFile('output/createPdfFromURLOutput.pdf'))
+createPdfOperation.execute(executionContext)
+    .then(result => result.saveAsFile('output/createPDFFromDOCX.pdf'))
+
 ```
 
 #### .Net
@@ -65,20 +50,17 @@ htmlToPDFOperation.execute(executionContext)
 ```clike
 //Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.Create(credentials);
-CreatePDFOperation htmlToPDFOperation = CreatePDFOperation.CreateNew();
+CreatePDFOperation createPdfOperation = CreatePDFOperation.CreateNew();
 
-// Set operation input from a source URL.
-FileRef source = FileRef.CreateFromURI(new Uri("https://www.adobe.io"));
-htmlToPDFOperation.SetInput(source);
-
-// Provide any custom configuration options for the operation.
-SetCustomOptions(htmlToPDFOperation);
+// Set operation input from a source file.
+FileRef source = FileRef.CreateFromLocalFile(@"createPdfInput.docx");
+createPdfOperation.SetInput(source);
 
 // Execute the operation.
-FileRef result = htmlToPDFOperation.Execute(executionContext);
+FileRef result = createPdfOperation.Execute(executionContext);
 
 // Save the result to the specified location.
-result.SaveAs(Directory.GetCurrentDirectory() + "/output/createPdfFromURLOutput.pdf");
+result.SaveAs(Directory.GetCurrentDirectory() + "/output/createPdfOutput.pdf");
 ```
 
 #### Java
@@ -86,24 +68,15 @@ result.SaveAs(Directory.GetCurrentDirectory() + "/output/createPdfFromURLOutput.
 ```javascript
 //Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
-CreatePDFOperation htmlToPDFOperation = CreatePDFOperation.createNew();
+CreatePDFOperation createPdfOperation = CreatePDFOperation.createNew();
 
 // Set operation input from a source file.
-FileRef source = FileRef.createFromURL(new URL("https://www.adobe.io"));
-htmlToPDFOperation.setInput(source);
-
-// Provide any custom configuration options for the operation.
-CreatePDFOptions htmlToPdfOptions = CreatePDFOptions.htmlOptionsBuilder()
-    .includeHeaderFooter(true)
-    .build();
-htmlToPDFOperation.setOptions(htmlToPdfOptions);
-
-// Provide any custom configuration options for the operation.
-setCustomOptions(htmlToPDFOperation);
+FileRef source = FileRef.createFromLocalFile("src/main/resources/createPDFInput.docx");
+createPdfOperation.setInput(source);
 
 // Execute the operation.
-FileRef result = htmlToPDFOperation.execute(executionContext);
+FileRef result = createPdfOperation.execute(executionContext);
 
 // Save the result to the specified location.
-result.saveAs("output/createPDFFromURLOutput.pdf");
+result.saveAs("output/createPDFFromDOCX.pdf");
 ```
