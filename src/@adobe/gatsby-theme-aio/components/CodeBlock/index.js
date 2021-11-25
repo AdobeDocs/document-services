@@ -13,7 +13,7 @@
 import React, { useRef, useEffect, useState, createRef } from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
-import { Tabs, Item as TabsItem, Label as TabsItemLabel, TabsIndicator, positionIndicator } from '@adobe/gatsby-theme-aio/src/components/Tabs';
+import { Tabs, Item as TabsItem, Label as TabsItemLabel, positionIndicator,CodeTabIndicator } from '@adobe/gatsby-theme-aio/src/components/Tabs';
 import { Picker } from '@adobe/gatsby-theme-aio/src/components/Picker';
 
 const CodeBlock = (props) => {
@@ -116,7 +116,7 @@ const CodeBlock = (props) => {
               </TabsItem>
             );
           })}
-          <TabsIndicator ref={selectedTabIndicator}  index={selectedIndex.tab}/>
+          <CodeTabIndicator ref={selectedTabIndicator}  index={selectedIndex.tab}/>
         </Tabs>
         <div
           css={css`

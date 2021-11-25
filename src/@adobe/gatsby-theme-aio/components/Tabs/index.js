@@ -163,7 +163,19 @@ const TabItemIcon = forwardRef(({
   );
 });
 
-const TabsIndicator = forwardRef(({ className,index=0, ...props }, ref) => {
+const TabsIndicator = forwardRef(({ className, ...props }, ref) => {
+  return (
+    <div
+      {...props}
+      ref={ref}
+      className={classNames(className, 'spectrum-Tabs-selectionIndicator')}
+      css={css`
+      transition-property: transform, width;
+    `}></div>
+  );
+});
+
+const CodeTabIndicator = forwardRef(({ className,index=0, ...props }, ref) => {
   return (
     <div
       {...props}
@@ -514,4 +526,4 @@ TabsBlock.propTypes = {
 };
 
 
-export { Tabs, Item, TabView, TabItemIcon, Label, TabsIndicator, positionIndicator, animateIndicator, TabsBlock };
+export { Tabs, Item, TabView, TabItemIcon, Label, TabsIndicator, positionIndicator, animateIndicator,CodeTabIndicator, TabsBlock };

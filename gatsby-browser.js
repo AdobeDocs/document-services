@@ -51,7 +51,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let getCredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get credentials');
     let getStartedButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get started');
     let StartedFreeTrialButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Start free trial');
-    let getFreeCredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get free credentials');
 
     // stage
     let baseurl =  'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html';
@@ -64,28 +63,23 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     getCredentialsButton.href = `${baseurl}`;
     getStartedButton.href = `${baseurl}`;
     StartedFreeTrialButton.href = `${baseurl}`;
-    getFreeCredentialsButton.href = `${baseurl}`;
 
     if(window.location.pathname.indexOf('pdf-services') >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
       getStartedButton.href = `${baseurl}?api=pdf-services-api`;
       StartedFreeTrialButton.href = `${baseurl}?api=pdf-services-api`;
-      getFreeCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
     } else if(window.location.pathname.indexOf('doc-generation') >= 0){
       getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
       getStartedButton.href = `${baseurl}?api=document-generation-api`;
       StartedFreeTrialButton.href = `${baseurl}?api=document-generation-api`;
-      getFreeCredentialsButton.href = `${baseurl}?api=document-generation-api`;
     } else if(window.location.pathname.indexOf('pdf-extract') >= 0){
       getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
       getStartedButton.href = `${baseurl}?api=pdf-extract-api`;
       StartedFreeTrialButton.href = `${baseurl}?api=pdf-extract-api`;
-      getFreeCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
     } else if(window.location.pathname.indexOf('pdf-embed') >= 0){
       getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
       getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
       StartedFreeTrialButton.href = `${baseurl}?api=pdf-embed-api`;
-      getFreeCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
     }
   }
 }

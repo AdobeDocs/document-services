@@ -934,3 +934,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     transform: translate(16px, 0px) !important;
      width: 52px !important;
 }
+
+.spectrum-Picker-label{
+    display: none !important;
+}
