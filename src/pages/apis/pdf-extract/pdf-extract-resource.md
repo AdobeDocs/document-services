@@ -4,7 +4,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Resource Card
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
-[](/use-cases/content-and-data-extraction/content-based-process-automation.md)
+[](/use-cases/content-and-data-extraction/content-based-process-automation/)
 
 ![content-processing](../../images/content-processing.jpg)
 
@@ -26,7 +26,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
-[](/use-cases/content-publishing/)
+[](/use-cases/content-publishing/digital-content-publishing/)
 
 ![content-republishing](../../images/content-republishing.jpg)
 

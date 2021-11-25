@@ -25,10 +25,11 @@ Get the Adobe Document Tagger Microsoft Word add-in and check out our [sample te
 - [Get Word add-in](/document-services/docs/overview/document-generation-api/wordaddin/)
 
 
-<TextBlock slots="heading, text, buttons" theme="lightest"  width="33%" className="align-left link  stepper-horizontal-align"/>
+<TextBlock slots="heading, text, buttons" theme="lightest"  width="33%" primaryOutline className="align-left link  stepper-horizontal-align"/>
 
 ## Step 3
 
-Add credentials to your code and run! <br/>[API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-documentGeneration)
+Add credentials to your code and run! 
 
 - [See documentation](/document-services/docs/overview/document-generation-api/)
+- [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-documentGeneration)

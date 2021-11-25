@@ -9,7 +9,7 @@ title: Adobe Developer — PDF-embed  —  Use cases
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
-[](../use-cases/collaboration/)
+[](../use-cases/collaboration/student-teacher-collaboration/)
 
 ![Student Teacher Collaboration](../../images/student-teacher-collaboration.jpg)
 
@@ -30,7 +30,7 @@ Maximize remote worker productivity with multi-user document collaboration inclu
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='lightest' className="useCaseCard"/>
 
-[](../use-cases/content-publishing/)
+[](../use-cases/content-publishing/digital-content-publishing/)
 
 ![Digital content publishing](../../images/content-republishing.jpg)
 
@@ -43,7 +43,7 @@ Easily republish in different formats by extracting structured content elements 
 
 <!-- [](/use-cases/report-creation-editing) Faced 404 issue-->
 
-[](../use-cases/agreements-and-contracts)
+[](../use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 
 ![Report Creation and Editing](../../images/report-creation-editing.jpg)

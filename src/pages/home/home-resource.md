@@ -5,7 +5,7 @@
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 
-[](/use-cases/content-and-data-extraction/content-based-process-automation.md)
+[](/use-cases/content-and-data-extraction/content-based-process-automation/)
 
 ![Content Processing](../images/content-processing.jpg)
 
@@ -39,7 +39,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 
-[](/use-cases/content-publishing/)
+[](/use-cases/content-publishing/digital-content-publishing/)
 
 ![Digital content](../images/content-republishing.jpg)
 

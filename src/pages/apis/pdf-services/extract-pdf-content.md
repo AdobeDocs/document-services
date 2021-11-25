@@ -96,23 +96,23 @@ FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"extractPDFInput.pdf");
 extractPdfOperation.SetInputFile(sourceFileRef);
 
 // Build ExtractPDF options and set them into the operation
-ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPdfOptionsBuilder()
-    .AddElementsToExtract(new List<ExtractElementType>(new []{ ExtractElementType.TEXT, ExtractElementType.TABLES}))
-    .AddElementsToExtractRenditions(new List<ExtractRenditionsElementType> (new []{ExtractRenditionsElementType.FIGURES, ExtractRenditionsElementType.TABLES}))
-    .AddAddCharInfo(true)
-    .build();
+ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPDFOptionsBuilder()
+  .AddElementsToExtract(new List<ExtractElementType>(new []{ExtractElementType.TEXT, ExtractElementType.TABLES}))
+  .AddElementsToExtractRenditions(new List<ExtractRenditionsElementType> (new []{ExtractRenditionsElementType.TABLES, ExtractRenditionsElementType.FIGURES}))
+  .AddCharsInfo(true)
+  .Build();
 extractPdfOperation.SetOptions(extractPdfOptions);
+
 // Execute the operation.
 FileRef result = extractPdfOperation.Execute(executionContext);
 
 // Save the result to the specified location.
-result.SaveAs(Directory.GetCurrentDirectory() + "/output/ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF.zip");
-
+result.SaveAs(Directory.GetCurrentDirectory() + "/output/extractPdf.zip");
 ```
 
 #### Java
 
-```language-java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 ExtractPDFOperation extractPDFOperation = ExtractPDFOperation.createNew();

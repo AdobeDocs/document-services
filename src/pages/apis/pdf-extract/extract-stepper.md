@@ -36,11 +36,12 @@ Download ready to run samples for Node.js, .Net, Java and Python
 
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" className='align-left' />
+<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" primaryOutline className='align-left horizontal-align link' headerElementType="h2" />
 
 ## Step 3
 
 Add credentials to your code and experience the power of the API
 
-- [See documentation](/document-services/docs/overview/pdf-embed-api/)
+
+- [View docs](/document-services/docs/overview/df-extract-api/)
 - [View API Reference](https://www.adobe.com/go/dcsdk_APIdocs)

@@ -20,17 +20,17 @@ Create and embed reports for internal or external consumption, sharing, and revi
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard"/>
 
-[](/use-cases/archiving-and-retrieval)
+[](/use-cases/archiving-and-retrieval/search-and-indexing/)
 
 ![Search-and-Indexing](../../images/searching-and-indexing.jpg)
 
-### Search and indexing
+### Search and Indexing
 
 Create searchable indexes from digital documents to quickly locate critical content for compliance and other downstream processing.
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard"/>
 
-[](/use-cases/content-publishing)
+[](/use-cases/content-publishing/digital-content-publishing/)
 
 ![Data-Analysis](../../images/content-republishing.jpg)
 

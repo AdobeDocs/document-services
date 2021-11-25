@@ -14,6 +14,6 @@ Review our sample Word templates with JSON data and [try the demo.](https://adob
 
 <TextBlock slots="buttons" theme="light" isCentered className='padding-zero '/>
 
-- [Get Microsoft Word add-in](https://www.adobe.com/go/pdfEmbedAPI_demo)
+- [Get Microsoft Word add-in](/document-services/docs/overview/document-generation-api/wordaddin/)
 
 <ProductCardGrid clouds={clouds} products={sampleProducts} showName={true} showDescription={false} interaction={false} buttonName="Download" showBorder={false} imgHeight="1300" imgWidth="1500" isCentered={true} theme="light" className="padding-bottom-zero productCardGrid" containerWidth="950px"/>
