@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Get PDF
 
 ### Get the properties of a PDF file
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/pdf-properties/)
 
 Use this service to get the metadata properties of a PDF. Metadata including page count, PDF version, file size, compliance levels, font info, permissions and more are provided in JSON format for easy processing.
 

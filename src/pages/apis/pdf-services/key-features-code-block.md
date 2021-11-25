@@ -39,17 +39,17 @@ import HTMLToPDF from './html-to-pdf.md';
 
 <ExtractPDFContent/>
 
-### HTML to PDF
-
-![HTML to PDF](../../images/s_html-to-pdf.svg)
-
-<HTMLToPDF/>
-
 ### Create PDF
 
 ![Create PDF](../../images/s_createpdf_color_24.svg)
 
 <CreatePDF/>
+
+### HTML to PDF
+
+![HTML to PDF](../../images/s_html-to-pdf.svg)
+
+<HTMLToPDF/>
 
 ### Document Generation
 
