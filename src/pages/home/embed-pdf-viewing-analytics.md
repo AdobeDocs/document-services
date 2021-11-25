@@ -2,7 +2,7 @@
 
 ##### Embed PDF for viewing and analytics
 
-- [See documentation](/document-services/docs/overview/)
+- [See documentation](/document-services/docs/overview/pdf-embed-api/)
 
 Embed PDF for viewing and analytics, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, and, Zip
 

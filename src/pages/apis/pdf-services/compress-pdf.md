@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Compress - PDF
 
 ### Compress a pdf file
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/compress-pdf/)
 
 Reduce the size of PDF files by compressing to smaller sizes for lower bandwidth viewing, downloading, and sharing.
 
@@ -17,7 +17,7 @@ See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-compr
 
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials and create a new operation instance.
@@ -61,7 +61,7 @@ result.SaveAs(Directory
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext =
 ExecutionContext.create(credentials);

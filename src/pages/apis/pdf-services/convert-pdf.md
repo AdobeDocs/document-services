@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Convert PDF
 
 ### Convert a PDF file to other formats
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/)
 
 Convert existing PDFs to popular formats, such as Microsoft Word, Excel, and PowerPoint, as well as text and image
 
@@ -14,9 +14,9 @@ Support for PDF to DOC, PDF to DOCX, PDF to JPEG, PDF to PNG, PDF to PPTX, PDF t
 
 See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-exportPDF) and quickly try our APIs using the Postman collections
 
-<CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
+<CodeBlock slots="heading, code" repeat="3" languages="JS,.NET, Java" />
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using
@@ -58,7 +58,7 @@ result.SaveAs(Directory.GetCurrentDirectory()
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using
 // credentials and create a new
 // operation instance.

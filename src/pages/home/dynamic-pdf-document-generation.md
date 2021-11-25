@@ -2,7 +2,7 @@
 
 ##### Dynamic PDF Document Generation
 
-- [See documentation](/document-services/docs/overview/)
+- [See documentation](/document-services/docs/overview/document-generation-api/)
 
 Merge your JSON data with custom Word templates to generate high-fidelity PDF and Word documents
 
@@ -61,7 +61,7 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
   --form 'InputFile0=@""'
 ```
 
-#### Node.js
+#### Node js
 
 ```js
 // Setup input data for the document merge process
@@ -116,7 +116,7 @@ result.SaveAs(Directory.GetCurrentDirectory() + "/output/salesOrderOutput.pdf");
 
 #### Java
 
-```java
+```javascript
 // Setup input data for the document merge process
 String content = new String(Files.readAllBytes(Paths.get("src/main/resources/salesOrder.json")));
 JSONObject jsonDataForMerge = new JSONObject(content);

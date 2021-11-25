@@ -2,7 +2,7 @@
 
 ##### Extract PDF Content & Structure
 
-- [See documentation](/document-services/docs/overview/)
+- [See documentation](/document-services/docs/overview/pdf-extract-api/)
 
 Extract content from scanned and native PDFs to use for database insertion, content republishing, RPA, and more
 
@@ -48,7 +48,7 @@ curl --location --request POST 'https://cpf-stage-ue1.adobe.io/ops/:create' \
 --form 'fileInput1=@""'
 ```
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials
@@ -106,7 +106,7 @@ result.SaveAs(Directory.GetCurrentDirectory() + "/output/ExtractTextTableInfoWit
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 ExtractPDFOperation extractPDFOperation = ExtractPDFOperation.createNew();

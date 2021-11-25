@@ -34,8 +34,7 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
      \"cpf:inputs\":{
         \"documentIn\":{
            \"cpf:location\":\"InputFile0\",
-           \"dc:format\":\"application/vnd.openxmlformats-officedocument.
-            wordprocessingml.document\"
+           \"dc:format\":\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\"
         },
         \"params\":{
            \"cpf:inline\":{
@@ -58,9 +57,7 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
                 \"totalAmount\": 300,
                 \"previousBalance\": 50,
                 \"lastThreeBillings\": [100, 200, 300],
-                \"photograph\": \"data:image/png;base64,
-                iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42m
-                P88h8AAu0B9XNPCQQAAAAASUVORK5CYII=\"
+                \"photograph\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88h8AAu0B9XNPCQQAAAAASUVORK5CYII=\"
               }
            }
         }
@@ -75,11 +72,11 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
   --form 'InputFile0=@""'
 ```
 
-#### Node.js
+#### Node js
 
 ```js
-// Setup input data for the document merge process
-const jsonString = fs.readFileSync("resources/salesOrder.json"),
+/// Setup input data for the document merge process
+const jsonString = fs.readFileSync('resources/salesOrder.json'),
   jsonDataForMerge = JSON.parse(jsonString);
 
 // Create an ExecutionContext using credentials
@@ -88,24 +85,18 @@ const executionContext = PDFToolsSdk.ExecutionContext.create(credentials);
 // Create a new DocumentMerge options instance
 const documentMerge = PDFToolsSdk.DocumentMerge,
   documentMergeOptions = documentMerge.options,
-  options = new documentMergeOptions.DocumentMergeOptions(
-    jsonDataForMerge,
-    documentMergeOptions.OutputFormat.PDF
-  );
+  options = new documentMergeOptions.DocumentMergeOptions(jsonDataForMerge, documentMergeOptions.OutputFormat.PDF);
 
 // Create a new operation instance using the options instance
-const documentMergeOperation = documentMerge.Operation.createNew(options);
+const documentMergeOperation = documentMerge.Operation.createNew(options)
 
 // Set operation input document template from a source file.
-const input = PDFToolsSdk.FileRef.createFromLocalFile(
-  "resources/salesOrderTemplate.docx"
-);
+const input = PDFToolsSdk.FileRef.createFromLocalFile('resources/salesOrderTemplate.docx');
 documentMergeOperation.setInput(input);
 
 // Execute the operation and Save the result to the specified location.
-documentMergeOperation
-  .execute(executionContext)
-  .then((result) => result.saveAsFile("output/salesOrderOutput.pdf"));
+documentMergeOperation.execute(executionContext)
+  .then(result => result.saveAsFile('output/salesOrderOutput.pdf'))
 ```
 
 #### .NET
@@ -129,11 +120,14 @@ documentMergeOperation.SetInput(FileRef.CreateFromLocalFile(@"salesOrderTemplate
 
 // Execute the operation.
 FileRef result = documentMergeOperation.Execute(executionContext);
+
+// Save the result to the specified location
+result.SaveAs(Directory.GetCurrentDirectory() + "/output/salesOrderOutput.pdf");
 ```
 
 #### Java
 
-```java
+```javascript
 // Setup input data for the document merge process
 String content = new String(Files.readAllBytes(Paths.get("src/main/resources/salesOrder.json")));
 JSONObject jsonDataForMerge = new JSONObject(content);
@@ -156,4 +150,5 @@ FileRef result = documentMergeOperation.execute(executionContext);
 
 // Save the result to the specified location.
 result.saveAs("output/salesOrderOutput.pdf");
+
 ```

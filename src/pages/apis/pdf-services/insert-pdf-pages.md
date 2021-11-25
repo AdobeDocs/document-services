@@ -6,16 +6,16 @@ title: Adobe Developer — PDF Services API  — Insert PDF Pages
 
 ### Insert a page into a PDF document
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/insert-pages/)
 
 Insert one or more pages into an existing document
 
 See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-combinePDF) and quickly try our APIs using the Postman collections
 
 
-<CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
+<CodeBlock slots="heading, code" repeat="3" languages="js,.net, java" />
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials and create a new operation instance.
@@ -23,15 +23,11 @@ const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
   insertPagesOperation = PDFServicesSdk.InsertPages.Operation.createNew();
 
 // Set operation base input from a source file.
-const baseInputFile = PDFServicesSdk.FileRef.
-createFromLocalFile('resources/baseInput.pdf');
-
+const baseInputFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/baseInput.pdf');
 insertPagesOperation.setBaseInput(baseInputFile);
 
 // Create a FileRef instance using a local file.
-const firstFileToInsert = PDFServicesSdk.FileRef.
-createFromLocalFile('resources/firstFileToInsertInput.pdf'),
-
+const firstFileToInsert = PDFServicesSdk.FileRef.createFromLocalFile('resources/firstFileToInsertInput.pdf'),
   pageRanges = getPageRangesForFirstFile();
 
 // Adds the pages (specified by the page ranges)
@@ -40,8 +36,7 @@ createFromLocalFile('resources/firstFileToInsertInput.pdf'),
 insertPagesOperation.addPagesToInsertAt(2, firstFileToInsert, pageRanges);
 
 // Create a FileRef instance using a local file.
-const secondFileToInsert = PDFServicesSdk.FileRef.
-createFromLocalFile('resources/secondFileToInsertInput.pdf');
+const secondFileToInsert = PDFServicesSdk.FileRef.createFromLocalFile('resources/secondFileToInsertInput.pdf');
 
 // Adds all the pages of the input PDF file
 // to be inserted at the specified
@@ -74,9 +69,7 @@ FileRef firstFileToInsert =
   );
 PageRanges pageRanges = GetPageRangeForFirstFile();
 
-// Adds the pages (specified by the page ranges) of
-//the input PDF file to be inserted at the specified page of the base PDF file.
-
+// Adds the pages (specified by the page ranges) of the input PDF file to be inserted at the specified page of the base PDF file.
 insertPagesOperation.AddPagesToInsertAt(
     firstFileToInsert, pageRanges, 2
   );
@@ -87,9 +80,7 @@ FileRef secondFileToInsert = FileRef
     @"secondFileToInsertInput.pdf"
   );
 
-// Adds all the pages of the input PDF file to be
-//inserted at the specified page of the base PDF file.
-
+// Adds all the pages of the input PDF file to be inserted at the specified page of the base PDF file.
 insertPagesOperation
   .AddPagesToInsertAt(secondFileToInsert, 3);
 
@@ -103,7 +94,7 @@ result.SaveAs(Directory.GetCurrentDirectory()
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 InsertPagesOperation insertPagesOperation = InsertPagesOperation.createNew();
@@ -122,9 +113,7 @@ FileRef firstFileToInsert =
 PageRanges pageRanges =
   getPageRangeForFirstFile ();
 
-// Adds the pages (specified by the page ranges) of the input
-//PDF file to be inserted at the specified page of the base PDF file.
-
+// Adds the pages (specified by the page ranges) of the input PDF file to be inserted at the specified page of the base PDF file.
 insertPagesOperation
   .addPagesToInsertAt(firstFileToInsert, pageRanges, 2);
 
@@ -133,9 +122,7 @@ FileRef secondFileToInsert = FileRef.createFromLocalFile(
     "src/main/resources/secondFileToInsertInput.pdf"
   );
 
-// Adds all the pages of the input PDF file to be
-//inserted at the specified page of the base PDF file.
-
+// Adds all the pages of the input PDF file to be inserted at the specified page of the base PDF file.
 insertPagesOperation
   .addPagesToInsertAt(secondFileToInsert, 3);
 

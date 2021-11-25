@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Delete PDF
 
 ### Delete a page from a PDF file
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/delete-pages/)
 
 Delete one or more pages from a document
 
@@ -15,7 +15,7 @@ See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-pageM
 
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials and create a new operation instance.
@@ -67,7 +67,7 @@ result.SaveAs(Directory.GetCurrentDirectory() +
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 DeletePagesOperation deletePagesOperation = DeletePagesOperation.createNew();

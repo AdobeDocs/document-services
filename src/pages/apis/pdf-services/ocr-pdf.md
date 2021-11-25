@@ -6,16 +6,16 @@ title: Adobe Developer — PDF Services API  — OCR PDF
 
 ### OCR a PDF file
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/ocr-pdf/)
 
 Use built-in optical character recognition (OCR) to convert images to text and enable fully text searchable documents for archiving and creation of searchable indexes.
 
 See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-ocr) and quickly try our APIs using the Postman collections
 
 
-<CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
+<CodeBlock slots="heading, code" repeat="3" languages="js,.net, java" />
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials and create a new operation instance.
@@ -23,8 +23,7 @@ const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
   ocrOperation = PDFServicesSdk.OCR.Operation.createNew();
 
 // Set operation input from a source file.
-const input = PDFServicesSdk.FileRef.createFromLocalFile( 'resources/ocrInput.pdf',
-PDFServicesSdk.OCR.SupportedMediaTypes.pdf );
+const input = PDFServicesSdk.FileRef.createFromLocalFile( 'resources/ocrInput.pdf', PDFServicesSdk.OCR.SupportedMediaTypes.pdf );
 ocrOperation.setInput(input);
 
 // Execute the operation and Save the result to the specified location.
@@ -52,7 +51,7 @@ result.SaveAs(Directory.GetCurrentDirectory() + "/output/ocrOperationOutput.pdf"
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 OCROperation ocrOperation = OCROperation.createNew();

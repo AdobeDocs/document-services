@@ -16,10 +16,44 @@ This data can be used to: check if a document is fully text searchable (OCR), un
 See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-pdfProperties) and quickly try our APIs using the Postman collections
 
 
-<CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
+<CodeBlock slots="heading, code" repeat="4" languages="curl, js, .net, java" />
 
+#### REST API
 
-#### Node.js
+```bash
+curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith=%7B%22reltype%22%3A%20%22http%3A%2F%2Fns.adobe.com%2Frel%2Fprimary%22%7D' \
+--header 'Authorization: Bearer ' \
+--header 'Accept: application/json, text/plain, */*' \
+--header 'x-api-key: ' \
+--header 'Prefer: respond-async,wait=0' \
+--form 'contentAnalyzerRequests="{
+  \"cpf:inputs\": {
+    \"params\": {
+      \"cpf:inline\": {
+        \"print\": {
+          \"includeHeaderFooter\": true
+        },
+        \"pageLayout\": {
+          \"pageHeight\": 8.5,
+          \"pageWidth\": 11
+        },
+        \"json\": \"{\\\"k1\\\": \\\"v1\\\", \\\"k2\\\": \\\"v2\\\"}\"
+      }
+    },
+    \"inputUrl\": \"\"
+  },
+  \"cpf:engine\": {
+    \"repo:assetId\": \"urn:aaid:cpf:Service-e2ee120a2b06427cb449592f5db967e7\"
+  },
+  \"cpf:outputs\": {
+    \"documentOut\": {
+      \"cpf:location\": \"multipartLabelOut\",
+      \"dc:format\": \"application/pdf\"
+    }
+  }
+}"'
+```
+#### Node js
 
 ```js
 const credentials =  PDFServicesSdk.Credentials
@@ -75,7 +109,7 @@ JObject result = pdfPropertiesOperation.Execute(executionContext);
 
 #### Java
 
-```java
+```javascript
 // Initial setup, create credentials instance.
 Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
     .fromFile("pdfservices-api-credentials.json")

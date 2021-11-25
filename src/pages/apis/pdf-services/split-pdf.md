@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Split PDF Pages
 
 ### Split a PDF into multiple files
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/split-pdf/)
 
 Split a PDF document into multiple smaller documents by simply specifying either the number of files, pages per file, or page ranges.
 
@@ -14,7 +14,7 @@ See our public [API Reference](https://documentcloud.adobe.com/document-services
 
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials
@@ -73,7 +73,7 @@ foreach (FileRef fileRef in result)
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 SplitPDFOperation splitPDFOperation = SplitPDFOperation.createNew();

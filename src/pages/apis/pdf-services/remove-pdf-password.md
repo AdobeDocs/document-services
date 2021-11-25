@@ -6,16 +6,16 @@ title: Adobe Developer — PDF Services API  — Remove PDF Password
 
 ### Remove the password from a PDF file
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/remove-protection/)
 
 Remove password security from a PDF document. This can only be accomplished with the owner password of the document which must be passed in the operation.
 
 See our public [API  Reference ](https://documentcloud.adobe.com/document-services/index.html#post-removeProtection) and quickly try our APIs using the Postman collections
 
 
-<CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
+<CodeBlock slots="heading, code" repeat="3" languages="js, .net, java" />
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials
@@ -64,7 +64,7 @@ result.SaveAs(Directory.GetCurrentDirectory() +
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 RemoveProtectionOperation removeProtectionOperation = RemoveProtectionOperation.createNew();

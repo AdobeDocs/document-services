@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Combine PDF
 
 ### Combine multiple documents into a pdf file
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/combine-pdf/)
 
 Combine two or more documents into a single PDF file
 
@@ -80,7 +80,7 @@ See our public [API Reference](https://documentcloud.adobe.com/document-services
   --form 'InputFile2=@""'
 ```
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials and create a new operation instance.
@@ -123,7 +123,7 @@ result.SaveAs( Directory.GetCurrentDirectory() +
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 ReorderPagesOperation reorderPagesOperation = ReorderPagesOperation.createNew();

@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Rotate PDF Pages
 
 ### Rotate a page in a PDF file
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/rotate-pages/)
 
 Rotate a page in an existing document.
 
@@ -16,7 +16,7 @@ See our public [API Reference](https://documentcloud.adobe.com/document-services
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
 
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials and create a new operation instance.
@@ -76,7 +76,7 @@ result.SaveAs(Directory.GetCurrentDirectory() +
 
 #### Java
 
-```java
+```javascript
 // Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 RotatePagesOperation rotatePagesOperation = RotatePagesOperation.createNew();

@@ -19,6 +19,7 @@ import InsertPDFPages from './insert-pdf-pages.md';
 import ReplacePDFPages from './replace-pdf-pages.md';
 import DeletePDFPages from './delete-pdf-pages.md';
 import RotatePDFPages from './rotate-pdf-pages.md';
+import HTMLToPDF from './html-to-pdf.md';
 
 
 <!-- Key Features of Adobe PDF Services API -->
@@ -30,13 +31,19 @@ import RotatePDFPages from './rotate-pdf-pages.md';
 - [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-services-api)
 
 
-<TabsBlock orientation="vertical" slots="heading, image, content" repeat="17"  theme="dark" className='bgBlue code-block-0' />
+<TabsBlock orientation="vertical" slots="heading, image, content" repeat="18"  theme="dark" className='bgBlue code-block-0' />
 
 ### Extract PDF Content
 
 ![Extract PDF Content](../../images/s_createpdf_color_24.svg)
 
 <ExtractPDFContent/>
+
+### HTML to PDF
+
+![HTML to PDF](../../images/s_html-to-pdf.svg)
+
+<HTMLToPDF/>
 
 ### Create PDF
 

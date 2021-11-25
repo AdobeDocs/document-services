@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — Extract PDF Content
 
 ### PDF content extraction
 
-- [See documentation](/document-services/docs/overview/pdf-extract-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/extract-pdf/)
 
 Extract text, images, tables, and more from native and scanned PDFs into a structured JSON file. PDF Extract API leverages AI technology to accurately identify text objects and understand the natural reading order of different elements such as headings, lists, and paragraphs spanning multiple columns or pages. Extract font styles with identification of metadata such as bold and italic text and their position within your PDF. Extracted content is output in a structured JSON file format with tables in CSV or XLSX and images saved as PNG.
 
@@ -53,7 +53,7 @@ curl --location --request POST 'https://cpf-stage-ue1.adobe.io/ops/:create' \
 --form 'fileInput1=@""'
 ```
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials
@@ -62,7 +62,7 @@ const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
 // Create a new operation instance.
 const extractPDFOperation = PDFServicesSdk.ExtractPDF.Operation.createNew(),
   input = PDFServicesSdk.FileRef.createFromLocalFile(
-    "resources/extractPDFInput.pdf",
+    'resources/extractPDFInput.pdf',
     PDFServicesSdk.ExtractPDF.SupportedSourceFormat.pdf
   );
 
@@ -70,22 +70,18 @@ const extractPDFOperation = PDFServicesSdk.ExtractPDF.Operation.createNew(),
 extractPDFOperation.setInput(input);
 
 // Build and set extractPDF options
-const options =
-  new PDFServicesSdk.ExtractPDF.options.ExtractPdfOptions.Builder()
-    .addElementsToExtract(
-      PDFServicesSdk.ExtractPDF.options.ExtractElementType.TEXT
-    )
-    .addElementsToExtractRenditions(
-      PDFServicesSdk.ExtractPDF.options.ExtractRenditionsElementType.FIGURES
-    )
-    .addCharInfo(true)
-    .build();
+const options = new PDFServicesSdk.ExtractPDF.options.ExtractPdfOptions.Builder()
+  .addElementsToExtract(
+    PDFServicesSdk.ExtractPDF.options.ExtractElementType.TEXT)
+  .addElementsToExtractRenditions(
+    PDFServicesSdk.ExtractPDF.options.ExtractRenditionsElementType.FIGURES)
+  .addCharInfo(true)
+  .build()
 extractPDFOperation.setOptions(options);
 
 // Execute the operation and Save the result to the specified location.
-extractPDFOperation
-  .execute(executionContext)
-  .then((result) => result.saveAsFile("output/extractPdf.zip"));
+extractPDFOperation.execute(executionContext)
+  .then(result => result.saveAsFile('output/extractPdf.zip'))
 ```
 
 #### .Net

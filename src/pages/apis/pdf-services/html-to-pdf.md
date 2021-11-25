@@ -1,11 +1,16 @@
-<TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView"/>
+---
+title: Adobe Developer — PDF Services API  —  HTML to PDF
+---
 
-##### Create PDF from URL
+<TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link"/>
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+### Create a PDF file from HTML
 
-Create PDFs from a variety of formats, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, and, Zip
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/)
 
+Create PDFs from static and dynamic HTML, Zip, and URL.
+
+See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-createPDFFromHTML) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />
 
@@ -40,24 +45,23 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
 #### Node js
 
 ```js
-// Create an ExecutionContext using credentials and create a new operation instance.
+// Create an ExecutionContext using credentials and create a new operation instance
 const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
     createPDF = PDFServicesSdk.CreatePDF,
     htmlToPDFOperation = createPDF.Operation.createNew();
 
 // Set operation input from a source URL.
-const input = PDFServicesSdk.FileRef.createFromURL("https://www.adobe.io");
+const input = PDFServicesSdk.FileRef.createFromURL(
+    "https://www.adobe.io"
+);
 htmlToPDFOperation.setInput(input);
 
 // Provide any custom configuration options for the operation.
-const options = new createPDF.options.html.CreatePDFFromHtmlOptions.Builder()
-    .includesHeaderFooter(true)
-    .build();
-htmlToPDFOperation.setOptions(options);
+setCustomOptions(htmlToPDFOperation);
 
 // Execute the operation and Save the result to the specified location.
 htmlToPDFOperation.execute(executionContext)
-.then(result => result.saveAsFile('output/createPdfFromURLOutput.pdf'))
+    .then(result => result.saveAsFile('output/createPdfFromURLOutput.pdf'))
 ```
 
 #### .Net

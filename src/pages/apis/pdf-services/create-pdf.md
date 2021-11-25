@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 ### Create a PDF file
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/create-pdf/)
 
 Create PDFs from a variety of formats, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, Zip, and URL.
 Support for HTML to PDF, DOC to PDF, DOCX to PDF, PPT to PDF, PPTX to PDF, XLS to PDF, XLSX to PDF, TXT to PDF, RTF to PDF, BMP to PDF, JPEG to PDF, GIF to PDF, TIFF to PDF, PNG to PDF
@@ -44,23 +44,21 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
   --form 'InputFile0=@""'
 ```
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials and create a new operation instance.
 const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-  createPdfOperation = PDFServicesSdk.CreatePDF.Operation.createNew();
+    createPdfOperation = PDFServicesSdk.CreatePDF.Operation.createNew();
 
 // Set operation input from a source file.
-const input = PDFServicesSdk.FileRef.createFromLocalFile(
-  "resources/createPDFInput.docx"
-);
+const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/createPDFInput.docx');
 createPdfOperation.setInput(input);
 
 // Execute the operation and Save the result to the specified location.
-createPdfOperation
-  .execute(executionContext)
-  .then((result) => result.saveAsFile("output/createPDFFromDOCX.pdf"));
+createPdfOperation.execute(executionContext)
+    .then(result => result.saveAsFile('output/createPDFFromDOCX.pdf'))
+
 ```
 
 #### .Net
@@ -81,8 +79,8 @@ createPdfOperation.execute(executionContext)
 
 #### Java
 
-```java
-// Create an ExecutionContext using credentials and create a new operation instance.
+```javascript
+//Create an ExecutionContext using credentials and create a new operation instance.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 CreatePDFOperation createPdfOperation = CreatePDFOperation.createNew();
 

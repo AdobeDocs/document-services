@@ -2,7 +2,7 @@
 
 ### Secure a PDf file and set restrictions
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/)
 
 Secure a PDF file with a password encrypt the document. Set an owner password and restrictions on certain features like printing, editing and copying in the PDF document to prevent end users from modifying it.
 
@@ -13,7 +13,7 @@ See our public [API Reference](https://documentcloud.adobe.com/document-services
 
 <CodeBlock slots="heading, code" repeat="3" languages="js,.net,java" />
 
-#### Node.js
+#### Node js
 
 ```js
 // Create an ExecutionContext using credentials
@@ -87,8 +87,8 @@ result.SaveAs(Directory.GetCurrentDirectory() + "/output/protectPDFOutput.pdf");
 
 #### Java
 
-```java
-/// Create an ExecutionContext using credentials.
+```javascript
+// Create an ExecutionContext using credentials.
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 
 // Create new permissions instance and add the required permissions
