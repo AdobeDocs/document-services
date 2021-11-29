@@ -145,7 +145,7 @@ const CustomMenuBlock = ( ) => {
           setExpandedMenus((menus) => [...menus, menu.href]);
         }
         const menuHref = withPrefix(menu.href);
-
+         var isMenuSelected = selectedMenus.length === 1 ? index === 0 && menu.path.includes(selectedMenus[0].path) : selectedMenus[selectedMenus.length - 1] === menu && isSelected;
         return (
           <li
             key={index}
@@ -209,9 +209,7 @@ const CustomMenuBlock = ( ) => {
               className={classNames([
                 "spectrum-Menu-item",
                 {
-                  "is-open":
-                    selectedMenus[selectedMenus.length - 1] === menu &&
-                    isSelected,
+                  "is-open":isMenuSelected,
                 },
               ])}
             >

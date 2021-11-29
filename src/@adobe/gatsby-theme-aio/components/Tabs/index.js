@@ -26,6 +26,7 @@ const setTabItemIcon = (child, className, iconSize) => {
 };
 
 const mobileMinWidth = '480px';
+const MAX_MOBILE_SCREEN_WIDTH = '767px';
 
 const setImageLoading = (child) => {
   if (child?.props?.mdxType === 'img') {
@@ -379,7 +380,7 @@ const TabsBlock = ({
                         p {
                           font-size: var(--spectrum-body-s-text-size, var(--spectrum-global-dimension-font-size-150))
                         }
-                        @media only screen and (max-width: ${mobileMinWidth}) {
+                        @media only screen and (max-width: ${MAX_MOBILE_SCREEN_WIDTH}) {
                           display: block;
                         }
                       `}

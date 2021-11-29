@@ -938,10 +938,25 @@ pre .prism-code.spectrum-Code  span.token.string{
 .spectrum-Picker-label{
     display: none !important;
 }
- 
+
 .how-text .spectrum-Body{
     margin-top: 0 !important;
 }
 .button-screen >div >div >div div:first-child {
     align-items: center !important;
+}
+
+.showMobileView {
+    display: none;
+}
+
+.token.comment {
+    display: inline-grid;
+    max-width: 95%;
+}
+
+@media screen and (max-width: 767px) {
+    .showMobileView {
+        display: block;
+    }
 }

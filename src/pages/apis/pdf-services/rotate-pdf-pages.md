@@ -33,7 +33,7 @@ rotatePagesOperation.setAngleToRotatePagesBy(PDFServicesSdk.RotatePages.Angle._9
 
 // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
 const secondPageRange = getSecondPageRangeForRotation();
-rotatePagesOperation.setAngleToRotatePagesBy(PDFServicesSdk.RotatePages.Angle._180,secondPageRange);
+rotatePagesOperation.setAngleToRotatePagesBy(PDFServicesSdk.RotatePages.Angle._180, secondPageRange);
 
 // Execute the operation and Save the result to the specified location.
 rotatePagesOperation.execute(executionContext)

@@ -1,3 +1,11 @@
+<TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView"/>
+
+##### Extract PDF Content & Structure
+
+- [See documentation](/document-services/docs/overview/pdf-extract-api/)
+
+Extract content from scanned and native PDFs to use for database insertion, content republishing, RPA, and more
+
 <CodeBlock slots="heading, code" repeat="5" languages="curl, js,.net,java, python" />
 
 #### REST API

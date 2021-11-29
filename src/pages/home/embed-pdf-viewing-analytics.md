@@ -1,3 +1,13 @@
+<TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView"/>
+
+##### Embed PDF for viewing and analytics
+
+- [See documentation](/document-services/docs/overview/pdf-embed-api/)
+
+Embed PDF for viewing and analytics, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, and, Zip
+
+
+
 <CodeBlock slots="heading, code" repeat="1" languages="html" />
 
 #### HTML
