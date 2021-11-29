@@ -753,8 +753,14 @@ img[alt=thumbnail] {
     height:var(--spectrum-global-dimension-size-700);
 }
 
-.tabView div[class$="-HeroButtons-TextBlock"] {
-    margin-top: var(--spectrum-global-dimension-size-350) !important;
+.tabView div > a.spectrum-Button  {
+    margin-top: var(--spectrum-global-dimension-size-250) !important;
+}
+
+@media screen and (max-width: 767px) {
+    .tabView div > a.spectrum-Button  {
+        margin-top: var(--spectrum-global-dimension-size-160) !important;
+    }
 }
 
 .page-content .spectrum-Heading a{
@@ -959,4 +965,8 @@ pre .prism-code.spectrum-Code  span.token.string{
     .showMobileView {
         display: block;
     }
+}
+
+.page-content p {
+    margin-top: var(--spectrum-global-dimension-size-100) !important;
 }
