@@ -6,13 +6,13 @@ title: 'Document Services API Use Case: Digital Content Publishing'
 
 ### Overview
 
-There are more than 2.5 trillion PDFs on the Internet, and one of the main reasons is that the format makes it extremely easy to publish well-designed content on the web. There is no need to redesign documents using HTML and CSS and lose granularity. With Adobe Document Services, it is now even easier to embed PDF documents inside of web pages, as well as understand exactly how users are consuming documents. Advanced features not found in traditional PDF desktop or web viewers let you:
+There are more than 2.5 trillion PDFs on the Internet, and one of the main reasons is that the format makes it extremely easy to publish well-designed content on the web and secure it. There is no need to redesign documents using HTML and CSS and lose granularity. With Adobe Document Services, it is now even easier to embed PDF documents inside of web pages, as well as understand exactly how users are consuming documents. Advanced features not found in traditional PDF desktop or web viewers let you:
 
 * Add interactivity to PDF-based experiences
 * Provide PDF content for the rest of the brand experience on a website, including navigation, headers, and more
 * Support multiple user annotations (using the Adobe Annotations API)
 * Enable analytics integration to see how PDFs are viewed, including how long users spend on pages
-* Include security and other controls to prevent downloading, annotating, or printing
+* Secure PDFs to prevent editing, downloading, annotating, or printing
 
 ### Relevant APIs
 
@@ -21,14 +21,15 @@ There are more than 2.5 trillion PDFs on the Internet, and one of the main reaso
 
 ### Scenario
 
-A company plans to offer whitepapers on its website to help customers use various apps and services. Marketing needs to understand how users interact with the content, and they want to incorporate it into the rest of the web pages. Since some of the documents may be restricted or behind a paywall, the company also wants to control who can download particular PDFs.
+A company plans to offer whitepapers on its website to provide details about various apps and services. Marketing needs to understand how users interact with the content, and they want to incorporate it into the rest of the web pages. Some of the PDF content includes prices that change on a regular basis, so the company wants to secure the PDF to prevent users from making changes to it after downloading. Additionally, some of the documents may be restricted or behind a paywall, so the company also wants to add a password to certain PDFs to control who can download and open them.
 
 ### Building this Solution
 
-1. Get an integration key
-2. Begin the Embed API demo
-3. Change flags to allow / disallow printing, downloading, and other user actions
-4. Enable events so that the viewer can be extended
+1. Get credentials for PDF Embed API and PDF Services APIs
+2. Use PDF Services API to secure the whitepapers by adding editing restrictions and/or a password using the Protect PDF operation
+3. Access the Embed API demo to generate sample code
+4. Change flags to allow / disallow printing, downloading, and other user actions
+5. Enable events so that the viewer can be extended
 
 <!-- In the scenario where there needs to be negotiation between the two parties, the developer will use Document Generation API to provide a document back in Word format, which would allow for redlining in Microsoft Word. Adobe Document Generation Tagger, a Microsoft Word add-in, can be used by the developer or the vendor manager to quickly build a custom branded NDA template for the company to standardize their agreements for accuracy. Using this custom template with dynamic text tags, JSON data can be sent with the template to Document Generation API then immediately sent to Adobe Sign for signature and countersignature.
 

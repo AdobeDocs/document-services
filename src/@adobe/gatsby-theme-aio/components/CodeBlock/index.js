@@ -31,7 +31,7 @@ const CodeBlock = (props) => {
 
   useEffect(() => {
     positionSelectedTabIndicator();
-  }, [tabs]);
+  }, [positionSelectedTabIndicator,tabs]);
 
   const { theme } = props;
   const codeBlocks = [];
@@ -95,7 +95,7 @@ const CodeBlock = (props) => {
             const ref = createRef();
             tabs.push(ref);
 
-            const isSelected = selectedIndex.tab === index;
+            // const isSelected = selectedIndex.tab === index;
 
             return (
               <TabsItem

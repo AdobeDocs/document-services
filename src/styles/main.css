@@ -942,3 +942,6 @@ pre .prism-code.spectrum-Code  span.token.string{
 .how-text .spectrum-Body{
     margin-top: 0 !important;
 }
+.button-screen >div >div >div div:first-child {
+    align-items: center !important;
+}

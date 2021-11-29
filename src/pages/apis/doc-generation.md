@@ -52,7 +52,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <TextBlock slots="buttons" theme="lightest" isCentered className="padding-5"/>
 
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+- [See all Use case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <MobileOptimize/>
 
@@ -62,9 +62,11 @@ apiHeroAssetImg doc-gen-invoice
 
 <DgDownloadSample/>
 
-<TextBlock slots="buttons" theme="light" isCentered className='ms-word-add-in-title'/>
+<TextBlock slots="buttons" width="100%" theme="light"  isCentered primaryOutline className="padding-zero ms-word-add-in-title"  />
 
-- [See all templates](./doc-gen-api-template.md)
+ - [Get Microsoft Word add-in](/document-services/docs/overview/document-generation-api/wordaddin/)
+ - [See all templates](./doc-gen-api-template.md)
+
 
 
 <!--  Start Modifying PDFs in a few Minutes -->

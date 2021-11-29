@@ -101,7 +101,7 @@ apiHeroAssetImg doc-embed-hero
 
 <TextBlock slots="buttons" isCentered theme="lightest" className='padding-5'/>
 
-* [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+* [See all Use case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 
 <WrapperComponent slots="content" theme="light"/>
@@ -110,7 +110,7 @@ apiHeroAssetImg doc-embed-hero
 
 
 
-<SummaryBlock slots=" heading, text, buttons"  theme='lightest' className="vertical-padding"/>
+<SummaryBlock slots="heading, text, buttons" theme="lightest" background="white" />
 
 ### We're ready to help
 

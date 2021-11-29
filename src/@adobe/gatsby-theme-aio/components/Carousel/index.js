@@ -57,6 +57,7 @@ const SwiperContent = ({
 
         @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
           max-width: calc(${layoutColumns(3.5)}) !important;
+          padding-left: var(--spectrum-global-dimension-size-200);
         }
 
         @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {

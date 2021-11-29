@@ -149,7 +149,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <TextBlock slots="buttons" isCentered theme="light"  className='padding-5'/>
 
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+- [See all Use case](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 
 

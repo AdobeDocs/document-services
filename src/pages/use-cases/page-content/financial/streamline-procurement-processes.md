@@ -17,10 +17,10 @@ With Adobe Document Services, companies save time by automating the following st
 
 ### Relevant APIs
 
-* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
-* [Adobe PDF Extract API](/src/pages/apis/pdf-extract.md)
 * [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
 * [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
+* [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
+* [Adobe PDF Extract API](/src/pages/apis/pdf-extract.md)
 * [Adobe Sign](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario

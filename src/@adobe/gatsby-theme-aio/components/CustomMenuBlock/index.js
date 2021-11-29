@@ -165,7 +165,6 @@ const CustomMenuBlock = ( ) => {
                   isSelected,
               },
             ])}
-            role="menuitem"
           >
             <GatsbyLink
               css={css`
@@ -273,7 +272,6 @@ const CustomMenuBlock = ( ) => {
                     : ""}
                 `}
                 {...(menu.heading ? { "aria-labelledby": id } : {})}
-                role="menu"
               >
                 {renderSubMenuItem(menu.pages, level + 1)}
               </ul>

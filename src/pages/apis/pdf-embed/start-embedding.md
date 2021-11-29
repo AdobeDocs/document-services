@@ -28,7 +28,7 @@ Obtain free credentials
 
 Copy JavaScript code or download samples for React and Angular
 
-* [Get JavaScript](/document-services/docs/overview/)
+* [Get JavaScript](/document-services/docs/overview/pdf-embed-api/)
 * [Get Samples](https://github.com/adobe/pdf-embed-api-samples)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light"  className="align-left horizontal-align"/>

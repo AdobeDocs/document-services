@@ -96,18 +96,17 @@ FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"extractPDFInput.pdf");
 extractPdfOperation.SetInputFile(sourceFileRef);
 
 // Build ExtractPDF options and set them into the operation
-ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPDFOptionsBuilder()
-  .AddElementsToExtract(new List<ExtractElementType>(new []{ExtractElementType.TEXT, ExtractElementType.TABLES}))
-  .AddElementsToExtractRenditions(new List<ExtractRenditionsElementType> (new []{ExtractRenditionsElementType.TABLES, ExtractRenditionsElementType.FIGURES}))
-  .AddCharsInfo(true)
-  .Build();
+ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPdfOptionsBuilder()
+    .AddElementsToExtract(new List<ExtractElementType>(new []{ ExtractElementType.TEXT, ExtractElementType.TABLES}))
+    .AddElementsToExtractRenditions(new List<ExtractRenditionsElementType> (new []{ExtractRenditionsElementType.FIGURES, ExtractRenditionsElementType.TABLES}))
+    .AddAddCharInfo(true)
+    .build();
 extractPdfOperation.SetOptions(extractPdfOptions);
-
 // Execute the operation.
 FileRef result = extractPdfOperation.Execute(executionContext);
 
 // Save the result to the specified location.
-result.SaveAs(Directory.GetCurrentDirectory() + "/output/extractPdf.zip");
+result.SaveAs(Directory.GetCurrentDirectory() + "/output/ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF.zip");
 ```
 
 #### Java

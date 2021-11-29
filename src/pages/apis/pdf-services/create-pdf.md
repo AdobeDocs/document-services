@@ -64,17 +64,19 @@ createPdfOperation.execute(executionContext)
 #### .Net
 
 ```clike
-// Create an ExecutionContext using credentials and create a new operation instance.
-const executionContext = PDFServicesSdk.ExecutionContext.create( credentials ),
-createPdfOperation = PDFServicesSdk.CreatePDF.Operation.createNew();
+//Create an ExecutionContext using credentials and create a new operation instance.
+ExecutionContext executionContext = ExecutionContext.Create(credentials);
+CreatePDFOperation createPdfOperation = CreatePDFOperation.CreateNew();
 
 // Set operation input from a source file.
-const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/createPDFInput.docx');
-createPdfOperation.setInput(input);
+FileRef source = FileRef.CreateFromLocalFile(@"createPdfInput.docx");
+createPdfOperation.SetInput(source);
 
-// Execute the operation and Save the result to the specified location.
-createPdfOperation.execute(executionContext)
-.then(result => result.saveAsFile('output/createPDFFromDOCX.pdf'))
+// Execute the operation.
+FileRef result = createPdfOperation.Execute(executionContext);
+
+// Save the result to the specified location.
+result.SaveAs(Directory.GetCurrentDirectory() + "/output/createPdfOutput.pdf");
 ```
 
 #### Java

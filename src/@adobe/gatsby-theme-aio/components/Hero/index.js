@@ -20,7 +20,7 @@ import Context from "@adobe/gatsby-theme-aio/src/components/Context";
 import { Breadcrumbs } from "@adobe/gatsby-theme-aio/src/components/Breadcrumbs";
 import classNames from "classnames";
 
-import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const setImageLoading = (child) => {
   if (child?.props?.mdxType === 'img') {

@@ -43,7 +43,7 @@ Easily republish in different formats by extracting structured content elements 
 
 <!-- [](/use-cases/report-creation-editing) Faced 404 issue-->
 
-[](../use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+[](../use-cases/content-publishing/on-demand-report-creation/)
 
 
 ![Report Creation and Editing](../../images/report-creation-editing.jpg)

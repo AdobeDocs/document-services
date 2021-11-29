@@ -3,12 +3,13 @@ title: Adobe Developer — PDF Services API  —  Document Generation
 ---
 
 
-<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link" primaryOutline/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link  button-screen" primaryOutline/>
 
 ### PDF and Word document generation with dynamic data
 
-- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 - [Learn more](/src/pages/apis/doc-generation.md)
+- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
+
 
 
 Generate PDF or Word documents from Microsoft Word templates and your data. Merge dynamic data with your custom templates to generate on brand contracts, proposals, invoices, NDAs, and more.
@@ -75,7 +76,7 @@ curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith
 #### Node js
 
 ```js
-/// Setup input data for the document merge process
+// Setup input data for the document merge process
 const jsonString = fs.readFileSync('resources/salesOrder.json'),
   jsonDataForMerge = JSON.parse(jsonString);
 
