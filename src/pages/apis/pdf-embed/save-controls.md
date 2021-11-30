@@ -10,7 +10,7 @@ title: Adobe Developer — PDF Embed API  — save controls
 Support auto-save to local drives or external storage, with options for frequency and polling, along with success/fail events capture; use file modification and status polling events for multi-user workflows
 
 
-- [See documentation](/document-services/docs/overview/pdf-embed-api/)
+- [See documentation](/document-services/docs/overview/pdf-embed-api/howtos_ui/#save-a-pdf)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 

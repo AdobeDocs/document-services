@@ -12,7 +12,7 @@ title: Adobe Developer — PDF Embed API  — pdf analytics
 Easily integrate Adobe Analytics with only a few steps, or leverage the user events to push data to other analytics tools
 
 
-- [See documentation](/document-services/docs/overview/pdf-embed-api/)
+- [See documentation](/document-services/docs/overview/pdf-embed-api/howtodata/)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 

@@ -7,8 +7,8 @@ title: Adobe Developer — PDF Services API  —  Document Generation
 
 ### PDF and Word document generation with dynamic data
 
-- [Learn more](/src/pages/apis/doc-generation.md)
 - [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
+- [Learn more](/src/pages/apis/doc-generation.md)
 
 
 

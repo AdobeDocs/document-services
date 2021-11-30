@@ -13,7 +13,7 @@ For multi-user document collaboration, identify reviewers by name or email addre
 
 
 
-- [See documentation](/document-services/docs/overview/pdf-embed-api/)
+- [See documentation](/document-services/docs/overview/pdf-embed-api/howtos_comments/#basic-apis-for-commenting)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
 
