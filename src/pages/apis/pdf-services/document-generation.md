@@ -3,12 +3,13 @@ title: Adobe Developer — PDF Services API  —  Document Generation
 ---
 
 
-<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link  button-screen" primaryOutline/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link  button-screen" 
+variantsTypePrimary='primary' variantsTypeSecondary='cta' isPrimaryBtn  primaryOutline/>
 
 ### PDF and Word document generation with dynamic data
 
-- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 - [Learn more](/src/pages/apis/doc-generation.md)
+- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 
 
 
