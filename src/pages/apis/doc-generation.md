@@ -45,35 +45,34 @@ apiHeroAssetImg doc-gen-invoice
 
 <AdobeMsBlade/>
 
+
+<!-- <MobileOptimize/> -->
+
+<!-- Download Sample Templates and Data to Get Started -->
+
+<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+
+<DgDownloadSample/>
+
+<TextBlock slots="buttons" width="100%" theme="lightest"  isCentered variantsTypePrimary='primary' isPrimaryBtn primaryOutline className="padding-zero ms-word-add-in-title"  />
+
+ - [See all templates](./doc-gen-api-template.md)
+
+
+<!--  Start Modifying PDFs in a few Minutes -->
+<WrapperComponent slots="content" theme="light"/>
+
+<DgStartModifyingTitle/>
+
 <!-- Use case for Document Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
 
 <DgUseCaseDocServiceAPI/>
 
+
 <TextBlock slots="buttons" theme="lightest" isCentered className="padding-5"/>
 
 - [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
-
-<MobileOptimize/>
-
-<!-- Download Sample Templates and Data to Get Started -->
-
-<WrapperComponent slots="content" repeat="1" theme="light"/>
-
-<DgDownloadSample/>
-
-<TextBlock slots="buttons" width="100%" theme="light"  isCentered primaryOutline className="padding-zero ms-word-add-in-title"  />
-
- - [Get Microsoft Word add-in](/document-services/docs/overview/document-generation-api/wordaddin/)
- - [See all templates](./doc-gen-api-template.md)
-
-
-
-<!--  Start Modifying PDFs in a few Minutes -->
-<WrapperComponent slots="content" theme="lightest"/>
-
-<DgStartModifyingTitle/>
-
 
 <!-- Explore other Adobe Document Cloud services -->
 

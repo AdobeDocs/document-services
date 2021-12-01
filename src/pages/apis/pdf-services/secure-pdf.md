@@ -2,7 +2,7 @@
 
 ### Secure a PDf file and set restrictions
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/protect-pdf/)
 
 Secure a PDF file with a password encrypt the document. Set an owner password and restrictions on certain features like printing, editing and copying in the PDF document to prevent end users from modifying it.
 

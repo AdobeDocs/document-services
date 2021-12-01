@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import "@spectrum-css/typography";
 import Digging_out_data from "../pages/images/Digging_out_data.jpg";
 import Generate_documents from "../pages/images/generate_documents.jpg";
-import Make_PDFs_searchable from "../pages/images/Make_PDFs_searchable.jpg";
+import Make_PDFs_searchable from "../pages/images/Make_PDFs_searchable.png";
 import resourceImage from "../pages/images/resource_hero_img.jpg";
 
 const getImageURl = (url) => {
@@ -136,10 +136,30 @@ const DynamicContentLoader = ({
             </div>
           </section>
 
-          <section className="sdk-rsrc-featured">
-            <div className="featured-container">
-              <h3>Featured</h3>
-              <div className="featured-wrapper">
+          <div className="masterblog">
+          <section className="sdk-rsrc-blog">
+          <div className="blog-container">
+          <div className="header-and-more">
+          <h3 className="spectrum-Heading spectrum-Heading--sizeL">Featured</h3></div>
+              <div className="blog-wrapper">
+                {featuredContent.map((data) => {
+                  return (
+                    <div key={data.link} className='cardView'>
+                      <a href={data.URL} target="_parent" key={data.Title}>
+                        <div className="blog-img-container">
+                          <img
+                             src={data.Thumbnail}
+                             alt={data.Title}
+                          />
+                        </div>
+                        <p className="blog-title">Featured</p>
+                      </a>
+                      <p className="blog-text">{data.Title}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              {/* <div className="featured-wrapper">
                 {featuredContent.map((data) => (
                   <a href={data.URL} target="_parent" key={data.Title}>
                     <div className="featured-thumb feat1">
@@ -155,9 +175,11 @@ const DynamicContentLoader = ({
                     </div>
                   </a>
                 ))}
-              </div>
-            </div>
+              </div> */}
+              </div>  
           </section>
+            </div>
+
         </>
       )}
       {content === "tutorial" && resData?.data?.length > 0 && (
@@ -196,7 +218,7 @@ const DynamicContentLoader = ({
 
               <div className="tutorial-wrapper">
                 {resData?.data?.map((data) => (
-                  <div className="tutorial" key={data.Title}>
+                  <div className="tutorial cardView" key={data.Title}>
                     <a href={data.URL} target="_parent" key={data.Title}>
                       <div
                         className="tut-thumb1"
@@ -204,7 +226,7 @@ const DynamicContentLoader = ({
                           data.Thumbnail
                         )})`}
                       ></div>
-                      <p>{data.Title}</p>
+                      <p className='tutorial-title'>{data.Title}</p>
                     </a>
                   </div>
                 ))}
@@ -240,7 +262,7 @@ const DynamicContentLoader = ({
               <div className="blog-wrapper">
                 {resData.responseData?.feed?.entries.map((data) => {
                   return (
-                    <div key={data.link}>
+                    <div key={data.link} className='cardView'>
                       <a href={data.link} target="_parent">
                         <div className="blog-img-container">
                           <img

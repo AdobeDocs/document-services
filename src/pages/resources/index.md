@@ -13,17 +13,17 @@ import {DynamicContentLoader} from '../../components/dynamicContentLoader';
 
 Start integrating our APIs into your solutions
 
-<DynamicContentLoader theme="lightest" content='usingAdobePDFService' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Hero&page_size=1"/>
+<DynamicContentLoader theme="light" content='usingAdobePDFService' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Hero&page_size=1"/>
 
 
 <DynamicContentLoader theme="lightest" content='feature' />
 
-<DynamicContentLoader theme="lightest" content='tutorial' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Tutorial&page_size=8"/>
+<DynamicContentLoader theme="light" content='tutorial' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Tutorial&page_size=8"/>
 
 <DynamicContentLoader theme="lightest" content='blog' api="https://www.feedrapp.info/?support=false&version=1.3.0&q=https%3A%2F%2Fmedium.com%2Ffeed%2Fadobetech%2Ftagged%2Fadobe-document-cloud&num=3"/>
 
 
-<WrapperComponent slots="content" theme="lightest"/>
+<WrapperComponent slots="content" theme="light"/>
 
 <CustomerStory/>
 

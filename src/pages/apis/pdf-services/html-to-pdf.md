@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  HTML to PDF
 
 ### Create a PDF file from HTML
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/create-pdf/#create-a-pdf-from-static-html)
 
 Create PDFs from static and dynamic HTML, Zip, and URL.
 
