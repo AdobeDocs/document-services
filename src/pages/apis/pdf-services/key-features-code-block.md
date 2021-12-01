@@ -28,7 +28,7 @@ import HTMLToPDF from './html-to-pdf.md';
 
 ## Key features of adobe PDF services API
 
-- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-services-api)
+- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
 
 <TabsBlock orientation="vertical" slots="heading, image, content" repeat="18"  theme="dark" className='bgBlue code-block-0' />

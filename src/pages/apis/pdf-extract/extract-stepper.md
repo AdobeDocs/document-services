@@ -17,7 +17,7 @@ Start your free 6-month trial today with 1,000 PDF transactions
 
 Obtain free credentials
 
-- [Get Started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=pdf-extract-api)
+- [Get Started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 
 

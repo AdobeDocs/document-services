@@ -50,11 +50,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     let getCredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get credentials');
     // stage
-    let baseurl =  'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html';
+    let baseurl =  'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html';
 
     // production
     if(window.location.host.indexOf('developer.adobe.com') >= 0) {
-      baseurl =  'https://documentcloud.adobe.com/dc-integration-creation-app-cdn/index.html';
+      baseurl =  'https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html';
     }
 
     getCredentialsButton.href = `${baseurl}`;
