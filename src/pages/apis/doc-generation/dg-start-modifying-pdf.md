@@ -13,7 +13,7 @@ Start free trial with 1,000 Document Transactions for up to 6 months
 
 Start a free trial and download code samples for Node.js, Java, and .Net
 
-- [Get Started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/index.html?api=document-generation-api)
+- [Get Started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
 
 
 <TextBlock slots="heading, text, buttons" theme="lightest"  width="33%" variantsTypePrimary="primary" isPrimaryBtn className="align-left link  stepper-horizontal-align"/>
