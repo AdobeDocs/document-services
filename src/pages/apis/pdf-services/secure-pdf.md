@@ -62,7 +62,7 @@ protectPDFOperation.execute(executionContext)
   permissions.AddPermission(Permission.COPY_CONTENT);
 
   // Build ProtectPDF options by setting a User as well as Owner/Permissions Password, Permissions,
-  // Encryption Algorithm (used for encrypting the PDF file) and specifying the type of          content to encrypt.
+  // Encryption Algorithm (used for encrypting the PDF file) and specifying the type of content to encrypt.
   ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.PasswordProtectOptionsBuilder()
     .SetUserPassword("openpassword")
     .SetOwnerPassword("permissionspassword")

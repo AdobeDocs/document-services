@@ -11,20 +11,18 @@ import EmbedPdfViewingAnalytics from './home/embed-pdf-viewing-analytics.md';
 import HomeResourceCard from './home/home-resource.md';
 import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
-import CustomerStory from './resources/storyies.md'
+import CustomerStory from './home/home-storyies.md'
 
-
-<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="homeherobgImage"/>
+<Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" className="homeherobgImage"/>
 
 # Reimagine document experiences with PDF APIs designed for developers
 
 From the company who created the PDF standard.
 
-
-doc-services-hero
-
-
 - [Get started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html)
+
+
+homeheroAssertImage
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
 

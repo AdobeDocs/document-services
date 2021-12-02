@@ -607,12 +607,6 @@ img[alt=thumbnail] {
     background:url(../pages/images/ms_power_bkg.jpg) !important;
 }
 
-.homeherobgImage {
-    background: rgb(250, 105, 85) url('../pages/images/bg-hero.jpeg') !important;
-    background-repeat: no-repeat;
-    background-size: cover !important;
-}
-
 .herobgImage {
     background: rgb(250, 105, 85) url('../pages/images/bg-hero-doc-gen.jpeg') !important;
     background-repeat: no-repeat;
@@ -658,6 +652,9 @@ img[alt=thumbnail] {
     background-position: bottom right !important;
 }
 
+.tabView div > a.spectrum-Button  {
+    margin-top: var(--spectrum-global-dimension-size-250) !important;
+}
 
 @media screen and (min-width: 1024px){
     .doc-services-hero {
@@ -746,21 +743,14 @@ img[alt=thumbnail] {
         background-position: center center;
         background-size: cover;
     }
-}
 
-
-.horizontal-align-heading h3{
-    height:var(--spectrum-global-dimension-size-700);
-}
-
-.tabView div > a.spectrum-Button  {
-    margin-top: var(--spectrum-global-dimension-size-250) !important;
-}
-
-@media screen and (max-width: 767px) {
     .tabView div > a.spectrum-Button  {
         margin-top: var(--spectrum-global-dimension-size-160) !important;
     }
+}
+
+.horizontal-align-heading h3{
+    height:var(--spectrum-global-dimension-size-700);
 }
 
 .page-content .spectrum-Heading a{
@@ -969,4 +959,64 @@ pre .prism-code.spectrum-Code  span.token.string{
 
 .page-content p {
     margin-top: var(--spectrum-global-dimension-size-100) !important;
+}
+
+
+.homeherobgImage {
+    background: url('../pages/images/DCP-Home-DesktopGradient.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+@media screen and (max-width: 1023px ) and (min-width:768px){
+    .homeherobgImage {
+        background: url('../pages/images/DCP-Home-TabletGradient.jpg') !important;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .homeherobgImage {
+        background: url('../pages/images/DCP-Home-MobileGradient.jpg') !important;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .homeheroAssertImage {
+        background-image: url('../pages/images/DCP-MarqueeVisual.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 410px !important;
+        width: 450px !important;
+        background-position: bottom center !important;
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .homeheroAssertImage {
+        margin-top: var(--spectrum-global-dimension-size-200) !important;
+        background-image: url('../pages/images/DCP-MarqueeVisual.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 585px;
+        width: 100% !important;
+        height: 17.5rem !important;
+    }
+}
+
+@media screen and (max-width: 1023px ) and (min-width:767px){
+    .homeheroAssertImage {
+        margin-top: var(--spectrum-global-dimension-size-200) !important;
+        background-image: url('../pages/images/DCP-MarqueeVisual.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 590px !important;
+        width: 100% !important;
+        background-position: bottom center !important;
+    }
 }

@@ -81,6 +81,7 @@ section.sdk-rsrc-release .release-container .release-wrapper {
     margin-bottom: 4.0625rem;
     flex-direction: row;
     padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 
@@ -547,7 +548,7 @@ section.sdk-rsrc-blog .blog-container .blog-wrapper > div {
 }
 @media screen and (min-width: 1024px) {
     section.sdk-rsrc-blog .blog-container .blog-wrapper > div:not(:last-child) {
-        margin-right: 20;
+        margin-right: 20px;
    }
 }
 

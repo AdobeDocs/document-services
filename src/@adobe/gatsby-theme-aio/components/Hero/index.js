@@ -21,6 +21,8 @@ import { Breadcrumbs } from "@adobe/gatsby-theme-aio/src/components/Breadcrumbs"
 import classNames from "classnames";
 
 import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import AnimationVideo from "../../../../pages/videos/Adobe_DCP_Marquee_Animation.json";
+import Lottie from 'react-lottie';
 
 const setImageLoading = (child) => {
   if (child?.props?.mdxType === 'img') {
@@ -96,7 +98,7 @@ const HeroTexts = ({ texts }) => {
   return textKeys.map((textKey) =>
     cloneElement(texts[textKey], {
       className: 'spectrum-Body spectrum-Body--sizeL',
-      css: css`       
+      css: css`
         &.spectrum-Body--sizeL {
           margin-top: 0 !important;
           color:#fff !important;
@@ -310,6 +312,130 @@ const Hero = ({
           </div>
         </section>
       )
+    } else if(variant === 'video' && AnimationVideo){
+      return (
+        <section
+          className={classNames(className, `spectrum--${theme}`)}
+          css={css`
+            background: ${background ?? 'var(--spectrum-global-color-gray-50)'};
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+            @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+              height: auto;
+              padding: var(--spectrum-global-dimension-size-400);
+              box-sizing: border-box;
+            }
+            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+              height: auto;
+              padding: var(--spectrum-global-dimension-size-400);
+              box-sizing: border-box;
+            }
+          `}>
+            <div css={css`
+              @media screen and (min-width: ${DESKTOP_SCREEN_WIDTH}) {
+                position: relative;
+                max-width:${DESKTOP_SCREEN_WIDTH}
+                margin:auto;
+              }
+            `}>
+              <div css={css`
+                @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+                  display: none;
+                }
+              `}>
+                <Lottie
+                  options={ {
+                    loop: true,
+                    autoplay: true,
+                    animationData: AnimationVideo,
+                    rendererSettings: {
+                      preserveAspectRatio: 'xMidYMid slice'
+                    }
+                  }}
+                  isStopped={false}
+                  isPaused={false}/>
+              </div>
+
+              <div
+                css={css`
+                  display: flex;
+                  height: 100%;
+                  max-width: ${width};
+                  margin: auto;
+                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                    display: inline;
+                  }
+              `}>
+                <div
+                  css={css`
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center !important;
+                    position: absolute;
+                    padding: 0;
+                    top: 0;
+                    text-align: left;
+                    width: 30%;
+                    align-item:center;
+                    bottom: 0;
+                    box-sizing: border-box;
+
+                    @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                      padding: 0 !important;
+                      width: 100% !important;
+                      position: initial !important;
+                    }
+
+                    @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+                      padding: 0 var(--spectrum-global-dimension-size-100);
+                      width:100% !important;
+                      top: 20px !important;
+                      position: initial !important;
+                      h1 {
+                        padding: 0 var(--spectrum-global-dimension-size-200) 0 var(--spectrum-global-dimension-size-0) !important;
+                        font-size: var(--spectrum-heading-l-text-size, var(--spectrum-alias-heading-l-text-size))
+                      }
+                    }
+                `}>
+
+                  {heading && (
+                    <HeroHeading
+                      heading={heading}
+                      variant={variant}
+                      customLayout={customLayout}
+                    />
+                  )}
+
+                  <HeroTexts texts={props} />
+
+                  <HeroButtons
+                    buttons={buttons}
+                    quiets={[false]}
+                    variants={["primary", "overBackground"]}
+                    css={css`
+                      margin-top: var(--spectrum-global-dimension-size-400);
+                    `}
+                  />
+                </div>
+                <div
+                  css={css`
+                    max-width: ${width};
+                    margin: auto;
+                    display: none;
+                    @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+                      display: block;
+                    }
+                    @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                      display: inline;
+                    }
+                `}>
+                <div className={assetsImg?.props?.children}/>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
     } else if (variant === 'fullwidth') {
       return (
         <section
