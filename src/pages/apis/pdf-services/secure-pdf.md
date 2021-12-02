@@ -53,36 +53,36 @@ protectPDFOperation.execute(executionContext)
 
 ```clike
   // Create an ExecutionContext using credentials.
-  ExecutionContext executionContext = ExecutionContext.Create(credentials);
+ExecutionContext executionContext = ExecutionContext.Create(credentials);
 
-  // Create new permissions instance and add the required permissions
-  Permissions permissions = Permissions.CreateNew();
+// Create new permissions instance and add the required permissions
+Permissions permissions = Permissions.CreateNew();
   permissions.AddPermission(Permission.PRINT_LOW_QUALITY);
   permissions.AddPermission(Permission.EDIT_DOCUMENT_ASSEMBLY);
   permissions.AddPermission(Permission.COPY_CONTENT);
 
-  // Build ProtectPDF options by setting a User as well as Owner/Permissions Password, Permissions,
-  // Encryption Algorithm (used for encrypting the PDF file) and specifying the type of content to encrypt.
-  ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.PasswordProtectOptionsBuilder()
-    .SetUserPassword("openpassword")
-    .SetOwnerPassword("permissionspassword")
-    .SetPermissions(permissions)
-    .SetEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
-    .SetContentEncryption(ContentEncryption.ALL_CONTENT_EXCEPT_METADATA)
-    .Build();
+// Build ProtectPDF options by setting a User as well as Owner/Permissions Password, Permissions,
+// Encryption Algorithm (used for encrypting the PDF file) and specifying the type of content to encrypt.
+ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.PasswordProtectOptionsBuilder()
+  .SetUserPassword("openpassword")
+  .SetOwnerPassword("permissionspassword")
+  .SetPermissions(permissions)
+  .SetEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
+  .SetContentEncryption(ContentEncryption.ALL_CONTENT_EXCEPT_METADATA)
+  .Build();
 
-  // Create a new operation instance
-  ProtectPDFOperation protectPDFOperation = ProtectPDFOperation.CreateNew(protectPDFOptions);
+// Create a new operation instance
+ProtectPDFOperation protectPDFOperation = ProtectPDFOperation.CreateNew(protectPDFOptions);
 
-  // Set operation input from a source file.
-  FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"protectPDFInput.pdf");
+// Set operation input from a source file.
+FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"protectPDFInput.pdf");
   protectPDFOperation.SetInput(sourceFileRef);
 
-  // Execute the operation.
-  FileRef result = protectPDFOperation.Execute(executionContext);
+// Execute the operation.
+FileRef result = protectPDFOperation.Execute(executionContext);
 
-  // Save the result to the specified location.
-  result.SaveAs(Directory.GetCurrentDirectory() + "/output/protectPDFOutput.pdf");
+// Save the result to the specified location.
+result.SaveAs(Directory.GetCurrentDirectory() + "/output/protectPDFOutput.pdf");
 ```
 
 #### Java
