@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-apis-pdf-extract-md","path":"/apis/pdf-extract/","result":{"pageContext":{"frontmatter":{"title":"Extract Text from PDF | Extract Data from PDF | Adobe PDF Extract API","description":"Extract the text, data and content elements of any PDF with a web service powered by Adobe Sensei's machine learning. Try a free trial of Adobe PDF Extract today!"}}},"staticQueryHashes":["3695678887","858854441","915530536"]}
+{
+    "componentChunkName": "component---src-pages-apis-pdf-extract-md",
+    "path": "/apis/pdf-extract/",
+    "result": {"pageContext":{"frontmatter":{"title":"Extract Text from PDF | Extract Data from PDF | Adobe PDF Extract API","description":"Extract the text, data and content elements of any PDF with a web service powered by Adobe Sensei's machine learning. Try a free trial of Adobe PDF Extract today!"}}},
+    "staticQueryHashes": ["3695678887","858854441","915530536"]}

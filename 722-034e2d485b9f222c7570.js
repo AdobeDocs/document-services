@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdev_site_product_template=self.webpackChunkdev_site_product_template||[]).push([[722],{70722:function(t,e,s){s.r(e),e.default=s.p+"static/how-it-works-tablet-16fd4076d4571d60bcbfc82870d51447.svg"}}]);
+//# sourceMappingURL=722-034e2d485b9f222c7570.js.map

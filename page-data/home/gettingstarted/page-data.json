@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-home-gettingstarted-md","path":"/home/gettingstarted/","result":{"pageContext":{"frontmatter":{"title":"Get Started","frameSrc":"https://documentcloud.adobe.com/dc-integration-creation-app-cdn/index.html"}}},"staticQueryHashes":["3695678887","858854441","915530536"]}
+{
+    "componentChunkName": "component---src-pages-home-gettingstarted-md",
+    "path": "/home/gettingstarted/",
+    "result": {"pageContext":{"frontmatter":{"title":"Get Started","frameSrc":"https://documentcloud.adobe.com/dc-integration-creation-app-cdn/index.html"}}},
+    "staticQueryHashes": ["3695678887","858854441","915530536"]}

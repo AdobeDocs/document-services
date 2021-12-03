@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-pricing-form-right-content-md","path":"/pricing/form-right-content/","result":{"pageContext":{"frontmatter":{"title":"Adobe Developer — Document Services Form — Form"}}},"staticQueryHashes":["3695678887","858854441","915530536"]}
+{
+    "componentChunkName": "component---src-pages-pricing-form-right-content-md",
+    "path": "/pricing/form-right-content/",
+    "result": {"pageContext":{"frontmatter":{"title":"Adobe Developer — Document Services Form — Form"}}},
+    "staticQueryHashes": ["3695678887","858854441","915530536"]}

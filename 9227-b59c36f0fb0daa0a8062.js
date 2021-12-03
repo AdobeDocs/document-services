@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdev_site_product_template=self.webpackChunkdev_site_product_template||[]).push([[9227],{19227:function(e,t,s){s.r(t),t.default=s.p+"static/extract-sm-6314ffaf87e046296536c9d2e7a42e2d.svg"}}]);
+//# sourceMappingURL=9227-b59c36f0fb0daa0a8062.js.map
