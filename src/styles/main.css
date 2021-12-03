@@ -371,23 +371,21 @@ h1 {
 pre:not(.prism-code) div[class^="spectrum"] div:first-child {
     top: -42px;
 }
-@media screen and (max-width: 768px) {
-    pre:not(.prism-code) div[class^="spectrum"] div:first-child {
-        top: -52px;
-    }
-}
-/* .homeHeroAssetImg .gatsby-resp-image-background-image {
-    padding-bottom: 25% !important;
-} */
-/* @media screen and (max-width: 768px) {
-    .homeHeroAssetImg .gatsby-resp-image-background-image {
-        padding-bottom: 45% !important;
-    }
-} */
+
 .titleBlock-align-left div:first-child {
     text-align: left !important;
     margin-left: var(--spectrum-global-dimension-size-150) !important;
 }
+
+@media screen and (max-width: 768px) {
+    pre:not(.prism-code) div[class^="spectrum"] div:first-child {
+        top: -52px;
+    }
+    .titleBlock-align-left div:first-child {
+        margin-left: var(--spectrum-global-dimension-size-0) !important;
+    }
+}
+
 .why-docment-services picture img, .why-pdf-services picture img {
     width: auto !important;
 }
@@ -412,7 +410,7 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
     padding-top: 0 !important;
 }
 .padding-5 {
-    padding-bottom: var(--spectrum-global-dimension-size-25) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-500) !important;
     padding-top: var(--spectrum-global-dimension-size-25)  !important;
 }
 .padding-zero div:first-child {
@@ -484,6 +482,9 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
 }
 .left-content > div > div > div {
     padding-left: var(--spectrum-global-dimension-size-150);
+}
+.pricing-title-right > div > div > div {
+    padding-bottom: var(--spectrum-global-dimension-size-300);
 }
 .bg-grey > div {
     margin: auto;
@@ -582,7 +583,7 @@ img[alt=thumbnail] {
     height: auto !important;
     margin-top:var(--spectrum-global-dimension-size-300);
     width: auto;
-    margin-left: var(--spectrum-global-dimension-size-250);
+    /* margin-left: var(--spectrum-global-dimension-size-250); */
 }
 
 .link .spectrum-Body a {

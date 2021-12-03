@@ -6,11 +6,11 @@ title: Adobe Developer — DC Platform SDK Resources
 
 ### Pay-as-you-go
 
-$0.05 per [Document Transaction](https://www.adobe.com/go/pdftoolsapi_licensing)
+**$0.05 per** [Document Transaction](https://www.adobe.com/go/pdftoolsapi_licensing)
 
 <TextBlock slots="text" width="100%" theme="light"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 list-points border-right div-p-0 left-content"/>
 
-- Full access to all 15+ PDF Services
+- Full access to all 15+ PDF Services including PDF Extract and Document Generation
 
 - No prepaid fees or commitment
 

@@ -47,6 +47,9 @@ const SummaryBlock = ({
         @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
           flex-direction: column;
         }
+        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+          padding-left: var(--spectrum-global-dimension-size-0); !important;
+        }
       `}
     >
       <div

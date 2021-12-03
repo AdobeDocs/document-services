@@ -4,7 +4,7 @@ title: Adobe Developer — Automate Document Generation | Document Explore | Ado
 
 <TitleBlock slots="heading" theme="light" className='titleBlock-align-left'/>
 
-## Explore other Adobe Document Services
+## Explore other Adobe Document Services APIs
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 

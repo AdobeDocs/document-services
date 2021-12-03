@@ -34,14 +34,17 @@ const options = new protectPDFOptions.PasswordProtectOptions.Builder()
   .setOwnerPassword("permissionspassword")
   .setPermissions(permissions)
   .setEncryptionAlgorithm(protectPDFOptions.EncryptionAlgorithm.AES_256)
-  .setContentEncryption(protectPDFOptions.ContentEncryption.ALL_CONTENT_EXCEPT_METADATA)
+  .setContentEncryption(
+    protectPDFOptions.ContentEncryption.ALL_CONTENT_EXCEPT_METADATA
+  )
   .build();
 
 // Create a new operation instance.
 const protectPDFOperation = protectPDF.Operation.createNew(options);
 
 // Set operation input from a source file.
-const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/protectPDFInput.pdf');
+const input = PDFServicesSdk.FileRef
+  .createFromLocalFile('resources/protectPDFInput.pdf');
   protectPDFOperation.setInput(input);
 
 // Execute the operation and Save the result to the specified location.
@@ -111,7 +114,8 @@ ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.passwordProtectOptionsBu
 ProtectPDFOperation protectPDFOperation = ProtectPDFOperation.createNew(protectPDFOptions);
 
 // Set operation input from a source file.
-FileRef source = FileRef.createFromLocalFile("src/main/resources/protectPDFInput.pdf");
+FileRef source = FileRef
+.createFromLocalFile("src/main/resources/protectPDFInput.pdf");
 protectPDFOperation.setInput(source);
 
 // Execute the operation
