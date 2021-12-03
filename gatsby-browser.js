@@ -48,6 +48,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       window.digitalData.page.pageInfo.breadCrumbs.push(item.innerText);
     });
 
+    let pageName = window.location.pathname.replace('/','');
+    pageName = window.location.pathname.replaceAll('/',':');
+    digitalData._set('digitalData.page.pageInfo.pageName', pageName);
+
     let getCredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get credentials');
     let startFreeTrialButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Start free trial');
     let getStartedlButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get started');
