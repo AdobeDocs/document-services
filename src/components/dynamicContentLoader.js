@@ -28,16 +28,22 @@ const featuredContent = [
     Title: "Make PDFs Searchable (OCR)",
     URL: "https://medium.com/adobetech/make-pdfs-searchable-ocr-after-importing-into-sharepoint-1a8037744841",
     Thumbnail: Make_PDFs_searchable,
+    class:'make-pdfs-searchable',
+    desc:"Make PDFs Searchable (OCR) After Importing into SharePoint | by Ben Vanderberg | Adobe Tech Blog | Medium"
   },
   {
     Title: "Generate Documents",
     URL: "https://medium.com/adobetech/generate-documents-and-send-in-bulk-for-signature-in-microsoft-power-automate-807838092dcf",
     Thumbnail: Generate_documents,
+    class:"generate_documents",
+    desc:"Learn how you can generate and send documents in bulk using Adobe Sign, Document Generation API,and Microsoft Power Automate."
   },
   {
     Title: "Digging Out Data with Adobe PDF Extract API",
     URL: "https://medium.com/adobetech/digging-out-data-with-adobe-pdf-extract-api-cf4b1712f05a",
     Thumbnail: Digging_out_data,
+    class:"digging_out_data",
+    desc:"There is an untold amount of scientific data in the millions of reports and scientific studies over the past few centuries. "
   },
 ];
 
@@ -142,19 +148,21 @@ const DynamicContentLoader = ({
           <div className="header-and-more">
           <h3 className="spectrum-Heading spectrum-Heading--sizeL">Featured</h3></div>
               <div className="blog-wrapper">
-                {featuredContent.map((data) => {
+               {featuredContent.map((data) => {
                   return (
                     <div key={data.link} className='cardView'>
                       <a href={data.URL} target="_parent" key={data.Title}>
                         <div className="blog-img-container">
+                          <div className={data.class} />
                           <img
+                             className="featured-image"
                              src={data.Thumbnail}
                              alt={data.Title}
                           />
                         </div>
-                        <p className="blog-title">Featured</p>
+                        <p className="blog-title blog-title-height">{data.Title}</p>
                       </a>
-                      <p className="blog-text">{data.Title}</p>
+                      <p className="blog-text">{data.desc}</p>
                     </div>
                   );
                 })}
@@ -176,7 +184,7 @@ const DynamicContentLoader = ({
                   </a>
                 ))}
               </div> */}
-              </div>  
+              </div>
           </section>
             </div>
 
