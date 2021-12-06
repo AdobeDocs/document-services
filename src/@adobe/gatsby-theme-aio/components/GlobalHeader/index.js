@@ -614,6 +614,9 @@ const GlobalHeader = ({
                                     if( e.key === 'Enter'){
                                       e.currentTarget.focus();
                                     }
+                                    if(!e.currentTarget.nextSibling){
+                                       setOpenMenuIndex(-1);
+                                    }
                                   }}
                                   >
                                   {menu.description ? (

@@ -19,7 +19,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Generate](../../images/rapid-results.svg)
+![Generate](../../images/Generate.svg)
 
 #### Generate
 

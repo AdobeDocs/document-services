@@ -69,8 +69,9 @@ const ProductCard = ({ theme = 'lightest', width = '100%', icon, heading, text, 
         css={css`
           margin: 0 var(--spectrum-global-dimension-size-300);
           width: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-800));
-          height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-500));
-
+          // height: calc(var(--spectrum-global-dimension-size-3600) - var(--spectrum-global-dimension-size-500));
+          height: var(--spectrum-global-dimension-size-3600);
+          
           &:hover {
             border-color: var(--spectrum-card-border-color, var(--spectrum-global-color-gray-200));
           }

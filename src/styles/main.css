@@ -564,7 +564,7 @@ img[alt=thumbnail] {
 
 
 .product-card-compact-img .spectrum-Card-body {
-    height: calc(var(--spectrum-global-dimension-size-3000)) !important;
+    height: calc(var(--spectrum-global-dimension-size-2500)) !important;
 }
 
 
@@ -576,12 +576,12 @@ img[alt=thumbnail] {
 
 .product-card-compact-img .spectrum-Card-body :nth-child(2){
     height: auto !important;
-    top: var(--spectrum-global-dimension-size-1600);
+    top: var(--spectrum-global-dimension-size-1250);
 }
 
 .product-card-compact-img-service  .spectrum-Card-body img{
     height: auto !important;
-    margin-top:var(--spectrum-global-dimension-size-300);
+    /* margin-top:var(--spectrum-global-dimension-size-300); */
     width: auto;
     /* margin-left: var(--spectrum-global-dimension-size-250); */
 }

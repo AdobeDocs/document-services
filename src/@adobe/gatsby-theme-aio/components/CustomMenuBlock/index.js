@@ -4,6 +4,7 @@ import React, {
   useEffect,
   useCallback,
   useContext,
+  createRef
 } from "react";
 import { css } from "@emotion/react";
 import PropTypes from "prop-types";
@@ -81,6 +82,8 @@ const Icon = ({ name, onCompleted, onError }) => {
 };
 
 const CustomMenuBlock = ( ) => {
+  const [expandedMenus, setExpandedMenus] = useState([]);
+  const [expandedHederMenus, setExpandedHederMenus] = useState([]);
   const min_mobile_screen_width = "767px";
   const data = useStaticQuery(
     graphql`
@@ -129,8 +132,6 @@ const CustomMenuBlock = ( ) => {
   const pathWithRootFix = rootFix(location.pathname);
   const selectedMenus = findSelectedPages(pathWithRootFix, subMenuPages);
 
-  const [expandedMenus, setExpandedMenus] = useState([]);
-
   const renderSubMenuItem = (menus, level) => {
     return menus
       .filter((menu) => menu.title && menu.path)
@@ -138,24 +139,28 @@ const CustomMenuBlock = ( ) => {
         const isSelected = selectedMenus.find(
           (selectedItem) => selectedItem === menu
         );
-        const isExpanded = menu.header || expandedMenus.includes(menu.href);
+        const ref = createRef();
+        console.log('expandedHederMenus',expandedHederMenus);
+        const isExpanded = menu.header || expandedMenus.includes(menu.href) || (expandedHederMenus.includes(index) && level === 1);
         const id = nextId();
 
         if (isSelected && !expandedMenus.includes(menu.href)) {
           setExpandedMenus((menus) => [...menus, menu.href]);
         }
         const menuHref = withPrefix(menu.href);
-         var isMenuSelected = selectedMenus.length === 1 ? index === 0 && menu.path.includes(selectedMenus[0].path) : selectedMenus[selectedMenus.length - 1] === menu && isSelected;
+        var isMenuSelected = selectedMenus.length === 1 ? index === 0 && menu.path.includes(selectedMenus[0].path) : selectedMenus[selectedMenus.length - 1] === menu && isSelected;
         return (
           <li
+            id={id}
+            tabindex="0"
+            ref={ref}
             key={index}
             css={css`
-            display: contents;
-            &:not(.is-open) .spectrum-Menu {
-              display: none;
-            }
-          }
-        `}
+              display: contents;
+              &:not(.is-open) .spectrum-Menu {
+                display: none;
+              }}
+            `}
             className={classNames([
               "spectrum-Menu-item",
               { "is-open": isExpanded },
@@ -202,6 +207,27 @@ const CustomMenuBlock = ( ) => {
                     );
                   } else {
                     setExpandedMenus([...expandedMenus, menu.href]);
+                  }
+                }
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'ArrowDown') {
+                  e.currentTarget.parentElement.nextSibling && e.currentTarget.parentElement.nextSibling.childNodes[0].focus();
+                }
+                if (e.key === 'ArrowUp') {
+                  e.currentTarget.parentElement.previousSibling &&e.currentTarget.parentElement.previousSibling.childNodes[0].focus();
+                }
+                if( e.key === 'Enter'){
+                  e.currentTarget.focus();
+                }
+              }}
+              onFocus={(e) => {
+                if( level === 1) {
+                  const inx = expandedHederMenus.indexOf(index);
+                  const temArr = [...expandedHederMenus]
+                  if(inx === -1) {
+                    temArr.push(index);
+                    setExpandedHederMenus(temArr)
                   }
                 }
               }}
