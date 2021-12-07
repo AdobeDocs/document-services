@@ -12,6 +12,7 @@ import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 import PropTypes from "prop-types";
 import "@spectrum-css/typography";
 import "@spectrum-css/card";
+import _orderBy from 'lodash/orderBy'
 
 const filterByClouds = (
   products,
@@ -19,15 +20,17 @@ const filterByClouds = (
   additionalFilter,
   setFilteredProducts
 ) => {
-  const filteredProducts = products.filter(({ cloud }) =>
+  const filteredProducts = products.filter(({ cloud })=>
     cloudFilter.some((selectedCloud) => cloud === selectedCloud)
   );
   const selectedFilter = additionalFilters.find(
     ({ value }) => value === additionalFilter
   );
 
-  setFilteredProducts(
-    selectedFilter.filter(filteredProducts, selectedFilter.ids)
+ const orderByProducts = _orderBy(filteredProducts, ['id'],['asc']);
+
+  setFilteredProducts(orderByProducts
+    // selectedFilter.filter(filteredProducts, selectedFilter.ids)
   );
 };
 

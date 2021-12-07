@@ -18,7 +18,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img" iconStyle/>
 
-![High-fidelity](../../images/Extract.svg)
+![Extract-v2](../../images/Extract-v2.svg)
 
 #### Extract
 

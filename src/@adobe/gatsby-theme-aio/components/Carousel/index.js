@@ -1,4 +1,4 @@
-import React from "react";
+import React,{createRef} from "react";
 import { css } from "@emotion/react";
 import "@spectrum-css/typography";
 import PropTypes from "prop-types";
@@ -203,6 +203,17 @@ const Carousel = ({
         padding: var(--spectrum-global-dimension-size-600) 0
           var(--spectrum-global-dimension-size-200) 0;
       `}
+      tabIndex={"0"}
+      onKeyDown={(e)=>{
+        if(e.key==="ArrowRight"){
+          const swiperSlide = document.querySelector('.swiper').swiper;
+          swiperSlide.slideNext();
+        }
+        if(e.key ==="ArrowLeft"){
+          const swiper = document.querySelector('.swiper').swiper;
+          swiper.slidePrev();
+        }
+      }}
     >
       <div
         css={css`
@@ -272,6 +283,17 @@ const Carousel = ({
         background: var(--spectrum-global-color-gray-100);
         padding: var(--spectrum-global-dimension-size-600) 0 var(--spectrum-global-dimension-size-200) 0;
       `}
+      tabIndex={"0"}
+      onKeyDown={(e)=>{
+        if(e.key==="ArrowRight"){
+          const swiper = document.querySelector('.swiper').swiper;
+          swiper.slideNext();
+        }
+        if(e.key ==="ArrowLeft"){
+          const swiper = document.querySelector('.swiper').swiper;
+          swiper.slidePrev();
+        }
+      }}
     >
       <Swiper
         speed={swiperSpeed}
