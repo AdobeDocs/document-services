@@ -360,7 +360,7 @@ const TabsBlock = ({
                         margin-bottom:var(--spectrum-global-dimension-size-25) !important;
                       }
 
-                      @media only screen and (man-width: ${MOBILE_SCREEN_WIDTH}) {
+                      @media only screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                         padding-left: var(--spectrum-global-dimension-size-0) !important;
                       }
                       @media only screen and (min-width: ${TABLET_SCREEN_WIDTH}) {
