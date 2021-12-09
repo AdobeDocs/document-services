@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Digital Content Publishing
+title: Document Services API Use Cases — Digital Content Publishing
 ---
 import IndexContent from '../page-content/content-publishing/digital-content-publishing.md';
 

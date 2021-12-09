@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Course and Degree Certificate
+title: 'Document Services API Use Case: Course and Degree Certificate'
 ---
 
 

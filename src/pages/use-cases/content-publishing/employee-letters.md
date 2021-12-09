@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Employee Letters
+title: 'Document Services API Use Case: Employee Letters'
 ---
 
 import EmployeeLetters from '../page-content/content-publishing/employee-letters.md';

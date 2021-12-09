@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Job Posting
+title: 'Document Services API Use Case: Job Posting'
 ---
 
 import JobPosting from '../page-content/content-publishing/job-posting.md';

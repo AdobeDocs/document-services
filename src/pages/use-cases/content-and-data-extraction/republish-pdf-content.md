@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Republish PDF Content
+title: 'Document Services API Use Case: Republish PDF Content'
 ---
 
 import RepublishPDFContent from '../page-content/content-and-data-extraction/republish-pdf-content.md';

@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Employee Onboarding Materials
+title: 'Document Services API Use Case: Data Analysis for Finance'
 ---
 
 import ManagingBrandAssets from '../page-content/content-publishing/managing-brand-assets.md';

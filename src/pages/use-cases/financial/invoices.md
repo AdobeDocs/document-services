@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Invoices
+title: 'Document Services API Use Case: Invoices'
 ---
 
 import InvoicesContent from '../page-content/financial/invoices.md';

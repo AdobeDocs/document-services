@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Purchase Orders
+title: 'Document Services API Use Case: Purchase Orders'
 ---
 
 import PurchaseOrders from '../page-content/financial/purchase-orders.md';

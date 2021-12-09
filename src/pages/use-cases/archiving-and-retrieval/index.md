@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Search and Indexing
+title: Search and Indexing
 ---
 import IndexConent from '../page-content/archiving-and-retrieval/search-and-indexing.md';
 

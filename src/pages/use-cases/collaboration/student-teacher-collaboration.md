@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Student-Teacher Collaboration
+title: 'Document Services API Use Case: Student-Teacher Collaboration'
 ---
 
 import Collaboration from '../page-content/collaboration/student-teacher-collaboration.md';

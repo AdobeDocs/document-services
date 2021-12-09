@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases – Legal Letters and Statements
+title: 'Document Services API Use Case: Legal Letters and Statements'
 ---
 
 import LegalStatement from '../page-content/agreements-and-contracts/legal-letters-and-statements.md';

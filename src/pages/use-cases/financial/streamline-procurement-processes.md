@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Job Posting
+title: 'Document Services API Use Case: Data Analysis for Finance'
 ---
 
 import StreamlineProcurementProcesses from '../page-content/financial/streamline-procurement-processes.md';

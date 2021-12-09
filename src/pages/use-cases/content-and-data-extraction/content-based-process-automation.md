@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Content Based Process Automation
+title: 'Document Services API Use Case: Content Based Process Automation'
 ---
 
 import IndexContent from '../page-content/content-and-data-extraction/content-based-process-automation.md';

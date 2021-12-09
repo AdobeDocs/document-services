@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Data Analysis
+title: Document Services API Use Cases — Data Analysis
 ---
 
 import FinancialContent from '../page-content/financial/data-analysis-financial.md';

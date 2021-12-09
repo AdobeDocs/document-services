@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Job Posting
+title: 'Document Services API Use Case: Job Posting'
 ---
 
 import SalesQuote from '../page-content/financial/sales-quote.md';

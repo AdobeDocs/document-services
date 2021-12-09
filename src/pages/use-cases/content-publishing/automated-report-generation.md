@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — Job Posting
+title: 'Document Services API Use Case: Automated Report Generation'
 ---
 
 import AutomatedReportGeneration from '../page-content/content-publishing/automated-report-generation.md';

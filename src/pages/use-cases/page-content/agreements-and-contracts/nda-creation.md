@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — Document Services API Use Cases — NDA Creation
+title: Document Services API Use Cases — NDA Creation
 ---
 
 ## NDA Creation
