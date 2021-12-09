@@ -7,7 +7,7 @@
 
 [](/use-cases/content-and-data-extraction/content-based-process-automation/)
 
-![ ](../images/content-processing.jpg)
+![APIs and SDKs for PDF content processing and extraction](../images/content-processing.jpg " ")
 
 ### Content processing
 
@@ -17,7 +17,7 @@ Accelerate reusing content in systems of record and downstream processes, such a
 
 [](/use-cases/agreements-and-contracts/legal-contracts/)
 
-![ ](../images/legal-contracts.jpg)
+![APIs and SDKs to generate legal contracts](../images/legal-contracts.jpg " ")
 
 ### Legal contracts
 
@@ -29,7 +29,7 @@ Generate legal contracts with dynamic terms and signatures.
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
 
-![ ](../images/data-analysis.jpg)
+![APIs and SDKs for PDF data analysis](../images/data-analysis.jpg " ")
 
 ### Data analysis
 
@@ -41,7 +41,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 [](/use-cases/content-publishing/digital-content-publishing/)
 
-![ ](../images/content-republishing.jpg)
+![APIs and SDKs for PDF content republishing](../images/content-republishing.jpg " ")
 
 ### Content republishing
 
