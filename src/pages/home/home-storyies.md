@@ -8,9 +8,9 @@ See how our customers are building great experiences and succeeding with Adobe.
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest"  className='useCaseCard card-heading-size' isCustomStories/>
 
-[K2Nintext.pdf](K2Nintex.pdf)
+[K2Nintext.pdf](../../K2Nintex.pdf)
 
-![](../images/K2Nintex.png)
+![K2 Nintex transforms document workflows with PDF Services API](../images/K2Nintex.png " ")
 
 ### K2 NINTEX
 
@@ -19,9 +19,9 @@ Nintex transforms K2 Cloud workflows with Adobe Document Services APIs.
 
 <ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
-[AdobeInDesign.pdf](AdobeInDesign.pdf)
+[AdobeInDesign.pdf](../../AdobeInDesign.pdf)
 
-![](../images/AdobeInDesign.png)
+![Adobe InDesign Share for Review built with PDF Embed API](../images/AdobeInDesign.png " ")
 
 ### ADOBE INDESIGN
 
@@ -31,9 +31,9 @@ Adobe InDesign brings its new Share for Review features to life with Adobe Docum
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
-[Cambridge-Assessment.pdf](Cambridge-Assessment.pdf)
+[Cambridge-Assessment.pdf](../../Cambridge-Assessment.pdf)
 
-![](../images/Cambridge-Assessment.jpeg)
+![Cambridge Assessment digitizes test data with PDF Extract API](../images/Cambridge-Assessment.jpeg " ")
 
 ### CAMBRIDGE ASSESSMENT
 
@@ -42,9 +42,9 @@ Cambridge Assessment intends to digitize more than 100 years of test material wi
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
-[Evisort.pdf](Evisort.pdf)
+[Evisort.pdf](../../Evisort.pdf)
 
-![](../images/Evisort.jpeg)
+![Evisort uses PDF Extract API for intelliqent contracts](../images/Evisort.jpeg " ")
 
 ### EVISORT
 

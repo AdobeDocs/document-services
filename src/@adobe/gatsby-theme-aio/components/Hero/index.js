@@ -34,7 +34,12 @@ const setImageLoading = (child) => {
   return child;
 };
 
-const HeroButtons = ({ buttons, variants = ['cta', 'primary'], quiets = [true, true], className }) =>
+const getAriaLabel = (label, heading='') => {
+  const labelVal = label === 'Learn more' && heading !=='' ? `${label} about ${heading}` : `${label}`;
+  return labelVal;
+}
+
+const HeroButtons = ({ buttons, variants = ['cta', 'primary'], quiets = [true, true], className, heading='' }) =>
   buttons ? (
     <div>
       <div
@@ -57,7 +62,7 @@ const HeroButtons = ({ buttons, variants = ['cta', 'primary'], quiets = [true, t
 
           return (
             <div key={i}>
-              <AnchorButton isQuiet={quiet} href={link.props.href} variant={variant}>
+              <AnchorButton aria-label={getAriaLabel(link.props.children, heading)} isQuiet={quiet} href={link.props.href} variant={variant}>
                 {link.props.children}
               </AnchorButton>
             </div>

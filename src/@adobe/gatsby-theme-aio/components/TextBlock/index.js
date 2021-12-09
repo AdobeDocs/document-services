@@ -1,6 +1,6 @@
 import React, { cloneElement, useEffect, useState } from "react";
 import { css } from "@emotion/react";
-import { HeroButtons } from "@adobe/gatsby-theme-aio/src/components/Hero";
+import { HeroButtons } from "../Hero";
 import { Media } from "@adobe/gatsby-theme-aio/src/components/Media";
 import PropTypes from "prop-types";
 import {
@@ -155,6 +155,7 @@ const TextBlock = ({
   variantsTypePrimary='cta',
   variantsTypeSecondary='primary',
   hasCodeBlock = false,
+  homeZigZag = false,
   ...props
 }) => {
   const Element = headerElementType;
@@ -457,6 +458,7 @@ const TextBlock = ({
                 buttons={buttons}
                 quiets={[!isPrimaryBtn, !primaryOutline]}
                 variants={[variantsTypePrimary,variantsTypeSecondary]}
+                heading={homeZigZag ? heading?.props?.children : ''}
                 css={css`
                   margin-top: var(--spectrum-global-dimension-size-200);
                 `}
@@ -486,6 +488,7 @@ TextBlock.propTypes = {
   primaryOutline: PropTypes.bool,
   hasCodeBlock: PropTypes.bool,
   imgWidth: PropTypes.string,
+  homeZigZag: PropTypes.bool,
 };
 
 export { TextBlock };

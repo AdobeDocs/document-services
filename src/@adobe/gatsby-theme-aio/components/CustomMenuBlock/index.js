@@ -73,7 +73,7 @@ const Icon = ({ name, onCompleted, onError }) => {
     return (
       <img
         src={SvgIcon}
-        alt="W3Schools.com"
+        alt=" "
         style={{ width: 40, height: 40 }}
       ></img>
     );
@@ -152,7 +152,7 @@ const CustomMenuBlock = ( ) => {
         return (
           <li
             id={id}
-            tabindex="0"
+           
             ref={ref}
             key={index}
             css={css`

@@ -23,9 +23,9 @@ const filterByClouds = (
   const filteredProducts = products.filter(({ cloud })=>
     cloudFilter.some((selectedCloud) => cloud === selectedCloud)
   );
-  const selectedFilter = additionalFilters.find(
-    ({ value }) => value === additionalFilter
-  );
+  // const selectedFilter = additionalFilters.find(
+  //   ({ value }) => value === additionalFilter
+  // );
 
  const orderByProducts = _orderBy(filteredProducts, ['id'],['asc']);
 

@@ -860,26 +860,10 @@ img[alt=thumbnail] {
      font-size: 18px;
  }
 
- img[alt=PDFservices] {
+ .home-zigzag-comp-padding img {
     height: auto !important;
     border-radius: 15px;
  }
-
- img[alt=ExtractAPI] {
-    height: auto !important;
-    border-radius: 15px;
- }
-
- img[alt=documentGenerationAPI] {
-    height: auto !important;
-    border-radius: 15px;
- }
-
- img[alt=APIEmbed] {
-    height: auto !important;
-    border-radius: 15px;
- }
-
 
 .home-list-points li {
      margin-top: 10px;

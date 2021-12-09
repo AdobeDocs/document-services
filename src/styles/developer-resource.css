@@ -170,6 +170,7 @@ section.sdk-rsrc-release .release-container .release-wrapper .release-copy-wrapp
 }
 section.sdk-rsrc-anchor {
     margin: 2rem 0 1.25rem 0 !important;
+    padding-top: 2rem;
 }
 
 
@@ -509,6 +510,7 @@ section.sdk-rsrc-tutorial .tutorial-container .tutorial-wrapper .tutorial span {
 section.sdk-rsrc-blog {
     margin: 0 2.75rem;
     padding-top: 3.123rem !important;
+    padding-bottom: 2rem;
 }
 section.sdk-rsrc-blog .blog-container {
     margin: 0 auto;

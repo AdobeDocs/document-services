@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Automated Report Generation'
+title: 'Document Services API Use Case: Job Posting'
 ---
 
 import AutomatedReportGeneration from '../page-content/content-publishing/automated-report-generation.md';

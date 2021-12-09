@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import "@spectrum-css/typography";
 import Digging_out_data from "../pages/images/Digging_out_data.jpg";
 import Generate_documents from "../pages/images/generate_documents.jpg";
+// import Generate_documents from "../pages/images/genrateDocument.png";
 import Make_PDFs_searchable from "../pages/images/Make_PDFs_searchable.png";
 import resourceImage from "../pages/images/resource_hero_img.jpg";
 
@@ -77,7 +78,7 @@ const DynamicContentLoader = ({
           <div className="release-container">
             <div className="release-wrapper">
               <div className="release-wrapper-img">
-                <a href={resData?.data[0].URL} target="_parent">
+                <a href={resData?.data[0].URL} target="_blank" rel="noreferrer">
                   <iframe
                     src="https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1"
                     title="YouTube video player"
@@ -151,7 +152,7 @@ const DynamicContentLoader = ({
                {featuredContent.map((data) => {
                   return (
                     <div key={data.link} className='cardView'>
-                      <a href={data.URL} target="_parent" key={data.Title}>
+                      <a href={data.URL} target="_blank" rel="noreferrer" key={data.Title}>
                         <div className="blog-img-container">
                           <div className={data.class} />
                           <img
@@ -200,7 +201,8 @@ const DynamicContentLoader = ({
                 </h3>
                 <a
                   href="https://experienceleague.adobe.com/docs/document-services/document-services/overview.html"
-                  target="_parent"
+                  target="_blank"
+                  rel="noreferrer"
                   css={css`
                     text-decoration: none;
                   `}
@@ -227,7 +229,7 @@ const DynamicContentLoader = ({
               <div className="tutorial-wrapper">
                 {resData?.data?.map((data) => (
                   <div className="tutorial cardView" key={data.Title}>
-                    <a href={data.URL} target="_parent" key={data.Title}>
+                    <a href={data.URL} target="_blank" rel="noreferrer" key={data.Title}>
                       <div
                         className="tut-thumb1"
                         style={`background: url(${getImageURl(
@@ -253,7 +255,8 @@ const DynamicContentLoader = ({
                 </h3>
                 <a
                   href="https://medium.com/adobetech/tagged/adobe-document-cloud"
-                  target="_parent"
+                  target="_blank"
+                  rel="noreferrer"
                   css={css`
                     text-decoration: none;
                   `}
@@ -271,7 +274,7 @@ const DynamicContentLoader = ({
                 {resData.responseData?.feed?.entries.map((data) => {
                   return (
                     <div key={data.link} className='cardView'>
-                      <a href={data.link} target="_parent">
+                      <a href={data.link} target="_blank" rel="noreferrer">
                         <div className="blog-img-container">
                           <img
                             src={getIframeImage(data.content)}

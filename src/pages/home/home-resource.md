@@ -7,7 +7,7 @@
 
 [](/use-cases/content-and-data-extraction/content-based-process-automation/)
 
-![Content Processing](../images/content-processing.jpg)
+![ ](../images/content-processing.jpg)
 
 ### Content processing
 
@@ -17,7 +17,7 @@ Accelerate reusing content in systems of record and downstream processes, such a
 
 [](/use-cases/agreements-and-contracts/legal-contracts/)
 
-![Legal contracts](../images/legal-contracts.jpg)
+![ ](../images/legal-contracts.jpg)
 
 ### Legal contracts
 
@@ -29,7 +29,7 @@ Generate legal contracts with dynamic terms and signatures.
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
 
-![Data analysis](../images/data-analysis.jpg)
+![ ](../images/data-analysis.jpg)
 
 ### Data analysis
 
@@ -41,7 +41,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 [](/use-cases/content-publishing/digital-content-publishing/)
 
-![Digital content](../images/content-republishing.jpg)
+![ ](../images/content-republishing.jpg)
 
 ### Content republishing
 

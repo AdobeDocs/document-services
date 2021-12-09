@@ -591,6 +591,7 @@ export default ({ children, pageContext, location }) => {
 
             {hasSideNav && (
               <div
+                role="presentation"
                 css={css`
                   display: none;
 
@@ -613,6 +614,7 @@ export default ({ children, pageContext, location }) => {
                   `}
                   }
                 `}
+               
                 onClick={() => {
                   toggleSideNav(setShowSideNav);
                 }}

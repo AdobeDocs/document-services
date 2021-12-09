@@ -455,7 +455,7 @@ const Footer = ({ hasSideNav = false }) => (
                   return (
                     <li key={i}>
                       <Link isQuiet={true} variant="secondary">
-                        <a id={OPEN_PRIVACY_ID} href="#" aria-label="Cookie preferences"></a>
+                        <a id={OPEN_PRIVACY_ID} href="#/" aria-label="Cookie preferences" ></a>
                       </Link>
                     </li>
                   );

@@ -24,9 +24,9 @@ From the company who created the PDF standard.
 
 homeheroAssertImage
 
-<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding"/>
 
-![PDFservices](images/pdfServices.jpg)
+![PDF Services API Workflow](images/pdfServices.jpg)
 
 ### Adobe PDF Services API
 ### Create, transform, OCR PDFs, and more.
@@ -41,7 +41,7 @@ Do more with this API.
 
 
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding"/>
 
 ### Adobe PDF Extract API
 ### Unlock content structure in any PDF.
@@ -54,13 +54,13 @@ on both scanned and native PDFs and is included with PDF Services API.
 
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-![ExtractAPI](images/pdfExtract.jpg)
+![PDF Extract API Workflow](images/pdfExtract.jpg)
 
 
 
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding"/>
 
-![documentGenerationAPI](images/docGen.jpg)
+![Document Generation API Workflow](images/docGen.jpg)
 
 ### Adobe Document Generation API
 ### Generate documents from Word templates and JSON data.
@@ -76,7 +76,7 @@ Services API.
 
 
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" className="home-zigzag-comp-padding"/>
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding"/>
 
 ### Adobe PDF Embed API
 ### Display PDFs and enable collaboration with this free tool.
@@ -90,7 +90,7 @@ samples for Angular and React.
 - [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
-![APIEmbed](images/pdfEmbed.jpg)
+![PDF Embed API Workflow](images/pdfEmbed.jpg)
 
 
 <SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight />
