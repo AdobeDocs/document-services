@@ -1,5 +1,5 @@
 ---
-title: 'ADocument Services API Use Case: Search and Indexing'
+title: 'Document Services API Use Case: Search and Indexing'
 ---
 
 ## Search and Indexing

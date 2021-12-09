@@ -1,5 +1,5 @@
 ---
-title: Adobe PDF Services | PDF Tools APIs | Adobe Document Services - Adobe Developers
+title: Adobe PDF Services | PDF Tools APIs | Adobe Document Services
 description: Make life easier with our PDF Toolkit. Simplify workflows and improve UX. Our PDF Services API helps you create, convert, OCR PDFs and more. Learn more today.
 ---
 
