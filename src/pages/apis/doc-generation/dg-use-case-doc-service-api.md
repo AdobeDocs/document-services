@@ -20,7 +20,7 @@ Create custom branded proposals and contracts.
 
 [](../use-cases/agreements-and-contracts/legal-contracts)
 
-![ ](../../images/legal-contracts.jpg)
+![APIs and SDKs to generate legal contracts](../../images/legal-contracts.jpg " ")
 
 ### Legal contracts
 Generate legal contracts with dynamic terms and signatures.

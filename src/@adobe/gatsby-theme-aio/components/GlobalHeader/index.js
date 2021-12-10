@@ -600,6 +600,7 @@ const GlobalHeader = ({
 
                               return (
                                 <MenuItem
+                                  className="spectrum-Link spectrum-Link--quiet global_header"
                                   key={k}
                                   href={menuHref}
                                   {...getExternalLinkProps(menuHref)}
@@ -640,7 +641,10 @@ const GlobalHeader = ({
                                       </div>
                                     </div>
                                   ) : (
-                                    <span>{menu.title}</span>
+                                    <div css={css`
+                                    margin-top: var(--spectrum-global-dimension-size-50);
+                                    margin-bottom: var(--spectrum-global-dimension-size-50);
+                                  `}>{menu.title}</div>
                                   )}
                                 </MenuItem>
                               );
