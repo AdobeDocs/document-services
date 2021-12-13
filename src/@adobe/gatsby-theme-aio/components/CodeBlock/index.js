@@ -14,7 +14,6 @@ import React, { useRef, useEffect, useState, createRef } from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
 import { Tabs, Item as TabsItem, Label as TabsItemLabel, positionIndicator,CodeTabIndicator } from '@adobe/gatsby-theme-aio/src/components/Tabs';
-import { Picker } from '@adobe/gatsby-theme-aio/src/components/Picker';
 
 const CodeBlock = (props) => {
   const [tabs] = useState([]);

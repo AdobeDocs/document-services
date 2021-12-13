@@ -37,12 +37,12 @@ import { Image } from '@adobe/gatsby-theme-aio/src/components/Image';
 import { Link } from '@adobe/gatsby-theme-aio/src/components/Link';
 import {
   Tabs,
-  Item as TabsItem,
+  HeaderTabItem as TabsItem,
   Label as TabsItemLabel,
   TabsIndicator,
   positionIndicator,
-  animateIndicator
-} from '@adobe/gatsby-theme-aio/src/components/Tabs';
+  animateIndicator,
+} from '../Tabs';
 import '@spectrum-css/typography';
 import '@spectrum-css/assetlist';
 import { Divider } from '@adobe/gatsby-theme-aio/src/components/Divider';
@@ -213,6 +213,17 @@ const GlobalHeader = ({
     return () => tabsContainerRef.current.removeEventListener('scroll', onScroll);
   }, []);
 
+  const openDropDown=(data)=>{
+    if(data.isOpen){
+      setOpenMenuIndex(data.index)
+      setOpenVersion(data.isOpen)
+    }else{
+      setOpenVersion(false);
+      setOpenMenuIndex(-1);
+      document.getElementById(data.id).focus();
+    }
+  }
+
   return (
     <header
       role="banner"
@@ -288,6 +299,13 @@ const GlobalHeader = ({
                 </div>
                 <a
                   href="/"
+                    tabIndex={"0"}
+                    id="adobeIcon"
+                    onKeyDown={(e)=>{
+                      if(e.key==="ArrowRight"){
+                      document.getElementById("product").focus();
+                      }
+                    }}
                   css={css`
                     display: flex;
                     height: 100%;
@@ -342,6 +360,7 @@ const GlobalHeader = ({
 
               {hasHome && (
                 <div
+               
                   css={css`
                     height: calc(100% + var(--spectrum-global-dimension-size-10));
                     border-left: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
@@ -353,6 +372,16 @@ const GlobalHeader = ({
                   `}>
                   <Link isQuiet variant="secondary">
                     <a
+                      tabIndex={"0"}
+                      id={"product"}
+                      onKeyDown={(e)=>{
+                       if(e.key==="ArrowLeft"){
+                       document.getElementById("adobeIcon").focus();
+                       }
+                       if(e.key==="ArrowRight"){
+                        document.getElementById("tabindex0").focus();
+                        }
+                      }}
                       css={css`
                         display: flex;
                         height: calc(100% - var(--spectrum-global-dimension-size-10));
@@ -417,7 +446,6 @@ const GlobalHeader = ({
             <div
               css={css`
                 display: none;
-
                 @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                   display: block;
                   pointer-events: none;
@@ -483,15 +511,21 @@ const GlobalHeader = ({
                   <Fragment key={i}>
                     {page.href ? (
                       <TabsItem
+
                         elementType={GatsbyLink}
                         {...getExternalLinkProps(page.href)}
                         ref={setTabRef}
+                        id={`tabindex${i}`}
                         to={withPrefix(page.href)}
                         selected={isSelectedTab}>
                         <TabsItemLabel>{page.title}</TabsItemLabel>
                       </TabsItem>
                     ) : (
                       <TabsItem
+                       tabIndex={"0"}
+                       id={`tabindex${i}`}
+                       index={i}
+                       openDropDown={openDropDown}
                         css={css`
                           ${openMenuIndex === i &&
                           `
@@ -505,7 +539,6 @@ const GlobalHeader = ({
                             top: calc(-1 * var(--spectrum-global-dimension-size-100));
                             background-color: var(--spectrum-global-color-gray-100);
                           }
-
                         `}
                         `}
                         ref={setTabRef}
@@ -722,7 +755,15 @@ const GlobalHeader = ({
                     margin-left: var(--spectrum-global-dimension-size-300);
                     white-space: nowrap;
                   `}>
-                  <AnchorButton variant="primary" href={withPrefix(docs.href)}>
+                  <AnchorButton onKeyDown={(e)=>{
+                    // if(e.key==="ArrowRight"){
+                    //   document.getElementById("consoleId").focus();
+                    // }
+                    if(e.key==="ArrowLeft"){
+                      document.getElementById("tabindex5").focus();
+                    }
+                  }}  
+                   id={"getCredentialID"} variant="primary" href={withPrefix(docs.href)}>
                     {docs.title ?? 'View Docs'}
                   </AnchorButton>
                 </div>
@@ -772,6 +813,7 @@ const GlobalHeader = ({
               <AnchorButton
                 variant="primary"
                 href="/console"
+                id={"consoleId"}
                 css={css`
                   @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
                     display: none;

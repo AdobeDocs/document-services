@@ -190,6 +190,56 @@ const CodeTabIndicator = forwardRef(({ className,index=0, ...props }, ref) => {
 
 const Label = ({ children }) => <span className='spectrum-Tabs-itemLabel'>{children}</span>;
 
+const HeaderTabItem = forwardRef(({
+  elementType = 'div',
+  isDisabled=false,
+  isSelected=false,
+  className,
+  children,
+  icon,
+  label,
+  ...props }, ref
+) => {
+  const Element = elementType;
+  return (
+    <Element
+      {...props}
+      ref={ref}
+      role='tab'
+      title={label?.props?.children}
+      aria-selected={isSelected}
+      autofocus={true}
+      tabIndex="0"
+      onKeyDown={(e)=>{
+        if(e.key==="ArrowRight"){
+          if(props.id==="tabindex5"){
+           document.getElementById("getCredentialID").focus();
+          }
+        e.target.nextElementSibling && e.target.nextElementSibling.focus();
+        }
+        if(e.key==="ArrowLeft"){
+          if(props.id==="tabindex0"){
+            document.getElementById("product")?.focus();
+          }else{
+            e.target.previousElementSibling && e.target.previousElementSibling.focus();
+          }
+          }
+          if(e.key==="ArrowDown"){
+            props?.openDropDown&& props?.openDropDown({index:props.index,isOpen:true});
+          }
+          if(e.key==="ArrowUp"){
+            props?.openDropDown && props?.openDropDown({isOpen:false,id:props.id});
+          
+          }
+      }}
+      disabled={isDisabled}
+      className={classNames(className, 'spectrum-Tabs-item', { 'is-selected': isSelected }, { 'is-disabled': isDisabled })}>
+      {icon ? <TabItemIcon icon={icon} isSelected={isSelected} isDisabled={isDisabled}></TabItemIcon> : null }
+      {label ? <Label> {label} </Label>: null}
+      {children}
+    </Element>
+  );
+});
 const TabView = forwardRef(({ elementType = 'div', isHidden, className, children, ...props }, ref) => {
   const Element = elementType;
   return (
@@ -239,7 +289,6 @@ const TabsBlock = ({
     });
     positionSelectedTabIndicator(index);
   };
-
 
 
   return (
@@ -530,4 +579,4 @@ TabsBlock.propTypes = {
 };
 
 
-export { Tabs, Item, TabView, TabItemIcon, Label, TabsIndicator, positionIndicator, animateIndicator,CodeTabIndicator, TabsBlock };
+export { Tabs, Item, TabView, TabItemIcon, Label, TabsIndicator, positionIndicator, animateIndicator,CodeTabIndicator, TabsBlock,HeaderTabItem };
