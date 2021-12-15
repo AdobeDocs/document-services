@@ -215,12 +215,9 @@ const GlobalHeader = ({
 
   const openDropDown=(data)=>{
     if(data.isOpen){
+      document.getElementById(`tabindex1`).blur();
       setOpenMenuIndex(data.index)
       setOpenVersion(data.isOpen)
-    }else{
-      setOpenVersion(false);
-      setOpenMenuIndex(-1);
-      document.getElementById(data.id).focus();
     }
   }
 
@@ -635,22 +632,36 @@ const GlobalHeader = ({
                                 <MenuItem
                                   className="spectrum-Link spectrum-Link--quiet global_header"
                                   key={k}
+                                  tabIndex="0"
+                                  id={`menuIndex${i}-${k}`}
                                   href={menuHref}
                                   {...getExternalLinkProps(menuHref)}
                                   isHighlighted={menu === selectedMenu}
                                   onKeyDown={(e) => {
                                     if (e.key === 'ArrowDown') {
-                                      e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
+                                      e.currentTarget.nextElementSibling && e.currentTarget.nextElementSibling.focus();
                                     }
                                     if (e.key === 'ArrowUp') {
-                                      e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
+                                      if(k===0){
+                                        document.getElementById(`tabindex${i}`).focus();
+                                      }
+                                      e.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
+                                    }
+                                    if (e.key === 'ArrowRigt') {
+                                      e.currentTarget.nextElementSibling && e.currentTarget.nextElementSibling.focus();
+                                    }
+                                    if (e.key === 'ArrowLeft') {
+                                      if(k===0){
+                                        document.getElementById(`tabindex${i}`).focus();
+                                      }
+                                      e.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
                                     }
                                     if( e.key === 'Enter'){
                                       e.currentTarget.focus();
                                     }
-                                    if(!e.currentTarget.nextSibling){
-                                       setOpenMenuIndex(-1);
-                                    }
+                                    // if(!e.currentTarget.nextSibling){
+                                    //    setOpenMenuIndex(-1);
+                                    // }
                                   }}
                                   >
                                   {menu.description ? (

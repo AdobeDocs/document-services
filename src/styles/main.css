@@ -1097,3 +1097,14 @@ pre .prism-code.spectrum-Code  span.token.string{
     color: var(--spectrum-global-color-gray-900) !important;
     text-decoration: none !important;
 }
+
+.sub-menu-item .spectrum-Menu-itemLabel {
+    white-space: initial;
+}
+
+
+.linking .spectrum-Link:focus{
+    text-decoration:underline;
+    border-bottom: 1px solid #1374e6;
+}
+

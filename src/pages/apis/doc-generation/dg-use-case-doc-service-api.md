@@ -10,7 +10,7 @@ title: Adobe Developer — Automate Document Generation | Document Use case | Ad
 
 [](../use-cases/agreements-and-contracts/sales-proposals-and-contracts.md)
 
-![ ](../../images/sales-proposals.jpg)
+![APIs and SDKs for sales proposals](../../images/sales-proposals.jpg " ")
 
 ## Sales proposals
 Create custom branded proposals and contracts.
@@ -30,7 +30,7 @@ Generate legal contracts with dynamic terms and signatures.
 
 [](../use-cases/financial/invoices)
 
-![ ](../../images/invoice.jpg)
+![APIs and SDKs to generate invoices](../../images/invoice.jpg " ")
 
 ### Invoices
 Automate invoice generation with various data inputs.
@@ -40,7 +40,7 @@ Automate invoice generation with various data inputs.
 
 [](../use-cases/agreements-and-contracts/nda-creation)
 
-![ ](../../images/nda.jpg)
+![APIs and SDKs to generate NDAs](../../images/nda.jpg " ")
 
 ### NDA
 Generate standardized NDA documents with custom data and signatures.

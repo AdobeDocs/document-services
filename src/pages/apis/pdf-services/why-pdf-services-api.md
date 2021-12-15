@@ -24,7 +24,7 @@ Create a PDF from Microsoft Office documents, protect the content, and convert t
 Programmatically alter a document, such as reordering, inserting, and rotating pages, as well as compressing the file.
 
 
-<TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size link horizontal-align-heading"/>
+<TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size link horizontal-align-heading linking"/>
 
 ![ ](../../images/cloud_services.svg)
 

@@ -164,6 +164,7 @@ const CustomMenuBlock = ( ) => {
             className={classNames([
               "spectrum-Menu-item",
               { "is-open": isExpanded },
+              { "sub-menu-item": level === 2 },
               {
                 "is-selected":
                   selectedMenus[selectedMenus.length - 1] === menu &&

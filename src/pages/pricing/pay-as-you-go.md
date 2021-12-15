@@ -2,7 +2,7 @@
 title: Adobe Developer — DC Platform SDK Resources
 ---
 
-<TextBlock slots="heading, text" width="100%" theme="light"  alignment="yes"  className="py-0 text-align-left border-right div-p-0 left-content link" />
+<TextBlock slots="heading, text" width="100%" theme="light"  alignment="yes"  className="py-0 text-align-left border-right div-p-0 left-content link linking" />
 
 ### Pay-as-you-go
 

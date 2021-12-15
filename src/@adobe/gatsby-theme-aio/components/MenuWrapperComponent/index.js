@@ -71,7 +71,7 @@ const MenuWrapperComponent = ({ theme = 'lightest',className, menuClassName, con
             margin-left: var(--spectrum-global-dimension-size-500);
 
             @media screen and (min-width: ${min_mobile_screen_width}) {
-              margin: var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-500);
+              margin: var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-600) var(--spectrum-global-dimension-size-500);
             }
           `}>
           {content}

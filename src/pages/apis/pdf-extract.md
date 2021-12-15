@@ -49,7 +49,7 @@ apiHeroAssetImg doc-ext-invoice
 * [Download JSON samples](https://adobe.com/go/dcExtract_sample)
 
 
-<TextBlock slots="text1, text2  " theme="light"  className="media-horizantal-align  how-it-work-text mediaSize link"/>
+<TextBlock slots="text1, text2  " theme="light"  className="media-horizantal-align  how-it-work-text mediaSize link linking"/>    
 
 Adobe PDF Extract API is powered by [Adobe Sensei](https://www.adobe.com/sensei.html), an industry-leading Artificial Intelligence (AI) and Machine Learning (ML) network. The technology enables a rich understanding of documents, such as the identification of elements, including position and connections relative to other elements. In addition, it can determine reading order. These and other capabilities ensure the most comprehensive output of structured content.
 
@@ -59,7 +59,7 @@ Extracted content is output in a structured JSON file – with tables optionally
 
 ![how-it-works-desktop](../images/how-it-works-desktop.png)
 
-<TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link position-up"/>
+<TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link position-up linking"/>
 
 We take security serously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)
 
