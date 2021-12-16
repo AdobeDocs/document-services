@@ -514,7 +514,7 @@ const GlobalHeader = ({
                     {page.href ? (
                       <TabsItem
                         // onFocus={()=>setOpenMenuIndex(-1)}
-                        onBlur={()=>setOpenMenuIndex(-1)}
+                        // onBlur={()=>setOpenMenuIndex(-1)}
                         elementType={GatsbyLink}
                         {...getExternalLinkProps(page.href)}
                         ref={setTabRef}
@@ -528,7 +528,7 @@ const GlobalHeader = ({
                        tabIndex={"0"}
                        id={`tabindex${i}`}
                       //  onFocus={()=>setOpenMenuIndex(-1)}
-                      onBlur={()=>setOpenMenuIndex(-1)}
+                      // onBlur={()=>setOpenMenuIndex(-1)}
                        index={i}
                        hasDropdown
                        openDropDown={openDropDown}
