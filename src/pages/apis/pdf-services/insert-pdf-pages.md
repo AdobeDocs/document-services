@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — Insert PDF Pages
 ---
 
-<TextBlock slots="heading, buttons, text, text1" hasCodeBlock  theme="dark" className="bgBlue link"/>
+<TextBlock slots="heading, buttons, text, text1" hasCodeBlock  theme="dark" className="bgBlue link linking"/>
 
 ### Insert a page into a PDF document
 

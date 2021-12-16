@@ -1108,3 +1108,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     border-bottom: 1px solid #1374e6;
 }
 
+.linking-accessbility:focus{
+    text-decoration:underline;
+    border-bottom: 1px solid #1374e6;
+}

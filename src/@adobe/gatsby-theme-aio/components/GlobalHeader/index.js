@@ -215,9 +215,13 @@ const GlobalHeader = ({
 
   const openDropDown=(data)=>{
     if(data.isOpen){
-      document.getElementById(`tabindex1`).blur();
       setOpenMenuIndex(data.index)
       setOpenVersion(data.isOpen)
+      if(openMenuIndex === -1 ||openMenuIndex !==data.index){
+      setTimeout(()=>{
+         document.getElementById(`menuIndex${data.index}-0`).focus();
+      },100)
+    }
     }
   }
 
@@ -371,6 +375,7 @@ const GlobalHeader = ({
                     <a
                       tabIndex={"0"}
                       id={"product"}
+                      onFocus={()=>setOpenMenuIndex(-1)}
                       onKeyDown={(e)=>{
                        if(e.key==="ArrowLeft"){
                        document.getElementById("adobeIcon").focus();
@@ -495,7 +500,6 @@ const GlobalHeader = ({
               {pages.map((page, i) => {
                 const isSelectedTab = selectedTabIndex === i;
                 const menuPopoverId = nextId();
-
                 const setTabRef = (element) => {
                   page.tabRef = { current: element };
                 };
@@ -508,7 +512,7 @@ const GlobalHeader = ({
                   <Fragment key={i}>
                     {page.href ? (
                       <TabsItem
-
+                        onFocus={()=>setOpenMenuIndex(-1)}
                         elementType={GatsbyLink}
                         {...getExternalLinkProps(page.href)}
                         ref={setTabRef}
@@ -521,7 +525,9 @@ const GlobalHeader = ({
                       <TabsItem
                        tabIndex={"0"}
                        id={`tabindex${i}`}
+                       onFocus={()=>setOpenMenuIndex(-1)}
                        index={i}
+                       hasDropdown
                        openDropDown={openDropDown}
                         css={css`
                           ${openMenuIndex === i &&
@@ -627,7 +633,6 @@ const GlobalHeader = ({
                               const pathWithRootFix = rootFix(location.pathname);
                               const selectedMenu = findSelectedTopPageMenu(pathWithRootFix, page);
                               const menuHref = withPrefix(menu.href);
-
                               return (
                                 <MenuItem
                                   className="spectrum-Link spectrum-Link--quiet global_header"
@@ -638,30 +643,47 @@ const GlobalHeader = ({
                                   {...getExternalLinkProps(menuHref)}
                                   isHighlighted={menu === selectedMenu}
                                   onKeyDown={(e) => {
-                                    if (e.key === 'ArrowDown') {
-                                      e.currentTarget.nextElementSibling && e.currentTarget.nextElementSibling.focus();
+                                     if (e.key === 'ArrowDown') {
+                                      e.preventDefault();                                
+                                      if(k+1===page.menu.length){
+                                        console.log("pageDown",page.menu);
+                                        setTimeout(()=>{
+                                          if(pages.length===i+1){
+                                            document.getElementById("getCredentialID").focus();
+                                          }else{
+                                          document.getElementById(`tabindex${i+1}`).focus();
+                                          }
+                                        },100)
+                                      }else{
+                                        e.preventDefault();       
+                                        e.currentTarget.nextElementSibling && e.currentTarget.nextElementSibling.focus();
+                                      }
                                     }
                                     if (e.key === 'ArrowUp') {
+                                      e.preventDefault();
+                                      var event =e;
                                       if(k===0){
-                                        document.getElementById(`tabindex${i}`).focus();
+                                        setOpenMenuIndex(-1)
+                                        setTimeout(()=>{
+                                          document.getElementById(`tabindex${i}`).focus();
+                                        },100)
                                       }
-                                      e.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
+                                      event.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
                                     }
                                     if (e.key === 'ArrowRigt') {
+                                      e.preventDefault();
                                       e.currentTarget.nextElementSibling && e.currentTarget.nextElementSibling.focus();
                                     }
                                     if (e.key === 'ArrowLeft') {
+                                      e.preventDefault();
                                       if(k===0){
-                                        document.getElementById(`tabindex${i}`).focus();
+                                        document.getElementById(`tabindex${i}`).focus()
                                       }
                                       e.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
                                     }
                                     if( e.key === 'Enter'){
                                       e.currentTarget.focus();
                                     }
-                                    // if(!e.currentTarget.nextSibling){
-                                    //    setOpenMenuIndex(-1);
-                                    // }
                                   }}
                                   >
                                   {menu.description ? (
@@ -766,10 +788,11 @@ const GlobalHeader = ({
                     margin-left: var(--spectrum-global-dimension-size-300);
                     white-space: nowrap;
                   `}>
-                  <AnchorButton onKeyDown={(e)=>{
-                    // if(e.key==="ArrowRight"){
-                    //   document.getElementById("consoleId").focus();
-                    // }
+                  <AnchorButton
+                    onFocus={(e)=>{
+                      setOpenMenuIndex(-1)
+                    }}
+                  onKeyDown={(e)=>{
                     if(e.key==="ArrowLeft"){
                       document.getElementById("tabindex5").focus();
                     }

@@ -3,7 +3,7 @@ title: Adobe Developer — PDF Services API  —  Document Generation
 ---
 
 
-<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link  button-screen" 
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link  button-screen linking" 
 variantsTypePrimary='primary' variantsTypeSecondary='cta' isPrimaryBtn  primaryOutline/>
 
 ### PDF and Word document generation with dynamic data

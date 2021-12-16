@@ -197,6 +197,7 @@ const HeaderTabItem = forwardRef(({
   className,
   children,
   icon,
+  hasDropdown=false,
   label,
   ...props }, ref
 ) => {
@@ -211,25 +212,32 @@ const HeaderTabItem = forwardRef(({
       autofocus={true}
       tabIndex="0"
       onKeyDown={(e)=>{
-        if(e.key==="ArrowRight"){
+          if(e.key==="ArrowRight"){
           if(props.id==="tabindex5"){
            document.getElementById("getCredentialID").focus();
           }
-        e.target.nextElementSibling && e.target.nextElementSibling.focus();
+          e.target.nextElementSibling && e.target.nextElementSibling.focus();
         }
         if(e.key==="ArrowLeft"){
           if(props.id==="tabindex0"){
-            document.getElementById("product")?.focus();
-          }else{
-            e.target.previousElementSibling && e.target.previousElementSibling.focus();
-          }
+              document.getElementById("product")?.focus();
+            }else{
+              e.target.previousElementSibling && e.target.previousElementSibling.focus();
+            }
           }
           if(e.key==="ArrowDown"){
-            props?.openDropDown&& props?.openDropDown({index:props.index,isOpen:true});
+                    e.preventDefault();    
+            if(hasDropdown){
+              props?.openDropDown && props?.openDropDown({index:props.index,isOpen:true,id:props.id});
+            }else{
+              e.target.nextElementSibling && e.target.nextElementSibling.focus();
+            }
           }
           if(e.key==="ArrowUp"){
+            
+            console.log("arrowuped",);
             props?.openDropDown && props?.openDropDown({isOpen:false,id:props.id});
-          
+            e.target.previousElementSibling && e.target.previousElementSibling.focus();
           }
       }}
       disabled={isDisabled}
@@ -240,6 +248,7 @@ const HeaderTabItem = forwardRef(({
     </Element>
   );
 });
+
 const TabView = forwardRef(({ elementType = 'div', isHidden, className, children, ...props }, ref) => {
   const Element = elementType;
   return (
@@ -480,6 +489,7 @@ const TabsBlock = ({
                     `}
                   >
                     <a
+                      className="linking-accessbility"
                       href={APIReference}
                       css={css`
                         color: #4b9cf5;

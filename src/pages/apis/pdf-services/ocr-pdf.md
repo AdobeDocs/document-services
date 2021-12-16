@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — OCR PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" hasCodeBlock  theme="dark" className="bgBlue link"/>
+<TextBlock slots="heading, buttons, text, text1" hasCodeBlock  theme="dark" className="bgBlue link linking"/>
 
 ### OCR a PDF file
 

@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  —  Compress - PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link"/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link linking"/>
 
 ### Compress a pdf file
 

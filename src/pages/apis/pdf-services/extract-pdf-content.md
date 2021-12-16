@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — Extract PDF Content
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link"/>
+<TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link linking"/>
 
 ### PDF content extraction
 
