@@ -62,6 +62,19 @@ module.exports = {
         path: '../document-services/pricing/main'
       },
       {
+        title: 'Resources',
+        menu: [{
+          title: 'Developer Resources',
+          path: '../document-services/resources/'
+        }, {
+          title: 'Forum',
+          path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'
+        }, {
+          title: 'Licensing',
+          path: 'document-services/docs/overview/pdf-services-api/dcserviceslicensing.md'
+        }]
+      },
+      {
         title: 'Documentation',
         menu: [
           {
@@ -85,19 +98,6 @@ module.exports = {
             path: 'document-services/docs/overview/pdf-embed-api/index.md'
           },
         ]
-      },
-      {
-        title: 'Resources',
-        menu: [{
-          title: 'Developer Resources',
-          path: '../document-services/resources/'
-        }, {
-          title: 'Forum',
-          path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'
-        }, {
-          title: 'Licensing',
-          path: 'document-services/docs/overview/pdf-services-api/dcserviceslicensing.md'
-        }]
       }
     ],
     subMenuPages: [
