@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-use-cases-collaboration-review-and-approval-md",
     "path": "/use-cases/collaboration/review-and-approval/",
-    "result": {"pageContext":{"frontmatter":{"title":"Document Services API Use Case: Review and Approval"}}},
+    "result": {"pageContext":{"frontmatter":{"title":"Review and approval workflows | Adobe PDF Services API | Adobe Document Services","description":"Quickly publish PDF documents with commenting for review and approval workflows. Our free PDF Embed API helps you publish PDF documents in HTML with a few lines of code. Learn more today."}}},
     "staticQueryHashes": ["3695678887","858854441","915530536"]}

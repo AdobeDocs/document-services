@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-use-cases-content-publishing-course-and-degree-certificate-md",
     "path": "/use-cases/content-publishing/course-and-degree-certificate/",
-    "result": {"pageContext":{"frontmatter":{"title":"Document Services API Use Case: Course and Degree Certificate"}}},
+    "result": {"pageContext":{"frontmatter":{"title":"Easy certificate generation | Adobe PDF Services API | Adobe Document Services","description":"Easy certificate generation using your own data and Microsoft Word templates. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today."}}},
     "staticQueryHashes": ["3695678887","858854441","915530536"]}
