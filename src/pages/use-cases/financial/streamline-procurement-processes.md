@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Data Analysis for Finance'
+title: Automated procurment workflows | Adobe PDF Services API | Adobe Document Services
+description: Quickly automate procurement workflows with readily available cloud-baseed APIs. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 import StreamlineProcurementProcesses from '../page-content/financial/streamline-procurement-processes.md';

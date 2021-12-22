@@ -1,5 +1,6 @@
 ---
-title: Document Services API Use Cases — Student-Teacher Collaboration
+title: Student-teacher collaboration | Adobe PDF Services API | Adobe Document Services
+description: Publish PDFs in your website with multi-user collaboration using only a few lines of code. Our free PDF Embed API helps you publish PDF documents in HTML with a few lines of code. Learn more today.
 ---
 
 import Collaboration from '../page-content/collaboration/student-teacher-collaboration.md';

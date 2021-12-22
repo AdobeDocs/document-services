@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Report Creation and Editing'
+title: On-demand report generation | Adobe PDF Services API | Adobe Document Services
+description: Generate on-demand reports using Microsoft Word templates with your dynamic data. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 import OnDemandReportCreation from '../page-content/content-publishing/on-demand-report-creation.md';

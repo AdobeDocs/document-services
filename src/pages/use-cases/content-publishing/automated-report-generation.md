@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Job Posting'
+title: Automated report generation | Adobe PDF Services API | Adobe Document Services
+description: Automate custom report generation with Microsoft Word templates and your dynamic data. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 import AutomatedReportGeneration from '../page-content/content-publishing/automated-report-generation.md';

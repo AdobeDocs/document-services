@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Search and Indexing'
+title: PDF search and indexing | Adobe PDF Services API | Adobe Document Services
+description: Automate PDF search and indexing with Adobe Document Services. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 ## Search and Indexing

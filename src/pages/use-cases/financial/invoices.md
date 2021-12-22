@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Invoices'
+title: Easy invoice generator | Adobe PDF Services API | Adobe Document Services
+description: Quick and easy invoice generation with Microsoft Word templates and your data using Document Generation service. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 import InvoicesContent from '../page-content/financial/invoices.md';

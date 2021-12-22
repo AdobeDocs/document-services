@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Purchase Orders'
+title: Purchase order generation | Adobe PDF Services API | Adobe Document Services
+description: Create purchase orders with dynamic data using Document Generation services. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 import PurchaseOrders from '../page-content/financial/purchase-orders.md';

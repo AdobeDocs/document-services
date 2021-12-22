@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Review and Approval'
+title: Review and approval workflows | Adobe PDF Services API | Adobe Document Services
+description: Quickly publish PDF documents with commenting for review and approval workflows. Our free PDF Embed API helps you publish PDF documents in HTML with a few lines of code. Learn more today.
 ---
 
 import ReviewandApproval from '../page-content/collaboration/review-and-approval.md';

@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Data Analysis'
+title: Extract PDF data | Adobe PDF Services API | Adobe Document Services
+description: Unlock content elements from PDF files with machine learning for data analysis and insights. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 import DataAnalysis from '../page-content/content-and-data-extraction/data-analysis.md';

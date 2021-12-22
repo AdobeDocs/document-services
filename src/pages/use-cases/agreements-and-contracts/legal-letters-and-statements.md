@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Legal Letters and Statements'
+title: Create legal letters | Adobe PDF Services API | Adobe Document Services
+description: Easy legal letter generation using templates and JSON data. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 import LegalStatement from '../page-content/agreements-and-contracts/legal-letters-and-statements.md';

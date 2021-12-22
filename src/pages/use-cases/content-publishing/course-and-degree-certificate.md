@@ -1,5 +1,6 @@
 ---
-title: 'Document Services API Use Case: Course and Degree Certificate'
+title: Easy certificate generation | Adobe PDF Services API | Adobe Document Services
+description: Easy certificate generation using your own data and Microsoft Word templates. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 
