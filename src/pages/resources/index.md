@@ -1,6 +1,6 @@
 ---
 title: Developer Resources & Tutorials | Adobe PDF Services API | Adobe Document Services
-description:Get started with Adobe Document Services APIs. Videos, blogs, tutorials, and more to develop dynamic document workflows using Adobe PDF Services APIs to create, convert, OCR and extract PDF content. Free 6-month trial. Learn more today.
+description: Get started with Adobe Document Services APIs. Videos, blogs, tutorials, and more to develop dynamic document workflows using Adobe PDF Services APIs to create, convert, OCR and extract PDF content. Free 6-month trial. Learn more today.
 ---
 
 import '../../styles/developer-resource.css'
