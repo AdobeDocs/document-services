@@ -226,7 +226,7 @@ const HeaderTabItem = forwardRef(({
             }
           }
           if(e.key==="ArrowDown"){
-                    e.preventDefault();    
+                    e.preventDefault();
             if(hasDropdown){
               props?.openDropDown && props?.openDropDown({index:props.index,isOpen:true,id:props.id});
             }else{
@@ -234,8 +234,7 @@ const HeaderTabItem = forwardRef(({
             }
           }
           if(e.key==="ArrowUp"){
-            
-            console.log("arrowuped",);
+
             props?.openDropDown && props?.openDropDown({isOpen:false,id:props.id});
             e.target.previousElementSibling && e.target.previousElementSibling.focus();
           }
@@ -361,18 +360,26 @@ const TabsBlock = ({
                   <Item
                     className={'tabItem'}
                     key={`tabItem_${index}`}
-                    tabIndex={0}
+                    id={`tabItem_${index}`}
                     ref={ref}
                     isSelected={isSelected}
                     aria-controls={`tabView${index}`}
+                    tabIndex={index=== selectedIndex.tab?0:-1}
                     aria-label={data['heading']}
+                    aria-selected={index===selectedIndex.tab}
                     label={<b>{data['heading']}</b>}
                     icon={data['image']}
                     onKeyDown={(e) => {
                       if (e.key === 'ArrowDown' || e.key === 'Enter') {
+                        e.preventDefault();
+                      if(menuItems.length===index+1 && APIReference !== ""){
+                          document.getElementById("apiReference")?.setAttribute("tabIndex",0);
+                          document.getElementById("apiReference").focus();
+                        }
                         e.currentTarget.nextSibling && e.currentTarget.nextSibling.nextSibling.focus();
                       }
                       if (e.key === 'ArrowUp') {
+                        e.preventDefault();
                         e.currentTarget.previousSibling && e.currentTarget.previousSibling.previousSibling.focus();
                       }
                     }}
@@ -491,11 +498,23 @@ const TabsBlock = ({
                     <a
                       className="linking-accessbility"
                       href={APIReference}
+                      tabIndex={-1}
+                      id="apiReference"
                       css={css`
                         color: #4b9cf5;
                       `}
                       target={"_blank"}
                       rel="noreferrer"
+                      onKeyDown={(e) => {
+                        if(e.key==="ArrowUp"){
+                          e.preventDefault();
+                          handleOnChange(menuItems?.length-1);
+                          document.getElementById(`tabItem_${menuItems?.length-1}`).focus()
+                        }
+                      }}
+                      onBlur={()=>{
+                        document.getElementById("apiReference").setAttribute("tabIndex",-1);
+                      }}
                     >
                       API Reference
                     </a>
