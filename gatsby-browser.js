@@ -48,21 +48,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       window.digitalData.page.pageInfo.breadCrumbs.push(item.innerText);
     });
 
-    let pageName = location.pathname.replace('/','');
-    pageName = location.pathname.replaceAll('/',':');
-
-    let pageUrl = location.pathname.replace('/','');
-    pageUrl = location.pathname.replaceAll('/',':');
-    if(window.digitalData._set){
-      window.digitalData._set('digitalData.page.pageInfo.pageName', pageName);
-      window.digitalData._set('digitalData.page.pageInfo.pageUrl', pageUrl);
-      if(window._satellite){
-        window._satellite.track('state', {
-          digitalData: window.digitalData._snapshot()
-        });  
-      }
-    }
-
     let getCredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get credentials');
     let startFreeTrialButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Start free trial');
     let getStartedlButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get started');
