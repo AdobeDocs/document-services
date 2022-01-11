@@ -70,6 +70,25 @@ const SEO = ({ title, description, keywords }) => {
       {description && <meta property="twitter:description" content={description} />}
       <meta property="twitter:image:src" content={`${productionDomain}/gh-assets/img/page-thumbnails/${pageImage}`}/>
       {process.env.GATSBY_ADOBE_LAUNCH_SRC && <script src={process.env.GATSBY_ADOBE_LAUNCH_SRC} async />}
+
+      {process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
+        <script type="text/javascript">{`
+          window.marketingtech = {
+            'adobe': {
+              'launch': {
+                'property': 'global',
+                'environment': '${process.env.GATSBY_ADOBE_ANALYTICS_ENV}'
+              },
+              'analytics': {
+                'additionalAccounts': '${process.env.GATSBY_ADDITIONAL_ADOBE_ANALYTICS_ACCOUNTS}'
+              }
+            }
+          };
+        `}</script>
+      )}
+      {process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
+        <script src="https://www.adobe.com/marketingtech/main.min.js"></script>
+      )}
     </Helmet>
   )
 };

@@ -21,6 +21,7 @@ import {
   rootFix,
   rootFixPages,
   getExternalLinkProps,
+  DESKTOP_SCREEN_WIDTH,
   MOBILE_SCREEN_WIDTH,
   DEFAULT_HOME
 } from '@adobe/gatsby-theme-aio/src/utils';
@@ -41,14 +42,12 @@ import {
   Label as TabsItemLabel,
   TabsIndicator,
   positionIndicator,
-  animateIndicator,
-} from '../Tabs';
+  animateIndicator
+} from '@adobe/gatsby-theme-aio/src/components/Tabs';
 import '@spectrum-css/typography';
 import '@spectrum-css/assetlist';
 import { Divider } from '@adobe/gatsby-theme-aio/src/components/Divider';
 import DEFAULT_AVATAR from './avatar.svg';
-import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
-
 
 const getSelectedTabIndex = (location, pages) => {
   const pathWithRootFix = rootFix(location.pathname);
@@ -125,7 +124,7 @@ const GlobalHeader = ({
 
     animateIndicator(selectedTabIndicatorRef, isAnimated);
     positionSelectedTabIndicator(index);
-  }, [location,location.pathname,isAnimated,pages]);
+  }, [location.pathname]);
 
   useEffect(() => {
     (async () => {
@@ -138,7 +137,7 @@ const GlobalHeader = ({
         setIsLoadingProfile(false);
       }
     })();
-  }, [ims,isLoadingIms]);
+  }, [ims]);
 
   useEffect(() => {
     if (versionPopoverRef.current) {
@@ -177,7 +176,7 @@ const GlobalHeader = ({
         }
       });
     }
-  }, [openMenuIndex,pages]);
+  }, [openMenuIndex]);
 
   useEffect(() => {
     // Clicking outside of menu should close menu
@@ -200,7 +199,7 @@ const GlobalHeader = ({
     document.addEventListener('click', onClick);
 
     return () => document.removeEventListener('click', onClick);
-  }, [pages]);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -227,47 +226,53 @@ const GlobalHeader = ({
 
   return (
     <header
-      role="banner"
+    role="banner"
+    css={css`
+      height: 100%;
+      border-bottom: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
+      box-sizing: border-box;
+
+      @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+        border-bottom: none;
+      }
+    `}>
+    <nav
       css={css`
         height: 100%;
-        border-bottom: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
-        box-sizing: border-box;
-
-        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-          border-bottom: none;
-        }
-      `}>
-      <nav
+      `}
+      role="navigation"
+      aria-label="Global">
+      <div
         css={css`
+          display: grid;
+          grid-template-areas: 'title navigation optional';
+          grid-template-columns: minmax(auto, min-content) auto minmax(auto, min-content);
+          align-items: center;
+          margin-right: var(--spectrum-global-dimension-size-200);
           height: 100%;
-        `}
-        role="navigation"
-        aria-label="Global">
+
+          @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
+            grid-template-columns: minmax(auto, min-content) auto 0 0;
+            margin-right: 0;
+            margin-left: 0;
+            height: calc(100% + var(--spectrum-global-dimension-size-10));
+            overflow: hidden;
+          }
+        `}>
         <div
           css={css`
-            display: grid;
-            grid-template-areas: 'title navigation optional';
-            grid-template-columns: minmax(auto, min-content) auto minmax(auto, min-content);
-            align-items: center;
-            margin-right: var(--spectrum-global-dimension-size-200);
             height: 100%;
+            grid-area: title;
 
             @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-              grid-template-columns: minmax(auto, min-content) auto 0 0;
-              margin-right: 0;
-              margin-left: 0;
-              height: calc(100% + var(--spectrum-global-dimension-size-10));
-              overflow: hidden;
+              padding-left: ${!hasSideNav ? 'var(--spectrum-global-dimension-size-200)' : '0'};
             }
           `}>
           <div
             css={css`
+              display: flex;
               height: 100%;
-              grid-area: title;
-
-              @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                padding-left: ${!hasSideNav ? 'var(--spectrum-global-dimension-size-200)' : '0'};
-              }
+              align-items: center;
             `}>
             <div
               css={css`
@@ -277,278 +282,306 @@ const GlobalHeader = ({
               `}>
               <div
                 css={css`
+                  display: none;
+
+                  @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
+                    display: ${hasSideNav ? 'block' : 'none'};
+                    margin: 0 var(--spectrum-global-dimension-size-100);
+                  }
+                `}>
+                <ActionButton
+                  isQuiet
+                  onClick={() => {
+                    toggleSideNav && toggleSideNav();
+                  }}>
+                  <TripleGripper />
+                </ActionButton>
+              </div>
+              <a
+                href="/"
+                  tabIndex={"0"}
+                  id="adobeIcon"
+                  onKeyDown={(e)=>{
+                    if(e.key==="ArrowRight"){
+                    document.getElementById("product").focus();
+                    }
+                  }}
+                css={css`
                   display: flex;
                   height: 100%;
-                  align-items: center;
+                  text-decoration: none;
+                  padding-left: var(--spectrum-global-dimension-size-400);
+                  padding-right: var(--spectrum-global-dimension-size-300);
+                  padding-bottom: var(--spectrum-global-dimension-size-25);
+
+                  @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
+                    padding-left: 0;
+                    padding-right: 0;
+                  }
                 `}>
                 <div
                   css={css`
-                    display: none;
-
-                    @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                      display: ${hasSideNav ? 'block' : 'none'};
-                      margin: 0 var(--spectrum-global-dimension-size-100);
-                    }
+                    display: flex;
+                    align-items: center;
                   `}>
-                  <ActionButton
-                    isQuiet
-                    onClick={() => {
-                      toggleSideNav && toggleSideNav();
-                    }}>
-                    <TripleGripper />
-                  </ActionButton>
+                  <Adobe
+                    css={css`
+                      width: calc(
+                        var(--spectrum-global-dimension-size-250) + var(--spectrum-global-dimension-size-25)
+                      );
+                      height: var(--spectrum-global-dimension-size-225);
+                      display: block;
+                      margin-right: var(--spectrum-global-dimension-size-100);
+                    `}
+                  />
+                  <strong
+                    className="spectrum-Heading spectrum-Heading--sizeXXS"
+                    css={css`
+                      color: #fa0f00;
+                      font-size: calc(
+                        var(--spectrum-global-dimension-size-200) - var(--spectrum-global-dimension-size-10)
+                      );
+                      font-weight: 700;
+                      white-space: nowrap;
+                    `}>
+                    <span
+                      css={css`
+                        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                          display: none;
+                        }
+                      `}>
+                      Adobe&nbsp;
+                    </span>
+                    Developer
+                  </strong>
                 </div>
-                <a
-                  href="/"
+              </a>
+            </div>
+
+            {hasHome && (
+              <div
+
+                css={css`
+                  height: calc(100% + var(--spectrum-global-dimension-size-10));
+                  border-left: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
+                  border-right: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
+
+                  @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
+                    display: none;
+                  }
+                `}>
+                <Link isQuiet variant="secondary">
+                  <a
                     tabIndex={"0"}
-                    id="adobeIcon"
+                    id={"product"}
+                    // onBlur={()=>setOpenMenuIndex(-1)}
                     onKeyDown={(e)=>{
-                      if(e.key==="ArrowRight"){
-                      document.getElementById("product").focus();
+                     if(e.key==="ArrowLeft"){
+                     document.getElementById("adobeIcon").focus();
+                     }
+                     if(e.key==="ArrowRight"){
+                      document.getElementById("tabindex0").focus();
                       }
                     }}
-                  css={css`
-                    display: flex;
-                    height: 100%;
-                    text-decoration: none;
-                    padding-left: var(--spectrum-global-dimension-size-400);
-                    padding-right: var(--spectrum-global-dimension-size-300);
-                    padding-bottom: var(--spectrum-global-dimension-size-25);
-
-                    @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                      padding-left: 0;
-                      padding-right: 0;
-                    }
-                  `}>
-                  <div
                     css={css`
                       display: flex;
+                      height: calc(100% - var(--spectrum-global-dimension-size-10));
                       align-items: center;
-                    `}>
-                    <Adobe
-                      css={css`
-                        width: calc(
-                          var(--spectrum-global-dimension-size-250) + var(--spectrum-global-dimension-size-25)
-                        );
-                        height: var(--spectrum-global-dimension-size-225);
-                        display: block;
-                        margin-right: var(--spectrum-global-dimension-size-100);
-                      `}
-                    />
-                    <strong
-                      className="spectrum-Heading spectrum-Heading--sizeXXS"
-                      css={css`
-                        color: #fa0f00;
-                        font-size: calc(
-                          var(--spectrum-global-dimension-size-200) - var(--spectrum-global-dimension-size-10)
-                        );
-                        font-weight: 700;
-                        white-space: nowrap;
-                      `}>
-                      <span
-                        css={css`
-                          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                            display: none;
-                          }
-                        `}>
-                        Adobe&nbsp;
-                      </span>
-                      Developer
-                    </strong>
-                  </div>
-                </a>
+                      justify-content: center;
+                      box-sizing: border-box;
+                      padding: 0 var(--spectrum-global-dimension-size-300);
+                      white-space: nowrap;
+                      color: var(--spectrum-global-color-gray-700);
+                      transition: background-color var(--spectrum-global-animation-duration-100) ease-out,
+                        color var(--spectrum-global-animation-duration-100) ease-out;
+
+                      &:hover {
+                        background-color: var(--spectrum-global-color-gray-75);
+                        color: var(--spectrum-global-color-gray-900);
+                        text-decoration: none;
+                      }
+                    `}
+                    href={home?.href || DEFAULT_HOME.href}
+                    {...getExternalLinkProps(home?.href || DEFAULT_HOME.href)}>
+                    {home?.title || DEFAULT_HOME.title}
+                  </a>
+                </Link>
               </div>
-
-              {hasHome && (
-                <div
-               
-                  css={css`
-                    height: calc(100% + var(--spectrum-global-dimension-size-10));
-                    border-left: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
-                    border-right: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
-
-                    @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                      display: none;
-                    }
-                  `}>
-                  <Link isQuiet variant="secondary">
-                    <a
-                      tabIndex={"0"}
-                      id={"product"}
-                      onFocus={()=>setOpenMenuIndex(-1)}
-                      
-                      onKeyDown={(e)=>{
-                       if(e.key==="ArrowLeft"){
-                       document.getElementById("adobeIcon").focus();
-                       }
-                       if(e.key==="ArrowRight"){
-                        document.getElementById("tabindex0").focus();
-                        }
-                      }}
-                      css={css`
-                        display: flex;
-                        height: calc(100% - var(--spectrum-global-dimension-size-10));
-                        align-items: center;
-                        justify-content: center;
-                        box-sizing: border-box;
-                        padding: 0 var(--spectrum-global-dimension-size-300);
-                        white-space: nowrap;
-                        color: var(--spectrum-global-color-gray-700);
-                        transition: background-color var(--spectrum-global-animation-duration-100) ease-out,
-                          color var(--spectrum-global-animation-duration-100) ease-out;
-
-                        &:hover {
-                          background-color: var(--spectrum-global-color-gray-75);
-                          color: var(--spectrum-global-color-gray-900);
-                          text-decoration: none;
-                        }
-                      `}
-                      href={home?.href || DEFAULT_HOME.href}
-                      {...getExternalLinkProps(home?.href || DEFAULT_HOME.href)}>
-                      {home?.title || DEFAULT_HOME.title}
-                    </a>
-                  </Link>
-                </div>
-              )}
-            </div>
+            )}
           </div>
+        </div>
+        <div
+          ref={tabsContainerRef}
+          css={css`
+            grid-area: navigation;
+            ${hasHome && 'margin-left: var(--spectrum-global-dimension-size-200);'}
+
+            @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
+              ${!hasHome && 'margin-left: var(--spectrum-global-dimension-size-300);'}
+
+              overflow-x: auto;
+              overflow-x: overlay;
+              overflow-y: hidden;
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+
+              &::-webkit-scrollbar {
+                display: none;
+              }
+
+              margin-right: var(--spectrum-global-dimension-size-3000);
+            }
+
+            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+              position: fixed;
+              top: calc(var(--spectrum-global-dimension-size-600) - var(--spectrum-global-dimension-size-10));
+              height: var(--spectrum-global-dimension-size-600);
+              left: 0;
+              right: 0;
+              margin-left: 0;
+              margin-right: 0;
+              background-color: var(--spectrum-global-color-gray-50);
+              border-bottom: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
+            }
+          `}>
           <div
-            ref={tabsContainerRef}
             css={css`
-              grid-area: navigation;
-              ${hasHome && 'margin-left: var(--spectrum-global-dimension-size-200);'}
+              display: none;
+              @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                display: block;
+                pointer-events: none;
+                position: fixed;
+                top: var(--spectrum-global-dimension-size-600);
+                height: calc(var(--spectrum-global-dimension-size-600) - var(--spectrum-global-dimension-size-25));
+                right: 0;
+                width: var(--spectrum-global-dimension-size-300);
+                background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0), white);
+                z-index: 1;
+              }
+            `}
+          />
 
+          <Tabs
+            css={css`
               @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                ${!hasHome && 'margin-left: var(--spectrum-global-dimension-size-300);'}
-
-                overflow-x: auto;
-                overflow-x: overlay;
-                overflow-y: hidden;
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-
-                &::-webkit-scrollbar {
-                  display: none;
-                }
-
-                margin-right: var(--spectrum-global-dimension-size-3000);
+                padding-bottom: var(--spectrum-global-dimension-size-400);
+                margin-top: var(--spectrum-global-dimension-size-400);
               }
 
               @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                position: fixed;
-                top: calc(var(--spectrum-global-dimension-size-600) - var(--spectrum-global-dimension-size-10));
-                height: var(--spectrum-global-dimension-size-600);
-                left: 0;
-                right: 0;
-                margin-left: 0;
-                margin-right: 0;
-                background-color: var(--spectrum-global-color-gray-50);
-                border-bottom: var(--spectrum-global-dimension-size-10) solid var(--spectrum-global-color-gray-200);
+                padding-bottom: 0;
+                margin-top: 0;
               }
-            `}>
-            <div
-              css={css`
-                display: none;
-                @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                  display: block;
-                  pointer-events: none;
-                  position: fixed;
-                  top: var(--spectrum-global-dimension-size-600);
-                  height: calc(var(--spectrum-global-dimension-size-600) - var(--spectrum-global-dimension-size-25));
-                  right: 0;
-                  width: var(--spectrum-global-dimension-size-300);
-                  background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0), white);
-                  z-index: 1;
-                }
-              `}
-            />
+            `}
+            ref={tabsRef}
+            onFontsReady={() => {
+              positionSelectedTabIndicator(selectedTabIndex);
+              setIsAnimated(true);
+            }}>
+            {hasHome && (
+              <div
+                css={css`
+                  display: none;
+                  margin-right: var(--spectrum-global-dimension-size-300);
 
-            <Tabs
-              css={css`
-                @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                  padding-bottom: var(--spectrum-global-dimension-size-400);
-                  margin-top: var(--spectrum-global-dimension-size-400);
-                }
+                  @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
+                    display: block;
+                  }
+                `}>
+                <TabsItem
+                  elementType={GatsbyLink}
+                  to={home?.href || DEFAULT_HOME.href}
+                  {...getExternalLinkProps(home?.href || DEFAULT_HOME.href)}>
+                  <TabsItemLabel>{home?.title || DEFAULT_HOME.title}</TabsItemLabel>
+                </TabsItem>
+              </div>
+            )}
+            {pages.map((page, i) => {
+              const isSelectedTab = selectedTabIndex === i;
+              const menuPopoverId = nextId();
+              const setTabRef = (element) => {
+                page.tabRef = { current: element };
+              };
 
-                @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                  padding-bottom: 0;
-                  margin-top: 0;
-                }
-              `}
-              ref={tabsRef}
-              onFontsReady={() => {
-                positionSelectedTabIndicator(selectedTabIndex);
-                setIsAnimated(true);
-              }}>
-              {hasHome && (
-                <div
-                  css={css`
-                    display: none;
-                    margin-right: var(--spectrum-global-dimension-size-300);
+              const setTabMenuRef = (element) => {
+                page.menuRef = { current: element };
+              };
 
-                    @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                      display: block;
-                    }
-                  `}>
-                  <TabsItem
-                    elementType={GatsbyLink}
-                    to={home?.href || DEFAULT_HOME.href}
-                    {...getExternalLinkProps(home?.href || DEFAULT_HOME.href)}>
-                    <TabsItemLabel>{home?.title || DEFAULT_HOME.title}</TabsItemLabel>
-                  </TabsItem>
-                </div>
-              )}
-              {pages.map((page, i) => {
-                const isSelectedTab = selectedTabIndex === i;
-                const menuPopoverId = nextId();
-                const setTabRef = (element) => {
-                  page.tabRef = { current: element };
-                };
+              return (
+                <Fragment key={i}>
+                  {page.href ? (
+                    <TabsItem
+                      // onFocus={()=>{setOpenMenuIndex(-1)}}
+                      elementType={GatsbyLink}
+                      {...getExternalLinkProps(page.href)}
+                      ref={setTabRef}
+                      id={`tabindex${i}`}
+                      to={withPrefix(page.href)}
+                      selected={isSelectedTab}>
+                      <TabsItemLabel>{page.title}</TabsItemLabel>
+                    </TabsItem>
+                  ) : (
+                    <TabsItem
+                     tabIndex={"0"}
+                     id={`tabindex${i}`}
+                    //  onFocus={()=>{setOpenMenuIndex(-1)}}
+                     index={i}
+                     hasDropdown
+                     openDropDown={openDropDown}
+                      css={css`
+                        ${openMenuIndex === i &&
+                        `
+                        &:after {
+                          content: '';
+                          position: absolute;
+                          z-index: -1;
+                          height: var(--spectrum-global-dimension-size-800);
+                          width: calc(100% + var(--spectrum-global-dimension-size-250));
+                          left: calc(-1 * var(--spectrum-global-dimension-size-125));
+                          top: calc(-1 * var(--spectrum-global-dimension-size-100));
+                          background-color: var(--spectrum-global-color-gray-100);
+                        }
+                      `}
+                      `}
+                      ref={setTabRef}
+                      selected={isSelectedTab}
+                      aria-controls={menuPopoverId}
+                      aria-label={page.title}
+                      onClick={(event) => {
+                        event.stopImmediatePropagation();
 
-                const setTabMenuRef = (element) => {
-                  page.menuRef = { current: element };
-                };
+                        setOpenVersion(false);
+                        setOpenProfile(false);
+                        setOpenMenuIndex(openMenuIndex === i ? -1 : i);
+                      }}
+                      onMouseOver={(event) => {
+                        event.stopImmediatePropagation();
+                        setOpenVersion(false);
+                        setOpenProfile(false);
+                        setOpenMenuIndex(i)
+                        // setOpenMenuIndex(openMenuIndex === i ? -1 : i);
+                      }}
+                      onMouseLeave={
+                        (event) => {
+                          event.stopImmediatePropagation();
+                          setOpenVersion(false);
+                          setOpenProfile(false);
+                          setOpenMenuIndex(-1)
+                        }
+                      }
 
-                return (
-                  <Fragment key={i}>
-                    {page.href ? (
-                      <TabsItem
-                        onFocus={()=>setOpenMenuIndex(-1)}
-                        elementType={GatsbyLink}
-                        {...getExternalLinkProps(page.href)}
-                        ref={setTabRef}
-                        id={`tabindex${i}`}
-                        to={withPrefix(page.href)}
-                        selected={isSelectedTab}>
-                        <TabsItemLabel>{page.title}</TabsItemLabel>
-                      </TabsItem>
-                    ) : (
-                      <TabsItem
-                       tabIndex={"0"}
-                       id={`tabindex${i}`}
-                       onFocus={()=>setOpenMenuIndex(-1)}
-                       index={i}
-                       hasDropdown
-                       openDropDown={openDropDown}
+                      >
+                      <TabsItemLabel>{page.title}</TabsItemLabel>
+                      <ChevronDown
                         css={css`
-                          ${openMenuIndex === i &&
-                          `
-                          &:after {
-                            content: '';
-                            position: absolute;
-                            z-index: -1;
-                            height: var(--spectrum-global-dimension-size-800);
-                            width: calc(100% + var(--spectrum-global-dimension-size-250));
-                            left: calc(-1 * var(--spectrum-global-dimension-size-125));
-                            top: calc(-1 * var(--spectrum-global-dimension-size-100));
-                            background-color: var(--spectrum-global-color-gray-100);
-                          }
+                          width: var(--spectrum-global-dimension-size-125) !important;
+                          height: var(--spectrum-global-dimension-size-125) !important;
+                          margin-left: var(--spectrum-global-dimension-size-100);
+                          transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
+                          ${openMenuIndex === i && `transform: rotate(-90deg);`}
                         `}
-                        `}
-                        ref={setTabRef}
-                        selected={isSelectedTab}
-                        aria-controls={menuPopoverId}
-                        aria-label={page.title}
+                      />
+                      <div
                         onClick={(event) => {
                           event.stopImmediatePropagation();
 
@@ -556,12 +589,11 @@ const GlobalHeader = ({
                           setOpenProfile(false);
                           setOpenMenuIndex(openMenuIndex === i ? -1 : i);
                         }}
-                        onMouseOver={(event) => {
+                        onMouseEnter={(event) => {
                           event.stopImmediatePropagation();
                           setOpenVersion(false);
                           setOpenProfile(false);
                           setOpenMenuIndex(i)
-                          // setOpenMenuIndex(openMenuIndex === i ? -1 : i);
                         }}
                         onMouseLeave={
                           (event) => {
@@ -571,412 +603,380 @@ const GlobalHeader = ({
                             setOpenMenuIndex(-1)
                           }
                         }
+                        role="button"
+                        tabIndex={0}
+                        aria-label={page.title}
+                        onFocus={() => {
+                          setOpenMenuIndex(i);
+                        }}
+                      >
+                      <Popover
+                        ref={setTabMenuRef}
+                        id={menuPopoverId}
 
-                        >
-                        <TabsItemLabel>{page.title}</TabsItemLabel>
-                        <ChevronDown
-                          css={css`
-                            width: var(--spectrum-global-dimension-size-125) !important;
-                            height: var(--spectrum-global-dimension-size-125) !important;
-                            margin-left: var(--spectrum-global-dimension-size-100);
-                            transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
-                            ${openMenuIndex === i && `transform: rotate(-90deg);`}
-                          `}
-                        />
-                        <div
-                          onClick={(event) => {
-                            event.stopImmediatePropagation();
+                        css={css`
+                          margin-left: calc(-1 * var(--spectrum-global-dimension-size-65));
+                          margin-top: var(--spectrum-global-dimension-size-25);
+                          border-top-left-radius: 0;
+                          border-top-right-radius: 0;
+                          ${page.menu.some((menu) => menu.description) &&
+                          `width: var(--spectrum-global-dimension-size-2400);`}
 
-                            setOpenVersion(false);
-                            setOpenProfile(false);
-                            setOpenMenuIndex(openMenuIndex === i ? -1 : i);
-                          }}
-                          onMouseEnter={(event) => {
-                            event.stopImmediatePropagation();
-                            setOpenVersion(false);
-                            setOpenProfile(false);
-                            setOpenMenuIndex(i)
-                          }}
-                          onMouseLeave={
-                            (event) => {
-                              event.stopImmediatePropagation();
-                              setOpenVersion(false);
-                              setOpenProfile(false);
-                              setOpenMenuIndex(-1)
-                            }
+                          @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                            margin-top: calc(-1 * var(--spectrum-global-dimension-size-40));
                           }
-                          role="button"
-                          tabIndex={0}
-                          aria-label={page.title}
-                          onFocus={() => {
-                            setOpenMenuIndex(i);
-                          }}
-                        >
-                        <Popover
-                          ref={setTabMenuRef}
-                          id={menuPopoverId}
+                        `}
+                        isOpen={openMenuIndex === i}>
+                        <Menu>
+                          {page.menu.map((menu, k) => {
+                            const pathWithRootFix = rootFix(location.pathname);
+                            const selectedMenu = findSelectedTopPageMenu(pathWithRootFix, page);
+                            const menuHref = withPrefix(menu.href);
+                            return (
+                              <MenuItem
+                                className="spectrum-Link spectrum-Link--quiet global_header"
+                                key={k}
+                                tabIndex="0"
+                                id={`menuIndex${i}-${k}`}
+                                href={menuHref}
+                                {...getExternalLinkProps(menuHref)}
+                                isHighlighted={menu === selectedMenu}
+                                onKeyDown={(e) => {
+                                   if (e.key === 'ArrowDown') {
+                                    e.preventDefault();
 
-                          css={css`
-                            margin-left: calc(-1 * var(--spectrum-global-dimension-size-65));
-                            margin-top: var(--spectrum-global-dimension-size-25);
-                            border-top-left-radius: 0;
-                            border-top-right-radius: 0;
-                            ${page.menu.some((menu) => menu.description) &&
-                            `width: var(--spectrum-global-dimension-size-2400);`}
-
-                            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                              margin-top: calc(-1 * var(--spectrum-global-dimension-size-40));
-                            }
-                          `}
-                          isOpen={openMenuIndex === i}>
-                          <Menu>
-                            {page.menu.map((menu, k) => {
-                              const pathWithRootFix = rootFix(location.pathname);
-                              const selectedMenu = findSelectedTopPageMenu(pathWithRootFix, page);
-                              const menuHref = withPrefix(menu.href);
-                              return (
-                                <MenuItem
-                                  className="spectrum-Link spectrum-Link--quiet global_header"
-                                  key={k}
-                                  tabIndex="0"
-                                  id={`menuIndex${i}-${k}`}
-                                  href={menuHref}
-                                  {...getExternalLinkProps(menuHref)}
-                                  isHighlighted={menu === selectedMenu}
-                                  onKeyDown={(e) => {
-                                     if (e.key === 'ArrowDown') {
-                                      e.preventDefault();                                
-                                      if(k+1===page.menu.length){
-                                        console.log("pageDown",page.menu);
-                                        setTimeout(()=>{
-                                          if(pages.length===i+1){
-                                            document.getElementById("getCredentialID").focus();
-                                          }else{
-                                          document.getElementById(`tabindex${i+1}`).focus();
-                                          }
-                                        },100)
-                                      }else{
-                                        e.preventDefault();       
-                                        e.currentTarget.nextElementSibling && e.currentTarget.nextElementSibling.focus();
-                                      }
-                                    }
-                                    if (e.key === 'ArrowUp') {
-                                      e.preventDefault();
-                                      var event =e;
-                                      if(k===0){
+                                    if(k+1===page.menu.length){
+                                      console.log("pageDown",page.menu);
+                                      setTimeout(()=>{
                                         setOpenMenuIndex(-1)
-                                        setTimeout(()=>{
-                                          document.getElementById(`tabindex${i}`).focus();
-                                        },100)
-                                      }
-                                      event.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
-                                    }
-                                    if (e.key === 'ArrowRigt') {
+                                        if(pages.length===i+1){
+                                          document.getElementById("getCredentialID").focus();
+                                        }else{
+                                        document.getElementById(`tabindex${i+1}`).focus();
+                                        }
+                                      },100)
+                                    }else{
                                       e.preventDefault();
                                       e.currentTarget.nextElementSibling && e.currentTarget.nextElementSibling.focus();
                                     }
-                                    if (e.key === 'ArrowLeft') {
-                                      e.preventDefault();
-                                      if(k===0){
-                                        document.getElementById(`tabindex${i}`).focus()
-                                      }
-                                      e.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
+                                  }
+                                  if (e.key === 'ArrowUp') {
+                                    e.preventDefault();
+                                    var event =e;
+                                    if(k===0){
+                                      setOpenMenuIndex(-1)
+                                      setTimeout(()=>{
+                                        document.getElementById(`tabindex${i}`).focus();
+                                      },100)
                                     }
-                                    if( e.key === 'Enter'){
-                                      e.currentTarget.focus();
+                                    event.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
+                                  }
+                                  if (e.key === 'ArrowRigt') {
+                                    e.preventDefault();
+                                    e.currentTarget.nextElementSibling && e.currentTarget.nextElementSibling.focus();
+                                  }
+                                  if (e.key === 'ArrowLeft') {
+                                    e.preventDefault();
+                                    if(k===0){
+                                      document.getElementById(`tabindex${i}`).focus()
                                     }
-                                  }}
-                                  >
-                                  {menu.description ? (
+                                    e.currentTarget.previousElementSibling && e.currentTarget.previousElementSibling.focus();
+                                  }
+                                  if( e.key === 'Enter'){
+                                    e.currentTarget.focus();
+                                  }
+                                }}
+                                >
+                                {menu.description ? (
+                                  <div
+                                    css={css`
+                                      margin: var(--spectrum-global-dimension-size-100) 0;
+                                    `}>
                                     <div
                                       css={css`
-                                        margin: var(--spectrum-global-dimension-size-100) 0;
+                                        color: var(--spectrum-global-color-gray-900);
                                       `}>
-                                      <div
-                                        css={css`
-                                          color: var(--spectrum-global-color-gray-900);
-                                        `}>
-                                        {menu.title}
-                                      </div>
-                                      <div
-                                        className="spectrum-Body spectrum-Body--sizeXS"
-                                        css={css`
-                                          white-space: normal;
-                                          margin-top: var(--spectrum-global-dimension-size-50);
-                                        `}>
-                                        {menu.description}
-                                      </div>
+                                      {menu.title}
                                     </div>
-                                  ) : (
-                                    <div css={css`
-                                    margin-top: var(--spectrum-global-dimension-size-50);
-                                    margin-bottom: var(--spectrum-global-dimension-size-50);
-                                  `}>{menu.title}</div>
-                                  )}
-                                </MenuItem>
-                              );
-                            })}
-                          </Menu>
-                        </Popover>
-                        </div>
-                      </TabsItem>
-                    )}
-                    {i === 0 && versions?.length > 0 && (
-                      <div
-                        css={css`
-                          margin-left: var(--spectrum-global-dimension-size-100) !important;
-                          margin-right: var(--spectrum-global-dimension-size-300);
-                        `}>
-                        <PickerButton
-                          isQuiet
-                          isOpen={openVersion}
-                          aria-controls={versionPopoverId}
-                          onClick={(event) => {
-                            event.stopImmediatePropagation();
-
-                            setOpenMenuIndex(-1);
-                            setOpenProfile(false);
-                            setOpenVersion((open) => !open);
-                          }}>
-                          {versions.find(({ selected }) => selected)?.title}
-                        </PickerButton>
-                        <Popover
-                          ref={versionPopoverRef}
-                          id={versionPopoverId}
-                          variant="picker"
-                          isQuiet
-                          isOpen={openVersion}>
-                          <Menu>
-                            {versions.map((version, k) => (
-                              <MenuItem
-                                key={k}
-                                isSelected={version.selected}
-                                isHighlighted={version.selected}
-                                onClick={() => {
-                                  setOpenVersion(false);
-                                }}
-                                href={version.href}
-                                {...getExternalLinkProps(version.href)}>
-                                {version.title}
+                                    <div
+                                      className="spectrum-Body spectrum-Body--sizeXS"
+                                      css={css`
+                                        white-space: normal;
+                                        margin-top: var(--spectrum-global-dimension-size-50);
+                                      `}>
+                                      {menu.description}
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div css={css`
+                                  margin-top: var(--spectrum-global-dimension-size-50);
+                                  margin-bottom: var(--spectrum-global-dimension-size-50);
+                                `}>{menu.title}</div>
+                                )}
                               </MenuItem>
-                            ))}
-                          </Menu>
-                        </Popover>
+                            );
+                          })}
+                        </Menu>
+                      </Popover>
                       </div>
-                    )}
-                  </Fragment>
-                );
-              })}
-              <TabsIndicator
-                ref={selectedTabIndicatorRef}
-                css={css`
-                  bottom: calc(-1 * var(--spectrum-global-dimension-size-125)) !important;
+                    </TabsItem>
+                  )}
+                  {i === 0 && versions?.length > 0 && (
+                    <div
+                      css={css`
+                        margin-left: var(--spectrum-global-dimension-size-100) !important;
+                        margin-right: var(--spectrum-global-dimension-size-300);
+                      `}>
+                      <PickerButton
+                        isQuiet
+                        isOpen={openVersion}
+                        aria-controls={versionPopoverId}
+                        onClick={(event) => {
+                          event.stopImmediatePropagation();
 
-                  @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                    bottom: calc(
-                      var(--spectrum-global-dimension-size-400) - var(--spectrum-global-dimension-size-125)
-                    ) !important;
-                  }
+                          setOpenMenuIndex(-1);
+                          setOpenProfile(false);
+                          setOpenVersion((open) => !open);
+                        }}>
+                        {versions.find(({ selected }) => selected)?.title}
+                      </PickerButton>
+                      <Popover
+                        ref={versionPopoverRef}
+                        id={versionPopoverId}
+                        variant="picker"
+                        isQuiet
+                        isOpen={openVersion}>
+                        <Menu>
+                          {versions.map((version, k) => (
+                            <MenuItem
+                              key={k}
+                              isSelected={version.selected}
+                              isHighlighted={version.selected}
+                              onClick={() => {
+                                setOpenVersion(false);
+                              }}
+                              href={version.href}
+                              {...getExternalLinkProps(version.href)}>
+                              {version.title}
+                            </MenuItem>
+                          ))}
+                        </Menu>
+                      </Popover>
+                    </div>
+                  )}
+                </Fragment>
+              );
+            })}
+            <TabsIndicator
+              ref={selectedTabIndicatorRef}
+              css={css`
+                bottom: calc(-1 * var(--spectrum-global-dimension-size-125)) !important;
 
-                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                    bottom: calc(-1 * var(--spectrum-tabs-rule-size)) !important;
-                  }
-                `}
-              />
-              {docs && (
-                <div
-                  css={css`
-                    margin-left: var(--spectrum-global-dimension-size-300);
-                    white-space: nowrap;
-                  `}>
-                  <AnchorButton
-                    onFocus={(e)=>{
-                      setOpenMenuIndex(-1)
-                    }}
-                  onKeyDown={(e)=>{
-                    if(e.key==="ArrowLeft"){
-                      document.getElementById("tabindex5").focus();
-                    }
-                  }}  
-                   id={"getCredentialID"} variant="primary" href={withPrefix(docs.href)}>
-                    {docs.title ?? 'View Docs'}
-                  </AnchorButton>
-                </div>
-              )}
+                @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
+                  bottom: calc(
+                    var(--spectrum-global-dimension-size-400) - var(--spectrum-global-dimension-size-125)
+                  ) !important;
+                }
+
+                @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                  bottom: calc(-1 * var(--spectrum-tabs-rule-size)) !important;
+                }
+              `}
+            />
+            {docs && (
               <div
                 css={css`
-                  display: none;
                   margin-left: var(--spectrum-global-dimension-size-300);
-
-                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                    display: block;
-                  }
+                  white-space: nowrap;
                 `}>
-                <AnchorButton variant="primary" href="/console">
-                  Console
+                <AnchorButton
+                  onFocus={(e)=>{
+                    setOpenMenuIndex(-1)
+                  }}
+                onKeyDown={(e)=>{
+                  if(e.key==="ArrowLeft"){
+                    document.getElementById("tabindex5").focus();
+                  }
+                }}
+                 id={"getCredentialID"} variant="primary" href={withPrefix(docs.href)}>
+                  {docs.title ?? 'View Docs'}
                 </AnchorButton>
               </div>
-            </Tabs>
-          </div>
-          <div
-            css={css`
-              grid-area: optional;
-              justify-self: flex-end;
-            `}>
+            )}
             <div
               css={css`
-                display: flex;
+                display: none;
+                margin-left: var(--spectrum-global-dimension-size-300);
+
+                @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                  display: block;
+                }
               `}>
-              {hasSearch && (
-                <ActionButton
-                  id={searchButtonId}
-                  onClick={() => {
-                    setShowSearch((show) => !show);
-                  }}
-                  isQuiet
-                  css={css`
-                    margin-right: var(--spectrum-global-dimension-size-200);
-
-                    @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                      margin-right: 0;
-                    }
-                  `}>
-                  {showSearch ? <Close /> : <Magnify />}
-                </ActionButton>
-              )}
-
-              <AnchorButton
-                variant="primary"
-                href="/console"
-                id={"consoleId"}
-                css={css`
-                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-                    display: none;
-                  }
-                `}>
+              <AnchorButton variant="primary" href="/console">
                 Console
               </AnchorButton>
+            </div>
+          </Tabs>
+        </div>
+        <div
+          css={css`
+            grid-area: optional;
+            justify-self: flex-end;
+          `}>
+          <div
+            css={css`
+              display: flex;
+            `}>
+            {hasSearch && (
+              <ActionButton
+                id={searchButtonId}
+                onClick={() => {
+                  setShowSearch((show) => !show);
+                }}
+                isQuiet
+                css={css`
+                  margin-right: var(--spectrum-global-dimension-size-200);
 
-              {hasIMS && (
-                <div
+                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                    margin-right: 0;
+                  }
+                `}>
+                {showSearch ? <Close /> : <Magnify />}
+              </ActionButton>
+            )}
+
+            <AnchorButton
+              variant="primary"
+              href="/console"
+              id={"consoleId"}
+              css={css`
+                @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                  display: none;
+                }
+              `}>
+              Console
+            </AnchorButton>
+
+            {hasIMS && (
+              <div
+                css={css`
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-left: var(--spectrum-global-dimension-size-200);
+                  width: var(--spectrum-global-dimension-size-800);
+                `}>
+                <ProgressCircle size="S" hidden={!isLoadingIms} />
+
+                <ActionButton
                   css={css`
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-left: var(--spectrum-global-dimension-size-200);
-                    width: var(--spectrum-global-dimension-size-800);
-                  `}>
-                  <ProgressCircle size="S" hidden={!isLoadingIms} />
+                    margin-top: calc(-1 * var(--spectrum-global-dimension-size-25));
+                  `}
+                  hidden={isLoadingIms || isLoadingProfile || profile}
+                  variant="primary"
+                  isQuiet
+                  onClick={() => {
+                    ims.signIn();
+                  }}>
+                  <ActionButtonLabel>Sign in</ActionButtonLabel>
+                </ActionButton>
 
-                  <ActionButton
+                <div hidden={!profile}>
+                  <button
+                    aria-label="Profile"
+                    aria-controls={profilePopoverId}
+                    onClick={(event) => {
+                      event.stopImmediatePropagation();
+
+                      setOpenVersion(false);
+                      setOpenMenuIndex(-1);
+                      setOpenProfile((open) => !open);
+                    }}
                     css={css`
-                      margin-top: calc(-1 * var(--spectrum-global-dimension-size-25));
-                    `}
-                    hidden={isLoadingIms || isLoadingProfile || profile}
-                    variant="primary"
-                    isQuiet
-                    onClick={() => {
-                      ims.signIn();
-                    }}>
-                    <ActionButtonLabel>Sign in</ActionButtonLabel>
-                  </ActionButton>
-
-                  <div hidden={!profile}>
-                    <button
-                      aria-label="Profile"
-                      aria-controls={profilePopoverId}
-                      onClick={(event) => {
-                        event.stopImmediatePropagation();
-
-                        setOpenVersion(false);
-                        setOpenMenuIndex(-1);
-                        setOpenProfile((open) => !open);
-                      }}
+                      display: block;
+                      padding: 0;
+                      border: none;
+                      width: var(--spectrum-global-dimension-size-400);
+                      height: var(--spectrum-global-dimension-size-400);
+                      border-radius: var(--spectrum-global-dimension-static-percent-50);
+                      background: var(--spectrum-global-color-gray-50);
+                      overflow: hidden;
+                      cursor: pointer;
+                    `}>
+                    <Image alt="Avatar" src={avatar} />
+                  </button>
+                  <Popover
+                    id={profilePopoverId}
+                    ref={profilePopoverRef}
+                    isOpen={openProfile}
+                    css={css`
+                      width: var(--spectrum-global-dimension-size-3400);
+                      max-height: var(--spectrum-global-dimension-size-4600);
+                      margin-left: calc(-1 * var(--spectrum-global-dimension-size-3000));
+                    `}>
+                    <div
                       css={css`
-                        display: block;
-                        padding: 0;
-                        border: none;
-                        width: var(--spectrum-global-dimension-size-400);
-                        height: var(--spectrum-global-dimension-size-400);
-                        border-radius: var(--spectrum-global-dimension-static-percent-50);
-                        background: var(--spectrum-global-color-gray-50);
-                        overflow: hidden;
-                        cursor: pointer;
-                      `}>
-                      <Image alt="Avatar" src={avatar} />
-                    </button>
-                    <Popover
-                      id={profilePopoverId}
-                      ref={profilePopoverRef}
-                      isOpen={openProfile}
-                      css={css`
-                        width: var(--spectrum-global-dimension-size-3400);
-                        max-height: var(--spectrum-global-dimension-size-4600);
-                        margin-left: calc(-1 * var(--spectrum-global-dimension-size-3000));
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
                       `}>
                       <div
                         css={css`
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          flex-direction: column;
+                          width: var(--spectrum-global-dimension-size-800);
+                          height: var(--spectrum-global-dimension-size-800);
+                          border-radius: var(--spectrum-global-dimension-static-percent-50);
+                          background: var(--spectrum-global-color-gray-50);
+                          overflow: hidden;
+                          margin-top: var(--spectrum-global-dimension-size-400);
+                          margin-bottom: var(--spectrum-global-dimension-size-200);
                         `}>
-                        <div
-                          css={css`
-                            width: var(--spectrum-global-dimension-size-800);
-                            height: var(--spectrum-global-dimension-size-800);
-                            border-radius: var(--spectrum-global-dimension-static-percent-50);
-                            background: var(--spectrum-global-color-gray-50);
-                            overflow: hidden;
-                            margin-top: var(--spectrum-global-dimension-size-400);
-                            margin-bottom: var(--spectrum-global-dimension-size-200);
-                          `}>
-                          <Image alt="Avatar" src={avatar} />
-                        </div>
-
-                        <div
-                          className="spectrum-Heading spectrum-Heading--sizeL spectrum-Heading--light"
-                          css={css`
-                            padding: 0 var(--spectrum-global-dimension-size-200);
-                            text-align: center;
-                          `}>
-                          {profile && profile.displayName}
-                        </div>
-
-                        <div
-                          css={css`
-                            margin: var(--spectrum-global-dimension-size-200) 0;
-                            padding: 0 var(--spectrum-global-dimension-size-200);
-                            box-sizing: border-box;
-                            width: 100%;
-                          `}>
-                          <Divider size="S" />
-                        </div>
-
-                        <AnchorButton href="https://account.adobe.com/" variant="primary" isQuiet>
-                          Edit Profile
-                        </AnchorButton>
-
-                        <Button
-                          variant="primary"
-                          css={css`
-                            margin: var(--spectrum-global-dimension-size-200) 0;
-                          `}
-                          onClick={() => {
-                            ims.signOut();
-                          }}>
-                          Sign out
-                        </Button>
+                        <Image alt="Avatar" src={avatar} />
                       </div>
-                    </Popover>
-                  </div>
+
+                      <div
+                        className="spectrum-Heading spectrum-Heading--sizeL spectrum-Heading--light"
+                        css={css`
+                          padding: 0 var(--spectrum-global-dimension-size-200);
+                          text-align: center;
+                        `}>
+                        {profile && profile.displayName}
+                      </div>
+
+                      <div
+                        css={css`
+                          margin: var(--spectrum-global-dimension-size-200) 0;
+                          padding: 0 var(--spectrum-global-dimension-size-200);
+                          box-sizing: border-box;
+                          width: 100%;
+                        `}>
+                        <Divider size="S" />
+                      </div>
+
+                      <AnchorButton href="https://account.adobe.com/" variant="primary" isQuiet>
+                        Edit Profile
+                      </AnchorButton>
+
+                      <Button
+                        variant="primary"
+                        css={css`
+                          margin: var(--spectrum-global-dimension-size-200) 0;
+                        `}
+                        onClick={() => {
+                          ims.signOut();
+                        }}>
+                        Sign out
+                      </Button>
+                    </div>
+                  </Popover>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
   );
 };
 
