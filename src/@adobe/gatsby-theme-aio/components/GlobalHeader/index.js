@@ -43,7 +43,7 @@ import {
   TabsIndicator,
   positionIndicator,
   animateIndicator
-} from '@adobe/gatsby-theme-aio/src/components/Tabs';
+} from '../Tabs';
 import '@spectrum-css/typography';
 import '@spectrum-css/assetlist';
 import { Divider } from '@adobe/gatsby-theme-aio/src/components/Divider';
@@ -511,7 +511,7 @@ const GlobalHeader = ({
                 <Fragment key={i}>
                   {page.href ? (
                     <TabsItem
-                      // onFocus={()=>{setOpenMenuIndex(-1)}}
+                      onFocus={()=>{setOpenMenuIndex(-1)}}
                       elementType={GatsbyLink}
                       {...getExternalLinkProps(page.href)}
                       ref={setTabRef}

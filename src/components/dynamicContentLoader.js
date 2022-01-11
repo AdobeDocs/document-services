@@ -191,7 +191,7 @@ const DynamicContentLoader = ({
 
         </>
       )}
-      {content === "tutorial" && resData?.data?.length > 0 && (
+      {content === "tutorial" && (
         <div className="main secondary-page">
           <section className="sdk-rsrc-tutorial" id="tuts">
             <div className="tutorial-container">
@@ -245,7 +245,7 @@ const DynamicContentLoader = ({
           </section>
         </div>
       )}
-      {content === "blog" && resData.responseData?.feed && (
+      {content === "blog" && (
         <div className="masterblog">
           <section className="sdk-rsrc-blog" id="blog">
             <div className="blog-container">
