@@ -49,8 +49,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     });
 
     let getCredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get credentials');
-    let startFreeTrialButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Start free trial');
-    let getStartedlButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get started');
+    let startFreeTrialButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Start free trial');
+    let getStartedButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Get started');
 
     // stage
     let baseurl = 'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html';
@@ -61,34 +61,59 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     }
 
     getCredentialsButton.href = `${baseurl}`;
-
-    if(startFreeTrialButton) {
-      startFreeTrialButton.href = `${baseurl}`;
+    
+    if(startFreeTrialButtonArr) {
+      startFreeTrialButtonArr.map(startFreeTrialButton =>{
+        startFreeTrialButton.href = `${baseurl}`;
+      }) 
     }
 
-    if(getStartedlButton) {
-      getStartedlButton.href = `${baseurl}`;
+    if(getStartedButtonArr) {
+      getStartedButtonArr.map(getStartedButton =>{
+        getStartedButton.href = `${baseurl}`;
+      }) 
     }
+
 
     if(window.location.pathname.indexOf('pdf-services') >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
-      getStartedlButton.href = `${baseurl}?api=pdf-services-api`;
-      startFreeTrialButton.href = `${baseurl}?api=pdf-services-api`;
+        getStartedButtonArr.map(getStartedButton =>{
+          getStartedButton.href = `${baseurl}?api=pdf-services-api`;
+        })
+        startFreeTrialButtonArr.map(startFreeTrialButton =>{
+          startFreeTrialButton.href = `${baseurl}?api=pdf-services-api`;
+        })     
     } else if(window.location.pathname.indexOf('doc-generation') >= 0){
-      getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
-      getStartedlButton.href = `${baseurl}?api=document-generation-api`;
-      startFreeTrialButton.href = `${baseurl}?api=document-generation-api`;
+      getCredentialsButton.href = `${baseurl}?api=document-generation-api`;      
+      getStartedButtonArr.map(getStartedButton =>{
+        getStartedButton.href = `${baseurl}?api=document-generation-api`;;
+      })
+      startFreeTrialButtonArr.map(startFreeTrialButton =>{
+        startFreeTrialButton.href = `${baseurl}?api=document-generation-api`;
+      })      
     } else if(window.location.pathname.indexOf('pdf-extract') >= 0){
       getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
-      getStartedlButton.href = `${baseurl}?api=pdf-extract-api`;
-      startFreeTrialButton.href = `${baseurl}?api=pdf-extract-api`;
+
+      getStartedButtonArr.map(getStartedButton =>{
+        getStartedButton.href = `${baseurl}?api=pdf-extract-api`; 
+      }) 
+     
+      startFreeTrialButtonArr.map(startFreeTrialButton =>{
+        startFreeTrialButton.href = `${baseurl}?api=pdf-extract-api`;
+      })
     } else if(window.location.pathname.indexOf('pdf-embed') >= 0){
-      let getFreecredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get free credentials');
-      getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
-      getStartedlButton.href = `${baseurl}?api=pdf-embed-api`;
-      getFreecredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
-    } else if(window.location.pathname.indexOf('pricing') >= 0){
-      getStartedlButton.href = `${baseurl}?api=pdf-embed-api`;
+      getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;      
+      getStartedButtonArr.map(getStartedButton =>{
+        getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
+      });  
+      let getFreecredentialsButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Get free credentials');     
+      getFreecredentialsButtonArr.map(getFreecredentialsButton =>{
+        getFreecredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
+      });    
+    } else if(window.location.pathname.indexOf('pricing') >= 0 && startFreeTrialButtonArr){
+      startFreeTrialButtonArr.map(startFreeTrialButton =>{
+        startFreeTrialButton.href = `${baseurl}?api=pdf-embed-api`;
+      })
     }
   }
 }
