@@ -51,6 +51,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let getCredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get credentials');
     let startFreeTrialButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Start free trial');
     let getStartedButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Get started');
+    let subscribeNowUsButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Subscribe now U.S.');
 
     // stage
     let baseurl = 'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html';
@@ -61,58 +62,85 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     }
 
     getCredentialsButton.href = `${baseurl}`;
-    
+
+    if(getCredentialsButton) {
+      getCredentialsButton.setAttribute('daa-ll', getCredentialsButton.href);
+    }
+
     if(startFreeTrialButtonArr) {
       startFreeTrialButtonArr.map(startFreeTrialButton =>{
         startFreeTrialButton.href = `${baseurl}`;
+        startFreeTrialButton.setAttribute('daa-ll', startFreeTrialButton.href);
       }) 
     }
 
     if(getStartedButtonArr) {
       getStartedButtonArr.map(getStartedButton =>{
         getStartedButton.href = `${baseurl}`;
+        getStartedButton.setAttribute('daa-ll', getStartedButton.href);
       }) 
     }
 
+    if(subscribeNowUsButtonArr) {
+      subscribeNowUsButtonArr.map(subscribeNowUsButton =>{
+        subscribeNowUsButton.setAttribute('daa-ll', subscribeNowUsButton.href);
+      }) 
+    }
 
     if(window.location.pathname.indexOf('pdf-services') >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
-        getStartedButtonArr.map(getStartedButton =>{
-          getStartedButton.href = `${baseurl}?api=pdf-services-api`;
-        })
-        startFreeTrialButtonArr.map(startFreeTrialButton =>{
-          startFreeTrialButton.href = `${baseurl}?api=pdf-services-api`;
-        })     
+      getCredentialsButton.setAttribute('daa-ll', getCredentialsButton.href);
+
+      getStartedButtonArr.map(getStartedButton =>{
+        getStartedButton.href = `${baseurl}?api=pdf-services-api`;
+        getStartedButton.setAttribute('daa-ll', getStartedButton.href);
+      })
+      startFreeTrialButtonArr.map(startFreeTrialButton =>{
+        startFreeTrialButton.href = `${baseurl}?api=pdf-services-api`;
+        startFreeTrialButton.setAttribute('daa-ll', startFreeTrialButton.href);
+      })     
     } else if(window.location.pathname.indexOf('doc-generation') >= 0){
-      getCredentialsButton.href = `${baseurl}?api=document-generation-api`;      
+      getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
+      getCredentialsButton.setAttribute('daa-ll', getCredentialsButton.href);
+
       getStartedButtonArr.map(getStartedButton =>{
         getStartedButton.href = `${baseurl}?api=document-generation-api`;;
+        getStartedButton.setAttribute('daa-ll', getStartedButton.href);
       })
       startFreeTrialButtonArr.map(startFreeTrialButton =>{
         startFreeTrialButton.href = `${baseurl}?api=document-generation-api`;
+        startFreeTrialButton.setAttribute('daa-ll', startFreeTrialButton.href);
       })      
     } else if(window.location.pathname.indexOf('pdf-extract') >= 0){
       getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
+      getCredentialsButton.setAttribute('daa-ll', getCredentialsButton.href);
 
       getStartedButtonArr.map(getStartedButton =>{
         getStartedButton.href = `${baseurl}?api=pdf-extract-api`; 
+        getStartedButton.setAttribute('daa-ll', getStartedButton.href);
       }) 
      
       startFreeTrialButtonArr.map(startFreeTrialButton =>{
         startFreeTrialButton.href = `${baseurl}?api=pdf-extract-api`;
+        startFreeTrialButton.setAttribute('daa-ll', startFreeTrialButton.href);
       })
     } else if(window.location.pathname.indexOf('pdf-embed') >= 0){
-      getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;      
+      getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
+      getCredentialsButton.setAttribute('daa-ll', getCredentialsButton.href);
+
       getStartedButtonArr.map(getStartedButton =>{
         getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
+        getStartedButton.setAttribute('daa-ll', getStartedButton.href);
       });  
       let getFreecredentialsButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Get free credentials');     
       getFreecredentialsButtonArr.map(getFreecredentialsButton =>{
         getFreecredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
+        getFreecredentialsButton.setAttribute('daa-ll', getFreecredentialsButton.href);
       });    
     } else if(window.location.pathname.indexOf('pricing') >= 0 && startFreeTrialButtonArr){
       startFreeTrialButtonArr.map(startFreeTrialButton =>{
         startFreeTrialButton.href = `${baseurl}?api=pdf-embed-api`;
+        startFreeTrialButton.setAttribute('daa-ll', startFreeTrialButton.href);
       })
     }
   }
