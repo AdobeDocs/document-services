@@ -1,4 +1,12 @@
 ---
+keywords:
+  - Adobe I/O
+  - Document Services
+  - API Documentation
+  - Developer Tooling
+---
+
+---
 title: SDK Developer Kit | PDF Library | Adobe Document Services
 description: Own the end-to-end customer experience. Our SDK Developer kits are customizable & built to last. Find an innovative solution with our PDF SDK here.
 ---
