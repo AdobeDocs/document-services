@@ -68,7 +68,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       getStartedButtonArr.map(getStartedButton =>{
         getStartedButton.href = `${baseurl}?api=pdf-services-api`;
-        startFreeTrialButton.setAttribute('daa-ll', `API | PDF-Services | Step 1 | Get Started`);
+        getStartedButton.setAttribute('daa-ll', `API | PDF-Services | Step 1 | Get Started`);
       })
 
       startFreeTrialButtonArr.forEach((startFreeTrialButton, index) =>{
@@ -134,13 +134,19 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     } else if(window.location.pathname.indexOf('pricing') >= 0 && startFreeTrialButtonArr){
       getCredentialsButton.setAttribute('daa-ll', `Pricing | Top Nav | Get credentials`);
 
-      let subscribeNowUsButton = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Subscribe now U.S.');
-      subscribeNowUsButton.setAttribute('daa-ll', `Pricing | PAYGO | Subscribe now`);
+      let subscribeNowUsButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Subscribe now U.S.');
+      subscribeNowUsButtonArr.map(subscribeNowUsButton => {
+        subscribeNowUsButton.setAttribute('daa-ll', `Pricing | PAYGO | Subscribe now`);
+      })
 
       startFreeTrialButtonArr.map(startFreeTrialButton =>{
         startFreeTrialButton.href = `${baseurl}?api=pdf-embed-api`;
-        startFreeTrialButton.setAttribute('daa-ll', `Pricing | PDF Embed | Get started`);
       })
+
+      getStartedButtonArr.map(getStartedButton =>{
+        getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
+        getStartedButton.setAttribute('daa-ll', `Pricing | PDF Embed | Get started`);
+      });  
     } else if(window.location.pathname.indexOf('use-cases') >= 0) {
       getCredentialsButton.setAttribute('daa-ll', `Use cases | Top Nav | Get credentials`);
     } else if(window.location.pathname.indexOf('resources') >= 0) {
