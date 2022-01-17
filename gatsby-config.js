@@ -26,7 +26,7 @@ module.exports = {
     pages: [
       {
         title: 'Adobe Document Services',
-        path: 'document-services/homepage'
+        path: 'homepage'
       },
       {
         title: 'APIs',
@@ -34,22 +34,22 @@ module.exports = {
           {
             title: 'PDF Services',
             description: 'Create, combine and export PDFs',
-            path: '../document-services/apis/pdf-services/'
+            path: 'apis/pdf-services/'
           },
           {
             title: 'PDF Extract',
             description: 'Extract text, tables, images, and document structure',
-            path: '../document-services/apis/pdf-extract/'
+            path: 'apis/pdf-extract/'
           },
           {
             title: 'Document Generation',
             description: 'Generate PDF and Word documents from custom Word templates',
-            path: '../document-services/apis/doc-generation/'
+            path: 'apis/doc-generation/'
           },
           {
             title: 'PDF Embed',
             description: 'Embed high-fidelity PDFs in web apps with analytics',
-            path: '../document-services/apis/pdf-embed/'
+            path: 'apis/pdf-embed/'
           },
         ]
       },
@@ -59,13 +59,13 @@ module.exports = {
       },
       {
         title: 'Pricing',
-        path: '../document-services/pricing/main'
+        path: 'pricing/main'
       },
       {
         title: 'Resources',
         menu: [{
           title: 'Developer Resources',
-          path: '../document-services/resources/'
+          path: 'resources/'
         }, {
           title: 'Forum',
           path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'

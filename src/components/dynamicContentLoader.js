@@ -8,6 +8,17 @@ import Generate_documents from "../pages/images/generate_documents.jpg";
 // import Generate_documents from "../pages/images/genrateDocument.png";
 import Make_PDFs_searchable from "../pages/images/Make_PDFs_searchable.png";
 import resourceImage from "../pages/images/resource_hero_img.jpg";
+import K2Nintex from "../pages/images/K2Nintex.png";
+import AdobeInDesign from "../pages/images/AdobeInDesign.png";
+import CambridgeAssessment from "../pages/images/Cambridge-Assessment.jpeg";
+import Evisort from "../pages/images/Evisort.jpeg";
+import Waymark from "../pages/images/Waymark.jpg";
+
+import K2NintexPDF from "../pages/resources/K2Nintex.pdf";
+import AdobeInDesignPDF from "../pages/resources/AdobeInDesign.pdf";
+import CambridgeAssessmentPDF from "../pages/resources/Cambridge-Assessment.pdf";
+import EvisortPDF from "../pages/resources/Evisort.pdf";
+import WaymarkPDF from "../pages/resources/Waymark-Story.pdf";
 
 const getImageURl = (url) => {
   let imageURL = url.split("/");
@@ -45,6 +56,39 @@ const featuredContent = [
     Thumbnail: Digging_out_data,
     class:"digging_out_data",
     desc:"There is an untold amount of scientific data in the millions of reports and scientific studies over the past few centuries. "
+  },
+];
+
+const StoriesContent = [
+  {
+    Title: "K2 Nintex",
+    URL: K2NintexPDF,
+    Thumbnail: K2Nintex,
+    desc:"Nintex transforms K2 Cloud workflows with Adobe Document Services APIs."
+  },
+  {
+    Title: "Adobe InDesign",
+    URL: AdobeInDesignPDF,
+    Thumbnail: AdobeInDesign,
+    desc:"Adobe InDesign brings its new Share for Review features to life with Adobe Document Services APIs."
+  },
+  {
+    Title: "Cambridge Assessment",
+    URL: CambridgeAssessmentPDF,
+    Thumbnail: CambridgeAssessment,
+    desc:"Cambridge Assessment intends to digitize more than 100 years of test material with Adobe PDF Extract API."
+  },
+  {
+    Title: "Evisort",
+    URL: EvisortPDF,
+    Thumbnail: Evisort,
+    desc:"Evisort uses Adobe PDF Extract API to bring visibility and intelligence to contracts."
+  },
+  {
+    Title: "Waymark",
+    URL: WaymarkPDF,
+    Thumbnail: Waymark,
+    desc:"Waymark Tech enables rapid impact assessments and compliance workflows with Adobe PDF Extract API."
   },
 ];
 
@@ -285,6 +329,43 @@ const DynamicContentLoader = ({
                       </a>
                       <p className="blog-text">{data.contentSnippet}</p>
                     </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        </div>
+      )}
+
+      {/* Custom Stories  */}
+      {content === "CustomerStories" && (
+        <div className="masterStories">
+          <section class="sdk-rsrc-stories" id="customer">
+            <div class="stories-container">
+              <div className="header-and-more">
+                <h3 className="spectrum-Heading spectrum-Heading--sizeL">
+                Customer Stories
+                </h3>
+              </div>              
+              <div class="headliner spectrum-Body--sizeL">
+                See how our customers are building great experiences and succeeding with Adobe
+              </div>
+              <div className="stories-wrapper">
+                {StoriesContent.map((data) => {
+                  return (
+                    <div className="customer cardView">
+                      <a href={data.URL}>
+                        <img
+                          className="logo"
+                          src={data.Thumbnail}
+                          alt={`${data.Title} Customer Story`}
+                        />
+                      </a>
+                      <div className="industry">{data.Title}</div>
+                      <a href={data.URL}>
+                        <div className="profile">{data.desc}</div>
+                      </a>
+                    </div>                    
                   );
                 })}
               </div>

@@ -4,16 +4,15 @@
 
 See how our customers are building great experiences and succeeding with Adobe.
 
-
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest"  className='useCaseCard card-heading-size' isCustomStories/>
 
-[K2Nintext.pdf](../resources/K2Nintex.pdf)
+[Waymark-Story.pdf](../resources/Waymark-Story.pdf)
 
-![K2 Nintex transforms document workflows with PDF Services API](../images/K2Nintex.png " ")
+![Waymark workflows with Adobe PDF Extract API.](../images/Waymark.jpg " ")
 
-### K2 NINTEX
+### Waymark
 
-Nintex transforms K2 Cloud workflows with Adobe Document Services APIs.
+Waymark Tech enables rapid impact assessments and compliance workflows with Adobe PDF Extract API.
 
 
 <ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>

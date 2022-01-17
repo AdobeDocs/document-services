@@ -5,7 +5,6 @@ description: Get started with Adobe Document Services APIs. Videos, blogs, tutor
 
 import '../../styles/developer-resource.css'
 
-import CustomerStory from './storyies.md';
 import {DynamicContentLoader} from '../../components/dynamicContentLoader';
 
 
@@ -24,10 +23,7 @@ Start integrating our APIs into your solutions
 
 <DynamicContentLoader theme="light" content='blog' api="https://www.feedrapp.info/?support=false&version=1.3.0&q=https%3A%2F%2Fmedium.com%2Ffeed%2Fadobetech%2Ftagged%2Fadobe-document-cloud&num=3"/>
 
-
-<WrapperComponent slots="content" theme="lightest"/>
-
-<CustomerStory/>
+<DynamicContentLoader theme="lightest" content='CustomerStories'/>
 
 <SummaryBlock slots=" heading, text, buttons"  theme='light' />
 
