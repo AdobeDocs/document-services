@@ -54,6 +54,8 @@ const getSelectedTabIndex = (location, pages) => {
   const pagesWithRootFix = rootFixPages(pages);
 
   let selectedIndex = pagesWithRootFix.indexOf(findSelectedTopPage(pathWithRootFix, pagesWithRootFix));
+  console.log('check1', selectedIndex, pathWithRootFix);
+  console.log('check2', selectedIndex === -1 && pathWithRootFix.split('/').indexOf('use-cases') > -1);
   if(selectedIndex === -1 && pathWithRootFix.split('/').indexOf('use-cases') > -1){
     let tempPathName = '/use-cases/agreements-and-contracts/sales-proposals-and-contracts/'
     selectedIndex = pagesWithRootFix.indexOf(findSelectedTopPage(tempPathName, pagesWithRootFix));
