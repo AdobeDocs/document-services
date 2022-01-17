@@ -140,7 +140,6 @@ const CustomMenuBlock = ( ) => {
           (selectedItem) => selectedItem === menu
         );
         const ref = createRef();
-        console.log('expandedHederMenus',expandedHederMenus);
         const isExpanded = menu.header || expandedMenus.includes(menu.href) || (expandedHederMenus.includes(index) && level === 1);
         const id = nextId();
 

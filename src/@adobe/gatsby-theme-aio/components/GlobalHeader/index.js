@@ -54,10 +54,11 @@ const getSelectedTabIndex = (location, pages) => {
   const pagesWithRootFix = rootFixPages(pages);
 
   let selectedIndex = pagesWithRootFix.indexOf(findSelectedTopPage(pathWithRootFix, pagesWithRootFix));
-  console.log('check1', selectedIndex, pathWithRootFix);
-  console.log('check2', selectedIndex === -1 && pathWithRootFix.split('/').indexOf('use-cases') > -1);
-  if(selectedIndex === -1 && pathWithRootFix.split('/').indexOf('use-cases') > -1){
-    let tempPathName = '/use-cases/agreements-and-contracts/sales-proposals-and-contracts/'
+  let tempArr = pathWithRootFix.split('/');
+  let inx = tempArr.indexOf('use-cases');
+  if(selectedIndex === -1 && inx > -1){
+    tempArr[inx+2] = 'sales-proposals-and-contracts';
+    let tempPathName = tempArr.join('/')
     selectedIndex = pagesWithRootFix.indexOf(findSelectedTopPage(tempPathName, pagesWithRootFix));
   }
   // Assume first item is selected
@@ -516,6 +517,12 @@ const GlobalHeader = ({
                 <Fragment key={i}>
                   {page.href ? (
                     <TabsItem
+                      className={isSelectedTab ? 'isSelected': ''}
+                      css={css`
+                        ${isSelectedTab && `
+                          color: var(--spectrum-global-color-gray-900);
+                        `}
+                      `}
                       onFocus={()=>{setOpenMenuIndex(-1)}}
                       elementType={GatsbyLink}
                       {...getExternalLinkProps(page.href)}
@@ -523,7 +530,7 @@ const GlobalHeader = ({
                       id={`tabindex${i}`}
                       to={withPrefix(page.href)}
                       selected={isSelectedTab}>
-                      <TabsItemLabel>{page.title}</TabsItemLabel>
+                      <TabsItemLabel> {page.title} </TabsItemLabel>
                     </TabsItem>
                   ) : (
                     <TabsItem
@@ -534,19 +541,21 @@ const GlobalHeader = ({
                      hasDropdown
                      openDropDown={openDropDown}
                       css={css`
-                        ${openMenuIndex === i &&
-                        `
-                        &:after {
-                          content: '';
-                          position: absolute;
-                          z-index: -1;
-                          height: var(--spectrum-global-dimension-size-800);
-                          width: calc(100% + var(--spectrum-global-dimension-size-250));
-                          left: calc(-1 * var(--spectrum-global-dimension-size-125));
-                          top: calc(-1 * var(--spectrum-global-dimension-size-100));
-                          background-color: var(--spectrum-global-color-gray-100);
-                        }
-                      `}
+                        ${openMenuIndex === i &&                        `
+                          &:after {
+                            content: '';
+                            position: absolute;
+                            z-index: -1;
+                            height: var(--spectrum-global-dimension-size-800);
+                            width: calc(100% + var(--spectrum-global-dimension-size-250));
+                            left: calc(-1 * var(--spectrum-global-dimension-size-125));
+                            top: calc(-1 * var(--spectrum-global-dimension-size-100));
+                            background-color: var(--spectrum-global-color-gray-100);
+                          }
+                        `}
+                        ${isSelectedTab && `
+                          color: var(--spectrum-global-color-gray-900);
+                        `}
                       `}
                       ref={setTabRef}
                       selected={isSelectedTab}
