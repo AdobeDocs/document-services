@@ -26,7 +26,7 @@ module.exports = {
     pages: [
       {
         title: 'Adobe Document Services',
-        path: 'homepage'
+        path: 'document-services/homepage'
       },
       {
         title: 'APIs',
@@ -59,7 +59,7 @@ module.exports = {
       },
       {
         title: 'Pricing',
-        path: 'pricing/main'
+        path: 'document-services/pricing/main'
       },
       {
         title: 'Resources',
