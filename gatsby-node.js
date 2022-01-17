@@ -165,9 +165,9 @@ exports.createResolvers = ({ createResolvers, addFrontmatterType }) => {
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     let temp = [
-      { filePath: './src/pages/index.md', url:'/document-services/homepage' },
-      { filePath: './src/pages/pricing/index.md', url:'/document-services/pricing/main' },
+      { filePath: './src/pages/index.md', url:'homepage' }     
     ]
+    // { filePath: './src/pages/pricing/index.md', url:'pricing/main' },
 
     temp.map(val => {
         const myComponent = require.resolve(val.filePath);
