@@ -59,6 +59,9 @@ const getSelectedTabIndex = (location, pages) => {
   if(selectedIndex === -1 && inx > -1){
     tempArr[inx+1] = 'agreements-and-contracts';
     tempArr[inx+2] = 'sales-proposals-and-contracts';
+    if(tempArr[inx+3] == undefined){
+      tempArr.push("");
+    }
     let tempPathName = tempArr.join('/')
     selectedIndex = pagesWithRootFix.indexOf(findSelectedTopPage(tempPathName, pagesWithRootFix));
   }
