@@ -9,8 +9,6 @@ import "@spectrum-css/card";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import "../../../../styles/main.css"
-
 import { MOBILE_SCREEN_WIDTH } from "@adobe/gatsby-theme-aio/src/utils";
 
 const FormWrapperComponent = ({
@@ -50,9 +48,9 @@ const FormWrapperComponent = ({
           {content0}
         </div>
         <div
-          className="rightContent"
           css={css`
             width: 40%;
+            
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
               width: 100% !important;
             }

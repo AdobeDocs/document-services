@@ -1112,15 +1112,3 @@ pre .prism-code.spectrum-Code  span.token.string{
     text-decoration:underline;
     border-bottom: 1px solid #1374e6;
 }
-
-form#sdk_lead_gen{
-    background-color: red !important;
-}
-
-.rightContent iframe form#sdk_lead_gen .checkbox_row a{
-    color: red !important;
-}
-
-#form > form#sdk_lead_gen {
-    background-color: blue !important;
-}
