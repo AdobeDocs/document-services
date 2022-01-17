@@ -57,6 +57,7 @@ const getSelectedTabIndex = (location, pages) => {
   let tempArr = pathWithRootFix.split('/');
   let inx = tempArr.indexOf('use-cases');
   if(selectedIndex === -1 && inx > -1){
+    tempArr[inx+1] = 'agreements-and-contracts';
     tempArr[inx+2] = 'sales-proposals-and-contracts';
     let tempPathName = tempArr.join('/')
     selectedIndex = pagesWithRootFix.indexOf(findSelectedTopPage(tempPathName, pagesWithRootFix));
