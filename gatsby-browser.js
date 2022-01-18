@@ -56,7 +56,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let baseurl = 'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html';
 
     // production
-    if(window.location.host.indexOf('developer.adobe.com') >= 0) {
+    if(window.location.host.indexOf('developer.adobe.com') >= 0 || window.location.host.indexOf('adobe.io') >= 0) {
       baseurl = 'https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html';
     }
 
