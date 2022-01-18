@@ -15,13 +15,13 @@ module.exports = {
     siteTitle:'Adobe Developers',
     author: process.env.AUTHOR || 'Adobe I/O — Adobe Developers',
     creator: process.env.CREATOR || '@adobedevs',
-    siteUrl: process.env.SITE_URL || 'https://developer-stage.adobe.com/',
+    siteUrl: process.env.SITE_URL || 'https://developer.adobe.com/',
     baseUrl: process.env.BASEURL || '',
     productionDomain: process.env.PRODUCTION_DOMAIN || 'https://www.adobe.io',
     pageImage: process.env.PAGE_IMAGE || 'dcsdk-main.jpg',
     docs: {
       title: 'Get credentials',
-      path: 'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html'
+      path: 'https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html'
     },
     pages: [
       {
