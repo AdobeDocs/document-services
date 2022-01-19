@@ -13,7 +13,39 @@ Optimize PDFs for quick viewing on the web, especially for mobile clients. Linea
 See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-linearizePDF) and quickly try our APIs using the Postman collections
 
 
-<CodeBlock slots="heading, code" repeat="3" languages="js, .net, java" />
+<CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET,Java" />
+
+#### REST API
+
+```bash
+// Please refer our Rest API docs for more information
+// https://documentcloud.adobe.com/document-services/index.html#post-linearizePDF
+
+curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith=%7B%22reltype%22%3A%20%22http%3A%2F%2Fns.adobe.com%2Frel%2Fprimary%22%7D' \
+--header 'Authorization: Bearer {{Placeholder for token}}' \
+--header 'Accept: application/json, text/plain, */*' \
+--header 'x-api-key: {{Placeholder for client_id}}' \
+--header 'Prefer: respond-async,wait=0' \
+--form 'contentAnalyzerRequests="{
+    \"cpf:inputs\": {
+        \"documentIn\": {
+            \"cpf:location\": \"InputFile0\",
+            \"dc:format\": \"application/pdf\"
+        }
+    },
+    \"cpf:engine\": {
+        \"repo:assetId\": \"urn:aaid:cpf:Service-e4d5f0b75e5d43ea9eaa187860772d27\"
+    },
+    \"cpf:outputs\": {
+        \"documentOut\": {
+            \"cpf:location\": \"multipartLabelOut\",
+            \"dc:format\": \"application/pdf\"
+        }
+    }
+}"' \
+--form 'InputFile0=@"{{Placeholder for input file (absolute path)}}"'
+
+```
 
 
 #### Node js
