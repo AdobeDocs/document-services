@@ -1,8 +1,6 @@
 const clouds = ["Agreements and Contracts", "Content Publishing","Education","Human Resources", "Financial"];
 
-// const baseUrl = '/document-services';
-
-const baseUrl = ' ';
+const baseUrl = '/document-services';
 
 // Important: lastUpdated date should be unique to ensure stable sort across browsers
 const products = [
@@ -19,8 +17,7 @@ const products = [
   {
     id: 1,
     name: "Grant application",
-    description:
-      "The Libraries API lets you connect your app to Creative Cloud and expand the reach of your users' creative systems.",
+    description: "The Libraries API lets you connect your app to Creative Cloud and expand the reach of your users' creative systems.",
     icon: `${baseUrl}/img/template-icons/grant_application.jpg`,
     discover: "https://www.adobe.com/go/dcdg_samplegrant",
     docs: false,
@@ -30,8 +27,7 @@ const products = [
   {
     id: 2,
     name: "Invoice",
-    description:
-      "Adobe XD’s powerful API platform lets developers and users extend XD within the app, or in the cloud.",
+    description: "Adobe XD’s powerful API platform lets developers and users extend XD within the app, or in the cloud.",
     icon: `${baseUrl}/img/template-icons/invoice.jpg`,
     discover: "https://www.adobe.com/go/dcdg_sampleinvoice",
     docs: false,
@@ -51,7 +47,7 @@ const products = [
   {
     id: 4,
     name: "Certification report",
-    description:"With Photoshop APIs and SDKs, build plugins and integrations that harness the power of the world's best image editing",
+    description: "With Photoshop APIs and SDKs, build plugins and integrations that harness the power of the world's best image editing",
     icon: `${baseUrl}/img/template-icons/lms_report.jpg`,
     discover: "https://www.adobe.com/go/dcdg_samplereport",
     docs: false,
