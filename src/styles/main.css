@@ -1070,7 +1070,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         display: none;
     }
   }
-/* .global_header {
+.global_header {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1090,23 +1090,23 @@ pre .prism-code.spectrum-Code  span.token.string{
     color: var(--spectrum-global-color-gray-700) !important;
     -webkit-transition: background-color var(--spectrum-global-animation-duration-100) ease-out,color var(--spectrum-global-animation-duration-100) ease-out;
     transition: background-color var(--spectrum-global-animation-duration-100) ease-out,color var(--spectrum-global-animation-duration-100) ease-out;
-} */
+}
 
-/* .global_header:hover  {
+.global_header:hover  {
     background-color: var(--spectrum-global-color-gray-75) !important;
     color: var(--spectrum-global-color-gray-900) !important;
     text-decoration: none !important;
-} */
+}
 
 .sub-menu-item .spectrum-Menu-itemLabel {
     white-space: initial;
 }
 
-/* 
+
 .linking .spectrum-Link:focus{
     text-decoration:underline;
     border-bottom: 1px solid #1374e6;
-} */
+}
 
 .linking-accessbility:focus{
     text-decoration:underline;
