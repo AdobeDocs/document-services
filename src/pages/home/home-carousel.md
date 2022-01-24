@@ -35,7 +35,7 @@ options with just a few lines of code.”
 
 ![Infodesk](../images/infodesk_2x.png)
 
-“InfoDesk provides AI-driven technology and tools that ena ble organizations to make the smartest
+“InfoDesk provides AI-driven technology and tools that enable organizations to make the smartest
 decisions confidently. This involves delivering highly relevant insights to our customers in a format that
 suits them best so they can harness the value of their information. By using Adobe’s Document Service
 API, our customers can easily convert PDF reports to PowerPoint for use in client presentations and
