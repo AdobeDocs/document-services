@@ -15,6 +15,26 @@ import {withPrefix} from 'gatsby';
 
 export const onRenderBody = ({setHeadComponents}) => {
   setHeadComponents([
-    <script src={withPrefix('/gtag.js')}></script>
+    <script src={withPrefix('/gtag.js')}></script>,
+
+    process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
+      <script type="text/javascript">{`
+        window.marketingtech = {
+          'adobe': {
+            'launch': {
+              'property': 'global',
+              'environment': '${process.env.GATSBY_ADOBE_ANALYTICS_ENV}'
+            },
+            'analytics': {
+              'additionalAccounts': '${process.env.GATSBY_ADDITIONAL_ADOBE_ANALYTICS_ACCOUNTS}'
+            }
+          }
+        };
+      `}</script>
+    ),
+
+    process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
+      <script src="https://www.adobe.com/marketingtech/main.min.js"></script>
+    )
   ]);
 };
