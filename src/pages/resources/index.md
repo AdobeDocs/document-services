@@ -1,11 +1,13 @@
 ---
 title: Developer Resources & Tutorials | Adobe PDF Services API | Adobe Document Services
 description: Get started with Adobe Document Services APIs. Videos, blogs, tutorials, and more to develop dynamic document workflows using Adobe PDF Services APIs to create, convert, OCR and extract PDF content. Free 6-month trial. Learn more today.
+Tag 1: Adobe Content RTG - Site Retargeting 
 ---
 
 import '../../styles/developer-resource.css'
 
 import {DynamicContentLoader} from '../../components/dynamicContentLoader';
+import PixelRetargeting from '../../components/retargetting'
 
 
 <Hero slots="heading, text" variant="fullwidth" theme="lightest" customLayout className="sub-title"/>
@@ -33,3 +35,5 @@ Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 * [Contact us](../pricing/contact.md)
+
+<PixelRetargeting />
