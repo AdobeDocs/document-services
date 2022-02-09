@@ -49,3 +49,13 @@ Cambridge Assessment intends to digitize more than 100 years of test material wi
 ### EVISORT
 
 Evisort uses Adobe PDF Extract API to bring visibility and intelligence to contracts.
+
+<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
+
+[AI-Singapore-Story](AI-Singapore-Story.pdf)
+
+![Evisort uses PDF Extract API for intelliqent contracts](../images/AISingapore.png " ")
+
+### AI Singapore (AISG)
+
+AI Singapore accelerates deep learning models with Adobe PDF Extract API.

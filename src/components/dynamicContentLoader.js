@@ -13,12 +13,15 @@ import AdobeInDesign from "../pages/images/AdobeInDesign.png";
 import CambridgeAssessment from "../pages/images/Cambridge-Assessment.jpeg";
 import Evisort from "../pages/images/Evisort.jpeg";
 import Waymark from "../pages/images/Waymark.jpg";
+import AISingapore from "../pages/images/AISingapore.png";
 
 import K2NintexPDF from "../pages/resources/K2Nintex.pdf";
 import AdobeInDesignPDF from "../pages/resources/AdobeInDesign.pdf";
 import CambridgeAssessmentPDF from "../pages/resources/Cambridge-Assessment.pdf";
 import EvisortPDF from "../pages/resources/Evisort.pdf";
 import WaymarkPDF from "../pages/resources/Waymark-Story.pdf";
+import AISingaporePDF from "../pages/resources/AI-Singapore-Story.pdf";
+
 
 const getImageURl = (url) => {
   let imageURL = url.split("/");
@@ -90,7 +93,16 @@ const StoriesContent = [
     Thumbnail: Waymark,
     desc:"Waymark Tech enables rapid impact assessments and compliance workflows with Adobe PDF Extract API."
   },
+  {
+    Title: "AI Singapore (AISG)",
+    URL: AISingaporePDF,
+    Thumbnail: AISingapore,
+    desc:"AI Singapore accelerates deep learning models with Adobe PDF Extract API."
+  },
 ];
+
+
+
 
 const DynamicContentLoader = ({
   api = "",
