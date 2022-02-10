@@ -73,7 +73,7 @@ const StoriesContent = [
     Title: "Adobe InDesign",
     URL: AdobeInDesignPDF,
     Thumbnail: AdobeInDesign,
-    desc:"Adobe InDesign brings its new Share for Review features to life with Adobe Document Services APIs."
+    desc:"Adobe InDesign brings its new share for review features to life with Adobe Document Services APIs."
   },
   {
     Title: "Cambridge Assessment",

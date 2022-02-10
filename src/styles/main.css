@@ -1112,3 +1112,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     text-decoration:underline;
     border-bottom: 1px solid #1374e6;
 }
+
+.hme-custom-header .spectrum-Card-title{
+    padding-right:0 !important;
+}

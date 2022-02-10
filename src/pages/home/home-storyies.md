@@ -21,19 +21,19 @@ Waymark Tech enables rapid impact assessments and compliance workflows with Adob
 
 ![Adobe InDesign Share for Review built with PDF Embed API](../images/AdobeInDesign.png " ")
 
-### ADOBE INDESIGN
+### Adobe InDesign
 
-Adobe InDesign brings its new Share for Review features to life with Adobe Document Services APIs.
+Adobe InDesign brings its new share for review features to life with Adobe Document Services APIs.
 
 
 
-<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
+<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size hme-custom-header' isCustomStories/>
 
 [Cambridge-Assessment.pdf](../resources/Cambridge-Assessment.pdf)
 
 ![Cambridge Assessment digitizes test data with PDF Extract API](../images/Cambridge-Assessment.jpeg " ")
 
-### CAMBRIDGE ASSESSMENT
+### Cambridge Assessment
 
 Cambridge Assessment intends to digitize more than 100 years of test material with Adobe PDF Extract API.
 
