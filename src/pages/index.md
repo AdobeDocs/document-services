@@ -13,7 +13,7 @@ import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './home/home-storyies.md'
 
-<Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" className="homeherobgImage"/>
+<Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" className="homeherobgImage Hero-Banner"/>
 
 # Reimagine document experiences with PDF APIs designed for developers
 
@@ -24,7 +24,7 @@ From the company who created the PDF standard.
 
 homeheroAssertImage
 
-<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding"/>
+<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
 
 ![PDF Services API Workflow](images/pdfServices.jpg)
 
@@ -41,7 +41,7 @@ Do more with this API.
 
 
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding"/>
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
 
 ### Adobe PDF Extract API
 ### Unlock content structure in any PDF.
@@ -58,7 +58,7 @@ on both scanned and native PDFs and is included with PDF Services API.
 
 
 
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding"/>
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
 
 ![Document Generation API Workflow](images/docGen.jpg)
 
@@ -76,7 +76,7 @@ Services API.
 
 
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding"/>
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
 
 ### Adobe PDF Embed API
 ### Display PDFs and enable collaboration with this free tool.
@@ -93,7 +93,7 @@ samples for Angular and React.
 ![PDF Embed API Workflow](images/pdfEmbed.jpg)
 
 
-<SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight />
+<SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
 
 ## Designed for developers
 
@@ -103,7 +103,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 
 
-<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://www.adobe.com/go/dcsdk_APIdocs"  repeat="4"  theme="dark" className='bgBlue code-block-0' />
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://www.adobe.com/go/dcsdk_APIdocs"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers' />
 
 ### Create PDF from Word
 
@@ -138,21 +138,21 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 
 
-<WrapperComponent slots="content" repeat="1" theme="light"/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="Use-cases-for-Adobe-Document-Services"/>
 
 <HomeResourceCard />
 
 
 
 
-<TextBlock slots="buttons" isCentered theme="light"  className='padding-5'/>
+<TextBlock slots="buttons" isCentered theme="light"  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
 
 - [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 
 
 
-<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="Customer-Stories"/>
 
 <CustomerStory />
 
@@ -166,7 +166,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
 
 ![summary block bg img](images/bg-hero.jpeg)
 
