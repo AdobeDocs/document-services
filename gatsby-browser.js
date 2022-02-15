@@ -120,7 +120,62 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           getStartedButton.href = `${baseurl}`;
         }) 
       }
-
     }
+
+    // set page data attribute hierarchy
+    // classes:
+    // Hero-Banner
+    // Adobe-PDF-Services-API
+    // Adobe-PDF-Extract-API
+    // Adobe-Document-Generation-API
+    // Adobe-PDF-Embed-API
+    // Designed-for-developers
+    // Use-cases-for-Adobe-Document-Services
+    // Customer-Stories
+    // How-to-get-started
+    document.querySelector('.Hero-Banner').setAttribute('daa-lh', 'Hero Banner');
+    document.querySelectorAll('.Hero-Banner a').forEach(link => {
+      link.setAttribute('daa-ll', link.textContent);
+    });
+
+    document.querySelector('.Adobe-PDF-Services-API').setAttribute('daa-lh', 'Adobe PDF Services API');
+    document.querySelectorAll('.Adobe-PDF-Services-API a').forEach(link => {
+      link.setAttribute('daa-ll', link.textContent);
+    });
+
+    document.querySelector('.Adobe-PDF-Extract-API').setAttribute('daa-lh', 'Adobe PDF Extract API');
+    document.querySelectorAll('.Adobe-PDF-Extract-API a').forEach(link => {
+      link.setAttribute('daa-ll', link.textContent);
+    });
+
+    document.querySelector('.Adobe-Document-Generation-API').setAttribute('daa-lh', 'Adobe Document Generation API');
+    document.querySelectorAll('.Adobe-Document-Generation-API a').forEach(link => {
+      link.setAttribute('daa-ll', link.textContent);
+    });
+
+    document.querySelector('.Adobe-PDF-Embed-API').setAttribute('daa-lh', 'Adobe PDF Embed API');
+    document.querySelectorAll('.Adobe-PDF-Embed-API a').forEach(link => {
+      link.setAttribute('daa-ll', link.textContent);
+    });
+
+    document.querySelector('.Designed-for-developers').setAttribute('daa-lh', 'Designed for developers');
+    document.querySelectorAll('.Designed-for-developers a').forEach(link => {
+      link.setAttribute('daa-ll', link.textContent);
+    });
+
+    document.querySelector('.Use-cases-for-Adobe-Document-Services').setAttribute('daa-lh', 'Use cases for Adobe Document Services');
+    document.querySelectorAll('.Use-cases-for-Adobe-Document-Services a').forEach(link => {
+      link.setAttribute('daa-ll', link.querySelector('h3')?.textContent);
+    });
+
+    document.querySelector('.Customer-Stories').setAttribute('daa-lh', 'Customer Stories');
+    document.querySelectorAll('.Customer-Stories a').forEach(link => {
+      link.setAttribute('daa-ll', link.querySelector('h3')?.textContent);
+    });
+
+    document.querySelector('.How-to-get-started').setAttribute('daa-lh', 'How to get started?');
+    document.querySelectorAll('.How-to-get-started a').forEach(link => {
+      link.setAttribute('daa-ll', link.textContent);
+    });
   }
 }
