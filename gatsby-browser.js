@@ -12,32 +12,6 @@
 
 const isBrowser = typeof window !== "undefined";
 
-export const onClientEntry = () => {
-  if(isBrowser){
-    window.digitalData = window.digitalData || {};
-    window.digitalData = {
-      page : {
-        pageInfo : {
-          siteSection : '',
-          template : '',
-          language: 'en-us',
-          geoRegion: '',
-          issueDate: '',
-          breadCrumbs: []
-        }
-      }
-    }
-
-    window.onload = () => {
-      window.digitalData.page.pageInfo.breadCrumbs = [];
-      document.querySelectorAll('.spectrum-Breadcrumbs-item').forEach((item) => {
-        window.digitalData.page.pageInfo.breadCrumbs.push(item.innerText);
-      });
-    }
-  }
-
-}
-
 export const onRouteUpdate = ({ location, prevLocation }) => {
   if(isBrowser) {
     let siteSection = location.pathname.split('/');
@@ -122,17 +96,28 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       }
     }
 
-    // set page data attribute hierarchy
-    // classes:
-    // Hero-Banner
-    // Adobe-PDF-Services-API
-    // Adobe-PDF-Extract-API
-    // Adobe-Document-Generation-API
-    // Adobe-PDF-Embed-API
-    // Designed-for-developers
-    // Use-cases-for-Adobe-Document-Services
-    // Customer-Stories
-    // How-to-get-started
+    let header = document.querySelector('header');
+    header.setAttribute('daa-lh', 'Gnav');
+    header.querySelector("a[href='/']").setAttribute('daa-ll','Adobe Developer');
+    header.querySelector("a[href='/apis']").setAttribute('daa-ll','Products');
+    header.querySelector("a[href='/document-services/homepage/']").setAttribute('daa-ll','Adobe Document Services');
+    header.querySelector("a[href='/document-services/apis/pdf-services/']").setAttribute('daa-ll','PDF Services');
+    header.querySelector("a[href='/document-services/apis/pdf-extract/']").setAttribute('daa-ll','PDF Extract');
+    header.querySelector("a[href='/document-services/apis/doc-generation/']").setAttribute('daa-ll','Document Generation');
+    header.querySelector("a[href='/document-services/apis/pdf-embed/']").setAttribute('daa-ll','PDF Embed');
+    header.querySelector("a[href='/use-cases/agreements-and-contracts/sales-proposals-and-contracts/']").setAttribute('daa-ll','Use Cases');
+    header.querySelector("a[href='/document-services/pricing/main/']").setAttribute('daa-ll','Pricing');
+    header.querySelector("a[href='/document-services/resources/']").setAttribute('daa-ll','Developer Resources');
+    header.querySelector("a[href='https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all']").setAttribute('daa-ll','Forum');
+    header.querySelector("a[href='/document-services/docs/overview/pdf-services-api/dcserviceslicensing/']").setAttribute('daa-ll','Licensing');
+    header.querySelector("a[href='/document-services/docs/overview/']").setAttribute('daa-ll','Documenation Overview');
+    header.querySelector("a[href='/document-services/docs/overview/pdf-services-api/']").setAttribute('daa-ll','Documenation PDF Services API');
+    header.querySelector("a[href='/document-services/docs/overview/pdf-extract-api/']").setAttribute('daa-ll','Documenation PDF Extract API');
+    header.querySelector("a[href='/document-services/docs/overview/document-generation-api/']").setAttribute('daa-ll','Documenation Document Generation API');
+    header.querySelector("a[href='/document-services/docs/overview/pdf-embed-api/']").setAttribute('daa-ll','Documenation PDF Embed API');
+    header.querySelector(`a[href='${baseurl}']`).setAttribute('daa-ll','Get credentials');
+    header.querySelector("a[href='/console']").setAttribute('daa-ll','Console');
+
     document.querySelector('.Hero-Banner').setAttribute('daa-lh', 'Hero Banner');
     document.querySelectorAll('.Hero-Banner a').forEach(link => {
       link.setAttribute('daa-ll', link.textContent);
