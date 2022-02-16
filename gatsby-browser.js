@@ -13,10 +13,7 @@
 const isBrowser = typeof window !== "undefined";
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
-  if(isBrowser) {
-
-
-  
+  if(isBrowser) {  
     let siteSection = location.pathname.split('/');
     window.digitalData.page.pageInfo.siteSection = siteSection.pop() || siteSection.pop();
 
@@ -37,10 +34,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     //local
     let navLinksBaseUrl = '';
-
+    let isLocal = true;
     // stage/deploy 
     if(window.location.host.indexOf('adobe.com') >= 0 ) {
       navLinksBaseUrl = '/document-services';
+      isLocal = false;
     }
     // stage
     let baseurl = 'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html';
@@ -140,80 +138,78 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         getStartedButtonArr.map((getStartedButton) => {
           getStartedButton.href = `${baseurl}`;
         });
+      }
+    }
 
-        document
-          .querySelector(".Hero-Banner")
-          .setAttribute("daa-lh", "Hero Banner");
-        document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+    if (window.location.pathname.indexOf('homepage') >= 0 || (window.location.pathname === "/" && isLocal)) {
+      document
+        .querySelector(".Hero-Banner")
+        .setAttribute("daa-lh", "Hero Banner");
+      document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Adobe-PDF-Services-API")
+        .setAttribute("daa-lh", "Adobe PDF Services API");
+      document.querySelectorAll(".Adobe-PDF-Services-API a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Adobe-PDF-Extract-API")
+        .setAttribute("daa-lh", "Adobe PDF Extract API");
+      document.querySelectorAll(".Adobe-PDF-Extract-API a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Adobe-Document-Generation-API")
+        .setAttribute("daa-lh", "Adobe Document Generation API");
+      document
+        .querySelectorAll(".Adobe-Document-Generation-API a")
+        .forEach((link) => {
           link.setAttribute("daa-ll", link.textContent);
         });
 
-        document
-          .querySelector(".Adobe-PDF-Services-API")
-          .setAttribute("daa-lh", "Adobe PDF Services API");
-        document
-          .querySelectorAll(".Adobe-PDF-Services-API a")
-          .forEach((link) => {
-            link.setAttribute("daa-ll", link.textContent);
-          });
+      document
+        .querySelector(".Adobe-PDF-Embed-API")
+        .setAttribute("daa-lh", "Adobe PDF Embed API");
+      document.querySelectorAll(".Adobe-PDF-Embed-API a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
 
-        document
-          .querySelector(".Adobe-PDF-Extract-API")
-          .setAttribute("daa-lh", "Adobe PDF Extract API");
-        document
-          .querySelectorAll(".Adobe-PDF-Extract-API a")
-          .forEach((link) => {
-            link.setAttribute("daa-ll", link.textContent);
-          });
-
-        document
-          .querySelector(".Adobe-Document-Generation-API")
-          .setAttribute("daa-lh", "Adobe Document Generation API");
-        document
-          .querySelectorAll(".Adobe-Document-Generation-API a")
-          .forEach((link) => {
-            link.setAttribute("daa-ll", link.textContent);
-          });
-
-        document
-          .querySelector(".Adobe-PDF-Embed-API")
-          .setAttribute("daa-lh", "Adobe PDF Embed API");
-        document.querySelectorAll(".Adobe-PDF-Embed-API a").forEach((link) => {
+      document
+        .querySelector(".Designed-for-developers")
+        .setAttribute("daa-lh", "Designed for developers");
+      document
+        .querySelectorAll(".Designed-for-developers a")
+        .forEach((link) => {
           link.setAttribute("daa-ll", link.textContent);
         });
 
-        document
-          .querySelector(".Designed-for-developers")
-          .setAttribute("daa-lh", "Designed for developers");
-        document
-          .querySelectorAll(".Designed-for-developers a")
-          .forEach((link) => {
-            link.setAttribute("daa-ll", link.textContent);
-          });
-
-        document
-          .querySelector(".Use-cases-for-Adobe-Document-Services")
-          .setAttribute("daa-lh", "Use cases for Adobe Document Services");
-        document
-          .querySelectorAll(".Use-cases-for-Adobe-Document-Services a")
-          .forEach((link) => {
-            link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
-          });
-
-        document
-          .querySelector(".Customer-Stories")
-          .setAttribute("daa-lh", "Customer Stories");
-        document.querySelectorAll(".Customer-Stories a").forEach((link) => {
+      document
+        .querySelector(".Use-cases-for-Adobe-Document-Services")
+        .setAttribute("daa-lh", "Use cases for Adobe Document Services");
+      document
+        .querySelectorAll(".Use-cases-for-Adobe-Document-Services a")
+        .forEach((link) => {
           link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
         });
 
-        document
-          .querySelector(".How-to-get-started")
-          .setAttribute("daa-lh", "How to get started?");
-        document.querySelectorAll(".How-to-get-started a").forEach((link) => {
-          link.setAttribute("daa-ll", link.textContent);
-        });
-      }
+      document
+        .querySelector(".Customer-Stories")
+        .setAttribute("daa-lh", "Customer Stories");
+      document.querySelectorAll(".Customer-Stories a").forEach((link) => {
+        link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
+      });
+
+      document
+        .querySelector(".How-to-get-started")
+        .setAttribute("daa-lh", "How to get started?");
+      document.querySelectorAll(".How-to-get-started a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
     }
   }
 }
