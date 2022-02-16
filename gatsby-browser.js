@@ -14,6 +14,9 @@ const isBrowser = typeof window !== "undefined";
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
   if(isBrowser) {
+
+
+  
     let siteSection = location.pathname.split('/');
     window.digitalData.page.pageInfo.siteSection = siteSection.pop() || siteSection.pop();
 
@@ -21,6 +24,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     document.querySelectorAll('.spectrum-Breadcrumbs-item').forEach((item) => {
       window.digitalData.page.pageInfo.breadCrumbs.push(item.innerText);
     });
+
+    if(window._satellite){
+      window._satellite.track('state', {
+        digitalData: window.digitalData._snapshot()
+      });
+    }
 
     let getCredentialsButton = Array.from(document.querySelectorAll('a')).find(el => el.textContent === 'Get credentials');
     let startFreeTrialButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Start free trial');
