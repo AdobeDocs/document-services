@@ -26,6 +26,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let startFreeTrialButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Start free trial');
     let getStartedButtonArr = Array.from(document.querySelectorAll('a')).filter(el => el.textContent === 'Get started');
 
+    //local
+    let navLinksBaseUrl = '';
+
+    // stage/deploy 
+    if(window.location.host.indexOf('adobe.com') >= 0 ) {
+      navLinksBaseUrl = '/document-services';
+    }
     // stage
     let baseurl = 'https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html';
 
@@ -36,36 +43,37 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     getCredentialsButton.href = `${baseurl}`;
 
-    let header = document.querySelector('header');
-    header.setAttribute('daa-lh', 'Gnav');
-    header.querySelector("a[href='/']").setAttribute('daa-ll','Adobe Developer');
-    header.querySelector("a[href='/apis']").setAttribute('daa-ll','Products');
-    header.querySelector("a[href='/document-services/homepage/']").setAttribute('daa-ll','Adobe Document Services');
-    header.querySelector("a[href='/document-services/apis/pdf-services/']").setAttribute('daa-ll','PDF Services');
-    header.querySelector("a[href='/document-services/apis/pdf-extract/']").setAttribute('daa-ll','PDF Extract');
-    header.querySelector("a[href='/document-services/apis/doc-generation/']").setAttribute('daa-ll','Document Generation');
-    header.querySelector("a[href='/document-services/apis/pdf-embed/']").setAttribute('daa-ll','PDF Embed');
-    header.querySelector("a[href='/use-cases/agreements-and-contracts/sales-proposals-and-contracts/']").setAttribute('daa-ll','Use Cases');
-    header.querySelector("a[href='/document-services/pricing/main/']").setAttribute('daa-ll','Pricing');
-    header.querySelector("a[href='/document-services/resources/']").setAttribute('daa-ll','Developer Resources');
-    header.querySelector("a[href='https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all']").setAttribute('daa-ll','Forum');
-    header.querySelector("a[href='/document-services/docs/overview/pdf-services-api/dcserviceslicensing/']").setAttribute('daa-ll','Licensing');
-    header.querySelector("a[href='/document-services/docs/overview/']").setAttribute('daa-ll','Documenation Overview');
-    header.querySelector("a[href='/document-services/docs/overview/pdf-services-api/']").setAttribute('daa-ll','Documenation PDF Services API');
-    header.querySelector("a[href='/document-services/docs/overview/pdf-extract-api/']").setAttribute('daa-ll','Documenation PDF Extract API');
-    header.querySelector("a[href='/document-services/docs/overview/document-generation-api/']").setAttribute('daa-ll','Documenation Document Generation API');
-    header.querySelector("a[href='/document-services/docs/overview/pdf-embed-api/']").setAttribute('daa-ll','Documenation PDF Embed API');
-    header.querySelector(`a[href='${baseurl}']`).setAttribute('daa-ll','Get credentials');
-    header.querySelector("a[href='/console']").setAttribute('daa-ll','Console');
 
-    let footer = document.querySelectorAll('footer');
+  let header = document.querySelector('header');
+    header.setAttribute('daa-lh', 'Gnav');
+    header.querySelector("a[href='/']")?.setAttribute('daa-ll','Adobe Developer');
+    header.querySelector("a[href='/apis/']")?.setAttribute('daa-ll','Products');
+    header.querySelector(`a[href='${navLinksBaseUrl}/homepage/']`)?.setAttribute('daa-ll','Adobe Document Services');
+    header.querySelector(`a[href='${navLinksBaseUrl}/apis/pdf-services/']`)?.setAttribute('daa-ll','PDF Services');
+    header.querySelector(`a[href='${navLinksBaseUrl}/apis/pdf-extract/']`)?.setAttribute('daa-ll','PDF Extract');
+    header.querySelector(`a[href='${navLinksBaseUrl}/apis/doc-generation/']`)?.setAttribute('daa-ll','Document Generation');
+    header.querySelector(`a[href='${navLinksBaseUrl}/apis/pdf-embed/']`)?.setAttribute('daa-ll','PDF Embed');
+    header.querySelector(`a[href='/use-cases/agreements-and-contracts/sales-proposals-and-contracts/']`)?.setAttribute('daa-ll','Use Cases');
+    header.querySelector(`a[href='${navLinksBaseUrl}/pricing/main/']`)?.setAttribute('daa-ll','Pricing');
+    header.querySelector(`a[href='${navLinksBaseUrl}/resources/']`)?.setAttribute('daa-ll','Developer Resources');
+    header.querySelector("a[href='https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all']")?.setAttribute('daa-ll','Forum');
+    header.querySelector(`a[href='${navLinksBaseUrl}/docs/overview/pdf-services-api/dcserviceslicensing/']`)?.setAttribute('daa-ll','Licensing');
+    header.querySelector(`a[href='${navLinksBaseUrl}/docs/overview/']`)?.setAttribute('daa-ll','Documenation Overview');
+    header.querySelector(`a[href='${navLinksBaseUrl}/docs/overview/pdf-services-api/']`)?.setAttribute('daa-ll','Documenation PDF Services API');
+    header.querySelector(`a[href='${navLinksBaseUrl}/docs/overview/pdf-extract-api/']`)?.setAttribute('daa-ll','Documenation PDF Extract API');
+    header.querySelector(`a[href='${navLinksBaseUrl}/docs/overview/document-generation-api/']`)?.setAttribute('daa-ll','Documenation Document Generation API');
+    header.querySelector(`a[href='${navLinksBaseUrl}/docs/overview/pdf-embed-api/']`)?.setAttribute('daa-ll','Documenation PDF Embed API');
+    header.querySelector(`a[href='${baseurl}']`)?.setAttribute('daa-ll','Get credentials');
+    header.querySelector("a[href='/console']")?.setAttribute('daa-ll','Console');
+
+    let footer = document.querySelector('footer');
     footer.setAttribute('daa-lh', 'Footer');
     footer.querySelectorAll('a').forEach(link => {
       if(link.textContent){
         link.setAttribute('daa-ll', link.textContent);
       }
     });
-    
+
     if(window.location.pathname.indexOf('pdf-services') >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
 
