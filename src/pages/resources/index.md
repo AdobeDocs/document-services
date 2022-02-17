@@ -10,24 +10,24 @@ import {DynamicContentLoader} from '../../components/dynamicContentLoader';
 import PixelRetargeting from '../../components/retargetting'
 
 
-<Hero slots="heading, text" variant="fullwidth" theme="lightest" customLayout className="sub-title"/>
+<Hero slots="heading, text" variant="fullwidth" theme="lightest" customLayout className="sub-title resource-banner"/>
 
 # Developer Resources
 
 Start integrating our APIs into your solutions
 
-<DynamicContentLoader theme="lightest" content='usingAdobePDFService' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Hero&page_size=1"/>
+<DynamicContentLoader theme="lightest" content='usingAdobePDFService' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Hero&page_size=1" className="Adobe-PDF-Services-API-Overview"/>
 
 
-<DynamicContentLoader theme="light" content='feature' />
+<DynamicContentLoader theme="light" content='feature' className="feature-content" />
 
-<DynamicContentLoader theme="lightest" content='tutorial' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Tutorial&page_size=6"/>
+<DynamicContentLoader theme="lightest" content='tutorial' className="tutorial-content" api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Tutorial&page_size=6" />
 
-<DynamicContentLoader theme="light" content='blog' api="https://www.feedrapp.info/?support=false&version=1.3.0&q=https%3A%2F%2Fmedium.com%2Ffeed%2Fadobetech%2Ftagged%2Fadobe-document-cloud&num=3"/>
+<DynamicContentLoader theme="light" content='blog'  className="blog-content"  api="https://www.feedrapp.info/?support=false&version=1.3.0&q=https%3A%2F%2Fmedium.com%2Ffeed%2Fadobetech%2Ftagged%2Fadobe-document-cloud&num=3"/>
 
-<DynamicContentLoader theme="lightest" content='CustomerStories'/>
+<DynamicContentLoader theme="lightest" content='CustomerStories' className="Customer-Stories"/>
 
-<SummaryBlock slots=" heading, text, buttons"  theme='light' />
+<SummaryBlock slots=" heading, text, buttons"  theme='light' className="we-ready-to-help" />
 
 ### We're ready to help
 

@@ -129,23 +129,22 @@ const DynamicContentLoader = ({
         background: var(--spectrum-global-color-gray-100);
       `}
     >
-      {content === "usingAdobePDFService" && resData?.data?.length > 0 && (
-        <section className="sdk-rsrc-release">
+      {content === "usingAdobePDFService" && (
+        <section className="sdk-rsrc-release Adobe-PDF-Services-API-Overview">
           <div className="release-container">
             <div className="release-wrapper">
               <div className="release-wrapper-img">
-                <a href={resData?.data[0].URL} target="_blank" rel="noreferrer">
                   <iframe
+                    id="iframevideo"
                     src="https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1"
                     title="YouTube video player"
-                    srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1><img src=${resourceImage} alt='Adobe PDF Services API Overview'><span >▶</span></a>`}
+                    srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1 daa-ll="Adobe PDF Services API Overview"><img src=${resourceImage} alt='Adobe PDF Services API Overview'><span >▶</span></a>`}
                     css={css`
                       border: 0;
                       width: 100%;
                       height: 100%;
                     `}
                   />
-                </a>
               </div>
               <div className="release-copy-wrapper">
                 <h3 className="spectrum-Heading spectrum-Heading--sizeL">
@@ -162,7 +161,7 @@ const DynamicContentLoader = ({
                       "https://www.youtube.com/watch?v=GCpSy78IDoE&list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5"
                     }
                     target="_blank"
-                    rel="noreferrer"
+                    
                     className="button-link"
                   >
                     Watch the video
@@ -200,50 +199,33 @@ const DynamicContentLoader = ({
           </section>
 
           <div className="masterblog">
-          <section className="sdk-rsrc-blog">
-          <div className="blog-container">
-          <div className="header-and-more">
-          <h3 className="spectrum-Heading spectrum-Heading--sizeL">Featured</h3></div>
-              <div className="blog-wrapper">
-               {featuredContent.map((data) => {
-                  return (
-                    <div key={data.link} className='cardView'>
-                      <a href={data.URL} target="_blank" rel="noreferrer" key={data.Title}>
-                        <div className="blog-img-container">
-                          <div className={data.class} />
-                          <img
-                             className="featured-image"
-                             src={data.Thumbnail}
-                             alt={data.Title}
-                          />
+            <section className="sdk-rsrc-blog">
+              <div className="blog-container">
+                <div className="header-and-more">
+                  <h3 className="spectrum-Heading spectrum-Heading--sizeL">Featured</h3></div>
+                  <div className="blog-wrapper">
+                    {featuredContent.map((data) => {
+                      return (
+                        <div key={data.link} className='cardView'>
+                          <a href={data.URL} target="_blank" rel="noreferrer" key={data.Title}>
+                            <div className="blog-img-container">
+                              <div className={data.class} />
+                              <img
+                                className="featured-image"
+                                src={data.Thumbnail}
+                                alt={data.Title}
+                              />
+                            </div>
+                            <p className="blog-title blog-title-height">{data.Title}</p>
+                          </a>
+                          <p className="blog-text">{data.desc}</p>
                         </div>
-                        <p className="blog-title blog-title-height">{data.Title}</p>
-                      </a>
-                      <p className="blog-text">{data.desc}</p>
-                    </div>
-                  );
-                })}
-              </div>
-              {/* <div className="featured-wrapper">
-                {featuredContent.map((data) => (
-                  <a href={data.URL} target="_parent" key={data.Title}>
-                    <div className="featured-thumb feat1">
-                      <img
-                        src={data.Thumbnail}
-                        className="featured-img-dimensions"
-                        alt={data.Title}
-                      />
-                    </div>
-                    <div className="featured-copy-wrapper">
-                      <div className="featured-title">Featured</div>
-                      <div className="featured-text">{data.Title}</div>
-                    </div>
-                  </a>
-                ))}
-              </div> */}
-              </div>
-          </section>
-            </div>
+                      );
+                    })}
+                  </div>              
+                </div>
+            </section>
+          </div>
 
         </>
       )}
@@ -285,7 +267,7 @@ const DynamicContentLoader = ({
               <div className="tutorial-wrapper">
                 {resData?.data?.map((data) => (
                   <div className="tutorial cardView" key={data.Title}>
-                    <a href={data.URL} target="_blank" rel="noreferrer" key={data.Title}>
+                    <a href={data.URL} target="_blank" rel="noreferrer" key={data.Title} daa-ll={data.Title}>
                       <div
                         className="tut-thumb1"
                         style={`background: url(${getImageURl(
@@ -330,7 +312,7 @@ const DynamicContentLoader = ({
                 {resData.responseData?.feed?.entries.map((data) => {
                   return (
                     <div key={data.link} className='cardView'>
-                      <a href={data.link} target="_blank" rel="noreferrer">
+                      <a href={data.link} target="_blank" rel="noreferrer" daa-ll={data.title}>
                         <div className="blog-img-container">
                           <img
                             src={getIframeImage(data.content)}

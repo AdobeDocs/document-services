@@ -15,13 +15,15 @@ const isBrowser = typeof window !== "undefined";
 export const onRouteUpdate = ({ location, prevLocation }) => {
   if (isBrowser) {
     let siteSection = location.pathname.split("/");
-    window.digitalData.page.pageInfo.siteSection =
-      siteSection.pop() || siteSection.pop();
-
-    window.digitalData.page.pageInfo.breadCrumbs = [];
-    document.querySelectorAll(".spectrum-Breadcrumbs-item").forEach((item) => {
-      window.digitalData.page.pageInfo.breadCrumbs.push(item.innerText);
-    });
+    if (window.digitalData) {
+      window.digitalData.page.pageInfo.siteSection =
+        siteSection.pop() || siteSection.pop();
+  
+      window.digitalData.page.pageInfo.breadCrumbs = [];
+      document.querySelectorAll(".spectrum-Breadcrumbs-item").forEach(item => {
+        window.digitalData.page.pageInfo.breadCrumbs.push(item.innerText);
+      });
+    }
 
     if (window._satellite) {
       window._satellite.track("state", {
@@ -285,6 +287,74 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach((link) => {
         link.setAttribute("daa-ll", link.textContent);
       });
+    } else if ( window.location.pathname.indexOf("resources") >= 0) {
+      document
+      .querySelector(".resource-banner")
+      .setAttribute("daa-lh", "Developer Resources");
+
+      document
+        .querySelector(".Adobe-PDF-Services-API-Overview")
+        ?.setAttribute("daa-lh", "Adobe PDF Services API Overview");
+      document
+        .querySelectorAll(".Adobe-PDF-Services-API-Overview a").forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
+
+      document
+        .querySelector(".feature-content")
+        .setAttribute("daa-lh", "Featured");
+
+      document.querySelectorAll(".feature-content a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document.querySelector(".blog-content").setAttribute("daa-lh", "Blog");
+      document.querySelectorAll(".blog-content a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+        // link.setAttribute("daa-ll", link.querySelector("p")?.textContent);
+      });
+
+      document
+        .querySelector(".tutorial-content")
+        .setAttribute("daa-lh", "Tutorials");
+      document.querySelectorAll(".tutorial-content a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Customer-Stories")
+        .setAttribute("daa-lh", "Customer Stories");
+      document.querySelectorAll(".Customer-Stories a").forEach(link => {
+        const textContentData = link.nextElementSibling? link.nextElementSibling.innerHTML : link.previousElementSibling.innerHTML;
+        link.setAttribute("daa-ll", textContentData);
+      });
+
+      document
+      .querySelector(".we-ready-to-help")
+      .setAttribute("daa-lh", "We're ready to help");
+      document.querySelectorAll(".we-ready-to-help a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
+    
+    // setTimeout(() => {
+    //   const iframe = document.getElementById("iframevideo");     
+    //   if(iframe){
+    //     iframe.setAttribute("daa-lh", "Adobe PDF Services API Overview Video");
+    //     var iDocument = iframe.contentWindow.document;
+    //     const bodyElement = iDocument.getElementsByTagName("body")[0];
+    //     const element = bodyElement.querySelector('a');
+    //     element.setAttribute("daa-ll", 'Adobe PDF Services API Overview');
+       
+    //     element.addEventListener("click", () => {
+    //       setTimeout(() => {        
+    //         const body1Element = iDocument.getElementsByTagName("body")[0];
+    //         body1Element.querySelector('.ytp-large-play-button.ytp-button')
+    //         ?.setAttribute("daa-ll", 'Adobe PDF Services API Overview');
+    //       }, 1500);
+    //     });
+    //   }
+    // }, 1000);
+
     }
   }
 };
