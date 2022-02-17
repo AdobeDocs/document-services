@@ -89,7 +89,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       ?.setAttribute("daa-ll", "PDF Embed");
     header
       .querySelector(
-        `a[href='/use-cases/agreements-and-contracts/sales-proposals-and-contracts/']`
+        `a[href='${navLinksBaseUrl}/use-cases/agreements-and-contracts/sales-proposals-and-contracts/']`
       )
       ?.setAttribute("daa-ll", "Use Cases");
     header
