@@ -355,6 +355,147 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     //   }
     // }, 1000);
 
+    } else if (window.location.pathname.indexOf("pdf-extract") >= 0){
+      document
+        .querySelector(".Hero-Banner")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+
+      document
+        .querySelector(".Hero-Banner")
+        .setAttribute("daa-lh", "Hero Banner");
+      document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Key-features-of-Adobe-PDF-Extract-API")
+        .closest("section")
+        .setAttribute("daa-lh", "Key features of Adobe PDF Extract API");
+      document.querySelectorAll(".Key-features-of-Adobe-PDF-Extract-API a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Use-cases-for-Adobe-PDF-Extract-API")
+        .setAttribute("daa-lh", "Use cases for Document Generation API");          
+
+      document.querySelectorAll(".Use-cases-for-Adobe-PDF-Extract-API-card a").forEach((link) => {
+        link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
+      });
+
+      document.querySelectorAll(".Use-cases-for-Adobe-PDF-Extract-API a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });     
+
+      document
+        .querySelector(".How-it-works")
+        .setAttribute("daa-lh", "How it works");
+
+      document.querySelectorAll(".How-it-works a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Get-started-in-minutes")
+        .setAttribute("daa-lh", "Get started in minutes");
+
+      document.querySelectorAll(".Get-started-in-minutes a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Explore-other-Adobe-Document-Services-APIs")
+        .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+
+      document.querySelectorAll(".Explore-other-Adobe-Document-Services-APIs a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".We-are-ready-to-help")
+        .setAttribute("daa-lh", "We're ready to help");
+
+      document.querySelectorAll(".We-are-ready-to-help a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+    } else if (window.location.pathname.indexOf("doc-generation") >= 0){
+      document
+        .querySelector(".Hero-Banner")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+
+      document
+        .querySelector(".Hero-Banner")
+        .setAttribute("daa-lh", "Hero Banner");
+      document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Why-Document-Generation-API")
+        .setAttribute("daa-lh", "Why Document Generation API?");
+
+      document.querySelectorAll(".Why-Document-Generation-API a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+      .querySelector(".Key-features-of-Adobe-Document-Generation-API")
+      .setAttribute("daa-lh", "Key features of Adobe Document Generation API");
+
+      document.querySelectorAll(".Key-features-of-Adobe-Document-Generation-API a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+      .querySelector(".AdobeMsBlade")
+      .setAttribute("daa-lh", "Adobe Microsoft Blade");
+
+      document.querySelectorAll(".AdobeMsBlade a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+      .querySelector(".Download-sample-templates-and-data-to-get-started")
+      .setAttribute("daa-lh", "Download sample templates and data to get started");
+
+      document.querySelectorAll(".Download-sample-templates-and-data-to-get-started a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Get-started-in-minutes")
+        .setAttribute("daa-lh", "Get started in minutes");
+
+      document.querySelectorAll(".Get-started-in-minutes a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Use-cases-for-Document-Generation-API")
+        .setAttribute("daa-lh", "Use cases for Document Generation API");
+    
+      document.querySelectorAll(".Use-cases-for-Document-Generation-API a").forEach((link) => {
+        link.setAttribute("daa-ll", link.querySelector("h3")?.textContent || link.textContent);
+      });
+
+      document
+        .querySelector(".Explore-other-Adobe-Document-Services-APIs")
+        .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+
+      document.querySelectorAll(".Explore-other-Adobe-Document-Services-APIs a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".We-are-ready-to-help")
+        .setAttribute("daa-lh", "We're ready to help");
+
+      document.querySelectorAll(".We-are-ready-to-help a").forEach((link) => {
+        link.setAttribute("daa-ll", link.textContent);
+      });      
     }
   }
 };

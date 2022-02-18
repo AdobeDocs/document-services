@@ -1,13 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 import msLogo from "../pages/images/ms_power_logo.svg";
 import adobeLogo from "../pages/images/adobe_logo_partnership@2x.png";
 import "@spectrum-css/typography";
 
-const AdobeMsBlade = () => {
+const AdobeMsBlade = ({className}) => {
   return (
     <div>
       <section
-        class="market-place ms-blade slick-slide slick-current slick-active"
+        className={classNames(className, "market-place ms-blade slick-slide slick-current slick-active")}
         data-slick-index="0"
         aria-hidden="false"
         role="tabpanel"
@@ -47,6 +49,11 @@ const AdobeMsBlade = () => {
       </section>
     </div>
   );
+};
+
+AdobeMsBlade.propTypes = {
+  theme: PropTypes.string,
+  className:PropTypes.string,
 };
 
 

@@ -10,7 +10,7 @@ import WhyExtractAPI from './pdf-extract/why-extract-api.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';
 import HowItWorks from './pdf-extract/how-it-works.md';
 
-<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage"/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
 # Adobe PDF Extract API
 
@@ -21,59 +21,59 @@ apiHeroAssetImg doc-ext-invoice
 - [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 
-<WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero" enableMaxHeight/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>
 
 <WhyExtractAPI/>
 
-<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="Use-cases-for-Adobe-PDF-Extract-API"/>
 
 <PdfExtractResourceTitle/>
 
-<WrapperComponent slots="content" repeat="1" theme="lightest" enableMaxWidth maxWidth='795px'/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" enableMaxWidth maxWidth='795px' className="Use-cases-for-Adobe-PDF-Extract-API-card"/>
 
 <PdfExtractResource/>
 
-<TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
+<TextBlock slots="buttons" isCentered theme="lightest" className='padding-5 Use-cases-for-Adobe-PDF-Extract-API'/>
 
 - [View all use cases](/src/pages/use-cases/content-and-data-extraction/)
 
-<WrapperComponent slots="content" repeat="1" theme="light"/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="How-it-works"/>
 
 <HowItWorks/>
 
 <CustomIframeBlock source="https://video.tv.adobe.com/v/333506" theme="light"/>
 
 
-<TextBlock slots="buttons"  theme="light" isCentered  className="padding-5"/>
+<TextBlock slots="buttons"  theme="light" isCentered  className="padding-5 How-it-works"/>
 
 * [Download JSON samples](https://adobe.com/go/dcExtract_sample)
 
 
-<TextBlock slots="text1, text2  " theme="light"  className="media-horizantal-align  how-it-work-text mediaSize link linking"/>    
+<TextBlock slots="text1, text2" theme="light"  className="media-horizantal-align how-it-work-text mediaSize link linking How-it-works"/>    
 
 Adobe PDF Extract API is powered by [Adobe Sensei](https://www.adobe.com/sensei.html), an industry-leading Artificial Intelligence (AI) and Machine Learning (ML) network. The technology enables a rich understanding of documents, such as the identification of elements, including position and connections relative to other elements. In addition, it can determine reading order. These and other capabilities ensure the most comprehensive output of structured content.
 
 Extracted content is output in a structured JSON file – with tables optionally included as CSV or XLSX files and images saved as PNG files – so developers can easily store, analyze, and manipulate the data in a variety of downstream systems. Examples include databases, systems of record, CRM, ERP, NLP, RPA as well as ML models and analytic tools.
 
-<TextBlock slots="image" theme="light"  imgWidth="100%" className="media-horizantal-zero-padding  how-it-work-image mediaSize "/>
+<TextBlock slots="image" theme="light"  imgWidth="100%" className="media-horizantal-zero-padding  how-it-work-image mediaSize"/>
 
 ![how-it-works-desktop](../images/how-it-works-desktop.png)
 
-<TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link position-up linking"/>
+<TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link position-up linking How-it-works"/>
 
 We take security serously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)
 
-<WrapperComponent slots="content" repeat="1" theme="lightest "/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="Get-started-in-minutes"/>
 
 <ExtractStepperComponent />
 
 
-<WrapperComponent slots="content" repeat="1" theme="light"/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="Explore-other-Adobe-Document-Services-APIs"/>
 
 <ExtractProductCard/>
 
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help"/>
 
 ![](../images/bg-hero.jpeg)
 
