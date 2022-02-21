@@ -15,7 +15,7 @@ const isBrowser = typeof window !== "undefined";
 export const onRouteUpdate = ({ location, prevLocation }) => {
   if (isBrowser) {
     let siteSection = location.pathname.split("/");
-    if (window.digitalData) {
+    if (window.digitalData !== undefined && window.digitalData.page !== undefined && window.digitalData.page.pageInfo !== undefined) {
       window.digitalData.page.pageInfo.siteSection =
         siteSection.pop() || siteSection.pop();
   
@@ -27,7 +27,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     if (window._satellite) {
       window._satellite.track("state", {
-        digitalData: window.digitalData._snapshot(),
+        digitalData: window.digitalData !== undefined && window.digitalData._snapshot(),
       });
     }
 
