@@ -8,4 +8,4 @@ title: Adobe Developer — PDF Embed API  — key feature title
 ## Key features of our free PDF Embed API 
 
 <!-- - [Get free credentials](/src/pages/gettingstarted.md) -->
-- [Get free credentials](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
+- [Get free credentials](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)

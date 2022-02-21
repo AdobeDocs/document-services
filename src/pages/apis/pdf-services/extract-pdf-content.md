@@ -17,7 +17,7 @@ See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs) and quick
 #### REST API
 
 ```bash
-curl --location --request POST 'https://cpf-stage-ue1.adobe.io/ops/:create' \
+curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create' \
 --header 'Accept: application/json, text/plain, /' \
 --header 'Authorization: Bearer ' \
 --header 'x-api-key: ' \

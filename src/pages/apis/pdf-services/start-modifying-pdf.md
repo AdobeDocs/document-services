@@ -14,7 +14,7 @@ Start your free 6-month trial today with 1,000 PDF transactions
 
 Obtain free credentials
 
-- [Get started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Get started](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline  className="align-left horizontal-align link" headerElementType="h2"/>

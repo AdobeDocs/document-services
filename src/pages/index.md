@@ -19,7 +19,7 @@ import CustomerStory from './home/home-storyies.md'
 
 From the company who created the PDF standard.
 
-- [Get started](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html)
+- [Get started](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 
 homeheroAssertImage
@@ -99,7 +99,7 @@ samples for Angular and React.
 
 Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
 
-- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 
 
@@ -174,5 +174,5 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 Start free trial with 1,000 PDF transactions for up to 6 months.
 
-- [Start free trial](https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Contact us](src/pages/pricing/contact.md)
