@@ -293,6 +293,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .setAttribute("daa-lh", "Developer Resources");
 
       document
+      .querySelector(".resource-banner")
+      .closest("main")
+      .setAttribute("daa-lh", "Body");
+
+      document
         .querySelector(".Adobe-PDF-Services-API-Overview")
         ?.setAttribute("daa-lh", "Adobe PDF Services API Overview");
       document
