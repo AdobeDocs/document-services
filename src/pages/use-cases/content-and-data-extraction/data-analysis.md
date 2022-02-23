@@ -6,10 +6,10 @@ description: Unlock content elements from PDF files with machine learning for da
 import DataAnalysis from '../page-content/content-and-data-extraction/data-analysis.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Data-Analysis"/>
 
 <DataAnalysis />

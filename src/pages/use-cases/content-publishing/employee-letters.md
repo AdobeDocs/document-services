@@ -6,11 +6,11 @@ description: Create personalization at scale with dynamic employee letter genera
 import EmployeeLetters from '../page-content/content-publishing/employee-letters.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Employee-Letters" />
 
 <EmployeeLetters />

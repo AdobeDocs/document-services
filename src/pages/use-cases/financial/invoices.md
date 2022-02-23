@@ -6,11 +6,11 @@ description: Quick and easy invoice generation with Microsoft Word templates and
 import InvoicesContent from '../page-content/financial/invoices.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Invoices"/>
 
 <InvoicesContent />

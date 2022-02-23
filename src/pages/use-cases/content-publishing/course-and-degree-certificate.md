@@ -7,11 +7,11 @@ description: Easy certificate generation using your own data and Microsoft Word 
 import CourseAndDegreeCertificate from '../page-content/content-publishing/course-and-degree-certificate.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Course-and-Degree-Certificate"/>
 
 <CourseAndDegreeCertificate />

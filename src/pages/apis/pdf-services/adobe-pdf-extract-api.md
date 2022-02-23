@@ -29,7 +29,7 @@ Leverage Adobe Sensei for a rich understanding of **content structure** with hig
 **Identify more document elements** than OCR with extraction of headings, paragraphs, lists, and more.
 
 
-<TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn"/>
+<TextBlock slots="buttons" isCentered theme="lightest padding-top-zero why-doc-get-started-btn" className="Use-cases-for-PDF-services-API"/>
 
 * [Learn more](/src/pages/apis/pdf-extract)
 

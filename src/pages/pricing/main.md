@@ -6,22 +6,22 @@ description: Create, convert, extract data, OCR PDFs and more with PDF Services 
 import PDFEmbed from './pdf-embed-api.md'
 import PDFService from './pdf-services-api.md'
 
-<Hero slots="heading, text" variant="fullwidth" theme="light" customLayout background="var(--spectrum-global-color-gray-100)" className="sub-title"/>
+<Hero slots="heading, text" variant="fullwidth" theme="light" customLayout background="var(--spectrum-global-color-gray-100)" className="sub-title Hero-Banner"/>
 
 # Adobe Document Services Pricing
 
 When you’re ready to purchase, flexible options to suit your needs.
 
 
-<WrapperComponent slots="content" theme="light"/>
+<WrapperComponent slots="content" theme="light" className="pdf-service"/>
 
 <PDFService/>
 
-<WrapperComponent slots="content" theme="light" />
+<WrapperComponent slots="content" theme="light" className="pdf-embed"/>
 
 <PDFEmbed/>
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="why-are-ready-to-help" />
 
 ![We're ready](../images/bg-hero.jpeg)
 

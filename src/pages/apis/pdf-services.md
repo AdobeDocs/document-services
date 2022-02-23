@@ -12,7 +12,7 @@ import DocumentServicesProductCards from './pdf-services/document-services-produ
 import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 
 
-<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage "/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
 # Adobe PDF Services API
 
@@ -23,7 +23,7 @@ apiHeroAssetImg doc-service-hero
 - [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
 <!-- Why PDF Services API -->
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services"/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
 <WhyPDFServicesAPI />
 
@@ -40,7 +40,7 @@ apiHeroAssetImg doc-service-hero
 
 <!--Adobe PDF Extract API -->
 
-<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="AdobePDFExtractAPI"/>
 
 <AdobePDFExtractAPI />
 
@@ -48,7 +48,7 @@ apiHeroAssetImg doc-service-hero
 
 <!--Stepper Block -->
 
-<WrapperComponent slots="content" repeat="1" theme="light"/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="start-modifying-pdf"/>
 
 <StartModifyingPDF />
 
@@ -57,19 +57,19 @@ apiHeroAssetImg doc-service-hero
 
 <!--Resource Card Block -->
 
-<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="Use-cases-for-PDF-services-API"/>
 
 <UseCasesResourceCard />
 
-<TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
+<TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5 Use-cases-for-PDF-services-API'/>
 
 - [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
-<WrapperComponent slots="content" repeat="1" theme="light"/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="other-Adobe-Document-Services-APIs"/>
 
 <DocumentServicesProductCards />
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started" />
 
 ![We're ready](../images/bg-hero.jpeg)
 

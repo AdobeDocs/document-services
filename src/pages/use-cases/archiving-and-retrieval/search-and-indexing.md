@@ -6,10 +6,10 @@ description: Automate PDF search and indexing with Adobe Document Services. Our 
 import IndexConent from '../page-content/archiving-and-retrieval/search-and-indexing.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Search-and-Indexing"/>
 
 <IndexConent />

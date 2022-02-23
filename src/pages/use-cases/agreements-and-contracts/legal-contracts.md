@@ -5,10 +5,10 @@ description: Quick dynamic legal agreement generation with Microsoft Word templa
 
 import LegalContracts from '../page-content/agreements-and-contracts/legal-contracts.md';
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage" />
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner" />
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Legal-Contracts" />
 
 <LegalContracts />

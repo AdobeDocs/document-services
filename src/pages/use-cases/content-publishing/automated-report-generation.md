@@ -6,11 +6,11 @@ description: Automate custom report generation with Microsoft Word templates and
 import AutomatedReportGeneration from '../page-content/content-publishing/automated-report-generation.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner Hero-Banner"/>
 
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Automated-Report-Generation"/>
 
 <AutomatedReportGeneration />

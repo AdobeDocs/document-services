@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  —  Carousel PDF
 ---
 
-<Carousel slots="bgimage, image, heading, text, buttons" repeat="2"  theme="lightest" enableNavigation slideTheme='dark' className="carousel-padding-top-zero" varient="fullWidth" navigationNext="white-swiper-button" navigationPre="white-swiper-button" isCenter  />
+<Carousel slots="bgimage, image, heading, text, buttons" repeat="2"  theme="lightest" enableNavigation slideTheme='dark' className="carousel-padding-top-zero aws-carousel" varient="fullWidth" navigationNext="white-swiper-button" navigationPre="white-swiper-button" isCenter  />
 
 carousel-adobe
 

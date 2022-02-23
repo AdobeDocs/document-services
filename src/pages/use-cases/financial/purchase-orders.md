@@ -6,11 +6,11 @@ description: Create purchase orders with dynamic data using Document Generation 
 import PurchaseOrders from '../page-content/financial/purchase-orders.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Purchase-Orders"/>
 
 <PurchaseOrders />

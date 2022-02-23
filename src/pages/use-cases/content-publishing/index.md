@@ -5,11 +5,11 @@ description: Control your online PDF experiences with analytics and collaboratio
 import IndexContent from '../page-content/content-publishing/digital-content-publishing.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Digital-Content-Publishing"/>
 
 <IndexContent />

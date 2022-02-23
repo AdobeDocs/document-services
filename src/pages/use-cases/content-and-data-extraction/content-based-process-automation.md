@@ -6,10 +6,10 @@ description: Create dynamic documents for content publishing with Adobe Document
 import IndexContent from '../page-content/content-and-data-extraction/content-based-process-automation.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage" />
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner" />
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Content-Based-Process-Automation"/>
 
 <IndexContent />

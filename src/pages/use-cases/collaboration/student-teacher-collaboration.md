@@ -6,10 +6,10 @@ description: Publish PDFs in your website with multi-user collaboration using on
 import Collaboration from '../page-content/collaboration/student-teacher-collaboration.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage"/>
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Student-Teacher-Collaboration"/>
 
 <Collaboration />

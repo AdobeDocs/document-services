@@ -6,11 +6,11 @@ description: Generate, convert, and extract resume data for automated processing
 import ProcessingEmployeeResumes from '../page-content/content-publishing/processing-employee-resumes.md';
 
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage" />
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner" />
 
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest"/>
+<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Processing-employee-resumes"/>
 
 <ProcessingEmployeeResumes />
