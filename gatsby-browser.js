@@ -68,7 +68,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let navLinksBaseUrl = "";
     let isLocal = true;
     // stage/deploy
-    if (window.location.host.indexOf("adobe.com") >= 0) {
+    if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0)  {
       navLinksBaseUrl = "/document-services";
       isLocal = false;
     }
@@ -235,7 +235,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     if (
       window.location.pathname.indexOf("homepage") >= 0 ||
-      (window.location.pathname === "/" && isLocal)
+      (window.location.pathname === "/" && isLocal) || (window.location.pathname === `${navLinksBaseUrl}/` && !isLocal)
     ) {
       document
         .querySelector(".Hero-Banner")
