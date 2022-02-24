@@ -18,7 +18,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     if (window.digitalData) {
       window.digitalData.page.pageInfo.siteSection =
         siteSection.pop() || siteSection.pop();
-  
+
       window.digitalData.page.pageInfo.breadCrumbs = [];
       document.querySelectorAll(".spectrum-Breadcrumbs-item").forEach(item => {
         window.digitalData.page.pageInfo.breadCrumbs.push(item.innerText);
@@ -32,13 +32,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     }
 
     let getCredentialsButton = Array.from(document.querySelectorAll("a")).find(
-      (el) => el.textContent === "Get credentials"
+      el => el.textContent === "Get credentials"
     );
     let startFreeTrialButtonArr = Array.from(
       document.querySelectorAll("a")
-    ).filter((el) => el.textContent === "Start free trial");
+    ).filter(el => el.textContent === "Start free trial");
     let getStartedButtonArr = Array.from(document.querySelectorAll("a")).filter(
-      (el) => el.textContent === "Get started"
+      el => el.textContent === "Get started"
     );
 
     //local
@@ -140,7 +140,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     let footer = document.querySelector("footer");
     footer.setAttribute("daa-lh", "Footer");
-    footer.querySelectorAll("a").forEach((link) => {
+    footer.querySelectorAll("a").forEach(link => {
       if (link.textContent) {
         link.setAttribute("daa-ll", link.textContent);
       }
@@ -149,7 +149,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     if (window.location.pathname.indexOf("pdf-services") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
 
-      getStartedButtonArr.map((getStartedButton) => {
+      getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-services-api`;
       });
 
@@ -162,7 +162,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     } else if (window.location.pathname.indexOf("doc-generation") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
 
-      getStartedButtonArr.map((getStartedButton) => {
+      getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=document-generation-api`;
       });
 
@@ -172,7 +172,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
 
-      getStartedButtonArr.map((getStartedButton) => {
+      getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-extract-api`;
       });
 
@@ -182,13 +182,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
 
-      getStartedButtonArr.map((getStartedButton) => {
+      getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
       });
 
       let getFreecredentialsButtonArr = Array.from(
         document.querySelectorAll("a")
-      ).filter((el) => el.textContent === "Get free credentials");
+      ).filter(el => el.textContent === "Get free credentials");
       getFreecredentialsButtonArr.forEach((getFreecredentialsButton, index) => {
         getFreecredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
       });
@@ -196,15 +196,15 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       window.location.pathname.indexOf("pricing") >= 0 &&
       startFreeTrialButtonArr
     ) {
-      startFreeTrialButtonArr.map((startFreeTrialButton) => {
+      startFreeTrialButtonArr.map(startFreeTrialButton => {
         startFreeTrialButton.href = `${baseurl}?api=pdf-embed-api`;
       });
-      getStartedButtonArr.map((getStartedButton) => {
+      getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
       });
     } else {
       if (getStartedButtonArr) {
-        getStartedButtonArr.map((getStartedButton) => {
+        getStartedButtonArr.map(getStartedButton => {
           getStartedButton.href = `${baseurl}`;
         });
       }
@@ -222,21 +222,21 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document
         .querySelector(".Hero-Banner")
         .setAttribute("daa-lh", "Hero Banner");
-      document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+      document.querySelectorAll(".Hero-Banner a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
       document
         .querySelector(".Adobe-PDF-Services-API")
         .setAttribute("daa-lh", "Adobe PDF Services API");
-      document.querySelectorAll(".Adobe-PDF-Services-API a").forEach((link) => {
+      document.querySelectorAll(".Adobe-PDF-Services-API a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
       document
         .querySelector(".Adobe-PDF-Extract-API")
         .setAttribute("daa-lh", "Adobe PDF Extract API");
-      document.querySelectorAll(".Adobe-PDF-Extract-API a").forEach((link) => {
+      document.querySelectorAll(".Adobe-PDF-Extract-API a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
@@ -245,14 +245,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         .setAttribute("daa-lh", "Adobe Document Generation API");
       document
         .querySelectorAll(".Adobe-Document-Generation-API a")
-        .forEach((link) => {
+        .forEach(link => {
           link.setAttribute("daa-ll", link.textContent);
         });
 
       document
         .querySelector(".Adobe-PDF-Embed-API")
         .setAttribute("daa-lh", "Adobe PDF Embed API");
-      document.querySelectorAll(".Adobe-PDF-Embed-API a").forEach((link) => {
+      document.querySelectorAll(".Adobe-PDF-Embed-API a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
@@ -268,24 +268,24 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         .setAttribute("daa-lh", "Use cases for Adobe Document Services");
       document
         .querySelectorAll(".Use-cases-for-Adobe-Document-Services a")
-        .forEach((link) => {
+        .forEach(link => {
           link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
         });
 
       document
         .querySelector(".Customer-Stories")
         .setAttribute("daa-lh", "Customer Stories");
-      document.querySelectorAll(".Customer-Stories a").forEach((link) => {
+      document.querySelectorAll(".Customer-Stories a").forEach(link => {
         link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
       });
 
       document
         .querySelector(".How-to-get-started")
         .setAttribute("daa-lh", "How to get started?");
-      document.querySelectorAll(".How-to-get-started a").forEach((link) => {
+      document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-    } else if ( window.location.pathname.indexOf("resources") >= 0) {
+    } else if (window.location.pathname.indexOf("resources") >= 0) {
       document
         .querySelector(".resource-banner")
         .closest("main")
@@ -529,6 +529,32 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".We-are-ready-to-help a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+    } else if (window.location.pathname.indexOf("doc-gen-api-template") >= 0) {
+      document
+        .querySelector(".herobgImage")
+        .setAttribute("daa-lh", "Adobe document generation API templates");
+
+      document
+        .querySelector(".Download-sample-templates")
+        .setAttribute("daa-lh", "Adobe document generation API templates");
+      document
+        .querySelectorAll(".Download-sample-templates a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
+
+      document
+        .querySelectorAll(".Download-sample-templates label")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
+      document
+        .querySelector(".We-are-ready-to-help")
+        .setAttribute("daa-lh", "We're ready to help");
+
+      document.querySelectorAll(".We-are-ready-to-help a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
     } else if (window.location.pathname.indexOf("pdf-services") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -590,7 +616,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document
         .querySelectorAll(".Use-cases-for-PDF-services-API a")
         .forEach(link => {
-          link.setAttribute("daa-ll", link.querySelector("h3")?.textContent || link.textContent);
+          link.setAttribute(
+            "daa-ll",
+            link.querySelector("h3")?.textContent || link.textContent
+          );
         });
       document
         .querySelector(".other-Adobe-Document-Services-APIs")
@@ -606,7 +635,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -616,7 +644,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document
         .querySelector(".Hero-Banner")
         .setAttribute("daa-lh", "Hero Banner");
-        
+
       document.querySelectorAll(".Hero-Banner a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
@@ -652,7 +680,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document
         .querySelectorAll(".Use-cases-for-PDF-services-API a")
         .forEach(link => {
-          link.setAttribute("daa-ll", link.querySelector("h3")?.textContent || link.textContent);
+          link.setAttribute(
+            "daa-ll",
+            link.querySelector("h3")?.textContent || link.textContent
+          );
         });
       document
         .querySelector(".other-Adobe-Document-Services-APIs")
@@ -668,29 +699,31 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-      
-    }else if (window.location.pathname.indexOf("pricing") >= 0) {
+    } else if (window.location.pathname.indexOf("pricing") >= 0) {
       document
         .querySelector(".Hero-Banner")
         .closest("main")
         .setAttribute("daa-lh", "Body");
 
-      document.querySelector(".Hero-Banner")
-      .setAttribute("daa-lh", "Hero Banner");
+      document
+        .querySelector(".Hero-Banner")
+        .setAttribute("daa-lh", "Hero Banner");
 
       document.querySelectorAll(".Hero-Banner a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector(".pdf-service")
-      .setAttribute("daa-lh", "Adobe PDF Services API")
+      document
+        .querySelector(".pdf-service")
+        .setAttribute("daa-lh", "Adobe PDF Services API");
       document.querySelectorAll(".pdf-service a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector(".pdf-embed")
-      .setAttribute("daa-lh", "Adobe PDF Embed API")
-      document.querySelectorAll(".pdf-embed a").forEach((link)=>{
+      document
+        .querySelector(".pdf-embed")
+        .setAttribute("daa-lh", "Adobe PDF Embed API");
+      document.querySelectorAll(".pdf-embed a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
@@ -700,9 +733,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document.querySelectorAll(".why-are-ready-to-help a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
-    });
-
-    }else if (window.location.pathname.indexOf("use-cases") >= 0) {
+      });
+    } else if (window.location.pathname.indexOf("use-cases") >= 0) {
       document
         .querySelector(".Hero-Banner")
         .closest("main")
@@ -711,192 +743,240 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         .querySelector(".Hero-Banner")
         .setAttribute("daa-lh", "Hero Banner");
 
-      document.querySelector('.Sales-Proposals-and-Contracts')
-        ?.setAttribute("daa-lh", "Sales Proposals and Contracts")
+      document
+        .querySelector(".Sales-Proposals-and-Contracts")
+        ?.setAttribute("daa-lh", "Sales Proposals and Contracts");
 
-      document.querySelectorAll(".Sales-Proposals-and-Contracts a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Sales-Proposals-and-Contracts a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Legal-Contracts')
+      document
+        .querySelector(".Legal-Contracts")
         ?.setAttribute("daa-lh", "Legal Contracts");
 
       document.querySelectorAll(".Legal-Contracts a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.NDA-Creation')
+      document
+        .querySelector(".NDA-Creation")
         ?.setAttribute("daa-lh", "NDA Creation");
 
       document.querySelectorAll(".NDA-Creation a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Employee-Offer-Letters')
+      document
+        .querySelector(".Employee-Offer-Letters")
         ?.setAttribute("daa-lh", "Employee Offer Letters");
 
       document.querySelectorAll(".Employee-Offer-Letters a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Legal-Letters-and-Statements')
+      document
+        .querySelector(".Legal-Letters-and-Statements")
         ?.setAttribute("daa-lh", "Legal Letters and Statements");
 
-      document.querySelectorAll(".Legal-Letters-and-Statements a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Legal-Letters-and-Statements a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Loan-Document-Workflows')
+      document
+        .querySelector(".Loan-Document-Workflows")
         ?.setAttribute("daa-lh", "Loan Document Workflows");
 
       document.querySelectorAll(".Loan-Document-Workflows a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Search-and-Indexing')
+      document
+        .querySelector(".Search-and-Indexing")
         ?.setAttribute("daa-lh", "Search and Indexing");
 
       document.querySelectorAll(".Search-and-Indexing a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Review-and-Approval')
+      document
+        .querySelector(".Review-and-Approval")
         ?.setAttribute("daa-lh", "Review and Approva");
 
       document.querySelectorAll(".Review-and-Approval a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-      document.querySelector('.Student-Teacher-Collaboration')
+      document
+        .querySelector(".Student-Teacher-Collaboration")
         ?.setAttribute("daa-lh", "Student Teacher Collaboration");
 
-      document.querySelectorAll(".Student-Teacher-Collaboration a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Student-Teacher-Collaboration a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Content-Based-Process-Automation')
+      document
+        .querySelector(".Content-Based-Process-Automation")
         ?.setAttribute("daa-lh", "Content Based Process Automation");
 
-      document.querySelectorAll(".Content-Based-Process-Automation a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Content-Based-Process-Automation a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Data-Analysis')
+      document
+        .querySelector(".Data-Analysis")
         ?.setAttribute("daa-lh", "Data Analysis");
 
       document.querySelectorAll(".Data-Analysis a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-      
-      document.querySelector('.Republish-PDF-Content')
+
+      document
+        .querySelector(".Republish-PDF-Content")
         ?.setAttribute("daa-lh", "Republish PDF Content");
 
       document.querySelectorAll(".Republish-PDF-Content a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Data-Analysis-for-Finance')
+      document
+        .querySelector(".Data-Analysis-for-Finance")
         ?.setAttribute("daa-lh", "Data Analysis for Finance");
 
-      document.querySelectorAll(".Data-Analysis-for-Finance a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Data-Analysis-for-Finance a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Invoices')
-        ?.setAttribute("daa-lh", "Invoices");
+      document.querySelector(".Invoices")?.setAttribute("daa-lh", "Invoices");
 
       document.querySelectorAll(".Invoices a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-      document.querySelector('.Purchase-Orders')
+      document
+        .querySelector(".Purchase-Orders")
         ?.setAttribute("daa-lh", "Purchase Orders");
 
       document.querySelectorAll(".Purchase-Orders a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-      document.querySelector('.Sales-Quote')
+      document
+        .querySelector(".Sales-Quote")
         ?.setAttribute("daa-lh", "Sales Quote");
 
       document.querySelectorAll(".Sales-Quote a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Streamline-procurement-processes')
+      document
+        .querySelector(".Streamline-procurement-processes")
         ?.setAttribute("daa-lh", "Streamline procurement processes");
 
-      document.querySelectorAll(".Streamline-procurement-processes a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Streamline-procurement-processes a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Digital-Content-Publishing')
+      document
+        .querySelector(".Digital-Content-Publishing")
         ?.setAttribute("daa-lh", "Digital Content Publishing");
 
-      document.querySelectorAll(".Digital-Content-Publishing a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Digital-Content-Publishing a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Automated-Report-Generation')
+      document
+        .querySelector(".Automated-Report-Generation")
         ?.setAttribute("daa-lh", "Automated Report Generation");
 
-      document.querySelectorAll(".Automated-Report-Generation a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Automated-Report-Generation a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Course-and-Degree-Certificate')
+      document
+        .querySelector(".Course-and-Degree-Certificate")
         ?.setAttribute("daa-lh", "Course and Degree Certificate");
 
-      document.querySelectorAll(".Course-and-Degree-Certificate a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Course-and-Degree-Certificate a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Employee-Letters')
+      document
+        .querySelector(".Employee-Letters")
         ?.setAttribute("daa-lh", "Employee Letters");
 
       document.querySelectorAll(".Employee-Letters a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Employee-Onboarding-Materials')
+      document
+        .querySelector(".Employee-Onboarding-Materials")
         ?.setAttribute("daa-lh", "Employee Onboarding Materials");
 
-      document.querySelectorAll(".Employee-Onboarding-Materials a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".Employee-Onboarding-Materials a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Field-service-management')
+      document
+        .querySelector(".Field-service-management")
         ?.setAttribute("daa-lh", "Field service management");
 
       document.querySelectorAll(".Field-service-management a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Job-Posting')
+      document
+        .querySelector(".Job-Posting")
         ?.setAttribute("daa-lh", "Job Posting");
 
       document.querySelectorAll(".Job-Posting a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.Managing-brand-assets')
+      document
+        .querySelector(".Managing-brand-assets")
         ?.setAttribute("daa-lh", "Managing brand assets");
 
       document.querySelectorAll(".Managing-brand-assets a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document.querySelector('.On-Demand-Report-Creation')
+      document
+        .querySelector(".On-Demand-Report-Creation")
         ?.setAttribute("daa-lh", "On-Demand Report Creation");
 
-      document.querySelectorAll(".On-Demand-Report-Creation a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+      document
+        .querySelectorAll(".On-Demand-Report-Creation a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document.querySelector('.Processing-employee-resumes')
+      document
+        .querySelector(".Processing-employee-resumes")
         ?.setAttribute("daa-lh", "Processing employee resumes");
 
-      document.querySelectorAll(".Processing-employee-resumes a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
-
+      document
+        .querySelectorAll(".Processing-employee-resumes a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
     }
   }
 };

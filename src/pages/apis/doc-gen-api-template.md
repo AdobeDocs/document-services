@@ -9,9 +9,9 @@ import { products,clouds } from '../../components/product.js';
 
 ### Adobe document generation API templates
 
-<ProductCardGrid clouds={clouds} products={products} showName={true} showDescription={false} interaction={true} buttonName="Download" showBorder={false} imgHeight="1300" isCentered={true} theme="light"/>
+<ProductCardGrid clouds={clouds} products={products} showName={true} showDescription={false} interaction={true} buttonName="Download" showBorder={false} imgHeight="1300" isCentered={true} theme="light" className="Download-sample-templates"/>
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" />
+<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help" />
 
 ![summary block bg img](../images/bg-hero.jpeg)
 
