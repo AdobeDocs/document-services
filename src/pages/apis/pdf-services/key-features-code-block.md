@@ -31,7 +31,7 @@ import HTMLToPDF from './html-to-pdf.md';
 - [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
 
-<TabsBlock orientation="vertical" slots="heading, image, content" repeat="18"  theme="dark" className='bgBlue code-block-0 key-features-code-block' />
+<TabsBlock orientation="vertical" slots="heading, image, content" repeat="18"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block' />
 
 ### Extract PDF Content
 

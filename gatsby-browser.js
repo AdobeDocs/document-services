@@ -285,7 +285,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".Designed-for-developers a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-
+      document.querySelectorAll(".home-code-block div.tabItem").forEach(link=>{
+        link.setAttribute("daa-ll", link.title);
+      })
       document
         .querySelector(".Use-cases-for-Adobe-Document-Services")
         .setAttribute("daa-lh", "Use cases for Adobe Document Services");
@@ -677,6 +679,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+        document.querySelectorAll(".service-code-block div.tabItem").forEach(link=>{
+          link.setAttribute("daa-ll", link.title);
+        })
+
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -702,7 +708,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".embed-key-features a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-
+      document.querySelectorAll(".embed-key-features-code-block div.tabItem").forEach(link=>{
+        link.setAttribute("daa-ll", link.title);
+      })
       document
         .querySelector(".integration-with-adobe")
         .setAttribute("daa-lh", "Adobe Integration Carosul");
