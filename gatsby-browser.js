@@ -60,7 +60,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     try 
     {
-      if (window._satellite) {
+      if (window._satellite && window.digitalData) {
         window._satellite.track("state", {
           digitalData: window.digitalData._snapshot()
         });
