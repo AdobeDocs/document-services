@@ -14,27 +14,27 @@ const isBrowser = typeof window !== "undefined";
 
 export const onRouteUpdate = ({ location, prevLocation }) => {
 
-  // const openPdf = (pdfUrl) =>{
-  //   var adobeDCView;
-  //   if (location.host.endsWith('github.io')) {
-  //     adobeDCView = new window.AdobeDC.View({clientId: "ad86d0e392b14db5a9ace2af19c54b5a", divId: "adobe-dc-view"});
-  //   } else {
-  //     adobeDCView = new window.AdobeDC.View({clientId: "d162da02f77f41418231193d52e4f40c", divId: "adobe-dc-view"});
-  //   }
-  //   var pdfName = pdfUrl.split('/');
-  //     pdfName = pdfName[pdfName.length-1];
-  //     adobeDCView.previewFile(
-  //       {
-  //         content: {
-  //           location: {
-  //             url: pdfUrl
-  //           }
-  //         },
-  //         metaData: {fileName: pdfName },
-  //       },
-  //       { embedMode: "LIGHT_BOX" }
-  //     );
-  // };
+  const openPdf = (pdfUrl) =>{
+    var adobeDCView;
+    if (location.host.endsWith('github.io')) {
+      adobeDCView = new window.AdobeDC.View({clientId: "ad86d0e392b14db5a9ace2af19c54b5a", divId: "adobe-dc-view"});
+    } else {
+      adobeDCView = new window.AdobeDC.View({clientId: "c65dd91c079940069a932b7200857864", divId: "adobe-dc-view"});
+    }
+    var pdfName = pdfUrl.split('/');
+      pdfName = pdfName[pdfName.length-1];
+      adobeDCView.previewFile(
+        {
+          content: {
+            location: {
+              url: pdfUrl
+            }
+          },
+          metaData: {fileName: pdfName },
+        },
+        { embedMode: "LIGHT_BOX" }
+      );
+  };
 
   if (isBrowser) {
     let siteSection = location.pathname.split("/");
@@ -303,10 +303,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".Customer-Stories a").forEach(link => {
         link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
         
-        // link.addEventListener("click", () => {
-        //   openPdf(link.href)
-        //   link.removeAttribute("href");
-        // })
+        link.addEventListener("click", () => {
+          openPdf(link.href)
+          link.removeAttribute("href");
+        })
         
       });
 
@@ -365,10 +365,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           : link.previousElementSibling.innerHTML;
         link.setAttribute("daa-ll", textContentData);
 
-        //    link.addEventListener("click", () => {
-        //   openPdf(link.href)
-        //   link.removeAttribute("href");
-        // })
+           link.addEventListener("click", () => {
+          openPdf(link.href)
+          link.removeAttribute("href");
+        })
       });
 
       document
