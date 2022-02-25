@@ -765,40 +765,51 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
       });
     } else if (window.location.pathname.indexOf("pricing") >= 0) {
-      document
-        .querySelector(".Hero-Banner")
-        .closest("main")
-        .setAttribute("daa-lh", "Body");
+      // make sure to differentiate between pricing/contact and regular pricing pages
+      if(window.location.pathname.indexOf("contact") >= 0) {
+        document
+          .querySelector(".Contact-Form")
+          .closest("main")
+          .setAttribute("daa-lh", "Body");
+      } else {
+        document
+          .querySelector(".Hero-Banner")
+          .closest("main")
+          .setAttribute("daa-lh", "Body");
 
-      document
-        .querySelector(".Hero-Banner")
-        .setAttribute("daa-lh", "Hero Banner");
+        document
+          .querySelector(".Hero-Banner")
+          .setAttribute("daa-lh", "Hero Banner");
 
-      document.querySelectorAll(".Hero-Banner a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+        document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document
-        .querySelector(".pdf-service")
-        .setAttribute("daa-lh", "Adobe PDF Services API");
-      document.querySelectorAll(".pdf-service a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+        document
+          .querySelector(".pdf-service")
+          .setAttribute("daa-lh", "Adobe PDF Services API");
+        document.querySelectorAll(".pdf-service a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document
-        .querySelector(".pdf-embed")
-        .setAttribute("daa-lh", "Adobe PDF Embed API");
-      document.querySelectorAll(".pdf-embed a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+        document
+          .querySelector(".pdf-embed")
+          .setAttribute("daa-lh", "Adobe PDF Embed API");
+        document.querySelectorAll(".pdf-embed a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-      document
-        .querySelector(".why-are-ready-to-help")
-        .setAttribute("daa-lh", "We're ready to help");
+        document
+          .querySelector(".why-are-ready-to-help")
+          .setAttribute("daa-lh", "We're ready to help");
 
-      document.querySelectorAll(".why-are-ready-to-help a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
+        document
+          .querySelectorAll(".why-are-ready-to-help a")
+          .forEach((link) => {
+            link.setAttribute("daa-ll", link.textContent);
+          });
+      }
+      
     } else if (window.location.pathname.indexOf("use-cases") >= 0) {
       document
         .querySelector(".Hero-Banner")

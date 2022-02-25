@@ -8,7 +8,7 @@ import FormRightContent from './form-right-content.md'
 
 
 
-<FormWrapperComponent slots="content" repeat="2" theme="lightest"/>
+<FormWrapperComponent slots="content" repeat="2" theme="lightest" className="Contact-Form"/>
 
 <FormLeftContent/>
 
