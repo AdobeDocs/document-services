@@ -338,7 +338,7 @@ const DynamicContentLoader = ({
             <div class="stories-container">
               <div className="header-and-more">
                 <h3 className="spectrum-Heading spectrum-Heading--sizeL">
-                Customer Stories
+                Customer stories
                 </h3>
               </div>              
               <div class="headliner spectrum-Body--sizeL">
