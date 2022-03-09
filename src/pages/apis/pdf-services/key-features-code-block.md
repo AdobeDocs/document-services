@@ -26,7 +26,7 @@ import HTMLToPDF from './html-to-pdf.md';
 
 <SummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="key-features-code-block" />
 
-## Key features of adobe PDF services API
+## Key features of Adobe PDF Services API
 
 - [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
