@@ -1,3 +1,7 @@
+/*
+ * Copyright 2022 Adobe. All rights reserved.
+ */
+
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";

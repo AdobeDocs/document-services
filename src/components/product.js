@@ -1,3 +1,7 @@
+/*
+ * Copyright 2022 Adobe. All rights reserved.
+ */
+
 const clouds = ["Agreements and Contracts", "Content Publishing","Education","Human Resources", "Financial"];
 
 const baseUrl = '/document-services';

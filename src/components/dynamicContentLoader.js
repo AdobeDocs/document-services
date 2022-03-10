@@ -1,3 +1,6 @@
+/*
+ * Copyright 2022 Adobe. All rights reserved.
+ */
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { css } from "@emotion/react";
@@ -5,7 +8,6 @@ import PropTypes from "prop-types";
 import "@spectrum-css/typography";
 import Digging_out_data from "../pages/images/Digging_out_data.jpg";
 import Generate_documents from "../pages/images/generate_documents.jpg";
-// import Generate_documents from "../pages/images/genrateDocument.png";
 import Make_PDFs_searchable from "../pages/images/Make_PDFs_searchable.png";
 import resourceImage from "../pages/images/resource_hero_img.jpg";
 import K2Nintex from "../pages/images/K2Nintex.png";
@@ -14,7 +16,6 @@ import CambridgeAssessment from "../pages/images/Cambridge-Assessment.jpeg";
 import Evisort from "../pages/images/Evisort.jpeg";
 import Waymark from "../pages/images/Waymark.jpg";
 import AISingapore from "../pages/images/AISingapore.png";
-
 import K2NintexPDF from "../pages/resources/K2Nintex.pdf";
 import AdobeInDesignPDF from "../pages/resources/AdobeInDesign.pdf";
 import CambridgeAssessmentPDF from "../pages/resources/Cambridge-Assessment.pdf";
@@ -22,7 +23,7 @@ import EvisortPDF from "../pages/resources/Evisort.pdf";
 import WaymarkPDF from "../pages/resources/Waymark-Story.pdf";
 import AISingaporePDF from "../pages/resources/AI-Singapore-Story.pdf";
 
-
+//Filter the image url path for loading the image under image tag source.
 const getImageURl = (url) => {
   let imageURL = url.split("/");
   imageURL = imageURL[imageURL.length - 1];
@@ -30,6 +31,7 @@ const getImageURl = (url) => {
   return imageURL;
 };
 
+//Filter the image url path from the iframe source content for loading the images under image tag source here.
 const getIframeImage = (iframsrc) => {
   let div = document.createElement("div");
   div.innerHTML = iframsrc;
@@ -38,6 +40,7 @@ const getIframeImage = (iframsrc) => {
   return rawImgSrc;
 };
 
+//Construct the feature blade content.
 const featuredContent = [
   {
     Title: "Make PDFs Searchable (OCR)",
@@ -62,6 +65,8 @@ const featuredContent = [
   },
 ];
 
+
+//Construct the custom stories blade content.
 const StoriesContent = [
   {
     Title: "K2 Nintex",
@@ -101,9 +106,6 @@ const StoriesContent = [
   },
 ];
 
-
-
-
 const DynamicContentLoader = ({
   api = "",
   content = null,
@@ -111,7 +113,7 @@ const DynamicContentLoader = ({
   className,
 }) => {
   const [resData, setResData] = useState([]);
-
+  //Fetch the content from the external API for Blog section.
   useEffect(() => {
     fetch(api)
       .then((res) => res.json())
@@ -229,6 +231,7 @@ const DynamicContentLoader = ({
 
         </>
       )}
+      {/* Load the tutorial blade content */}
       {content === "tutorial" && (
         <div className="main secondary-page">
           <section className="sdk-rsrc-tutorial" id="tuts">
@@ -260,8 +263,7 @@ const DynamicContentLoader = ({
                   text-align: left;
                 `}
               >
-                Find tutorials from novice to expert to help you expand your
-                skills.
+                Find tutorials from novice to expert to help you expand your skills.
               </div>
 
               <div className="tutorial-wrapper">
@@ -283,6 +285,7 @@ const DynamicContentLoader = ({
           </section>
         </div>
       )}
+      {/* Load the blog blade content */}
       {content === "blog" && (
         <div className="masterblog">
           <section className="sdk-rsrc-blog" id="blog">
@@ -331,7 +334,7 @@ const DynamicContentLoader = ({
         </div>
       )}
 
-      {/* Custom Stories  */}
+      {/* Load the Custom Stories blade content */}
       {content === "CustomerStories" && (
         <div className="masterStories">
           <section class="sdk-rsrc-stories" id="customer">

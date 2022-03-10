@@ -1,4 +1,6 @@
-
+/*
+ * Copyright 2022 Adobe. All rights reserved.
+*/
 import React from 'react';
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';

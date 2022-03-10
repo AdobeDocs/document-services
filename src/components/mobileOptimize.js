@@ -1,3 +1,7 @@
+/*
+ * Copyright 2022 Adobe. All rights reserved.
+ */
+
 import React from "react";
 import classNames from "classnames";
 import { css } from "@emotion/react";
@@ -78,8 +82,6 @@ const MobileOptimize = ({ className, theme = "dark" }) => {
     </div>
   );
 };
-
-
 
 MobileOptimize.propTypes = {
 	theme: PropTypes.string,

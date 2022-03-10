@@ -1,3 +1,6 @@
+/*
+ * Copyright 2022 Adobe. All rights reserved.
+*/
 import React, {
   useState,
   useRef,
@@ -29,6 +32,7 @@ import {
 } from "@adobe/gatsby-theme-aio/conf/globals";
 import "@spectrum-css/menu";
 
+// Import the svg image dynamically to use in menu item.
 const useDynamicSVGImport = (name, options = {}) => {
   const ImportedIconRef = useRef();
   const [loading, setLoading] = useState(false);
@@ -61,6 +65,7 @@ const useDynamicSVGImport = (name, options = {}) => {
   return { error, loading, SvgIcon: ImportedIconRef.current?.default };
 };
 
+//Create the image element to load the svg icon in each menu item.
 const Icon = ({ name, onCompleted, onError }) => {
   const { error, SvgIcon } = useDynamicSVGImport(name, {
     onCompleted,
@@ -85,6 +90,7 @@ const CustomMenuBlock = ( ) => {
   const [expandedMenus, setExpandedMenus] = useState([]);
   const [expandedHederMenus, setExpandedHederMenus] = useState([]);
   const min_mobile_screen_width = "767px";
+   //Fetch the sidebar menu item title, icon and path from config file by using the graphql query.
   const data = useStaticQuery(
     graphql`
       query MyQuery {
@@ -126,12 +132,11 @@ const CustomMenuBlock = ( ) => {
     });
   }
 
-
   const handleIconError = useCallback((err) => console.error(err.message), []);
-
   const pathWithRootFix = rootFix(location.pathname);
   const selectedMenus = findSelectedPages(pathWithRootFix, subMenuPages);
 
+  // Display the submenu items
   const renderSubMenuItem = (menus, level) => {
     return menus
       .filter((menu) => menu.title && menu.path)
@@ -151,7 +156,6 @@ const CustomMenuBlock = ( ) => {
         return (
           <li
             id={id}
-           
             ref={ref}
             key={index}
             css={css`

@@ -1,4 +1,6 @@
-
+/*
+ * Copyright 2022 Adobe. All rights reserved.
+*/
 import React, { useEffect, useState, cloneElement } from 'react';
 import { css } from '@emotion/react';
 import { HeroButtons } from '@adobe/gatsby-theme-aio/src/components/Hero';
@@ -8,7 +10,7 @@ import { TABLET_SCREEN_WIDTH, MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-ai
 import PropTypes from 'prop-types';
 import { navigate } from 'gatsby';
 import classNames from "classnames";
-import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const counter = {
   2: 0,
@@ -17,10 +19,29 @@ const counter = {
 };
 const alignMapping = ['flex-start', 'flex-end'];
 
-const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, links ,borderRadious,gradients=false, gradientsType, buttons,footer =false, buttonDisplay=false, height=500, cursorDisable=false,headerSize='225',contentSize='230' ,className}) => {
+const CustomCard = ({ 
+  theme = 'lightest',
+  width = '100%',
+  icon,
+  heading,
+  text,
+  links ,
+  borderRadious,
+  gradients=false,
+  gradientsType,
+  buttons,
+  footer =false,
+  buttonDisplay=false,
+  height=500,
+  cursorDisable=false,
+  headerSize='225',
+  contentSize='230',
+  className
+  }) => {
 
   let initColumns = 100 / parseFloat(width);
 
+  //Set the card width and no of columns.
   if (width === '33%') {
     width = `${(100 / 3).toFixed(2)}%`;
     initColumns = 3;
@@ -40,11 +61,13 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
     counter[columns]++;
   }
 
+  // Set the card alignment.
   let alignment = 'center';
   if (columns === 2 || columns === 3) {
     alignment = alignMapping[counter[columns] % columns] || 'center';
   }
 
+  // Set the card background linear-gradient color.
   const linearGradients=(type)=>{
     if(type === 'redORange'){
       return {background: "linear-gradient(to bottom, #f19861, #cc3232)"}
@@ -65,7 +88,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
 
   return (
     <section
-    className={classNames(className, `spectrum--${theme}`)}
+      className={classNames(className, `spectrum--${theme}`)}
       css={css`
         display: inline-flex;
         flex-direction: column;
@@ -84,9 +107,8 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
       <div
         onClick={links ?
           () => navigate(links.props.children) :()=>('javascript')}
-          onKeyPress={links ?
-            () => navigate(links.props.children) :()=>('javascript')}
-        // tabIndex={0}
+        onKeyPress={links ?
+          () => navigate(links.props.children) :()=>('javascript')}
         role="button"
         tabIndex={0} 
         className="spectrum-Card"
@@ -114,8 +136,7 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
         <div
           className="spectrum-Card-body"
           css={css`
-            // height: calc(var(--spectrum-global-dimension-size-4600) - var(--spectrum-global-dimension-size-500));
-           height: calc(var(--spectrum-global-dimension-size-3600) + var(--spectrum-global-dimension-size-900));
+            height: calc(var(--spectrum-global-dimension-size-3600) + var(--spectrum-global-dimension-size-900));
             overflow: auto;
             text-align: left;
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
@@ -155,14 +176,11 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
               ${icon ? 'top: var(--spectrum-global-dimension-size-800);' : ''}
             `}>
             <div
-              // className="spectrum-Card-header spectrum-Heading spectrum-Heading--sizeXXS"
               css={css`
                 margin-top: 0 !important;
                 margin-bottom: var(--spectrum-global-dimension-size-100) !important;
-
               `}>
               <div
-                // className="spectrum-Card-title"
                 style={ gradients && {  color: 'white'}}
                 css={css`
                   font-size: var(--spectrum-global-dimension-size-${headerSize});
@@ -201,9 +219,8 @@ const CustomCard = ({ theme = 'lightest', width = '100%', icon, heading, text, l
               </div>
             }
           </div>
-
         </div>
-
+        
         {footer &&
           <div className="spectrum-Card-footer">
             <HeroButtons

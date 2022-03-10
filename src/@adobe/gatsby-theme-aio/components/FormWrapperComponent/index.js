@@ -1,6 +1,6 @@
 /*
- * Copyright 2021 Adobe. All rights reserved.
- */
+ * Copyright 2022 Adobe. All rights reserved.
+*/
 
 import React from "react";
 import { css } from "@emotion/react";
@@ -8,7 +8,6 @@ import "@spectrum-css/typography";
 import "@spectrum-css/card";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-
 import { MOBILE_SCREEN_WIDTH } from "@adobe/gatsby-theme-aio/src/utils";
 
 const FormWrapperComponent = ({
@@ -24,7 +23,6 @@ const FormWrapperComponent = ({
           width: 100%;
           display: flex;
           flex-direction: row;
-
           @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
             overflow-x: hidden !important;
             display: flex !important;
@@ -50,7 +48,6 @@ const FormWrapperComponent = ({
         <div
           css={css`
             width: 40%;
-            
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
               width: 100% !important;
             }
