@@ -21,6 +21,7 @@ const SummaryBlock = ({
   text,
   buttons,
   buttonPositionRight = false,
+  primaryOutline = false,
   isBtnVariant = false,
   btnVariant = "overBackground",
 }) => (
@@ -97,7 +98,7 @@ const SummaryBlock = ({
             `,
           })}
         {!buttonPositionRight && (
-          <HeroButtons buttons={buttons} quiets={[false, true]} />
+          <HeroButtons buttons={buttons} quiets={[isBtnVariant, !primaryOutline]} />
         )}
       </div>
       {buttonPositionRight && (
@@ -114,7 +115,7 @@ const SummaryBlock = ({
         >
           <HeroButtons
             buttons={buttons}
-            quiets={[isBtnVariant, true]}
+            quiets={[isBtnVariant, primaryOutline]}
             variants={[btnVariant, "overBackground"]}
           />
         </div>
@@ -134,6 +135,7 @@ SummaryBlock.propTypes = {
   buttonPositionRight: PropTypes.bool,
   isBtnVariant: PropTypes.bool,
   btnVariant: PropTypes.string,
+  primaryOutline: PropTypes.bool,
 };
 
 export { SummaryBlock };

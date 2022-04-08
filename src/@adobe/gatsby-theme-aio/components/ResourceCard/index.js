@@ -2,6 +2,7 @@
 import React, { cloneElement, useEffect, useState } from 'react';
 import { css } from '@emotion/react';
 import { GatsbyLink } from '@adobe/gatsby-theme-aio/src/components/GatsbyLink';
+import { HeroButtons } from '@adobe/gatsby-theme-aio/src/components/Hero';
 import {
   getElementChild,
   layoutColumns,
@@ -10,7 +11,7 @@ import {
 import '@spectrum-css/typography';
 import '@spectrum-css/card';
 import PropTypes from 'prop-types';
-import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import { DESKTOP_SCREEN_WIDTH, TABLET_SCREEN_WIDTH} from "../../../../utils";
 import classNames from "classnames";
 
 const counter = {
@@ -19,7 +20,7 @@ const counter = {
 };
 const alignMapping = ['margin-left: 0;', 'margin-right: 0;'];
 
-const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image,className, isCustomStories=false }) => {
+const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image, className, isCustomStories = false, buttons, isFooter = false}) => {
   let initColumns = 100 / parseFloat(width);
 
   if (width === '33%') {
@@ -172,6 +173,22 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
               </div>
             </div>
           </div>
+            {isFooter &&(
+              <div className="spectrum-Card-footer">
+                <HeroButtons
+                  buttons={buttons}
+                  quiets={[false]}
+                  variants={['primary']}
+                  css={css`
+
+                @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+                  justify-content: center;
+                }
+              `}
+                />
+              </div>
+            )
+            }
         </GatsbyLink>
       </section>
       {typeof counter[columns] !== 'undefined' && counter[columns] % columns === 0 ? <div aria-hidden="true" /> : null}
@@ -185,7 +202,9 @@ ResourceCard.propTypes = {
   link: PropTypes.element,
   heading: PropTypes.element,
   text: PropTypes.element,
-  image: PropTypes.element
+  buttons: PropTypes.element,
+  image: PropTypes.element,
+  isFooter: PropTypes.element
 };
 
 export { ResourceCard };

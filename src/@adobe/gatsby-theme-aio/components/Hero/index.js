@@ -441,6 +441,89 @@ const Hero = ({
           </div>
         </section>
       );
+    } else if (variant === 'halfwidth' && customLayout ) {
+      return (
+        <section
+          className={classNames(className, `spectrum--${theme}`)}
+          css={css`
+            background: ${background ?? 'var(--spectrum-global-color-gray-50)'};
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+            @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+              height: auto;
+              padding: var(--spectrum-global-dimension-size-400);
+              box-sizing: border-box;
+            }
+            @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+              height: auto;
+              padding: var(--spectrum-global-dimension-size-400);
+              box-sizing: border-box;
+            }
+        `}>
+          <div css={css`
+            @media screen and (min-width: ${DESKTOP_SCREEN_WIDTH}) {
+              display: flex;
+              justify-content: space-between;
+              position: relative;
+              max-width:${DESKTOP_SCREEN_WIDTH};
+              margin:auto;
+            }
+          `}>            
+            <div
+              css={css`
+                display: flex;
+                flex-direction: column;
+                justify-content: center !important;
+                // position: absolute;
+                padding: 0;
+                top: 0;
+                text-align: left;
+                width: 36%;
+                align-item:center;
+                bottom: 0;
+                box-sizing: border-box;
+
+                @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                  padding: 0 !important;
+                  width: 100% !important;
+                  position: initial !important;
+                }
+
+                @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+                  padding: 0;
+                  width:100% !important;
+                  top: 20px !important;
+                  position: initial !important;
+                  h1 {
+                    padding: 0 var(--spectrum-global-dimension-size-200) 0 var(--spectrum-global-dimension-size-0) !important;
+                    font-size: var(--spectrum-heading-l-text-size, var(--spectrum-alias-heading-l-text-size))
+                  }
+                }
+            `}>                    
+                {heading && (
+                  <HeroHeading
+                    heading={heading}
+                    variant={variant}
+                    customLayout={customLayout}
+                  />
+                )}
+
+              <HeroTexts texts={props} />
+
+              <HeroButtons
+                buttons={buttons}
+                css={css`
+                  margin-top: var(--spectrum-global-dimension-size-400);
+                `}
+              />
+            </div>
+            <div>
+              <div className={assetsImg?.props?.children}/>
+            </div>
+          </div>
+        </section>
+      );
     } else if (variant === 'fullwidth') {
       return (
         <section
@@ -494,9 +577,10 @@ const Hero = ({
                 margin-top: var(--spectrum-global-dimension-size-400);
               `}
             />
+            <div className={assetsImg?.props?.children}/>
           </div>
         </section>
-      );
+      );    
     } else if (variant === 'halfwidth') {
       return (
         <section
@@ -594,7 +678,7 @@ Hero.propTypes = {
   width: PropTypes.string,
   theme: PropTypes.string,
   customLayout: PropTypes.bool,
-  assetsImg:PropTypes.string,
+  assetsImg:PropTypes.element,
 };
 
 HeroButtons.propTypes = {

@@ -9,6 +9,7 @@ import ExtractStepperComponent from './pdf-extract/extract-stepper.md';
 import WhyExtractAPI from './pdf-extract/why-extract-api.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';
 import HowItWorks from './pdf-extract/how-it-works.md';
+import {APIPixelRetargeting} from '../../components/retargetting'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
@@ -84,3 +85,5 @@ Have questions about the Document Services APIs?
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 - [Contact us](../pricing/contact.md)
 
+
+<APIPixelRetargeting/>

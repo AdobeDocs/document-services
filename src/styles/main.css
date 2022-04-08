@@ -2,8 +2,7 @@
 
 h1 {
     font-family: "adobe-clean" !important;
- }
-
+}
 
 .swiper-pagination-bullet {
     height: 8px;
@@ -360,6 +359,10 @@ h1 {
     padding-top: var(--spectrum-global-dimension-size-300) !important;
     padding-bottom: var(--spectrum-global-dimension-size-300) !important;
 }
+.py-2 {
+    padding-top: var(--spectrum-global-dimension-size-800) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-800) !important;
+}
 .left-Contact div {
     justify-content: flex-start;
 }
@@ -685,7 +688,6 @@ img[alt=thumbnail] {
     .doc-service-hero {
         background-image: url('../pages/images/home-carousel-three@2x.png') !important;
         width: 23rem !important;
-
     }
 
     .doc-embed-hero {
@@ -969,8 +971,35 @@ pre .prism-code.spectrum-Code  span.token.string{
     }
 }
 
+.homeheroAssertImage {
+    background-image: url('../pages/images/DCP-MarqueeVisual.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px !important;
+    width: 450px !important;
+    background-position: bottom center !important;
+}
+
+.abm-landing-page-hero {
+    background-image: url('../pages/images/1_Marquee_Device.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px !important;
+    width: 450px !important;
+    background-position: bottom center !important;
+    margin-top: var(--spectrum-global-dimension-size-175) !important;
+}
 
 @media screen and (max-width: 1024px){
+    .abm-landing-page-hero {
+        background-image: url('../pages/images/Tablet_Marquee_Device.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 350px !important;
+        width: 450px !important;
+        background-position: bottom center !important;
+    }
+
     .homeheroAssertImage {
         background-image: url('../pages/images/DCP-MarqueeVisual.png');
         background-repeat: no-repeat;
@@ -981,6 +1010,11 @@ pre .prism-code.spectrum-Code  span.token.string{
     }
 }
 
+@media screen and (max-width: 1024px ) and (min-width:780px){
+    .assetImglaptop > div{
+        display:flex !important;
+    }
+}
 
 @media screen and (max-width: 767px){
     .homeheroAssertImage {
@@ -992,6 +1026,15 @@ pre .prism-code.spectrum-Code  span.token.string{
         width: 100% !important;
         height: 17.5rem !important;
     }
+    .abm-landing-page-hero {
+        margin-top: var(--spectrum-global-dimension-size-200) !important;
+        background-image: url('../pages/images/mob_Marquee_Device.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 585px;
+        width: 100% !important;
+        height: 19rem !important;
+    }
 }
 
 @media screen and (max-width: 1023px ) and (min-width:767px){
@@ -1002,6 +1045,15 @@ pre .prism-code.spectrum-Code  span.token.string{
         background-size: cover;
         height: 590px !important;
         width: 100% !important;
+        background-position: bottom center !important;
+    }
+    
+    .abm-landing-page-hero {
+        margin-top: var(--spectrum-global-dimension-size-200) !important;
+        background-image: url('../pages/images/Tablet_Marquee_Device.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
         background-position: bottom center !important;
     }
 }
@@ -1115,4 +1167,140 @@ pre .prism-code.spectrum-Code  span.token.string{
 
 .hme-custom-header .spectrum-Card-title{
     padding-right:0 !important;
+}
+
+.landingResourceCard{
+    background: none !important;
+}
+.landingResourceCard .spectrum-Card-body{
+    height: var(--spectrum-global-dimension-size-1000);
+    background: var(--spectrum-global-color-gray-200);
+}
+
+.landingResourceCard .spectrum-Card-footer{
+    border-color: var(--spectrum-global-color-gray-300);
+}
+
+.customer_stories{
+    padding-top: var(--spectrum-global-dimension-size-800) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-100) !important;
+}
+
+.customer_story_wrapper{
+    padding-bottom: var(--spectrum-global-dimension-size-600);
+}
+
+.sample-integration_UiPath {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/3_Icon_UiPath.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sample-integration_bg {
+    background: rgb(245 245 245) !important;
+}
+
+.sample-integration_workFront {
+
+    /* width: 309px !important; */
+    width: 230px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/3_Icon_Workfront.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+
+}
+
+.sample-integration_ms {
+
+    width: 309px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/3_Icon_MicrosoftPowerAutomate.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    .sample-integration_UiPath {
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/3_Icon_UiPath_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .sample-integration_workFront {
+
+        width: 222px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/3_Icon_Workfront_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    
+    }
+
+    .sample-integration_ms {
+
+        width: 309px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/3_Icon_MicrosoftPowerAutomate_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .sample-integration_UiPath {
+        width: 120px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/3_Icon_UiPath_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .sample-integration_workFront {
+
+        width: 220px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/3_Icon_Workfront_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    
+    }
+
+    .sample-integration_ms {
+
+       
+        width: 270px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/3_Icon_MicrosoftPowerAutomate_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
 }

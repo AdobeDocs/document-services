@@ -10,6 +10,7 @@ import StartModifyingPDF from './pdf-services/start-modifying-pdf.md';
 import UseCasesResourceCard from './pdf-services/use-cases-resource-cards.md';
 import DocumentServicesProductCards from './pdf-services/document-services-product-cards.md';
 import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
+import {APIPixelRetargeting} from '../../components/retargetting'
 
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
@@ -79,3 +80,5 @@ Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all)
 - [Contact us](../pricing/contact.md)
+
+<APIPixelRetargeting/>

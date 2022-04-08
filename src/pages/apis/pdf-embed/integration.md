@@ -7,7 +7,7 @@ Integration with Adobe Experience Manager
 
 Adobe Experience Manager customers can easily drag and drop a high-fidelity PDF viewer directly into web applications without the need for additional code or customizations. Includes pre-configurable settings for comments, printing, downloading, and integrated Adobe Analytics.
 
-* [Learn more](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/pdf-viewer.html)
+* [Learn more](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/pdf-viewer.html?lang=en)
 
 
 ![Analytics](../../images/adobe-analytics@2x.png)

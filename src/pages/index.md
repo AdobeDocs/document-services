@@ -12,6 +12,7 @@ import HomeResourceCard from './home/home-resource.md';
 import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './home/home-storyies.md'
+import {APIPixelRetargeting} from '../components/retargetting'
 
 <Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" className="homeherobgImage Hero-Banner"/>
 
@@ -41,7 +42,7 @@ Do more with this API.
 
 
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
 
 ### Adobe PDF Extract API
 ### Unlock content structure in any PDF.
@@ -176,3 +177,5 @@ Start free trial with 1,000 PDF transactions for up to 6 months.
 
 - [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Contact us](src/pages/pricing/contact.md)
+
+<APIPixelRetargeting/>

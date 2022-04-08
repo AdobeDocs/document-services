@@ -12,6 +12,7 @@ import DgExploreOtherAdobeDoc from './doc-generation/dg-explore-other-adobe-doc.
 import {MobileOptimize} from '../../components/mobileOptimize'
 import {AdobeMsBlade} from '../../components/adobeMicrosoftBlade'
 import '../../styles/doc-generation.css'
+import {APIPixelRetargeting} from '../../components/retargetting'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
@@ -89,3 +90,5 @@ Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 - [Contact us](../pricing/contact.md)
+
+<APIPixelRetargeting/>

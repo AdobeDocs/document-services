@@ -36,6 +36,25 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       );
   };
 
+  const reTargetingFun=()=>{
+  
+      let isAvailable = document.body.querySelector('.retargeting')
+      console.log('isAvailable',isAvailable);
+
+      var img = document.createElement("img");
+      img.setAttribute("src", "https://insight.adsrvr.org/track/pxl/?adv=eazb7fe&ct=0:ygnni67&fmt=3");
+      img.setAttribute("height", "1");
+      img.setAttribute("width", "1");
+      img.setAttribute("class", "retargeting");
+      img.setAttribute("style", "border-style:none;");
+      img.setAttribute("alt", "");
+
+      if(isAvailable) {
+        isAvailable.remove();
+      } 
+      document.body.append(img); 
+  }
+
   if (isBrowser) {
     let siteSection = location.pathname.split("/");
     try {
@@ -101,7 +120,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     }
 
     getCredentialsButton.href = `${baseurl}`;
-
+    getCredentialsButton.addEventListener("click",()=>reTargetingFun());
+    
     let header = document.querySelector("header");
     header.setAttribute("daa-lh", "Gnav");
     header
@@ -177,7 +197,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       ?.setAttribute("daa-ll", "Console");
 
     let footer = document.querySelector("footer");
-    footer.setAttribute("daa-lh", "Footer");
+    footer?.setAttribute("daa-lh", "Footer");
     footer.querySelectorAll("a").forEach(link => {
       if (link.textContent) {
         link.setAttribute("daa-ll", link.textContent);
@@ -186,6 +206,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     if (window.location.pathname.indexOf("pdf-services") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
+      getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-services-api`;
@@ -193,12 +214,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       startFreeTrialButtonArr.forEach((startFreeTrialButton, index) => {
         startFreeTrialButton.href = `${baseurl}?api=pdf-services-api`;
-        if (index === 0) {
-        } else if (index === 1) {
-        }
+        startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
     } else if (window.location.pathname.indexOf("doc-generation") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
+      getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=document-generation-api`;
@@ -206,9 +226,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       startFreeTrialButtonArr.forEach((startFreeTrialButton, index) => {
         startFreeTrialButton.href = `${baseurl}?api=document-generation-api`;
+        startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
+        
       });
     } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
+      getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-extract-api`;
@@ -216,9 +239,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       startFreeTrialButtonArr.forEach((startFreeTrialButton, index) => {
         startFreeTrialButton.href = `${baseurl}?api=pdf-extract-api`;
+        startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
+      getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
@@ -229,6 +254,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       ).filter(el => el.textContent === "Get free credentials");
       getFreecredentialsButtonArr.forEach((getFreecredentialsButton, index) => {
         getFreecredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
+        getFreecredentialsButton.addEventListener("click",()=>reTargetingFun())
       });
     } else if (
       window.location.pathname.indexOf("pricing") >= 0 &&
@@ -236,6 +262,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     ) {
       startFreeTrialButtonArr.map(startFreeTrialButton => {
         startFreeTrialButton.href = `${baseurl}?api=pdf-embed-api`;
+        startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
       getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
@@ -252,6 +279,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       window.location.pathname.indexOf("homepage") >= 0 ||
       (window.location.pathname === "/" && isLocal) || (window.location.pathname === `${navLinksBaseUrl}/` && !isLocal)
     ) {
+      startFreeTrialButtonArr.map(startFreeTrialButton => {
+        startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
+      });
+
       document
         .querySelector(".Hero-Banner")
         .closest("main")
@@ -331,6 +362,82 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+    }else if (window.location.pathname.indexOf("abmCampaign") >= 0) {
+      document
+      .querySelector(".Hero-Banner")
+      .closest("main")
+      .setAttribute("daa-lh", "Body");
+
+      document
+      .querySelector(".Hero-Banner")
+      .setAttribute("daa-lh", "ABM Campaign");
+      document.querySelectorAll(".Hero-Banner a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === 'Start free trial'){
+          link.addEventListener("click",()=>reTargetingFun());
+          link.href = `${baseurl}?sdid=2NVQC73G&mv=display`;
+        }
+      });
+
+      document
+      .querySelector(".why-Adobe-document-services")
+      .setAttribute("daa-lh", "Why Adobe Document Services?")
+
+      document
+      .querySelector(".simple-integration")
+      .setAttribute("daa-lh", "Seamless and simple integration with your existing apps.")
+
+      document
+      .querySelector(".reimagine")
+      .setAttribute("daa-lh", "Reimagine your document experiences today.")
+
+      document.querySelectorAll(".reimagine a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === 'Start free trial'){
+          link.addEventListener("click",()=>reTargetingFun());
+          link.href = `${baseurl}?sdid=2K4PCBTH&mv=display`;
+        }
+      });
+
+      document
+      .querySelector(".sales-process")
+      .setAttribute("daa-lh", "Speed up your sales process.");
+      document.querySelectorAll(".sales-process a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);        
+      });
+
+      document
+      .querySelector(".employee-paperwork")
+      .setAttribute("daa-lh", "Simplify employee paperwork.");
+      document.querySelectorAll(".employee-paperwork a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);        
+      });
+
+      document
+      .querySelector(".legal-workflows")
+      .setAttribute("daa-lh", "Automate legal workflows.");
+      document.querySelectorAll(".legal-workflows a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);        
+      });
+
+      document
+      .querySelector(".customer_stories")
+      .setAttribute("daa-lh", "Customer stories.");
+      document.querySelectorAll(".customer_story_wrapper a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);        
+      });
+
+      document
+      .querySelector(".get-started-today")
+      .setAttribute("daa-lh", "Get started today.");
+      document.querySelectorAll(".get-started-today a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === 'Start free trial'){
+          link.addEventListener("click",()=>reTargetingFun());
+          link.href = `${baseurl}?sdid=2FDNCGKJ&mv=display`;
+        }
+      });
+
     } else if (window.location.pathname.indexOf("resources") >= 0) {
       document
         .querySelector(".resource-banner")

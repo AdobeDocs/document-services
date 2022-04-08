@@ -75,7 +75,7 @@ section.sdk-rsrc-release .release-container {
     }
 }
 
-section.sdk-rsrc-release .release-container .release-wrapper {
+section.sdk-rsrc-release .release-container .release-wrapper { 
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 4.0625rem;
@@ -823,3 +823,141 @@ section.sdk-rsrc-stories .stories-container .stories-wrapper .customer a {
         max-width: 185px;
     }
 }  
+
+.Reinvent > div > div {
+    flex: 6;
+}
+.Reinvent > div >div:nth-child(2){
+    flex: 4;
+    align-self: center;
+}
+
+.Reinvent > div >div:nth-child(2) div{
+    justify-content: flex-end;
+}
+
+
+section.sdk-rsrc-release-how-it-work {
+    margin: 4.375rem 2.75rem 0 2.75rem !important;
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work {
+    max-width: 1060px;
+    margin: 0 auto;
+    min-height: 360px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    section.sdk-rsrc-release-how-it-work .release-container-how-it-work{
+        margin: 4.375rem 2.75rem;
+    }
+}
+
+@media (max-width: 320px)   {
+     section.sdk-rsrc-release-how-it-work .release-container-how-it-work{
+        max-width: 300px;
+    }
+}
+
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4.0625rem;
+    flex-direction: row;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-wrapper-img-how-it-work {
+    width: 100%;
+    height: 271px;
+}
+
+@media screen and (min-width: 1060px) {
+    section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-wrapper-img-how-it-work {
+        width: 45.44%;
+        height: 271px;
+   }
+}
+
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-wrapper-img-how-it-work iframe {
+    width: 100%;
+    /* height: auto; */
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work {
+    margin-top: 1.25rem;
+}
+
+@media screen and (min-width: 1060px) {
+    section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work {
+        text-align: left;
+        margin-right: 4.375rem;
+        width: 45%;
+   }
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work h4 {
+    text-align: left !important;
+    font-size: 2.125rem;
+    text-transform: none;
+}
+@media screen and (min-width: 767px) {
+    section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work h4 {
+        font-size: 2.25rem;
+   }
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work p {
+    text-align: left !important;
+    font-size: 1.1875rem;
+    margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+    section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work p {
+        font-size: 1.125rem;
+   }
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work .release-cta-how-it-work {
+    margin-top: 1.875rem;
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work .release-cta-how-it-work .button-link {
+    text-decoration: none;
+    text-decoration-style: solid !important;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 16px;
+    max-height: 32px;
+    height: auto;
+    padding: 3.5px 14px 4.5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4b4b4b !important;
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work .release-cta-how-it-work .button-link:hover {
+    text-decoration: none !important;
+    border-style: unset;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 16px;
+    max-height: 32px;
+    height: auto;
+    padding: 3.5px 14px 4.5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4b4b4b !important;
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work .release-cta-how-it-work .button-link:active {
+    text-decoration: none !important;
+    border-style: unset;
+}
+section.sdk-rsrc-release-how-it-work .release-container-how-it-work .release-wrapper-how-it-work .release-copy-wrapper-how-it-work .release-cta-how-it-work .button-link:visited {
+    text-decoration: none !important;
+}
+section.sdk-rsrc-anchor {
+    margin: 2rem 0 1.25rem 0 !important;
+    padding-top: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+   .align-right-heading{
+       text-align: start !important;
+   }
+}

@@ -15,6 +15,7 @@ import WhyPdfEmbed from './pdf-embed/why-pdf-embed.md';
 import KeyFeatures from './pdf-embed/key-features.md'
 import ExploreAdobe from './pdf-embed/explore-adobe.md'
 import Integration from './pdf-embed/integration.md'
+import {APIPixelRetargeting} from '../../components/retargetting'
 
 
 
@@ -118,3 +119,5 @@ Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 * [Contact us](../pricing/contact.md)
+
+<APIPixelRetargeting/>

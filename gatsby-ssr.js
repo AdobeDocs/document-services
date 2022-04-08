@@ -15,8 +15,37 @@ import {withPrefix} from 'gatsby';
 
 export const onRenderBody = ({setHeadComponents}) => {
   setHeadComponents([
-    <script src={withPrefix('/gtag.js')}></script>,
+        <script type="text/javascript">
+          {`
+           _linkedin_partner_id = "3803834";
 
+           window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+   
+           window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+         `}
+
+        </script>,
+        <script type="text/javascript">{`
+            (function(l) {
+
+            if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+
+            window.lintrk.q=[]}
+
+            var s = document.getElementsByTagName("script")[0];
+
+            var b = document.createElement("script");
+
+            b.type = "text/javascript";b.async = true;
+
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+
+            s.parentNode.insertBefore(b, s);})(window.lintrk);
+        `}
+      </script>,
+
+    <script src={withPrefix('/gtag.js')}></script>,
+  
     process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
       <script type="text/javascript">{`
         window.marketingtech = {

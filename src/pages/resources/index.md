@@ -7,7 +7,6 @@ Tag 1: Adobe Content RTG - Site Retargeting
 import '../../styles/developer-resource.css'
 
 import {DynamicContentLoader} from '../../components/dynamicContentLoader';
-import PixelRetargeting from '../../components/retargetting'
 
 
 <Hero slots="heading, text" variant="fullwidth" theme="lightest" customLayout className="sub-title resource-banner"/>
@@ -35,5 +34,3 @@ Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 * [Contact us](../pricing/contact.md)
-
-<PixelRetargeting />

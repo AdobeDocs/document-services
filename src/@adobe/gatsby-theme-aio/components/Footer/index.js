@@ -18,6 +18,7 @@ import '@spectrum-css/typography';
 import { getExternalLinkProps, DESKTOP_SCREEN_WIDTH, MOBILE_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import LinkedInRetargeting from './linkedInRetargetting'
 
 const DESKTOP_SCREEN_MAX_WIDTH = '1060px';
 const { APIs, services, community, support, developer, legal, allAPIs } = {
@@ -160,7 +161,7 @@ const Footer = ({ hasSideNav = false }) => (
         />
       </Helmet>
     )}
-
+  
     <footer
       css={css`
         position: relative;
@@ -477,6 +478,7 @@ const Footer = ({ hasSideNav = false }) => (
           </div>
         </div>
       </div>
+      <LinkedInRetargeting/>
     </footer>
   </>
 );

@@ -75,7 +75,7 @@ const Texts = ({ texts }) => {
   return textKeys.map((textKey) => texts[textKey]);
 };
 
-const Links = ({ links, isCentered }) =>
+const Links = ({ links, isCentered, isLinksGroups=false }) =>
   links
     ? cloneElement(links, {
         css: css`
@@ -83,23 +83,49 @@ const Links = ({ links, isCentered }) =>
           padding: 0;
           display: flex;
           justify-content: ${isCentered ? "center" : "flex-start"};
-          margin-top: ${isCentered
+          ${!isLinksGroups? "" : "flex-wrap: wrap;"}
+          margin-top: ${isCentered || isLinksGroups
             ? "var(--spectrum-global-dimension-size-200) !important;"
             : "var(--spectrum-global-dimension-size-600) !important;"};
-
           & li {
             display: flex;
             align-items: center;
-            height: var(--spectrum-global-dimension-size-400);
+            ${isLinksGroups 
+              ? `border-radius: 10px; 
+                border:solid 1.8px;
+                margin-right: var(--spectrum-global-dimension-size-200);
+                height: var(--spectrum-global-dimension-size-300);
+                margin-top: var(--spectrum-global-dimension-size-100);
+                background-color: #F7F7F7;
+                `
+              : "height: var(--spectrum-global-dimension-size-400)"};
           }
 
           & li a {
-            white-space: nowrap;
-            margin-right: var(--spectrum-global-dimension-size-600);
+            white-space: nowrap;           
+            ${isLinksGroups 
+              ? `margin: var(--spectrum-global-dimension-size-100); 
+              color: currentColor;
+              text-decoration: none;
+              font-size: var(--spectrum-global-dimension-size-175);` 
+              : "margin-right: var(--spectrum-global-dimension-size-600);"};
           }
 
           & li:last-of-type a {
-            margin-right: 0;
+            margin-right: ${isLinksGroups ? "var(--spectrum-global-dimension-size-100)": "0"}
+          }
+
+          & li:hover{
+            ${isLinksGroups  ?
+            `background-color: var(--spectrum-button-primary-m-background-color-hover, var(--spectrum-global-color-gray-800));
+            border-color: var(--spectrum-button-primary-m-border-color-hover, var(--spectrum-global-color-gray-800));            color: var(--spectrum-button-primary-m-text-color-hover, var(--spectrum-global-color-gray-50));`
+            : ""}
+          }        
+          & li:hover a{
+            ${isLinksGroups  ? `
+            color: var(--spectrum-button-primary-m-text-color-hover, var(--spectrum-global-color-gray-50));
+            text-decoration: none;`
+            : ""}
           }
 
           .gatsby-resp-image-wrapper {
@@ -117,18 +143,25 @@ const Links = ({ links, isCentered }) =>
           .gatsby-resp-image-image {
             object-fit: contain;
           }
-
+          
           @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-            flex-direction: column;
-            align-items: ${isCentered ? "center" : "left"};
+            flex-direction: ${isLinksGroups ? "initial" : "column"};
+            align-items: ${isCentered ? "center" : "left"};          
 
             li {
-              margin-top: var(--spectrum-global-dimension-size-100);
+              margin-top: var(--spectrum-global-dimension-size-100);              
             }
 
             li a {
-              margin-right: 0;
+              ${isLinksGroups  
+                ? "font-size: var(--spectrum-global-dimension-size-130);` " 
+                : `margin-right: 0;`
+              }
             }
+          }
+
+          @media screen and (max-width: 767px) {
+            ${isLinksGroups  ? `width: min-content` : "" }
           }
         `,
       })
@@ -140,6 +173,7 @@ const TextBlock = ({
   subHeading,
   links,
   buttons,
+  linksGroups,
   icons,
   image,
   assetImg,
@@ -156,6 +190,7 @@ const TextBlock = ({
   variantsTypeSecondary='primary',
   hasCodeBlock = false,
   homeZigZag = false,
+  isbuttonGroups = false,
   ...props
 }) => {
   const Element = headerElementType;
@@ -197,7 +232,6 @@ const TextBlock = ({
       blockWidth = "max-width: var(--spectrum-global-dimension-size-4600);";
       extraMargin = alignMapping[counter[columns] % columns];
     }
-
     return (
       <>
         <section
@@ -321,7 +355,6 @@ const TextBlock = ({
   } else {
     const isReversed =
       props.slots.endsWith("image") || props.slots.endsWith("video");
-
     return (
       <section
         className={classNames(className, `spectrum--${theme}`)}
@@ -454,6 +487,10 @@ const TextBlock = ({
 
               <Texts texts={props} />
 
+              {linksGroups && (
+                <Links links={linksGroups} isCentered={isCentered} isLinksGroups />
+              )}
+
               <HeroButtons
                 buttons={buttons}
                 quiets={[!isPrimaryBtn, !primaryOutline]}
@@ -478,6 +515,7 @@ TextBlock.propTypes = {
   links: PropTypes.element,
   icons: PropTypes.element,
   buttons: PropTypes.element,
+  linksGroups: PropTypes.element,
   image: PropTypes.element,
   video: PropTypes.element,
   theme: PropTypes.string,
@@ -489,6 +527,7 @@ TextBlock.propTypes = {
   hasCodeBlock: PropTypes.bool,
   imgWidth: PropTypes.string,
   homeZigZag: PropTypes.bool,
+  isbuttonGroups: PropTypes.bool,
 };
 
 export { TextBlock };
