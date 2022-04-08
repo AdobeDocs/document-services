@@ -464,7 +464,7 @@ const TextBlock = ({
                   {heading.props.children}
                 </Element>
               )}
-              {subHeading && (
+              {subHeading && !linksGroups && (
               <h3
               className="spectrum-Heading spectrum-Heading--sizeM"
                 css={css`
@@ -486,6 +486,27 @@ const TextBlock = ({
             )}
 
               <Texts texts={props} />
+
+              {subHeading && linksGroups && (
+              <h3
+              className="spectrum-Heading spectrum-Heading--sizeM"
+                css={css`
+                  font-size: var(
+                    --spectrum-global-dimension-size-225
+                  ) !important;                  
+                  margin-top: var(
+                    --spectrum-global-dimension-size-200
+                  ) !important;
+
+                  & ~ p {
+                    margin-top: 0;
+                    margin-bottom: 0 !important;
+                  }
+                `}
+              >
+                {subHeading.props.children}
+              </h3>
+            )}
 
               {linksGroups && (
                 <Links links={linksGroups} isCentered={isCentered} isLinksGroups />

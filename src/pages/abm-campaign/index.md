@@ -37,11 +37,13 @@ abm-landing-page-hero
 
 <!-- ZigZag -->
 
-<TextBlock slots="heading,text,linksGroups,buttons,image" theme="light" headerElementType="h2" homeZigZag isbuttonGroups className="home-zigzag-comp-padding Adobe-PDF-Extract-API sales-process" />
+<TextBlock slots="heading,text,subHeading,linksGroups,buttons,image" theme="light" headerElementType="h2" homeZigZag isbuttonGroups className="home-zigzag-comp-padding Adobe-PDF-Extract-API sales-process" />
 
 ### Speed up your sales process.
 
 Quickly publish sales collateral to the web and automate your entire sales experience. You can build custom, branded sales proposals and contracts using Microsoft Word templates, then import deal-specific data from your own systems. And with e-sign features, you can close deals faster.
+
+### Relevant APIs:
 
 * [Adobe Document Generation API](apis/doc-generation/?sdid=2SLRC3CF&mv=display)
 * [Adobe PDF Services API](apis/pdf-services/?sdid=3JZYBBY7&mv=display)
@@ -52,13 +54,15 @@ Quickly publish sales collateral to the web and automate your entire sales exper
 
 ![PDF Extract API Workflow](../images/mob_Image_Sales.jpg)
 
-<TextBlock slots="image,heading,text,linksGroups, buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API employee-paperwork"/>
+<TextBlock slots="image,heading,text,subHeading,linksGroups, buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API employee-paperwork"/>
 
 ![Document Generation API Workflow](../images/mob_Image_Simplify.jpg)
 
 ### Simplify employee paperwork.
 
 Modernize your document processes with digital HR letters for new hires and employees. You can create letters from templates in Microsoft Word and convert them to PDF; merge several documents into a single, convenient onboarding PDF packet; and send offer letters to candidates and managers, then track status in real time and securely capture e-signatures.
+
+### Relevant APIs:
 
 * [Adobe Document Generation API](apis/doc-generation/?sdid=2XBSBYMD&mv=display)
 * [Adobe PDF Services API](apis/pdf-services/?sdid=3X729YR4&mv=display)
@@ -67,11 +71,13 @@ Modernize your document processes with digital HR letters for new hires and empl
 
 - [Start tutorial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 
-<TextBlock slots="heading,text,linksGroups,buttons,image" theme="light" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API legal-workflows" />
+<TextBlock slots="heading,text,subHeading,linksGroups,buttons,image" theme="light" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API legal-workflows" />
 
 ### Automate legal workflows.
 
 Streamline legal contract and compliance processes to save time and reduce business risks. You can create legal document templates with dynamic fields that can be automatically merged with data and customized with specicfic inputs and logic. In a few steps, you can build efficient workflows for reviews, approvals, and capturing e-signatures.
+
+### Relevant APIs:
 
 * [Adobe Document Generation API](apis/doc-generation/?sdid=39JWBLF9&mv=display)
 * [Adobe PDF Services API](apis/pdf-services/?sdid=3F8XBGP8&mv=display)
