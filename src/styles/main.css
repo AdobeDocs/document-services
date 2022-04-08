@@ -1270,7 +1270,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 @media screen and (max-width: 767px){
 
     .sample-integration_UiPath {
-        width: 120px !important;
+        width: 115px !important;
         height: 76px !important;
         background-image: url('../pages/images/3_Icon_UiPath_mob.png') !important;
         background-repeat: no-repeat;
@@ -1280,8 +1280,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     }
 
     .sample-integration_workFront {
-
-        width: 220px !important;
+        width: 200px !important;
         height: 76px !important;
         background-image: url('../pages/images/3_Icon_Workfront_mob.png') !important;
         background-repeat: no-repeat;
@@ -1291,10 +1290,8 @@ pre .prism-code.spectrum-Code  span.token.string{
     
     }
 
-    .sample-integration_ms {
-
-       
-        width: 270px !important;
+    .sample-integration_ms {       
+        width: 220px !important;
         height: 76px !important;
         background-image: url('../pages/images/3_Icon_MicrosoftPowerAutomate_mob.png') !important;
         background-repeat: no-repeat;

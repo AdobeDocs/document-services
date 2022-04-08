@@ -11,7 +11,7 @@ title: Adobe Developer — PDF Services API  —  Why PDF Services API
 
 ![Build custom document workows](../images/2_Icon_modify-pages.svg " ")
 
-Choose from 15+ AI-powered APIs to build custom document workows.
+Choose from 15+ APIs to build custom document workows.
 
 <TextBlock slots="image, text" width="33%" theme="lightest" className="align-left icon-xl-size horizontal-align-heading py-0"/>
 

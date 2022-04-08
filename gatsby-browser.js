@@ -424,7 +424,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector(".customer_stories")
       .setAttribute("daa-lh", "Customer stories.");
       document.querySelectorAll(".customer_story_wrapper a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);        
+        link.setAttribute("daa-ll", link.textContent);
+        link.addEventListener("click", () => {
+          openPdf(link.href)
+          link.removeAttribute("href");
+        })
       });
 
       document
