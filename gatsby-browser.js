@@ -362,7 +362,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-    }else if (window.location.pathname.indexOf("abmCampaign") >= 0) {
+    }else if (window.location.pathname.indexOf("abm-campaign") >= 0) {
       document
       .querySelector(".Hero-Banner")
       .closest("main")
@@ -375,7 +375,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
         if(link.textContent === 'Start free trial'){
           link.addEventListener("click",()=>reTargetingFun());
-          link.href = `${baseurl}?sdid=2NVQC73G&mv=display`;
+          link.href = `${baseurl}`;
+          // link.href = `${baseurl}?sdid=2NVQC73G&mv=display`;
         }
       });
 
@@ -395,7 +396,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
         if(link.textContent === 'Start free trial'){
           link.addEventListener("click",()=>reTargetingFun());
-          link.href = `${baseurl}?sdid=2K4PCBTH&mv=display`;
+          link.href = `${baseurl}`;
+          // link.href = `${baseurl}?sdid=2K4PCBTH&mv=display`;
         }
       });
 
@@ -438,7 +440,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
         if(link.textContent === 'Start free trial'){
           link.addEventListener("click",()=>reTargetingFun());
-          link.href = `${baseurl}?sdid=2FDNCGKJ&mv=display`;
+          link.href = `${baseurl}`;
+          // link.href = `${baseurl}?sdid=2FDNCGKJ&mv=display`;
         }
       });
 

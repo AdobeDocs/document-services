@@ -4,5 +4,5 @@
 
 Activate your free trial of 1,000 document transactions to start leveraging SDKs for Node.js, .Net, Java, Python, and sample Postman collections.
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?sdid=2K4PCBTH&mv=display)
-- [Talk to an expert](/pricing/contact/?sdid=35SVBQ5B&mv=display)
+- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Talk to an expert](/pricing/contact/)

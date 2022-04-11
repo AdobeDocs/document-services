@@ -18,7 +18,7 @@ Get 1,000 PDF transactions for free.
 
 abm-landing-page-hero
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?sdid=2NVQC73G&mv=display)
+- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 
 <!-- Why Adobe Document Services -->
@@ -45,10 +45,10 @@ Quickly publish sales collateral to the web and automate your entire sales exper
 
 ### Relevant APIs:
 
-* [Adobe Document Generation API](apis/doc-generation/?sdid=2SLRC3CF&mv=display)
-* [Adobe PDF Services API](apis/pdf-services/?sdid=3JZYBBY7&mv=display)
-* [Adobe Acrobat Sign](https://www.adobe.com/sign.html?sdid=3SH1B3H5&mv=display)
-* [Adobe PDF Embed API](apis/pdf-embed/?sdid=3NQZB776&mv=display)
+* [Adobe Document Generation API](apis/doc-generation/)
+* [Adobe PDF Services API](apis/pdf-services/)
+* [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
+* [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 
@@ -64,10 +64,10 @@ Modernize your document processes with digital HR letters for new hires and empl
 
 ### Relevant APIs:
 
-* [Adobe Document Generation API](apis/doc-generation/?sdid=2XBSBYMD&mv=display)
-* [Adobe PDF Services API](apis/pdf-services/?sdid=3X729YR4&mv=display)
-* [Adobe Acrobat Sign](https://www.adobe.com/sign.html?sdid=41Y39V13&mv=display)
-* [Adobe PDF Embed API](apis/pdf-embed/?sdid=45P49Q92&mv=display)
+* [Adobe Document Generation API](apis/doc-generation/)
+* [Adobe PDF Services API](apis/pdf-services/)
+* [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
+* [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 
@@ -79,10 +79,10 @@ Streamline legal contract and compliance processes to save time and reduce busin
 
 ### Relevant APIs:
 
-* [Adobe Document Generation API](apis/doc-generation/?sdid=39JWBLF9&mv=display)
-* [Adobe PDF Services API](apis/pdf-services/?sdid=3F8XBGP8&mv=display)
-* [Adobe PDF Extract API](apis/pdf-extract/?sdid=49F59LK1&mv=display)
-* [Adobe PDF Embed API](apis/pdf-embed/?sdid=4F569GSZ&mv=display)
+* [Adobe Document Generation API](apis/doc-generation/)
+* [Adobe PDF Services API](apis/pdf-services/)
+* [Adobe PDF Extract API](apis/pdf-extract/)
+* [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 
@@ -108,7 +108,7 @@ See how our customers are building smarter and faster document experiences.
 
 Activate your free trial and build better document workflows today.
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?sdid=2FDNCGKJ&mv=display)
-- [Talk to an expert](/pricing/contact/?sdid=322TBTWC&mv=display)
+- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Talk to an expert](/pricing/contact/)
 
 <APIPixelRetargeting/>
