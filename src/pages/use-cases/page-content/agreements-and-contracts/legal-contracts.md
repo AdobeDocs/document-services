@@ -18,7 +18,7 @@ Adobe Document Services will let organizations:
 
 * [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
 * [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario
 
@@ -28,14 +28,14 @@ A technology company is drafting a legal contract. To do so, it needs inputs fro
 
 1. Create a basic data model in JSON that helps determine document generation, such as customer profile information from a CRM
 2. Design contract templates in Microsoft Word
-3. Set conditional sections in the contract template, repeating elements, as well as place fields for Adobe Sign
+3. Set conditional sections in the contract template, repeating elements, as well as place fields for Adobe Acrobat Sign
 4. Send both the Word template and JSON data input file to Adobe Document Generation API and receive a PDF file
 5. Embed the PDF file in the application for review and approval with Adobe PDF Embed API
-6. Once approved, send the agreement out for signature using Adobe Sign API
+6. Once approved, send the agreement out for signature using Adobe Acrobat Sign API
 
 ### Building in Power Automate
 
 A solution to this use-case can also be implemented in Power Automate by using the following Adobe connectors:
 
 * Adobe PDF Services Connector (includes Document Generation)
-* Adobe Sign Connector
+* Adobe Acrobat Sign Connector

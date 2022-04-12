@@ -19,7 +19,7 @@ Adobe Document Services allows institutions to:
 
 * [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 * [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario
 
@@ -31,5 +31,5 @@ An executive education institution needs to create, sign, and send certificates 
 2. Design the course certificate template using Microsoft Word
 3. Use Adobe Document Generation Tagger in Word to place fields into the template based on the data model from the form
 4. Run the Adobe Document Generation API to merge data from the form into the template, creating a certificate in PDF
-5. Send to Adobe Sign for the instructors’ signatures
+5. Send to Adobe Acrobat Sign for the instructors’ signatures
 6. Send the final signed PDF to the student

@@ -18,7 +18,7 @@ With Adobe Document Services, companies can:
 ### Relevant APIs
 
 * [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario
 
@@ -28,7 +28,7 @@ A company has a standard NDA template that they regularly use for vendor agreeme
 
 1. Within the application layer, query the database to collect relevant data for a custom NDA and create a JSON data model
 2. Design a branded NDA in Microsoft Word
-3. Send the template and data to Adobe Document Generation API to output a merged PDF which can be sent using [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+3. Send the template and data to Adobe Document Generation API to output a merged PDF which can be sent using [Adobe Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 4. Track engagement and understand learning needs by using analytics events tracked in embedded PDF documents
 
 ### Building in Power Automate
@@ -36,4 +36,4 @@ A company has a standard NDA template that they regularly use for vendor agreeme
 A solution to this use-case can also be implemented in Power Automate by using the following Adobe connectors:
 
 * Adobe PDF Services Connector (includes Document Generation)
-* Adobe Sign Connector
+* Adobe Acrobat Sign Connector

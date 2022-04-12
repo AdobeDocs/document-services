@@ -33,6 +33,6 @@ In this solution, shift reports in the field are scanned using Adobe Scan or gen
 1. A shift report is either scanned using Adobe Scan or generated dynamically using templates with form data and Adobe Document Generation API
 2. PDF Services API OCR service is used to make scanned PDFs readable and searchable
 3. PDF Services API Combine PDF service merges multiple PDFs
-4. Adobe Sign API sends the final PDF for approval
+4. Adobe Acrobat Sign API sends the final PDF for approval
 5. PDF Services API Protect service is used to add a password to the PDF before the document is archived
 6. Render the archived document in the application with Adobe PDF Embed API

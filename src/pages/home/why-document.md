@@ -12,7 +12,7 @@
 
 - Use Microsoft Power Automate connectors to build without code.
 
-- Leverage integrations with AEM, Adobe Analytics, and Adobe Sign.
+- Leverage integrations with AEM, Adobe Analytics, and Adobe Acrobat Sign.
 
 
 

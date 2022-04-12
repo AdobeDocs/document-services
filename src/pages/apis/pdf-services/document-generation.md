@@ -15,7 +15,7 @@ variantsTypePrimary='primary' variantsTypeSecondary='cta' isPrimaryBtn  primaryO
 
 Generate PDF or Word documents from Microsoft Word templates and your data. Merge dynamic data with your custom templates to generate on brand contracts, proposals, invoices, NDAs, and more.
 
-Use our Word add-in to quickly create templates and add signatures with out of the box Adobe Sign integration.
+Use our Word add-in to quickly create templates and add signatures with out of the box Adobe Acrobat Sign integration.
 
 See our public  [API Reference](https://www.adobe.com/go/dcsdk_APIdocs#post-createPDF) and quickly try our APIs using the Postman collections
 

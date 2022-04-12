@@ -28,9 +28,9 @@ Dynamically insert tags, images, lists, and generate tables based on data inputs
 
 ![sign_icon](../../images/ic-sign.svg)
 
-### Out of the box integration with Adobe Sign
+### Out of the box integration with Adobe Acrobat Sign
 
-Accelerated text tag creation with the ability to conditionally show and hide signatures or content, mark fields as required, read only, and generate documents that are ready for processing in Adobe Sign.
+Accelerated text tag creation with the ability to conditionally show and hide signatures or content, mark fields as required, read only, and generate documents that are ready for processing in Adobe Acrobat Sign.
 
 <CustomCard slots="icon,heading,text" gradients gradientsType='pinkRed' borderRadious cursorDisable width="25%" theme="light"/>
 

@@ -362,7 +362,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-    }else if (window.location.pathname.indexOf("abm-campaign") >= 0) {
+    }else if (window.location.pathname.indexOf("enterprise") >= 0) {
       document
       .querySelector(".Hero-Banner")
       .closest("main")

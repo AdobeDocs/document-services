@@ -16,7 +16,7 @@ Legal firms and teams produce countless legal letters and statements for their c
 
 * [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 * [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario
 
@@ -28,4 +28,4 @@ A legal team creates affidavits of identity frequently for clients, often on tig
 2. Design the legal letter template using Microsoft Word
 3. Use Adobe Document Generation Tagger in Word to place fields into the template based on the data model from the form
 4. Run the Adobe Document Generation API to merge data from the form into the template, creating a final legal letter in PDF
-5. Send to Adobe Sign if signatures are required, and if not, email directly
+5. Send to Adobe Acrobat Sign if signatures are required, and if not, email directly

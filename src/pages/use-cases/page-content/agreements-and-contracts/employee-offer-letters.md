@@ -10,12 +10,12 @@ Employee offer letters are one of the first experiences new hires have with an o
 
 * Create templates in Word and generate PDFs based on a simple data set using the Adobe Document Generation API
 * Merge data and HTML templates into a PDF letter using the Adobe PDF Services API
-* Route offer letters to candidates and hiring managers, track consumption in real-time, verify user identities, and capture electronic signatures by leveraging [Adobe Sign](https://acrobat.adobe.com/us/en/sign.html)
+* Route offer letters to candidates and hiring managers, track consumption in real-time, verify user identities, and capture electronic signatures by leveraging [Adobe Acrobat Sign](https://acrobat.adobe.com/us/en/sign.html)
 
 ### Relevant APIs
 
 * [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 * [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
 
 ### Scenario
@@ -28,11 +28,11 @@ An organization needs to ramp up seasonal hiring of employees across multiple lo
 2. Create an offer letter template using Word or HTML
 3. Use Adobe Document Generation Tagger in the [Microsoft Word Add-in](https://appsource.microsoft.com/en-us/product/office/WA104380526?tab=Overview) to tag text fields in the template based on the data model
 4. Generate the offer letter PDF using Adobe Document Generation API
-5. Upload the document to Adobe Sign and send Offer Letter as an agreement using [Adobe Sign](https://acrobat.adobe.com/us/en/sign.html) or [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign/docs.html)
+5. Upload the document to Adobe Acrobat Sign and send Offer Letter as an agreement using [Adobe Acrobat Sign](https://acrobat.adobe.com/us/en/sign.html) or [Adobe Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign/docs.html)
 
 ### Building in Power Automate
 
 A solution to this use-case can also be implemented in Power Automate by using the following Adobe connectors:
 
 * Adobe PDF Services Connector (includes Document Generation)
-* Adobe Sign Connector
+* Adobe Acrobat Sign Connector

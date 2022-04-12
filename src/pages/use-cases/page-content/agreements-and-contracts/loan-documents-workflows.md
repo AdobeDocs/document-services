@@ -34,7 +34,7 @@ Adobe Document Services can help these organizations simplify the complex proces
 
 ###  Scenario
 
-A borrower applies for a loan. When they submit the loan application and supporting documents, the backend system converts uploaded documents to PDF format, compresses the files, and OCRs any scanned PDFs. Data is extracted from the uploaded documents and stored in a database. The borrower is then presented with a preview of the loan package as an embedded PDF and can add comments directly in case there are any questions to resolve with the loan officer. After application review and approval, the final loan documents are sent for signature using Adobe Sign
+A borrower applies for a loan. When they submit the loan application and supporting documents, the backend system converts uploaded documents to PDF format, compresses the files, and OCRs any scanned PDFs. Data is extracted from the uploaded documents and stored in a database. The borrower is then presented with a preview of the loan package as an embedded PDF and can add comments directly in case there are any questions to resolve with the loan officer. After application review and approval, the final loan documents are sent for signature using Adobe Acrobat Sign
 
 
 ### Building this Solution
@@ -45,4 +45,4 @@ In this solution, we will show how this process can be implemented within your o
 2. PDF documents are sent to PDF Extract API to extract data, which can be stored in a database.
 3. Create a single loan package with Create PDF API.
 4. Render the application using the PDF Embed API in a secure portal so that borrowers can review and add questions / comments through annotation.
-5. Send final loan document for signatures with Adobe Sign.
+5. Send final loan document for signatures with Adobe Acrobat Sign.

@@ -69,7 +69,7 @@ on both scanned and native PDFs and is included with PDF Services API.
 Effortlessly create contracts, agreements, invoices, sales proposals, and more with Document
 Generation API. Using Microsoft Word templates and your own data, you can produce
 dynamic documents with conditional text, images, lists, and tables. Signature workflows are
-a cinch with the Adobe Sign integration, and Document Generation is included with PDF
+a cinch with the Adobe Acrobat Sign integration, and Document Generation is included with PDF
 Services API.
 
 - [Try the demo](https://adobe.com/go/dcdocgen_api_demo)

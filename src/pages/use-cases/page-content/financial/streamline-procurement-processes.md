@@ -13,7 +13,7 @@ With Adobe Document Services, companies save time by automating the following st
 * Generate POs, RFPs, RFQs, or agreement documents in PDF from data in procurement management systems using Document Generation API
 * Combine, secure from editing, and view documents before sharing with suppliers using PDF Services API
 * View PDFs in procurement system for review using PDF Embed API
-* Send agreements for signature using Adobe Sign API
+* Send agreements for signature using Adobe Acrobat Sign API
 
 ### Relevant APIs
 
@@ -21,7 +21,7 @@ With Adobe Document Services, companies save time by automating the following st
 * [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
 * [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 * [Adobe PDF Extract API](/src/pages/apis/pdf-extract.md)
-* [Adobe Sign](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Acrobat Sign](https://www.adobe.io/apis/documentcloud/sign.html)
 
 ### Scenario
 
@@ -34,8 +34,8 @@ Follow the steps below to automate PDF generation to streamline procurement proc
 
 1. Identify the JSON data model used to export data from the procurement system
 2. Tag a Purchase Order template (Word) by uploading the JSON model to the Adobe Document Generation Tagger Microsoft Word add-in, and adding tags where data should be filled automatically
-3. Insert Adobe Sign text tags in the PO template to make it ready to be used by Adobe Sign
+3. Insert Adobe Acrobat Sign text tags in the PO template to make it ready to be used by Adobe Acrobat Sign
 4. Use Adobe Document Generation API to automatically merge procurement system data and the Word template to generate a PDF
 5. Use PDF Services API to combine PO with additional documents
 6. Adobe PDF Embed API embeds the PDF in the application for review and approval
-7. Use Adobe Sign API to send the document out for signature once approved
+7. Use Adobe Acrobat Sign API to send the document out for signature once approved

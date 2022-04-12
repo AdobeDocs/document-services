@@ -54,7 +54,7 @@ const featuredContent = [
     URL: "https://medium.com/adobetech/generate-documents-and-send-in-bulk-for-signature-in-microsoft-power-automate-807838092dcf",
     Thumbnail: Generate_documents,
     class:"generate_documents",
-    desc:"Learn how you can generate and send documents in bulk using Adobe Sign, Document Generation API,and Microsoft Power Automate."
+    desc:"Learn how you can generate and send documents in bulk using Adobe Acrobat Sign, Document Generation API,and Microsoft Power Automate."
   },
   {
     Title: "Digging Out Data with Adobe PDF Extract API",

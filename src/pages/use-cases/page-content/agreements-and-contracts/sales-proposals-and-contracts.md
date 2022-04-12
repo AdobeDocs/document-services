@@ -18,7 +18,7 @@ Using Adobe Document Services, sales teams can:
 ### Relevant APIs
 
 * [Adobe Document Generation API](/src/pages/apis/doc-generation.md)
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 * [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 
 ### Scenario
@@ -31,7 +31,7 @@ A business development team meets frequently with prospects. Shortly after, they
 2. Design the sales proposal and contract template using Microsoft Word
 3. Use Adobe Document Generation Tagger in Word to place fields into the template based on the data model from the form
 4. Run the Adobe Document Generation API to merge data from the form into the template, creating a final proposal and contract in PDF
-5. Send to Adobe Sign if signatures are required, and if not, to email directly
+5. Send to Adobe Acrobat Sign if signatures are required, and if not, to email directly
 
 ### Enhancements
 
@@ -42,4 +42,4 @@ The Adobe PDF Services API can programmatically compress and add password protec
 A solution to this use-case can also be implemented in Power Automate by using the following Adobe connectors:
 
 * Adobe PDF Services Connector (includes Document Generation)
-* Adobe Sign Connector
+* Adobe Acrobat Sign Connector

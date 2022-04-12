@@ -26,8 +26,8 @@ Process text tags, calculations, repeating elements, and conditional statements 
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className=" icon-xl-size padding-btm-zero-left-align horizontal-align-heading"/>
 
-![Seamless integration with Adobe Sign](../../images/high-fidelity.svg " ")
+![Seamless integration with Adobe Acrobat Sign](../../images/high-fidelity.svg " ")
 
 ### Document Generation with Signatures
 
-Adobe Sign integration allows you to generate documents with signatures including conditional logic for signature text tags.
+Adobe Acrobat Sign integration allows you to generate documents with signatures including conditional logic for signature text tags.
