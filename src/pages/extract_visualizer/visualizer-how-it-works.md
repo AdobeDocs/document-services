@@ -1,0 +1,33 @@
+---
+title: Adobe Developer — Wrapper Components  —  visualizer How it works
+---
+
+<TextBlock slots="heading,text,buttons,image"  headerElementType="h2" theme="lightest" className="padding-zero see-how-it-works"/>
+
+### See how it works.
+
+Check out the interactive demo that shows a sample 
+PDF input and the JSON output side-by-side. Click on a section of the PDF 
+to see the corressponding JSON output. You can extract a variety of elements such as 
+paragraphs, headers, tables, and figures/images.
+  
+- [Interactive demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
+- [Watch the video](/src/pages/apis/pdf-embed.md)
+
+![Create Source Support](../images/ExtractVisualizer_Graphic.png)
+
+
+<TextBlock slots="heading, text" theme="lightest"  className="how-it-work-richText padding-zero rich-text-data"/>
+
+ ### Turn your PDF into rich data.
+
+ Extracted content is output in a structured JSON file - with tables optionally included as CSV or XLSX files and images
+ saved as PNG files-so you can easily store, analyze, and manipulate the data in a variety of downstream systems.
+
+<TextBlock slots="assetImg" theme="lightest" width="100%" imageOnly className="padding-zero media-bottom-padding"/>
+
+how-it-work-img
+
+<TextBlock slots="text" theme="lightest" isCentered className="media-bottom-padding link position-up linking How-it-works sec-overview"/>
+
+We take security serously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)
