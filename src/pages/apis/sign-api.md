@@ -53,7 +53,7 @@ Merge and prefill data directly from you application and send documents for sign
 
 ### Store documents in your own repository.
 
-Adobe, with our Document Generation API and other PDF Services APIs, makes it easy for you to build end-to-end workflows. You can send documents for signature, track and manage status, and automatically route them to your own storage archive or repository. it gives you even greater flexibility with security you can relay on.
+Adobe, with our Document Generation API and other PDF Services APIs, makes it easy for you to build end-to-end workflows. You can send documents for signature, track and manage status, and automatically route them to your own storage archive or repository. it gives you even greater flexibility with security you can rely on.
 
 - [View e-signature workflows](https://opensource.adobe.com/acrobat-sign/developer_guide/apiusage.html#send-for-signing-create-an-agreement)
 

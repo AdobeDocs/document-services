@@ -1055,7 +1055,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 }
 
 .abm-landing-page-hero {
-    background-image: url('../pages/images/home-carousel-three.png');
+    background-image: url('../pages/images/1_Marquee_Device_enterprise_desktop.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 410px !important;
@@ -1066,7 +1066,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 
 @media screen and (max-width: 1024px){
     .abm-landing-page-hero {
-        background-image: url('../pages/images/home-carousel-three@2x.png');
+        background-image: url('../pages/images/1_Marquee_Device_enterprise_tab.png');
         background-repeat: no-repeat;
         background-size: cover;
         height: 350px !important;
@@ -1102,7 +1102,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     }
     .abm-landing-page-hero {
         margin-top: var(--spectrum-global-dimension-size-200) !important;
-        background-image: url('../pages/images/home-carousel-three@2x.png');
+        background-image: url('../pages/images/1_Marquee_Device_enterprise_mob.png');
         background-repeat: no-repeat;
         background-size: cover;
         max-width: 585px;
@@ -1124,7 +1124,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     
     .abm-landing-page-hero {
         margin-top: var(--spectrum-global-dimension-size-200) !important;
-        background-image: url('../pages/images/home-carousel-three@2x.png');
+        background-image: url('../pages/images/1_Marquee_Device_enterprise_mob.png');
         background-repeat: no-repeat;
         background-size: cover;
         margin: auto;

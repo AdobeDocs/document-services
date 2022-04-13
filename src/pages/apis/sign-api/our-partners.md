@@ -6,7 +6,7 @@ title: Adobe Developer — Sign API
 
 ### Partner with us.
 
-Acrobat Sign can help transform and speed up your workflows while creating  a better experience for your customers. Join  other top companies and partner with us to get access to private APIs and addtional resources that empower you to embed and PDF features into your mobile app, website, or SaaS platform.
+Acrobat Sign can help transform and speed up your workflow while creating  a better experience for your customers. Join  other top companies and partner with us to get access to private APIs and addtional resources that empower you to embed e-signature and PDF features into your mobile app, website, or SaaS platform.
 
 * [Get started](https://www.adobe.com/documentcloud/integrations/isv-partner-form.html)
 

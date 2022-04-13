@@ -52,6 +52,6 @@ Streamline the hiring process by routing offer letters directly to candidates an
 
 ### Financial and tax document workflows.
 
-Transform your workflows and get more out of existing systems by integrating Acrobat Sign. It's easy to create fluid, secure experience for senders and signers.
+Transform your workflows and get more out of existing systems by integrating Acrobat Sign. It's easy to create fluid, secure experiences for senders and signers.
 
 - [Read story](https://business.adobe.com/customer-success-stories/imm-case-study.html)

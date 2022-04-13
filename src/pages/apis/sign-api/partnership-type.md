@@ -19,6 +19,6 @@ If you're developing an integration for a customer-facing application or platfor
 
 ### Integration Only Partner.
 
-If you're building between Adobe Sign and another application or service for use by our shared customers, please see these additional resources and steps to ensure success.
+If you're building an integration between Adobe Acrobat Sign and another application or service for use by our shared customers, please see these additional resources and steps to ensure success.
 
 * [Learn more](https://adobe.lookbookhq.com/adobesignpartnerpgm/buildtestdeliver)

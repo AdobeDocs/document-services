@@ -53,7 +53,7 @@ module.exports = {
           },
           {
             title: 'Sign API',
-            description: 'Embed high-fidelity PDFs in web apps with analytics',
+            description: 'Acrobat Sign API',
             path: 'apis/sign-api/'
           }
         ]

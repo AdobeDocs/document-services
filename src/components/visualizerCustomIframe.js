@@ -31,7 +31,7 @@ const VisualizerCustomIframeBlock = ({
                   Get the document structure, not just the characters.
                 </h3>
                 <p>
-                Adobe PDF Extract API is powered by Adobe Sensei, an industry-leading Artificial Intelligence (AI) and Machine Learning (ML) network. The technology enables a rich understanding of document structure, including the identification of elements, position, connections relative to other elements, and the readong other.
+                Adobe PDF Extract API is powered by Adobe Sensei, an industry-leading Artificial Intelligence (AI) and Machine Learning (ML) network. This enables a rich understanding of document structure, including the identification of elements, position, connections relative to other elements, and the reading order.
                 </p>
               </div>
               <div className="release-wrapper-img-how-it-work">
