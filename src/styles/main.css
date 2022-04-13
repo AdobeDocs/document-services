@@ -4,6 +4,7 @@ h1 {
     font-family: "adobe-clean" !important;
 }
 
+
 .swiper-pagination-bullet {
     height: 8px;
     width: 8px;
@@ -303,7 +304,7 @@ h1 {
 }
 .bg-grey {
     width: 100%;
-    background: var(--spectrum-global-color-gray-200) !important;
+    /* background: var(--spectrum-global-color-gray-200) !important; */
 }
 .bg-grey div {
     max-width: 1000px;
@@ -402,6 +403,14 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
 .padding-bottom-zero-child div:first-child {
     padding-bottom: 0 !important;
 }
+.padding-top-zero-child div:first-child {
+    padding-top: 0 !important;
+}
+
+.padding-bottom-child div:first-child {
+    padding-bottom: var(--spectrum-global-dimension-size-250) !important;
+}
+
 .imageHightAuto p:first-child {
     height: auto !important;
 }
@@ -617,6 +626,13 @@ img[alt=thumbnail] {
     background-size: cover !important;
 }
 
+.signApiHerobgImage {
+    background: rgb(250, 105, 85) url('../pages/images/1_Marquee_Background.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+
 
 .doc-services-hero{
     margin: 0 !important;
@@ -650,6 +666,11 @@ img[alt=thumbnail] {
 .doc-service-hero {
     background-image: url('../pages/images/home-carousel-three.png') !important;
 }
+
+.sign-api-hero {
+    background-image: url('../pages/images/1_Marquee_Device.png') !important;
+}
+
 
 .doc-embed-hero {
     background-image: url('../pages/images/home-carousel-one.png') !important;
@@ -688,6 +709,11 @@ img[alt=thumbnail] {
     .doc-service-hero {
         background-image: url('../pages/images/home-carousel-three@2x.png') !important;
         width: 23rem !important;
+
+    }
+
+    .sign-api-hero {
+        background-image: url('../pages/images/1_Marquee_Device_tab.png') !important;
     }
 
     .doc-embed-hero {
@@ -699,6 +725,8 @@ img[alt=thumbnail] {
         background-image:  url('../pages/images/doc-gen-hero-desktop@2x.png');
     }
 }
+
+
 
 @media screen and (min-width: 767px){
     .doc-services-hero {
@@ -730,6 +758,10 @@ img[alt=thumbnail] {
     .doc-service-hero {
         background-image: url('../pages/images/home-carousel-three@2x.png') !important;
         width: 23rem !important;
+    }
+
+    .sign-api-hero {
+        background-image: url('../pages/images/1_Marquee_Device_Mob.png') !important;
     }
 
     .doc-embed-hero {
@@ -795,6 +827,48 @@ img[alt=thumbnail] {
     background-position: center center;
     background-size: cover;
     margin: 0 auto;
+}
+
+.how-it-work-img {
+    /* width: calc(var(--spectrum-global-dimension-size-2500) + var(--spectrum-global-dimension-size-350)); */
+    /* height: calc(var(--spectrum-global-dimension-size-1000) + var(--spectrum-global-dimension-size-175)); */
+    width: 900px !important;
+    height: 230px !important;
+    background-image: url('../pages/images/how-it-works-desktop.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .how-it-work-img {
+        width: 668px !important;
+        height: 192px !important;
+        background-image: url('../pages/images/how-it-works-tablet.svg') !important;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    .how-it-work-img {
+        width: 310px !important;
+        height: 480px !important;
+        background-image: url('../pages/images/how-it-works-mobile.svg') !important;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin: 0 auto;
+    }
+
 }
 
 .how-it-work-text > div >div > div {
@@ -981,7 +1055,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 }
 
 .abm-landing-page-hero {
-    background-image: url('../pages/images/1_Marquee_Device.png');
+    background-image: url('../pages/images/home-carousel-three.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 410px !important;
@@ -992,7 +1066,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 
 @media screen and (max-width: 1024px){
     .abm-landing-page-hero {
-        background-image: url('../pages/images/Tablet_Marquee_Device.png');
+        background-image: url('../pages/images/home-carousel-three@2x.png');
         background-repeat: no-repeat;
         background-size: cover;
         height: 350px !important;
@@ -1028,7 +1102,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     }
     .abm-landing-page-hero {
         margin-top: var(--spectrum-global-dimension-size-200) !important;
-        background-image: url('../pages/images/mob_Marquee_Device.png');
+        background-image: url('../pages/images/home-carousel-three@2x.png');
         background-repeat: no-repeat;
         background-size: cover;
         max-width: 585px;
@@ -1050,14 +1124,13 @@ pre .prism-code.spectrum-Code  span.token.string{
     
     .abm-landing-page-hero {
         margin-top: var(--spectrum-global-dimension-size-200) !important;
-        background-image: url('../pages/images/Tablet_Marquee_Device.png');
+        background-image: url('../pages/images/home-carousel-three@2x.png');
         background-repeat: no-repeat;
         background-size: cover;
         margin: auto;
         background-position: bottom center !important;
     }
 }
-
 .blog-title-height {
     height: 40px !important;
 }
@@ -1168,7 +1241,9 @@ pre .prism-code.spectrum-Code  span.token.string{
 .hme-custom-header .spectrum-Card-title{
     padding-right:0 !important;
 }
-
+.how-it-work-richText > div > div > div {
+    width: 100%;
+}
 .landingResourceCard{
     background: none !important;
 }
@@ -1189,6 +1264,42 @@ pre .prism-code.spectrum-Code  span.token.string{
 .customer_story_wrapper{
     padding-bottom: var(--spectrum-global-dimension-size-600);
 }
+
+.partner-with-us > div > div > p {
+    font-size: var(--spectrum-global-dimension-size-250) !important;
+    margin-bottom: var(
+        --spectrum-global-dimension-size-0
+      )!important;
+    color: var(--spectrum-global-color-gray-75) !important;
+    font-weight: bold;
+}
+
+.margin-zero > div > div > div > p{
+    margin-top:  var(--spectrum-global-dimension-size-0) !important;
+}
+.text-two-height > div > ul {
+    height:var(--spectrum-global-dimension-size-0) !important;
+    margin-top: var(--spectrum-global-dimension-size-50) !important;
+}
+
+.resourceCardCont section > div{
+    height: var(--spectrum-global-color-gray-300) !important;
+    background: #1374e6;
+}
+
+.hero-btn-color .spectrum-Button > a {
+    color: var(--spectrum-global-color-gray-900) !important;
+}
+
+.hero-summary-btn-color .spectrum-Button {
+    border-color: var(--spectrum-global-color-gray-50) !important;
+}
+.hero-summary-btn-color .spectrum-Button span{
+  
+    color: var(--spectrum-global-color-gray-50) !important;
+}
+
+
 
 .sample-integration_UiPath {
     width: 130px !important;
@@ -1229,6 +1340,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     margin: 0 auto;
     
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
 
@@ -1300,4 +1412,328 @@ pre .prism-code.spectrum-Code  span.token.string{
         margin: 0 auto;
         
     }
+}
+
+.sign-ms-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_Microsoft.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-SAP-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_SAP.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-workday-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_workday.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-salesforce-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_salesforce.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-serviceNow-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_servicenow.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-two-oracle-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_ORACLE.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-two-ADP-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_ADP.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-two-vrbo-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_Vrbo.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-two-avionte-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_AVIONTE.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+.sign-two-msign-logo {
+    width: 130px !important;
+    height: 105px !important;
+    background-image: url('../pages/images/7_Logo_IMMeSign.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0 auto;
+   /* padding: 10px; */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    .sign-ms-logo {
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_Microsoft_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .sign-SAP-logo {
+
+        width: 150px !important;
+        height: 70px !important;
+        background-image: url('../pages/images/7_Logo_SAP_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    
+    }
+
+    .sign-workday-logo {
+
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_workday_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+    .sign-salesforce-logo {
+
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_salesforce_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+    .sign-serviceNow-logo {
+
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_servicenow_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+
+    .sign-two-oracle-logo {
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_ORACLE_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .sign-two-ADP-logo {
+
+        width: 120px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_ADP_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    
+    }
+
+    .sign-two-vrbo-logo {
+
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_Vrbo_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+    .sign-two-avionte-logo {
+
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_AVIONTE_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+    .sign-two-msign-logo {
+
+        width: 150px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_IMMeSign_tab.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+        
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .sign-ms-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_Microsoft_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    .sign-SAP-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_SAP_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    .sign-workday-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_workday_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    .sign-salesforce-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_salesforce_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    .sign-serviceNow-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_servicenow_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .sign-two-oracle-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_ORACLE_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .sign-two-ADP-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_ADP_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .sign-two-vrbo-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_Vrbo_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .sign-two-avionte-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_AVIONTE_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    .sign-two-msign-logo {
+        width: 115px !important;
+        height: 76px !important;
+        background-image: url('../pages/images/7_Logo_IMMeSign_mob.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
 }

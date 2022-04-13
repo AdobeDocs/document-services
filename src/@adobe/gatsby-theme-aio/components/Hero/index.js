@@ -153,6 +153,10 @@ const Hero = ({
   containerHeight = 1000,
   width = DESKTOP_SCREEN_WIDTH,
   customLayout = false,
+  primaryOutline = false,
+  isPrimaryBtn=false,
+  variantsTypePrimary='cta',
+  variantsTypeSecondary='overBackground',
   ...props
 }) => {
   const { siteMetadata, location } = useContext(Context);
@@ -300,7 +304,8 @@ const Hero = ({
             {buttons ? (
               <HeroButtons
                 buttons={buttons}
-                variants={["cta", "overBackground"]}
+                quiets={[!isPrimaryBtn, !primaryOutline]}
+                variants={[variantsTypePrimary,variantsTypeSecondary]}
                 css={css`
                   margin-top: var(--spectrum-global-dimension-size-200);
                   margin-bottom: var(--spectrum-global-dimension-size-200);
@@ -491,7 +496,7 @@ const Hero = ({
                 }
 
                 @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
-                  padding: 0;
+                  padding: 0 var(--spectrum-global-dimension-size-100);
                   width:100% !important;
                   top: 20px !important;
                   position: initial !important;

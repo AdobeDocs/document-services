@@ -20,7 +20,7 @@ const counter = {
 };
 const alignMapping = ['margin-left: 0;', 'margin-right: 0;'];
 
-const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image, className, isCustomStories = false, buttons, isFooter = false}) => {
+const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image, className, isCustomStories = false, buttons, isFooter = false, btnVarient='primary', contHeight}) => {
   let initColumns = 100 / parseFloat(width);
 
   if (width === '33%') {
@@ -132,6 +132,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
               padding: var(--spectrum-global-dimension-size-200) !important;
               justify-content: flex-start !important;
               overflow: hidden;
+              height:${contHeight};
             `}>
             <div
               className="spectrum-Card-header"
@@ -178,7 +179,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
                 <HeroButtons
                   buttons={buttons}
                   quiets={[false]}
-                  variants={['primary']}
+                  variants={[btnVarient]}
                   css={css`
 
                 @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {

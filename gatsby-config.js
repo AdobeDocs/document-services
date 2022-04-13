@@ -51,6 +51,11 @@ module.exports = {
             description: 'Embed high-fidelity PDFs in web apps with analytics',
             path: 'apis/pdf-embed/'
           },
+          {
+            title: 'Sign API',
+            description: 'Embed high-fidelity PDFs in web apps with analytics',
+            path: 'apis/sign-api/'
+          }
         ]
       },
       {
@@ -61,6 +66,7 @@ module.exports = {
         title: 'Pricing',
         path: 'pricing/main'
       },
+	  
       {
         title: 'Resources',
         menu: [{

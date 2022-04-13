@@ -362,7 +362,80 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-    }else if (window.location.pathname.indexOf("enterprise") >= 0) {
+    }else if (window.location.pathname.indexOf("extract_visualizer") >= 0){
+
+      document
+      .querySelector(".Hero-Banner")
+      .closest("main")
+      .setAttribute("daa-lh", "Body");
+      
+      document
+      .querySelector(".Hero-Banner")
+      .setAttribute("daa-lh", "Adobe PDF Extract API");
+      document 
+        .querySelectorAll(".Hero-Banner a").forEach(link =>{
+          link.setAttribute("daa-ll", link.textContent);
+        })
+
+      document
+      .querySelector(".Key-features-of-Adobe-PDF-Extract-API")
+      .closest("section")
+      .setAttribute("daa-lh", "Key features of Adobe PDF Extract API");
+
+    document
+      .querySelectorAll(".Key-features-of-Adobe-PDF-Extract-API a")
+      .forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+    document
+    .querySelector(".see-how-it-works")
+    .setAttribute("daa-lh", "See how it works.");
+    document
+    .querySelectorAll('.see-how-it-works a').forEach(link =>{
+      link.setAttribute("daa-ll", link.textContent);
+    })
+
+    document
+    .querySelector(".rich-text-data")
+    .setAttribute("daa-lh", "Turn your PDF into rich data.");
+
+    document
+    .querySelectorAll(".sec-overview a").forEach(link=>{
+      link.setAttribute("daa-ll", link.textContent);
+    })
+
+    document
+    .querySelector(".video-conetnt")
+    .setAttribute("daa-lh", "Get the document structure, not just the characters.");
+
+    document
+    .querySelector(".Get-started-in-minutes")
+    .setAttribute("daa-lh", "Get started in minutes");
+
+    document.querySelectorAll(".Get-started-in-minutes a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
+
+    document
+    .querySelector(".Explore-other-Adobe-Document-Services-APIs")
+    .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+
+  document
+    .querySelectorAll(".Explore-other-Adobe-Document-Services-APIs a")
+    .forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
+
+    document
+      .querySelector(".We-are-ready-to-help")
+      .setAttribute("daa-lh", "We're ready to help");
+
+      document.querySelectorAll(".We-are-ready-to-help a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+    } else if (window.location.pathname.indexOf("enterprise") >= 0) {
       document
       .querySelector(".Hero-Banner")
       .closest("main")
@@ -445,6 +518,100 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         }
       });
 
+    }else if (window.location.pathname.indexOf("sign-api") >= 0) {
+
+      document
+        .querySelector(".Hero-Banner")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+
+      document
+        .querySelector(".Hero-Banner")
+        .setAttribute("daa-lh", "Hero Banner");
+
+      document.querySelectorAll(".Hero-Banner a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".hero-below-compo")
+        .setAttribute("daa-lh", "Let's work together to build incredible digital experience.")
+      
+      document.querySelectorAll(".hero-below-compo a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      
+
+      document.querySelector(".take-your-project-cta").setAttribute("daa-lh", "Take your project to the next level.")
+      document.querySelector(".easy-to-implement-cta").setAttribute("daa-lh", "Easy to implement.")
+      document.querySelectorAll(".easy-to-implement-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".secure-compliant-cta").setAttribute("daa-lh", "Secure and compliant.")
+      document.querySelectorAll(".secure-compliant-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      
+      document.querySelector(".scalable-cta").setAttribute("daa-lh", "Scalable.")
+      document.querySelectorAll(".scalable-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      
+      document.querySelector(".choose-partnership-title-cta").setAttribute("daa-lh", "Choose a partnership type to get access to the specific tools you need.")
+      document.querySelector(".embedded-partner-cta").setAttribute("daa-lh", "OEM/Embedded Partner.")
+      document.querySelectorAll(".embedded-partner-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+        document.querySelector(".integration-partners-cta").setAttribute("daa-lh", "Integration Only Partner.")
+        document.querySelectorAll(".integration-partners-cta a").forEach(link =>{
+          link.setAttribute("daa-ll", link.textContent);
+        })
+      
+      document.querySelector(".zigzag-cta-one").setAttribute("daa-lh", "Merge data from your application.")
+      document.querySelectorAll(".zigzag-cta-one a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".zigzag-cta-two").setAttribute("daa-lh", "Store documents in your own repository.")
+      document.querySelectorAll(".zigzag-cta-two a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".zigzag-cta-three").setAttribute("daa-lh", "OEM implementation made easy.")
+      document.querySelectorAll(".zigzag-cta-three a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".explore-usecase-cta").setAttribute("daa-lh", "Explore use cases.")
+      
+      document.querySelector(".sales-cta").setAttribute("daa-lh", "Sales and procurement contracts.")
+      document.querySelectorAll(".sales-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".rental-cta").setAttribute("daa-lh", "Rental and leasing agreements.")
+      document.querySelectorAll(".rental-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      document.querySelector(".new-hire-cta").setAttribute("daa-lh", "New hire onboarding.")
+      document.querySelectorAll(".new-hire-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      document.querySelector(".financial-cta ").setAttribute("daa-lh", "Financial and tax document workflows.")
+      document.querySelectorAll(".financial-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelectorAll(".view-all-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".partner-with-us-cta ").setAttribute("daa-lh", "Partner with us.")
+      document.querySelectorAll(".partner-with-us-cta a").forEach(link =>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
     } else if (window.location.pathname.indexOf("resources") >= 0) {
       document
         .querySelector(".resource-banner")
