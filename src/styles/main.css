@@ -1737,3 +1737,13 @@ pre .prism-code.spectrum-Code  span.token.string{
     }
 
 }
+
+.how-it-work-font h3 {
+    font-size: var(--spectrum-heading-l-text-size, var(--spectrum-alias-heading-l-text-size)) !important;
+}
+
+.padding-zero-visualizer div:first-child {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-right: var(--spectrum-global-dimension-size-65) !important;
+}

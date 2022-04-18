@@ -12,7 +12,7 @@ title: Adobe Developer — Sign API
 
 If you're developing an integration for a customer-facing application or platform, please contact us to learn more about our OEM/Embedded partnership program. Acrobat Sign API licensing is separate from PDF Service API licensing and can give you unique capabilities and flexibility.
 
-* [Contact us](/document-services/docs/overview/pdf-extract-api/)
+* [Contact us](mailto:signembed@adobe.com)
 
 
 <TextBlock slots="heading, text, buttons" width="50%" theme="light" className="align-left bg-grey integration-partners-cta" />

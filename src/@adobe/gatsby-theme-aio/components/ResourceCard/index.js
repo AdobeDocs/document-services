@@ -58,6 +58,8 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
 
   const MAX_MOBILE_SCREEN_WIDTH = '1280px';
 
+  const Element = isFooter ? 'div' : GatsbyLink;
+
   return (
     <>
       <section
@@ -79,7 +81,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
             width: 50%;
           }
         `}>
-        <GatsbyLink
+        <Element
           className={`spectrum-Card spectrum-Card--vertical`}
           to={href}
           {...getExternalLinkProps(href)}
@@ -190,7 +192,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
               </div>
             )
             }
-        </GatsbyLink>
+        </Element>
       </section>
       {typeof counter[columns] !== 'undefined' && counter[columns] % columns === 0 ? <div aria-hidden="true" /> : null}
     </>

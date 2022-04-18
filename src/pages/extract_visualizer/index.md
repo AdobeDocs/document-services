@@ -9,8 +9,7 @@ import ExtractProductCard from '../apis/pdf-extract/extract-product.md';
 import VisualizerHowItWorks from './visualizer-how-it-works.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
 
-
-<Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="signApiHerobgImage Hero-Banner hero-btn-color"/>
 
 # Adobe PDF Extract API
 
@@ -18,7 +17,9 @@ Unlock the structure and content elements of any PDF with a web service powered 
 
 apiHeroAssetImg doc-ext-invoice
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
+- [Try the Demo](https://www.adobe.com/go/stage_extract_visualizer)
+
+- [Start Free Trail](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>

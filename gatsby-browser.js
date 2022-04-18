@@ -499,12 +499,27 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector(".customer_stories")
       .setAttribute("daa-lh", "Customer stories.");
       document.querySelectorAll(".customer_story_wrapper a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
+        const hrefArr = link.href.split("/");
+        const textContent = hrefArr[hrefArr.length - 1].replace('.pdf','');
+        link.setAttribute("daa-ll", `${textContent} ${link.textContent}`);
         link.addEventListener("click", () => {
           openPdf(link.href)
           link.removeAttribute("href");
         })
       });
+
+      // document
+      // .querySelector(".customer_stories")
+      // .setAttribute("daa-lh", "Customer stories.");
+      // document.querySelectorAll(".customer_story_wrapper a").forEach(link => {
+      //   link.setAttribute("daa-ll", link.textContent);
+      //   link.addEventListener("click", () => {
+      //     let names = link.getElementsByTagName('button')
+      //     console.log('click--',names);
+      //     openPdf(link.href)
+      //     link.removeAttribute("href");
+      //   })
+      // });
 
       document
       .querySelector(".get-started-today")
@@ -917,11 +932,22 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
 
       document
-        .querySelector(".aws-carousel")
-        .setAttribute("daa-lh", "AWS + Microsoft");
-      document.querySelectorAll(".aws-carousel a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
+      .querySelector(".aws-carousel")
+      .setAttribute("daa-lh", "AWS + Microsoft");
+      document.querySelectorAll(".aws-carousel a.spectrum-Button").forEach(link => {
+        if(link.href === "/pricing/#AWS"){
+          link.setAttribute("daa-ll", `${link.textContent} | Body | AWS`);
+        } else {
+          link.setAttribute("daa-ll", `${link.textContent} | Body | Microsoft`);
+        }
       });
+
+      // document
+      //   .querySelector(".aws-carousel")
+      //   .setAttribute("daa-lh", "AWS + Microsoft");
+      // document.querySelectorAll(".aws-carousel a").forEach(link => {
+      //   link.setAttribute("daa-ll", link.textContent);
+      // });
 
       document
         .querySelector(".key-features-code-block")

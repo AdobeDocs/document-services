@@ -2,7 +2,7 @@
 title: Adobe Developer — Wrapper Components  —  visualizer How it works
 ---
 
-<TextBlock slots="heading,text,buttons,image"  headerElementType="h2" theme="lightest" className="padding-zero see-how-it-works"/>
+<TextBlock slots="heading,text,buttons,image" theme="lightest" className="padding-zero-visualizer see-how-it-works how-it-work-font"/>
 
 ### See how it works.
 
@@ -12,19 +12,19 @@ to see the corressponding JSON output. You can extract a variety of elements suc
 paragraphs, headers, tables, and figures/images.
   
 - [Interactive demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
-- [Watch the video](/src/pages/apis/pdf-embed.md)
+- [Watch the video](https://app.frame.io/r/376fbe2b-b4f2-4833-8fba-09bb711a8f4c)
 
 ![Create Source Support](../images/ExtractVisualizer_Graphic.png)
 
 
-<TextBlock slots="heading, text" theme="lightest"  className="how-it-work-richText padding-zero rich-text-data"/>
+<TextBlock slots="heading, text" theme="lightest"  className="how-it-work-richText padding-zero-visualizer rich-text-data how-it-work-font"/>
 
  ### Turn your PDF into rich data.
 
  Extracted content is output in a structured JSON file - with tables optionally included as CSV or XLSX files and images
  saved as PNG files-so you can easily store, analyze, and manipulate the data in a variety of downstream systems.
 
-<TextBlock slots="assetImg" theme="lightest" width="100%" imageOnly className="padding-zero media-bottom-padding"/>
+<TextBlock slots="assetImg" theme="lightest" width="100%" imageOnly className="padding-zero-visualizer media-bottom-padding"/>
 
 how-it-work-img
 
