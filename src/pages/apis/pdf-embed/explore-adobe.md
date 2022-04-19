@@ -15,6 +15,7 @@ title: Adobe Developer — PDF Embed API  — explore-adobe
 Create a PDF from Microsoft Office documents, protect the content, and export to other formats.
 
 * [Learn more](/src/pages/apis/pdf-services.md)
+* [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img" iconStyle/>
 
@@ -25,6 +26,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 Extract text, table, images and document structure.
 
 * [Learn more](/src/pages/apis/pdf-extract.md)
+* [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
 
 
 

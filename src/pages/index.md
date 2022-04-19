@@ -38,6 +38,7 @@ access to basic PDF services, such as creating, securing, compressing, convertin
 splitting PDFs, as well as more advanced services, including Document Generation and PDF Extract.
 Do more with this API.
 
+- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 - [Learn more](/src/pages/apis/pdf-services.md)
 
 
@@ -53,6 +54,7 @@ positioning and natural reading order and placed into a structured JSON file for
 processing in NLP, RPA, content republishing or data analysis solutions. PDF Extract API works
 on both scanned and native PDFs and is included with PDF Services API.
 
+- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
 ![PDF Extract API Workflow](images/pdfExtract.jpg)
