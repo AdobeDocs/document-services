@@ -38,7 +38,6 @@ access to basic PDF services, such as creating, securing, compressing, convertin
 splitting PDFs, as well as more advanced services, including Document Generation and PDF Extract.
 Do more with this API.
 
-- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
 - [Learn more](/src/pages/apis/pdf-services.md)
 
 
