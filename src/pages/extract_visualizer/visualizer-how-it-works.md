@@ -30,4 +30,4 @@ how-it-work-img
 
 <TextBlock slots="text" theme="lightest" isCentered className="media-bottom-padding link position-up linking How-it-works sec-overview"/>
 
-We take security serously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)
+We take security seriously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)

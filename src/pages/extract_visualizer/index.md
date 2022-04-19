@@ -18,8 +18,7 @@ Unlock the structure and content elements of any PDF with a web service powered 
 apiHeroAssetImg doc-ext-invoice
 
 - [Try the Demo](https://www.adobe.com/go/stage_extract_visualizer)
-
-- [Start Free Trail](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
+- [Start Free Trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>

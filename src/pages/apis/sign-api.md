@@ -19,7 +19,6 @@ Adobe Acrobat Sign APIs make it easy for developers like you to integrate e-sign
 apiHeroAssetImg sign-api-hero
 
 - [Create account](https://www.adobe.com/sign/developer-form.html)
-
 - [View documentation](https://opensource.adobe.com/acrobat-sign/developer_guide/)
 
 
@@ -66,7 +65,7 @@ Adobe, with our Document Generation API and other PDF Services APIs, makes it ea
 
 ### OEM implementation made easy.
 
-Add e-signatures as a feature or service within your own application and deliver an all-digital experience in days -- not weeks or months. Acrobat Sign APIs give you the flexibility to integrate the experience for maximum control and customization.
+Add e-signatures as a feature or service within your own application and deliver an all-digital signing experience in days -- not weeks or months. Acrobat Sign APIs give you the flexibility to integrate the experience for maximum control and customization.
 
 - [Learn more](https://adobe.lookbookhq.com/adobesignpartnerpgm/buildtestdeliver)
 

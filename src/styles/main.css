@@ -1747,3 +1747,8 @@ pre .prism-code.spectrum-Code  span.token.string{
     padding-top: 0 !important;
     padding-right: var(--spectrum-global-dimension-size-65) !important;
 }
+
+.padding-zero-horizontal {
+    padding-right: var(--spectrum-global-dimension-size-0) !important;
+    padding-left: var(--spectrum-global-dimension-size-0) !important;
+}

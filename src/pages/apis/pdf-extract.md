@@ -62,7 +62,7 @@ Extracted content is output in a structured JSON file – with tables optionally
 
 <TextBlock slots="text" theme="light" isCentered className="media-bottom-padding link position-up linking How-it-works"/>
 
-We take security serously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)
+We take security seriously - check out our [security overview](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf)
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="Get-started-in-minutes"/>
 

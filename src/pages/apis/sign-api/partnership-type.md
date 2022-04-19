@@ -10,7 +10,7 @@ title: Adobe Developer — Sign API
 
 ### OEM/Embedded Partner.
 
-If you're developing an integration for a customer-facing application or platform, please contact us to learn more about our OEM/Embedded partnership program. Acrobat Sign API licensing is separate from PDF Service API licensing and can give you unique capabilities and flexibility.
+If you're developing an integration for a customer-facing application or platform, please contact us to learn more about our OEM/Embedded partnership program. Acrobat Sign API licensing is separate from PDF Services API licensing and can give you unique capabilities and flexibility.
 
 * [Contact us](mailto:signembed@adobe.com)
 

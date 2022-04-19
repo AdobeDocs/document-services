@@ -14,7 +14,7 @@ import {APIPixelRetargeting} from '../../components/retargetting'
 # Build agreements faster.
 
 Automate your sales, HR, or legal document workflows with APIs from the PDF standard creator.
-Get 1,000 PDF transactions for free.
+Get 1,000 document transactions for free.
 
 abm-landing-page-hero
 

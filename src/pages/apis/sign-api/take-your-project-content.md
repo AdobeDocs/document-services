@@ -8,7 +8,7 @@ title: Adobe Developer — Sign API
 
 ### Easy to implement.
 
-Acrobat Sign service features are available via easy-to-use REST APIs. Integrate e-signatures into your platform, application, or workflows in a snap.
+Acrobat Sign service features are available via easy-to-use REST APIs. Integrate e-signatures into your platform, application, or workflow in a snap.
 
 [Learn more](https://secure.na1.adobesign.com/public/docs/restapi/v6)
 

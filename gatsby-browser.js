@@ -508,19 +508,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         })
       });
 
-      // document
-      // .querySelector(".customer_stories")
-      // .setAttribute("daa-lh", "Customer stories.");
-      // document.querySelectorAll(".customer_story_wrapper a").forEach(link => {
-      //   link.setAttribute("daa-ll", link.textContent);
-      //   link.addEventListener("click", () => {
-      //     let names = link.getElementsByTagName('button')
-      //     console.log('click--',names);
-      //     openPdf(link.href)
-      //     link.removeAttribute("href");
-      //   })
-      // });
-
+   
       document
       .querySelector(".get-started-today")
       .setAttribute("daa-lh", "Get started today.");
@@ -529,7 +517,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         if(link.textContent === 'Start free trial'){
           link.addEventListener("click",()=>reTargetingFun());
           link.href = `${baseurl}`;
-          // link.href = `${baseurl}?sdid=2FDNCGKJ&mv=display`;
         }
       });
 
@@ -689,24 +676,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      // setTimeout(() => {
-      //   const iframe = document.getElementById("iframevideo");
-      //   if(iframe){
-      //     iframe.setAttribute("daa-lh", "Adobe PDF Services API Overview Video");
-      //     var iDocument = iframe.contentWindow.document;
-      //     const bodyElement = iDocument.getElementsByTagName("body")[0];
-      //     const element = bodyElement.querySelector('a');
-      //     element.setAttribute("daa-ll", 'Adobe PDF Services API Overview');
-
-      //     element.addEventListener("click", () => {
-      //       setTimeout(() => {
-      //         const body1Element = iDocument.getElementsByTagName("body")[0];
-      //         body1Element.querySelector('.ytp-large-play-button.ytp-button')
-      //         ?.setAttribute("daa-ll", 'Adobe PDF Services API Overview');
-      //       }, 1500);
-      //     });
-      //   }
-      // }, 1000);
     } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -935,19 +904,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector(".aws-carousel")
       .setAttribute("daa-lh", "AWS + Microsoft");
       document.querySelectorAll(".aws-carousel a.spectrum-Button").forEach(link => {
-        if(link.href === "/pricing/#AWS"){
+        if(link.href.indexOf("/pricing/#AWS") >= 0) {
           link.setAttribute("daa-ll", `${link.textContent} | Body | AWS`);
         } else {
           link.setAttribute("daa-ll", `${link.textContent} | Body | Microsoft`);
         }
       });
 
-      // document
-      //   .querySelector(".aws-carousel")
-      //   .setAttribute("daa-lh", "AWS + Microsoft");
-      // document.querySelectorAll(".aws-carousel a").forEach(link => {
-      //   link.setAttribute("daa-ll", link.textContent);
-      // });
+   
 
       document
         .querySelector(".key-features-code-block")

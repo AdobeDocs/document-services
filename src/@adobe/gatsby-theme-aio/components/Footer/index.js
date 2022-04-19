@@ -226,7 +226,7 @@ const Footer = ({ hasSideNav = false }) => (
           css={css`
             display: grid;
             grid-template-areas: 'apis blogs support developer';
-            grid-template-columns: 30% 22% 19%;
+            grid-template-columns: 25%;
             gap: var(--spectrum-global-dimension-size-400);
 
             @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
@@ -263,6 +263,15 @@ const Footer = ({ hasSideNav = false }) => (
                       </Link>
                     </li>
                   ))}
+                  {services.map(({ title, path }, i) => (
+                    <li key={i}>
+                      <Link isQuiet={true} variant="secondary">
+                        <a {...getExternalLinkProps(path)} href={path}>
+                          {title}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
                   <li>
                     <Link isQuiet={true}>
                       <a {...getExternalLinkProps(allAPIs.path)} href={allAPIs.path}>
@@ -272,7 +281,7 @@ const Footer = ({ hasSideNav = false }) => (
                   </li>
                 </List>
               </div>
-              <div
+              {/* <div
                 css={css`
                   margin-left: var(--spectrum-global-dimension-size-400);
                 `}>
@@ -287,7 +296,7 @@ const Footer = ({ hasSideNav = false }) => (
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
             <div
               css={css`
