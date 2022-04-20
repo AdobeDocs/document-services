@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-apis-sign-api-md",
     "path": "/apis/sign-api/",
-    "result": {"pageContext":{"frontmatter":{"title":"Adobe PDF Sign API","description":"Make life easier with our PDF Toolkit. Simplify workflows and improve UX. Our PDF Services API helps you create, convert, OCR PDFs and more. Learn more today."}}},
+    "result": {"pageContext":{"frontmatter":{"title":"Acrobat Sign API | Easy and Secure eSignature API","description":"Secure, powerful, and easy to use APIs to integrate e-signatures into your platform, app, or workflow quickly."}}},
     "staticQueryHashes": ["3695678887","858854441","915530536"]}
