@@ -39,7 +39,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
   const reTargetingFun=()=>{
   
       let isAvailable = document.body.querySelector('.retargeting')
-      console.log('isAvailable',isAvailable);
 
       var img = document.createElement("img");
       img.setAttribute("src", "https://insight.adsrvr.org/track/pxl/?adv=eazb7fe&ct=0:ygnni67&fmt=3");
@@ -98,6 +97,16 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       el => el.textContent === "Get started"
     );
 
+     // stage
+     let visualizerBaseurl =
+     "https://www.adobe.com/go/stage_extract_visualizer";
+  
+    //dev
+    if (window.location.host.indexOf("github.io") >= 0) {
+      visualizerBaseurl =
+      "https://www.adobe.com/go/dev_extract_visualizer";
+    }
+
     //local
     let navLinksBaseUrl = "";
     let isLocal = true;
@@ -117,6 +126,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     ) {
       baseurl =
         "https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html";
+
+      visualizerBaseurl =
+      "https://www.adobe.com/go/extract_visualizer";
     }
 
     getCredentialsButton.href = `${baseurl}`;
@@ -283,6 +295,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
 
+      let AdobePDFExtractAPIBtn = Array.from(document.querySelectorAll(".Adobe-PDF-Extract-API a")).find(
+          el =>  el.textContent === "Try the demo"
+        );
+      AdobePDFExtractAPIBtn.href = `${visualizerBaseurl}`;
+
       document
         .querySelector(".Hero-Banner")
         .closest("main")
@@ -364,6 +381,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
     }else if (window.location.pathname.indexOf("extract_visualizer") >= 0){
 
+      let visualizerTryTheDemoButton = Array.from(document.querySelectorAll("a")).find(
+        el => el.textContent === "Try the Demo"
+      );
+
+      visualizerTryTheDemoButton.href = `${visualizerBaseurl}`;
+   
       document
       .querySelector(".Hero-Banner")
       .closest("main")

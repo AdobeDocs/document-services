@@ -17,7 +17,7 @@ Unlock the structure and content elements of any PDF with a web service powered 
 
 apiHeroAssetImg doc-ext-invoice
 
-- [Try the Demo](https://www.adobe.com/go/stage_extract_visualizer)
+- [Try the Demo](https://www.adobe.com/go/extract_visualizer)
 - [Start Free Trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 

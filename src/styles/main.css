@@ -1752,3 +1752,48 @@ pre .prism-code.spectrum-Code  span.token.string{
     padding-right: var(--spectrum-global-dimension-size-0) !important;
     padding-left: var(--spectrum-global-dimension-size-0) !important;
 }
+
+.how-it-work-text-align > div > div > div{
+    width: 40% !important;
+}
+
+.how-it-work-img-align > div > div > p{
+    width: 60% !important;
+    height: auto !important;
+}
+
+@media screen and (max-width: 767px){
+
+    
+.how-it-work-text-align > div > div > div{
+    width: 100% !important;
+}
+
+.how-it-work-img-align > div > div > p{
+    width: 100% !important;
+    height: calc(
+        var(--spectrum-global-dimension-size-4600) -
+          var(--spectrum-global-dimension-size-225)
+      ) !important;
+    }
+
+    .padding-zero-horizontal {
+        padding-right: var(--spectrum-global-dimension-size-250) !important;
+        padding-left: var(--spectrum-global-dimension-size-250) !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    .how-it-work-text-align > div > div > div{
+        width: 100% !important;
+    }
+    
+    .how-it-work-img-align > div > div > p{
+        width: 100% !important;
+        height: calc(
+            var(--spectrum-global-dimension-size-4600) -
+              var(--spectrum-global-dimension-size-225)
+          ) !important; 
+    }
+}

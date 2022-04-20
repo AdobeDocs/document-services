@@ -1,6 +1,6 @@
 ---
-title: Adobe PDF Sign API
-description: Make life easier with our PDF Toolkit. Simplify workflows and improve UX. Our PDF Services API helps you create, convert, OCR PDFs and more. Learn more today.
+title: Acrobat Sign API | Easy and Secure eSignature API
+description: Secure, powerful, and easy to use APIs to integrate e-signatures into your platform, app, or workflow quickly.
 ---
 import PartnerWithUsBlade from './sign-api/partner-with-us.md'
 import TakeYourProject from './sign-api/take-your-project-nxt-lvl.md'

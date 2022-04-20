@@ -1,5 +1,6 @@
 ---
-title: Adobe Developer — Sign API
+title: Acrobat Sign API | Easy and Secure eSignature API
+description: Secure, powerful, and easy to use APIs to integrate e-signatures into your platform, app, or workflow quickly.
 ---
 
 <TextBlock slots="image, heading, text1, text2" width="33%" theme="lightest" className="align-left icon-xl-size padding-top-zero horizontal-align-heading link py-0 easy-to-implement-cta" />
