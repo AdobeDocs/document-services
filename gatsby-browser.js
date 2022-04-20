@@ -98,14 +98,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     );
 
      // stage
-     let visualizerBaseurl =
-     "https://www.adobe.com/go/stage_extract_visualizer";
+    //  let visualizerBaseurl =
+    //  "https://www.adobe.com/go/stage_extract_visualizer";
   
     //dev
-    if (window.location.host.indexOf("github.io") >= 0) {
-      visualizerBaseurl =
-      "https://www.adobe.com/go/dev_extract_visualizer";
-    }
+    // if (window.location.host.indexOf("github.io") >= 0) {
+    //   visualizerBaseurl =
+    //   "https://www.adobe.com/go/dev_extract_visualizer";
+    // }
 
     //local
     let navLinksBaseUrl = "";
@@ -127,8 +127,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       baseurl =
         "https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html";
 
-      visualizerBaseurl =
-      "https://www.adobe.com/go/extract_visualizer";
+      // visualizerBaseurl =
+      // "https://www.adobe.com/go/extract_visualizer";
     }
 
     getCredentialsButton.href = `${baseurl}`;
@@ -295,10 +295,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
 
-      let AdobePDFExtractAPIBtn = Array.from(document.querySelectorAll(".Adobe-PDF-Extract-API a")).find(
-          el =>  el.textContent === "Try the demo"
-        );
-      AdobePDFExtractAPIBtn.href = `${visualizerBaseurl}`;
+      // let AdobePDFExtractAPIBtn = Array.from(document.querySelectorAll(".Adobe-PDF-Extract-API a")).find(
+      //     el =>  el.textContent === "Try the demo"
+      //   );
+      // AdobePDFExtractAPIBtn.href = `${visualizerBaseurl}`;
 
       document
         .querySelector(".Hero-Banner")
@@ -381,11 +381,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
     }else if (window.location.pathname.indexOf("extract_visualizer") >= 0){
 
-      let visualizerTryTheDemoButton = Array.from(document.querySelectorAll("a")).find(
-        el => el.textContent === "Try the Demo"
-      );
+      // let visualizerTryTheDemoButton = Array.from(document.querySelectorAll("a")).find(
+      //   el => el.textContent === "Try the Demo"
+      // );
 
-      visualizerTryTheDemoButton.href = `${visualizerBaseurl}`;
+      // visualizerTryTheDemoButton.href = `${visualizerBaseurl}`;
    
       document
       .querySelector(".Hero-Banner")

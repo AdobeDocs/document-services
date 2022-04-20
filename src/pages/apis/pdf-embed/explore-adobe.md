@@ -26,7 +26,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 Extract text, table, images and document structure.
 
 * [Learn more](/src/pages/apis/pdf-extract.md)
-* [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
+* [Demo](https://www.adobe.com/go/extract_visualizer)
 
 
 

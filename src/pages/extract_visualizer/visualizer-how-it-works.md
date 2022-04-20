@@ -11,8 +11,8 @@ PDF input and the JSON output side-by-side. Click on a section of the PDF
 to see the corressponding JSON output. You can extract a variety of elements such as 
 paragraphs, headers, tables, and figures/images.
   
-- [Interactive demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
-- [Watch the video](https://app.frame.io/r/376fbe2b-b4f2-4833-8fba-09bb711a8f4c)
+- [Interactive demo](https://www.adobe.com/go/extract_visualizer)
+- [Watch the video](https://video.tv.adobe.com/v/333506)
 
 ![Create Source Support](../images/ExtractVisualizer_Graphic.png)
 

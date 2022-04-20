@@ -53,7 +53,7 @@ positioning and natural reading order and placed into a structured JSON file for
 processing in NLP, RPA, content republishing or data analysis solutions. PDF Extract API works
 on both scanned and native PDFs and is included with PDF Services API.
 
-- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
+- [Try the demo](https://www.adobe.com/go/extract_visualizer)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
 ![PDF Extract API Workflow](images/pdfExtract.jpg)

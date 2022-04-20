@@ -16,7 +16,7 @@ title: Adobe Developer — PDF Services API  —  Explore other Adobe Document s
 Extract text, table, images and document structure.
 
 * [Learn more](/src/pages/apis/pdf-extract.md)
-* [Demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)
+* [Demo](https://www.adobe.com/go/extract_visualizer)
 
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img"/>
