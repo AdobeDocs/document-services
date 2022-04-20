@@ -14,7 +14,7 @@ paragraphs, headers, tables, and figures/images.
 - [Interactive demo](https://www.adobe.com/go/extract_visualizer)
 - [Watch the video](https://video.tv.adobe.com/v/333506)
 
-![Create Source Support](../images/ExtractVisualizer_Graphic.png)
+![Create Source Support](../../images/ExtractVisualizer_Graphic.png)
 
 
 <TextBlock slots="heading, text" theme="lightest"  className="how-it-work-richText padding-zero-visualizer rich-text-data how-it-work-font"/>
