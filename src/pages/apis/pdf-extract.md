@@ -9,7 +9,7 @@ import ExtractProductCard from './pdf-extract/extract-product.md';
 import VisualizerHowItWorks from './pdf-extract/visualizer-how-it-works.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
 
-<Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="signApiHerobgImage Hero-Banner hero-btn-color"/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
 
 # Adobe PDF Extract API
 

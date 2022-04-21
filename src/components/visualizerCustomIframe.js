@@ -27,7 +27,7 @@ const VisualizerCustomIframeBlock = ({
           <div className="release-container-how-it-work">
             <div className="release-wrapper-how-it-work">
               <div className="release-copy-wrapper-how-it-work">
-                <h3 className="align-right-heading spectrum-Heading spectrum-Heading--sizeL">
+                <h3 className="align-right-heading spectrum-Heading get-document-video-content-fonts">
                   Get the document structure, not just the characters.
                 </h3>
                 <p>

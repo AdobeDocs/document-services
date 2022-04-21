@@ -1759,7 +1759,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 
 .how-it-work-img-align > div > div > p{
     width: 60% !important;
-    height: auto !important;
+    height: 512px !important;
 }
 
 @media screen and (max-width: 767px){
@@ -1795,5 +1795,26 @@ pre .prism-code.spectrum-Code  span.token.string{
             var(--spectrum-global-dimension-size-4600) -
               var(--spectrum-global-dimension-size-225)
           ) !important; 
+    }
+}
+
+
+.how-it-work-img-Z > div > div > p img{
+    width: 478px !important;
+    height: 512px !important;
+}
+
+@media screen and (max-width: 767px){
+    .how-it-work-img-Z > div > div > p img{
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    .how-it-work-img-Z > div > div > p img{
+        width: 100% !important;
+        height: 100% !important;
     }
 }

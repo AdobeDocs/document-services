@@ -2,7 +2,7 @@
 title: Adobe Developer — Wrapper Components  —  visualizer How it works
 ---
 
-<TextBlock slots="heading,text,buttons,image" theme="lightest" className="padding-zero-visualizer see-how-it-works how-it-work-font how-it-work-text-align how-it-work-img-align"/>
+<TextBlock slots="heading,text,buttons,image" theme="lightest" className="padding-zero-visualizer see-how-it-works how-it-work-font how-it-work-text-align how-it-work-img-align how-it-work-img-Z"/>
 
 ### See how it works.
 

@@ -961,3 +961,7 @@ section.sdk-rsrc-anchor {
        text-align: start !important;
    }
 }
+
+.get-document-video-content-fonts {
+    font-size: var(--spectrum-heading-l-text-size, var(--spectrum-alias-heading-l-text-size)) !important;
+}
