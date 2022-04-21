@@ -279,7 +279,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       getStartedButtonArr.map(getStartedButton => {
         getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
       });
-    } else {
+    } else if (window.location.pathname.indexOf("sign-api") >= 0) {
+
+    }else {
       if (getStartedButtonArr) {
         getStartedButtonArr.map(getStartedButton => {
           getStartedButton.href = `${baseurl}`;
