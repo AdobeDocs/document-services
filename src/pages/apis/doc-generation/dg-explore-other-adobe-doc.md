@@ -15,8 +15,6 @@ title: Adobe Developer — Automate Document Generation | Document Explore | Ado
 Create a PDF from Microsoft Office documents, protect the content, and export to other formats.
 
 * [Learn more](/src/pages/apis/pdf-services.md)
-* [Demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)
-
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
