@@ -513,6 +513,7 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
 .div-flex > div {
     display: flex;
     padding-bottom: var(--spectrum-global-dimension-size-300) !important;
+    padding-top: var(--spectrum-global-dimension-size-500) !important;
 }
 .div-p-0 > div {
     padding: 0px !important;
@@ -565,6 +566,11 @@ img[alt=thumbnail] {
 
 }
 
+.enterprise-icon-xl-size .spectrum-Body   {
+    height: var(--spectrum-global-dimension-size-1600) !important;
+
+}
+
 .horizontal-align .spectrum-Body{
     height:var(--spectrum-global-dimension-size-600);
 }
@@ -572,6 +578,10 @@ img[alt=thumbnail] {
 .icon-xl-size .spectrum-Body  .gatsby-resp-image-wrapper img{
     text-align: left;
     width: auto !important;
+}
+
+.enterprise-icon-xl-size .spectrum-Body  .gatsby-resp-image-wrapper img{
+    text-align: left;
 }
 
 
@@ -1302,7 +1312,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 
 
 .sample-integration_UiPath {
-    width: 130px !important;
+    width: 90px !important;
     height: 105px !important;
     background-image: url('../pages/images/3_Icon_UiPath.png') !important;
     background-repeat: no-repeat;
@@ -1319,7 +1329,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 .sample-integration_workFront {
 
     /* width: 309px !important; */
-    width: 230px !important;
+    width: 180px !important;
     height: 105px !important;
     background-image: url('../pages/images/3_Icon_Workfront.png') !important;
     background-repeat: no-repeat;
@@ -1791,10 +1801,10 @@ pre .prism-code.spectrum-Code  span.token.string{
     
     .how-it-work-img-align > div > div > p{
         width: 100% !important;
-        height: calc(
+        /* height: calc(
             var(--spectrum-global-dimension-size-4600) -
               var(--spectrum-global-dimension-size-225)
-          ) !important; 
+          ) !important;  */
     }
 }
 
