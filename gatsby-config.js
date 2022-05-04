@@ -59,6 +59,10 @@ module.exports = {
         ]
       },
       {
+        title: 'Microsoft-PA-Delivery',
+        path: 'microsoftPA/index.md'
+      },
+      {
         title: 'Use Cases',
         path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts.md'
       },
