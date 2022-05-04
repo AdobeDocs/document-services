@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — OCR PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" hasCodeBlock  theme="dark" className="bgBlue link linking"/>
+<TextBlock slots="heading, buttons, text, text1" hasCodeBlock  theme="dark" className="bgBlue link linking ocr-pdf-file"/>
 
 ### OCR a PDF file
 
@@ -10,7 +10,7 @@ title: Adobe Developer — PDF Services API  — OCR PDF
 
 Use built-in optical character recognition (OCR) to convert images to text and enable fully text searchable documents for archiving and creation of searchable indexes.
 
-See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-ocr) and quickly try our APIs using the Postman collections
+See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/OCR) and quickly try our APIs using the Postman collections
 
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET, Java" />
@@ -18,82 +18,153 @@ See our public [API Reference](https://documentcloud.adobe.com/document-services
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information
-// https://documentcloud.adobe.com/document-services/index.html#post-ocr
+// Please refer our Rest API docs for more information 
+// https://developer.adobe.com/document-services/docs/apis/#tag/Ocr
 
-curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith=%7B%22reltype%22%3A%20%22http%3A%2F%2Fns.adobe.com%2Frel%2Fprimary%22%7D' \
---header 'Authorization: Bearer {{Placeholder for token}}' \
---header 'Accept: application/json, text/plain, */*' \
+curl --location --request POST 'https://pdf-services.adobe.io/operation/ocr' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
---header 'Prefer: respond-async,wait=0' \
---form 'contentAnalyzerRequests="{
-    \"cpf:inputs\": {
-        \"documentIn\": {
-            \"cpf:location\": \"InputFile0\",
-            \"dc:format\": \"application/pdf\"
-        }
-    },
-    \"cpf:engine\": {
-        \"repo:assetId\": \"urn:aaid:cpf:Service-7e6a5d2b6bb141d7832398076914a07b\"
-    },
-    \"cpf:outputs\": {
-        \"documentOut\": {
-            \"cpf:location\": \"multipartLabelOut\",
-            \"dc:format\": \"application/pdf\"
-        }
-    }
-}"' \
---form 'InputFile0=@"{{Placeholder for input file (absolute path)}}"'
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {{Placeholder for token}}' \
+--data-raw '{
+    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718"
+}'
+
+// Legacy API can be found here 
+// https://documentcloud.adobe.com/document-services/index.html#post-ocr
 ```
 
 #### Node js
 
 ```js
-// Create an ExecutionContext using credentials and create a new operation instance.
-const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-  ocrOperation = PDFServicesSdk.OCR.Operation.createNew();
+// Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
+// Run the sample:
+// node src/ocr/ocr-pdf.js
 
-// Set operation input from a source file.
-const input = PDFServicesSdk.FileRef.createFromLocalFile( 'resources/ocrInput.pdf', PDFServicesSdk.OCR.SupportedMediaTypes.pdf );
-ocrOperation.setInput(input);
+ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
-// Execute the operation and Save the result to the specified location.
-ocrOperation.execute(executionContext)
-  .then(result => result.saveAsFile('output/ocrOutput.pdf'));
+ try {
+   // Initial setup, create credentials instance.
+   const credentials =  PDFServicesSdk.Credentials
+       .serviceAccountCredentialsBuilder()
+       .fromFile("pdfservices-api-credentials.json")
+       .build();
+
+   // Create an ExecutionContext using credentials and create a new operation instance.
+   const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
+       ocrOperation = PDFServicesSdk.OCR.Operation.createNew();
+
+   // Set operation input from a source file.
+   const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/ocrInput.pdf');
+   ocrOperation.setInput(input);
+
+   // Execute the operation and Save the result to the specified location.
+   ocrOperation.execute(executionContext)
+       .then(result => result.saveAsFile('output/ocrOutput.pdf'))
+       .catch(err => {
+           if(err instanceof PDFServicesSdk.Error.ServiceApiError
+               || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+               console.log('Exception encountered while executing operation', err);
+           } else {
+               console.log('Exception encountered while executing operation', err);
+           }
+       });
+ } catch (err) {
+   console.log('Exception encountered while executing operation', err);
+ }
 ```
 
 #### .Net
 
 ```clike
-// Create an ExecutionContext using credentials and create a new operation instance.
-ExecutionContext executionContext = ExecutionContext.Create(credentials);
-OCROperation ocrOperation = OCROperation.CreateNew();
+// Get the samples from https://www.adobe.com/go/pdftoolsapi_net_samples
+// Run the sample:
+// cd OcrPDF/
+// dotnet run OcrPDF.csproj
 
-// Set operation input from a source file.
-FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"ocrInput.pdf");
-ocrOperation.SetInput(sourceFileRef);
+ namespace OcrPDF
+ {
+   class Program
+   {
+     private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+     static void Main()
+     {
+       //Configure the logging
+       ConfigureLogging();
+       try
+       {
+         // Initial setup, create credentials instance.
+         Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
+                 .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
+                 .Build();
 
-// Execute the operation.
-FileRef result = ocrOperation.Execute(executionContext);
+         //Create an ExecutionContext using credentials and create a new operation instance.
+         ExecutionContext executionContext = ExecutionContext.Create(credentials);
+         OCROperation ocrOperation = OCROperation.CreateNew();
 
-// Save the result to the specified location.
-result.SaveAs(Directory.GetCurrentDirectory() + "/output/ocrOperationOutput.pdf");
+         // Set operation input from a source file.
+         FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"ocrInput.pdf");
+         ocrOperation.SetInput(sourceFileRef);
+
+         // Execute the operation.
+         FileRef result = ocrOperation.Execute(executionContext);
+
+         // Save the result to the specified location.
+         result.SaveAs(Directory.GetCurrentDirectory() + "/output/ocrOperationOutput.pdf");
+       }
+       catch (ServiceUsageException ex)
+       {
+         log.Error("Exception encountered while executing operation", ex);
+       }
+       // Catch more errors here. . .
+     }
+
+     static void ConfigureLogging()
+     {
+       ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+       XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+     }
+   }
+ }
 ```
 
 #### Java
 
 ```javascript
-// Create an ExecutionContext using credentials and create a new operation instance.
-ExecutionContext executionContext = ExecutionContext.create(credentials);
-OCROperation ocrOperation = OCROperation.createNew();
-
-// Set operation input from a source file.
-FileRef source = FileRef.createFromLocalFile( "src/main/resources/ocrInput.pdf" );
-ocrOperation.setInput(source);
-
-// Execute the operation
-FileRef result = ocrOperation.execute(executionContext);
-
-// Save the result at the specified location
-result.saveAs("output/ocrOutput.pdf");
+// Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
+// Run the sample:
+// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.ocrpdf.OcrPDF
+ 
+ public class OcrPDF {
+ 
+  // Initialize the logger.
+  private static final Logger LOGGER = LoggerFactory.getLogger(OcrPDF.class);
+ 
+  public static void main(String[] args) {
+ 
+   try {
+ 
+    // Initial setup, create credentials instance.
+    Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
+      .fromFile("pdfservices-api-credentials.json")
+      .build();
+ 
+    //Create an ExecutionContext using credentials and create a new operation instance.
+    ExecutionContext executionContext = ExecutionContext.create(credentials);
+    OCROperation ocrOperation = OCROperation.createNew();
+ 
+    // Set operation input from a source file.
+    FileRef source = FileRef.createFromLocalFile("src/main/resources/ocrInput.pdf");
+    ocrOperation.setInput(source);
+ 
+    // Execute the operation
+    FileRef result = ocrOperation.execute(executionContext);
+ 
+    // Save the result at the specified location
+    result.saveAs("output/ocrOutput.pdf");
+ 
+   } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+    LOGGER.error("Exception encountered while executing operation", ex);
+   }
+  }
+ }
 ```

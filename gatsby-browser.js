@@ -116,17 +116,17 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       isLocal = false;
     }
     // stage
-    let baseurl =
-      "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
-
+    let baseurl = "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
+      // "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
+    let referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
     // production
     if (
       window.location.host.indexOf("developer.adobe.com") >= 0 ||
       window.location.host.indexOf("adobe.io") >= 0
     ) {
       baseurl =
-        "https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html";
-
+        "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
+        referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
       // visualizerBaseurl =
       // "https://www.adobe.com/go/extract_visualizer";
     }
@@ -245,7 +245,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
         
       });
-    } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
+    }  else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
@@ -356,6 +356,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
       document.querySelectorAll(".home-code-block div.tabItem").forEach(link=>{
         link.setAttribute("daa-ll", link.title);
+      })
+      document.querySelectorAll('.home-code-block a').forEach(link=>{
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}`;
+        }
       })
       document
         .querySelector(".Use-cases-for-Adobe-Document-Services")
@@ -824,6 +829,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     });
 
     } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
+
       // document
       //   .querySelector(".Hero-Banner")
       //   .closest("main")
@@ -917,7 +923,16 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelectorAll(".Key-features-of-Adobe-PDF-Extract-API a")
       .forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === 'Start free trial'){
+          link.href = `${baseurl}?api=pdf-extract-api`;
+        }
       });
+    
+    document.querySelectorAll(".extract-stepper-api-reference a").forEach(link=>{
+      if(link.textContent === 'View API Reference'){
+        link.href = `${referenceBaseUrl}#tag/Extract-PDF`;
+      }
+    })
 
     document
     .querySelector(".see-how-it-works")
@@ -1078,9 +1093,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector(".news-letter")
       .setAttribute("daa-lh", "Newsletter");
 
-    document.querySelectorAll(".news-letter a").forEach(link => {
-      link.setAttribute("daa-ll", link.textContent);
-    });
+      document.querySelectorAll(".news-letter a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+      document.querySelectorAll(".extract-stepper-api-reference a").forEach(link=>{
+        if(link.textContent === 'View API Reference'){
+          link.href = `${referenceBaseUrl}#tag/Document-Generation`;
+        }
+      })
 
     } else if (window.location.pathname.indexOf("doc-gen-api-template") >= 0) {
       document
@@ -1158,14 +1178,123 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".key-features-code-block a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-
+      document.querySelectorAll(".services-step-three a").forEach(link => {
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}`;
+        }
+      });
       //codeblock
       document
         .querySelector(".pdf-content-extraction")
         .setAttribute("daa-lh", "PDF content extraction");
       document.querySelectorAll(".pdf-content-extraction a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Extract-PDF`;
+        }
       });
+      document.querySelectorAll(".create-pdf a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Create-PDF`;
+        }
+      })
+      document.querySelectorAll(".create-pdf-html a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Html-To-PDF`;
+        }
+      })
+      document.querySelectorAll(".pdf-word-doc-gen a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Document-Generation`;
+        }
+      })
+      document.querySelectorAll(".convert-pdf a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Export-PDF`;
+        }
+      })
+      document.querySelectorAll(".ocr-pdf-file a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/OCR`;
+        }
+      })
+      document.querySelectorAll(".secure-PDF-file a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Protect-PDF`;
+        }
+      })
+      document.querySelectorAll(".remove-pwd a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Remove-Protection`;
+        }
+      })
+      document.querySelectorAll(".get-properties a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/PDF-Properties`;
+        }
+      })
+      document.querySelectorAll(".split-pdf a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Split-PDF`;
+        }
+      })
+      document.querySelectorAll(".combine-pdf a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Combine-PDF`;
+        }
+      })
+      document.querySelectorAll(".compress-pdf a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Compress-PDF`;
+        }
+      })
+      document.querySelectorAll(".reorder-pages a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Combine-PDF`;
+        }
+      })
+      document.querySelectorAll(".linerarize-pdf a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Linearize-PDF`;
+        }
+      })
+      document.querySelectorAll(".insert-page a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Combine-PDF`;
+        }
+      })
+      document.querySelectorAll(".replace-page a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Combine-PDF`;
+        }
+      })
+      document.querySelectorAll(".delete-page a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Page-Manipulation`;
+        }
+      })
+      document.querySelectorAll(".rotate-page a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}#tag/Page-Manipulation`;
+        }
+      })
 
       document
         .querySelector(".AdobePDFExtractAPI")

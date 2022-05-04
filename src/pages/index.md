@@ -20,7 +20,7 @@ import {APIPixelRetargeting} from '../components/retargetting'
 
 From the company who created the PDF standard.
 
-- [Get started](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 
 homeheroAssertImage
@@ -53,7 +53,7 @@ positioning and natural reading order and placed into a structured JSON file for
 processing in NLP, RPA, content republishing or data analysis solutions. PDF Extract API works
 on both scanned and native PDFs and is included with PDF Services API.
 
-- [Try the demo](https://www.adobe.com/go/extract_visualizer)
+- [Try the demo](https://documentservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
 ![EMPTY_ALT](images/pdfExtract.jpg)
@@ -73,7 +73,7 @@ dynamic documents with conditional text, images, lists, and tables. Signature wo
 a cinch with the Adobe Acrobat Sign integration, and Document Generation is included with PDF
 Services API.
 
-- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
+- [Try the demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
 
@@ -89,7 +89,7 @@ can provide a rich PDF viewing experience and enable digital collaboration and d
 analytics for helpful user insights. Implement this API in minutes with a few lines of code and
 samples for Angular and React.
 
-- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
+- [Try the demo](https://documentservices.adobe.com/view-sdk-demo/index.html)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
 ![EMPTY_ALT](images/pdfEmbed.jpg)
@@ -101,11 +101,11 @@ samples for Angular and React.
 
 Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 
 
-<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://www.adobe.com/go/dcsdk_APIdocs"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block' />
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block' />
 
 ### Create PDF from Word
 
@@ -176,7 +176,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 Start free trial with 1,000 PDF transactions for up to 6 months.
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Contact us](src/pages/pricing/contact.md)
 
 <APIPixelRetargeting/>

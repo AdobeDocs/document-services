@@ -18,7 +18,7 @@ Adobe PDF Embed API is free to use, so get started today!
 
 Obtain free credentials
 
-* [Get started](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
+* [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
 
 
 
