@@ -11,6 +11,6 @@ import IndexContent from '../page-content/content-publishing/digital-content-pub
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Digital-Content-Publishing"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Digital-Content-Publishing"/>
 
 <IndexContent />

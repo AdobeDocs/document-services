@@ -11,6 +11,6 @@ import InvoicesContent from '../page-content/financial/invoices.md';
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Invoices"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Invoices"/>
 
 <InvoicesContent />

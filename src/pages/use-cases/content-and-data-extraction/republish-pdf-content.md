@@ -11,6 +11,6 @@ import RepublishPDFContent from '../page-content/content-and-data-extraction/rep
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Republish-PDF-Content"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Republish-PDF-Content"/>
 
 <RepublishPDFContent />

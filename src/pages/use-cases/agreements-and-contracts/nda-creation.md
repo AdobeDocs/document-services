@@ -9,6 +9,6 @@ import NDACreation from '../page-content/agreements-and-contracts/nda-creation.m
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="NDA-Creation"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="NDA-Creation"/>
 
 <NDACreation />

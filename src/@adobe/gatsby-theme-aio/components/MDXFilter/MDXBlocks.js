@@ -37,6 +37,7 @@ import { CustomMenuBlock } from '../CustomMenuBlock';
 import {CustomIframeBlock} from '../CustomIframe';
 import {CustomCard} from '../CustomCard';
 import { MenuWrapperComponent } from '../MenuWrapperComponent';
+import { Accordion, AccordionItem } from "@adobe/gatsby-theme-aio/src/components/Accordion";
 
 export const MDXBlocks = {
   Hero,
@@ -64,6 +65,8 @@ export const MDXBlocks = {
   CustomMenuBlock,
   CustomIframeBlock,
   CustomCard,
+  Accordion,
+  AccordionItem,
   TabsBlock: ({ theme, ...props }) => (
     <TabsBlock theme={theme ?? globalTheme.code} {...props} />
   ),

@@ -10,6 +10,6 @@ import Collaboration from '../page-content/collaboration/student-teacher-collabo
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Student-Teacher-Collaboration"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Student-Teacher-Collaboration"/>
 
 <Collaboration />

@@ -11,6 +11,6 @@ import ProcessingEmployeeResumes from '../page-content/content-publishing/proces
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Processing-employee-resumes"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Processing-employee-resumes"/>
 
 <ProcessingEmployeeResumes />
