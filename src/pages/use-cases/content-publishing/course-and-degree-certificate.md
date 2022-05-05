@@ -12,6 +12,6 @@ import CourseAndDegreeCertificate from '../page-content/content-publishing/cours
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Course-and-Degree-Certificate"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Course-and-Degree-Certificate"/>
 
 <CourseAndDegreeCertificate />

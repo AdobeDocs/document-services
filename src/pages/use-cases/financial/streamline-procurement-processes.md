@@ -11,6 +11,6 @@ import StreamlineProcurementProcesses from '../page-content/financial/streamline
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Streamline-procurement-processes"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Streamline-procurement-processes"/>
 
 <StreamlineProcurementProcesses />

@@ -9,6 +9,6 @@ import LegalContracts from '../page-content/agreements-and-contracts/legal-contr
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Legal-Contracts" />
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Legal-Contracts" />
 
 <LegalContracts />

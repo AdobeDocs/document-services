@@ -11,6 +11,6 @@ import PurchaseOrders from '../page-content/financial/purchase-orders.md';
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Purchase-Orders"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Purchase-Orders"/>
 
 <PurchaseOrders />

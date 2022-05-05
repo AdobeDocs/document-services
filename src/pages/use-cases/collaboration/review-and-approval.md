@@ -10,6 +10,6 @@ import ReviewandApproval from '../page-content/collaboration/review-and-approval
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Review-and-Approval"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Review-and-Approval"/>
 
 <ReviewandApproval />

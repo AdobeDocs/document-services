@@ -10,6 +10,6 @@ import IndexConent from '../page-content/archiving-and-retrieval/search-and-inde
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Search-and-Indexing"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Search-and-Indexing"/>
 
 <IndexConent />

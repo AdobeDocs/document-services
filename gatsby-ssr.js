@@ -17,7 +17,7 @@ export const onRenderBody = ({setHeadComponents}) => {
   setHeadComponents([
         <script type="text/javascript">
           {`
-           _linkedin_partner_id = "3803834";
+           _linkedin_partner_id = '3803834';
 
            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
    

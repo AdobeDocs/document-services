@@ -11,6 +11,6 @@ import EmployeeLetters from '../page-content/content-publishing/employee-letters
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Employee-Letters" />
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Employee-Letters" />
 
 <EmployeeLetters />

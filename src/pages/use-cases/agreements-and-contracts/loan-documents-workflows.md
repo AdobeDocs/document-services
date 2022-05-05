@@ -10,6 +10,6 @@ import LoanDocumentsWorkflows from '../page-content/agreements-and-contracts/loa
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Loan-Document-Workflows"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Loan-Document-Workflows"/>
 
 <LoanDocumentsWorkflows />
