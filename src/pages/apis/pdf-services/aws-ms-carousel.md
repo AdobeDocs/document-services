@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  —  Carousel PDF
 ---
 
-<Carousel slots="bgimage, image, heading, text, buttons" repeat="2"  theme="lightest" enableNavigation slideTheme='dark' className="carousel-padding-top-zero aws-carousel" varient="fullWidth" navigationNext="white-swiper-button" navigationPre="white-swiper-button" isCenter  />
+<Carousel slots="bgimage, image, heading, text, buttons" repeat="3"  theme="lightest" enableNavigation slideTheme='dark' className="carousel-padding-top-zero aws-carousel" varient="fullWidth" navigationNext="white-swiper-button" navigationPre="white-swiper-button" isCenter  />
 
 carousel-adobe
 
@@ -21,5 +21,15 @@ carousel-micosoft
 ## Microsoft Power Automate Integration
 
 ### Quickly automate document processes without writing any code using the new Adobe PDF Services Connector.
+
+- [Learn more](http://www.adobe.com/go/powerautomate_help)
+
+carousel-ui-path
+
+![UiPath logo](../../images/Uipath_logo.png)
+
+## UiPath Integration
+
+### Automate end-to-end digital document processes and workflows easily with UIPath, Adobe Document Services and Adobe Acrobat Sign.
 
 - [Learn more](http://www.adobe.com/go/powerautomate_help)
