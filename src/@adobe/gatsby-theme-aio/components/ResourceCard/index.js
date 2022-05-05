@@ -20,7 +20,7 @@ const counter = {
 };
 const alignMapping = ['margin-left: 0;', 'margin-right: 0;'];
 
-const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, image, className, isCustomStories = false, buttons, isFooter = false, btnVarient='primary', contHeight}) => {
+const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text, text2=null, image, className, isCustomStories = false, buttons, isFooter = false, btnVarient='primary', contHeight}) => {
   let initColumns = 100 / parseFloat(width);
 
   if (width === '33%') {
@@ -100,7 +100,7 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
           <div
             className="spectrum-Card-preview"
             css={css`
-              height: var(--spectrum-global-dimension-size-2000);
+              height: var(--spectrum-global-dimension-size-${text2 ? 2400 : 2000});
               width: 100%;
               padding: 0 !important;
             `}>
@@ -136,6 +136,24 @@ const ResourceCard = ({ theme = 'lightest', width = '100%', link, heading, text,
               overflow: hidden;
               height:${contHeight};
             `}>
+            {text2 ? <div
+              className=""
+              css={css`
+                height: auto;
+              `}>
+              <div className="spectrum-Card-subtitle">
+                <p
+                  className="spectrum-Body spectrum-Body-S"
+                  css={css`
+                    text-align: left;
+                    color: var(--spectrum-global-color-gray-700);
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                  `}>
+                  {text2 && text2.props.children}
+                </p>
+              </div>
+            </div>:null}
             <div
               className="spectrum-Card-header"
               css={css`
@@ -205,6 +223,7 @@ ResourceCard.propTypes = {
   link: PropTypes.element,
   heading: PropTypes.element,
   text: PropTypes.element,
+  text2: PropTypes.element,
   buttons: PropTypes.element,
   image: PropTypes.element,
   isFooter: PropTypes.element
