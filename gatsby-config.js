@@ -55,12 +55,13 @@ module.exports = {
             title: 'Sign API',
             description: 'Integrate e-signatures into your platform or application',
             path: 'apis/sign-api/'
-          }
+          },
+          {
+            title: 'Microsoft PA Integration',
+            description: 'Build workflows on Microsoft Power Platform easily',
+            path: 'apis/microsoft-pa-integration/'
+          },
         ]
-      },
-      {
-        title: 'Microsoft-PA-Delivery',
-        path: 'microsoftPA/index.md'
       },
       {
         title: 'Use Cases',

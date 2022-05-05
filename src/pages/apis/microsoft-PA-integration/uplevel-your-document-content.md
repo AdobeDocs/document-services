@@ -1,6 +1,6 @@
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-one zigzag-align"/>
 
-![PDF Services API Workflow](../images/lowCode_Image_Desktop.jpg)
+![PDF Services API Workflow](../../images/lowCode_Image_Desktop.jpg)
 
 ### Low-code document automations.
 
@@ -18,12 +18,12 @@ Agreements, contracts, offer leers – you name it. Easily build workflows that 
 
 - [Learn more](https://opensource.adobe.com/acrobat-sign/developer_guide/apiusage.html#send-for-signing-create-an-agreement)
 
-![PDF Services API Workflow](../images/endToEnd_Image_Desktop.jpg)
+![PDF Services API Workflow](../../images/endToEnd_Image_Desktop.jpg)
 
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-three zigzag-align"/>
 
-![PDF Services API Workflow](../images/simplify_Image_Desktop.jpg)
+![PDF Services API Workflow](../../images/simplify_Image_Desktop.jpg)
 
 ### Simplify workflows with templates.
 
@@ -41,12 +41,12 @@ Integrate Microsoft Dynamics and Power Automate with Adobe Experience Manager Fo
 
 - [Learn more](https://opensource.adobe.com/acrobat-sign/developer_guide/apiusage.html#send-for-signing-create-an-agreement)
 
-![PDF Services API Workflow](../images/forms_Image_Desktop.jpg)
+![PDF Services API Workflow](../../images/forms_Image_Desktop.jpg)
 
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-five zigzag-align"/>
 
-![PDF Services API Workflow](../images/api_Image_Desktop.jpg)
+![PDF Services API Workflow](../../images/api_Image_Desktop.jpg)
 
 ### Build automations with extensibility.
 

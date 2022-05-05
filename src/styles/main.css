@@ -1937,3 +1937,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         display: flex !important;
     }
 }
+
+.Benefits-For-Enterprises>div {
+    overflow-x: unset !important;
+}
