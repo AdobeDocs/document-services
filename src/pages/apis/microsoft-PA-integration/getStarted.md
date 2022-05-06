@@ -24,4 +24,4 @@ Set up the connector.
 
 Pick a template to customize.
 
-- [Browse templates](https://powerautomate_microsoft.com/en-US/connectors/details/shared_adobepdftools/adobe-pdf-services/)
+- [Browse templates](https://powerautomate.microsoft.com/en-US/connectors/details/shared_adobepdftools/adobe-pdf-services/)

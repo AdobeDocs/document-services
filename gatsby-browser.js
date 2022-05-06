@@ -466,7 +466,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         }
       });
 
-    }else if (window.location.pathname.indexOf("microsoftPA") >= 0) {
+    }else if (window.location.pathname.indexOf("microsoft-pa-integration") >= 0) {
 
       document
       .querySelector(".Hero-Banner")
@@ -538,7 +538,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelector(".ms-useCase-one")
       .setAttribute("daa-lh", "Agreements and contracts.")
       document.querySelectorAll(".ms-useCase-one a").forEach(link=>{
-        link.setAttribute("daa-ll",link.textContent)
+        link.setAttribute("daa-ll",link.querySelector("h3")?.textContent.trim() || link.textContent.trim())
       })
 
       document.querySelector(".ms-useCase-two")
@@ -619,7 +619,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".ms-left-cont a").forEach(link=>{
         link.setAttribute("daa-ll",link.textContent)
       })
-      
+
+    document
+      .querySelectorAll(".Use-cases-for-Adobe-Document-Services a")
+      .forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
 
 
     }else if (window.location.pathname.indexOf("sign-api") >= 0) {
