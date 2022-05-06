@@ -1,6 +1,6 @@
 ---
-title: Microsoft PA Integration
-description: Build workflows on Microsoft Power Platform easily.
+title: Microsoft Power Automate Integration | PDF Services API Connector | Adobe Acrobat Sign Connector
+description: Build low-code, end-to-end document workflows easily with Adobe Document Services & Adobe Acrobat Sign on Microsoft Power Platform. From PDF creation and conversion to e-signatures, access over twenty PDF actions. Learn more and start a free trial today.
 ---
 
 import UplevelYourDocumentTitle from './microsoft-PA-integration/uplevel-your-document-title.md';
@@ -21,7 +21,7 @@ Start your free trial today and get 1,000 free document transactions.
 
 microsoftPAHeroImage
 
-- [Try for free](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Try for free](https://www.adobe.com/go/powerautomate_getstarted)
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="Uplevel-Your-DocumentTitle"/>
 
@@ -33,7 +33,7 @@ microsoftPAHeroImage
 
 Start your trial today and get 1,000 free document transactions.
 
-- [Try for free](https://www.adobe.com/documentcloud/integrations/isv-partner-form.html))
+- [Try for free](https://www.adobe.com/go/powerautomate_getstarted)
 
 
 <WrapperComponent slots="content" theme="lightest" className="Benefits-For-Enterprises"/>
@@ -47,7 +47,7 @@ Start your trial today and get 1,000 free document transactions.
 
 <TextBlock slots="buttons" isCentered theme="lightest" variantsTypePrimary='secondary' isPrimaryBtn  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
 
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+- [View all use cases](/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" theme="light" className="Get-Started"/>
 
