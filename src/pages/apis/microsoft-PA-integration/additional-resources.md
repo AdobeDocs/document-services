@@ -54,6 +54,6 @@ Customer story
 
 ### Transform digital process.
 
-See how CSU fullerton is using Acrobat Sign and AEM Forms to transform digital processes across campus.
+See how CSU Fullerton is using Acrobat Sign and AEM Forms to transform digital processes across campus.
 
 - [Read story](https://business.adobe.com/customer-success-stories/cal-state-fullerton-case-study.html)

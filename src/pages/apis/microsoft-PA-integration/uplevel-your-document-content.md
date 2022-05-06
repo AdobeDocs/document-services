@@ -13,7 +13,7 @@ With the Adobe PDF Services connector, select from over twenty PDF API actions s
 
 ### End-to-end workflows, complete with a signature.
 
-Agreements, contracts, offer leers – you name it. Easily build workflows that need e-signatures with the Adobe Acrobat Sign connector.
+Agreements, contracts, offer letters – you name it. Easily build workflows that need e-signatures with the Adobe Acrobat Sign connector.
 
 
 - [Learn more](https://powerautomate.microsoft.com/en-us/connectors/details/shared_adobesign/adobe-sign)
@@ -47,4 +47,4 @@ Integrate Microsoft Dynamics and Power Automate with Adobe Experience Manager Fo
 
 ### Build automations with extensibility.
 
-Quickly extend your applications through hundreds of connectors in Microsoft Dataverse, Logic Apps, and more
+Quickly extend your applications through hundreds of connectors in Microsoft Dataverse, Logic Apps, and more.

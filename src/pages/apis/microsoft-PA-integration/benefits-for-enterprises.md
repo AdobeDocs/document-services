@@ -34,6 +34,6 @@ Innovate with Adobe Sensei AI and machine learning for highly accurate document 
 
 ![Cloud-based API platform enables flexibility at scale](../../images/security_Icon_Desktop.png)
 
-### Security, reliability, scalability
+### Security, reliability, scalability.
 
-With Adobe, you get enterprisegrade security, reliability, and scalability — so you don’t have to worry about the fine print.
+With Adobe, you get enterprise-grade security, reliability, and scalability — so you don’t have to worry about the fine print.
