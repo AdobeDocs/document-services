@@ -14,7 +14,7 @@ Webinar
 
 Watch our Document Automation 101 webinar to see how easy it is to get started building a workflow with Adobe and Microsoft.
 
-- [Watch webinar]()
+- [Watch webinar](https://www.adobe.com/documentcloud/webinars/document-automation-101-building-your-first-workflow-with-adobe-and-microsoft.html)
 
 <ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard resourceCardCont rental-cta ms-resource-card ms-resource-card-two"/>   
 
@@ -56,4 +56,4 @@ Customer story
 
 See how CSU fullerton is using Acrobat Sign and AEM Forms to transform digital processes across campus.
 
-- [Read story](https://business.adobe.com/customer-success-stories/imm-case-study.html)
+- [Read story](https://business.adobe.com/customer-success-stories/cal-state-fullerton-case-study.html)

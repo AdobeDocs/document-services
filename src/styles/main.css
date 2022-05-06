@@ -1915,9 +1915,9 @@ pre .prism-code.spectrum-Code  span.token.string{
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
-    .zigzag-align > div :first-child{
+    /* .zigzag-align > div :first-child{
         flex-direction: row !important;
-    }
+    } */
     .zigzag-align h2{
         margin: 0px !important;
         font-size: var(--spectrum-body-s-text-size, var(--spectrum-global-dimension-font-size-200)) !important;

@@ -8,7 +8,7 @@
 
 Sign up for a free trial.
 
-- [Get started](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Get started](https://www.adobe.com/go/powerautomate_getstarted)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' isPrimaryBtn className="align-left horizontal-align ms-step-two" headerElementType="h2" />
 
@@ -16,7 +16,7 @@ Sign up for a free trial.
 
 Set up the connector.
 
-- [View instructions](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [View instructions](https://docs.microsoft.com/en-us/connectors/adobepdftools/)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' isPrimaryBtn className="align-left horizontal-align ms-step-three" headerElementType="h2" />
 
@@ -24,4 +24,4 @@ Set up the connector.
 
 Pick a template to customize.
 
-- [Browse templates](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Browse templates](https://powerautomate_microsoft.com/en-US/connectors/details/shared_adobepdftools/adobe-pdf-services/)

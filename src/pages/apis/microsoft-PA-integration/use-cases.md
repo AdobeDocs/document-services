@@ -8,7 +8,7 @@ Our connectors can be used across departments and industries for a variety of us
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard ms-useCase-one"/>
 
-[](/use-cases/content-publishing/on-demand-report-creation)
+[](/use-cases/agreements-and-contracts/)
 
 ![APIs and SDKs for report creation and editing](../../images/agreements_Thumbnail_Desktop.jpg " ")
 
@@ -19,7 +19,7 @@ Easily generate, manage, and track agreements and contracts with dynamic terms a
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard ms-useCase-two"/>
 
-[](/use-cases/archiving-and-retrieval/search-and-indexing/)
+[](/use-cases/content-and-data-extraction/data-analysis/)
 
 ![APIs and SDKs for search and indexing](../../images/data_Thumbnail_Desktop.jpg " ")
 
@@ -30,7 +30,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard ms-useCase-three"/>
 
-[](/use-cases/content-publishing/digital-content-publishing/)
+[](/use-cases/content-publishing/)
 
 ![APIs and SDKs for PDF content publishing](../../images/publishing_Thumbnail_Desktop.jpg " ")
 
@@ -40,7 +40,7 @@ Publish whitepapers and marketing content with end-user inter-activity, security
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard ms-useCase-four"/>
 
-[](/use-cases/content-publishing/job-posting/)
+[](https://business.adobe.com/products/experience-manager/forms/aem-forms.html)
 
 ![APIs and SDKs for job postings](../../images/onboarding_Thumbnail_Desktop.jpg " ")
 
