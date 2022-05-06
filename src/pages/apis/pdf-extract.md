@@ -5,8 +5,10 @@ description: Extract the text, data and content elements of any PDF with a web s
 
 import ExtractStepperComponent from './pdf-extract/extract-stepper.md';
 import WhyExtractAPI from './pdf-extract/why-extract-api.md';
+import PdfExtractResourceTitle from './pdf-extract/pdf-extract-resource-title.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';
 import VisualizerHowItWorks from './pdf-extract/visualizer-how-it-works.md';
+import PdfExtractUseCases from './pdf-extract/pdf-extract-resource.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
@@ -21,22 +23,33 @@ apiHeroAssetImg doc-ext-invoice
 - [Start Free Trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 
-<WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>
 
 <WhyExtractAPI/>
 
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="How-it-works"/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="How-it-works"/>
 
 <VisualizerHowItWorks/>
 
-<WrapperComponent slots="content" repeat="1" theme="light" className="How-it-works"/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="How-it-works"/>
 
-<VisualizerCustomIframeBlock theme="light" className="video-conetnt"/>
+<VisualizerCustomIframeBlock theme="lightest" className="video-conetnt"/>
 
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="Get-started-in-minutes"/>
+<WrapperComponent slots="content" repeat="1" theme="light" className="Get-started-in-minutes"/>
 
 <ExtractStepperComponent />
 
+<WrapperComponent slots="content" repeat="1" theme="lightest"/>
+
+<PdfExtractResourceTitle/>
+
+<WrapperComponent slots="content" repeat="1" theme="lightest" enableMaxWidth maxWidth='795px'/>
+
+<PdfExtractUseCases />
+
+<TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
+
+- [View all use cases](/src/pages/use-cases/content-and-data-extraction/)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="Explore-other-Adobe-Document-Services-APIs"/>
 
