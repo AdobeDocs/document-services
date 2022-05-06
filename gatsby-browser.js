@@ -466,6 +466,162 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         }
       });
 
+    }else if (window.location.pathname.indexOf("microsoftPA") >= 0) {
+
+      document
+      .querySelector(".Hero-Banner")
+      .closest("main")
+      .setAttribute("daa-lh", "Body");
+
+      document
+      .querySelector(".Hero-Banner")
+      .setAttribute("daa-lh", "Microsoft Power Automate");
+      document.querySelectorAll(".Hero-Banner a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === 'Try for free'){
+          link.addEventListener("click",()=>reTargetingFun());
+          link.href = `${baseurl}`;
+          // link.href = `${baseurl}?sdid=2NVQC73G&mv=display`;
+        }
+      });
+
+      document.querySelector(".ms-zigzag-cont-title")
+      .setAttribute("daa-lh", "Uplevel your document workflows easily with Adobe Document Services and Adobe Acrobat Sign on Microsoft Power Platform.")
+
+      document.querySelector(".ms-zigzag-cta-one")
+      .setAttribute("daa-lh", "Low-code document automations.")
+      document.querySelectorAll(".ms-zigzag-cta-one a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      document.querySelector(".ms-zigzag-cta-two")
+      .setAttribute("daa-lh", "End-to-end workflows, complete with a signature.")
+      document.querySelectorAll(".ms-zigzag-cta-two a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      document.querySelector(".ms-zigzag-cta-three")
+      .setAttribute("daa-lh", "Simplify workflows with templates.")
+      document.querySelectorAll(".ms-zigzag-cta-three a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      document.querySelector(".ms-zigzag-cta-four")
+      .setAttribute("daa-lh", "Easily incorporate forms through AEM.")
+      document.querySelectorAll(".ms-zigzag-cta-four a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      document.querySelector(".ms-zigzag-cta-five")
+      .setAttribute("daa-lh", "Build automations with extensibility.")
+      document.querySelectorAll(".ms-zigzag-cta-five a").forEach(link=>{
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".How-to-get-started")
+      .setAttribute("daa-lh", "Start your trial today and get 1,000 free document transactions.")
+      document.querySelectorAll(".How-to-get-started a").forEach(link =>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".benefitsForEnterprises")
+      .setAttribute("daa-lh", "Benets for enterprises across the board.")
+
+      document.querySelector(".Benefits-one")
+      .setAttribute("daa-lh", "Efficiency and productivity.")
+      document.querySelector(".Benefits-two")
+      .setAttribute("daa-lh", "Cost savings.")
+      document.querySelector(".Benefits-three")
+      .setAttribute("daa-lh", "The latest AI technology.")
+      document.querySelector(".Benefits-four")
+      .setAttribute("daa-lh", "Security, reliability, scalability")
+
+      document.querySelector(".use-case")
+      .setAttribute("daa-lh", "Explore use cases.")
+
+      document.querySelector(".ms-useCase-one")
+      .setAttribute("daa-lh", "Agreements and contracts.")
+      document.querySelectorAll(".ms-useCase-one a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-useCase-two")
+      .setAttribute("daa-lh", "Data analysis and retrieval.")
+      document.querySelectorAll(".ms-useCase-two a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-useCase-three")
+      .setAttribute("daa-lh", "Content publishing.")
+
+      document.querySelectorAll(".ms-useCase-three a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+      
+      document.querySelector(".ms-useCase-four")
+      .setAttribute("daa-lh", "Onboarding and enrollment.")
+      document.querySelectorAll(".ms-useCase-four a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".getting-started-title")
+      .setAttribute("daa-lh", "Getting started is easy.")
+
+      document.querySelector(".ms-step-one")
+      .setAttribute("daa-lh", "Step 1")
+      document.querySelectorAll(".ms-step-one a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-step-two")
+      .setAttribute("daa-lh", "Step 2")
+      document.querySelectorAll(".ms-step-two a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-step-three")
+      .setAttribute("daa-lh", "Step 3")
+      document.querySelectorAll(".ms-step-three a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".additional-resources-title")
+      .setAttribute("daa-lh", "Learn more with these additional resources.")
+
+      document.querySelector(".ms-resource-card-one")
+      .setAttribute("daa-lh", "Build your first workflow.")
+      document.querySelectorAll(".ms-resource-card-one a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-resource-card-two")
+      .setAttribute("daa-lh", "Create a document workflow.")
+      document.querySelectorAll(".ms-resource-card-two a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-resource-card-three")
+      .setAttribute("daa-lh", "Getting started with PDF Services.")
+      document.querySelectorAll(".ms-resource-card-three a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-resource-card-four")
+      .setAttribute("daa-lh", "Transform digital process.")
+      document.querySelectorAll(".ms-resource-card-four a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-btm-right-cont")
+      .setAttribute("daa-lh", "Have questions?")
+      document.querySelectorAll(".ms-btm-right-cont a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+
+      document.querySelector(".ms-left-cont")
+      .setAttribute("daa-lh", "Get help.")
+      document.querySelectorAll(".ms-left-cont a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
+      
+
+
     }else if (window.location.pathname.indexOf("sign-api") >= 0) {
 
       document

@@ -401,10 +401,11 @@ const TextBlock = ({
                   align-items: center;
                   justify-content: center;
                   width: ${imgWidth};
-                  height: calc(
-                    var(--spectrum-global-dimension-size-4600) -
-                      var(--spectrum-global-dimension-size-225)
-                  );
+                  // we need to modify the height
+                  // height: calc(
+                  //   var(--spectrum-global-dimension-size-4600) -
+                  //     var(--spectrum-global-dimension-size-225)
+                  // );
                   box-sizing: border-box;
                   padding: var(--spectrum-global-dimension-size-200);
                   margin-top: 0;
