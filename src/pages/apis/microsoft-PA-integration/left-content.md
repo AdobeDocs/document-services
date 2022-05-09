@@ -7,4 +7,4 @@ title: Adobe Developer — DC Platform SDK Resources
 ### Get help.
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-- [Contact us](src/pages/pricing/contact.md)
+- [Contact us](../pricing/contact.md)
