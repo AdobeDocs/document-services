@@ -1941,3 +1941,15 @@ pre .prism-code.spectrum-Code  span.token.string{
 .Benefits-For-Enterprises>div {
     overflow-x: unset !important;
 }
+
+.ms-pa-page > div > div > p {
+    margin-bottom: var(
+        --spectrum-global-dimension-size-0
+      )!important;
+}
+
+@media screen and (max-width: 768px){
+    .ms-pa-page-mob > div :last-child {
+        align-self: flex-start !important;
+    }
+}

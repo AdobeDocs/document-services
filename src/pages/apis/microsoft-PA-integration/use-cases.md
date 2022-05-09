@@ -40,7 +40,7 @@ Publish whitepapers and marketing content with end-user inter-activity, security
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard ms-useCase-four"/>
 
-[](https://business.adobe.com/products/experience-manager/forms/aem-forms.html)
+[](/use-cases/content-publishing/employee-onboarding-materials/)
 
 ![APIs and SDKs for job postings](../../images/onboarding_Thumbnail_Desktop.jpg " ")
 

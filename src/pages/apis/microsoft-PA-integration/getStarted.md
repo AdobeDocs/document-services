@@ -16,7 +16,7 @@ Sign up for a free trial.
 
 Set up the connector.
 
-- [View instructions](https://docs.microsoft.com/en-us/connectors/adobepdftools/)
+- [View instructions](https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' isPrimaryBtn className="align-left horizontal-align ms-step-three" headerElementType="h2" />
 
