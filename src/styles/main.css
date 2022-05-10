@@ -1793,9 +1793,8 @@ pre .prism-code.spectrum-Code  span.token.string{
     padding-right: var(--spectrum-global-dimension-size-65) !important;
 }
 
-.padding-zero-horizontal {
-    padding-right: var(--spectrum-global-dimension-size-0) !important;
-    padding-left: var(--spectrum-global-dimension-size-0) !important;
+.heading-align {
+    padding-left: var(--spectrum-global-dimension-size-200) !important;
 }
 
 .how-it-work-text-align > div > div > div{
@@ -1820,12 +1819,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         var(--spectrum-global-dimension-size-4600) -
           var(--spectrum-global-dimension-size-225)
       ) !important;
-    }
-
-    .padding-zero-horizontal {
-        padding-right: var(--spectrum-global-dimension-size-250) !important;
-        padding-left: var(--spectrum-global-dimension-size-250) !important;
-    }
+    }    
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -1951,5 +1945,8 @@ pre .prism-code.spectrum-Code  span.token.string{
 @media screen and (max-width: 768px){
     .ms-pa-page-mob > div :last-child {
         align-self: flex-start !important;
+    }
+    .heading-align {
+        padding-left: var(--spectrum-global-dimension-size-250) !important;
     }
 }
