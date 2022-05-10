@@ -4,14 +4,14 @@ title: Adobe Developer — Wrapper Components  —  API Extract Stepper Componen
 
 
 
-<TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left"/>
+<TitleBlock slots="heading, text" theme="light" className="titleBlock-align-left"/>
 
 ## Get started in minutes
 
 Start your free 6-month trial today with 1,000 PDF transactions
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="lightest"  className='align-left horizontal-align'/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light"  className='align-left horizontal-align'/>
 
 ## Step 1
 
@@ -22,7 +22,7 @@ Obtain free credentials
 
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline className='align-left link'/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline className='align-left link'/>
 
 ## Step 2
 
@@ -36,7 +36,7 @@ Download ready to run samples for Node.js, .Net, Java and Python
 
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="lightest" primaryOutline className='align-left horizontal-align link' headerElementType="h2" />
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline className='align-left horizontal-align link' headerElementType="h2" />
 
 ## Step 3
 

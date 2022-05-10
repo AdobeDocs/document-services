@@ -1074,6 +1074,17 @@ pre .prism-code.spectrum-Code  span.token.string{
     margin-top: var(--spectrum-global-dimension-size-175) !important;
 }
 
+.microsoftPAHeroImage {
+    background-image: url('../pages/images/Marquee_Image_Static_Desktop.png') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 420px;
+    width: 490px;
+    background-position: bottom center;
+    margin: 40px 0;
+
+}
+
 @media screen and (max-width: 1024px){
     .abm-landing-page-hero {
         background-image: url('../pages/images/1_Marquee_Device_enterprise_tab.png');
@@ -1091,6 +1102,14 @@ pre .prism-code.spectrum-Code  span.token.string{
         height: 410px !important;
         width: 450px !important;
         background-position: bottom center !important;
+    }
+    .microsoftPAHeroImage {
+        background-image: url('../pages/images/Marquee_Static_Tablet.png') !important;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom center !important;
+        height: 350px !important;
+        width: 450px !important;
     }
 }
 
@@ -1119,6 +1138,14 @@ pre .prism-code.spectrum-Code  span.token.string{
         width: 100% !important;
         height: 19rem !important;
     }
+    .microsoftPAHeroImage {
+        margin-top: var(--spectrum-global-dimension-size-200) !important;
+        background-image: url('../pages/images/Marquee_Static.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100% !important;
+        height: 20.4rem !important;
+    }
 }
 
 @media screen and (max-width: 1023px ) and (min-width:767px){
@@ -1137,6 +1164,14 @@ pre .prism-code.spectrum-Code  span.token.string{
         background-image: url('../pages/images/1_Marquee_Device_enterprise_mob.png');
         background-repeat: no-repeat;
         background-size: cover;
+        margin: auto;
+        background-position: bottom center !important;
+    }
+    .microsoftPAHeroImage {
+        margin-top: var(--spectrum-global-dimension-size-200) !important;
+        background-image: url('../pages/images/Marquee_Static.png');
+        background-repeat: no-repeat;
+        background-size: contain;
         margin: auto;
         background-position: bottom center !important;
     }
@@ -1758,9 +1793,8 @@ pre .prism-code.spectrum-Code  span.token.string{
     padding-right: var(--spectrum-global-dimension-size-65) !important;
 }
 
-.padding-zero-horizontal {
-    padding-right: var(--spectrum-global-dimension-size-0) !important;
-    padding-left: var(--spectrum-global-dimension-size-0) !important;
+.heading-align {
+    padding-left: var(--spectrum-global-dimension-size-200) !important;
 }
 
 .how-it-work-text-align > div > div > div{
@@ -1785,12 +1819,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         var(--spectrum-global-dimension-size-4600) -
           var(--spectrum-global-dimension-size-225)
       ) !important;
-    }
-
-    .padding-zero-horizontal {
-        padding-right: var(--spectrum-global-dimension-size-250) !important;
-        padding-left: var(--spectrum-global-dimension-size-250) !important;
-    }
+    }    
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -1826,5 +1855,98 @@ pre .prism-code.spectrum-Code  span.token.string{
     .how-it-work-img-Z > div > div > p img{
         width: 100% !important;
         height: 100% !important;
+    }
+}
+
+
+.spectrum-Accordion-itemHeader{
+    color: var(--spectrum-listitem-m-text-color-hover, var(--spectrum-alias-text-color));
+    font-size:  var(--spectrum-global-dimension-size-200);
+    font-weight: var(--spectrum-global-font-weight-bold);
+}
+.spectrum-Accordion{
+    padding-bottom: var(--spectrum-global-dimension-size-600);
+}
+
+
+.microsoftPAHerobgImage {
+    background: url('../pages/images/Marquee_Background_Desktop.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.white-color>div>div>p {
+    color: #ffffff !important;
+}
+
+.ms-border-right> div > div > div {
+    border-right: 1px solid var(--spectrum-global-color-gray-500);
+}
+
+@media screen and (max-width: 767px){
+    .ms-border-right> div > div > div {
+        border-bottom: 1px solid var(--spectrum-global-color-gray-500);
+        border-right: 0px solid var(--spectrum-global-color-gray-500);
+    }
+}
+
+
+.ms-left-content > div > div > div {
+    /* padding-left: var(--spectrum-global-dimension-size-150); */
+    padding-bottom: var(--spectrum-global-dimension-size-300) !important;
+}
+
+.ms-resource-card > div :first-child {
+    height: auto !important;
+    /* height: var(--spectrum-global-dimension-size-0); */
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .div-flex > div {
+        display: flex !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    /* .zigzag-align > div :first-child{
+        flex-direction: row !important;
+    } */
+    .zigzag-align h2{
+        margin: 0px !important;
+        font-size: var(--spectrum-body-s-text-size, var(--spectrum-global-dimension-font-size-200)) !important;
+    }
+    .zigzag-align p{
+        margin: 0px !important;
+        font-size: var(--spectrum-body-x-text-size, var(--spectrum-global-dimension-font-size-100)) !important;
+    }
+
+    .zigzag-align > div :first-child > div > div :first-child {
+        margin: 0px !important;
+    }
+}
+
+@media screen and (width: 1024px) {
+    .ms-hero-img :first-child{
+        display: flex !important;
+    }
+}
+
+.Benefits-For-Enterprises>div {
+    overflow-x: unset !important;
+}
+
+.ms-pa-page > div > div > p {
+    margin-bottom: var(
+        --spectrum-global-dimension-size-0
+      )!important;
+}
+
+@media screen and (max-width: 768px){
+    .ms-pa-page-mob > div :last-child {
+        align-self: flex-start !important;
+    }
+    .heading-align {
+        padding-left: var(--spectrum-global-dimension-size-250) !important;
     }
 }
