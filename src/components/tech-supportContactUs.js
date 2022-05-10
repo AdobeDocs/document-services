@@ -101,7 +101,7 @@ const TechSupportContactUs = ({
                     <div className="caption">Get tech support.</div>
                     <div className="faq-text">Please fill out the form below and an Adobe Expert will contact you within 3 business days.</div>
                     <div className="faq-text">To get faster issue resolution, please visit our FAQ istead. <button className="faq-button-content" onClick={() => (window.location.href = "/faq/tech-support/#account-management")}><label className="button-label">FAQ</label></button></div>
-                    <div className="faq-text">For sales inquiries, submit a sales consultation request <a className="link-content" href="">here.</a></div>
+                    <div className="faq-text">For sales inquiries, submit a sales consultation request <a className="link-content" href="../sales/">here.</a></div>
                 </div>
                 <div className="field-container">
                     <InputField

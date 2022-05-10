@@ -492,9 +492,9 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
         width: 100% !important;
     }
 }
-.left-content > div > div > div {
+/* .left-content > div > div > div {
     padding-left: var(--spectrum-global-dimension-size-150);
-}
+} */
 .pricing-title-right > div > div > div {
     padding-bottom: var(--spectrum-global-dimension-size-300);
 }
@@ -511,6 +511,11 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
     width: 50%;
 }
 .div-flex > div {
+    display: flex;
+    padding-bottom: var(--spectrum-global-dimension-size-300) !important;
+    padding-top: var(--spectrum-global-dimension-size-500) !important;
+}
+.contactUs-div-flex > div {
     display: flex;
     padding-bottom: var(--spectrum-global-dimension-size-300) !important;
     padding-top: var(--spectrum-global-dimension-size-500) !important;
@@ -1901,14 +1906,30 @@ img[alt=adobe-support] {
 }
 
 @media screen and (max-width: 767px){
+    .contactUs-div-flex > div {
+        display: block !important;
+    }
+    .contact-left-border > div {
+        border-top: 1px solid var(--spectrum-global-color-gray-500) !important;
+        border-left: 0px !important;
+    }
+}
+
+
+@media screen and (max-width: 768px){
     .div-flex > div {
         display: flex;
         padding-left: var(--spectrum-global-dimension-size-300) !important;
         padding-right: var(--spectrum-global-dimension-size-500) !important;
     }
+    .contactUs-div-flex > div {
+        display: flex;
+        padding-left: var(--spectrum-global-dimension-size-300) !important;
+        padding-right: var(--spectrum-global-dimension-size-500) !important;
+    }
     .contact-left-border > div {
-        border-top: 1px solid var(--spectrum-global-color-gray-500);
-        border-left: 0px;
+        border-left: 1px solid var(--spectrum-global-color-gray-500);
+        border-top: 0px;
     }
 }
 
@@ -1918,6 +1939,7 @@ img[alt=adobe-support] {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 30px;
+    padding-top: 25px
 }
 
 .field-container {
@@ -1958,6 +1980,7 @@ img[alt=adobe-support] {
     font-weight: 400;
     letter-spacing: 1px;
     color: white;
+    cursor: pointer;
 }
 
 .lnput-field {
@@ -2000,6 +2023,7 @@ img[alt=adobe-support] {
     display: flex;
     color: #909090;
     margin-top: 10px;
+    margin-bottom: 4px;
 }
 
 .text-content {

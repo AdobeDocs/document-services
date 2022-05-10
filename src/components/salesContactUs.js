@@ -83,9 +83,9 @@ const SalesContactUs = ({
   return (
     <form className="form-container Sales-Form">
       <div className="head-container">
-        <div className="caption">Get info about pricing, billing, and licensing</div>
+        <div className="caption">Get info about pricing, billing, and licensing.</div>
         <div className="faq-text">Please visit our <a className="link-content" href="/faq/sales/#account-management">FAQ</a> or fill out the form below to speak with an Adobe rep.</div>
-        <div className="faq-text">For technical inquiries, submit a tech supprot request <a className="link-content" href="">here.</a></div>
+        <div className="faq-text">For technical inquiries, submit a tech supprot request <a className="link-content" href="../support/">here.</a></div>
       </div>
       <div className="field-container">
         <InputField
