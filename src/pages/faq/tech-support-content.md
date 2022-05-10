@@ -62,7 +62,7 @@ In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will 
 
 <AccordionItem header="Is Adobe Document Services (PDF Services API and PDF Embed API) HIPAA compliant?">
 
-Currently, we do not support use of Document Cloud Services SDK to collect, process, or store sensitive personal data such as protected health information under HIPAA, children’s personal information under COPPA, and other similar information as described in our General Terms (<a href="https://www.adobe.com/legal/terms/enterprise-licensing/overview.html">https://www.adobe.com/legal/terms/enterprise-licensing/overview.html</a>.) and and Developer Terms of Use (<a href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf">https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf</a>.).
+Currently, we do not support use of Document Cloud Services SDK to collect, process, or store sensitive personal data such as protected health information under HIPAA, children’s personal information under COPPA, and other similar information as described in our General Terms (<a href="https://www.adobe.com/legal/terms/enterprise-licensing/overview.html">https://www.adobe.com/legal/terms/enterprise-licensing/overview.html</a>) and and Developer Terms of Use (<a href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf">https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf</a>).
 
 However, support for sensitive personal data is coming soon.
 
@@ -112,7 +112,7 @@ Full details are available at: <a href="https://www.adobe.com/trust/compliance/c
 
 </Accordion>
 
-## Features-PDF Embed API
+## Features - PDF Embed API
 
 <Accordion>
 
@@ -168,7 +168,7 @@ You can create up to 20 mappings of client IDs to domains. However, with an Ente
 
 </Accordion>
 
-## Features-PDF Services API
+## Features - PDF Services API
 
 <Accordion>
 
@@ -222,7 +222,7 @@ Given that our service is cloud-based, processing will always happen in Adobe's 
 
 With PDF Services API, you can create a PDF from Microsoft Office 365 documents, as well as HTML pages and image files.
 
-For more details, see Create PDF documentation: <a href="https://www.adobe.com/go/dcsdk_requestform">https://www.adobe.com/go/dcsdk_requestform</a>
+For more details, see Create PDF documentation: <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/create-pdf/">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/create-pdf/</a>
 
 </AccordionItem>
 
@@ -239,7 +239,7 @@ You can also watch this YouTube video: <a href="https://www.youtube.com/watch?v=
 
 </AccordionItem>
 
-<AccordionItem header="Where can we learn more about your Power Automate connector?">
+<AccordionItem header="Are there usage limitations associted with PDF Services API?">
 
 Yes. See usage limits in PDF Services API documentation: <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/#usage-limits">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/#usage-limits</a>
 
