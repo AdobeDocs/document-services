@@ -2278,3 +2278,13 @@ img[alt=adobe-support] {
         padding-left: var(--spectrum-global-dimension-size-250) !important;
     }
 }
+
+.spectrum-Accordion-itemContent>p {
+    padding-left: 22px;
+}
+
+@media screen and (max-width:768px) {
+    .spectrum-Accordion-itemContent>p {
+        padding-left: 27px;
+    }
+}

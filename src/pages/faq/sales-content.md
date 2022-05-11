@@ -12,7 +12,6 @@ For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receiv
 <AccordionItem header="My company has an existing Enterprise Agreement with Adobe. Can I use the same Adobe credentials for PDF Services API?">
 
 Your Adobe Admin Console admin may have not provisioned your Enterprise ID to have access to PDF Services APIs. If your organization is a current subscriber to Adobe PDF Services API, contact your administrator.
-"Your Adobe Admin Console admin may have not provisioned your Enterprise ID to have access to PDF Services APIs. If your organization is a current subscriber to Adobe PDF Services API, contact your administrator.
 
 If you are interested in using Adobe PDF Services API on a trial basis, consider using an Adobe ID (Personal) that is not tied to your enterprise ID.
 
@@ -26,7 +25,7 @@ Access to Adobe Document Services APIs or SDKs is only available when it is atta
 
 <AccordionItem header="Where do I find my Client ID or API key?">
 
-Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the "client_id" key used in the back-end code to make free trial calls against. You can always access your Client ID from your Adobe Developer Console: <a href="https://us-east-1.console.aws.amazon.com/billing">https://us-east-1.console.aws.amazon.com/billing</a>
+Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the "client_id" key used in the back-end code to make free trial calls against. You can always access your Client ID from your Adobe Developer Console: <a href="https://console.adobe.io">https://console.adobe.io</a>
 
 </AccordionItem>
 
@@ -185,7 +184,7 @@ See the Adobe Trust Center (<a href="https://www.adobe.com/trust.html">https://w
 
 If you are just starting and have lower volume, or are unsure of what your annual volume will be, pay-as-you-go via AWS Marketplace is a great option, with a 5 cents/document transaction flat fee.
 
-If you have a large annual volume, at least 500,000 document transactions, an Enterprise Term License Agreement will likely be the better plan for you. Please fill out our contact us form  and connect with our expert sales team to get a quote.
+If you have a large annual volume, at least 500,000 document transactions, an Enterprise Term License Agreement will likely be the better plan for you. Please fill out our contact us form <a href="https://www.google.co.in/">https://www.google.co.in/</a> and connect with our expert sales team to get a quote.
 
 See additional information here: <a href="https://developer.adobe.com/document-services/pricing/">https://developer.adobe.com/document-services/pricing/</a>
 
@@ -215,7 +214,7 @@ Contact our sales representative by filling out our contact us form: <a href="ht
 
 </AccordionItem>
 
-<AccordionItem header="What countries can I buy PDF Services API pay-as-you-go on AWS Marketplace">
+<AccordionItem header="What countries can I buy PDF Services API pay-as-you-go on AWS Marketplace?">
 
 India, Indonesia, Canada, Malaysia, South Africa, Japan, Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Isle of Man, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, and UK.
 
