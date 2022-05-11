@@ -16,6 +16,8 @@ const counter = {
   3: 0,
   4: 0,
 };
+
+const MIN_TABLET_SCREEN_WIDTH = '1023px'
 const alignMapping = ["margin-left: 0;", "margin-right: 0;"];
 
 const mediaCSS = css`
@@ -373,9 +375,9 @@ const TextBlock = ({
             @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
               width: 100%;
 
-              & > div {
-                flex-direction: column !important;
-              }
+              // & > div {
+              //   flex-direction: column !important;
+              // }
             }
           `}
         >
@@ -389,7 +391,7 @@ const TextBlock = ({
                 ? "row-reverse"
                 : "row"};
 
-              @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
+              @media screen and (max-width: ${MIN_TABLET_SCREEN_WIDTH}) {
                 flex-direction: column;
               }
             `}
@@ -401,10 +403,11 @@ const TextBlock = ({
                   align-items: center;
                   justify-content: center;
                   width: ${imgWidth};
-                  height: calc(
-                    var(--spectrum-global-dimension-size-4600) -
-                      var(--spectrum-global-dimension-size-225)
-                  );
+                  // we need to modify the height
+                  // height: calc(
+                  //   var(--spectrum-global-dimension-size-4600) -
+                  //     var(--spectrum-global-dimension-size-225)
+                  // );
                   box-sizing: border-box;
                   padding: var(--spectrum-global-dimension-size-200);
                   margin-top: 0;

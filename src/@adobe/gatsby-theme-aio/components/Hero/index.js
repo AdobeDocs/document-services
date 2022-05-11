@@ -462,7 +462,7 @@ const Hero = ({
             }
             @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
               height: auto;
-              padding: var(--spectrum-global-dimension-size-400);
+              padding: var(--spectrum-global-dimension-size-225);
               box-sizing: border-box;
             }
         `}>
@@ -506,6 +506,30 @@ const Hero = ({
                   }
                 }
             `}>                    
+            {icon &&
+              cloneElement(icon, {
+                children: cloneChildren(icon.props.children, setImageLoading),
+                css: css`
+                  height: var(--spectrum-global-dimension-size-400);
+                  width: var(--spectrum-global-dimension-size-3600);
+                  margin-top: 0 !important;
+                  margin-bottom: var(--spectrum-global-dimension-size-300) !important;
+                  @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
+                    width: var(--spectrum-global-dimension-size-3000) !important;
+                  }
+                  .gatsby-resp-image-wrapper {
+                    max-width: none !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                  }
+
+                  .gatsby-resp-image-image {
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                `
+              })}
+
                 {heading && (
                   <HeroHeading
                     heading={heading}
@@ -521,6 +545,8 @@ const Hero = ({
                 css={css`
                   margin-top: var(--spectrum-global-dimension-size-400);
                 `}
+                variants={[variantsTypePrimary, variantsTypeSecondary]}
+                quiets={[primaryOutline]}
               />
             </div>
             <div>

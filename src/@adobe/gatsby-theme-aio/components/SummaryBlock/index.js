@@ -116,7 +116,7 @@ const SummaryBlock = ({
           <HeroButtons
             buttons={buttons}
             quiets={[isBtnVariant, primaryOutline]}
-            variants={[btnVariant, "overBackground"]}
+            variants={[btnVariant, btnVariant]}
           />
         </div>
       )}

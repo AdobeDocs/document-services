@@ -28,19 +28,24 @@ export const onRenderBody = ({setHeadComponents}) => {
         <script type="text/javascript">{`
             (function(l) {
 
-            if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+              if (!l) { 
+                window.lintrk = function(a,b) {
+                  window.lintrk.q.push([a,b])
+                };
+                window.lintrk.q=[]
+              }
 
-            window.lintrk.q=[]}
+              var s = document.getElementsByTagName('script')[0];
 
-            var s = document.getElementsByTagName("script")[0];
+              var b = document.createElement('script');
 
-            var b = document.createElement("script");
+              b.type = 'text/javascript';
+              b.async = true;
 
-            b.type = "text/javascript";b.async = true;
+              b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
 
-            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-
-            s.parentNode.insertBefore(b, s);})(window.lintrk);
+              s.parentNode.insertBefore(b, s);
+            }) (window.lintrk);
         `}
       </script>,
 
