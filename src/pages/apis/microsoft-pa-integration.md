@@ -10,6 +10,7 @@ import GetHelpBlade from './microsoft-PA-integration/get-help-blade.md'
 import UseCases from './microsoft-PA-integration/use-cases.md'
 import GetStarted from './microsoft-PA-integration/getStarted.md'
 import AdditionalResources from './microsoft-PA-integration/additional-resources.md'
+import MsAnnouncementBlock from './microsoft-PA-integration/ms-announcement.md'
 
 <Hero slots="icon, heading, text, assetsImg, buttons"  customLayout variant="halfwidth" variantsTypePrimary='primary' className="microsoftPAHerobgImage Hero-Banner ms-hero-img"/>
 
@@ -22,6 +23,10 @@ Start your free trial today and get 1,000 free document transactions.
 microsoftPAHeroImage
 
 - [Try for free](https://www.adobe.com/go/powerautomate_getstarted)
+
+<WrapperComponent slots="content" repeat="1" theme="light" className="Uplevel-Your-DocumentTitle"/>
+
+<MsAnnouncementBlock/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="Uplevel-Your-DocumentTitle"/>
 
