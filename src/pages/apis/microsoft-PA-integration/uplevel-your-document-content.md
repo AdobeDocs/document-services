@@ -32,11 +32,13 @@ Get started quickly with 75+ ready-to-use templates for workflows using Adobe PD
 - [Learn more](https://powerautomate.microsoft.com/en-US/connectors/details/shared_adobepdftools/adobe-pdf-services/)
 
 
-<TextBlock slots="heading,text,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-four zigzag-align"/>
+<TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-four zigzag-align"/>
 
-### Easily incorporate forms through AEM.
+### Easily incorporate forms through Adobe Experience Manager.
 
 Integrate Microsoft Dynamics and Power Automate with Adobe Experience Manager Forms for form review workflows. Deliver seamless enrollment experiences with Adobe and Microsoft solutions.
+
+- [Learn more](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-microsoft-power-automate-integration.html)
 
 ![PDF Services API Workflow](../../images/forms_Image_Desktop.jpg)
 

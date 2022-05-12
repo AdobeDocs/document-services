@@ -57,13 +57,13 @@ module.exports = {
             path: 'apis/sign-api/'
           },
           {
-            title: 'Microsoft PA Integration',
+            title: 'Power Automate Connector',
             description: 'Build workflows on Microsoft Power Platform easily',
             path: 'apis/microsoft-pa-integration/'
           },
         ]
       },
-      {
+      { 
         title: 'Use Cases',
         path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts.md'
       },
