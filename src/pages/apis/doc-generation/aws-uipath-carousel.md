@@ -22,4 +22,4 @@ carousel-ui-path
 
 ### Automate end-to-end digital document processes and workflows easily with UIPath, Adobe Document Services and Adobe Acrobat Sign.
 
-- [Learn more](http://www.adobe.com/go/powerautomate_help)
+- [Learn more](https://marketplace.uipath.com/listings/adobe-pdf-services)

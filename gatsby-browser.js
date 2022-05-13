@@ -1092,7 +1092,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".aws-carousel a.spectrum-Button").forEach(link => {
         if(link.href.indexOf("/pricing/#AWS") >= 0) {
           link.setAttribute("daa-ll", `${link.textContent} | Body | AWS`);
-        } else {
+        } else if(link.href.indexOf("adobe-pdf-services") >= 0) {
+          link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath Integration`);
+        } else{
           link.setAttribute("daa-ll", `${link.textContent} | Body | Microsoft`);
         }
       });
