@@ -53,6 +53,10 @@ Start your trial today and get 1,000 free document transactions.
 
 <GetStarted/>
 
+<WrapperComponent slots="content" theme="lightest" className="Get-Started"/>
+
+<AdditionalResources/>
+
 <WrapperComponent slots="content" theme="lightest" className="div-flex overflow-hidden"/>
 
 <GetHelpBlade/>
