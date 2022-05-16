@@ -641,11 +641,6 @@ img[alt=thumbnail] {
     background-size: cover !important;
 }
 
-.faqHerobgImage {
-    background: rgb(250, 105, 85) url('../pages/images/faq_hero_background.jpg') !important;
-    background-repeat: no-repeat;
-    background-size: cover !important;
-}
 
 .signApiHerobgImage {
     background: rgb(250, 105, 85) url('../pages/images/1_Marquee_Background.jpg') !important;
@@ -1890,7 +1885,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         background-repeat: no-repeat;
         background-size: cover !important;
     }
-
+   
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){

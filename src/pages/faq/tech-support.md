@@ -1,7 +1,7 @@
 
 import TechSupportContent from './tech-support-content.md';
 
-<Hero slots="heading" variant="fullwidth" theme="dark" customLayout className="faqHerobgImage Hero-Banner"/>
+<Hero slots="heading" variant="fullwidth" theme="dark" customLayout className="contactUsHerobgImage Hero-Banner"/>
 
 # Tech Support FAQ
 

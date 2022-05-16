@@ -1,7 +1,7 @@
 
 import SalesContent from './sales-content.md';
 
-<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="faqHerobgImage Hero-Banner" />
+<Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="contactUsHerobgImage Hero-Banner" />
 
 # Sales FAQ
 
