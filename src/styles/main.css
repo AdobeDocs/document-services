@@ -1942,6 +1942,14 @@ pre .prism-code.spectrum-Code  span.token.string{
       )!important;
 }
 
+.ms-pa-summary-blade > div{
+    justify-content: center !important;
+}
+
+.ms-pa-summary-blade > div > div{
+    margin-right: 35px !important;
+}
+
 @media screen and (max-width: 768px){
     .ms-pa-page-mob > div :last-child {
         align-self: flex-start !important;
