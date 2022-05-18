@@ -34,7 +34,7 @@ microsoftPAHeroImage
 
 <UplevelYourDocumentContent />
 
-<SummaryBlock slots="text, buttons" theme="dark"  buttonPositionRight btnVariant="cta" className="How-to-get-started key-features-code-block ms-pa-page hero-below-compo ms-pa-page-mob" />
+<SummaryBlock slots="text, buttons" theme="dark"  buttonPositionRight btnVariant="cta" className="How-to-get-started key-features-code-block ms-pa-page hero-below-compo ms-pa-page-mob ms-pa-summary-blade" />
 
 Start your trial today and get 1,000 free document transactions.
 
@@ -57,6 +57,10 @@ Start your trial today and get 1,000 free document transactions.
 <WrapperComponent slots="content" theme="light" className="Get-Started"/>
 
 <GetStarted/>
+
+<WrapperComponent slots="content" theme="lightest" className="Get-Started"/>
+
+<AdditionalResources/>
 
 <WrapperComponent slots="content" theme="lightest" className="div-flex overflow-hidden"/>
 

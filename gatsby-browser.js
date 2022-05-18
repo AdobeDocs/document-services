@@ -581,32 +581,32 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll",link.textContent)
       })
 
-      // document.querySelector(".additional-resources-title")
-      // .setAttribute("daa-lh", "Learn more with these additional resources.")
+      document.querySelector(".additional-resources-title")
+      .setAttribute("daa-lh", "Learn more with these additional resources.")
 
-      // document.querySelector(".ms-resource-card-one")
-      // .setAttribute("daa-lh", "Build your first workflow.")
-      // document.querySelectorAll(".ms-resource-card-one a").forEach(link=>{
-      //   link.setAttribute("daa-ll",link.textContent)
-      // })
+      document.querySelector(".ms-resource-card-one")
+      .setAttribute("daa-lh", "Build your first workflow.")
+      document.querySelectorAll(".ms-resource-card-one a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
 
-      // document.querySelector(".ms-resource-card-two")
-      // .setAttribute("daa-lh", "Create a document workflow.")
-      // document.querySelectorAll(".ms-resource-card-two a").forEach(link=>{
-      //   link.setAttribute("daa-ll",link.textContent)
-      // })
+      document.querySelector(".ms-resource-card-two")
+      .setAttribute("daa-lh", "Create a document workflow.")
+      document.querySelectorAll(".ms-resource-card-two a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
 
-      // document.querySelector(".ms-resource-card-three")
-      // .setAttribute("daa-lh", "Getting started with PDF Services.")
-      // document.querySelectorAll(".ms-resource-card-three a").forEach(link=>{
-      //   link.setAttribute("daa-ll",link.textContent)
-      // })
+      document.querySelector(".ms-resource-card-three")
+      .setAttribute("daa-lh", "Getting started with PDF Services.")
+      document.querySelectorAll(".ms-resource-card-three a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
 
-      // document.querySelector(".ms-resource-card-four")
-      // .setAttribute("daa-lh", "Transform digital process.")
-      // document.querySelectorAll(".ms-resource-card-four a").forEach(link=>{
-      //   link.setAttribute("daa-ll",link.textContent)
-      // })
+      document.querySelector(".ms-resource-card-four")
+      .setAttribute("daa-lh", "Transform digital process.")
+      document.querySelectorAll(".ms-resource-card-four a").forEach(link=>{
+        link.setAttribute("daa-ll",link.textContent)
+      })
 
       document.querySelector(".ms-btm-right-cont")
       .setAttribute("daa-lh", "Have questions?")

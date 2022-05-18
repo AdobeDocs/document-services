@@ -28,7 +28,7 @@ Article
 
 Read how to build your first document workflow in Microsoft Power Automate.
 
-- [Read article](https://business.adobe.com/customer-success-stories/ryder-case-study.html)
+- [Read article](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/create-workflow-power-automate.html?lang=en)
 
 <ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard new-hire-cta ms-resource-card ms-resource-card-three" />
 
@@ -42,7 +42,7 @@ Article
 
 Read how to get up and running in no time using the PDF services connector in Microsoft Power Automate.
 
-- [Read article](https://business.adobe.com/customer-success-stories/cxc-case-study.html)
+- [Read article](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html)
 
 <ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard financial-cta ms-resource-card ms-resource-card-four" />
 
