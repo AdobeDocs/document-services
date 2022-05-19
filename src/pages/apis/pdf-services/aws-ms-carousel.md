@@ -30,6 +30,6 @@ carousel-ui-path
 
 ## UiPath Integration
 
-### Automate end-to-end digital document processes and workflows easily with UIPath, Adobe Document Services and Adobe Acrobat Sign.
+### Automate end-to-end digital document processes and workflows easily with UiPath, Adobe Document Services,  and Adobe Acrobat Sign.
 
 - [Learn more](https://marketplace.uipath.com/listings/adobe-pdf-services)
