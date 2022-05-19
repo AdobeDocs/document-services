@@ -626,6 +626,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
+    document
+      .querySelector(".ms-announcement-blade").setAttribute("daa-lh", "Sign up for a preview program of Adobe Acrobat Sign with embedded Power Automate.")
+    document.querySelectorAll(".ms-announcement-blade a").forEach(link =>{
+      link.setAttribute("daa-ll", link.textContent);
+    })
+
 
     }else if (window.location.pathname.indexOf("sign-api") >= 0) {
 
