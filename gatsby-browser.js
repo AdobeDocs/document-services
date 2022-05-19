@@ -1024,8 +1024,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector(".aws-carousel")
       .setAttribute("daa-lh", "AWS + UiPath");
       document.querySelectorAll(".aws-carousel a.spectrum-Button").forEach(link => {
-        if(link.href.indexOf("/pricing/#AWS") >= 0) {
-          link.setAttribute("daa-ll", `${link.textContent} | Body | AWS`);
+        if(link.href.indexOf("go/powerautomate_help") >= 0) {
+          link.setAttribute("daa-ll", `${link.textContent} | Body | Microsoft`);
         } else {
           link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath`);
         }
@@ -1093,7 +1093,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         if(link.href.indexOf("/pricing/#AWS") >= 0) {
           link.setAttribute("daa-ll", `${link.textContent} | Body | AWS`);
         } else if(link.href.indexOf("adobe-pdf-services") >= 0) {
-          link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath Integration`);
+          link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath`);
         } else{
           link.setAttribute("daa-ll", `${link.textContent} | Body | Microsoft`);
         }
