@@ -24,6 +24,7 @@ import "swiper/css/navigation";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const smallMobileView = "375px";
+const MIN_MOBILE_SCREEN_WIDTH = "767px"
 
 const Texts = ({ texts, index }) => {
   const definedTextKeys = texts.slots
@@ -55,15 +56,15 @@ const SwiperContent = ({
         margin-bottom: var(--spectrum-global-dimension-size-500);
         flex-direction: row;
 
-        @media screen and (max-width: ${MOBILE_SCREEN_WIDTH}) {
-          max-width: calc(${layoutColumns(3.5)}) !important;
-          padding-left: var(--spectrum-global-dimension-size-200);
-        }
-
         @media screen and (max-width: ${TABLET_SCREEN_WIDTH}) {
           flex-direction: column;
           max-width: calc(${layoutColumns(6)}) !important;
         }
+
+        @media screen and (max-width: ${MIN_MOBILE_SCREEN_WIDTH}) {
+          max-width: calc(${layoutColumns(3.5)}) !important;
+          padding-left: var(--spectrum-global-dimension-size-200);
+        }        
 
       `}
     >
@@ -102,7 +103,7 @@ const SwiperContent = ({
             text-align: left;
             flex: 1;
             padding-bottom: var(--spectrum-global-dimension-size-200);
-            padding-right:45px;
+            // padding-right:45px;
             @media only screen and (min-width: ${smallMobileView}) and(max-width:${MOBILE_SCREEN_WIDTH}) {
               margin: 0;
               background:red;
