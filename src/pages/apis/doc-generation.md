@@ -9,6 +9,7 @@ import DgStartModifyingTitle from './doc-generation/dg-start-modifying-pdf.md'
 import DgWhyDocTitle from './doc-generation/dg-why-doc-gen-api.md'
 import DgKeyFeatures from './doc-generation/dg-key-features.md'
 import DgExploreOtherAdobeDoc from './doc-generation/dg-explore-other-adobe-doc.md'
+import AwsUipathCarousel from './doc-generation/aws-uipath-carousel.md'
 import {MobileOptimize} from '../../components/mobileOptimize'
 import {AdobeMsBlade} from '../../components/adobeMicrosoftBlade'
 import '../../styles/doc-generation.css'
@@ -44,7 +45,7 @@ apiHeroAssetImg doc-gen-invoice
 
 - [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
 
-<AdobeMsBlade className="AdobeMsBlade"/>
+<AwsUipathCarousel />
 
 
 <!-- <MobileOptimize/> -->

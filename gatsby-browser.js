@@ -626,6 +626,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
+    document
+      .querySelector(".ms-announcement-blade").setAttribute("daa-lh", "Sign up for a preview program of Adobe Acrobat Sign with embedded Power Automate.")
+    document.querySelectorAll(".ms-announcement-blade a").forEach(link =>{
+      link.setAttribute("daa-ll", link.textContent);
+    })
+
 
     }else if (window.location.pathname.indexOf("sign-api") >= 0) {
 
@@ -960,15 +966,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         .forEach(link => {
           link.setAttribute("daa-ll", link.textContent);
         });
-
-      document
-        .querySelector(".AdobeMsBlade")
-        .setAttribute("daa-lh", "Adobe Microsoft Blade");
-
-      document.querySelectorAll(".AdobeMsBlade a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
-
       document
         .querySelector(".Download-sample-templates-and-data-to-get-started")
         .setAttribute(
@@ -1022,6 +1019,18 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".We-are-ready-to-help a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+
+      document
+      .querySelector(".aws-carousel")
+      .setAttribute("daa-lh", "AWS + UiPath");
+      document.querySelectorAll(".aws-carousel a.spectrum-Button").forEach(link => {
+        if(link.href.indexOf("go/powerautomate_help") >= 0) {
+          link.setAttribute("daa-ll", `${link.textContent} | Body | Microsoft`);
+        } else {
+          link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath`);
+        }
+      });
+
     } else if (window.location.pathname.indexOf("doc-gen-api-template") >= 0) {
       document
       .querySelector(".Hero-Banner")
@@ -1083,7 +1092,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".aws-carousel a.spectrum-Button").forEach(link => {
         if(link.href.indexOf("/pricing/#AWS") >= 0) {
           link.setAttribute("daa-ll", `${link.textContent} | Body | AWS`);
-        } else {
+        } else if(link.href.indexOf("adobe-pdf-services") >= 0) {
+          link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath`);
+        } else{
           link.setAttribute("daa-ll", `${link.textContent} | Body | Microsoft`);
         }
       });

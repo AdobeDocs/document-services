@@ -630,6 +630,10 @@ img[alt=thumbnail] {
     background:url(../pages/images/ms_power_bkg.jpg) !important;
 }
 
+.carousel-ui-path{
+    background:url(../pages/images/uipath_bg.png) !important;
+}
+
 .herobgImage {
     background: rgb(250, 105, 85) url('../pages/images/bg-hero-doc-gen.jpeg') !important;
     background-repeat: no-repeat;
