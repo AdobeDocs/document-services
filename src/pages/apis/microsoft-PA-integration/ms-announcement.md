@@ -4,4 +4,4 @@
 
 Register for the opportunity to experience an even simpler way to automate your e-signature work.
 
-[Register now](https://www.adobe.io/apis/creativecloud/photo-imaging-api/api-demo.html)
+[Register now](https://adobe.na1.adobesign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhDPMc3GCVZDIir1WNFxILxuivZXTJryZfN6s_hyQudW_BN7RVeyMODwRCEtuZPo5XU*)
