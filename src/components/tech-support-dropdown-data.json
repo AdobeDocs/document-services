@@ -4,7 +4,7 @@
             "category_name": "Account Management",
             "questions": [
                 {
-                    "qst": "How do I see how many API transactions calls I have used?",
+                    "qst": "How do I see how many API transactions or calls I've used?",
                     "ans": "For AWS Marketplace customers, you can login to your AWS account and visit billing dashboard to see your usage: https: //us-east-1.console.aws.amazon.com/billing For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage."
                 },
                 {
@@ -49,7 +49,7 @@
                     "ans": "Currently, we do not offer data residency in EU data centers. We do plan to offer EU data residency in the future."
                 },
                 {
-                    "qst": "Does Adobe collect any data about the PDF being viewed or processed? Where are the server side components hosted? ",
+                    "qst": "Does Adobe collect any data about the PDF being viewed or processed? Where are the server side components hosted?",
                     "ans": "The PDF Embed API stores user settings in client-side browser's local storage for things such as color for annotation. As far as analytics is concerned, PDF Embed only gathers standard anonymous usage and data parameters like locations, timezone, pdf file lang, file name, file size, no of pages, etc. It doesn't store any user-generated content in analytics and never shares user-generated content with Adobe servers.  All server-side components of PDF Services API and PDF Embed API are hosted in the data centers of leading cloud hosting providers. Publicly accessible and downloadable components, such as the PDF Services SDKs and the PDF Embed API JavaScript library are hosted on providers relevant to the component, such as library repositories and CDNs."
                 },
                 {
@@ -57,7 +57,7 @@
                     "ans": "The complete data transfer happens over sure HTTPS channel using TLS encryption."
                 },
                 {
-                    "qst": "How does Adobe Document Services use or store file content and identity data? ",
+                    "qst": "How does Adobe Document Services use or store file content and identity data?",
                     "ans": "Documents are only transferred to the cloud for processing. Adobe Document Services cloud infrastructure does not store the document but retains the document for a maximum of 24 hours as part of the processing. Documents are never stored permanently. "
                 },
                 {
@@ -74,15 +74,15 @@
                     "ans":" Yes, you can publish or share PDFs online with PDF Embed API and have it signed with Acrobat Sign. See how in this article: https: //medium.com/adobetech/how-to-preview-a-pdf-document-in-your-web-application-using- adobe-pdf-embed-api-and-then-sign-it-1b1c772c7760"
                 },
                 {
-                    "qst": "Can we use PDF Embed API entirely disconnected from the internet? ",
+                    "qst": "Can we use PDF Embed API entirely disconnected from the internet?",
                     "ans": "No. While the API is entirely client-side JavaScript, the JavaScript library is hosted on Adobe.com and is not available to be hosted locally."
                 },
                 {
-                    "qst": "Is there any cost to using the PDF Embed API? ",
+                    "qst": "Is there any cost to using the PDF Embed API?",
                     "ans": "No, the current services available in the PDF Embed API are free to use. This includes annotation tools, call back APIs, and events for Analytics. "
                 },
                 {
-                    "qst": "How can I set up Adobe Analytics with PDF Embed API? ",
+                    "qst": "How can I set up Adobe Analytics with PDF Embed API?",
                     "ans": "Yes, please check our documentation which explains how to set up integration with Adobe Analytics: https: //experienceleague.adobe.com/docs/analytics.html"
                 },
                 {
@@ -90,7 +90,7 @@
                     "ans": "A single Client ID can be mapped to only one domain. You will need to generate a separate client ID for each domain. However, a Client ID can be mapped to a domain, which can be used in different subdomains."
                 },
                 {
-                    "qst": "For PDF Embed API, is it possible to map multiple sub-domains to the same client ID? ",
+                    "qst": "For PDF Embed API, is it possible to map multiple sub-domains to the same client ID?",
                     "ans": "Yes. You can create a single client ID for the parent domain that contains all the sub-domains. However, our recommendation is to create separate credentials for each sub-domain"
                 },
                 {
@@ -123,15 +123,15 @@
                     "ans": "Yes, it is possible to create a PDF from a HTML page that has multiple languages on there. Please refer to the documentation for a code sample on how to create PDF from a HTML URL: https: //developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/create-pdf/#create-a-pdf-file-from-html-specified-via-url"
                 },
                 {
-                    "qst": "How is PDF Services API different from PDF Library? Or from Acrobat DC SDK? ",
+                    "qst": "How is PDF Services API different from PDF Library? Or from Acrobat DC SDK?",
                     "ans": "Adobe PDF Services API offers cloud-based APIs, whereas Acrobat DC SDK offers a set of desktop plug-ins that work in conjunction with desktop Acrobat. Each of your users will need a copy of Acrobat installed on their computers. The PDF Library SDK is a subset of the Acrobat DC SDK that can be used without the need for Acrobat. "
                 },
                 {
-                    "qst": "What programming languages are supported? ",
+                    "qst": "What programming languages are supported?",
                     "ans": "The PDF Services API is REST based so any language that supports HTTP is supported. SDKs are also available for Java, .NET, Node.js, and Python." 
                 },
                 {
-                    "qst": "Can I run these document services on-premise? ",
+                    "qst": "Can I run these document services on-premise?",
                     "ans": "Given that our service is cloud-based, processing will always happen in Adobe's cloud infrastructure. If an on-premise solution is required, please fill our our contact us form to discuss your options: https: //www.adobe.com/go/dcsdk_requestform"
                 },
                 {

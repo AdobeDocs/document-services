@@ -122,11 +122,11 @@ module.exports = {
       },
       {
         title: 'Features-PDF Embed API',
-        path: '/faq/tech-support/#features-pdf-services-api',
+        path: '/faq/tech-support/#features---pdf-embed-api',
       },
       {
         title: 'Features-PDF Services API',
-        path: '/faq/tech-support/#features-pdf-embed-api',
+        path: '/faq/tech-support/#features---pdf-services-api',
       },
       {
         title: 'Support',

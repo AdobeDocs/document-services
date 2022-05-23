@@ -2283,3 +2283,15 @@ img[alt=adobe-support] {
         padding-left: 27px;
     }
 }
+
+.spectrum-Accordion-itemIndicator {
+    transform: rotate(0deg) !important;
+    left: 98% !important;
+    top: calc(12PX - var(--spectrum-accordion-icon-height, var(--spectrum-global-dimension-size-125)) / 2);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.spectrum-Accordion-itemHeader , .spectrum-Accordion-itemContent , .spectrum-Accordion-itemContent p{
+    padding-left: 0 !important;
+}
