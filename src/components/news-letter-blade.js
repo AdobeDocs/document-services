@@ -34,7 +34,7 @@ const NewsLetterBlade = ({className}) => {
               </div>
             </div> */}
             <div class="mp-copy-wrapper">
-              <h4>Subscribe to the Document Cloud Developer NewsLetter</h4>
+              <h4>Subscribe to the Document Cloud Developer Newsletter</h4>
               <div class="mp-copy">
                 Get exclusive access to insider tips, guidelines, developer events,
                 industry news, product updates, and more.

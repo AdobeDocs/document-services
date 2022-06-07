@@ -105,20 +105,19 @@ const CodeBlock = (props) => {
             tabs.push(ref);
 
             // const isSelected = selectedIndex.tab === index;
-
             return (
               <TabsItem
                 key={index}
                 ref={ref}
                 selected={true}
-                tabIndex={"0"}
+                tabIndex={index === selectedIndex.tab ? "0":"-1"}
                 onKeyDown={(e) => {
-                  if (e.key === 'ArrowRight') {
+                  if (e.key === 'ArrowRight' || e.key === 'R' || e.key === 'r') {
                     e.currentTarget.nextSibling && e.currentTarget.nextSibling.focus();
                   }
-                  if (e.key === 'ArrowLeft') {
+                  if (e.key === 'ArrowLeft' || e.key === 'L' || e.key === 'l') {
                     e.currentTarget.previousSibling && e.currentTarget.previousSibling.focus();
-                  }
+                  }  
                 }}
                 onClick={() => {
                   handleOnChange(ref)

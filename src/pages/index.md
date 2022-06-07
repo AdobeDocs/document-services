@@ -27,7 +27,7 @@ homeheroAssertImage
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
 
-![PDF Services API Workflow](images/pdfServices.jpg)
+![EMPTY_ALT](images/pdfServices.jpg)
 
 ### Adobe PDF Services API
 ### Create, transform, OCR PDFs, and more.
@@ -56,13 +56,13 @@ on both scanned and native PDFs and is included with PDF Services API.
 - [Try the demo](https://www.adobe.com/go/extract_visualizer)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-![PDF Extract API Workflow](images/pdfExtract.jpg)
+![EMPTY_ALT](images/pdfExtract.jpg)
 
 
 
 <TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
 
-![Document Generation API Workflow](images/docGen.jpg)
+![EMPTY_ALT](images/docGen.jpg)
 
 ### Adobe Document Generation API
 ### Generate documents from Word templates and JSON data.
@@ -92,7 +92,7 @@ samples for Angular and React.
 - [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
-![PDF Embed API Workflow](images/pdfEmbed.jpg)
+![EMPTY_ALT](images/pdfEmbed.jpg)
 
 
 <SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
@@ -109,25 +109,25 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 ### Create PDF from Word
 
-![creativePDF](images/s_createpdf_color_24.svg)
+![EMPTY_ALT](images/s_createpdf_color_24.svg)
 
 <CreatePdfFromUrl/>
 
 ### Dynamic PDF Document Generation
 
-![Document Generation](images/ic-dynamic-pdf-gen-40.svg)
+![EMPTY_ALT](images/ic-dynamic-pdf-gen-40.svg)
 
 <DynamicPdfDocumentGeneration/>
 
 ### Extract PDF Content & Structure
 
-![PDF Content & Structure](images/ic-extract-40.svg)
+![EMPTY_ALT](images/ic-extract-40.svg)
 
 <ExtractPdfContentStructure/>
 
 ### Embed PDF for viewing and analytics
 
-![viewing and analytics](images/embed.svg)
+![EMPTY_ALT](images/embed.svg)
 
 <EmbedPdfViewingAnalytics/>
 

@@ -1,5 +1,5 @@
 
-import React, { cloneElement, Children, useContext } from "react";
+import React, { cloneElement, Children, useContext,useEffect } from "react";
 import { withPrefix } from "gatsby";
 import { css } from "@emotion/react";
 import { AnchorButton } from "@adobe/gatsby-theme-aio/src/components/AnchorButton";
@@ -22,7 +22,8 @@ import classNames from "classnames";
 
 import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 import AnimationVideo from "../../../../pages/videos/Adobe_DCP_Marquee_Animation.json";
-import Lottie from 'react-lottie';
+import lottie from 'lottie-web';
+
 
 const setImageLoading = (child) => {
   if (child?.props?.mdxType === 'img') {
@@ -160,6 +161,24 @@ const Hero = ({
   ...props
 }) => {
   const { siteMetadata, location } = useContext(Context);
+
+  useEffect(()=>{
+    var anim = lottie.loadAnimation({
+      container: document.querySelector("#svgContainer"), 
+      renderer: "svg",
+      loop: false,
+      autoplay: true,
+      animationData: AnimationVideo
+        });
+
+        anim.addEventListener("enterFrame", function (animation) {
+             if (animation.currentTime > (anim.totalFrames - 25)) {
+                anim.pause();
+             }
+        });
+  },[])
+
+
   if (!variant || variant === 'default') {
     const { home, pages } = siteMetadata;
     const pathWithRootFix = rootFix(location.pathname);
@@ -354,17 +373,7 @@ const Hero = ({
                   display: none;
                 }
               `}>
-                <Lottie
-                  options={ {
-                    loop: true,
-                    autoplay: true,
-                    animationData: AnimationVideo,
-                    rendererSettings: {
-                      preserveAspectRatio: 'xMidYMid slice'
-                    }
-                  }}
-                  isStopped={false}
-                  isPaused={false}/>
+              <div id="svgContainer"></div>
               </div>
 
               <div

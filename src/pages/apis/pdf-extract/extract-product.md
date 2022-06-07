@@ -8,7 +8,7 @@ title: Adobe Developer — API Extract  —  Product card
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Create Source Support](../../images/create_secure_support.svg)
+![EMPTY_ALT](../../images/create_secure_support.svg)
 
 #### Services
 
@@ -19,7 +19,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Generate](../../images/Generate.svg)
+![EMPTY_ALT](../../images/Generate.svg)
 
 #### Generate
 
@@ -31,7 +31,7 @@ Generate PDF and Word documents from custom Word templates.
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Embed](../../images/customizable_experience.svg)
+![EMPTY_ALT](../../images/customizable_experience.svg)
 
 #### Embed
 

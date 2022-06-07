@@ -13,7 +13,7 @@ Acrobat Sign APIs are used across a variety of industries to meet a wide range o
 
 [](https://business.adobe.com/customer-success-stories/lash-group-case-study.html)
 
-![APIs and SDKs for PDF content processing and extraction](../../images/6_Image_Sales.jpg " ")
+![EMPTY_ALT](../../images/6_Image_Sales.jpg)
 
 ### Sales and procurement contracts.
 
@@ -25,7 +25,7 @@ Reduce time creating, managing, and tracking sales and procurement contracts. Us
 
 [](https://business.adobe.com/customer-success-stories/ryder-case-study.html)
 
-![APIs and SDKs to generate legal contracts](../../images/6_Image_Rental.jpg " ")
+![EMPTY_ALT](../../images/6_Image_Rental.jpg)
 
 ### Rental and leasing agreements.
 
@@ -37,7 +37,7 @@ Create intuitive and streamlined leasing agreements for your customers that can 
 
 [](https://business.adobe.com/customer-success-stories/cxc-case-study.html)
 
-![APIs and SDKs for PDF data analysis](../../images/6_Image_Onboarding.jpg " ")
+![EMPTY_ALT](../../images/6_Image_Onboarding.jpg)
 
 ### New hire onboarding.
 
@@ -49,7 +49,7 @@ Streamline the hiring process by routing offer letters directly to candidates an
 
 [](https://business.adobe.com/customer-success-stories/imm-case-study.html)
 
-![APIs and SDKs for PDF content republishing](../../images/6_Image_Financial.jpg " ")
+![EMPTY_ALT](../../images/6_Image_Financial.jpg)
 
 ### Financial and tax document workflows.
 

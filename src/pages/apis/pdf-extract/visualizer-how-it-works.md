@@ -14,7 +14,7 @@ paragraphs, headers, tables, and figures/images.
 - [Interactive demo](https://www.adobe.com/go/extract_visualizer)
 - [Watch the video](https://video.tv.adobe.com/v/333506)
 
-![About PDF Extract API](../../images/ExtractVisualizer_Graphic.png)
+![EMPTY_ALT](../../images/ExtractVisualizer_Graphic.png)
 
 
 <TextBlock slots="heading, text" theme="light"  className="how-it-work-richText padding-zero-visualizer rich-text-data how-it-work-font"/>

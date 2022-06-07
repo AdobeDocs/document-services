@@ -8,7 +8,7 @@ See how our customers are building great experiences and succeeding with Adobe.
 
 [Waymark-Story.pdf](../resources/Waymark-Story.pdf)
 
-![Waymark workflows with Adobe PDF Extract API.](../images/Waymark.jpg " ")
+![EMPTY_ALT](../images/Waymark.jpg)
 
 ### Waymark
 
@@ -19,7 +19,7 @@ Waymark Tech enables rapid impact assessments and compliance workflows with Adob
 
 [AdobeInDesign.pdf](../resources/AdobeInDesign.pdf)
 
-![Adobe InDesign Share for Review built with PDF Embed API](../images/AdobeInDesign.png " ")
+![EMPTY_ALT](../images/AdobeInDesign.png)
 
 ### Adobe InDesign
 
@@ -31,7 +31,7 @@ Adobe InDesign brings its new share for review features to life with Adobe Docum
 
 [Cambridge-Assessment.pdf](../resources/Cambridge-Assessment.pdf)
 
-![Cambridge Assessment digitizes test data with PDF Extract API](../images/Cambridge-Assessment.jpeg " ")
+![EMPTY_ALT](../images/Cambridge-Assessment.jpeg)
 
 ### Cambridge Assessment
 
@@ -42,7 +42,7 @@ Cambridge Assessment intends to digitize more than 100 years of test material wi
 
 [AI-Singapore-Story](../resources/AI-Singapore-Story.pdf)
 
-![Evisort uses PDF Extract API for intelliqent contracts](../images/AISingapore.png " ")
+![EMPTY_ALT](../images/AISingapore.png)
 
 ### AI Singapore (AISG)
 

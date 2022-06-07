@@ -882,7 +882,8 @@ const GlobalHeader = ({
                   align-items: center;
                   justify-content: center;
                   margin-left: var(--spectrum-global-dimension-size-200);
-                  width: var(--spectrum-global-dimension-size-800);
+                  width:auto;
+                  // width: var(--spectrum-global-dimension-size-800);
                 `}>
                 <ProgressCircle size="S" hidden={!isLoadingIms} />
 
