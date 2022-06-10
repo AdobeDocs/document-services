@@ -632,6 +632,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       link.setAttribute("daa-ll", link.textContent);
     })
 
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
 
     }else if (window.location.pathname.indexOf("sign-api") >= 0) {
 
@@ -727,6 +734,15 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".partner-with-us-cta a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
       })
+
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
+
     } else if (window.location.pathname.indexOf("resources") >= 0) {
       document
         .querySelector(".resource-banner")
@@ -788,6 +804,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".we-ready-to-help a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
 
     } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
       // document
@@ -931,6 +955,15 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".We-are-ready-to-help a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
+
     } else if (window.location.pathname.indexOf("doc-generation") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -1030,6 +1063,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath`);
         }
       });
+      
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
 
     } else if (window.location.pathname.indexOf("doc-gen-api-template") >= 0) {
       document
@@ -1157,6 +1198,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", link.title);
         })
 
+        document
+        .querySelector(".news-letter")
+        .setAttribute("daa-lh", "NewsLetter");
+  
+      document.querySelectorAll(".news-letter a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -1223,6 +1272,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
     } else if (window.location.pathname.indexOf("pricing") >= 0) {
       // make sure to differentiate between pricing/contact and regular pricing pages
       if(window.location.pathname.indexOf("contact") >= 0) {

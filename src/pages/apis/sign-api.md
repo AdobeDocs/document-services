@@ -9,6 +9,8 @@ import PartnershipType from './sign-api/partnership-type.md'
 import Usecase from './sign-api/use-case.md'
 import OurPartners from './sign-api/our-partners.md'
 import OurPartnersTwo from './sign-api/our-partners-two.md'
+import {NewsLetterBlade} from '../../components/news-letter-blade';
+
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth" primaryOutline variantsTypeSecondary='primary'  className="signApiHerobgImage Hero-Banner hero-btn-color"/>
 
@@ -77,6 +79,7 @@ Add e-signatures as a feature or service within your own application and deliver
 
 - [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
+<NewsLetterBlade className="news-letter"/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 

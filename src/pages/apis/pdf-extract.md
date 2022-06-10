@@ -10,6 +10,8 @@ import ExtractProductCard from './pdf-extract/extract-product.md';
 import VisualizerHowItWorks from './pdf-extract/visualizer-how-it-works.md';
 import PdfExtractUseCases from './pdf-extract/pdf-extract-resource.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
+import {NewsLetterBlade} from '../../components/news-letter-blade';
+
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
 
@@ -55,6 +57,7 @@ apiHeroAssetImg doc-ext-invoice
 
 <ExtractProductCard/>
 
+<NewsLetterBlade className="news-letter"/>
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help"/>
 
