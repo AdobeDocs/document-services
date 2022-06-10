@@ -11,6 +11,6 @@ import FieldServiceManagement from '../page-content/content-publishing/field-ser
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Field-service-management"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Field-service-management"/>
 
 <FieldServiceManagement />

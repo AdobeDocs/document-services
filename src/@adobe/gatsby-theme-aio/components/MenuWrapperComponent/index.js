@@ -10,19 +10,22 @@ import classNames from "classnames";
 import {  TABLET_SCREEN_WIDTH } from '@adobe/gatsby-theme-aio/src/utils';
 
 import { CustomMenuBlock } from '../CustomMenuBlock';
+import CustomMenu from '../CustomMenuBlock/customMenu';
 import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const MenuWrapperComponent = ({
     theme = 'lightest',
+    menuItem = 'subMenuPages',
     className,
     menuClassName,
-    contentClassName,
+    contentClassName='use-cases-content',
     content,
     background
   }) => {
   const backgroundColor =background?`background:${background}`:'background: var(--spectrum-global-color-gray-100)';
-  const mobile_screen_width = '767px';
-  const min_mobile_screen_width = '375px';
+  const MIN_MOBILE_SCREEN_WIDTH = '375px';
+  const MOBILE_SCREEN_WIDTH = '767px';
+  const MIN_TABLET_SCREEN_WIDTH = '1023px';
   return (
     <section
       className={classNames(className,`spectrum--${theme}`)}
@@ -31,8 +34,12 @@ const MenuWrapperComponent = ({
         margin-left: var(--spectrum-global-dimension-size-300);
         margin-top: var(--spectrum-global-dimension-size-550);
 
-        @media screen and (min-width: ${mobile_screen_width}) {
-          margin: 0 var(--spectrum-global-dimension-size-250);
+        @media screen and (min-width: ${MOBILE_SCREEN_WIDTH}) and (max-width: ${MIN_TABLET_SCREEN_WIDTH}) {
+          margin-top:var(--spectrum-global-dimension-size-150);
+          width: 84vw;
+        }
+        @media screen and (max-width: ${TABLET_SCREEN_WIDTH}){
+          margin-top: var(--spectrum-global-dimension-size-150) !important;
         }
         @media screen and (min-width: ${TABLET_SCREEN_WIDTH}){
           margin-top: var(--spectrum-global-dimension-size-900);
@@ -41,13 +48,13 @@ const MenuWrapperComponent = ({
       <div
         id="body-content-wrapper"
         css={css`
-          margin-left: var(--spectrum-global-dimension-size-300);
+          margin-left: var(--spectrum-global-dimension-size-200);
 
-          @media screen and (min-width: ${mobile_screen_width}) {
-            margin-left: var(--spectrum-global-dimension-size-250);
+          @media screen and (min-width: ${MOBILE_SCREEN_WIDTH}) {
+            margin-left: var(--spectrum-global-dimension-size-160);
           }
 
-          @media screen and (min-width: ${min_mobile_screen_width}) {
+          @media screen and (min-width: ${MIN_MOBILE_SCREEN_WIDTH}) {
             margin-left: var(--spectrum-global-dimension-size-0);
           }
 
@@ -69,7 +76,9 @@ const MenuWrapperComponent = ({
           `}
           className={classNames(menuClassName,`menu-content`)}
         >
-          <CustomMenuBlock />
+          {menuItem === 'subMenuPages' 
+          ? <CustomMenuBlock menuItem={menuItem}/>
+          : <CustomMenu menuItem={menuItem}/>}
         </div>
 
         <div
@@ -78,8 +87,11 @@ const MenuWrapperComponent = ({
             text-align: initial !important;
             margin-left: var(--spectrum-global-dimension-size-500);
 
-            @media screen and (min-width: ${min_mobile_screen_width}) {
-              margin: var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-600) var(--spectrum-global-dimension-size-500);
+            @media screen and (min-width: ${MIN_MOBILE_SCREEN_WIDTH}) {
+              margin: var(--spectrum-global-dimension-size-100) var(--spectrum-global-dimension-size-400) var(--spectrum-global-dimension-size-500);
+            }
+            @media screen and (min-width: ${MOBILE_SCREEN_WIDTH}) and (max-width: ${MIN_TABLET_SCREEN_WIDTH}) {
+              width: 90vw;
             }
           `}>
           {content}
@@ -92,6 +104,7 @@ const MenuWrapperComponent = ({
 MenuWrapperComponent.propTypes = {
   theme: PropTypes.string,
   menuClassName: PropTypes.string,
+  menuItem: PropTypes.string,
   contentClassName: PropTypes.string,
   background: PropTypes.string,
   content: PropTypes.object,

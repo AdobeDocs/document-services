@@ -11,6 +11,6 @@ import FinancialContent from '../page-content/financial/data-analysis-financial.
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Data-Analysis-for-Finance"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Data-Analysis-for-Finance"/>
 
 <FinancialContent />
