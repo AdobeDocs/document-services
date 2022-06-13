@@ -45,7 +45,7 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 You should not use your free trial credentials (Credential Key aka API Key) beyond your free trial.
 
-When you start your Adobe Document Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complementary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account.
+When you start your Adobe Document Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complimentary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account.
 
 In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan.
 
@@ -65,7 +65,7 @@ Please contact your account representative to discuss your requirement. There is
 
 <AccordionItem header="How will I be billed through AWS?">
 
-Customers are billed monthly by AWS in arrears for the number of Document Transactions (as defined here [link: <a href="https://www.adobe.com/go/aws-docsvs-eula">https://www.adobe.com/go/aws-docsvs-eula</a>]) that have been used in that billing cycle. Specific form of payment can be determined in the AWS console. The number of Document Transactions depends on API calls plus document length for some actions as defined here in our licensing metrics page.
+Customers are billed monthly by AWS in arrears for the number of Document Transactions (as defined here: <a href="https://www.adobe.com/go/aws-docsvs-eula">https://www.adobe.com/go/aws-docsvs-eula</a>) that have been used in that billing cycle. Specific form of payment can be determined in the AWS console. The number of Document Transactions depends on API calls plus document length for some actions as defined here in our licensing metrics page.
 
 </AccordionItem>
 
@@ -119,7 +119,7 @@ Documents are only transferred to the cloud for processing. Adobe Document Servi
 
 The geographic location of identity data is on the AWS network; stored in multi-region, load-balanced data centers located in Virginia (US-East). Identity data is replicated across all data centers.
 
-Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="https://www.adobe.com/privacy/eudatatransfers.html">https://www.adobe.com/privacy/eudatatransfers.html</a>.
+Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="https://www.adobe.com/privacy/eudatatransfers.html">https://www.adobe.com/privacy/eudatatransfers.html</a>
 
 You can also check out the Adobe Document Services Security Overview: <a href="https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf">https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf</a>
 
@@ -158,13 +158,13 @@ See our latest privacy policy information at the Adobe Privacy Center: <a href="
 
 <AccordionItem header="Who can I contact with questions regarding Adobe's Privacy Policy?">
 
-If you have privacy questions related to Adobe Document Services, please contact our sales team for assistance at: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+If you have privacy questions related to Adobe Document Services, please contact our sales team for assistance at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
 <AccordionItem header="We need to have an NDA in place before we can further discuss our plans to use Adobe PDF Service API. How can I get an NDA executed?">
 
-If you'd like to request an NDA, please contact our sales team for assistance at: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+If you'd like to request an NDA, please contact our sales team for assistance at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -184,7 +184,7 @@ See the Adobe Trust Center (<a href="https://www.adobe.com/trust.html">https://w
 
 If you are just starting and have lower volume, or are unsure of what your annual volume will be, pay-as-you-go via AWS Marketplace is a great option, with a 5 cents/document transaction flat fee.
 
-If you have a large annual volume, at least 500,000 document transactions, an Enterprise Term License Agreement will likely be the better plan for you. Please fill out our contact us form <a href="https://www.google.co.in/">https://www.google.co.in/</a> and connect with our expert sales team to get a quote.
+If you have a large annual volume, at least 500,000 document transactions, an Enterprise Term License Agreement will likely be the better plan for you. Please fill out our contact us form <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a> and connect with our expert sales team to get a quote.
 
 See additional information here: <a href="https://developer.adobe.com/document-services/pricing/">https://developer.adobe.com/document-services/pricing/</a>
 
@@ -193,24 +193,26 @@ See additional information here: <a href="https://developer.adobe.com/document-s
 <AccordionItem header="How do I buy Adobe Document Services?">
 
 There are two ways you can buy Adobe Document Services:
-(1) AWS Marketplace: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
 
-(2) Adobe Enterprise Term License Agreement (ETLA): <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+(1) U.S. listing: <a href="https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk ">https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk</a>
+
+(2) International listing: <a href="https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64">https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64</a> and 
+<a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
 <AccordionItem header="I started my Adobe Document Services trial via Power Automate. Can I buy Adobe Document Services on Power Automate too?">
 
 At this time, you can only buy Adobe Document Services via:
-(1) AWS Marketplace: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+(1) U.S. listing: <a href="https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk">https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk</a>
 
-(2) Adobe Enterprise Term License Agreement (ETLA): <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+(2) International listing : <a href="https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64">https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64</a> and <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
 <AccordionItem header="I'm currently on a AWS pay-as-you-go plan, but would like to switch to ETLA. How do I that?">
 
-Contact our sales representative by filling out our contact us form: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+Contact our sales representative by filling out our contact us form: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -250,7 +252,7 @@ That standard pricing for our API service is US$0.05 (that's 5 cents) per Docume
 
 For more details and examples of how to calculate document transactions, please see: <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
 
-Volume pricing is available. You may contact our sales team for a quote at: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+Volume pricing is available. You may contact our sales team for a quote at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -258,7 +260,7 @@ Volume pricing is available. You may contact our sales team for a quote at: <a h
 
 Volume pricing is available for annual usage exceeding 500,000 Document Transactions. See how document transactions are calculated here: <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
 
-For a quote, you can contact our sales team at: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+For a quote, you can contact our sales team at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -266,7 +268,7 @@ For a quote, you can contact our sales team at: <a href="https://www.google.co.i
 
 Volume pricing is available for annual usage exceeding 500,000 Document Transactions. See how document transactions are calculated here: <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
 
-For a quote, you can contact our sales team at: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+For a quote, you can contact our sales team at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -274,7 +276,7 @@ For a quote, you can contact our sales team at: <a href="https://www.google.co.i
 
 Volume pricing is available for annual usage exceeding 500,000 Document Transactions. See how document transactions are calculated here: <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
 
-For a quote, you can contact our sales team at: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+For a quote, you can contact our sales team at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -282,7 +284,7 @@ For a quote, you can contact our sales team at: <a href="https://www.google.co.i
 
 Volume pricing is available for annual usage exceeding 500,000 Document Transactions. See how document transactions are calculated here: <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
 
-For a quote, you can contact our sales team at: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+For a quote, you can contact our sales team at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -318,7 +320,7 @@ The free trial program for the Adobe PDF Services API provides credentials that 
 
 <AccordionItem header="Can I extend my trial of PDF Services API?">
 
-Trial extensions can be granted at Adobe's discretion. If you'd like to request a trial extension, fill out the contact us form: <a href="https://www.google.co.in/">https://www.google.co.in/</a>
+Trial extensions can be granted at Adobe's discretion. If you'd like to request a trial extension, fill out the contact us form: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 

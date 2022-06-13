@@ -12,6 +12,6 @@ title: Adobe Developer — Contact us
 
 **Technical Support and Implementation** 
 
-[Visit our Tech Support FAQ](/faq/tech-support/#account-management)
+[Visit our Tech Support FAQ](/faq/tech-support/)
 
 - [Contact Us](./support.md)

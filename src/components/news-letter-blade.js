@@ -41,7 +41,7 @@ const NewsLetterBlade = ({className}) => {
               </div>
               <div class="mp-cta-wrapper">
                 <a
-                  href="http://www.adobe.com/go/powerautomate_help"
+                  href="https://www.adobe.com/subscription/document-services-developer-newsletter.html"
                   target="_parent"
                   class="button-link"
                   tabindex="0"

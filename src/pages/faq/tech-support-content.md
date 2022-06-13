@@ -38,7 +38,7 @@ For instructions on how to use your Adobe Document Services credentials that wer
 
 <AccordionItem header="If I already have credentials and need new ones, how do I get them?" slot_id ="account-management-if-i-already-have-credentials-and-need-new-ones-how-do-i-get-them">
 
-Both paid and trial customers can create new credentials, as well as edit existing) credentials, by going to the Admin Console: <a href="https://developer.adobe.com/console">https://developer.adobe.com/console</a>.
+Both paid and trial customers can create new credentials, as well as edit existing credentials, by going to the Admin Console: <a href="https://developer.adobe.com/console">https://developer.adobe.com/console</a>.
 
 </AccordionItem>
 
@@ -214,7 +214,7 @@ The PDF Services API is REST based so any language that supports HTTP is support
 
 <AccordionItem header="Can I run these document services on-premise?" slot_id="features---pdf-services-api-can-i-run-these-document-services-on-premise">
 
-Given that our service is cloud-based, processing will always happen in Adobe's cloud infrastructure. If an on-premise solution is required, please fill our our contact us form to discuss your options: <a href="https://www.adobe.com/go/dcsdk_requestform">https://www.adobe.com/go/dcsdk_requestform</a>
+Given that our service is cloud-based, processing will always happen in Adobe's cloud infrastructure. If an on-premise solution is required, please fill our our contact us form to discuss your options: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 

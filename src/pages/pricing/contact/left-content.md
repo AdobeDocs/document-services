@@ -12,6 +12,6 @@ title: Adobe Developer — Contact us
 
 **Pricing, Billing, and Licensing**
 
-[Visit our Sales FAQ](/faq/sales/#account-management)
+[Visit our Sales FAQ](/faq/sales/)
 
 - [Contact Us](./sales.md)

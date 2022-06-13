@@ -29,7 +29,7 @@
                 },
                 {
                     "qst": "Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Document Services?",
-                    "ans": "You should not use your free trial credentials (Credential Key aka API Key) beyond your trial. When you start your Adobe Document Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complementary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account. In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan."
+                    "ans": "You should not use your free trial credentials (Credential Key aka API Key) beyond your trial. When you start your Adobe Document Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complimentary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account. In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan."
                 }
             ]
         },

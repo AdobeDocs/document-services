@@ -1,13 +1,16 @@
 // import classNames from "classnames";
 // import { css } from "@emotion/react";
 // import "@spectrum-css/typography";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
+import Context from "@adobe/gatsby-theme-aio/src/components/Context";
+
 import InputField from './formComponent/InputField'
 import SelectField from "./formComponent/SelectField";
 import CheckBoxField from "./formComponent/CheckBoxField";
 import _isEmpty from 'lodash/isEmpty'
 import jsonData from "./tech-support-dropdown-data.json"
+import { withPrefix } from 'gatsby';
 
 const expertiseOptions = [
     {
@@ -256,6 +259,8 @@ const TechSupportContactUs = ({ }) => {
     const [subIssueTypeOptions, setSubIssueTypeOptions] = useState()
     const [link, setLink] = useState("/faq/tech-support/#account-management")
 
+    const { location } = useContext(Context);
+
     useEffect(() => {
         const Options = jsonData.category.filter((category) => { return category.category_name === formValue.issue_type }).map((filtered_category) => (filtered_category.questions.map((question, index) => { return { label: question.qst, key: index } })))
         setSubIssueTypeOptions(...Options)
@@ -273,16 +278,16 @@ const TechSupportContactUs = ({ }) => {
         if (hrefArray.length || formValue.issue_type) {
             if (hrefArray.length) {
                 val = `/faq/tech-support/#${hrefArray[0]?.sub_issue_type_id}`
-                issue_sub_link = `https://www.adobe.com/#${hrefArray[0]?.sub_issue_type_id}`
+                issue_sub_link = `${location.pathname}/#${hrefArray[0]?.sub_issue_type_id}`
             } else {
                 issue_url_array.map((issue_url) => {
                     if (formValue.issue_type === issue_url.title) {
-                        return val = `/faq/tech-support/#${issue_url.id}`, issue_link = `https://www.adobe.com/#${issue_url.id}`
+                        return val = `/faq/tech-support/#${issue_url.id}`, issue_link = `${location.pathname}/#${issue_url.id}`
                     }
                 })
             }
-            setLink(val)
-            setDynamicFaqLink(issue_sub_link ? issue_sub_link : issue_link)
+            setLink(withPrefix(val))
+            setDynamicFaqLink(withPrefix(issue_sub_link ? issue_sub_link : issue_link))
         }
     }, [formValue.issue_type, formValue.issue_sub_type])
 
