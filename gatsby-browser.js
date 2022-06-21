@@ -1324,27 +1324,27 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", link.textContent);
         });
 
-      } else if(window.location.pathname.indexOf("contacts") >= 0) {
-        // document
-        //   .querySelector(".Contact-Home")
-        //   .closest("main")
-        //   .setAttribute("daa-lh", "Body");
+      } else if(window.location.pathname.indexOf("contact") >= 0) {
+        document
+          .querySelector(".Contact-Home")
+          .closest("main")
+          .setAttribute("daa-lh", "Body");
 
-        // document
-        //   .querySelector(".Contact-Home-Wrapper")
-        //   .setAttribute("daa-lh", "Contact Home Wrapper");
+        document
+          .querySelector(".Contact-Home-Wrapper")
+          .setAttribute("daa-lh", "Contact Home Wrapper");
 
-        // document.querySelectorAll(".Contact-Home-Wrapper a").forEach((link) => {
-        //   link.setAttribute("daa-ll", link.textContent);
-        // });
+        document.querySelectorAll(".Contact-Home-Wrapper a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-        // document
-        //   .querySelector(".Hero-Banner")
-        //   .setAttribute("daa-lh", "Hero Banner");
+        document
+          .querySelector(".Hero-Banner")
+          .setAttribute("daa-lh", "Hero Banner");
 
-        // document.querySelectorAll(".Hero-Banner a").forEach((link) => {
-        //   link.setAttribute("daa-ll", link.textContent);
-        // });
+        document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
       } else {
         document

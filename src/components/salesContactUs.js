@@ -11,19 +11,19 @@ import _isEmpty from 'lodash/isEmpty'
 const regionOptions = [
   {
     key: 1,
-    label: "NA"
+    label: "North America"
   },
   {
     key: 2,
-    label: "LATAM"
+    label: "Latin America"
   },
   {
     key: 3,
-    label: "APAC"
+    label: "Asia/Pacific"
   },
   {
     key: 4,
-    label: "EMEA"
+    label: "Europe/Middle East/Africa"
   },
 ]
 
