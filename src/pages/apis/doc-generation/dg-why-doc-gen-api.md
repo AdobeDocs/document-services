@@ -10,7 +10,7 @@ title: Adobe Developer — Doc generation — Why Document Generation API
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className=" icon-xl-size padding-btm-zero-left-align horizontal-align-heading"/>
 
-![Document Generation Microsoft Word Tagger](../../images/rapid-results.svg " ")
+![EMPTY_ALT](../../images/rapid-results.svg)
 
 ### Authoring Tools for Improved Productivity
 
@@ -18,7 +18,7 @@ Use our Adobe Document Generation Tagger Word add-in to quickly build custom bra
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className=" icon-xl-size padding-btm-zero-left-align horizontal-align-heading"/>
 
-![Dynamically automate digital document workflows](../../images/modify-pages.svg " ")
+![EMPTY_ALT](../../images/modify-pages.svg)
 
 ### Manipulate and Merge Dynamic Data
 
@@ -26,7 +26,7 @@ Process text tags, calculations, repeating elements, and conditional statements 
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className=" icon-xl-size padding-btm-zero-left-align horizontal-align-heading"/>
 
-![Seamless integration with Adobe Acrobat Sign](../../images/high-fidelity.svg " ")
+![EMPTY_ALT](../../images/high-fidelity.svg)
 
 ### Document Generation with Signatures
 
