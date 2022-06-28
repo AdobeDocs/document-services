@@ -1,5 +1,5 @@
 {
-    "componentChunkName": "component---src-pages-pricing-contact-md",
+    "componentChunkName": "component---src-pages-pricing-contact-index-md",
     "path": "/pricing/contact/",
-    "result": {"pageContext":{"frontmatter":{"title":"Contact us"}}},
-    "staticQueryHashes": ["3695678887","858854441","915530536"]}
+    "result": {"pageContext":{"frontmatter":{"title":"Adobe Contact us | Questions"}}},
+    "staticQueryHashes": ["1440646406","3695678887","858854441","915530536"]}
