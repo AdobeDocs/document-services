@@ -10,6 +10,6 @@ import DataAnalysis from '../page-content/content-and-data-extraction/data-analy
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Data-Analysis"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Data-Analysis"/>
 
 <DataAnalysis />

@@ -10,6 +10,6 @@ import IndexConent from '../page-content/agreements-and-contracts/sales-proposal
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Sales-Proposals-and-Contracts"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Sales-Proposals-and-Contracts"/>
 
 <IndexConent />

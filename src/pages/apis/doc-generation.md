@@ -14,6 +14,8 @@ import {MobileOptimize} from '../../components/mobileOptimize'
 import {AdobeMsBlade} from '../../components/adobeMicrosoftBlade'
 import '../../styles/doc-generation.css'
 import {APIPixelRetargeting} from '../../components/retargetting'
+import {NewsLetterBlade} from '../../components/news-letter-blade';
+
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
@@ -80,6 +82,8 @@ apiHeroAssetImg doc-gen-invoice
 <WrapperComponent slots="content" repeat="1" theme="light" className="Explore-other-Adobe-Document-Services-APIs"/>
 <DgExploreOtherAdobeDoc/>
 
+<NewsLetterBlade className="news-letter"/>
+
 <!-- Summary Block -->
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help" />
 
@@ -90,6 +94,6 @@ apiHeroAssetImg doc-gen-invoice
 Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-- [Contact us](../pricing/contact.md)
+- [Contact us](../pricing/contacts.md)
 
 <APIPixelRetargeting/>

@@ -16,6 +16,7 @@ import KeyFeatures from './pdf-embed/key-features.md'
 import ExploreAdobe from './pdf-embed/explore-adobe.md'
 import Integration from './pdf-embed/integration.md'
 import {APIPixelRetargeting} from '../../components/retargetting'
+import {NewsLetterBlade} from '../../components/news-letter-blade';
 
 
 
@@ -109,7 +110,7 @@ apiHeroAssetImg doc-embed-hero
 
 <ExploreAdobe />
 
-
+<NewsLetterBlade className="news-letter"/>
 
 <SummaryBlock slots="heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
 
@@ -118,6 +119,6 @@ apiHeroAssetImg doc-embed-hero
 Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-* [Contact us](../pricing/contact.md)
+* [Contact us](../pricing/contacts.md)
 
 <APIPixelRetargeting/>

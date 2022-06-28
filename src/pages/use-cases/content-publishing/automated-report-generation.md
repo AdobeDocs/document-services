@@ -11,6 +11,6 @@ import AutomatedReportGeneration from '../page-content/content-publishing/automa
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Automated-Report-Generation"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Automated-Report-Generation"/>
 
 <AutomatedReportGeneration />

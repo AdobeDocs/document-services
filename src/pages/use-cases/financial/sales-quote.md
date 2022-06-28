@@ -11,6 +11,6 @@ import SalesQuote from '../page-content/financial/sales-quote.md';
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Sales-Quote"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Sales-Quote"/>
 
 <SalesQuote />

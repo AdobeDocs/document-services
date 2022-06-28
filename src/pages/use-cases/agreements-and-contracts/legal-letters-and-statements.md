@@ -9,6 +9,6 @@ import LegalStatement from '../page-content/agreements-and-contracts/legal-lette
 
 # Document Services API Use Cases
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Legal-Letters-and-Statements"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Legal-Letters-and-Statements"/>
 
 <LegalStatement />

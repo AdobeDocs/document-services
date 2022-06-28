@@ -210,7 +210,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     let footer = document.querySelector("footer");
     footer?.setAttribute("daa-lh", "Footer");
-    footer.querySelectorAll("a").forEach(link => {
+    footer?.querySelectorAll("a").forEach(link => {
       if (link.textContent) {
         link.setAttribute("daa-ll", link.textContent);
       }
@@ -632,6 +632,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       link.setAttribute("daa-ll", link.textContent);
     })
 
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
 
     }else if (window.location.pathname.indexOf("sign-api") >= 0) {
 
@@ -727,6 +734,15 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".partner-with-us-cta a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
       })
+
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
+
     } else if (window.location.pathname.indexOf("resources") >= 0) {
       document
         .querySelector(".resource-banner")
@@ -788,6 +804,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".we-ready-to-help a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
 
     } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
       // document
@@ -931,6 +955,15 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".We-are-ready-to-help a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
+
     } else if (window.location.pathname.indexOf("doc-generation") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -1030,6 +1063,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath`);
         }
       });
+      
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
 
     } else if (window.location.pathname.indexOf("doc-gen-api-template") >= 0) {
       document
@@ -1157,6 +1198,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", link.title);
         })
 
+        document
+        .querySelector(".news-letter")
+        .setAttribute("daa-lh", "NewsLetter");
+  
+      document.querySelectorAll(".news-letter a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -1223,13 +1272,80 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
+      document
+      .querySelector(".news-letter")
+      .setAttribute("daa-lh", "NewsLetter");
+
+    document.querySelectorAll(".news-letter a").forEach(link => {
+      link.setAttribute("daa-ll", link.textContent);
+    });
     } else if (window.location.pathname.indexOf("pricing") >= 0) {
       // make sure to differentiate between pricing/contact and regular pricing pages
-      if(window.location.pathname.indexOf("contact") >= 0) {
+      if(window.location.pathname.indexOf("contact/sales") >= 0) {
         document
-          .querySelector(".Contact-Form")
+          .querySelector(".Sales-ContactUs")
           .closest("main")
           .setAttribute("daa-lh", "Body");
+        
+        document
+          .querySelector(".Hero-Banner")
+          .setAttribute("daa-lh", "Hero Banner");
+
+        document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
+
+        document
+          .querySelector(".Sales-Form")
+          .setAttribute("daa-lh", "Sales Form");
+
+        document.querySelectorAll(".Sales-Form a").forEach((link) => {
+          link.setAttribute("daa-ll", `Sales | ${link.textContent}`);
+        });
+      } else if(window.location.pathname.indexOf("contact/support") >= 0) {
+        document
+          .querySelector(".Tech-Support-ContactUs")
+          .closest("main")
+          .setAttribute("daa-lh", "Body");
+
+        document
+          .querySelector(".Tech-Support-Form")
+          .setAttribute("daa-lh", "Sales Form");
+
+        document.querySelectorAll(".Tech-Support-Form a").forEach((link) => {
+          link.setAttribute("daa-ll", `Tech-Support | ${link.textContent}`);
+        });
+
+        document
+          .querySelector(".Hero-Banner")
+          .setAttribute("daa-lh", "Hero Banner");
+
+        document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
+
+      } else if(window.location.pathname.indexOf("contacts") >= 0) {
+        // document
+        //   .querySelector(".Contact-Home")
+        //   .closest("main")
+        //   .setAttribute("daa-lh", "Body");
+
+        // document
+        //   .querySelector(".Contact-Home-Wrapper")
+        //   .setAttribute("daa-lh", "Contact Home Wrapper");
+
+        // document.querySelectorAll(".Contact-Home-Wrapper a").forEach((link) => {
+        //   link.setAttribute("daa-ll", link.textContent);
+        // });
+
+        // document
+        //   .querySelector(".Hero-Banner")
+        //   .setAttribute("daa-lh", "Hero Banner");
+
+        // document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+        //   link.setAttribute("daa-ll", link.textContent);
+        // });
+
       } else {
         document
           .querySelector(".Hero-Banner")

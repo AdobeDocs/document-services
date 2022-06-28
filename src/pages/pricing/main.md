@@ -30,4 +30,4 @@ When you’re ready to purchase, flexible options to suit your needs.
 Have questions about the Document Services APIs?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-- [Contact us](./contact.md)
+- [Contact us](./contacts.md)

@@ -111,6 +111,54 @@ module.exports = {
         ]
       }
     ],
+    techSupportFAQMenus: [
+      {
+        title: 'Account Management',
+        path: '/faq/tech-support/#account-management',
+      },     
+      {
+        title: 'Data Security & Privacy',
+        path: '/faq/tech-support/#data-security--privacy',
+      },
+      {
+        title: 'Features-PDF Embed API',
+        path: '/faq/tech-support/#features---pdf-embed-api',
+      },
+      {
+        title: 'Features-PDF Services API',
+        path: '/faq/tech-support/#features---pdf-services-api',
+      },
+      {
+        title: 'Support',
+        path: '/faq/tech-support/#support',
+      },
+    ],
+    salesFAQMenus: [
+      {
+        title: 'Account Management',
+        path: '/faq/sales/#account-management',
+      },
+      {
+        title: 'Billing',
+        path: '/faq/sales/#billing',
+      },
+      {
+        title: 'Data Security & Privacy',
+        path: '/faq/sales/#data-security--privacy',
+      },
+      {
+        title: 'Ordering',
+        path: '/faq/sales/#ordering',
+      },
+      {
+        title: 'Support',
+        path: '/faq/sales/#support',
+      },
+      {
+        title: 'Trials',
+        path: '/faq/sales/#trials',
+      }
+    ],
     subMenuPages: [
       {
         title: 'Agreements and Contracts',

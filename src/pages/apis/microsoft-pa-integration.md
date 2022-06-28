@@ -11,6 +11,8 @@ import UseCases from './microsoft-PA-integration/use-cases.md'
 import GetStarted from './microsoft-PA-integration/getStarted.md'
 import AdditionalResources from './microsoft-PA-integration/additional-resources.md'
 import MsAnnouncementBlock from './microsoft-PA-integration/ms-announcement.md'
+import {NewsLetterBlade} from '../../components/news-letter-blade';
+
 
 <Hero slots="icon, heading, text, assetsImg, buttons"  customLayout variant="halfwidth" variantsTypePrimary='primary' className="microsoftPAHerobgImage Hero-Banner ms-hero-img"/>
 
@@ -61,6 +63,8 @@ Start your trial today and get 1,000 free document transactions.
 <WrapperComponent slots="content" theme="lightest" className="Get-Started"/>
 
 <AdditionalResources/>
+
+<NewsLetterBlade className="news-letter"/>
 
 <WrapperComponent slots="content" theme="lightest" className="div-flex overflow-hidden"/>
 

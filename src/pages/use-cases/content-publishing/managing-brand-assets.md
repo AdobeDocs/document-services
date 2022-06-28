@@ -11,6 +11,6 @@ import ManagingBrandAssets from '../page-content/content-publishing/managing-bra
 # Document Services API Use Cases
 
 
-<MenuWrapperComponent  slots="content"  repeat="1" theme="lightest" className="Managing-brand-assets"/>
+<MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Managing-brand-assets"/>
 
 <ManagingBrandAssets />

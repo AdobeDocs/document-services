@@ -1,0 +1,169 @@
+{
+    "category": [
+        {
+            "category_name": "Account Management",
+            "questions": [
+                {
+                    "qst": "How do I see how many API transactions or calls I've used?",
+                    "ans": "For AWS Marketplace customers, you can login to your AWS account and visit billing dashboard to see your usage: https: //us-east-1.console.aws.amazon.com/billing For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage."
+                },
+                {
+                    "qst": "My company has an existing Enterprise Agreement with Adobe. Can I use the same Adobe credentials for PDF Services API?",
+                    "ans": "Your Adobe Admin Console admin may have not provisioned your Enterprise ID to have access to PDF Services APIs. If your organization is a current subscriber to Adobe PDF Services API, contact your administrator. If you are interested in using Adobe PDF Services API on a trial basis, consider using an Adobe ID (Personal) that is not tied to your enterprise ID."
+                },
+                {
+                    "qst": "Why do I have to use a personal account when setting up a trial or account? Why can't I use my company's existing enterprise email/account?",
+                    "ans": "Access to Adobe Document Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are working on a trial basis, it may be easier and faster to use a personal email than your existing Adobe ID."
+                },
+                {
+                    "qst": "Where do I find my Client ID or API key?",
+                    "ans": "Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the 'client_id' key used in the back-end code to make free trial calls against."
+                },
+                {
+                    "qst": "How do I use my Adobe Document Services credentials in Power Automate, if I initially created them via AWS Marketplace?",
+                    "ans": "For instructions on how to use your Adobe Document Services credentials that were created in AWS Marketplace for use in Power Automate, please reference this step-by-step guide: https: //helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws"
+                },
+                {
+                    "qst": "If I already have credentials and need new ones, how do I get them?",
+                    "ans": "Both paid and trial customers can create new credentials, as well as edit existing) credentials, by going to the Admin Console: https: //developer.adobe.com/console"
+                },
+                {
+                    "qst": "Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Document Services?",
+                    "ans": "You should not use your free trial credentials (Credential Key aka API Key) beyond your trial. When you start your Adobe Document Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complimentary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account. In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan."
+                }
+            ]
+        },
+        {
+            "category_name": "Data Security & Privacy",
+            "questions": [
+                {
+                    "qst": "Is Adobe Document Services (PDF Services API and PDF Embed API) HIPAA compliant?",
+                    "ans": "Currently, we do not support use of Document Cloud Services SDK to collect, process, or store sensitive personal data such as protected health information under HIPAA, children’s personal information under COPPA, and other similar information as described in our General Terms (https: //www.adobe.com/legal/terms/enterprise-licensing/overview.html) and and Developer Terms of Use (https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf). However, support for sensitive personal data is coming soon."
+                },
+                {
+                    "qst": "Where are the data centers for Adobe Document Services based?",
+                    "ans": "User-generated content that is uploaded to Document Cloud is stored temporarily, if needed, in AWS US-East (Virinia) regional data centers. It is never stored permanently. The geographic location of identity data is on the AWS network; stored in multi-region, load-balanced data centers located in Virginia (US-East), Oregon (US-West), Ireland (EU-West), and Singapore (AP-Southeast). Identity data is replicated across all data centers. Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at https: //www.adobe.com/privacy/eudatatransfers.html."
+                },
+                {
+                    "qst": "Do you have plans to have data centers in EU?",
+                    "ans": "Currently, we do not offer data residency in EU data centers. We do plan to offer EU data residency in the future."
+                },
+                {
+                    "qst": "Does Adobe collect any data about the PDF being viewed or processed? Where are the server side components hosted?",
+                    "ans": "The PDF Embed API stores user settings in client-side browser's local storage for things such as color for annotation. As far as analytics is concerned, PDF Embed only gathers standard anonymous usage and data parameters like locations, timezone, pdf file lang, file name, file size, no of pages, etc. It doesn't store any user-generated content in analytics and never shares user-generated content with Adobe servers.  All server-side components of PDF Services API and PDF Embed API are hosted in the data centers of leading cloud hosting providers. Publicly accessible and downloadable components, such as the PDF Services SDKs and the PDF Embed API JavaScript library are hosted on providers relevant to the component, such as library repositories and CDNs."
+                },
+                {
+                    "qst": "How are data transfers by Adobe Document Services secured?",
+                    "ans": "The complete data transfer happens over sure HTTPS channel using TLS encryption."
+                },
+                {
+                    "qst": "How does Adobe Document Services use or store file content and identity data?",
+                    "ans": "Documents are only transferred to the cloud for processing. Adobe Document Services cloud infrastructure does not store the document but retains the document for a maximum of 24 hours as part of the processing. Documents are never stored permanently. "
+                },
+                {
+                    "qst": "What regulatory compliances are Adobe Document Services certified for?",
+                    "ans": "The current regulations and compliance for Adobe Document  Services and PDF Services API include: - SOC 2. This is a set of security principles that define leading practice controls relevant to security, confidentiality, and privacy. Adobe Document Cloud services are SOC 2 Type 2 (security and availability) compliant. - ISO 27001. This is a set of globally adopted standards that outline stringent security requirements and provide a systematic approach to managing the confidentiality, integrity, and availability of customer information. Adobe Document Cloud services are compliant with ISO 27001:2013. Full details are available at: https: //www.adobe.com/trust/compliance/compliance-list.html"
+                }
+            ]
+        },
+        {
+            "category_name": "Features - PDF Embed API",
+            "questions": [
+                {
+                    "qst": "Can I use Adobe Acrobat Sign with PDF Embed API?",
+                    "ans":" Yes, you can publish or share PDFs online with PDF Embed API and have it signed with Acrobat Sign. See how in this article: https: //medium.com/adobetech/how-to-preview-a-pdf-document-in-your-web-application-using- adobe-pdf-embed-api-and-then-sign-it-1b1c772c7760"
+                },
+                {
+                    "qst": "Can we use PDF Embed API entirely disconnected from the internet?",
+                    "ans": "No. While the API is entirely client-side JavaScript, the JavaScript library is hosted on Adobe.com and is not available to be hosted locally."
+                },
+                {
+                    "qst": "Is there any cost to using the PDF Embed API?",
+                    "ans": "No, the current services available in the PDF Embed API are free to use. This includes annotation tools, call back APIs, and events for Analytics. "
+                },
+                {
+                    "qst": "How can I set up Adobe Analytics with PDF Embed API?",
+                    "ans": "Yes, please check our documentation which explains how to set up integration with Adobe Analytics: https: //experienceleague.adobe.com/docs/analytics.html"
+                },
+                {
+                    "qst": "For PDF Embed API, is it possible to map multiple un-related domains to the same client ID? I would like to use the same credentials across all of my domains.",
+                    "ans": "A single Client ID can be mapped to only one domain. You will need to generate a separate client ID for each domain. However, a Client ID can be mapped to a domain, which can be used in different subdomains."
+                },
+                {
+                    "qst": "For PDF Embed API, is it possible to map multiple sub-domains to the same client ID?",
+                    "ans": "Yes. You can create a single client ID for the parent domain that contains all the sub-domains. However, our recommendation is to create separate credentials for each sub-domain"
+                },
+                {
+                    "qst": "For PDF Embed API, I have mapped my domain but later realized the entry was incorrect. How can I update the domain from your portal?",
+                    "ans": "It is not possible to change the domain associated with a client ID. However, as a workaround, you can generate a new set of credentials and map it to the desired domain "
+                },
+                {
+                    "qst": "For PDF Embed API, how many domains can I map to?",
+                    "ans": "You can create up to 20 mappings of client IDs to domains. However, with an Enterprise Terms License Agreement (ETLA), there are no limits."
+                }
+            ]
+        },
+        {
+            "category_name": "Features - PDF Services API",
+            "questions": [
+                {
+                    "qst": "If I am currently a paid customer, will I have access to the new services in PDF Services API?",
+                    "ans": "Yes, all paid customers will have access to new services as they become available for the duration of your contract."
+                },
+                {
+                    "qst": "Can we use the HTML to PDF function without having to zip the HTML files?",
+                    "ans": "Yes, Adobe PDF Services API supports the ability to generate from HTML to PDF based on a URL."
+                },
+                {
+                    "qst": "Does PDF services API support custom fonts?",
+                    "ans": "Adobe PDF Services API supports multiple fonts. If a font is not available on the services, then it may substitute the font during rendering. If creating PDF documents from HTML, custom fonts can be included in the ZIP package and/or referenced in CSS. Additional support for custom fonts is on the roadmap for conversion from Office file formats."
+                },
+                {
+                    "qst": "Can we create PDFs using HTML in multiple languages?",
+                    "ans": "Yes, it is possible to create a PDF from a HTML page that has multiple languages on there. Please refer to the documentation for a code sample on how to create PDF from a HTML URL: https: //developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/create-pdf/#create-a-pdf-file-from-html-specified-via-url"
+                },
+                {
+                    "qst": "How is PDF Services API different from PDF Library? Or from Acrobat DC SDK?",
+                    "ans": "Adobe PDF Services API offers cloud-based APIs, whereas Acrobat DC SDK offers a set of desktop plug-ins that work in conjunction with desktop Acrobat. Each of your users will need a copy of Acrobat installed on their computers. The PDF Library SDK is a subset of the Acrobat DC SDK that can be used without the need for Acrobat. "
+                },
+                {
+                    "qst": "What programming languages are supported?",
+                    "ans": "The PDF Services API is REST based so any language that supports HTTP is supported. SDKs are also available for Java, .NET, Node.js, and Python." 
+                },
+                {
+                    "qst": "Can I run these document services on-premise?",
+                    "ans": "Given that our service is cloud-based, processing will always happen in Adobe's cloud infrastructure. If an on-premise solution is required, please fill our our contact us form to discuss your options: https: //www.adobe.com/go/dcsdk_requestform"
+                },
+                {
+                    "qst": "What file formats can I create a PDF?",
+                    "ans": "With PDF Services API, you can create a PDF from Microsoft Office 365 documents, as well as HTML pages and image files. For more details, see Create PDF documentation: https: //developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/create-pdf/" 
+                },
+                {
+                    "qst": "Tracked changes and comment support. What happens to any tracked changes and comments in the DOC or DOCX files that are converted to PDF? Are they rendered in the finalized document, or are tracked changes first accepted/rejected, and are comments removed from the output?",
+                    "ans": "The PDF will render to what is set in the Word file. For example, if the Word document is set up to show red lines, the converted PDF will show those red lines. Our APIs do not support executing reject/accept of changes."
+                },
+                {
+                    "qst": "Where can we learn more about your Power Automate connector?",
+                    "ans": "To learn more about using PDF Services API and Power Automate together, see this how to get started article: https: //helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html You can also watch this YouTube video: https: //www.youtube.com/watch?v=H8Txc7Sa8Ts"
+                },
+                {
+                    "qst": "Are there usage limitations associted with PDF Services API?",
+                    "ans": "Yes. See usage limits in PDF Services API documentation: https: //developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/#usage-limitsThere are also specific usage limitations for Document Generation API (https: //developer.adobe.com/document-services/docs/overview/document-generation-api/quickstarts/#api-limitations) and for PDF Extract API (https://developer.adobe.com/document-services/docs/overview/pdf-extract-api/dcserviceslicensing/#usage-limits)."
+                }
+            ]
+        },
+        {
+            "category_name": "Support",
+            "questions": [
+                {
+                    "qst": "Can we continue to use older versions of the API?",
+                    "ans": "See our policy on version support: https: //opensource.adobe.com/pdftools-sdk-docs/release/latest/policies.html"
+                },
+                {
+                    "qst": "How do I get support for technical issues?",
+                    "ans": "Customers with an Adobe Enterprise Term License Agreement (ETLA) have enterprise support and can file tickets via the Admin Console. All other customers and trialists can leverage the Adobe Document Services Community Forum: https: //community.adobe.com/t5/document-services-apis/ct-p/ct-Document-Cloud-SDK"
+                }
+            ]
+        }
+    ]
+}
