@@ -1291,7 +1291,18 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     });
     } else if (window.location.pathname.indexOf("pricing") >= 0) {
       // make sure to differentiate between pricing/contact and regular pricing pages
-      if(window.location.pathname.indexOf("contact/sales") >= 0) {
+      if(window.location.pathname.indexOf("contact/sales/confirmation")>= 0) {
+        document
+        .querySelector(".sale-confirmation")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+        document.querySelectorAll('.explore-content a').forEach((link)=>{
+          link.setAttribute("daa-ll", link.textContent)
+        })
+        document.querySelectorAll(".explore-content-two a").forEach((link)=>{
+          link.setAttribute("daa-ll", link.textContent)
+        })
+      }else if(window.location.pathname.indexOf("contact/sales") >= 0) {
         document
           .querySelector(".Sales-ContactUs")
           .closest("main")
@@ -1312,7 +1323,22 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         document.querySelectorAll(".Sales-Form a").forEach((link) => {
           link.setAttribute("daa-ll", `Sales | ${link.textContent}`);
         });
-      } else if(window.location.pathname.indexOf("contact/support") >= 0) {
+      } else if(window.location.pathname.indexOf("contact/support/confirmation") >= 0 ){
+        document
+        .querySelector(".support-confirmation")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+
+        document.querySelectorAll(".support-explore-content a").forEach((link)=>{
+          console.log('support-explore-content',link);
+          link.setAttribute("daa-ll", link.textContent);
+        })
+
+        document.querySelectorAll(".support-explore-content-two a").forEach((link)=>{
+          link.setAttribute("daa-ll", link.textContent);
+        })
+
+      }else if(window.location.pathname.indexOf("contact/support") >= 0) {
         document
           .querySelector(".Tech-Support-ContactUs")
           .closest("main")
@@ -1334,7 +1360,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", link.textContent);
         });
 
-      } else if(window.location.pathname.indexOf("contacts")>= 0){
+      }else if(window.location.pathname.indexOf("contacts")>= 0){
 
       } else if(window.location.pathname.indexOf("contact") >= 0) {
         document
@@ -1358,7 +1384,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", link.textContent);
         });
 
-      } else {
+      }else {
         document
           .querySelector(".Hero-Banner")
           .closest("main")
