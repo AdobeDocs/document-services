@@ -1302,7 +1302,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         document.querySelectorAll(".explore-content-two a").forEach((link)=>{
           link.setAttribute("daa-ll", link.textContent)
         })
-      }else if(window.location.pathname.indexOf("contact/sales") >= 0) {
+      }else if(window.location.pathname.indexOf("contact/sales/accessibility") >= 0){
+
+      } else if(window.location.pathname.indexOf("contact/sales") >= 0) {
         document
           .querySelector(".Sales-ContactUs")
           .closest("main")
