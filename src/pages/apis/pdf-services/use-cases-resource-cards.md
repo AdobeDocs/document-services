@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —   Use Cases for Document Servic
 
 <TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
 
-## Use cases for PDF services API
+## Use cases for PDF Services API
 
 <ResourceCard slots="link, image, heading, text"  theme='lightest' width="25%" className="useCaseCard"/>
 
