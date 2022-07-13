@@ -1097,7 +1097,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
         .querySelector(".Download-sample-templates")
-        .setAttribute("daa-lh", "Adobe document generation API templates");
+        .setAttribute("daa-lh", "Adobe Document Generation API templates");
       document
         .querySelectorAll(".Download-sample-templates a")
         .forEach(link => {
@@ -1181,7 +1181,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
       document
         .querySelector(".Use-cases-for-PDF-services-API")
-        .setAttribute("daa-lh", "Use cases for PDF services API");
+        .setAttribute("daa-lh", "Use cases for PDF Services API");
       document
         .querySelectorAll(".Use-cases-for-PDF-services-API a")
         .forEach(link => {
