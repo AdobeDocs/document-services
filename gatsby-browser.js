@@ -1303,7 +1303,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", link.textContent)
         })
       }else if(window.location.pathname.indexOf("contact/sales/accessibility") >= 0){
-
+        document
+        .querySelector(".heading-accessibility")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+        document.querySelectorAll(".accessibility-content a").forEach(link=>{
+          link.setAttribute("daa-ll", link.textContent)
+        })
+        
       } else if(window.location.pathname.indexOf("contact/sales") >= 0) {
         document
           .querySelector(".Sales-ContactUs")

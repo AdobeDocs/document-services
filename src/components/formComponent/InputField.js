@@ -1,7 +1,7 @@
 import React from "react";
 
 const InputField = React.forwardRef((props, ref) => {
-  const { maxLength = "50", pattern, placeholder = "", label = "", className = "form-control rounded-0", type = "text", autoComplete = "off", errorMsg = "", onChange = () => { }, value = "", id = "", onBlur = () => { }, rows = "4", cols = "50", name = "", textAreaPlaceholder = "", areaClassName = "", required = false, labelClassName = "" } = props
+  const { maxLength = "50", pattern, placeholder = "", label = "", className = "form-control rounded-0", type = "text", autoComplete = "off", errorMsg = "", onChange = () => { }, value = "", id = "", onBlur = () => { }, rows = "4", cols = "50", name = "", textAreaPlaceholder = "", areaClassName = "", required = false, labelClassName = "", divClassName ="" } = props
   return (
     <>
       {type === "text" || type === "email" || type === "number" ? <div className="inputContainer">
@@ -14,7 +14,7 @@ const InputField = React.forwardRef((props, ref) => {
         </div>
       </div>
         :
-        <div className="area-container">
+        <div  className= {divClassName ? divClassName : 'area-container'}>
           <div>
             <label className={labelClassName}>{textAreaPlaceholder}</label>
           </div>
