@@ -12,5 +12,5 @@ Meanwhile, we encourage you to explore your <a title='pricing' href="/document-s
 
 If you haven't already, sign up for a [free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html) to start building and testing your document management workflows.
 
-- [Start free trial](https://developer.adobe.com/document-services/homepage)
+- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Visit FAQ](/faq/sales/)

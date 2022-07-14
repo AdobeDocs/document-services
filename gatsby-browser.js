@@ -1301,6 +1301,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         })
         document.querySelectorAll(".explore-content-two a").forEach((link)=>{
           link.setAttribute("daa-ll", link.textContent)
+          if(link.textContent === 'Start free trial'){
+            link.href = `${baseurl}`;
+          }
         })
       }else if(window.location.pathname.indexOf("contact/sales/accessibility") >= 0){
 
