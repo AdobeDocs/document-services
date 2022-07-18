@@ -4,6 +4,9 @@ title: Adobe Support | Confirmation
 
 import SupportConfirmationContent from './support-confirmation-content.md'
 import {NewsLetterBlade} from '../../../../components/news-letter-blade'
+import {GoogleTagManager} from '../../../../components/retargetting'
+
+<GoogleTagManager/>
 
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="contactUsHerobgImage Hero-Banner support-confirmation" />
 
