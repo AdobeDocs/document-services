@@ -26,6 +26,6 @@ Primary capabilities of the API include:
 
 Use this form to have an Adobe representative contact you with more information about the Early Access program or to answer other questions you have about the API. 
 
-<TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content"/>
+<TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content link linking"/>
 
 You can also find more information in the <a title="developer documentation" href="https://developer.adobe.com/document-services/docs/overview/pdf-accessibility-auto-tag-api/">developer documentation</a> and the <a title="FAQ Link" href="https://www.adobe.com/go/dcsdk_forum">FAQ</a> for the PDF Services API.
