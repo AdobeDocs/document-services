@@ -76,6 +76,10 @@ const SalesContactUs = ({
     if (formValue?.checkbox !== true) { error.checkbox = "Required *" } else { error.checkbox = "" }
     seterrorMsg({ ...error })
     if (!_isEmpty(formValue?.firstName) && !_isEmpty(formValue?.lastName) && !_isEmpty(formValue?.business_email) && !_isEmpty(formValue?.company_website) && !_isEmpty(formValue?.phone) && !_isEmpty(formValue?.job_title) && !_isEmpty(formValue?.region) && !_isEmpty(formValue?.expected_monthly_volume) && !_isEmpty(formValue?.use_case) && formValue?.checkbox == true) {
+
+      let salesFormData = {
+        ...formValue,formType:'sales'
+      }
       alert("Thanks for your Submit")
   }
   }

@@ -16,7 +16,7 @@ Primary capabilities of the API include:
 
 - <b>Highly accurate content tagging:</b> Accurately tag table headings, rows, columns, paragraphs, lists, and headings in native or scanned PDFs using  Sensei AI to improve the navigation and reading experience for users of assistive technologies such as screen readers  
 
-- <b>Reading Order Identification:</b> Identify the logical flow of information, even when columns or elements that span multiple pages are present.   
+- <b>Reading order identification:</b> Identify the logical flow of information, even when columns or elements that span multiple pages are present.   
 
 - <b>Wide range of document types, at scale:</b> Works on long-form text and mixed content documents across languages. Can be applied at scale to large backlogs or added to automated workflows  
 
@@ -29,3 +29,4 @@ Use this form to have an Adobe representative contact you with more information 
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content"/>
 
 You can also find more information in the <a title="developer documentation" href="https://developer.adobe.com/document-services/docs/overview/pdf-accessibility-auto-tag-api/">developer documentation</a> and the <a title="FAQ Link" href="https://www.adobe.com/go/dcsdk_forum">FAQ</a> for the PDF Services API.
+

@@ -16,7 +16,7 @@ Primary capabilities of the API include:
 
 - <b>Highly accurate content tagging:</b> Accurately tag table headings, rows, columns, paragraphs, lists, and headings in native or scanned PDFs using  Sensei AI to improve the navigation and reading experience for users of assistive technologies such as screen readers  
 
-- <b>Reading Order Identification:</b> Identify the logical flow of information, even when columns or elements that span multiple pages are present.   
+- <b>Reading order identification:</b> Identify the logical flow of information, even when columns or elements that span multiple pages are present.   
 
 - <b>Wide range of document types, at scale:</b> Works on long-form text and mixed content documents across languages. Can be applied at scale to large backlogs or added to automated workflows  
 
