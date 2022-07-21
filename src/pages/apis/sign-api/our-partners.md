@@ -11,22 +11,23 @@ Acrobat Sign can help transform and speed up your workflow while creating  a bet
 
 * [Get started](https://www.adobe.com/documentcloud/integrations/isv-partner-form.html)
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-ms-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-ms-logo
+![Microsoft logo](../../images/7_Logo_Microsoft.png "EMPTY_TITLE")
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-ms-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-SAP-logo
+![SAP logo](../../images/7_Logo_SAP.png "EMPTY_TITLE")
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-ms-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-workday-logo
+![Workday logo](../../images/7_Logo_workday.png "EMPTY_TITLE")
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-ms-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-salesforce-logo
+![Salesforce logo](../../images/7_Logo_salesforce.png "EMPTY_TITLE")
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-serviceNow-logo
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-ms-logo padding_top_align margin-top-zero imageHightAuto"/>
+
+![Servicenow logo](../../images/7_Logo_servicenow.png "EMPTY_TITLE")

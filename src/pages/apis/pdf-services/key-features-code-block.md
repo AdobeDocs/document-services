@@ -35,108 +35,108 @@ import HTMLToPDF from './html-to-pdf.md';
 
 ### Extract PDF Content
 
-![Extract PDF Content](../../images/s_createpdf_color_24.svg)
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
 
 <ExtractPDFContent/>
 
 ### Create PDF
 
-![Create PDF](../../images/s_createpdf_color_24.svg)
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
 
 <CreatePDF/>
 
 ### HTML to PDF
 
-![HTML to PDF](../../images/s_html-to-pdf.svg)
+![EMPTY_ALT](../../images/s_html-to-pdf.svg)
 
 <HTMLToPDF/>
 
 ### Document Generation
 
-![Document Generation](../../images/ic-dynamic-pdf-gen-40.svg)
+![EMPTY_ALT](../../images/ic-dynamic-pdf-gen-40.svg)
 
 <DocumentGeneration/>
 
 ### Convert PDF
 
-![Convert PDF](../../images/export_page.svg)
+![EMPTY_ALT](../../images/export_page.svg)
 
 <ConvertPDF/>
 
 ### OCR PDF
 
-![OCR PDF](../../images/recognize_text.svg)
+![EMPTY_ALT](../../images/recognize_text.svg)
 
 <OcrPDF/>
 
 ### Secure PDF
 
-![Secure PDF](../../images/s_protect_24.svg)
+![EMPTY_ALT](../../images/s_protect_24.svg)
 
 <SecurePDF/>
 
 ### Remove PDF Password
 
-![Remove PDF Password](../../images/s_unlock-pdf_22.svg)
+![EMPTY_ALT](../../images/s_unlock-pdf_22.svg)
 
 <RemovePDFPassword/>
 
 ### Get PDF Properties
 
-![Get PDF Properties](../../images/s_properties_22.svg)
+![EMPTY_ALT](../../images/s_properties_22.svg)
 
 <GetPDFProperties/>
 
 ### Split PDF
 
-![Split PDF](../../images/s_split-pdf_22.svg)
+![EMPTY_ALT](../../images/s_split-pdf_22.svg)
 
 <SplitPDF/>
 
 ### Combine PDF
 
-![Combine PDF](../../images/s_combinefiles_color_24.svg)
+![EMPTY_ALT](../../images/s_combinefiles_color_24.svg)
 
 <CombinePDF/>
 
 ### Compress PDF
 
-![Compress PDF](../../images/compress_pdf.svg)
+![EMPTY_ALT](../../images/compress_pdf.svg)
 
 <CompressPDF/>
 
 ### Reorder PDF Pages
 
-![Reorder PDF Pages](../../images/reorder_page.svg)
+![EMPTY_ALT](../../images/reorder_page.svg)
 
 <ReorderPDFPages/>
 
 ### Linearize PDF
 
-![Linearize PDF](../../images/linearize_pdf.svg)
+![EMPTY_ALT](../../images/linearize_pdf.svg)
 
 <LinearizePDF/>
 
 ### Insert PDF Pages
 
-![Insert PDF Pages](../../images/insert_page.svg)
+![EMPTY_ALT](../../images/insert_page.svg)
 
 <InsertPDFPages/>
 
 ### Replace PDF Pages
 
-![Replace PDF Pages](../../images/replace_page.svg)
+![EMPTY_ALT](../../images/replace_page.svg)
 
 <ReplacePDFPages/>
 
 ### Delete PDF Pages
 
-![Delete PDF Pages](../../images/delete_page.svg)
+![EMPTY_ALT](../../images/delete_page.svg)
 
 <DeletePDFPages/>
 
 ### Rotate PDF Pages
 
-![Rotate PDF Pages](../../images/rotate_page.svg)
+![EMPTY_ALT](../../images/rotate_page.svg)
 
 <RotatePDFPages/>

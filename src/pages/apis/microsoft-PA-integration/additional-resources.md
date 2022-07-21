@@ -6,7 +6,7 @@
 
 []()
 
-![APIs and SDKs for PDF content processing and extraction](../../images/Webinar_Thumbnail_Desktop.jpg " ")
+![EMPTY_ALT](../../images/Webinar_Thumbnail_Desktop.jpg)
 
 Webinar
 
@@ -20,7 +20,7 @@ Watch our Document Automation 101 webinar to see how easy it is to get started b
 
 []()
 
-![APIs and SDKs to generate legal contracts](../../images/DocWorkflow_Thumbnail_Desktop.jpg " ")
+![EMPTY_ALT](../../images/DocWorkflow_Thumbnail_Desktop.jpg)
 
 Article
 
@@ -34,7 +34,7 @@ Read how to build your first document workflow in Microsoft Power Automate.
 
 []()
 
-![APIs and SDKs for PDF data analysis](../../images/GettingStarted_Thumbnail_Desktop.jpg " ")
+![EMPTY_ALT](../../images/GettingStarted_Thumbnail_Desktop.jpg)
 
 Article
 
@@ -48,7 +48,7 @@ Read how to get up and running in no time using the PDF services connector in Mi
 
 []()
 
-![APIs and SDKs for PDF content republishing](../../images/CSUF_Thumbnail_Desktop.jpg " ")
+![EMPTY_ALT](../../images/CSUF_Thumbnail_Desktop.jpg)
 
 Customer story
 

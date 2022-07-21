@@ -1,6 +1,6 @@
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-one zigzag-align"/>
 
-![PDF Services API Workflow](../../images/lowCode_Image_Desktop.jpg)
+![EMPTY_ALT](../../images/lowCode_Image_Desktop.jpg)
 
 ### Low-code document automations.
 
@@ -18,12 +18,12 @@ Agreements, contracts, offer letters – you name it. Easily build workflows tha
 
 - [Learn more](https://powerautomate.microsoft.com/en-us/connectors/details/shared_adobesign/adobe-sign)
 
-![PDF Services API Workflow](../../images/endToEnd_Image_Desktop.jpg)
+![EMPTY_ALT](../../images/endToEnd_Image_Desktop.jpg)
 
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-three zigzag-align"/>
 
-![PDF Services API Workflow](../../images/simplify_Image_Desktop.jpg)
+![EMPTY_ALT](../../images/simplify_Image_Desktop.jpg)
 
 ### Simplify workflows with templates.
 
@@ -40,12 +40,12 @@ Integrate Microsoft Dynamics and Power Automate with Adobe Experience Manager Fo
 
 - [Learn more](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-microsoft-power-automate-integration.html)
 
-![PDF Services API Workflow](../../images/forms_Image_Desktop.jpg)
+![EMPTY_ALT](../../images/forms_Image_Desktop.jpg)
 
 
 <TextBlock slots="image, heading,text" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-five zigzag-align"/>
 
-![PDF Services API Workflow](../../images/api_Image_Desktop.jpg)
+![EMPTY_ALT](../../images/api_Image_Desktop.jpg)
 
 ### Build automations with extensibility.
 

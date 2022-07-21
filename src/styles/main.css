@@ -647,7 +647,7 @@ img[alt=thumbnail] {
 
 
 .signApiHerobgImage {
-    background: rgb(250, 105, 85) url('../pages/images/1_Marquee_Background.jpg') !important;
+    background: rgb(250, 105, 85) url('../pages/images/1_Marquee_Background-Desktop-Sign.png') !important;
     background-repeat: no-repeat;
     background-size: cover !important;
 }
@@ -1473,327 +1473,46 @@ pre .prism-code.spectrum-Code  span.token.string{
     }
 }
 
-.sign-ms-logo {
+.sign-ms-logo div {
     width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_Microsoft.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
 }
 
-.sign-SAP-logo {
+
+
+
+.sign-two-oracle-logo div {
     width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_SAP.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
 }
 
-.sign-workday-logo {
-    width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_workday.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
-}
 
-.sign-salesforce-logo {
-    width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_salesforce.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
-}
-
-.sign-serviceNow-logo {
-    width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_servicenow.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
-}
-
-.sign-two-oracle-logo {
-    width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_ORACLE.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
-}
-
-.sign-two-ADP-logo {
-    width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_ADP.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
-}
-
-.sign-two-vrbo-logo {
-    width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_Vrbo.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
-}
-
-.sign-two-avionte-logo {
-    width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_AVIONTE.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
-}
-
-.sign-two-msign-logo {
-    width: 130px !important;
-    height: 105px !important;
-    background-image: url('../pages/images/7_Logo_IMMeSign.png') !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    margin: 0 auto;
-   /* padding: 10px; */
-}
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
 
-    .sign-ms-logo {
+    .sign-ms-logo div  {
         width: 150px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_Microsoft_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
     }
 
-    .sign-SAP-logo {
 
+
+
+    .sign-two-oracle-logo div {
         width: 150px !important;
-        height: 70px !important;
-        background-image: url('../pages/images/7_Logo_SAP_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    
     }
 
-    .sign-workday-logo {
 
-        width: 150px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_workday_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-        
-    }
-    .sign-salesforce-logo {
-
-        width: 150px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_salesforce_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-        
-    }
-    .sign-serviceNow-logo {
-
-        width: 150px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_servicenow_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-        
-    }
-
-    .sign-two-oracle-logo {
-        width: 150px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_ORACLE_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
-
-    .sign-two-ADP-logo {
-
-        width: 120px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_ADP_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    
-    }
-
-    .sign-two-vrbo-logo {
-
-        width: 150px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_Vrbo_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-        
-    }
-    .sign-two-avionte-logo {
-
-        width: 150px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_AVIONTE_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-        
-    }
-    .sign-two-msign-logo {
-
-        width: 150px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_IMMeSign_tab.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-        
-    }
 }
 
 @media screen and (max-width: 767px){
 
-    .sign-ms-logo {
+    .sign-ms-logo div {
         width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_Microsoft_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
-    .sign-SAP-logo {
-        width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_SAP_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
-    .sign-workday-logo {
-        width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_workday_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
-    .sign-salesforce-logo {
-        width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_salesforce_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
-    .sign-serviceNow-logo {
-        width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_servicenow_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
     }
 
-    .sign-two-oracle-logo {
+
+    .sign-two-oracle-logo div {
         width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_ORACLE_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
     }
 
-    .sign-two-ADP-logo {
-        width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_ADP_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
-
-    .sign-two-vrbo-logo {
-        width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_Vrbo_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
-
-    .sign-two-avionte-logo {
-        width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_AVIONTE_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
-    .sign-two-msign-logo {
-        width: 115px !important;
-        height: 76px !important;
-        background-image: url('../pages/images/7_Logo_IMMeSign_mob.png') !important;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin: 0 auto;
-    }
 
 }
 

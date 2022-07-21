@@ -6,7 +6,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Resource Card
 
 [](/use-cases/content-and-data-extraction/content-based-process-automation/)
 
-![APIs and SDKs for PDF content processing and extraction](../../images/content-processing.jpg " ")
+![EMPTY_ALT](../../images/content-processing.jpg)
 
 ### Content processing
 
@@ -17,7 +17,7 @@ Quickly and accurately extract data and context from native and scanned PDFs to 
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
 
-![APIs and SDKs for PDF data analysis](../../images/data-analysis.jpg " ")
+![EMPTY_ALT](../../images/data-analysis.jpg)
 
 ### Data analysis
 
@@ -28,7 +28,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 [](/use-cases/content-publishing/digital-content-publishing/)
 
-![APIs and SDKs for PDF content republishing](../../images/content-republishing.jpg " ")
+![EMPTY_ALT](../../images/content-republishing.jpg)
 
 ### Content republishing
 

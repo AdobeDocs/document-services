@@ -49,38 +49,38 @@ apiHeroAssetImg doc-embed-hero
 
 ### Embed Modes
 
-![embed](../images/embed.svg)
+![EMPTY_ALT](../images/embed.svg)
 
 <EmbedModes />
 
 ### Annotation
 
-![annotation](../images/annotations.svg)
+![EMPTY_ALT](../images/annotations.svg)
 
 <Annotations />
 
 
 ### PDF Analytics
 
-![analytics](../images/analytics-green.svg)
+![EMPTY_ALT](../images/analytics-green.svg)
 
 <PDFAnalytics />
 
 ### Collaborative Settings
 
-![collaborative](../images/collaborative_settings.svg)
+![EMPTY_ALT](../images/collaborative_settings.svg)
 
 <Collaborative />
 
 ### Save Controls
 
-![savecontrols](../images/save_control.svg)
+![EMPTY_ALT](../images/save_control.svg)
 
 <SaveControls />
 
 ### Menu & Tool Options
 
-![menu-options](../images/menu_tool_options.svg)
+![EMPTY_ALT](../images/menu_tool_options.svg)
 
 <MenuTool />
 

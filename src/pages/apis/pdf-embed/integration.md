@@ -1,7 +1,7 @@
 
 <Carousel slots="image,heading, text, buttons" repeat="2"  theme="lightest" enableNavigation imageStyle="height:250px;width:250px;margin:auto !important;" className="vertical-padding" />
 
-![Integration](../../images/adobe_exerience_manager_logo@2x.png)
+![EMPTY_ALT](../../images/adobe_exerience_manager_logo@2x.png)
 
 Integration with Adobe Experience Manager
 
@@ -10,7 +10,7 @@ Adobe Experience Manager customers can easily drag and drop a high-fidelity PDF 
 * [Learn more](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/pdf-viewer.html?lang=en)
 
 
-![Analytics](../../images/adobe-analytics@2x.png)
+![EMPTY_ALT](../../images/adobe-analytics@2x.png)
 
 Integration with Adobe Analytics
 

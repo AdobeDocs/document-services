@@ -3,22 +3,22 @@ title: Acrobat Sign API | Easy and Secure eSignature API
 description: Secure, powerful, and easy to use APIs to integrate e-signatures into your platform, app, or workflow quickly.
 ---
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-two-oracle-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-two-oracle-logo
+![ORACLE logo](../../images/7_Logo_ORACLE.png "EMPTY_TITLE")
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-two-oracle-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-two-ADP-logo
+![ADP logo](../../images/7_Logo_ADP.png "EMPTY_TITLE")
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-two-oracle-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-two-vrbo-logo
+![Vrbo logo](../../images/7_Logo_Vrbo.png "EMPTY_TITLE")
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-two-oracle-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-two-avionte-logo
+![AVIONTE logo](../../images/7_Logo_AVIONTE.png "EMPTY_TITLE")
 
-<TextBlock slots="assetImg" theme="lightest" width="20%" imageOnly className="padding_top_align margin-top-zero imageHightAuto"/>
+<TextBlock slots="image" theme="lightest" width="20%" imageOnly className="sign-two-oracle-logo padding_top_align margin-top-zero imageHightAuto"/>
 
-sign-two-msign-logo
+![IMMeSign logo](../../images/7_Logo_IMMeSign.png "EMPTY_TITLE")

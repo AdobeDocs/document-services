@@ -11,19 +11,19 @@ import _isEmpty from 'lodash/isEmpty'
 const regionOptions = [
   {
     key: 1,
-    label: "NA"
+    label: "North America"
   },
   {
     key: 2,
-    label: "LATAM"
+    label: "Latin America"
   },
   {
     key: 3,
-    label: "APAC"
+    label: "Asia/Pacific"
   },
   {
     key: 4,
-    label: "EMEA"
+    label: "Europe/Middle East/Africa"
   },
 ]
 
@@ -84,7 +84,7 @@ const SalesContactUs = ({
     <form className="form-container Sales-Form">
       <div className="head-container">
         <div className="caption">Get info about pricing, billing, and licensing.</div>
-        <div className="faq-text">Please visit our <a className="link-content" href="/faq/sales/#account-management">FAQ</a> or fill out the form below to speak with an Adobe rep.</div>
+        <div className="faq-text">Please visit our <a className="link-content" href="/document-services/faq/sales/">FAQ</a> or fill out the form below to speak with an Adobe rep.</div>
         <div className="faq-text">For technical inquiries, submit a tech support request <a className="link-content" href="../support/">here.</a></div>
       </div>
       <div className="field-container">

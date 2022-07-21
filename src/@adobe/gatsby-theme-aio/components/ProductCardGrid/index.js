@@ -334,7 +334,8 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
                       <Image
                         src={product.icon}
                         aria-hidden="true"
-                        alt={product.name}
+                        alt={""}
+                        title={""}
                       />
                     </div>
                   )}

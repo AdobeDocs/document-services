@@ -10,7 +10,7 @@ Our connectors can be used across departments and industries for a variety of us
 
 [](/use-cases/agreements-and-contracts/)
 
-![APIs and SDKs for report creation and editing](../../images/agreements_Thumbnail_Desktop.jpg " ")
+![EMPTY_ALT](../../images/agreements_Thumbnail_Desktop.jpg)
 
 ### Agreements and contracts.
 
@@ -21,7 +21,7 @@ Easily generate, manage, and track agreements and contracts with dynamic terms a
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
 
-![APIs and SDKs for search and indexing](../../images/data_Thumbnail_Desktop.jpg " ")
+![EMPTY_ALT](../../images/data_Thumbnail_Desktop.jpg)
 
 ### Data analysis and retrieval.
 
@@ -32,7 +32,7 @@ Extract data from complex tables including cell data, column and row headers, an
 
 [](/use-cases/content-publishing/)
 
-![APIs and SDKs for PDF content publishing](../../images/publishing_Thumbnail_Desktop.jpg " ")
+![EMPTY_ALT](../../images/publishing_Thumbnail_Desktop.jpg)
 
 ### Content publishing.
 
@@ -42,7 +42,7 @@ Publish whitepapers and marketing content with end-user inter-activity, security
 
 [](/use-cases/content-publishing/employee-onboarding-materials/)
 
-![APIs and SDKs for job postings](../../images/onboarding_Thumbnail_Desktop.jpg " ")
+![EMPTY_ALT](../../images/onboarding_Thumbnail_Desktop.jpg)
 
 ### Onboarding and enrollment.
 

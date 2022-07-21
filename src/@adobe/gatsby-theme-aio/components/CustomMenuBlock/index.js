@@ -78,7 +78,8 @@ const Icon = ({ name, onCompleted, onError }) => {
     return (
       <img
         src={SvgIcon}
-        alt=" "
+        title=""
+        alt=""
         style={{ width: 40, height: 40 }}
       ></img>
     );

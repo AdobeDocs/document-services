@@ -41,7 +41,7 @@ apiHeroAssetImg sign-api-hero
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-one"/>
 
-![PDF Services API Workflow](../images/5_Devices_Merge.png)
+![EMPTY_ALT](../images/5_Devices_Merge.png)
 
 ### Merge data from your application.
 
@@ -58,12 +58,12 @@ Adobe, with our Document Generation API and other PDF Services APIs, makes it ea
 
 - [View e-signature workflows](https://opensource.adobe.com/acrobat-sign/developer_guide/apiusage.html#send-for-signing-create-an-agreement)
 
-![PDF Services API Workflow](../images/5_Devices_Store.png)
+![EMPTY_ALT](../images/5_Devices_Store.png)
 
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-three"/>
 
-![PDF Services API Workflow](../images/5_Devices_OEM.png)
+![EMPTY_ALT](../images/5_Devices_OEM.png)
 
 ### OEM implementation made easy.
 

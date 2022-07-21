@@ -207,7 +207,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     header
       .querySelector("a[href='/console']")
       ?.setAttribute("daa-ll", "Console");
-
+      document.querySelectorAll('img[alt="EMPTY_ALT"]').forEach(link => {
+          link.setAttribute("alt", ''); 
+          link.setAttribute("title", '');
+        });
+              
     let footer = document.querySelector("footer");
     footer?.setAttribute("daa-lh", "Footer");
     footer?.querySelectorAll("a").forEach(link => {
@@ -634,7 +638,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
       .querySelector(".news-letter")
-      .setAttribute("daa-lh", "NewsLetter");
+      .setAttribute("daa-lh", "Newsletter");
 
     document.querySelectorAll(".news-letter a").forEach(link => {
       link.setAttribute("daa-ll", link.textContent);
@@ -666,18 +670,22 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document.querySelector(".take-your-project-cta").setAttribute("daa-lh", "Take your project to the next level.")
       document.querySelector(".easy-to-implement-cta").setAttribute("daa-lh", "Easy to implement.")
+
       document.querySelectorAll(".easy-to-implement-cta a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
+        link.setAttribute("aria-label", "Learn more about rest APIs")
       })
 
       document.querySelector(".secure-compliant-cta").setAttribute("daa-lh", "Secure and compliant.")
       document.querySelectorAll(".secure-compliant-cta a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
+        link.setAttribute("aria-label", "Learn more about Adobe Acrobat Sign security")
       })
       
       document.querySelector(".scalable-cta").setAttribute("daa-lh", "Scalable.")
       document.querySelectorAll(".scalable-cta a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
+        link.setAttribute("aria-label", "Learn more about our data centers")
       })
       
       document.querySelector(".choose-partnership-title-cta").setAttribute("daa-lh", "Choose a partnership type to get access to the specific tools you need.")
@@ -734,10 +742,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".partner-with-us-cta a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
       })
-
+      document.querySelectorAll('img[title="EMPTY_TITLE"]').forEach(link => {
+                link.setAttribute("title", '');
+              });
       document
       .querySelector(".news-letter")
-      .setAttribute("daa-lh", "NewsLetter");
+      .setAttribute("daa-lh", "Newsletter");
 
     document.querySelectorAll(".news-letter a").forEach(link => {
       link.setAttribute("daa-ll", link.textContent);
@@ -807,7 +817,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
       .querySelector(".news-letter")
-      .setAttribute("daa-lh", "NewsLetter");
+      .setAttribute("daa-lh", "Newsletter");
 
     document.querySelectorAll(".news-letter a").forEach(link => {
       link.setAttribute("daa-ll", link.textContent);
@@ -958,7 +968,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
       .querySelector(".news-letter")
-      .setAttribute("daa-lh", "NewsLetter");
+      .setAttribute("daa-lh", "Newsletter");
 
     document.querySelectorAll(".news-letter a").forEach(link => {
       link.setAttribute("daa-ll", link.textContent);
@@ -1066,7 +1076,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       
       document
       .querySelector(".news-letter")
-      .setAttribute("daa-lh", "NewsLetter");
+      .setAttribute("daa-lh", "Newsletter");
 
     document.querySelectorAll(".news-letter a").forEach(link => {
       link.setAttribute("daa-ll", link.textContent);
@@ -1087,7 +1097,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
         .querySelector(".Download-sample-templates")
-        .setAttribute("daa-lh", "Adobe document generation API templates");
+        .setAttribute("daa-lh", "Adobe Document Generation API templates");
       document
         .querySelectorAll(".Download-sample-templates a")
         .forEach(link => {
@@ -1171,7 +1181,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
       document
         .querySelector(".Use-cases-for-PDF-services-API")
-        .setAttribute("daa-lh", "Use cases for PDF services API");
+        .setAttribute("daa-lh", "Use cases for PDF Services API");
       document
         .querySelectorAll(".Use-cases-for-PDF-services-API a")
         .forEach(link => {
@@ -1200,7 +1210,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
         document
         .querySelector(".news-letter")
-        .setAttribute("daa-lh", "NewsLetter");
+        .setAttribute("daa-lh", "Newsletter");
   
       document.querySelectorAll(".news-letter a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
@@ -1274,14 +1284,16 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
       document
       .querySelector(".news-letter")
-      .setAttribute("daa-lh", "NewsLetter");
+      .setAttribute("daa-lh", "Newsletter");
 
     document.querySelectorAll(".news-letter a").forEach(link => {
       link.setAttribute("daa-ll", link.textContent);
     });
     } else if (window.location.pathname.indexOf("pricing") >= 0) {
       // make sure to differentiate between pricing/contact and regular pricing pages
-      if(window.location.pathname.indexOf("contact/sales") >= 0) {
+      if(window.location.pathname.indexOf("contact/sales/accessibility") >= 0){
+
+      } else if(window.location.pathname.indexOf("contact/sales") >= 0) {
         document
           .querySelector(".Sales-ContactUs")
           .closest("main")
@@ -1324,29 +1336,31 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", link.textContent);
         });
 
-      } else if(window.location.pathname.indexOf("contacts") >= 0) {
-        // document
-        //   .querySelector(".Contact-Home")
-        //   .closest("main")
-        //   .setAttribute("daa-lh", "Body");
+      }else if(window.location.pathname.indexOf("contacts")>= 0){
 
-        // document
-        //   .querySelector(".Contact-Home-Wrapper")
-        //   .setAttribute("daa-lh", "Contact Home Wrapper");
+      } else if(window.location.pathname.indexOf("contact") >= 0) {
+        document
+          .querySelector(".Contact-Home")
+          .closest("main")
+          .setAttribute("daa-lh", "Body");
 
-        // document.querySelectorAll(".Contact-Home-Wrapper a").forEach((link) => {
-        //   link.setAttribute("daa-ll", link.textContent);
-        // });
+        document
+          .querySelector(".Contact-Home-Wrapper")
+          .setAttribute("daa-lh", "Contact Home Wrapper");
 
-        // document
-        //   .querySelector(".Hero-Banner")
-        //   .setAttribute("daa-lh", "Hero Banner");
+        document.querySelectorAll(".Contact-Home-Wrapper a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
 
-        // document.querySelectorAll(".Hero-Banner a").forEach((link) => {
-        //   link.setAttribute("daa-ll", link.textContent);
-        // });
+        document
+          .querySelector(".Hero-Banner")
+          .setAttribute("daa-lh", "Hero Banner");
 
-      } else {
+        document.querySelectorAll(".Hero-Banner a").forEach((link) => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
+
+      }else {
         document
           .querySelector(".Hero-Banner")
           .closest("main")

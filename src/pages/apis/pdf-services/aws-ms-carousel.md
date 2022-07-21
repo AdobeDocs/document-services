@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Carousel PDF
 
 carousel-adobe
 
-![AWS logo](../../images/adobe_aws_logo.png)
+![Adobe + AWS logos](../../images/adobe_aws_logo.png)
 
 ## AWS marketplace partnership
 
@@ -16,7 +16,7 @@ carousel-adobe
 
 carousel-micosoft
 
-![MS logo](../../images/adobe_ms_logo.png)
+![Adobe + Microsoft logos](../../images/adobe_ms_logo.png)
 
 ## Microsoft Power Automate Integration
 
@@ -26,7 +26,7 @@ carousel-micosoft
 
 carousel-ui-path
 
-![UiPath logo](../../images/Uipath_logo.png)
+![Adobe + Uipath logos](../../images/Uipath_logo.png)
 
 ## UiPath Integration
 
