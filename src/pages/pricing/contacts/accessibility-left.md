@@ -6,7 +6,7 @@ title : Adobe Developer - Document Service Accessibility Form - Form
 
 ## Interested in Early Access to the PDF Accessibility Auto-Tag API?
 
-Use this form to request early access to the PDF Accessibility Auto-Tag API. The API, powered by Adobe Sensei AI, improves the accessibility of PDF files by accurately auto-tagging content for better readability using screen readers and other assistive technology. 
+Use this form to request early access to the PDF Accessibility Auto-Tag API. The API, powered by Adobe Sensei AI, improves the accessibility of PDF files by auto-tagging content for better readability using screen readers and other assistive technology. 
 
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content"/>
 
@@ -14,7 +14,7 @@ Primary capabilities of the API include:
 
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content"/>
 
-- <b>Highly accurate content tagging:</b> Accurately tag table headings, rows, columns, paragraphs, lists, and headings in native or scanned PDFs using  Sensei AI to improve the navigation and reading experience for users of assistive technologies such as screen readers  
+- <b>Highly accurate content tagging:</b> Tag table headings, rows, columns, paragraphs, lists, and headings more accurately in native or scanned PDFs using  Sensei AI to improve the navigation and reading experience for users of assistive technologies such as screen readers  
 
 - <b>Reading order identification:</b> Identify the logical flow of information, even when columns or elements that span multiple pages are present.   
 
