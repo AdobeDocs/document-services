@@ -49,6 +49,15 @@ const PdfAccessibility = ({
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({})
 
+  const  getBadWords =(str)=> {
+    let badwords = ["death","kill","murder"]
+    let words = []
+    badwords.forEach(word => 
+      str.replace(/ /g, '').toLowerCase()
+        .includes(word.replace(/ /g, '').toLowerCase()) ? words.push(word) : null)
+    return words
+  }
+
   const onChnage = (e) => {
     if (e.target.id === "firstName") { setFormValue({ ...formValue, firstName: e.target.value }) }
     if (e.target.id === "lastName") { setFormValue({ ...formValue, lastName: e.target.value }) }
@@ -63,19 +72,65 @@ const PdfAccessibility = ({
   }
 
   const onSubmit = () => {
+    let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    var bad_words=new Array("death","kill","murder");
+    var checkBadWords
     let error = {};
-    if (_isEmpty(formValue?.firstName)) { error.firstName = "Required *" } else { error.firstName = "" }
-    if (_isEmpty(formValue?.lastName)) { error.lastName = "Required *" } else { error.lastName = "" }
-    if (_isEmpty(formValue?.business_email)) { error.business_email = "Required *" } else { error.business_email = "" }
-    if (_isEmpty(formValue?.company_website)) { error.company_website = "Required *" } else { error.company_website = "" }
+
+     if (_isEmpty(formValue?.firstName)) { 
+      error.firstName = "Required *" 
+    } else { 
+      if(bad_words.includes(formValue?.firstName)){
+        error.firstName = "Please avoid inappropriate words"
+      }else{
+        error.firstName = "" 
+      }
+    }
+
+   if (_isEmpty(formValue?.lastName)) {
+    error.lastName = "Required *" } 
+    else if(bad_words.includes(formValue?.lastName)){
+      error.lastName = "Please avoid inappropriate words"
+    }else { error.lastName = "" }
+
+    if (_isEmpty(formValue?.business_email)) { 
+      error.business_email = "Required *" } else { 
+        if(emailCheck.test(formValue?.business_email)){
+          error.business_email = ""
+        }else{
+          error.business_email = "Email address is not valid"
+        }
+     }
+     if (_isEmpty(formValue?.company_website)) { 
+      error.company_website = "Required *" } else if(bad_words.includes(formValue?.company_website)){
+        error.lastName = "Please avoid inappropriate words"
+      }else { error.company_website = "" }
+
     if (_isEmpty(formValue?.phone)) { error.phone = "Required *" } else { error.phone = "" }
-    if (_isEmpty(formValue?.job_title)) { error.job_title = "Required *" } else { error.job_title = "" }
+   if (_isEmpty(formValue?.job_title)) { 
+      error.job_title = "Required *" 
+    } else if(bad_words.includes(formValue?.job_title)){
+      error.job_title = "Please avoid inappropriate words"
+    }else{ error.job_title = "" }
+
     if (_isEmpty(formValue?.region)) { error.region = "Required *" } else { error.region = "" }
+
     if (_isEmpty(formValue?.expected_monthly_volume)) { error.expected_monthly_volume = "Required *" } else { error.expected_monthly_volume = "" }
-    if (_isEmpty(formValue?.use_case)) { error.use_case = "Required *" } else { error.use_case = "" }
+    if (_isEmpty(formValue?.use_case)) { 
+      error.use_case = "Required *" 
+    } else { 
+        let foundWords = getBadWords(formValue?.use_case)
+        checkBadWords = foundWords.length > 0
+       if(foundWords.length > 0){
+        error.use_case = "Please avoid inappropriate words"
+       }else{
+         error.use_case = "" 
+       }
+    }
     if (formValue?.checkbox !== true) { error.checkbox = "Required *" } else { error.checkbox = "" }
     seterrorMsg({ ...error })
-    if (!_isEmpty(formValue?.firstName) && !_isEmpty(formValue?.lastName) && !_isEmpty(formValue?.business_email) && !_isEmpty(formValue?.company_website) && !_isEmpty(formValue?.phone) && !_isEmpty(formValue?.job_title) && !_isEmpty(formValue?.region) && !_isEmpty(formValue?.expected_monthly_volume) && !_isEmpty(formValue?.use_case) && formValue?.checkbox == true) {
+
+     if (!_isEmpty(formValue?.firstName) && !bad_words.includes(formValue?.firstName) && !_isEmpty(formValue?.lastName) && !bad_words.includes(formValue?.lastName) && !_isEmpty(formValue?.business_email) && emailCheck.test(formValue?.business_email) && !_isEmpty(formValue?.company_website) && !bad_words.includes(formValue?.company_website) && !_isEmpty(formValue?.phone) && !_isEmpty(formValue?.job_title) && !bad_words.includes(formValue?.job_title) && !_isEmpty(formValue?.region) && !_isEmpty(formValue?.expected_monthly_volume) && !_isEmpty(formValue?.use_case) && !checkBadWords && !bad_words.includes(formValue?.use_case) && formValue?.checkbox == true) {
 
       let pdfAccessibilityData = {
         ...formValue,formType:'pdfAccessibility'
@@ -142,7 +197,7 @@ const PdfAccessibility = ({
         <InputField
           id="phone"
           label="Phone"
-          type="text"
+          type="number"
           maxLength="50"
           className="lnput-field"
           labelClassName="lable-content text-content"

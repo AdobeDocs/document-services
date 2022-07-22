@@ -317,9 +317,7 @@ const TechSupportContactUs = ({ }) => {
         if (formValue?.checkbox !== true) { error.checkbox = "Required *" } else { error.checkbox = "" }
         seterrorMsg({ ...error })
         if (!_isEmpty(formValue?.firstName) && !_isEmpty(formValue?.lastName) && !_isEmpty(formValue?.business_email) && !_isEmpty(formValue?.company_website) && !_isEmpty(formValue?.phone) && !_isEmpty(formValue?.expertise) && !_isEmpty(formValue?.issue_type) && !_isEmpty(formValue?.issue_sub_type) && !_isEmpty(formValue?.issue) && formValue?.checkbox == true) {
-            let techSupportData = {
-                ...formValue,formType:'techSupport'
-              }
+           
             alert("Thanks for your Submit")
         }
     }
