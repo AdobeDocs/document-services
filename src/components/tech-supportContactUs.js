@@ -368,6 +368,9 @@ const TechSupportContactUs = ({ }) => {
         seterrorMsg({ ...error })
 
         if (!_isEmpty(formValue?.firstName) && !bad_words.includes(formValue?.firstName) && !_isEmpty(formValue?.lastName) && !bad_words.includes(formValue?.lastName)  && !_isEmpty(formValue?.business_email) && emailCheck.test(formValue?.business_email) && !_isEmpty(formValue?.company_website) && !bad_words.includes(formValue?.company_website) && !_isEmpty(formValue?.phone) && !_isEmpty(formValue?.expertise) && !_isEmpty(formValue?.issue_type) && !_isEmpty(formValue?.issue_sub_type) && !_isEmpty(formValue?.issue) && !checkBadWords  && formValue?.checkbox == true) {
+            let techSupportData = {
+                ...formValue,formType:'techSupport'
+              }
             alert("Thanks for your Submit")
         }
     }

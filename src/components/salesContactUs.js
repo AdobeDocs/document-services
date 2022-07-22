@@ -133,7 +133,9 @@ const SalesContactUs = ({
     seterrorMsg({ ...error })
 
    if (!_isEmpty(formValue?.firstName) && !bad_words.includes(formValue?.firstName) && !_isEmpty(formValue?.lastName) && !bad_words.includes(formValue?.lastName) && !_isEmpty(formValue?.business_email) && emailCheck.test(formValue?.business_email) && !_isEmpty(formValue?.company_website) && !bad_words.includes(formValue?.company_website) && !_isEmpty(formValue?.phone) && !_isEmpty(formValue?.job_title) && !bad_words.includes(formValue?.job_title) && !_isEmpty(formValue?.region) && !_isEmpty(formValue?.expected_monthly_volume) && !_isEmpty(formValue?.use_case) && !checkBadWords && !bad_words.includes(formValue?.use_case) && formValue?.checkbox == true)  {
-     console.log('formValue',formValue);
+    let salesFormData = {
+      ...formValue,formType:'sales'
+    }
       alert("Thanks for your Submit")
     }
   }
