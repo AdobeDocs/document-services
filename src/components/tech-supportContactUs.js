@@ -316,20 +316,22 @@ const TechSupportContactUs = ({ }) => {
 
     const onSubmit = () => {
         let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-        var bad_words=new Array("death","kill","murder");
+        var blacklist = /\b(death|kill|murder)\b/;
         var checkBadWords
         let error = {};
 
+        
         if(_isEmpty(formValue?.firstName)){
             error.firstName = "Required *" 
-        }else if(bad_words.includes(formValue?.firstName)){
+        }else if(blacklist.test(formValue?.firstName)){
             error.firstName = "Please avoid inappropriate words"
         }else{
             error.firstName = "" 
         }
+
         if (_isEmpty(formValue?.lastName)) {
             error.lastName = "Required *" } 
-            else if(bad_words.includes(formValue?.lastName)){
+            else if(blacklist.test(formValue?.lastName)){
               error.lastName = "Please avoid inappropriate words"
             }else { error.lastName = "" }
 
@@ -342,7 +344,7 @@ const TechSupportContactUs = ({ }) => {
               }
         }
         if (_isEmpty(formValue?.company_website)) { 
-            error.company_website = "Required *" } else if(bad_words.includes(formValue?.company_website)){
+            error.company_website = "Required *" } else if(blacklist.test(formValue?.company_website)){
               error.lastName = "Please avoid inappropriate words"
         }else { error.company_website = "" }
 
@@ -352,7 +354,6 @@ const TechSupportContactUs = ({ }) => {
         if (_isEmpty(formValue?.issue_type)) { error.issue_type = "Required *" } else { error.issue_type = "" }
         if (_isEmpty(formValue?.issue_sub_type)) { error.issue_sub_type = "Required *" } else { error.issue_sub_type = "" }
 
-        if (_isEmpty(formValue?.issue)) { error.issue = "Required *" } else { error.issue = "" }
         if (_isEmpty(formValue?.issue)) { 
             error.issue = "Required *" 
           } else { 
@@ -367,7 +368,8 @@ const TechSupportContactUs = ({ }) => {
         if (formValue?.checkbox !== true) { error.checkbox = "Required *" } else { error.checkbox = "" }
         seterrorMsg({ ...error })
 
-        if (!_isEmpty(formValue?.firstName) && !bad_words.includes(formValue?.firstName) && !_isEmpty(formValue?.lastName) && !bad_words.includes(formValue?.lastName)  && !_isEmpty(formValue?.business_email) && emailCheck.test(formValue?.business_email) && !_isEmpty(formValue?.company_website) && !bad_words.includes(formValue?.company_website) && !_isEmpty(formValue?.phone) && !_isEmpty(formValue?.expertise) && !_isEmpty(formValue?.issue_type) && !_isEmpty(formValue?.issue_sub_type) && !_isEmpty(formValue?.issue) && !checkBadWords  && formValue?.checkbox == true) {
+        if (!_isEmpty(formValue?.firstName) && !blacklist.test(formValue?.firstName) && !_isEmpty(formValue?.lastName) && !blacklist.test(formValue?.lastName) && !_isEmpty(formValue?.business_email) && emailCheck.test(formValue?.business_email) && !_isEmpty(formValue?.company_website) && !blacklist.test(formValue?.company_website) && !_isEmpty(formValue?.phone) && !_isEmpty(formValue?.expertise) && !_isEmpty(formValue?.issue_sub_type) && !_isEmpty(formValue?.issue) && !checkBadWords  && formValue?.checkbox == true) {
+
             let techSupportData = {
                 ...formValue,formType:'techSupport'
               }
