@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Embed API  — menu & tool options
 
 ##### MENU & TOOL OPTIONS
 
-Programmatically enable or disable the left-hand panel, comments pane, toolbars, print, and download options
+Programmatically enable or disable the comments pane, toolbars, print, and download options
 
 
 - [See documentation](/document-services/docs/overview/pdf-embed-api/howtos_ui/#menu-and-tool-options)
@@ -24,7 +24,7 @@ Programmatically enable or disable the left-hand panel, comments pane, toolbars,
     adobeDCView.previewFile({
       content:{location: {url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf"}},
       metaData:{fileName: "Bodea Brochure.pdf"}
-    }, {"defaultViewMode": "FIT_PAGE", "showDownloadPDF": false});
+    }, {"showAnnotationTools": true, "showDownloadPDF": false});
   });
 </script>
 ```
