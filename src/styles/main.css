@@ -2162,12 +2162,7 @@ img[alt=adobe-support] {
     gap: 35px;
     display: grid;
 }
-.field-container-accessibility {
-    width: 55%;
-    grid-template-columns: 4fr 4fr;
-    gap: 35px;
-    display: grid;
-}
+
 
 .button-container {
     display: flex;
@@ -2268,12 +2263,7 @@ img[alt=adobe-support] {
     grid-template-columns: 4fr;
     margin-bottom: 10px;
 }
-.area-content-accessibility {
-    width: 55%;
-    display: grid;
-    grid-template-columns: 4fr;
-    margin-bottom: 10px;
-}
+
 
 .content-container {
     width: 60%;
@@ -2281,23 +2271,10 @@ img[alt=adobe-support] {
     margin-top: 10px;
     word-break: break-word;
 }
-.content-container-accessibility {
-    width: 55%;
-    display: flex;
-    margin-top: 10px;
-    word-break: break-word;
-}
+
 
 .head-container {
     width: 60%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    word-break: break-word;
-    text-align: left;
-}
-.head-container-accessibility {
-    width: 55%;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -2374,9 +2351,6 @@ img[alt=adobe-support] {
     .field-container {
         width: 90%;
     }
-    .field-container-accessibility {
-        width: 90%;
-    }
 
     .area-container{
         width: 90%;
@@ -2384,15 +2358,8 @@ img[alt=adobe-support] {
     .area-containers{
         width: 90%;
     }
-    .area-content-accessibility {
-        width: 90%;
-    }
 
     .content-container {
-        width: 90%;
-    }
-
-    .content-container-accessibility {
         width: 90%;
     }
 
@@ -2401,9 +2368,6 @@ img[alt=adobe-support] {
     }
 
     .head-container {
-        width: 90%;
-    }
-    .head-container-accessibility {
         width: 90%;
     }
 }
@@ -2455,4 +2419,33 @@ img[alt=adobe-support] {
 }
 .text-blade-header >div>div>div> h3 {
     padding-top: 20px !important;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px){
+    .head-container-accessibility {
+        width: 72%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        word-break: break-word;
+        text-align: left;
+    }
+    .field-container-accessibility {
+        width: 72%;
+        grid-template-columns: 4fr 4fr;
+        gap: 35px;
+        display: grid;
+    }
+    .area-content-accessibility {
+        width: 72%;
+        display: grid;
+        grid-template-columns: 4fr;
+        margin-bottom: 10px;
+    }
+    .content-container-accessibility {
+        width: 72%;
+        display: flex;
+        margin-top: 10px;
+        word-break: break-word;
+    }
 }
