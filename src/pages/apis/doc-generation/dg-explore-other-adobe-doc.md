@@ -8,7 +8,7 @@ title: Adobe Developer — Automate Document Generation | Document Explore | Ado
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Create Source Support](../../images/create_secure_support.svg)
+![EMPTY_ALT](../../images/create_secure_support.svg)
 
 #### Services
 
@@ -18,7 +18,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Extract-v2](../../images/Extract-v2.svg)
+![EMPTY_ALT](../../images/Extract-v2.svg)
 
 ### Extract
 
@@ -30,7 +30,7 @@ Extract text, tables, images, and document structure.
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Customizable Experience](../../images/customizable_experience.svg)
+![EMPTY_ALT](../../images/customizable_experience.svg)
 
 ### Embed
 

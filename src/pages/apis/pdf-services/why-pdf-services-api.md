@@ -8,7 +8,7 @@ title: Adobe Developer — PDF Services API  —  Why PDF Services API
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size horizontal-align-heading"/>
 
-![Create, secure, and convert PDF documents](../../images/create_secure_support.svg " ")
+![EMPTY_ALT](../../images/create_secure_support.svg)
 
 ### Create, secure, and convert PDF documents
 
@@ -17,7 +17,7 @@ Create a PDF from Microsoft Office documents, protect the content, and convert t
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size horizontal-align-heading"/>
 
-![Dynamically automate your PDF document workflow](../../images/modify_pages.svg " ")
+![EMPTY_ALT](../../images/modify_pages.svg)
 
 ### Modify PDFs and optimize output
 
@@ -26,7 +26,7 @@ Programmatically alter a document, such as reordering, inserting, and rotating p
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest" className="align-left icon-xl-size link horizontal-align-heading linking"/>
 
-![Cloud-based API platform enables flexibility at scale](../../images/cloud_services.svg " ")
+![EMPTY_ALT](../../images/cloud_services.svg)
 
 ### Leverage Adobe's cloud-based services
 

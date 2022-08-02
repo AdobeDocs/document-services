@@ -257,7 +257,7 @@ const TechSupportContactUs = ({ }) => {
     const [formValue, setFormValue] = useState({})
     const [dynamicFaqLink, setDynamicFaqLink] = useState("FAQ Article:Integration:Setting up your CID Key in 3 easy steps.")
     const [subIssueTypeOptions, setSubIssueTypeOptions] = useState()
-    const [link, setLink] = useState("/faq/tech-support/#account-management")
+    const [link, setLink] = useState("")
 
     const { location } = useContext(Context);
 
@@ -271,23 +271,22 @@ const TechSupportContactUs = ({ }) => {
         let issue_sub_link;
         let hrefArray;
         let val;
-
         hrefArray = issue_sub_url_array.filter((d) => {
             return d.issue_type === formValue.issue_type && d.sub_issue_type === formValue.issue_sub_type
         })
         if (hrefArray.length || formValue.issue_type) {
             if (hrefArray.length) {
-                val = `/faq/tech-support/#${hrefArray[0]?.sub_issue_type_id}`
+                val = `/document-services/faq/tech-support/#${hrefArray[0]?.sub_issue_type_id}`
                 issue_sub_link = `${location.pathname}/#${hrefArray[0]?.sub_issue_type_id}`
             } else {
                 issue_url_array.map((issue_url) => {
                     if (formValue.issue_type === issue_url.title) {
-                        return val = `/faq/tech-support/#${issue_url.id}`, issue_link = `${location.pathname}/#${issue_url.id}`
+                        return val = `/document-services/faq/tech-support/#${issue_url.id}`, issue_link = `${location.pathname}/#${issue_url.id}`
                     }
                 })
             }
-            setLink(withPrefix(val))
-            setDynamicFaqLink(withPrefix(issue_sub_link ? issue_sub_link : issue_link))
+            setLink(val)
+            setDynamicFaqLink(issue_sub_link ? issue_sub_link : issue_link)
         }
     }, [formValue.issue_type, formValue.issue_sub_type])
 
@@ -322,12 +321,13 @@ const TechSupportContactUs = ({ }) => {
         }
     }
 
+    console.log('link_',link);
     return (
         <form className="form-container Tech-Support-Form" name="Tech-Support-Form">
             <div className="head-container">
                 <div className="caption">Get tech support.</div>
                 <div className="faq-text">Please fill out the form below and an Adobe Expert will contact you within 3 business days.</div>
-                <div className="faq-text">To get faster issue resolution, please visit our FAQ istead. <button className="faq-button-content" onClick={() => (window.location.href = "/faq/tech-support/#account-management")}><label className="button-label">FAQ</label></button></div>
+                <div className="faq-text">To get faster issue resolution, please visit our FAQ istead. <button className="faq-button-content" onClick={() => (window.location.href = "/document-services/faq/tech-support/")}><label className="button-label">FAQ</label></button></div>
                 <div className="faq-text">For sales inquiries, submit a sales consultation request <b><a className="link-content" href="../sales/">here.</a></b></div>
             </div>
             <div className="field-container">
@@ -447,7 +447,7 @@ const TechSupportContactUs = ({ }) => {
                 <div className="summary-container">
                     <div className="caption">In a hurry?</div>
                     <div className="faq-text">Get answers within minutes using the dynamic FAQ link below:</div>
-                    <div className="faq-text"><a href={link} className="link-content">{dynamicFaqLink}</a></div>
+                    <div className="faq-text"><a href={link === "" ? "/document-services/faq/tech-support/" : link} className="link-content">{dynamicFaqLink}</a></div>
                 </div>
             </div>
             <InputField

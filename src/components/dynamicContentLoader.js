@@ -140,7 +140,7 @@ const DynamicContentLoader = ({
                     id="iframevideo"
                     src="https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1"
                     title="YouTube video player"
-                    srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1 daa-ll="Adobe PDF Services API Overview"><img src=${resourceImage} alt='Adobe PDF Services API Overview'><span >▶</span></a>`}
+                    srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/GCpSy78IDoE?&autoplay=1 daa-ll="Adobe PDF Services API Overview"><img src=${resourceImage} alt=""><span >▶</span></a>`}
                     css={css`
                       border: 0;
                       width: 100%;
@@ -215,7 +215,7 @@ const DynamicContentLoader = ({
                               <img
                                 className="featured-image"
                                 src={data.Thumbnail}
-                                alt={data.Title}
+                                alt={""}
                               />
                             </div>
                             <p className="blog-title blog-title-height">{data.Title}</p>
@@ -319,7 +319,7 @@ const DynamicContentLoader = ({
                         <div className="blog-img-container">
                           <img
                             src={getIframeImage(data.content)}
-                            alt="Illustration"
+                            alt={""}
                           />
                         </div>
                         <p className="blog-title">{data.title}</p>
@@ -355,7 +355,7 @@ const DynamicContentLoader = ({
                         <img
                           className="logo"
                           src={data.Thumbnail}
-                          alt={`${data.Title} Customer Story`}
+                          alt={""}
                         />
                       </a>
                       <div className="industry">{data.Title}</div>

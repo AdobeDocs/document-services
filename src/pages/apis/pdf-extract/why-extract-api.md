@@ -11,7 +11,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 
 <TextBlock slots="image, heading, text" width="25%" theme="lightest" className="align-left icon-xl-size padding-top-zero horizontal-align-heading" />
 
-![Comprehensively Extract information from PDF Documents](../../images/comprehensive-content-extraction.svg " ")
+![EMPTY_ALT](../../images/comprehensive-content-extraction.svg)
 
 ### Comprehensive content extraction
 
@@ -22,7 +22,7 @@ Extract all PDF document elements including text, tables, and images within a st
 
 <TextBlock slots="image, heading, text" width="25%" theme="lightest"  className="align-left icon-xl-size padding-top-zero horizontal-align-heading"/>
 
-![Extract meaningfully PDF with structural semantics](../../images/document-structure-understanding.svg " ")
+![EMPTY_ALT](../../images/document-structure-understanding.svg)
 
 ### Document structure understanding
 
@@ -32,7 +32,7 @@ Classify text objects such as headings, lists, footnotes, and paragraphs that ma
 
 <TextBlock slots="image, heading, text" width="25%" theme="lightest"  className="align-left icon-xl-size padding-top-zero horizontal-align-heading"/>
 
-![AI-driven PDF extraction](../../images/high-fidelity.svg " ")
+![EMPTY_ALT](../../images/high-fidelity.svg)
 
 ### Highly accurate results
 
@@ -42,7 +42,7 @@ Adobe Sensei AI technology delivers highly accurate data extraction across a bro
 
 <TextBlock slots="image, heading, text" width="25%" theme="lightest"  className="align-left icon-xl-size padding-top-zero horizontal-align-heading"/>
 
-![Platform flexibility for PDF Extract](../../images/platform-agnostic.svg " ")
+![EMPTY_ALT](../../images/platform-agnostic.svg)
 
 ### Platform agnostic
 

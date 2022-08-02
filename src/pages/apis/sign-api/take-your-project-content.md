@@ -5,7 +5,7 @@ description: Secure, powerful, and easy to use APIs to integrate e-signatures in
 
 <TextBlock slots="image, heading, text1, text2" width="33%" theme="lightest" className="align-left icon-xl-size padding-top-zero horizontal-align-heading link py-0 easy-to-implement-cta" />
 
-![Comprehensively Extract information from PDF Documents](../../images/3_Icon_Easy.svg " ")
+![EMPTY_ALT](../../images/3_Icon_Easy.svg)
 
 ### Easy to implement.
 
@@ -15,7 +15,7 @@ Acrobat Sign service features are available via easy-to-use REST APIs. Integrate
 
 <TextBlock slots="image, heading, text1, text2" width="33%" theme="lightest" className="align-left icon-xl-size padding-top-zero horizontal-align-heading link py-0 secure-compliant-cta" />
 
-![Comprehensively Extract information from PDF Documents](../../images/3_Icon_Secure.svg " ")
+![EMPTY_ALT](../../images/3_Icon_Secure.svg)
 
 ### Secure and compliant.
 
@@ -26,7 +26,7 @@ automation is a reality.
 
 <TextBlock slots="image, heading, text1, text2" width="33%" theme="lightest" className="align-left icon-xl-size padding-top-zero horizontal-align-heading link py-0 scalable-cta" />
 
-![Comprehensively Extract information from PDF Documents](../../images/3_Icon_Scalable.svg " ")
+![EMPTY_ALT](../../images/3_Icon_Scalable.svg)
 
 ### Scalable.
 

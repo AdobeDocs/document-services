@@ -8,7 +8,7 @@ title: Adobe Developer — PDF Embed API  — explore-adobe
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
-![Create_secure_support](../../images/create_secure_support.svg)
+![EMPTY_ALT](../../images/create_secure_support.svg)
 
 #### Services
 
@@ -18,7 +18,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img" iconStyle/>
 
-![Extract-v2](../../images/Extract-v2.svg)
+![EMPTY_ALT](../../images/Extract-v2.svg)
 
 #### Extract
 
@@ -31,7 +31,7 @@ Extract text, table, images and document structure.
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img"/>
 
-![Rapid_results](../../images/Generate.svg)
+![EMPTY_ALT](../../images/Generate.svg)
 
 #### Generate
 
