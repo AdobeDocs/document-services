@@ -67,7 +67,7 @@ export const onRenderBody = ({setHeadComponents}) => {
         };
       `}</script>
     ),
-    <script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>,
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>,
     process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
       <script async src="https://www.adobe.com/marketingtech/main.min.js"></script>
     )
