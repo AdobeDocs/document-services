@@ -6,4 +6,4 @@ title: Adobe Developer — DC Platform SDK Resources
 
 ### Have questions?
 
-- [Go to FAQ](../pricing/contacts.md)
+- [Go to FAQ](../pricing/contact.md)
