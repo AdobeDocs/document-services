@@ -219,7 +219,7 @@ const SalesContactUs = ({}) => {
           config
         );
         if (response.status === 200) {
-          window.location.href = `/pricing/contact/sales/confirmation`;
+          window.location.href = `/document-services/pricing/contact/sales/confirmation/`;
         }
       } catch (err) {
         console.log("err", err);
@@ -242,7 +242,7 @@ const SalesContactUs = ({}) => {
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}
-          <a className="link-content" href="/pricing/contact/support/">
+          <a className="link-content" href="/document-services/pricing/contact/support/">
             here.
           </a>
         </div>
