@@ -536,7 +536,7 @@ const TechSupportContactUs = ({}) => {
           config
         );
         if (response.status === 200) {
-          window.location.href = `/pricing/contact/support/confirmation`;
+          window.location.href = `/document-services/pricing/contact/support/confirmation/`;
         }
       } catch (err) {
         console.log("err", err);
