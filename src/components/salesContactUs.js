@@ -368,6 +368,7 @@ const SalesContactUs = ({}) => {
             id="checkbox"
             name="checkbox"
             onChange={e => onChnage(e)}
+            checked={formValue?.checkbox}
           />
         </div>
         <div className="text-content checkbox-text-container">

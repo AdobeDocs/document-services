@@ -2449,3 +2449,20 @@ img[alt=adobe-support] {
         word-break: break-word;
     }
 }
+
+.py-confirmation {
+    padding-top: var(--spectrum-global-dimension-size-300) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-0) !important;
+}
+
+.padding-confiramtion {
+    padding-bottom: var(--spectrum-global-dimension-size-500) !important;
+}
+
+.confirmation-heading >div>div>div h3 {
+    margin-bottom: var(--spectrum-global-dimension-size-5) !important;
+}
+.confirmation-h-pad > div > div > div {
+    padding-left: var(--spectrum-global-dimension-size-0) !important;
+    padding-right: var(--spectrum-global-dimension-size-0) !important;
+} 
