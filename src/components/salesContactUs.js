@@ -242,7 +242,7 @@ const SalesContactUs = ({}) => {
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}
-          <a className="link-content" href="../support/">
+          <a className="link-content" href="/pricing/contact/support/">
             here.
           </a>
         </div>
