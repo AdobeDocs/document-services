@@ -221,7 +221,7 @@ const PdfAccessibility = ({}) => {
             checkbox: false
           });
           alert(
-            "Thank you! Your information has been successfully submitted. You will receive an acknowledgement email shortly."
+            "Thank you! Your information has been successfully submitted."
           );
         }
       } catch (err) {
@@ -233,14 +233,7 @@ const PdfAccessibility = ({}) => {
     <form className="form-container Sales-Form" id="my_form">
       <div className="head-container-accessibility">
         <div className="caption">
-          Get info about pricing, billing, and licensing.
-        </div>
-        <div className="faq-text">
-          Please visit our{" "}
-          <a className="link-content" href="/document-services/faq/sales/">
-            FAQ
-          </a>{" "}
-          or fill out the form below to speak with an Adobe rep.
+          Request early access to the PDF Accessibility Auto-Tag API
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}
