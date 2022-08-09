@@ -323,13 +323,15 @@ const TechSupportContactUs = ({}) => {
   useEffect(() => {
     const Options = jsonData.category
       .filter(category => {
-        return category.category_name === formValue.issue_type;
+        return category.category_name === formValue.issue_type
       })
       .map(filtered_category =>
         filtered_category.questions.map((question, index) => {
-          return { label: question.qst, key: index };
+          return {label: question.qst, key: index};
         })
       );
+       let keys = {key:Options[0]?.length+1 ,label:'Other'}
+       Options[0]?.push(keys)
     setSubIssueTypeOptions(...Options);
   }, [formValue.issue_type]);
 
@@ -348,7 +350,10 @@ const TechSupportContactUs = ({}) => {
       if (hrefArray.length) {
         val = `/document-services/faq/tech-support/#${hrefArray[0]?.sub_issue_type_id}`;
         issue_sub_link = `${location.pathname}/#${hrefArray[0]?.sub_issue_type_id}`;
-      } else {
+      } else if(formValue.issue_sub_type === 'Other'){
+        val = `/document-services/faq/tech-support/`;
+        issue_sub_link = `/document-services/faq/tech-support/`;
+      }else {
         issue_url_array.map(issue_url => {
           if (formValue.issue_type === issue_url.title) {
             return (
