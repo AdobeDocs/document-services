@@ -341,7 +341,7 @@ const SalesContactUs = ({}) => {
           className="selectors"
           textClassName="lable-content text-content"
           options={volumeOPtions}
-          initialOption="Select your anticipated velocity"
+          initialOption="Select your anticipated volume"
           value={formValue?.expected_monthly_volume}
           onChange={e => onChnage(e)}
           errorMsg={errorMsg.expected_monthly_volume}
