@@ -7,4 +7,4 @@
 Have questions about the Document Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-* [Contact us](../pricing/contacts.md)
+* [Contact us](../pricing/contact.md)

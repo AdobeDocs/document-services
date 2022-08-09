@@ -1291,8 +1291,29 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     });
     } else if (window.location.pathname.indexOf("pricing") >= 0) {
       // make sure to differentiate between pricing/contact and regular pricing pages
-      if(window.location.pathname.indexOf("contact/sales/accessibility") >= 0){
-
+      if(window.location.pathname.indexOf("contact/sales/confirmation")>= 0) {
+        document
+        .querySelector(".sale-confirmation")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+        document.querySelectorAll('.explore-content a').forEach((link)=>{
+          link.setAttribute("daa-ll", link.textContent)
+        })
+        document.querySelectorAll(".explore-content-two a").forEach((link)=>{
+          link.setAttribute("daa-ll", link.textContent)
+          if(link.textContent === 'Start free trial'){
+            link.href = `${baseurl}`;
+          }
+        })
+      }else if(window.location.pathname.indexOf("contact/sales/accessibility") >= 0){
+        document
+        .querySelector(".heading-accessibility")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+        document.querySelectorAll(".accessibility-content a").forEach(link=>{
+          link.setAttribute("daa-ll", link.textContent)
+        })
+        
       } else if(window.location.pathname.indexOf("contact/sales") >= 0) {
         document
           .querySelector(".Sales-ContactUs")
@@ -1314,6 +1335,20 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         document.querySelectorAll(".Sales-Form a").forEach((link) => {
           link.setAttribute("daa-ll", `Sales | ${link.textContent}`);
         });
+      } else if(window.location.pathname.indexOf("contact/support/confirmation") >= 0 ){
+        document
+        .querySelector(".support-confirmation")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+
+        document.querySelectorAll(".support-explore-content a").forEach((link)=>{
+          console.log('support-explore-content',link);
+          link.setAttribute("daa-ll", link.textContent);
+        })
+
+        document.querySelectorAll(".support-explore-content-two a").forEach((link)=>{
+          link.setAttribute("daa-ll", link.textContent);
+        })
       } else if(window.location.pathname.indexOf("contact/support") >= 0) {
         document
           .querySelector(".Tech-Support-ContactUs")

@@ -177,6 +177,6 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 Start free trial with 1,000 PDF transactions for up to 6 months.
 
 - [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
-- [Contact us](src/pages/pricing/contacts.md)
+- [Contact us](src/pages/pricing/contact.md)
 
 <APIPixelRetargeting/>

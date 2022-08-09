@@ -43,15 +43,14 @@ const volumeOPtions = [
   }
 ];
 
-const SalesContactUs = ({}) => {
+const PdfAccessibility = ({}) => {
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({});
-  // const [loading, setLoading] = useState(true)
 
-  const getBadWords = str => {
-    let badwords = ["death", "kill", "murder"];
+  const getBlackListWords = str => {
+    let blacklistWords = ["death", "kill", "murder"];
     let words = [];
-    badwords.forEach(word =>
+    blacklistWords.forEach(word =>
       str
         .replace(/ /g, "")
         .toLowerCase()
@@ -61,6 +60,7 @@ const SalesContactUs = ({}) => {
     );
     return words;
   };
+
   const onChnage = e => {
     if (e.target.id === "firstName") {
       setFormValue({ ...formValue, firstName: e.target.value });
@@ -94,25 +94,23 @@ const SalesContactUs = ({}) => {
     }
   };
 
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault();
-    let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var blacklist = /\b(death|kill|murder)\b/;
-    var checkBadWords;
-    let error = {};
     let randomString = _times(16, () =>
       ((Math.random() * 0xf) << 0).toString(16)
     ).join("");
-    // setLoading(true)
+    let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var blacklist = /\b(death|kill|murder)\b/;
+    var checkBlackWords;
+    let error = {};
 
     if (_isEmpty(formValue?.firstName)) {
       error.firstName = "Required *";
-    } else if (blacklist.test(formValue?.firstName)) {
+    } else if (blacklist.test(formValue.firstName)) {
       error.firstName = "Please avoid inappropriate words";
     } else {
       error.firstName = "";
     }
-
     if (_isEmpty(formValue?.lastName)) {
       error.lastName = "Required *";
     } else if (blacklist.test(formValue?.lastName)) {
@@ -130,7 +128,6 @@ const SalesContactUs = ({}) => {
     } else {
       error.business_email = "";
     }
-
     if (_isEmpty(formValue?.company_website)) {
       error.company_website = "Required *";
     } else if (blacklist.test(formValue?.company_website)) {
@@ -138,13 +135,11 @@ const SalesContactUs = ({}) => {
     } else {
       error.company_website = "";
     }
-
     if (_isEmpty(formValue?.phone)) {
       error.phone = "Required *";
     } else {
       error.phone = "";
     }
-
     if (_isEmpty(formValue?.job_title)) {
       error.job_title = "Required *";
     } else if (blacklist.test(formValue?.job_title)) {
@@ -152,7 +147,6 @@ const SalesContactUs = ({}) => {
     } else {
       error.job_title = "";
     }
-
     if (_isEmpty(formValue?.region)) {
       error.region = "Required *";
     } else {
@@ -163,12 +157,11 @@ const SalesContactUs = ({}) => {
     } else {
       error.expected_monthly_volume = "";
     }
-
     if (_isEmpty(formValue?.use_case)) {
       error.use_case = "Required *";
     } else {
-      let foundWords = getBadWords(formValue?.use_case);
-      checkBadWords = foundWords.length > 0;
+      let foundWords = getBlackListWords(formValue?.use_case);
+      checkBlackWords = foundWords.length > 0;
       if (foundWords.length > 0) {
         error.use_case = "Please avoid inappropriate words";
       } else {
@@ -181,6 +174,7 @@ const SalesContactUs = ({}) => {
       error.checkbox = "";
     }
     seterrorMsg({ ...error });
+
     if (
       !_isEmpty(formValue?.firstName) &&
       !blacklist.test(formValue?.firstName) &&
@@ -197,12 +191,12 @@ const SalesContactUs = ({}) => {
       !_isEmpty(formValue?.region) &&
       !_isEmpty(formValue?.expected_monthly_volume) &&
       !_isEmpty(formValue?.use_case) &&
-      !checkBadWords &&
+      !checkBlackWords &&
       formValue?.checkbox == true
     ) {
-      let salesFormData = {
+      let pdfAccessibilityData = {
         ...formValue,
-        formType: "sales",
+        formType: "pdfAccessibility",
         formId: randomString
       };
       try {
@@ -212,33 +206,34 @@ const SalesContactUs = ({}) => {
             Accept: "application/json",
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(salesFormData)
+          body: JSON.stringify(pdfAccessibilityData)
         };
-        const response = await fetch(
+        const resp = await fetch(
           `https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage`,
           config
         );
-        if (response.status === 200) {
-          window.location.href = `/document-services/pricing/contact/sales/confirmation/`;
+        const response = await resp.json();
+        if (resp.status === 200) {
+          setFormValue({
+            firstName: "",
+            lastName: "",
+            use_case: "",
+            checkbox: false
+          });
+          alert(
+            "Thank you! Your information has been successfully submitted."
+          );
         }
       } catch (err) {
         console.log("err", err);
       }
     }
   };
-
   return (
-    <form className="form-container Sales-Form">
-      <div className="head-container">
+    <form className="form-container Sales-Form" id="my_form">
+      <div className="head-container-accessibility">
         <div className="caption">
-          Get info about pricing, billing, and licensing.
-        </div>
-        <div className="faq-text">
-          Please visit our{" "}
-          <a className="link-content" href="/document-services/faq/sales/">
-            FAQ
-          </a>{" "}
-          or fill out the form below to speak with an Adobe rep.
+          Request early access to the PDF Accessibility Auto-Tag API
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}
@@ -247,7 +242,7 @@ const SalesContactUs = ({}) => {
           </a>
         </div>
       </div>
-      <div className="field-container">
+      <div className="field-container-accessibility">
         <InputField
           id="firstName"
           label="First Name"
@@ -271,11 +266,11 @@ const SalesContactUs = ({}) => {
           errorMsg={errorMsg.lastName}
         />
       </div>
-      <div className="field-container">
+      <div className="field-container-accessibility">
         <InputField
           id="business_email"
           label="Business Email"
-          type="email"
+          type="text"
           maxLength="50"
           className="lnput-field"
           labelClassName="lable-content text-content"
@@ -295,7 +290,7 @@ const SalesContactUs = ({}) => {
           errorMsg={errorMsg.company_website}
         />
       </div>
-      <div className="field-container">
+      <div className="field-container-accessibility">
         <InputField
           id="phone"
           label="Phone"
@@ -319,7 +314,7 @@ const SalesContactUs = ({}) => {
           errorMsg={errorMsg.job_title}
         />
       </div>
-      <div className="field-container">
+      <div className="field-container-accessibility">
         <SelectField
           id="region"
           label="Region"
@@ -352,14 +347,15 @@ const SalesContactUs = ({}) => {
         textAreaPlaceholder="Use Case"
         type="textarea"
         rows="6"
-        areaClassName="area-content text-content"
+        areaClassName="area-containers text-content"
         labelClassName="lable-content text-content"
         placeholder="Please describe your intended application of our PDF Services APIs."
         value={formValue?.use_case}
         onChange={e => onChnage(e)}
         errorMsg={errorMsg.use_case}
+        divClassName="area-content-accessibility"
       />
-      <div className="content-container">
+      <div className="content-container-accessibility">
         <div className="checkbox-container">
           <CheckBoxField
             className={`input-checkbox ${
@@ -368,6 +364,7 @@ const SalesContactUs = ({}) => {
             id="checkbox"
             name="checkbox"
             onChange={e => onChnage(e)}
+            value={formValue?.checkbox}
             checked={formValue?.checkbox}
           />
         </div>
@@ -389,7 +386,7 @@ const SalesContactUs = ({}) => {
           for more details.
         </div>
       </div>
-      <div className="content-container text-content">
+      <div className="content-container-accessibility text-content">
         <div>
           By clicking Submit, I agree that I have read and accepted the{" "}
           <a
@@ -411,9 +408,9 @@ const SalesContactUs = ({}) => {
   );
 };
 
-SalesContactUs.propTypes = {
+PdfAccessibility.propTypes = {
   theme: PropTypes.string,
   content: PropTypes.string
 };
 
-export { SalesContactUs };
+export { PdfAccessibility };
