@@ -2466,3 +2466,10 @@ img[alt=adobe-support] {
     padding-left: var(--spectrum-global-dimension-size-0) !important;
     padding-right: var(--spectrum-global-dimension-size-0) !important;
 } 
+.btn-disable {
+    cursor:wait !important;
+    opacity: 0.5;
+}
+.btn-cursor {
+    cursor:wait !important;
+}

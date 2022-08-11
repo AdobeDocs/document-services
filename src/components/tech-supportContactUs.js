@@ -317,6 +317,7 @@ const TechSupportContactUs = ({}) => {
   );
   const [subIssueTypeOptions, setSubIssueTypeOptions] = useState();
   const [link, setLink] = useState("");
+  const [btnDisable, setBtnDisable] = useState(false)
 
   const { location } = useContext(Context);
 
@@ -421,7 +422,9 @@ const TechSupportContactUs = ({}) => {
   };
 
   const onSubmit = async( e) => {
+
     e.preventDefault();
+    setBtnDisable(true)
 
     let randomString = _times(16, () =>
       ((Math.random() * 0xf) << 0).toString(16)
@@ -433,73 +436,89 @@ const TechSupportContactUs = ({}) => {
 
     if (_isEmpty(formValue?.firstName)) {
       error.firstName = "Required *";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.firstName)) {
       error.firstName = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.firstName = "";
     }
 
     if (_isEmpty(formValue?.lastName)) {
       error.lastName = "Required *";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.lastName)) {
       error.lastName = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.lastName = "";
     }
 
     if (_isEmpty(formValue?.business_email)) {
       error.business_email = "Required *";
+      setBtnDisable(false)
     } else if (!emailCheck.test(formValue?.business_email)) {
       error.business_email = "Email address is not valid";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.business_email)) {
       error.business_email = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.business_email = "";
     }
 
     if (_isEmpty(formValue?.company_website)) {
       error.company_website = "Required *";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.company_website)) {
       error.company_website = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.company_website = "";
     }
 
     if (_isEmpty(formValue?.phone)) {
       error.phone = "Required *";
+      setBtnDisable(false)
     } else {
       error.phone = "";
     }
 
     if (_isEmpty(formValue?.expertise)) {
       error.expertise = "Required *";
+      setBtnDisable(false)
     } else {
       error.expertise = "";
     }
     if (_isEmpty(formValue?.issue_type)) {
       error.issue_type = "Required *";
+      setBtnDisable(false)
     } else {
       error.issue_type = "";
     }
     if (_isEmpty(formValue?.issue_sub_type)) {
       error.issue_sub_type = "Required *";
+      setBtnDisable(false)
     } else {
       error.issue_sub_type = "";
     }
 
     if (_isEmpty(formValue?.issue)) {
       error.issue = "Required *";
+      setBtnDisable(false)
     } else {
       let foundWords = getBadWords(formValue?.issue);
       checkBadWords = foundWords.length > 0;
       if (foundWords.length > 0) {
         error.issue = "Please avoid inappropriate words";
+        setBtnDisable(false)
       } else {
         error.issue = "";
       }
     }
     if (formValue?.checkbox !== true) {
       error.checkbox = "Required *";
+      setBtnDisable(false)
     } else {
       error.checkbox = "";
     }
@@ -764,8 +783,8 @@ const TechSupportContactUs = ({}) => {
         </div>
       </div>
       <div className="button-container">
-        <button className="button-content" onClick={onSubmit} type="submit">
-          <label className="button-label">Submit</label>
+        <button className={ btnDisable ? "btn-disable button-content" : "button-content"}  disabled={btnDisable}  onClick={onSubmit} type="submit">
+          <label className={btnDisable ? "btn-cursor button-label" : "button-label"} >Submit</label>
         </button>
       </div>
     </form>
