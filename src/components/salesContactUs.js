@@ -46,7 +46,7 @@ const volumeOPtions = [
 const SalesContactUs = ({}) => {
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({});
-  // const [loading, setLoading] = useState(true)
+  const [btnDisable, setBtnDisable] = useState(false)
 
   const getBadWords = str => {
     let badwords = ["death", "kill", "murder"];
@@ -95,7 +95,10 @@ const SalesContactUs = ({}) => {
   };
 
   const onSubmit = async (e) => {
+
     e.preventDefault();
+    setBtnDisable(true)
+
     let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var blacklist = /\b(death|kill|murder)\b/;
     var checkBadWords;
@@ -107,76 +110,93 @@ const SalesContactUs = ({}) => {
 
     if (_isEmpty(formValue?.firstName)) {
       error.firstName = "Required *";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.firstName)) {
       error.firstName = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.firstName = "";
     }
 
     if (_isEmpty(formValue?.lastName)) {
       error.lastName = "Required *";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.lastName)) {
       error.lastName = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.lastName = "";
     }
 
     if (_isEmpty(formValue?.business_email)) {
       error.business_email = "Required *";
+      setBtnDisable(false)
     } else if (!emailCheck.test(formValue?.business_email)) {
       error.business_email = "Email address is not valid";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.business_email)) {
       error.business_email = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.business_email = "";
     }
 
     if (_isEmpty(formValue?.company_website)) {
       error.company_website = "Required *";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.company_website)) {
       error.company_website = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.company_website = "";
     }
 
     if (_isEmpty(formValue?.phone)) {
       error.phone = "Required *";
+      setBtnDisable(false)
     } else {
       error.phone = "";
     }
 
     if (_isEmpty(formValue?.job_title)) {
       error.job_title = "Required *";
+      setBtnDisable(false)
     } else if (blacklist.test(formValue?.job_title)) {
       error.job_title = "Please avoid inappropriate words";
+      setBtnDisable(false)
     } else {
       error.job_title = "";
     }
 
     if (_isEmpty(formValue?.region)) {
       error.region = "Required *";
+      setBtnDisable(false)
     } else {
       error.region = "";
     }
     if (_isEmpty(formValue?.expected_monthly_volume)) {
       error.expected_monthly_volume = "Required *";
+      setBtnDisable(false)
     } else {
       error.expected_monthly_volume = "";
     }
 
     if (_isEmpty(formValue?.use_case)) {
       error.use_case = "Required *";
+      setBtnDisable(false)
     } else {
       let foundWords = getBadWords(formValue?.use_case);
       checkBadWords = foundWords.length > 0;
       if (foundWords.length > 0) {
         error.use_case = "Please avoid inappropriate words";
+        setBtnDisable(false)
       } else {
         error.use_case = "";
       }
     }
     if (formValue?.checkbox !== true) {
       error.checkbox = "Required *";
+      setBtnDisable(false)
     } else {
       error.checkbox = "";
     }
@@ -403,8 +423,8 @@ const SalesContactUs = ({}) => {
         </div>
       </div>
       <div className="button-container">
-        <button className="button-content" onClick={onSubmit} type="submit">
-          <label className="button-label">Submit</label>
+        <button  className={ btnDisable ? "btn-disable button-content" : "button-content"}  disabled={btnDisable} onClick={onSubmit} type="submit">
+          <label className={btnDisable ? "btn-cursor button-label" : "button-label"} >Submit</label>
         </button>
       </div>
     </form>
