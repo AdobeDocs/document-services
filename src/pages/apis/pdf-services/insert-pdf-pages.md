@@ -19,7 +19,6 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 ```bash
 // Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Combine-PDF
-
 curl --location --request POST 'https://pdf-services.adobe.io/operation/combinepdf' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
 --header 'Content-Type: application/json' \
@@ -61,7 +60,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
         }
     ]
 }'
-
 // Legacy API can be found here
 // https://acrobatservices.adobe.com/document-services/index.html#post-combinePDF
 ```
@@ -72,7 +70,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
 // node src/insertpages/insert-pdf-pages.js
-
     const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
     const getPageRangesForFirstFile = () => {
@@ -140,7 +137,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 // Run the sample:
 // cd InsertPDFPages/
 // dotnet run InsertPDFPages.csproj
-
   namespace InsertPDFPages
   {
     class Program
@@ -214,7 +210,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
         }
     }
   }
-
 ```
 
 #### Java

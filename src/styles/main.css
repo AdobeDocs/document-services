@@ -780,7 +780,7 @@ img[alt=thumbnail] {
         background-image: url('../pages/images/home-carousel-three@2x.png') !important;
         width: 23rem !important;
     }
-   
+
 
     .sign-api-hero {
         background-image: url('../pages/images/1_Marquee_Device_Mob.png') !important;
@@ -1174,7 +1174,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         width: 100% !important;
         background-position: bottom center !important;
     }
-    
+
     .abm-landing-page-hero {
         margin-top: var(--spectrum-global-dimension-size-200) !important;
         background-image: url('../pages/images/1_Marquee_Device_enterprise_mob.png');
@@ -1356,7 +1356,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     border-color: var(--spectrum-global-color-gray-50) !important;
 }
 .hero-summary-btn-color .spectrum-Button span{
-  
+
     color: var(--spectrum-global-color-gray-50) !important;
 }
 
@@ -1399,7 +1399,7 @@ pre .prism-code.spectrum-Code  span.token.string{
     background-position: center center;
     background-size: contain;
     margin: 0 auto;
-    
+
 }
 
 
@@ -1424,7 +1424,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         background-position: center center;
         background-size: contain;
         margin: 0 auto;
-    
+
     }
 
     .sample-integration_ms {
@@ -1436,7 +1436,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         background-position: center center;
         background-size: contain;
         margin: 0 auto;
-        
+
     }
 }
 
@@ -1460,10 +1460,10 @@ pre .prism-code.spectrum-Code  span.token.string{
         background-position: center center;
         background-size: contain;
         margin: 0 auto;
-    
+
     }
 
-    .sample-integration_ms {       
+    .sample-integration_ms {
         width: 220px !important;
         height: 76px !important;
         background-image: url('../pages/images/3_Icon_MicrosoftPowerAutomate_mob.png') !important;
@@ -1471,7 +1471,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         background-position: center center;
         background-size: contain;
         margin: 0 auto;
-        
+
     }
 }
 
@@ -1543,7 +1543,7 @@ pre .prism-code.spectrum-Code  span.token.string{
 
 @media screen and (max-width: 767px){
 
-    
+
 .how-it-work-text-align > div > div > div{
     width: 100% !important;
 }
@@ -1554,7 +1554,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         var(--spectrum-global-dimension-size-4600) -
           var(--spectrum-global-dimension-size-225)
       ) !important;
-    }    
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -1562,13 +1562,13 @@ pre .prism-code.spectrum-Code  span.token.string{
     .how-it-work-text-align > div > div > div{
         width: 100% !important;
     }
-    
+
     .how-it-work-img-align > div > div > p{
         width: 100% !important;
         height: calc(
             var(--spectrum-global-dimension-size-4600) -
               var(--spectrum-global-dimension-size-225)
-          ) !important; 
+          ) !important;
     }
 }
 
@@ -1610,7 +1610,7 @@ pre .prism-code.spectrum-Code  span.token.string{
         background-repeat: no-repeat;
         background-size: cover !important;
     }
-   
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -2450,7 +2450,7 @@ img[alt=adobe-support] {
         background-repeat: no-repeat;
         background-size: cover !important;
     }
-   
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -2840,7 +2840,7 @@ img[alt=adobe-support] {
 .confirmation-h-pad > div > div > div {
     padding-left: var(--spectrum-global-dimension-size-0) !important;
     padding-right: var(--spectrum-global-dimension-size-0) !important;
-} 
+}
 .btn-disable {
     cursor:wait !important;
     opacity: 0.5;
@@ -2893,7 +2893,7 @@ img[alt=adobe-support] {
     }
     .accessibility-auto-tag-hero{
         background-image: url('../pages/images/visual_autoTag_mob.png') !important;
-        
+
     }
     .autoTagAPI-content div > p{
         width: 700px !important;
@@ -2916,7 +2916,7 @@ img[alt=adobe-support] {
         width: 282px !important;
         /* padding-top: 20px; */
     }
-    
+
 }
 
 .iocn-size div > p > span > img{
@@ -2942,7 +2942,7 @@ img[alt=adobe-support] {
     /* width: 1050px; */
     width: 100%;
     height: auto;
-    
+
 }
 .headerContent{
     text-align: left;
@@ -3012,7 +3012,7 @@ img[alt=adobe-support] {
 .confirmation-content > div > div > div {
     font-size: var(--spectrum-body-m-text-size, var(--spectrum-global-dimension-font-size-200));
     padding-top: var(--spectrum-global-dimension-size-300) !important;
-} 
+}
 
 .intertitialWrapper {
     width: 100%;
@@ -3106,11 +3106,11 @@ img[alt=adobe-support] {
     width: 100%;
     scroll-margin-block-start: 102px;
     /*Adds margin to the top of the viewport*/
-    
+
     scroll-margin-block-end: 110pxx;
     /*Adds margin to the bottom of the viewport*/
 }
-  
+
 .tabBlockAlign > div > div > div > div > div > span {
     line-height: initial !important;
 }

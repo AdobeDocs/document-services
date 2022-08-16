@@ -25,11 +25,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
-    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
     "splitoption": {
-        "pageCount": 9
-    }
-}'
 
 // Legacy API can be found here
 // https://acrobatservices.adobe.com/document-services/index.html#post-splitPDF

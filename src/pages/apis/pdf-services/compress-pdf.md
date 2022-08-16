@@ -21,7 +21,6 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 ```bash
 // Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Compress-PDF
-
 curl --location --request POST 'https://pdf-services.adobe.io/operation/compresspdf' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
 --header 'Content-Type: application/json' \
@@ -30,42 +29,31 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
     "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
     "compressionLevel": "MEDIUM"
 }'
-
 // Legacy API can be found here
 // https://acrobatservices.adobe.com/document-services/index.html#post-compressPDF
 ```
-
-#### Node js
-
-```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
 // node src/compresspdf/compress-pdf-with-options.js
-
  const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
-
  try {
    // Initial setup, create credentials instance.
    const credentials =  PDFServicesSdk.Credentials
        .serviceAccountCredentialsBuilder()
        .fromFile("pdfservices-api-credentials.json")
        .build();
-
    // Create an ExecutionContext using credentials and create a new operation instance.
    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
        compressPDF = PDFServicesSdk.CompressPDF,
        compressPDFOperation = compressPDF.Operation.createNew();
-
    // Set operation input from a source file.
    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/compressPDFInput.pdf');
    compressPDFOperation.setInput(input);
-
    // Provide any custom configuration options for the operation.
    const options = new compressPDF.options.CompressPDFOptions.Builder()
        .withCompressionLevel(PDFServicesSdk.CompressPDF.options.CompressionLevel.MEDIUM)
        .build();
    compressPDFOperation.setOptions(options);
-
    // Execute the operation and Save the result to the specified location.
    compressPDFOperation.execute(executionContext)
        .then(result => result.saveAsFile('output/compressPDFWithOptionsOutput.pdf'))
@@ -89,7 +77,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
 // Run the sample:
 // cd CompressPDF/
 // dotnet run CompressPDFWithOptions.csproj
-
   namespace CompressPDFWithOptions
   {
     class Program
