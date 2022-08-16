@@ -17,7 +17,7 @@ Start your free 6-month trial today with 1,000 PDF transactions
 
 Obtain free credentials
 
-- [Get started](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
+- [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 
 

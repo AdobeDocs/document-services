@@ -18,7 +18,7 @@ Get 1,000 document transactions for free.
 
 abm-landing-page-hero
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 
 <!-- Why Adobe Document Services -->
@@ -108,7 +108,7 @@ See how our customers are building smarter and faster document experiences.
 
 Activate your free trial and build better document workflows today.
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Talk to an expert](/pricing/contact/)
 
 <APIPixelRetargeting/>

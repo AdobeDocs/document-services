@@ -36,7 +36,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <TextBlock slots="buttons" isCentered theme="lightest" className="padding-top-zero why-doc-get-started-btn Why-Document-Generation-API" primaryOutline/>
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
 
 <!-- Key Features of Adobe Document Generation API -->
 <WrapperComponent slots="content" repeat="1" theme="light" className="Key-features-of-Adobe-Document-Generation-API"/>
@@ -45,7 +45,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <TextBlock slots="buttons" isCentered theme="light" className="Key-features-of-Adobe-Document-Generation-API padding-top-zero why-doc-get-started-btn"/>
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
 
 <AwsUipathCarousel />
 
