@@ -38,4 +38,4 @@ Extract text, table, images and document structure.
 Generate PDF and Word documents from custom word templates.
 
 * [Learn more](/src/pages/apis/doc-generation.md)
-* [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
+* [Demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
