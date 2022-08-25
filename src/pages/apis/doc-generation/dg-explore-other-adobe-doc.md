@@ -37,4 +37,4 @@ Extract text, tables, images, and document structure.
 Embed high-fidelity PDFs in web apps with analytics.
 
 * [Learn more](/src/pages/apis/pdf-embed.md)
-* [Demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)
+* [Demo](https://documentservices.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)

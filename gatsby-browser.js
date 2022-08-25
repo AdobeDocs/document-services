@@ -125,7 +125,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       window.location.host.indexOf("adobe.io") >= 0
     ) {
       baseurl =
-        "https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html";
+        "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
 
       // visualizerBaseurl =
       // "https://www.adobe.com/go/extract_visualizer";

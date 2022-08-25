@@ -28,7 +28,7 @@ Extract text, table, images and document structure.
 Generate PDF and Word documents from custom word templates.
 
 * [Learn more](/src/pages/apis/doc-generation.md)
-* [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
+* [Demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
 
 
 
@@ -41,4 +41,4 @@ Generate PDF and Word documents from custom word templates.
 Embed high-fidelity PDFs in web apps with analytics.
 
 * [Learn more](/src/pages/apis/pdf-embed.md)
-* [Demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)
+* [Demo](https://documentservices.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)
