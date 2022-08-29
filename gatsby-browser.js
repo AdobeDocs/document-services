@@ -116,8 +116,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       isLocal = false;
     }
     // stage
-    let baseurl =
-      "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
+    let baseurl = "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
+      // "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
 
     // production
     if (
@@ -824,6 +824,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     });
 
     } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
+
       // document
       //   .querySelector(".Hero-Banner")
       //   .closest("main")
@@ -917,6 +918,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelectorAll(".Key-features-of-Adobe-PDF-Extract-API a")
       .forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
+        if(link.textContent === 'Start free trial'){
+          link.href = `${baseurl}?api=pdf-extract-api`;
+        }
       });
 
     document
