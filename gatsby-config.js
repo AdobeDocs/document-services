@@ -61,6 +61,11 @@ module.exports = {
             description: 'Build workflows on Microsoft Power Platform easily',
             path: 'apis/microsoft-pa-integration/'
           },
+          { 
+            title: 'PDF Accessibility Auto-Tag',
+            description: 'Auto-tag PDF content to improve accessibility',
+            path: 'apis/pdf-accessibility-auto-tag/'
+          }
         ]
       },
       { 

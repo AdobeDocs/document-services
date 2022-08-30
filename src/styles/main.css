@@ -687,6 +687,7 @@ img[alt=thumbnail] {
     background-image: url('../pages/images/home-carousel-three.png') !important;
 }
 
+
 .sign-api-hero {
     background-image: url('../pages/images/1_Marquee_Device.png') !important;
 }
@@ -779,6 +780,7 @@ img[alt=thumbnail] {
         background-image: url('../pages/images/home-carousel-three@2x.png') !important;
         width: 23rem !important;
     }
+   
 
     .sign-api-hero {
         background-image: url('../pages/images/1_Marquee_Device_Mob.png') !important;
@@ -2472,4 +2474,165 @@ img[alt=adobe-support] {
 }
 .btn-cursor {
     cursor:wait !important;
+}
+
+
+.autoTagherobgImage {
+    background: rgb(250, 105, 85) url('../pages/images/autoTagBg.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+.autoTagapiHeroAssetImg {
+    margin: 0 auto !important;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+    height: 21rem;
+}
+.autoTagAPI-content div > p{
+    width: 865px !important;
+}
+
+.accessibility-auto-tag-hero{
+    background-image: url('../pages/images/2_Marquee_VisualAutoTag.png') !important;
+}
+
+
+@media screen and (min-width: 1024px){
+
+    .autoTagapiHeroAssetImg  {
+        margin: 0 auto !important;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        width: 48.625rem;
+        height: 18rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1023px){
+    .autoTagapiHeroAssetImg  {
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        width: 44rem;
+        height: 18rem;
+    }
+    .accessibility-auto-tag-hero{
+        background-image: url('../pages/images/visual_autoTag_mob.png') !important;
+        
+    }
+    .autoTagAPI-content div > p{
+        width: 700px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width:767px)  {
+    .autoTagapiHeroAssetImg  {
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        width: 20rem;
+        height: 8rem;
+    }
+
+    .accessibility-auto-tag-hero{
+        background-image: url('../pages/images/visual_autoTag_mob.png') !important;
+    }
+    .autoTagAPI-content div > p{
+        width: 282px !important;
+        /* padding-top: 20px; */
+    }
+    
+}
+
+.iocn-size div > p > span > img{
+    width: 85% !important;
+}
+.iocn-size .spectrum-Body  .gatsby-resp-image-wrapper img{
+    text-align: left;
+    width: auto !important;
+}
+.autoMain{
+    background-image: url('../pages/images/accessibility_Background.jpg') !important;
+    width: 100% !important;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.autoTagContainer {
+    width: 1060px;
+    height: auto;
+    margin: 0 auto;
+}
+.autoTagVisual{
+    /* width: 1050px; */
+    width: 100%;
+    height: auto;
+    
+}
+.headerContent{
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.autoTagBtm{
+    width: 550px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+@media (min-width: 320px) and (max-width:767px)  {
+    .autoMain{
+        background-image: url('../pages/images/accessibility_mob-bg.jpg') !important;
+        width: 100% !important;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .autoTagContainer {
+        width: auto !important;
+        height: auto;
+        margin: 0 auto;
+    }
+    .autoTagBtm{
+        width: auto !important;
+        margin: 0 auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .img-alignment{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1024px) {
+    .autoTagContainer {
+        width: auto !important;
+        height: auto;
+        margin: 0 auto;
+    }
+    .img-alignment{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.tech-usecse{
+    padding: var(--spectrum-global-dimension-size-0) !important
+}
+
+.tech-usecse-align-left {
+    padding-top: var(--spectrum-global-dimension-size-0) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-0) !important;
+    text-align: left !important;
 }
