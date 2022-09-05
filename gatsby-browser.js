@@ -118,7 +118,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     // stage
     let baseurl = "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
       // "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
-
+    let referenceBaseUrl = "https://developer-stage.adobe.com/document-services/docs/apis/"
     // production
     if (
       window.location.host.indexOf("developer.adobe.com") >= 0 ||
@@ -126,7 +126,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     ) {
       baseurl =
         "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
-
+        referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
       // visualizerBaseurl =
       // "https://www.adobe.com/go/extract_visualizer";
     }
@@ -356,6 +356,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
       document.querySelectorAll(".home-code-block div.tabItem").forEach(link=>{
         link.setAttribute("daa-ll", link.title);
+      })
+      document.querySelectorAll('.home-code-block a').forEach(link=>{
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}`;
+        }
       })
       document
         .querySelector(".Use-cases-for-Adobe-Document-Services")

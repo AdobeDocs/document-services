@@ -44,4 +44,4 @@ Add credentials to your code and experience the power of the API
 
 
 - [View docs](/document-services/docs/overview/pdf-extract-api/)
-- [View API Reference](https://www.adobe.com/go/dcsdk_APIdocs)
+- [View API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Extract-PDF)
