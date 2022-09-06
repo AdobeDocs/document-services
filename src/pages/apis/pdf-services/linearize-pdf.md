@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — Linear size PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" hasCodeBlock theme="dark" className="bgBlue link linking"/>
+<TextBlock slots="heading, buttons, text, text1" hasCodeBlock theme="dark" className="bgBlue link linking linerarize-pdf"/>
 
 ### Linearize a PDF file for fast web view
 

@@ -1,4 +1,4 @@
-<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link linking"/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link linking secure-PDF-file"/>
 
 ### Secure a PDf file and set restrictions
 

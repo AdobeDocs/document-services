@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  —  Combine PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1"  theme="dark" hasCodeBlock className="bgBlue link linking"/>
+<TextBlock slots="heading, buttons, text, text1"  theme="dark" hasCodeBlock className="bgBlue link linking combine-pdf"/>
 
 ### Combine multiple documents into a pdf file
 

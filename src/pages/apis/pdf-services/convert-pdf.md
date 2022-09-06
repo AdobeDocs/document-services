@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  —  Convert PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link linking"/>
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link linking convert-pdf"/>
 
 ### Convert a PDF file to other formats
 

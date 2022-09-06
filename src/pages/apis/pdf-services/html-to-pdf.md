@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  —  HTML to PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link linking"/>
+<TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link linking create-pdf-html"/>
 
 ### Create a PDF file from HTML
 

@@ -36,7 +36,7 @@ Download ready to run samples for Node.js, .Net, Java and Python
 
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline className='align-left horizontal-align link' headerElementType="h2" />
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline className='align-left horizontal-align link extract-stepper-api-reference' headerElementType="h2" />
 
 ## Step 3
 
