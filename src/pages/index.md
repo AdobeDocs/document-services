@@ -105,7 +105,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 
 
-<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://www.adobe.com/go/dcsdk_APIdocs"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block' />
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block' />
 
 ### Create PDF from Word
 

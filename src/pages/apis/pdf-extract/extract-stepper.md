@@ -36,7 +36,7 @@ Download ready to run samples for Node.js, .Net, Java and Python
 
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline className='align-left horizontal-align link' headerElementType="h2" />
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline className='align-left horizontal-align link extract-stepper-api-reference' headerElementType="h2" />
 
 ## Step 3
 
@@ -44,4 +44,4 @@ Add credentials to your code and experience the power of the API
 
 
 - [View docs](/document-services/docs/overview/pdf-extract-api/)
-- [View API Reference](https://www.adobe.com/go/dcsdk_APIdocs)
+- [View API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Extract-PDF)
