@@ -15,7 +15,7 @@
     "@adobe/gatsby-theme-aio": "^3.23.10",
     "gatsby": "^3.6.0",
     "lottie-web": "^5.9.4",
-    "react": "^17.0.0",
+    "react": "^18.2.0",
     "react-dom": "^17.0.0"
   },
   "scripts": {
