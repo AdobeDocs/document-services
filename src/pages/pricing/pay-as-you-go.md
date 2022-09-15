@@ -2,11 +2,9 @@
 title: Adobe Developer — DC Platform SDK Resources
 ---
 
-<TextBlock slots="heading, text" width="100%" theme="light"  alignment="yes"  className="py-0 text-align-left border-right div-p-0 left-content link linking" />
+<TextBlock slots="heading" width="100%" theme="light"  alignment="yes"  className="py-0 text-align-left border-right div-p-0 left-content link linking" />
 
 ### Pay-as-you-go
-
-**$0.05 per** [Document Transaction](https://www.adobe.com/go/pdftoolsapi_licensing)
 
 <TextBlock slots="text" width="100%" theme="light"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 list-points border-right div-p-0 left-content"/>
 
