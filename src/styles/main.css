@@ -496,7 +496,7 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
     padding-left: var(--spectrum-global-dimension-size-150);
 } */
 .pricing-title-right > div > div > div {
-    padding-bottom: var(--spectrum-global-dimension-size-300);
+    /* padding-bottom: var(--spectrum-global-dimension-size-300); */
 }
 .bg-grey > div {
     margin: auto;

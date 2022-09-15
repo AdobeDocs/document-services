@@ -577,7 +577,7 @@ const TechSupportContactUs = ({}) => {
           within 3 business days.
         </div>
         <div className="faq-text">
-          To get faster issue resolution, please visit our FAQ istead.{" "}
+          To get faster issue resolution, please visit our FAQ instead.{" "}
           <button
             className="faq-button-content"
             onClick={() =>
