@@ -28,11 +28,11 @@ Download ready to run samples for Node.js, Java, and .NET
 - [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples)
 
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline  className="align-left horizontal-align link" headerElementType="h2"/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline  className="align-left horizontal-align link services-step-three" headerElementType="h2"/>
 
 ## Step 3
 
 Add credentials to your code and run!
 
 - [See documentation](/document-services/docs/overview/)
-- [API Reference](https://www.adobe.com/go/dcsdk_APIdocs)
+- [API Reference](https://developer-stage.adobe.com/document-services/docs/apis/)

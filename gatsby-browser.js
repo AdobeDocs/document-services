@@ -1178,7 +1178,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".key-features-code-block a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-
+      document.querySelectorAll(".services-step-three a").forEach(link => {
+        if(link.textContent === "API Reference"){
+          link.href = `${referenceBaseUrl}`;
+        }
+      });
       //codeblock
       document
         .querySelector(".pdf-content-extraction")
