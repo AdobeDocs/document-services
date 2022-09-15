@@ -100,12 +100,16 @@ module.exports = {
             path: 'document-services/docs/overview/pdf-services-api/index.md'
           },
           {
-            title: 'PDF Extract API',
-            path: 'document-services/docs/overview/pdf-extract-api/index.md'
-          },
-          {
             title: 'Document Generation API',
             path: 'document-services/docs/overview/document-generation-api/index.md'
+          },
+          {
+            title: 'PDF Electronic Seal API',
+            path: 'document-services/docs/overview/pdf-electronic-seal-api/index.md'
+          },
+          {
+            title: 'PDF Extract API',
+            path: 'document-services/docs/overview/pdf-extract-api/index.md'
           },
           {
             title: 'PDF Embed API',
