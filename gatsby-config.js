@@ -115,6 +115,10 @@ module.exports = {
             title: 'PDF Embed API',
             path: 'document-services/docs/overview/pdf-embed-api/index.md'
           },
+          {
+            title: 'PDF Accessibility Auto-Tag API',
+            path: 'document-services/docs/overview/pdf-accessibility-auto-tag-api/index.md'
+          }
         ]
       }
     ],
