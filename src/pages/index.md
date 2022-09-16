@@ -53,7 +53,7 @@ positioning and natural reading order and placed into a structured JSON file for
 processing in NLP, RPA, content republishing or data analysis solutions. PDF Extract API works
 on both scanned and native PDFs and is included with PDF Services API.
 
-- [Try the demo](https://www.adobe.com/go/extract_visualizer)
+- [Try the demo](https://documentservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
 ![EMPTY_ALT](images/pdfExtract.jpg)
@@ -73,7 +73,7 @@ dynamic documents with conditional text, images, lists, and tables. Signature wo
 a cinch with the Adobe Acrobat Sign integration, and Document Generation is included with PDF
 Services API.
 
-- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
+- [Try the demo](https://stage.documentservices.adobe.com/dc-docgen-playground/index.html#/)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
 
@@ -89,7 +89,7 @@ can provide a rich PDF viewing experience and enable digital collaboration and d
 analytics for helpful user insights. Implement this API in minutes with a few lines of code and
 samples for Angular and React.
 
-- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
+- [Try the demo](https://stage.documentservices.adobe.com/view-sdk/viewer.js)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
 ![EMPTY_ALT](images/pdfEmbed.jpg)
