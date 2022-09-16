@@ -120,6 +120,10 @@ module.exports = {
             path: 'document-services/docs/overview/pdf-accessibility-auto-tag-api/index.md'
           }
         ]
+      },
+      {
+        title: "Rest APIs",
+        path: 'document-services/docs/apis/index.md'
       }
     ],
     techSupportFAQMenus: [
