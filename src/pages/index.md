@@ -73,7 +73,7 @@ dynamic documents with conditional text, images, lists, and tables. Signature wo
 a cinch with the Adobe Acrobat Sign integration, and Document Generation is included with PDF
 Services API.
 
-- [Try the demo](https://stage.documentservices.adobe.com/dc-docgen-playground/index.html#/)
+- [Try the demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
 
@@ -89,7 +89,7 @@ can provide a rich PDF viewing experience and enable digital collaboration and d
 analytics for helpful user insights. Implement this API in minutes with a few lines of code and
 samples for Angular and React.
 
-- [Try the demo](https://stage.documentservices.adobe.com/view-sdk/viewer.js)
+- [Try the demo](https://documentservices.adobe.com/view-sdk-demo/index.html)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
 ![EMPTY_ALT](images/pdfEmbed.jpg)

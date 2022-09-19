@@ -25,7 +25,7 @@ Generate PDF and Word documents from Word templates and JSON data.
 
 apiHeroAssetImg doc-gen-invoice
 
-- [Try the demo](https://stage.documentservices.adobe.com/dc-docgen-playground/index.html#/)
+- [Try the demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
 
 
 <!-- Why Document Generation API -->

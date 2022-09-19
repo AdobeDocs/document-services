@@ -29,7 +29,7 @@ Free JavaScript API to embed high-fidelity PDFs, enable collaboration, and see a
 
 apiHeroAssetImg doc-embed-hero
 
-- [Try the demo](https://www.adobe.com/go/pdfEmbedAPI_demo)
+- [Try the demo](https://documentservices.adobe.com/view-sdk-demo/index.html)
 
 
 
