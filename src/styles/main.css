@@ -2636,3 +2636,9 @@ img[alt=adobe-support] {
     padding-bottom: var(--spectrum-global-dimension-size-0) !important;
     text-align: left !important;
 }
+
+
+.confirmation-content > div > div > div {
+    font-size: var(--spectrum-body-m-text-size, var(--spectrum-global-dimension-font-size-200));
+    padding-top: var(--spectrum-global-dimension-size-200) !important;
+} 
