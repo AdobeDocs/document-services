@@ -25,7 +25,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/extractp
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
-    "assetID": "e8d013a8-efef-4e0f-844c-3eea5b409155",
+    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
     "renditionsToExtract": [
         "tables",
         "figures"
