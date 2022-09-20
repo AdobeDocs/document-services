@@ -29,6 +29,6 @@ Get the Adobe Document Tagger Microsoft Word add-in and check out our [sample te
 
 ## Step 3
 
-Add credentials to your code and run!  [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Document-Generation)
+Add credentials to your code and run!  [API Reference](https://developer-stage.adobe.com/document-services/docs/apis/#tag/Document-Generation)
 
 - [See documentation](/document-services/docs/overview/document-generation-api/)
