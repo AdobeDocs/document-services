@@ -2640,5 +2640,5 @@ img[alt=adobe-support] {
 
 .confirmation-content > div > div > div {
     font-size: var(--spectrum-body-m-text-size, var(--spectrum-global-dimension-font-size-200));
-    padding-top: var(--spectrum-global-dimension-size-200) !important;
+    padding-top: var(--spectrum-global-dimension-size-300) !important;
 } 
