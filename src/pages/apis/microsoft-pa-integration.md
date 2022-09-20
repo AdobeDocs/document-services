@@ -24,7 +24,7 @@ Start your free trial today and get 1,000 free document transactions.
 
 microsoftPAHeroImage
 
-- [Try for free](https://www.adobe.com/go/powerautomate_getstarted)
+- [Try for free](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="Uplevel-Your-DocumentTitle"/>
 
@@ -40,7 +40,7 @@ microsoftPAHeroImage
 
 Start your trial today and get 1,000 free document transactions.
 
-- [Try for free](https://www.adobe.com/go/powerautomate_getstarted)
+- [Try for free](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 
 
 <WrapperComponent slots="content" theme="lightest" className="Benefits-For-Enterprises"/>
