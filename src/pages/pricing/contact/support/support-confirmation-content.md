@@ -8,9 +8,9 @@ An Adobe expert will be reaching out within the next few business days.
 
 Meanwhile, we encourage you to explore our <a title='DeveloperResources' href="/document-services/resources/">Developer Resources</a>, <a title='QuickStart' href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/">Quickstart guide</a>, or <a title='TechSupportFaq' href="/document-services/faq/tech-support/">Tech Support FAQ.</a>
 
-<TextBlock slots="text, buttons" width="100%" theme="lightest"  alignment="yes" primaryOutline  className="padding-confiramtion text-align-left div-p-0  link linking how-it-work-richText support-explore-content-two confirmation-h-pad" />
+<TextBlock slots="text, buttons" width="100%" theme="lightest"  alignment="yes" primaryOutline  className="padding-confiramtion text-align-left div-p-0  link linking how-it-work-richText support-explore-content-two confirmation-h-pad confirmation-content" />
  
-We also invite you to search for and ask your questions on our formus below.
+We also invite you to search for and ask your questions on our forums below.
 
 - [Ask on Forums](https://community.adobe.com/t5/document-services-apis/ct-p/ct-Document-Cloud-SDK?filter=all&sort=latest_replies&tabid=discussions)
 - [Visit FAQ](/faq/tech-support/)
