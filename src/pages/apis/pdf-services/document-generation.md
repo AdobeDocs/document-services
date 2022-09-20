@@ -9,7 +9,7 @@ variantsTypePrimary='primary' variantsTypeSecondary='cta' isPrimaryBtn  primaryO
 ### PDF and Word document generation with dynamic data
 
 - [Learn more](/src/pages/apis/doc-generation.md)
-- [Try the demo](https://adobe.com/go/dcdocgen_api_demo)
+- [Try the demo](https://documentservices.adobe.com/dc-docgen-playground/index.html#/)
 
 
 
