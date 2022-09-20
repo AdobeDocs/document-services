@@ -28,7 +28,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 --data-raw '{
     "assets": [
         {
-            "assetID": "ce8fe9da-99f2-4d01-999e-42b9ce22ec5f",
+            "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
             "pageRanges": [
                 {
                     "start": 1,
@@ -37,7 +37,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
             ]
         },
         {
-            "assetID": "4f497053-8359-47ed-bc05-c34a0e5e4a8c",
+            "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
             "pageRanges": [
                 {
                     "start": 4
@@ -45,7 +45,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
             ]
         },
         {
-            "assetID": "527a6ad0-086f-4682-be5c-8d340c9c08a1",
+            "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
             "pageRanges": [
                 {
                     "start": 1
@@ -53,7 +53,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
             ]
         },
         {
-            "assetID": "aefd44fb-49ea-43c8-b4aa-ede453ff47b2",
+            "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
             "pageRanges": [
                 {
                     "start": 2

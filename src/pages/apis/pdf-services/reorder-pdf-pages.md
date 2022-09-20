@@ -28,7 +28,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 --data-raw '{
     "assets": [
         {
-            "assetID": "ebe92ced-7893-4f8d-9ece-1579030dd981",
+            "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
             "pageRanges": [
                 {
                     "start": 3,

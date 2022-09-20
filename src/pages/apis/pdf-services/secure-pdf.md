@@ -28,7 +28,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
         "userPassword": "user_password"
     },
     "encryptionAlgorithm": "AES_128",
-    "assetID": "b22fb87c-d75b-4c0f-920c-949862e79f43"
+    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718"
 }'
 
 // Legacy API can be found here 
