@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-use-cases-page-content-content-publishing-employee-onboarding-materials-md",
-    "path": "/use-cases/page-content/content-publishing/employee-onboarding-materials/",
-    "result": {"pageContext":{"frontmatter":{"title":"Document Services API Use Case: Employee Onboarding Materials"}}},
-    "staticQueryHashes": ["1440646406","3695678887","858854441","915530536"]}
+{"componentChunkName":"component---src-pages-use-cases-page-content-content-publishing-employee-onboarding-materials-md","path":"/use-cases/page-content/content-publishing/employee-onboarding-materials/","result":{"pageContext":{"frontmatter":{"title":"Document Services API Use Case: Employee Onboarding Materials"}}},"staticQueryHashes":["1440646406","3695678887","858854441","915530536"]}

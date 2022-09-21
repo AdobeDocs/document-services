@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-apis-pdf-services-document-services-product-cards-md",
-    "path": "/apis/pdf-services/document-services-product-cards/",
-    "result": {"pageContext":{"frontmatter":{"title":"Adobe Developer — PDF Services API  —  Explore other Adobe Document services"}}},
-    "staticQueryHashes": ["1440646406","3695678887","858854441","915530536"]}
+{"componentChunkName":"component---src-pages-apis-pdf-services-document-services-product-cards-md","path":"/apis/pdf-services/document-services-product-cards/","result":{"pageContext":{"frontmatter":{"title":"Adobe Developer — PDF Services API  —  Explore other Adobe Document services"}}},"staticQueryHashes":["1440646406","3695678887","858854441","915530536"]}

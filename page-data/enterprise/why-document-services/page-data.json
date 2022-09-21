@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-enterprise-why-document-services-md",
-    "path": "/enterprise/why-document-services/",
-    "result": {"pageContext":{"frontmatter":{"title":"Adobe Document APIs for Enterprise Developers","description":"Adobe Document APIs for Enterprise Developers."}}},
-    "staticQueryHashes": ["1440646406","3695678887","858854441","915530536"]}
+{"componentChunkName":"component---src-pages-enterprise-why-document-services-md","path":"/enterprise/why-document-services/","result":{"pageContext":{"frontmatter":{"title":"Adobe Document APIs for Enterprise Developers","description":"Adobe Document APIs for Enterprise Developers."}}},"staticQueryHashes":["1440646406","3695678887","858854441","915530536"]}

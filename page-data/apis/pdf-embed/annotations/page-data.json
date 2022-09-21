@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-apis-pdf-embed-annotations-md",
-    "path": "/apis/pdf-embed/annotations/",
-    "result": {"pageContext":{"frontmatter":{"title":"Adobe Developer — PDF Embed API  — annotations"}}},
-    "staticQueryHashes": ["1440646406","3695678887","858854441","915530536"]}
+{"componentChunkName":"component---src-pages-apis-pdf-embed-annotations-md","path":"/apis/pdf-embed/annotations/","result":{"pageContext":{"frontmatter":{"title":"Adobe Developer — PDF Embed API  — annotations"}}},"staticQueryHashes":["1440646406","3695678887","858854441","915530536"]}
