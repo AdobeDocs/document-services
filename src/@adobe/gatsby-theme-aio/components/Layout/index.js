@@ -27,8 +27,8 @@ import {
   SEARCH_PARAMS,
   SIDENAV_WIDTH,
   trailingSlashFix
-} from '../../utils';
-import { adobeIndexes } from '../../../algolia/helpers/get-products-indexes.js';
+} from '@adobe/gatsby-theme-aio/src/utils';
+import { adobeIndexes } from '@adobe/gatsby-theme-aio/algolia/helpers/get-products-indexes.js';
 import '@spectrum-css/vars/dist/spectrum-global.css';
 import '@spectrum-css/vars/dist/spectrum-medium.css';
 import '@spectrum-css/vars/dist/spectrum-large.css';
