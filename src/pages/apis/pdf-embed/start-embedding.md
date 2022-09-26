@@ -32,4 +32,4 @@ Copy JavaScript code or download samples for React and Angular
 
 Add credentials to your code and run!
 
-- [See documentation](/document-services/docs/overview/pdf-embed-api/)
+* [See documentation](/document-services/docs/overview/pdf-embed-api/)

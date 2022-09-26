@@ -43,10 +43,10 @@ Quickly publish sales collateral to the web and automate your entire sales exper
 
 ### Relevant APIs:
 
-* [Adobe Document Generation API](apis/doc-generation/)
-* [Adobe PDF Services API](apis/pdf-services/)
-* [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
-* [Adobe PDF Embed API](apis/pdf-embed/)
+- [Adobe Document Generation API](apis/doc-generation/)
+- [Adobe PDF Services API](apis/pdf-services/)
+- [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
+- [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://experienceleague.adobe.com/docs/document-services/tutorials/usecases/acceleratesales.html)
 
@@ -62,10 +62,10 @@ Modernize your document processes with digital HR letters for new hires and empl
 
 ### Relevant APIs:
 
-* [Adobe Document Generation API](apis/doc-generation/)
-* [Adobe PDF Services API](apis/pdf-services/)
-* [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
-* [Adobe PDF Embed API](apis/pdf-embed/)
+- [Adobe Document Generation API](apis/doc-generation/)
+- [Adobe PDF Services API](apis/pdf-services/)
+- [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
+- [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://experienceleague.adobe.com/docs/document-services/tutorials/usecases/employeeonboarding.html)
 
@@ -75,12 +75,12 @@ Modernize your document processes with digital HR letters for new hires and empl
 
 Streamline legal contract and compliance processes to save time and reduce business risks. You can create legal document templates with dynamic fields that can be automatically merged with data and customized with specicfic inputs and logic. In a few steps, you can build efficient workflows for reviews, approvals, and capturing e-signatures.
 
-### Relevant APIs:
+### Relevant APIs
 
-* [Adobe Document Generation API](apis/doc-generation/)
-* [Adobe PDF Services API](apis/pdf-services/)
-* [Adobe PDF Extract API](apis/pdf-extract/)
-* [Adobe PDF Embed API](apis/pdf-embed/)
+- [Adobe Document Generation API](apis/doc-generation/)
+- [Adobe PDF Services API](apis/pdf-services/)
+- [Adobe PDF Extract API](apis/pdf-extract/)
+- [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://experienceleague.adobe.com/docs/document-services/tutorials/usecases/automatelegalworkflows.html)
 

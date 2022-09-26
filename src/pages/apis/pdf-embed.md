@@ -90,7 +90,7 @@ apiHeroAssetImg doc-embed-hero
 
 <TextBlock slots="buttons" isCentered theme="lightest" className='padding-5 Use-cases-for-PDF-services-API'/>
 
-* [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
+- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" theme="light" className="other-Adobe-Document-Services-APIs"/>
 
@@ -104,7 +104,7 @@ apiHeroAssetImg doc-embed-hero
 
 Have questions about the Document Services APIs?
 
-* [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
-* [Contact us](../pricing/contact.md)
+- [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
+- [Contact us](../pricing/contact.md)
 
 <APIPixelRetargeting/>
