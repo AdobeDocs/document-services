@@ -18,32 +18,25 @@ import Integration from './pdf-embed/integration.md'
 import {APIPixelRetargeting} from '../../components/retargetting'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 
-
-
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
 # Adobe PDF Embed API
 
 Free JavaScript API to embed high-fidelity PDFs, enable collaboration, and see analytics.
 
-
 apiHeroAssetImg doc-embed-hero
 
 - [Try the demo](https://documentservices.adobe.com/view-sdk-demo/index.html)
-
-
 
 <WrapperComponent slots="content" theme="light" className="WhyPdfEmbed"/>
 
 <WhyPdfEmbed />
 
-
 <SummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight  className="embed-key-features"/>
 
-## Key features of our free PDF Embed API 
+## Key features of our free PDF Embed API
 
 - [Get free credentials](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
-
 
 <TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0 embed-key-features embed-key-features-code-block' />
 
@@ -58,7 +51,6 @@ apiHeroAssetImg doc-embed-hero
 ![EMPTY_ALT](../images/annotations.svg)
 
 <Annotations />
-
 
 ### PDF Analytics
 
@@ -84,27 +76,21 @@ apiHeroAssetImg doc-embed-hero
 
 <MenuTool />
 
-
 <WrapperComponent slots="content" theme="lightest" className="integration-with-adobe"/>
 
 <Integration />
-
 
 <WrapperComponent slots="content" theme="light" className="start-modifying-pdf"/>
 
 <StartEmbedding/>
 
-
-
 <WrapperComponent slots="content" theme="lightest" className="Use-cases-for-PDF-services-API"/>
 
 <UseCase />
 
-
 <TextBlock slots="buttons" isCentered theme="lightest" className='padding-5 Use-cases-for-PDF-services-API'/>
 
 * [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
-
 
 <WrapperComponent slots="content" theme="light" className="other-Adobe-Document-Services-APIs"/>
 

@@ -13,8 +13,6 @@ import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 import {APIPixelRetargeting} from '../../components/retargetting';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 
-
-
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
 # Adobe PDF Services API
@@ -30,16 +28,11 @@ apiHeroAssetImg doc-service-hero
 
 <WhyPDFServicesAPI />
 
-
 <!-- Carousel Block -->
 <AWSMSCarousel />
 
-
-
 <!-- Key Features Code Block -->
 <KeyFeaturesCodeBlock />
-
-
 
 <!--Adobe PDF Extract API -->
 
@@ -47,14 +40,11 @@ apiHeroAssetImg doc-service-hero
 
 <AdobePDFExtractAPI />
 
-
-
 <!--Stepper Block -->
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="start-modifying-pdf"/>
 
 <StartModifyingPDF />
-
 
 <!--Resource Card Block -->
 

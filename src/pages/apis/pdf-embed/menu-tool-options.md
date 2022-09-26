@@ -8,7 +8,6 @@ title: Adobe Developer — PDF Embed API  — menu & tool options
 
 Programmatically enable or disable the comments pane, toolbars, print, and download options
 
-
 - [See documentation](/document-services/docs/overview/pdf-embed-api/howtos_ui/#menu-and-tool-options)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />

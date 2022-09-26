@@ -22,7 +22,6 @@ From the company who created the PDF standard.
 
 - [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
-
 homeheroAssertImage
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
@@ -30,6 +29,7 @@ homeheroAssertImage
 ![EMPTY_ALT](images/pdfServices.jpg)
 
 ### Adobe PDF Services API
+
 ### Create, transform, OCR PDFs, and more.
 
 PDF Services API is a collection of multiple services capable of quickly solving specific challenges and
@@ -40,11 +40,10 @@ Do more with this API.
 
 - [Learn more](/src/pages/apis/pdf-services.md)
 
-
-
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
 
 ### Adobe PDF Extract API
+
 ### Unlock content structure in any PDF.
 
 PDF Extract API leverages AI to parse PDFs programmatically and extract data and content for
@@ -58,13 +57,12 @@ on both scanned and native PDFs and is included with PDF Services API.
 
 ![EMPTY_ALT](images/pdfExtract.jpg)
 
-
-
 <TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
 
 ![EMPTY_ALT](images/docGen.jpg)
 
 ### Adobe Document Generation API
+
 ### Generate documents from Word templates and JSON data.
 
 Effortlessly create contracts, agreements, invoices, sales proposals, and more with Document
@@ -76,11 +74,10 @@ Services API.
 - [Try the demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
-
-
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
 
 ### Adobe PDF Embed API
+
 ### Display PDFs and enable collaboration with this free tool.
 
 Leverage our free JavaScript API to embed PDFs and eliminate the need for end users to
@@ -94,7 +91,6 @@ samples for Angular and React.
 
 ![EMPTY_ALT](images/pdfEmbed.jpg)
 
-
 <SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
 
 ## Designed for developers
@@ -102,8 +98,6 @@ samples for Angular and React.
 Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
 
 - [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
-
-
 
 <TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block' />
 
@@ -131,42 +125,25 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <EmbedPdfViewingAnalytics/>
 
-
-
 <WrapperComponent slots="content" theme="lightest" className="why-docment-services"/>
 
 <WhyDocument />
-
-
-
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="Use-cases-for-Adobe-Document-Services"/>
 
 <HomeResourceCard />
 
-
-
-
 <TextBlock slots="buttons" isCentered theme="light"  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
 
 - [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
-
-
-
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="Customer-Stories"/>
 
 <CustomerStory />
 
-
-
-
 <WrapperComponent slots="content" repeat="1" theme="light"/>
 
 <HomeCarousel />
-
-
-
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
 

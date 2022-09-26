@@ -17,9 +17,6 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 
 Extract all PDF document elements including text, tables, and images within a structured JSON file to enable a variety of downstream solutions.
 
-
-
-
 <TextBlock slots="image, heading, text" width="25%" theme="lightest"  className="align-left icon-xl-size padding-top-zero horizontal-align-heading"/>
 
 ![EMPTY_ALT](../../images/document-structure-understanding.svg)
@@ -28,8 +25,6 @@ Extract all PDF document elements including text, tables, and images within a st
 
 Classify text objects such as headings, lists, footnotes, and paragraphs that may span multiple columns or pages. Capture text fonts and styles, positioning, and the natural reading order of all objects.
 
-
-
 <TextBlock slots="image, heading, text" width="25%" theme="lightest"  className="align-left icon-xl-size padding-top-zero horizontal-align-heading"/>
 
 ![EMPTY_ALT](../../images/high-fidelity.svg)
@@ -37,8 +32,6 @@ Classify text objects such as headings, lists, footnotes, and paragraphs that ma
 ### Highly accurate results
 
 Adobe Sensei AI technology delivers highly accurate data extraction across a broad range of document types – both native and scanned PDFs – without requiring custom ML templates or model training.
-
-
 
 <TextBlock slots="image, heading, text" width="25%" theme="lightest"  className="align-left icon-xl-size padding-top-zero horizontal-align-heading"/>
 

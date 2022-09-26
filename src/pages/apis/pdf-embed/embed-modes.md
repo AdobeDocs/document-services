@@ -6,8 +6,6 @@ title: Adobe Developer — PDF Embed API  — Embed modes
 
 ##### EMBED MODES
 
-
-
 Control how you embed PDFs, with support for full-sized windows, sized containers, in-line display, and lightboxes
 
 - [See documentation](/document-services/docs/overview/pdf-embed-api/howtos/#embed-modes)
@@ -33,7 +31,6 @@ Control how you embed PDFs, with support for full-sized windows, sized container
   });
 </script>
 ```
-
 
 <!-- <TextBlock slots="buttons"  theme="dark" className='bgBlue'/>
 

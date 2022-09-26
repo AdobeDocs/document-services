@@ -10,7 +10,6 @@ title: Adobe Developer — Wrapper Components  —  API Extract Stepper Componen
 
 Start your free 6-month trial today with 1,000 PDF transactions
 
-
 <TextBlock slots="heading, text, buttons" width="33%" theme="light"  className='align-left horizontal-align'/>
 
 ## Step 1
@@ -18,9 +17,6 @@ Start your free 6-month trial today with 1,000 PDF transactions
 Obtain free credentials
 
 - [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
-
-
-
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline className='align-left link'/>
 
@@ -33,15 +29,11 @@ Download ready to run samples for Node.js, .Net, Java and Python
 - [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples)
 - [Python](https://adobe.com/go/dcExtract_python_sdk)
 
-
-
-
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline className='align-left horizontal-align link extract-stepper-api-reference' headerElementType="h2" />
 
 ## Step 3
 
 Add credentials to your code and experience the power of the API
-
 
 - [View docs](/document-services/docs/overview/pdf-extract-api/)
 - [View API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Extract-PDF)

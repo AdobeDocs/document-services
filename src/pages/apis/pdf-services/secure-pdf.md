@@ -10,7 +10,6 @@ Support for AES-128 and AES-256 encryption on PDF files, with granular permissio
 
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Protect-PDF) and quickly try our APIs using the Postman collections
 
-
 <CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET, Java" />
 
 #### REST API
@@ -35,7 +34,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
 // https://documentcloud.adobe.com/document-services/index.html#post-protectPDF
 
 ```
-
 
 #### Node js
 

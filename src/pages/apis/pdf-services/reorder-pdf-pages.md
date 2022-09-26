@@ -12,7 +12,6 @@ Reorder the pages of a PDF file to reorganize.
 
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Combine-PDF) and quickly try our APIs using the Postman collections
 
-
 <CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET,Java" />
 
 #### REST API

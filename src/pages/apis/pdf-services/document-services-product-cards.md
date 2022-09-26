@@ -6,7 +6,6 @@ title: Adobe Developer — PDF Services API  —  Explore other Adobe Document s
 
 ## Explore other Adobe Document Services APIs
 
-
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img" iconStyle/>
 
 ![EMPTY_ALT](../../images/Extract-v2.svg)
@@ -18,7 +17,6 @@ Extract text, table, images and document structure.
 * [Learn more](/src/pages/apis/pdf-extract.md)
 * [Demo](https://documentcloud.adobe.com/dc-visualizer-app/index.html)
 
-
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img"/>
 
 ![EMPTY_ALT](../../images/Generate.svg)
@@ -29,8 +27,6 @@ Generate PDF and Word documents from custom word templates.
 
 * [Learn more](/src/pages/apis/doc-generation.md)
 * [Demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
-
-
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 

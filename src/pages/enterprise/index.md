@@ -20,7 +20,6 @@ abm-landing-page-hero
 
 - [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
-
 <!-- Why Adobe Document Services -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
@@ -33,7 +32,6 @@ abm-landing-page-hero
 
 <!-- Reimagine your document -->
 <ReimagineYourDocument />
-
 
 <!-- ZigZag -->
 
@@ -88,7 +86,6 @@ Streamline legal contract and compliance processes to save time and reduce busin
 
 ![PDF Extract API Workflow](../images/mob_Image_Legal.jpg)
 
-
 <SummaryBlock slots="heading, text" theme="dark" background="rgb(31, 42, 73)" className="customer_stories py-1"/>
 
 ## Customer stories.
@@ -98,7 +95,6 @@ See how our customers are building smarter and faster document experiences.
 <!-- Custom Stories -->
 <WrapperComponent slots="content"  background="rgb(31, 42, 73)" className="customer_story_wrapper"/>
 <CustomerStory />
-
 
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" primaryOutline background="white" className="get-started-today py-2"/>
 

@@ -3,15 +3,13 @@ title: Adobe Developer — PDF Services API  —  Document Generation
 ---
 
 
-<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link  button-screen linking pdf-word-doc-gen" 
+<TextBlock slots="heading, buttons, text, text1, text2" theme="dark" hasCodeBlock className="bgBlue link  button-screen linking pdf-word-doc-gen"
 variantsTypePrimary='primary' variantsTypeSecondary='cta' isPrimaryBtn  primaryOutline/>
 
 ### PDF and Word document generation with dynamic data
 
 - [Learn more](/src/pages/apis/doc-generation.md)
 - [Try the demo](https://documentservices.adobe.com/dc-docgen-playground/index.html#/)
-
-
 
 Generate PDF or Word documents from Microsoft Word templates and your data. Merge dynamic data with your custom templates to generate on brand contracts, proposals, invoices, NDAs, and more.
 

@@ -55,7 +55,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 // https://documentcloud.adobe.com/document-services/index.html#post-pageManipulation
 ```
 
-
 #### Node js
 
 ```js

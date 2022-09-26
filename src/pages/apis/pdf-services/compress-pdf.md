@@ -14,7 +14,6 @@ Support for multiple compression levels to retain the quality of images and grap
 
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Compress-PDF) and quickly try our APIs using the Postman collections
 
-
 <CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET, Java" />
 
 #### REST API

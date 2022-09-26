@@ -10,8 +10,7 @@ title: Adobe Developer — PDF Services API  — Remove PDF Password
 
 Remove password security from a PDF document. This can only be accomplished with the owner password of the document which must be passed in the operation.
 
-See our public [API  Reference ](https://developer.adobe.com/document-services/docs/apis/#tag/Remove-Protection) and quickly try our APIs using the Postman collections
-
+See our public [API  Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Remove-Protection) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET, Java" />
 

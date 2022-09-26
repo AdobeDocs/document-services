@@ -12,7 +12,6 @@ import PdfExtractUseCases from './pdf-extract/pdf-extract-resource.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 
-
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
 
 # Adobe PDF Extract API
@@ -23,7 +22,6 @@ apiHeroAssetImg doc-ext-invoice
 
 - [Try the Demo](https://documentcloud.adobe.com/dc-visualizer-app/index.html)
 - [Start Free Trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
-
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>
 

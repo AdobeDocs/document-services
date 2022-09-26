@@ -12,9 +12,7 @@ Use this service to get the metadata properties of a PDF. Metadata including pag
 
 This data can be used to: check if a document is fully text searchable (OCR), understand the e-signature certificate info, find out compliance levels (e.g., PDF/A and PDF/UA), assess file size before compressing, check permissions related to copy, edit, printing, encryption, and much more.
 
-
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Properties) and quickly try our APIs using the Postman collections
-
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js, .net, java" />
 
@@ -36,6 +34,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pdfprope
 // Legacy API can be found here 
 // https://documentcloud.adobe.com/document-services/index.html#post-pdfProperties
 ```
+
 #### Node js
 
 ```js

@@ -16,7 +16,6 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 
 * [Learn more](/src/pages/apis/pdf-services.md)
 
-
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
 ![EMPTY_ALT](../../images/Generate.svg)
@@ -27,7 +26,6 @@ Generate PDF and Word documents from custom Word templates.
 
 * [Learn more](/src/pages/apis/doc-generation.md)
 * [Demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
-
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 

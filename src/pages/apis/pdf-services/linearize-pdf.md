@@ -12,7 +12,6 @@ Optimize PDFs for quick viewing on the web, especially for mobile clients. Linea
 
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Linearize-PDF) and quickly try our APIs using the Postman collections
 
-
 <CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET,Java" />
 
 #### REST API
@@ -33,7 +32,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/lineariz
 // https://documentcloud.adobe.com/document-services/index.html#post-linearizePDF
 
 ```
-
 
 #### Node js
 
