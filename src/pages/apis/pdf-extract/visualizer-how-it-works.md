@@ -11,7 +11,7 @@ PDF input and the JSON output side-by-side. Click on a section of the PDF
 to see the corressponding JSON output. You can extract a variety of elements such as 
 paragraphs, headers, tables, and figures/images.
   
-- [Interactive demo](https://documentservices.adobe.com/dc-visualizer-app/index.html)
+- [Interactive demo](https://documentcloud.adobe.com/dc-visualizer-app/index.html)
 - [Watch the video](https://video.tv.adobe.com/v/333506)
 
 ![EMPTY_ALT](../../images/ExtractVisualizer_Graphic.png)
