@@ -16,7 +16,6 @@ import '../../styles/doc-generation.css'
 import {APIPixelRetargeting} from '../../components/retargetting'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 
-
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
 # Adobe Document Generation API
@@ -26,7 +25,6 @@ Generate PDF and Word documents from Word templates and JSON data.
 apiHeroAssetImg doc-gen-invoice
 
 - [Try the demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)
-
 
 <!-- Why Document Generation API -->
 
@@ -49,7 +47,6 @@ apiHeroAssetImg doc-gen-invoice
 
 <AwsUipathCarousel />
 
-
 <!-- <MobileOptimize/> -->
 
 <!-- Download Sample Templates and Data to Get Started -->
@@ -60,8 +57,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <TextBlock slots="buttons" width="100%" theme="lightest"  isCentered variantsTypePrimary='primary' isPrimaryBtn primaryOutline className="padding-5 ms-word-add-in-title Download-sample-templates-and-data-to-get-started"  />
 
- - [See all templates](./doc-gen-api-template.md)
-
+- [See all templates](./doc-gen-api-template.md)
 
 <!--  Start Modifying PDFs in a few Minutes -->
 <WrapperComponent slots="content" theme="light" className="Get-started-in-minutes"/>

@@ -6,7 +6,6 @@
 
 Create PDFs from a variety of formats, including static and dynamic HTML; Microsoft Word, PowerPoint, and Excel; as well as text, image, and, Zip
 
-
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />
 
 #### REST API
