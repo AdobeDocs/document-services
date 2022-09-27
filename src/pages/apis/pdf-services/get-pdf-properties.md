@@ -38,7 +38,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pdfprope
 #### Node js
 
 ```js
-
 const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
 try {
@@ -84,7 +83,6 @@ try {
 #### .Net
 
 ```clike
-
 namespace GetPDFProperties
 {
     class Program
@@ -158,7 +156,6 @@ namespace GetPDFProperties
 #### Java
 
 ```javascript
-
 public class GetPDFProperties {
 
     // Initialize the logger.
