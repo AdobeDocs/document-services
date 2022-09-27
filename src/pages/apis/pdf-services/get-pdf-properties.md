@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — Get PDF
 ---
 
-<TextBlock slots="heading, buttons, text, text1, text2" hasCodeBlock theme="dark" className="bgBlue linking"/>
+<TextBlock slots="heading, buttons, text, text1, text2" hasCodeBlock theme="dark" className="bgBlue linking get-properties"/>
 
 ### Get the properties of a PDF file
 
@@ -12,124 +12,241 @@ Use this service to get the metadata properties of a PDF. Metadata including pag
 
 This data can be used to: check if a document is fully text searchable (OCR), understand the e-signature certificate info, find out compliance levels (e.g., PDF/A and PDF/UA), assess file size before compressing, check permissions related to copy, edit, printing, encryption, and much more.
 
-
-See our public [API Reference](https://documentcloud.adobe.com/document-services/index.html#post-pdfProperties) and quickly try our APIs using the Postman collections
-
+See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Properties) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js, .net, java" />
 
 #### REST API
 
 ```bash
-curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create?respondWith=%7B%22reltype%22%3A%20%22http%3A%2F%2Fns.adobe.com%2Frel%2Fprimary%22%7D' \
---header 'Authorization: Bearer ' \
---header 'Accept: application/json, text/plain, */*' \
---header 'x-api-key: ' \
---header 'Prefer: respond-async,wait=0' \
---form 'contentAnalyzerRequests="{
-  \"cpf:inputs\": {
-    \"params\": {
-      \"cpf:inline\": {
-        \"print\": {
-          \"includeHeaderFooter\": true
-        },
-        \"pageLayout\": {
-          \"pageHeight\": 8.5,
-          \"pageWidth\": 11
-        },
-        \"json\": \"{\\\"k1\\\": \\\"v1\\\", \\\"k2\\\": \\\"v2\\\"}\"
-      }
-    },
-    \"inputUrl\": \"\"
-  },
-  \"cpf:engine\": {
-    \"repo:assetId\": \"urn:aaid:cpf:Service-e2ee120a2b06427cb449592f5db967e7\"
-  },
-  \"cpf:outputs\": {
-    \"documentOut\": {
-      \"cpf:location\": \"multipartLabelOut\",
-      \"dc:format\": \"application/pdf\"
-    }
-  }
-}"'
+// Please refer our Rest API docs for more information 
+// https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Properties
+
+curl --location --request POST 'https://pdf-services.adobe.io/operation/pdfproperties' \
+--header 'x-api-key: {{Placeholder for client_id}}' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {{Placeholder for token}}' \
+--data-raw '{
+    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
+    "pageLevel": false
+}'
+
+// Legacy API can be found here 
+// https://documentcloud.adobe.com/document-services/index.html#post-pdfProperties
 ```
+
 #### Node js
 
 ```js
-const credentials =  PDFServicesSdk.Credentials
-	.serviceAccountCredentialsBuilder()
-	.fromFile("pdfservices-api-credentials.json")
-	.build();
 
-// Create an ExecutionContext using credentials and create a new operation instance.
-const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-	pdfPropertiesOperation = PDFServicesSdk.PDFProperties.Operation.createNew();
+const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
-// Set operation input from a source file.
-const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/pdfPropertiesInput.pdf');
-pdfPropertiesOperation.setInput(input);
+/**
+ * This sample illustrates how to retrieve properties of an input PDF file.
+ *
+ * Refer to README.md for instructions on how to run the samples.
+ */
+try {
 
-// Provide any custom configuration options for the operation.
-const options = new PDFServicesSdk.PDFProperties.options.PDFPropertiesOptions.Builder()
-	.includePageLevelProperties(true)
-	.build();
-pdfPropertiesOperation.setOptions(options);
+    const credentials = PDFServicesSdk.Credentials
+        .serviceAccountCredentialsBuilder()
+        .fromFile("pdfservices-api-credentials.json")
+        .build();
 
-// Execute the operation and log the JSON Object.
-pdfPropertiesOperation.execute(executionContext)
-	.then(result => console.log("The resultant json object is : " + JSON.stringify(result)))
+    //Create an ExecutionContext using credentials and create a new operation instance.
+    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
+        pdfPropertiesOperation = PDFServicesSdk.PDFProperties.Operation.createNew();
+
+    // Set operation input from a source file.
+    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/pdfPropertiesInput.pdf');
+    pdfPropertiesOperation.setInput(input);
+
+    // Provide any custom configuration options for the operation.
+    const options = new PDFServicesSdk.PDFProperties.options.PDFPropertiesOptions.Builder()
+        .includePageLevelProperties(true)
+        .build();
+    pdfPropertiesOperation.setOptions(options);
+
+    // Execute the operation and log the JSON Object.
+    pdfPropertiesOperation.execute(executionContext)
+        .then(result => {
+            console.log("The resultant properties of the PDF are : " + JSON.stringify(result, null, 4));
+        })
+        .catch(err => {
+            if (err instanceof PDFServicesSdk.Error.ServiceApiError
+                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                console.log('Exception encountered while executing operation', err);
+            } else {
+                console.log('Exception encountered while executing operation', err);
+            }
+        });
+} catch (err) {
+    console.log('Exception encountered while executing operation', err);
+}
 
 ```
 
 #### .Net
 
 ```clike
-// Initial setup, create credentials instance
-Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-    .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-    .Build();
+using System;
+using System.IO;
+using System.Reflection;
+using Adobe.PDFServicesSDK;
+using Adobe.PDFServicesSDK.auth;
+using Adobe.PDFServicesSDK.exception;
+using Adobe.PDFServicesSDK.io;
+using Adobe.PDFServicesSDK.io.pdfproperties;
+using Adobe.PDFServicesSDK.options.pdfproperties;
+using Adobe.PDFServicesSDK.pdfops;
+using log4net;
+using log4net.Config;
+using log4net.Repository;
 
-// Create an ExecutionContext using credentials and create a new operation instance
-   ExecutionContext executionContext = ExecutionContext.Create(credentials);
-PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.CreateNew();
+/// <summary>
+/// This sample illustrates how to retrieve properties of an input PDF file.
+/// <para/>
+/// Refer to README.md for instructions on how to run the samples.
+/// </summary>
+namespace GetPDFProperties
+{
+    class Program
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
+        {
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
+                                .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
+                                .Build();
 
-// Provide an input FileRef for the operation
-FileRef source = FileRef.CreateFromLocalFile(@"pdfPropertiesInput.pdf");
-pdfPropertiesOperation.SetInput(source);
+                //Create an ExecutionContext using credentials and create a new operation instance.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.CreateNew();
+                
+                // Provide an input FileRef for the operation.
+                FileRef source = FileRef.CreateFromLocalFile(@"pdfPropertiesInput.pdf");
+                pdfPropertiesOperation.SetInput(source);
+                
+                // Build PDF Properties options to include page level properties and set them into the operation.
+                PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
+                        .IncludePageLevelProperties(true)               
+                        .Build();
+                pdfPropertiesOperation.SetOptions(pdfPropertiesOptions);
+            
+                // Execute the operation.
+                PDFProperties pdfProperties = pdfPropertiesOperation.Execute(executionContext);
+                
+                // Fetch the requisite properties of the specified PDF.
+                log.Info("The size of input PDF is : " + pdfProperties.Document?.FileSize);
+                log.Info("Input PDF Version is : " + pdfProperties.Document?.PDFVersion);
+                log.Info("Number of pages in input PDF : " + pdfProperties.Document?.PageCount);
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (ServiceApiException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (SDKException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (IOException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+        }
 
-// Build PDF Properties options to include page level properties and set them into the operation
-PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
-    .IncludePageLevelProperties(true)
-    .Build();
-pdfPropertiesOperation.SetOptions(pdfPropertiesOptions);
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
+    }
+}
 
-// Execute the operation and return JSON Object
-JObject result = pdfPropertiesOperation.Execute(executionContext);
 ```
 
 #### Java
 
 ```javascript
-// Initial setup, create credentials instance.
-Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-    .fromFile("pdfservices-api-credentials.json")
-    .build();
 
-//Create an ExecutionContext using credentials and create a new operation instance.
-ExecutionContext executionContext = ExecutionContext.create(credentials);
-PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.createNew();
+package com.adobe.pdfservices.operation.samples.pdfproperties;
 
-// Provide an input FileRef for the operation
-FileRef source = FileRef.createFromLocalFile("src/main/resources/pdfPropertiesInput.pdf");
-pdfPropertiesOperation.setInputFile(source);
+import com.adobe.pdfservices.operation.ExecutionContext;
+import com.adobe.pdfservices.operation.auth.Credentials;
+import com.adobe.pdfservices.operation.exception.SdkException;
+import com.adobe.pdfservices.operation.exception.ServiceApiException;
+import com.adobe.pdfservices.operation.exception.ServiceUsageException;
+import com.adobe.pdfservices.operation.io.FileRef;
+import com.adobe.pdfservices.operation.io.pdfproperties.Font;
+import com.adobe.pdfservices.operation.io.pdfproperties.PDFProperties;
+import com.adobe.pdfservices.operation.pdfops.PDFPropertiesOperation;
+import com.adobe.pdfservices.operation.pdfops.options.pdfproperties.PDFPropertiesOptions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-// Build PDF Properties options to include page level properties and set them into the operation
-PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
-    .includePageLevelProperties(true)
-    .build();
-pdfPropertiesOperation.setOptions(pdfPropertiesOptions);
+import java.io.IOException;
 
-// Execute the operation and return JSON Object
-JSONObject result = pdfPropertiesOperation.execute(executionContext);
+/**
+ * This sample illustrates how to retrieve properties of an input PDF file.
+ *
+ * Refer to README.md for instructions on how to run the samples.
+ */
+public class GetPDFProperties {
+
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(GetPDFProperties.class);
+
+    public static void main(String[] args) {
+
+        try {
+
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
+                    .fromFile("pdfservices-api-credentials.json")
+                    .build();
+
+            //Create an ExecutionContext using credentials and create a new operation instance.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.createNew();
+
+            // Provide an input FileRef for the operation
+            FileRef source = FileRef.createFromLocalFile("src/main/resources/pdfPropertiesInput.pdf");
+            pdfPropertiesOperation.setInputFile(source);
+
+            // Build PDF Properties options to include page level properties and set them into the operation
+            PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
+                    .includePageLevelProperties(true)
+                    .build();
+            pdfPropertiesOperation.setOptions(pdfPropertiesOptions);
+
+            // Execute the operation.
+            PDFProperties result = pdfPropertiesOperation.execute(executionContext);
+
+            // Fetch the requisite properties of the specified PDF.
+            LOGGER.info("The Page level properties of the PDF: {}", result.getDocument().getPageCount());
+
+            LOGGER.info("The Fonts used in the PDF: ");
+            for(Font font: result.getDocument().getFonts()) {
+                LOGGER.info(font.getName());
+            }
+
+        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+            LOGGER.error("Exception encountered while executing operation", ex);
+        }
+    }
+}
 
 ```

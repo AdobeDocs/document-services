@@ -25,8 +25,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 Extract text, tables, images, and document structure.
 
 * [Learn more](/src/pages/apis/pdf-extract.md)
-* [Demo](https://www.adobe.com/go/extract_visualizer)
-
+* [Demo](https://documentcloud.adobe.com/dc-visualizer-app/index.html)
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
@@ -37,4 +36,4 @@ Extract text, tables, images, and document structure.
 Embed high-fidelity PDFs in web apps with analytics.
 
 * [Learn more](/src/pages/apis/pdf-embed.md)
-* [Demo](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)
+* [Demo](https://documentservices.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)

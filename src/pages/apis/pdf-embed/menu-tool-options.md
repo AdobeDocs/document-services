@@ -8,7 +8,6 @@ title: Adobe Developer — PDF Embed API  — menu & tool options
 
 Programmatically enable or disable the comments pane, toolbars, print, and download options
 
-
 - [See documentation](/document-services/docs/overview/pdf-embed-api/howtos_ui/#menu-and-tool-options)
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON, CURL, JSON" />
@@ -17,12 +16,12 @@ Programmatically enable or disable the comments pane, toolbars, print, and downl
 
 ```html
 <div id="adobe-dc-view"></div>
-<script src="https://documentcloud.adobe.com/view-sdk/viewer.js"></script>
+<script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
 <script type="text/javascript">
   document.addEventListener("adobe_dc_view_sdk.ready", function () {
     var adobeDCView = new AdobeDC.View({clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view"});
     adobeDCView.previewFile({
-      content:{location: {url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf"}},
+      content:{location: {url: "https://documentservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf"}},
       metaData:{fileName: "Bodea Brochure.pdf"}
     }, {"showAnnotationTools": true, "showDownloadPDF": false});
   });

@@ -21,15 +21,13 @@ import DeletePDFPages from './delete-pdf-pages.md';
 import RotatePDFPages from './rotate-pdf-pages.md';
 import HTMLToPDF from './html-to-pdf.md';
 
-
 <!-- Key Features of Adobe PDF Services API -->
 
 <SummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="key-features-code-block" />
 
 ## Key features of Adobe PDF Services API
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
-
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
 <TabsBlock orientation="vertical" slots="heading, image, content" repeat="18"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block' />
 

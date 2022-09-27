@@ -9,18 +9,13 @@ title: Adobe Developer — PDF Embed API  — start-embedding
 
 Adobe PDF Embed API is free to use, so get started today!
 
-
-
-
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" className="align-left horizontal-align" />
 
 ### Step 1
 
 Obtain free credentials
 
-* [Get started](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
-
-
+* [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light"  className="align-left horizontal-align" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline/>
 
@@ -37,4 +32,4 @@ Copy JavaScript code or download samples for React and Angular
 
 Add credentials to your code and run!
 
-- [See documentation](/document-services/docs/overview/pdf-embed-api/)
+* [See documentation](/document-services/docs/overview/pdf-embed-api/)

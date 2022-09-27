@@ -25,9 +25,7 @@ Create a PDF from Microsoft Office documents, protect the content, and export to
 Extract text, table, images and document structure.
 
 * [Learn more](/src/pages/apis/pdf-extract.md)
-* [Demo](https://www.adobe.com/go/extract_visualizer)
-
-
+* [Demo](https://documentcloud.adobe.com/dc-visualizer-app/index.html)
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img"/>
 
@@ -38,4 +36,4 @@ Extract text, table, images and document structure.
 Generate PDF and Word documents from custom word templates.
 
 * [Learn more](/src/pages/apis/doc-generation.md)
-* [Demo](https://documentcloud.adobe.com/dc-docgen-playground/index.html#/)
+* [Demo](https://documentservices.adobe.com/dc-docgen-playground/index.html)

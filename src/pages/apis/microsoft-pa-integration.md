@@ -13,7 +13,6 @@ import AdditionalResources from './microsoft-PA-integration/additional-resources
 import MsAnnouncementBlock from './microsoft-PA-integration/ms-announcement.md'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 
-
 <Hero slots="icon, heading, text, assetsImg, buttons"  customLayout variant="halfwidth" variantsTypePrimary='primary' className="microsoftPAHerobgImage Hero-Banner ms-hero-img"/>
 
 ![Adobe X Microsoft](../images/AdobeXMicrosoft_Lockup_Desktop.png)
@@ -24,7 +23,7 @@ Start your free trial today and get 1,000 free document transactions.
 
 microsoftPAHeroImage
 
-- [Try for free](https://www.adobe.com/go/powerautomate_getstarted)
+- [Try for free](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="Uplevel-Your-DocumentTitle"/>
 
@@ -40,13 +39,11 @@ microsoftPAHeroImage
 
 Start your trial today and get 1,000 free document transactions.
 
-- [Try for free](https://www.adobe.com/go/powerautomate_getstarted)
-
+- [Try for free](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 
 <WrapperComponent slots="content" theme="lightest" className="Benefits-For-Enterprises"/>
 
 <BenefitsForEnterprises/>
-
 
 <WrapperComponent slots="content" theme="lightest" className="Use-Cases"/>
 

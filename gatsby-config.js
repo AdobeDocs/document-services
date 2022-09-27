@@ -21,7 +21,7 @@ module.exports = {
     pageImage: process.env.PAGE_IMAGE || 'dcsdk-main.jpg',
     docs: {
       title: 'Get credentials',
-      path: 'https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html'
+      path: 'https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html'
     },
     pages: [
       {
@@ -60,7 +60,7 @@ module.exports = {
             title: 'Power Automate Connector',
             description: 'Build workflows on Microsoft Power Platform easily',
             path: 'apis/microsoft-pa-integration/'
-          },
+          }
         ]
       },
       { 
@@ -100,18 +100,78 @@ module.exports = {
             path: 'document-services/docs/overview/pdf-services-api/index.md'
           },
           {
-            title: 'PDF Extract API',
-            path: 'document-services/docs/overview/pdf-extract-api/index.md'
-          },
-          {
             title: 'Document Generation API',
             path: 'document-services/docs/overview/document-generation-api/index.md'
+          },
+          {
+            title: 'PDF Electronic Seal API',
+            path: 'document-services/docs/overview/pdf-electronic-seal-api/index.md'
+          },
+          {
+            title: 'PDF Extract API',
+            path: 'document-services/docs/overview/pdf-extract-api/index.md'
           },
           {
             title: 'PDF Embed API',
             path: 'document-services/docs/overview/pdf-embed-api/index.md'
           },
+          {
+            title: 'PDF Accessibility Auto-Tag API',
+            path: 'document-services/docs/overview/pdf-accessibility-auto-tag-api/index.md'
+          }
         ]
+      },
+      {
+        title: "Rest APIs",
+        path: 'document-services/docs/apis/index.md'
+      }
+    ],
+    techSupportFAQMenus: [
+      {
+        title: 'Account Management',
+        path: '/faq/tech-support/#account-management',
+      },     
+      {
+        title: 'Data Security & Privacy',
+        path: '/faq/tech-support/#data-security--privacy',
+      },
+      {
+        title: 'Features-PDF Embed API',
+        path: '/faq/tech-support/#features---pdf-embed-api',
+      },
+      {
+        title: 'Features-PDF Services API',
+        path: '/faq/tech-support/#features---pdf-services-api',
+      },
+      {
+        title: 'Support',
+        path: '/faq/tech-support/#support',
+      },
+    ],
+    salesFAQMenus: [
+      {
+        title: 'Account Management',
+        path: '/faq/sales/#account-management',
+      },
+      {
+        title: 'Billing',
+        path: '/faq/sales/#billing',
+      },
+      {
+        title: 'Data Security & Privacy',
+        path: '/faq/sales/#data-security--privacy',
+      },
+      {
+        title: 'Ordering',
+        path: '/faq/sales/#ordering',
+      },
+      {
+        title: 'Support',
+        path: '/faq/sales/#support',
+      },
+      {
+        title: 'Trials',
+        path: '/faq/sales/#trials',
       }
     ],
     techSupportFAQMenus: [

@@ -10,154 +10,252 @@ title: Adobe Developer — PDF Services API  — Extract PDF Content
 
 Extract text, images, tables, and more from native and scanned PDFs into a structured JSON file. PDF Extract API leverages AI technology to accurately identify text objects and understand the natural reading order of different elements such as headings, lists, and paragraphs spanning multiple columns or pages. Extract font styles with identification of metadata such as bold and italic text and their position within your PDF. Extracted content is output in a structured JSON file format with tables in CSV or XLSX and images saved as PNG.
 
-See our public [API Reference](https://www.adobe.com/go/dcsdk_APIdocs) and quickly try our APIs using the Postman collections
+See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Extract-PDF) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="5" languages="curl, js,.net, Java" />
 
 #### REST API
 
 ```bash
-curl --location --request POST 'https://cpf-ue1.adobe.io/ops/:create' \
---header 'Accept: application/json, text/plain, /' \
---header 'Authorization: Bearer ' \
---header 'x-api-key: ' \
---form 'contentAnalyzerRequests={
-    \"cpf:engine\": {
-        \"repo:assetId\": \"urn:aaid:cpf:58af6e2c-1f0c-400d-9188-078000185695\"
-    },
-    \"cpf:inputs\": {
-        \"documentIn\": {
-            \"cpf:location\": \"fileInput1\",
-            \"dc:format\": \"application/pdf\"
-        },
-        \"params\": {
-            \"cpf:inline\": {
-                \"elementsToExtract\": [
-                    \"text\", \"tables\"
-                ],
-                \"renditionsToExtract\": [ \"tables\", \"figures\"]
-            }
-        }
-    },
-    \"cpf:outputs\": {
-        \"elementsInfo\": {
-            \"cpf:location\": \"jsonoutput\",
-            \"dc:format\": \"application/json\"
-        },
-        \"elementsRenditions\": {
-            \"cpf:location\": \"fileoutpart\",
-            \"dc:format\": \"text/directory\"
-        }
-    }
-}' \
---form 'fileInput1=@""'
+// Please refer our Rest API docs for more information 
+// https://developer.adobe.com/document-services/docs/apis/#tag/Extract-PDF
+
+curl --location --request POST 'https://pdf-services.adobe.io/operation/extractpdf' \
+--header 'x-api-key: {{Placeholder for client_id}}' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {{Placeholder for token}}' \
+--data-raw '{
+    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
+    "renditionsToExtract": [
+        "tables",
+        "figures"
+    ], 
+    "elementsToExtract": [
+        "text", 
+        "tables"
+    ]
+}'
+
+// Legacy API can be found here 
+// https://documentcloud.adobe.com/document-services/index.html#post-extractPDF
 ```
 
 #### Node js
 
 ```js
-// Create an ExecutionContext using credentials
-const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
+// Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
+// Run the sample:
+// node src/extractpdf/extract-text-table-info-with-figures-tables-renditions-from-pdf.js
 
-// Create a new operation instance.
-const extractPDFOperation = PDFServicesSdk.ExtractPDF.Operation.createNew(),
-  input = PDFServicesSdk.FileRef.createFromLocalFile(
-    'resources/extractPDFInput.pdf',
-    PDFServicesSdk.ExtractPDF.SupportedSourceFormat.pdf
-  );
+const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+try {
+    // Initial setup, create credentials instance.
+    const credentials =  PDFServicesSdk.Credentials
+        .serviceAccountCredentialsBuilder()
+        .fromFile("pdfservices-api-credentials.json")
+        .build();
 
-// Set operation input from a source file.
-extractPDFOperation.setInput(input);
+    // Create an ExecutionContext using credentials
+    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
 
-// Build and set extractPDF options
-const options = new PDFServicesSdk.ExtractPDF.options.ExtractPdfOptions.Builder()
-  .addElementsToExtract(
-    PDFServicesSdk.ExtractPDF.options.ExtractElementType.TEXT)
-  .addElementsToExtractRenditions(
-    PDFServicesSdk.ExtractPDF.options.ExtractRenditionsElementType.FIGURES)
-  .addCharInfo(true)
-  .build()
-extractPDFOperation.setOptions(options);
+    // Build extractPDF options
+    const options = new PDFServicesSdk.ExtractPDF.options.ExtractPdfOptions.Builder()
+        .addElementsToExtract(PDFServicesSdk.ExtractPDF.options.ExtractElementType.TEXT, PDFServicesSdk.ExtractPDF.options.ExtractElementType.TABLES)
+        .addElementsToExtractRenditions(PDFServicesSdk.ExtractPDF.options.ExtractRenditionsElementType.FIGURES, PDFServicesSdk.ExtractPDF.options.ExtractRenditionsElementType.TABLES)
+        .build();
 
-// Execute the operation and Save the result to the specified location.
-extractPDFOperation.execute(executionContext)
-  .then(result => result.saveAsFile('output/extractPdf.zip'))
+    // Create a new operation instance.
+    const extractPDFOperation = PDFServicesSdk.ExtractPDF.Operation.createNew(),
+        input = PDFServicesSdk.FileRef.createFromLocalFile(
+            'resources/extractPDFInput.pdf',
+            PDFServicesSdk.ExtractPDF.SupportedSourceFormat.pdf
+        );
+
+    // Set operation input from a source file
+    extractPDFOperation.setInput(input);
+
+    // Set options
+    extractPDFOperation.setOptions(options);
+
+    extractPDFOperation.execute(executionContext)
+        .then(result => result.saveAsFile('output/ExtractTextTableWithFigureTableRendition.zip'))
+        .catch(err => {
+            if(err instanceof PDFServicesSdk.Error.ServiceApiError
+                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                console.log('Exception encountered while executing operation', err);
+            } else {
+                console.log('Exception encountered while executing operation', err);
+            }
+        });
+} catch (err) {
+    console.log('Exception encountered while executing operation', err);
+}
 ```
 
 #### .Net
 
 ```clike
-//Create an ExecutionContext using credentials and create a new operation instance.
-ExecutionContext executionContext = ExecutionContext.Create(credentials);
-ExtractPDFOperation extractPdfOperation = ExtractPDFOperation.CreateNew();
+// Get the samples from https://www.adobe.com/go/pdftoolsapi_net_samples
+// Run the sample:
+// cd ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF/
+// dotnet run ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF.csproj
 
-// Set operation input from a source file.
-FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"extractPDFInput.pdf");
-extractPdfOperation.SetInputFile(sourceFileRef);
+namespace ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF
+{
+    class Program
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
+        {
+            // Configure the logging.
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
+                    .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
+                    .Build();
+    
+                // Create an ExecutionContext using credentials and create a new operation instance.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                ExtractPDFOperation extractPdfOperation = ExtractPDFOperation.CreateNew();
 
-// Build ExtractPDF options and set them into the operation
-ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPDFOptionsBuilder()
-  .AddElementsToExtract(new List<ExtractElementType>(new []{ExtractElementType.TEXT, ExtractElementType.TABLES}))
-  .AddElementsToExtractRenditions(new List<ExtractRenditionsElementType> (new []{ExtractRenditionsElementType.TABLES, ExtractRenditionsElementType.FIGURES}))
-  .AddCharsInfo(true)
-  .Build();
-extractPdfOperation.SetOptions(extractPdfOptions);
+                // Set operation input from a source file.
+                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"extractPDFInput.pdf");
+                extractPdfOperation.SetInputFile(sourceFileRef);
+    
+                // Build ExtractPDF options and set them into the operation.
+                ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPDFOptionsBuilder()
+                    .AddElementsToExtract(new List<ExtractElementType>(new []{ ExtractElementType.TEXT, ExtractElementType.TABLES}))
+                    .AddElementsToExtractRenditions(new List<ExtractRenditionsElementType> (new []{ExtractRenditionsElementType.FIGURES, ExtractRenditionsElementType.TABLES}))
+                    .Build();
+    
+                extractPdfOperation.SetOptions(extractPdfOptions);
+                
+                // Execute the operation.
+                FileRef result = extractPdfOperation.Execute(executionContext);
 
-// Execute the operation.
-FileRef result = extractPdfOperation.Execute(executionContext);
+                // Save the result to the specified location.
+                result.SaveAs(Directory.GetCurrentDirectory() + "/output/ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF.zip");
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (ServiceApiException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (SDKException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (IOException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+        }
 
-// Save the result to the specified location.
-result.SaveAs(Directory.GetCurrentDirectory() + "/output/extractPdf.zip");
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
+    }
+}
 ```
 
 #### Java
 
 ```javascript
-// Create an ExecutionContext using credentials and create a new operation instance
-ExecutionContext executionContext = ExecutionContext.create(credentials);
-ExtractPDFOperation extractPDFOperation = ExtractPDFOperation.createNew();
+// Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
+// Run the sample:
+// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.extractpdf.ExtractTextTableInfoWithRenditionsFromPDF
+ 
+public class ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF {
 
-// Set operation input from a source file
-FileRef source = FileRef.createFromLocalFile("src/test/resources/extractPdfInput.pdf");
-extractPDFOperation.setInputFile(source);
+      private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF.class);
 
-// Build ExtractPDF options and set them into the operation
-ExtractPDFOptions extractPDFOptions = ExtractPDFOptions.extractPdfOptionsBuilder()
-  .addElementsToExtract(Arrays.asList(PDFElementType.TEXT, PDFElementType.TABLES))
-  .addElementsToExtractRenditions(Arrays.asList(PDFElementType.TABLES, PDFElementType.FIGURES))
-  .addCharInfo(Boolean.TRUE)
-  .build();
-extractPDFOperation.setOptions(extractPDFOptions);
+      public static void main(String[] args) {
 
-// Execute the operation
-FileRef result = extractPDFOperation.execute(executionContext);
+          try {
 
-// Save the result at the specified location
-result.saveAs("output/extractPdf.zip");
+              // Initial setup, create credentials instance.
+              Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
+                      .fromFile("pdfservices-api-credentials.json")
+                      .build();
+
+              // Create an ExecutionContext using credentials.
+              ExecutionContext executionContext = ExecutionContext.create(credentials);
+
+              ExtractPDFOperation extractPDFOperation = ExtractPDFOperation.createNew();
+
+              // Provide an input FileRef for the operation
+              FileRef source = FileRef.createFromLocalFile("src/main/resources/extractPdfInput.pdf");
+              extractPDFOperation.setInputFile(source);
+
+              // Build ExtractPDF options and set them into the operation
+              ExtractPDFOptions extractPDFOptions = ExtractPDFOptions.extractPdfOptionsBuilder()
+                      .addElementsToExtract(Arrays.asList(ExtractElementType.TEXT, ExtractElementType.TABLES))
+                      .addElementsToExtractRenditions(Arrays.asList(ExtractRenditionsElementType.TABLES, ExtractRenditionsElementType.FIGURES))
+                      .build();
+              extractPDFOperation.setOptions(extractPDFOptions);
+
+              // Execute the operation
+              FileRef result = extractPDFOperation.execute(executionContext);
+
+              // Save the result at the specified location
+              result.saveAs("output/ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF.zip");
+
+          } catch (ServiceApiException | IOException | SdkException | ServiceUsageException e) {
+              LOGGER.error("Exception encountered while executing operation", e);
+          }
+      }
+  }
 ```
 
 #### Python
 
 ```py
-#Create an ExecutionContext using credentials and create a new operation instance.
-execution_context = ExecutionContext.create(credentials)
-extract_pdf_operation = ExtractPDFOperation.create_new()
+# Get the samples from http://www.adobe.com/go/pdftoolsapi_python_sample
+# Run the sample:
+# python src/extractpdf/extract_txt_table_info_with_figure_tables_rendition_from_pdf.py
 
-#Set operation input from a source file.
-source = FileRef.create_from_local_file(base_path + "/resources/extractPdfInput.pdf")
-extract_pdf_operation.set_input(source)
+  logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
 
-# Build ExtractPDF options and set them into the operation
-extract_pdf_options: ExtractPDFOptions = ExtractPDFOptions.builder() \
-  .with_elements_to_extract([PDFElementType.TEXT, PDFElementType.TABLES]) \
-  .with_elements_to_extract_renditions([PDFElementType.TABLES, PDFElementType.FIGURES]) \
-  .with_get_char_info(True) \
-  .build()
-extract_pdf_operation.set_options(extract_pdf_options)
+  try:
+      #get base path.
+      base_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-#Execute the operation.
-result: FileRef = extract_pdf_operation.execute(execution_context)
+      #Initial setup, create credentials instance.
+      credentials = Credentials.service_account_credentials_builder() \
+          .from_file(base_path + "/pdfservices-api-credentials.json") \
+          .build()
 
-# Save the result to the specified location.
-result.save_as(base_path + "/output/extractPdf.zip")
+      #Create an ExecutionContext using credentials and create a new operation instance.
+      execution_context = ExecutionContext.create(credentials)
+      extract_pdf_operation = ExtractPDFOperation.create_new()
+
+      #Set operation input from a source file.
+      source = FileRef.create_from_local_file(base_path + "/resources/extractPdfInput.pdf")
+      extract_pdf_operation.set_input(source)
+
+      #Build ExtractPDF options and set them into the operation
+      extract_pdf_options: ExtractPDFOptions = ExtractPDFOptions.builder() \
+          .with_elements_to_extract([ExtractElementType.TEXT, ExtractElementType.TABLES]) \
+          .with_element_to_extract_renditions(ExtractRenditionsElementType.TABLES,ExtractRenditionsElementType.FIGURES]) \
+          .build()
+      extract_pdf_operation.set_options(extract_pdf_options)
+
+      #Execute the operation.
+      result: FileRef = extract_pdf_operation.execute(execution_context)
+
+      #Save the result to the specified location.
+      result.save_as(base_path + "/output/ExtractTextTableWithTableRendition.zip")
+  except (ServiceApiException, ServiceUsageException, SdkException):
+      logging.exception("Exception encountered while executing operation")
 ```

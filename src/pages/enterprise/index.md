@@ -18,8 +18,7 @@ Get 1,000 document transactions for free.
 
 abm-landing-page-hero
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
-
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 <!-- Why Adobe Document Services -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
@@ -34,7 +33,6 @@ abm-landing-page-hero
 <!-- Reimagine your document -->
 <ReimagineYourDocument />
 
-
 <!-- ZigZag -->
 
 <TextBlock slots="heading,text,subHeading,linksGroups,buttons,image" theme="light" headerElementType="h2" homeZigZag isbuttonGroups className="home-zigzag-comp-padding Adobe-PDF-Extract-API sales-process" />
@@ -45,10 +43,10 @@ Quickly publish sales collateral to the web and automate your entire sales exper
 
 ### Relevant APIs:
 
-* [Adobe Document Generation API](apis/doc-generation/)
-* [Adobe PDF Services API](apis/pdf-services/)
-* [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
-* [Adobe PDF Embed API](apis/pdf-embed/)
+- [Adobe Document Generation API](apis/doc-generation/)
+- [Adobe PDF Services API](apis/pdf-services/)
+- [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
+- [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://experienceleague.adobe.com/docs/document-services/tutorials/usecases/acceleratesales.html)
 
@@ -64,10 +62,10 @@ Modernize your document processes with digital HR letters for new hires and empl
 
 ### Relevant APIs:
 
-* [Adobe Document Generation API](apis/doc-generation/)
-* [Adobe PDF Services API](apis/pdf-services/)
-* [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
-* [Adobe PDF Embed API](apis/pdf-embed/)
+- [Adobe Document Generation API](apis/doc-generation/)
+- [Adobe PDF Services API](apis/pdf-services/)
+- [Adobe Acrobat Sign](https://www.adobe.com/sign.html)
+- [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://experienceleague.adobe.com/docs/document-services/tutorials/usecases/employeeonboarding.html)
 
@@ -77,17 +75,16 @@ Modernize your document processes with digital HR letters for new hires and empl
 
 Streamline legal contract and compliance processes to save time and reduce business risks. You can create legal document templates with dynamic fields that can be automatically merged with data and customized with specicfic inputs and logic. In a few steps, you can build efficient workflows for reviews, approvals, and capturing e-signatures.
 
-### Relevant APIs:
+### Relevant APIs
 
-* [Adobe Document Generation API](apis/doc-generation/)
-* [Adobe PDF Services API](apis/pdf-services/)
-* [Adobe PDF Extract API](apis/pdf-extract/)
-* [Adobe PDF Embed API](apis/pdf-embed/)
+- [Adobe Document Generation API](apis/doc-generation/)
+- [Adobe PDF Services API](apis/pdf-services/)
+- [Adobe PDF Extract API](apis/pdf-extract/)
+- [Adobe PDF Embed API](apis/pdf-embed/)
 
 - [Start tutorial](https://experienceleague.adobe.com/docs/document-services/tutorials/usecases/automatelegalworkflows.html)
 
 ![PDF Extract API Workflow](../images/mob_Image_Legal.jpg)
-
 
 <SummaryBlock slots="heading, text" theme="dark" background="rgb(31, 42, 73)" className="customer_stories py-1"/>
 
@@ -99,7 +96,6 @@ See how our customers are building smarter and faster document experiences.
 <WrapperComponent slots="content"  background="rgb(31, 42, 73)" className="customer_story_wrapper"/>
 <CustomerStory />
 
-
 <SummaryBlock slots="image, heading, text, buttons" theme="lightest" primaryOutline background="white" className="get-started-today py-2"/>
 
 ![summary block bg img](../images/bg-hero.jpeg)
@@ -108,7 +104,7 @@ See how our customers are building smarter and faster document experiences.
 
 Activate your free trial and build better document workflows today.
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Talk to an expert](/pricing/contact/)
 
 <APIPixelRetargeting/>

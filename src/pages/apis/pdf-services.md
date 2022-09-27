@@ -13,8 +13,6 @@ import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 import {APIPixelRetargeting} from '../../components/retargetting';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 
-
-
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
 # Adobe PDF Services API
@@ -23,23 +21,18 @@ Create, convert, transform, OCR PDFs and more.
 
 apiHeroAssetImg doc-service-hero
 
-- [Start free trial](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
 <!-- Why PDF Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
 <WhyPDFServicesAPI />
 
-
 <!-- Carousel Block -->
 <AWSMSCarousel />
 
-
-
 <!-- Key Features Code Block -->
 <KeyFeaturesCodeBlock />
-
-
 
 <!--Adobe PDF Extract API -->
 
@@ -47,14 +40,11 @@ apiHeroAssetImg doc-service-hero
 
 <AdobePDFExtractAPI />
 
-
-
 <!--Stepper Block -->
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="start-modifying-pdf"/>
 
 <StartModifyingPDF />
-
 
 <!--Resource Card Block -->
 

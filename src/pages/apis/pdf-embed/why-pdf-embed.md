@@ -15,7 +15,6 @@ title: Adobe Developer — PDF Embed API  — why-pdf-embed
 
 Whether on dynamic or static pages, deliver the highest quality PDF rendering available.
 
-
 <TextBlock slots="image, heading, text" width="33%" theme="light" className="align-left icon-xl-size horizontal-align-heading" />
 
 ![EMPTY_ALT](../../images/customizable_experience.svg)
@@ -32,7 +31,6 @@ Choose exactly how to display a PDF and use the callbacks and annotations APIs t
 
 Use analytics to understand how users interact with PDFs, including time spent on a page and searches.
 
-
 <TextBlock slots="buttons" isCentered theme="light" className="margin-top-zero" />
 
-* [Get free credentials](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
+* [Get free credentials](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
