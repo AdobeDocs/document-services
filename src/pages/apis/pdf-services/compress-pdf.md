@@ -32,7 +32,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
 }'
 
 // Legacy API can be found here 
-// https://documentcloud.adobe.com/document-services/index.html#post-compressPDF
+// https://documentservices.adobe.com/document-services/index.html#post-compressPDF
 ```
 
 #### Node js

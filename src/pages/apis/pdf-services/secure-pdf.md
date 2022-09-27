@@ -31,7 +31,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
 }'
 
 // Legacy API can be found here 
-// https://documentcloud.adobe.com/document-services/index.html#post-protectPDF
+// https://documentservices.adobe.com/document-services/index.html#post-protectPDF
 
 ```
 
