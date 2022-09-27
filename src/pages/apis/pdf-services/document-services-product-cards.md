@@ -15,7 +15,7 @@ title: Adobe Developer — PDF Services API  —  Explore other Adobe Document s
 Extract text, table, images and document structure.
 
 * [Learn more](/src/pages/apis/pdf-extract.md)
-* [Demo](https://documentcloud.adobe.com/dc-visualizer-app/index.html)
+* [Demo](https://documentservices.adobe.com/dc-visualizer-app/index.html)
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img"/>
 

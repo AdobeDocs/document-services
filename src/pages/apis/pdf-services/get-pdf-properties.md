@@ -32,7 +32,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pdfprope
 }'
 
 // Legacy API can be found here 
-// https://documentcloud.adobe.com/document-services/index.html#post-pdfProperties
+// https://documentservices.adobe.com/document-services/index.html#post-pdfProperties
 ```
 
 #### Node js

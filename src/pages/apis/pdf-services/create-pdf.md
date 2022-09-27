@@ -30,7 +30,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/createpd
 }'
 
 // Legacy API can be found here 
-// https://documentcloud.adobe.com/document-services/index.html#post-createPDF
+// https://documentservices.adobe.com/document-services/index.html#post-createPDF
 ```
 
 #### Node js
