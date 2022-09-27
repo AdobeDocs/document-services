@@ -37,7 +37,7 @@ const { APIs, services, community, support, developer, legal, allAPIs } = {
     },
     {
       title: 'Adobe Document Cloud',
-      path: '/document-services/homepage'
+      path: '/document-services'
     }
   ],
   services: [
