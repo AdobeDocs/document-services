@@ -84,6 +84,12 @@ module.exports = {
           title: 'Licensing',
           path: 'document-services/docs/overview/pdf-services-api/dcserviceslicensing.md'
         },{
+          title: 'Sales FAQ',
+          path: 'faq/sales/'
+        },{
+          title: 'Tech Support FAQ',
+          path: 'faq/tech-support/ '
+        },{
           title: 'Contact Us',
           path: 'pricing/contact/'
         }]
