@@ -57,7 +57,6 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GITHUB_ACTIONS: true
-          VALIDATE_GITLEAKS: false
           #
           # The Markdown rules are defined at
           # .github/linters/.markdown-lint.yml
