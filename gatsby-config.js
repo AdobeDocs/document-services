@@ -26,7 +26,7 @@ module.exports = {
     pages: [
       {
         title: 'Adobe Document Services',
-        path: 'document-services/homepage'
+        path: 'document-services'
       },
       {
         title: 'APIs',
@@ -84,6 +84,12 @@ module.exports = {
           title: 'Licensing',
           path: 'document-services/docs/overview/pdf-services-api/dcserviceslicensing.md'
         },{
+          title: 'Sales FAQ',
+          path: 'faq/sales/'
+        },{
+          title: 'Tech Support FAQ',
+          path: 'faq/tech-support/ '
+        },{
           title: 'Contact Us',
           path: 'pricing/contact/'
         }]
@@ -122,7 +128,7 @@ module.exports = {
         ]
       },
       {
-        title: "Rest APIs",
+        title: "REST APIs",
         path: 'document-services/docs/apis/index.md'
       }
     ],

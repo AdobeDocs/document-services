@@ -32,20 +32,14 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pdfprope
 }'
 
 // Legacy API can be found here 
-// https://documentcloud.adobe.com/document-services/index.html#post-pdfProperties
+// https://documentservices.adobe.com/document-services/index.html#post-pdfProperties
 ```
 
 #### Node js
 
 ```js
-
 const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
-/**
- * This sample illustrates how to retrieve properties of an input PDF file.
- *
- * Refer to README.md for instructions on how to run the samples.
- */
 try {
 
     const credentials = PDFServicesSdk.Credentials
@@ -89,25 +83,6 @@ try {
 #### .Net
 
 ```clike
-using System;
-using System.IO;
-using System.Reflection;
-using Adobe.PDFServicesSDK;
-using Adobe.PDFServicesSDK.auth;
-using Adobe.PDFServicesSDK.exception;
-using Adobe.PDFServicesSDK.io;
-using Adobe.PDFServicesSDK.io.pdfproperties;
-using Adobe.PDFServicesSDK.options.pdfproperties;
-using Adobe.PDFServicesSDK.pdfops;
-using log4net;
-using log4net.Config;
-using log4net.Repository;
-
-/// <summary>
-/// This sample illustrates how to retrieve properties of an input PDF file.
-/// <para/>
-/// Refer to README.md for instructions on how to run the samples.
-/// </summary>
 namespace GetPDFProperties
 {
     class Program
@@ -181,29 +156,6 @@ namespace GetPDFProperties
 #### Java
 
 ```javascript
-
-package com.adobe.pdfservices.operation.samples.pdfproperties;
-
-import com.adobe.pdfservices.operation.ExecutionContext;
-import com.adobe.pdfservices.operation.auth.Credentials;
-import com.adobe.pdfservices.operation.exception.SdkException;
-import com.adobe.pdfservices.operation.exception.ServiceApiException;
-import com.adobe.pdfservices.operation.exception.ServiceUsageException;
-import com.adobe.pdfservices.operation.io.FileRef;
-import com.adobe.pdfservices.operation.io.pdfproperties.Font;
-import com.adobe.pdfservices.operation.io.pdfproperties.PDFProperties;
-import com.adobe.pdfservices.operation.pdfops.PDFPropertiesOperation;
-import com.adobe.pdfservices.operation.pdfops.options.pdfproperties.PDFPropertiesOptions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
-
-/**
- * This sample illustrates how to retrieve properties of an input PDF file.
- *
- * Refer to README.md for instructions on how to run the samples.
- */
 public class GetPDFProperties {
 
     // Initialize the logger.

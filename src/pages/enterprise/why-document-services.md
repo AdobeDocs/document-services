@@ -7,7 +7,6 @@ description: Adobe Document APIs for Enterprise Developers.
 
 ## Why Adobe Document Services?
 
-
 <TextBlock slots="image, text" width="33%" theme="lightest" className="align-left enterprise-icon-xl-size horizontal-align-heading py-0"/>
 
 ![Build custom document workflows](../images/2_Icon_modify-pages.svg " ")
