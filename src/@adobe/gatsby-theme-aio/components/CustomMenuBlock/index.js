@@ -41,12 +41,16 @@ const useDynamicSVGImport = (name, options = {}) => {
 
   useEffect(() => {
     setLoading(true);
+    console.log('log--1')
     const importIcon = async () => {
+      console.log('log--2')
       try {
         ImportedIconRef.current = await import(
           `../../../../pages/images/${name}.svg`
         );
+        console.log('log--3',ImportedIconRef)
         if (onCompleted) {
+          console.log('log--4',ImportedIconRef)
           onCompleted(name, ImportedIconRef.current);
         }
       } catch (err) {
@@ -67,6 +71,7 @@ const useDynamicSVGImport = (name, options = {}) => {
 
 //Create the image element to load the svg icon in each menu item.
 const Icon = ({ name, onCompleted, onError }) => {
+  console.log('log--5',name, onCompleted, onError)
   const { error, SvgIcon } = useDynamicSVGImport(name, {
     onCompleted,
     onError,
@@ -75,6 +80,7 @@ const Icon = ({ name, onCompleted, onError }) => {
     return error.message;
   }
   if (SvgIcon) {
+    console.log('log--6',SvgIcon)
     return (
       <img
         src={SvgIcon}
@@ -154,6 +160,7 @@ const CustomMenuBlock = ( ) => {
         }
         const menuHref = withPrefix(menu.href);
         var isMenuSelected = selectedMenus.length === 1 ? index === 0 && menu.path.includes(selectedMenus[0].path) : selectedMenus[selectedMenus.length - 1] === menu && isSelected;
+        console.log('log--7',menu.icon)
         return (
           <li
             id={id}
