@@ -44,10 +44,6 @@ const useDynamicSVGImport = (name, options = {}) => {
     setLoading(true);
     const importIcon = async () => {
       try {
-        // ImportedIconRef.current = await import(
-        //   `../../../../pages/images/${name}.svg`
-
-        // );
         setSidebaricon(await import(
           `../../../../pages/images/${name}.svg`
         ))
@@ -67,7 +63,6 @@ const useDynamicSVGImport = (name, options = {}) => {
     importIcon();
   }, [name, onCompleted, onError, error]);
   return { error, loading, SvgIcon: sidebarIcon?.default };
-  // return { error, loading, SvgIcon: ImportedIconRef.current?.default };
 };
 
 //Create the image element to load the svg icon in each menu item.
