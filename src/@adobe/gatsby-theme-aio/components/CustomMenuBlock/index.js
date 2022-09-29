@@ -37,20 +37,21 @@ const useDynamicSVGImport = (name, options = {}) => {
   const ImportedIconRef = useRef();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
+  const [sidebarIcon, setSidebaricon] = useState()
   const { onCompleted, onError } = options;
 
   useEffect(() => {
     setLoading(true);
-    console.log('log--1')
     const importIcon = async () => {
-      console.log('log--2')
       try {
-        ImportedIconRef.current = await import(
+        // ImportedIconRef.current = await import(
+        //   `../../../../pages/images/${name}.svg`
+
+        // );
+        setSidebaricon(await import(
           `../../../../pages/images/${name}.svg`
-        );
-        console.log('log--3',ImportedIconRef)
+        ))
         if (onCompleted) {
-          console.log('log--4',ImportedIconRef)
           onCompleted(name, ImportedIconRef.current);
         }
       } catch (err) {
@@ -65,13 +66,12 @@ const useDynamicSVGImport = (name, options = {}) => {
     };
     importIcon();
   }, [name, onCompleted, onError, error]);
-
-  return { error, loading, SvgIcon: ImportedIconRef.current?.default };
+  return { error, loading, SvgIcon: sidebarIcon?.default };
+  // return { error, loading, SvgIcon: ImportedIconRef.current?.default };
 };
 
 //Create the image element to load the svg icon in each menu item.
 const Icon = ({ name, onCompleted, onError }) => {
-  console.log('log--5',name, onCompleted, onError)
   const { error, SvgIcon } = useDynamicSVGImport(name, {
     onCompleted,
     onError,
@@ -80,7 +80,6 @@ const Icon = ({ name, onCompleted, onError }) => {
     return error.message;
   }
   if (SvgIcon) {
-    console.log('log--6',SvgIcon)
     return (
       <img
         src={SvgIcon}
@@ -93,11 +92,11 @@ const Icon = ({ name, onCompleted, onError }) => {
   return null;
 };
 
-const CustomMenuBlock = ( ) => {
+const CustomMenuBlock = () => {
   const [expandedMenus, setExpandedMenus] = useState([]);
   const [expandedHederMenus, setExpandedHederMenus] = useState([]);
   const min_mobile_screen_width = "767px";
-   //Fetch the sidebar menu item title, icon and path from config file by using the graphql query.
+  //Fetch the sidebar menu item title, icon and path from config file by using the graphql query.
   const data = useStaticQuery(
     graphql`
       query MyQuery {
@@ -160,7 +159,6 @@ const CustomMenuBlock = ( ) => {
         }
         const menuHref = withPrefix(menu.href);
         var isMenuSelected = selectedMenus.length === 1 ? index === 0 && menu.path.includes(selectedMenus[0].path) : selectedMenus[selectedMenus.length - 1] === menu && isSelected;
-        console.log('log--7',menu.icon)
         return (
           <li
             id={id}
@@ -227,17 +225,17 @@ const CustomMenuBlock = ( ) => {
                   e.currentTarget.parentElement.nextSibling && e.currentTarget.parentElement.nextSibling.childNodes[0].focus();
                 }
                 if (e.key === 'ArrowUp') {
-                  e.currentTarget.parentElement.previousSibling &&e.currentTarget.parentElement.previousSibling.childNodes[0].focus();
+                  e.currentTarget.parentElement.previousSibling && e.currentTarget.parentElement.previousSibling.childNodes[0].focus();
                 }
-                if( e.key === 'Enter'){
+                if (e.key === 'Enter') {
                   e.currentTarget.focus();
                 }
               }}
               onFocus={(e) => {
-                if( level === 1) {
+                if (level === 1) {
                   const inx = expandedHederMenus.indexOf(index);
                   const temArr = [...expandedHederMenus]
-                  if(inx === -1) {
+                  if (inx === -1) {
                     temArr.push(index);
                     setExpandedHederMenus(temArr)
                   }
@@ -247,7 +245,7 @@ const CustomMenuBlock = ( ) => {
               className={classNames([
                 "spectrum-Menu-item",
                 {
-                  "is-open":isMenuSelected,
+                  "is-open": isMenuSelected,
                 },
               ])}
             >
@@ -258,8 +256,8 @@ const CustomMenuBlock = ( ) => {
                       {isExpanded ? (
                         <ChevronDown className="spectrum-Menu-itemIcon" />
                       ) : (
-                        <ChevronRight className="spectrum-Menu-itemIcon" />
-                      )}
+                          <ChevronRight className="spectrum-Menu-itemIcon" />
+                        )}
                     </div>
                   }
                   <div>
@@ -301,7 +299,7 @@ const CustomMenuBlock = ( ) => {
                     ? `
                   & > li > a {
                     padding-left: calc(${
-                      level + 1
+                    level + 1
                     } * var(--spectrum-global-dimension-size-150)) !important;
                   }
                 `
