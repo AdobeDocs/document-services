@@ -145,6 +145,13 @@ const issue_sub_url_array = [
       "data-security--privacy-what-regulatory-compliances-are-adobe-document-services-certified-for"
   },
   {
+    issue_type: "Data Security & Privacy",
+    sub_issue_type:
+      "Can I use Adobe Document Services in a web, mobile, or desktop application?",
+    sub_issue_type_id:
+      "data-security--privacy-can-i-use-adobe-document-services-in-a-web-mobile-or-desktop-application"
+  },
+  {
     issue_type: "Features - PDF Embed API",
     sub_issue_type: "Can I use Adobe Acrobat Sign with PDF Embed API?",
     sub_issue_type_id:
