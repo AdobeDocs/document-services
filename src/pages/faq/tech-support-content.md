@@ -109,6 +109,12 @@ Full details are available at: <a href="https://www.adobe.com/trust/compliance/c
 
 </AccordionItem>
 
+<AccordionItem header="Can I use Adobe Document Services in a web, mobile, or desktop application?" slot_id="data-security--privacy-can-i-use-adobe-document-services-in-a-web-mobile-or-desktop-application">
+
+Embedding API credentials in a client application is insecure and could expose your credentials to malicious use by a 3rd party who could extract them from the source code and use the transactions in their own applications. To mitigate credential exposure in client applications, Document services API calls should be consumed via a proxy instead of a direct connection to our APIs.
+
+</AccordionItem>
+
 </Accordion>
 
 ## Features - PDF Embed API
