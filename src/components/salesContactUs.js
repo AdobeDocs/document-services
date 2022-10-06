@@ -235,7 +235,7 @@ const SalesContactUs = ({}) => {
           body: JSON.stringify(salesFormData)
         };
         const response = await fetch(
-          `https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage2`,
+          `https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage`,
           config
         );
         if (response.status === 200) {
