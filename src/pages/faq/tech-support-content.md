@@ -54,7 +54,6 @@ In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will 
 
 </Accordion>
 
-
 ## Data Security & Privacy
 
 <Accordion>
@@ -102,8 +101,9 @@ Documents are only transferred to the cloud for processing. Adobe Document Servi
 <AccordionItem header="What regulatory compliances are Adobe Document Services certified for?" slot_id="data-security--privacy-what-regulatory-compliances-are-adobe-document-services-certified-for">
 
 The current regulations and compliance for Adobe Document  Services and PDF Services API include:
- - SOC 2. This is a set of security principles that define leading practice controls relevant to security, confidentiality, and privacy. Adobe Document Cloud services are SOC 2 Type 2 (security and availability) compliant.
- - ISO 27001. This is a set of globally adopted standards that outline stringent security requirements and provide a systematic approach to managing the confidentiality, integrity, and availability of customer information. Adobe Document Cloud services are compliant with ISO 27001:2013.
+
+- SOC 2. This is a set of security principles that define leading practice controls relevant to security, confidentiality, and privacy. Adobe Document Cloud services are SOC 2 Type 2 (security and availability) compliant.
+- ISO 27001. This is a set of globally adopted standards that outline stringent security requirements and provide a systematic approach to managing the confidentiality, integrity, and availability of customer information. Adobe Document Cloud services are compliant with ISO 27001:2013.
 
 Full details are available at: <a href="https://www.adobe.com/trust/compliance/compliance-list.html">https://www.adobe.com/trust/compliance/compliance-list.html</a>.
 
@@ -147,7 +147,7 @@ Yes, please check our documentation which explains how to set up integration w
 
 <AccordionItem header="For PDF Embed API, is it possible to map multiple un-related domains to the same client ID? I would like to use the same credentials across all of my domains." slot_id="features---pdf-embed-api-for-pdf-embed-api-is-it-possible-to-map-multiple-un-related-domains-to-the-same-client-id">
 
-A single Client ID can be mapped to only one domain. You will need to generate a separate client ID for each domain. 
+A single Client ID can be mapped to only one domain. You will need to generate a separate client ID for each domain.
 
 However, a Client ID can be mapped to a domain, which can be used in different subdomains.
 
@@ -208,7 +208,7 @@ Yes, it is possible to create a PDF from a HTML page that has multiple languages
 
 <AccordionItem header="How is PDF Services API different from PDF Library? Or from Acrobat DC SDK?" slot_id="features---pdf-services-api-how-is-pdf-services-api-different-from-pdf-library">
 
-Adobe PDF Services API offers cloud-based APIs, whereas Acrobat DC SDK offers a set of desktop plug-ins that work in conjunction with desktop Acrobat. Each of your users will need a copy of Acrobat installed on their computers. The PDF Library SDK is a subset of the Acrobat DC SDK that can be used without the need for Acrobat. 
+Adobe PDF Services API offers cloud-based APIs, whereas Acrobat DC SDK offers a set of desktop plug-ins that work in conjunction with desktop Acrobat. Each of your users will need a copy of Acrobat installed on their computers. The PDF Library SDK is a subset of the Acrobat DC SDK that can be used without the need for Acrobat.
 
 </AccordionItem>
 
@@ -255,7 +255,6 @@ There are also specific usage limitations for Document Generation API (<a href="
 </AccordionItem>
 
 </Accordion>
-
 
 ## Support
 
