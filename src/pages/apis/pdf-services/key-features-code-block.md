@@ -23,7 +23,7 @@ import HTMLToPDF from './html-to-pdf.md';
 
 <!-- Key Features of Adobe PDF Services API -->
 
-<SummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="key-features-code-block" />
+<DCSummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="key-features-code-block" />
 
 ## Key features of Adobe PDF Services API
 

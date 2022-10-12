@@ -100,7 +100,7 @@ samples for Angular and React.
 
 ![EMPTY_ALT](images/pdfEmbed.jpg)
 
-<SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
+<DCSummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
 
 ## Designed for developers
 
@@ -154,7 +154,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <HomeCarousel />
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
+<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
 
 ![summary block bg img](images/bg-hero.jpeg)
 

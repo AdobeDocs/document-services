@@ -81,7 +81,7 @@ apiHeroAssetImg doc-gen-invoice
 <NewsLetterBlade className="news-letter"/>
 
 <!-- Summary Block -->
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help" />
+<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help" />
 
 ![summary block bg img](../images/bg-hero.jpeg)
 
