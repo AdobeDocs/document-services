@@ -30,7 +30,7 @@ Start integrating our APIs into your solutions
 
 <DynamicContentLoader theme="lightest" content='CustomerStories' className="Customer-Stories"/>
 
-<SummaryBlock slots=" heading, text, buttons"  theme='light' className="we-ready-to-help" />
+<DCSummaryBlock slots=" heading, text, buttons"  theme='light' className="we-ready-to-help" />
 
 ### We're ready to help
 

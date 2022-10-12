@@ -1,4 +1,4 @@
-<SummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" btnVariant="cta" buttonPositionRight className="Reinvent py-2 reimagine" />
+<DCSummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" btnVariant="cta" buttonPositionRight className="Reinvent py-2 reimagine" />
 
 ## Reimagine your document experiences today.
 

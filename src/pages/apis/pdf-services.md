@@ -65,7 +65,7 @@ apiHeroAssetImg doc-service-hero
 
 <NewsLetterBlade className="news-letter"/>
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started" />
+<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started" />
 
 ![We're ready](../images/bg-hero.jpeg)
 
