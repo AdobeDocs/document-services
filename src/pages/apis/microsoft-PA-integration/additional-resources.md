@@ -2,7 +2,7 @@
 
 ## Learn more with these additional resources.
 
-<ResourceCard slots="link, image,text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard resourceCardCont sales-cta ms-resource-card ms-resource-card-one" />
+<ResourceCard slots="link, image,text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVariant='cta' contHeight='180px' className="useCaseCard resourceCardCont sales-cta ms-resource-card ms-resource-card-one" />
 
 []()
 
@@ -16,7 +16,7 @@ Watch our Document Automation 101 webinar to see how easy it is to get started b
 
 - [Watch webinar](https://www.adobe.com/documentcloud/webinars/document-automation-101-building-your-first-workflow-with-adobe-and-microsoft.html)
 
-<ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard resourceCardCont rental-cta ms-resource-card ms-resource-card-two"/>   
+<ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVariant='cta' contHeight='180px' className="useCaseCard resourceCardCont rental-cta ms-resource-card ms-resource-card-two"/>   
 
 []()
 
@@ -30,7 +30,7 @@ Read how to build your first document workflow in Microsoft Power Automate.
 
 - [Read article](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/create-workflow-power-automate.html?lang=en)
 
-<ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard new-hire-cta ms-resource-card ms-resource-card-three" />
+<ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVariant='cta' contHeight='180px' className="useCaseCard new-hire-cta ms-resource-card ms-resource-card-three" />
 
 []()
 
@@ -44,7 +44,7 @@ Read how to get up and running in no time using the PDF services connector in Mi
 
 - [Read article](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html)
 
-<ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard financial-cta ms-resource-card ms-resource-card-four" />
+<ResourceCard slots="link, image, text2, heading, text, buttons" width="25%" theme='lightest' isFooter btnVariant='cta' contHeight='180px' className="useCaseCard financial-cta ms-resource-card ms-resource-card-four" />
 
 []()
 

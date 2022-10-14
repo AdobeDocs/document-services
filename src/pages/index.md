@@ -14,8 +14,9 @@ import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './home/home-storyies.md'
 import {APIPixelRetargeting} from '../components/retargetting'
 import EsealApiAnnouncement from './apis/e-seal-api-announcement.md'
+import AnimationVideo from "./videos/Adobe_DCP_Marquee_Animation.json";
 
-<Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" className="homeherobgImage Hero-Banner"/>
+<Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" animationVideo={AnimationVideo} className="homeherobgImage Hero-Banner"/>
 
 # Reimagine document experiences with PDF APIs designed for developers
 
@@ -154,7 +155,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <HomeCarousel />
 
-<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
+<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" variantsTypePrimary="accent"  variantsTypeSecondary="secondary" className="How-to-get-started"/>
 
 ![summary block bg img](images/bg-hero.jpeg)
 

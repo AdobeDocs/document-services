@@ -17,7 +17,7 @@ Obtain free credentials
 
 * [Get started](/document-services/apis/interstitial/?api=pdf-embed-api)
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light"  className="align-left horizontal-align" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light"  className="align-left horizontal-align" variantsTypePrimary='secondary' variantsTypeSecondary='secondary' variantStyleFill = "outline" variantStyleOutline = "outline" isPrimaryBtn  primaryOutline/>
 
 ### Step 2
 

@@ -55,7 +55,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <DgDownloadSample/>
 
-<TextBlock slots="buttons" width="100%" theme="lightest"  isCentered variantsTypePrimary='primary' isPrimaryBtn primaryOutline className="padding-5 ms-word-add-in-title Download-sample-templates-and-data-to-get-started"  />
+<TextBlock slots="buttons" width="100%" theme="lightest"  isCentered variantsTypePrimary='secondary' variantStyleFill="outline"  className="padding-5 ms-word-add-in-title Download-sample-templates-and-data-to-get-started"  />
 
 - [See all templates](./doc-gen-api-template.md)
 
