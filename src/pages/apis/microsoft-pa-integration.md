@@ -49,7 +49,7 @@ Start your trial today and get 1,000 free document transactions.
 
 <UseCases/>
 
-<TextBlock slots="buttons" isCentered theme="lightest" variantsTypePrimary='secondary' isPrimaryBtn  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
+<TextBlock slots="buttons" isCentered theme="lightest" variantsTypePrimary='secondary' variantStyleFill = "outline"  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
 
 - [View all use cases](/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 

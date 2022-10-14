@@ -10,7 +10,7 @@ Sign up for a free trial.
 
 - [Get started](https://www.adobe.com/go/powerautomate_getstarted)
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' isPrimaryBtn className="align-left horizontal-align ms-step-two" headerElementType="h2" />
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantStyleFill = "outline"  className="align-left horizontal-align ms-step-two" headerElementType="h2" />
 
 ## Step 2
 
@@ -18,7 +18,7 @@ Set up the connector.
 
 - [View instructions](https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html)
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' isPrimaryBtn className="align-left horizontal-align ms-step-three" headerElementType="h2" />
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantStyleFill = "outline"  className="align-left horizontal-align ms-step-three" headerElementType="h2" />
 
 ## Step 3
 

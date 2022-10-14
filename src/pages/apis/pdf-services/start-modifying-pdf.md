@@ -16,7 +16,8 @@ Obtain free credentials
 
 - [Get started](/document-services/apis/interstitial/?api=pdf-services-api)
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline  className="align-left horizontal-align link" headerElementType="h2"/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantsTypeSecondary='secondary' variantStyleFill="outline"  
+variantStyleOutline= "outline" className="align-left horizontal-align link" headerElementType="h2"/>
 
 ## Step 2
 
@@ -26,7 +27,7 @@ Download ready to run samples for Node.js, Java, and .NET
 - [Java](https://github.com/adobe/pdfservices-java-sdk-samples)
 - [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples)
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline  className="align-left horizontal-align link services-step-three" headerElementType="h2"/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light"  className="align-left horizontal-align link services-step-three" headerElementType="h2"/>
 
 ## Step 3
 
