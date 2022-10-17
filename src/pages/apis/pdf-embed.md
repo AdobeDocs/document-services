@@ -32,7 +32,7 @@ apiHeroAssetImg doc-embed-hero
 
 <WhyPdfEmbed />
 
-<DCSummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight  className="embed-key-features"/>
+<DCSummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight variantsTypePrimary='secondary' variantStyleFill='outline'  className="embed-key-features"/>
 
 ### Key features of our free PDF Embed API
 
