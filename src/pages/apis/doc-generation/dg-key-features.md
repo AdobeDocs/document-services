@@ -6,7 +6,7 @@ title: Adobe Developer — Automate Document Generation | Document Key Features 
 
 ## Key features of Adobe Document Generation API
 
-<CustomCard slots="icon,heading,text,buttons" gradients gradientsType='lightBlue' buttonDisplay borderRadious cursorDisable width="25%"  theme="light" className='bgcolor' />
+<CustomCard slots="icon,heading,text,buttons" gradients gradientsType='lightBlue' buttonDisplay borderRadious cursorDisable variantsTypePrimary="staticWhite" variantStyleFill='fill' width="25%"  theme="light" className='bgcolor' />
 
 ![EMPTY_ALT](../../images/ic-msword.svg)
 
