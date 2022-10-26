@@ -231,7 +231,7 @@ const ElectronicSealAPI = ({}) => {
         };
 
         const resp = await fetch(
-          `https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage`,
+          `https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit`,
           config
         );
         const response = await resp.json();
