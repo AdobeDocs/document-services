@@ -11,6 +11,7 @@ import VisualizerHowItWorks from './pdf-extract/visualizer-how-it-works.md';
 import PdfExtractUseCases from './pdf-extract/pdf-extract-resource.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
+import EsealApiAnnouncement from './e-seal-api-announcement.md'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
 
@@ -38,6 +39,8 @@ apiHeroAssetImg doc-ext-invoice
 <WrapperComponent slots="content" repeat="1" theme="light" className="Get-started-in-minutes"/>
 
 <ExtractStepperComponent />
+
+<EsealApiAnnouncement/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
 

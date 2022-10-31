@@ -13,6 +13,7 @@ import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './home/home-storyies.md'
 import {APIPixelRetargeting} from '../components/retargetting'
+import EsealApiAnnouncement from './apis/e-seal-api-announcement.md'
 
 <Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" className="homeherobgImage Hero-Banner"/>
 
@@ -23,6 +24,8 @@ From the company who created the PDF standard.
 - [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 homeheroAssertImage
+
+<EsealApiAnnouncement/>
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
 

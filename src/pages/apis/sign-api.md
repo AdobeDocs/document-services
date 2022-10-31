@@ -10,7 +10,7 @@ import Usecase from './sign-api/use-case.md'
 import OurPartners from './sign-api/our-partners.md'
 import OurPartnersTwo from './sign-api/our-partners-two.md'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
-
+import EsealApiAnnouncement from './e-seal-api-announcement.md'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth" primaryOutline variantsTypeSecondary='primary'  className="signApiHerobgImage Hero-Banner hero-btn-color"/>
 
@@ -34,6 +34,8 @@ apiHeroAssetImg sign-api-hero
 
 <TakeYourProjectCont/>
 
+<EsealApiAnnouncement/>
+
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API"/>
 
 <PartnershipType/>
@@ -48,7 +50,6 @@ apiHeroAssetImg sign-api-hero
 Merge and prefill data directly from you application and send documents for signature. Save time by pre-populating data fields customizing inputs, and more -- all based on your application's unique needs.
 
 - [Access API samples](https://opensource.adobe.com/acrobat-sign/developer_guide/samples.html)
-
 
 <TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-two"/>
 
