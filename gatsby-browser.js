@@ -1502,6 +1502,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       }else if(window.location.pathname.indexOf("contacts")>= 0){
 
+      } else if(window.location.pathname.indexOf("contact/sales/seal")>= 0){
+        
       } else if(window.location.pathname.indexOf("contact") >= 0) {
         document
           .querySelector(".Contact-Home")

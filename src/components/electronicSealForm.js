@@ -43,7 +43,7 @@ const volumeOPtions = [
   }
 ];
 
-const PdfAccessibility = ({}) => {
+const ElectronicSealAPI = ({}) => {
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({});
   const [btnDisable, setBtnDisable] = useState(false)
@@ -215,9 +215,9 @@ const PdfAccessibility = ({}) => {
       !checkBlackWords &&
       formValue?.checkbox == true
     ) {
-      let pdfAccessibilityData = {
+      let pdfElectronicSealAPIData = {
         ...formValue,
-        formType: "pdfAccessibility",
+        formType: "Seal API",
         formId: randomString
       };
       try {
@@ -227,7 +227,7 @@ const PdfAccessibility = ({}) => {
             Accept: "application/json",
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(pdfAccessibilityData)
+          body: JSON.stringify(pdfElectronicSealAPIData)
         };
 
         const resp = await fetch(
@@ -256,7 +256,7 @@ const PdfAccessibility = ({}) => {
     <form className="form-container Sales-Form" id="my_form">
       <div className="head-container-accessibility">
         <div className="caption">
-          Request early access to the PDF Accessibility Auto-Tag API
+          Request access to PDF Electronic Seal API Beta Program
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}
@@ -280,7 +280,7 @@ const PdfAccessibility = ({}) => {
         <InputField
           id="lastName"
           label="Last Name"
-          type="text"
+          type="text"   
           maxLength="50"
           className="lnput-field"
           labelClassName="lable-content text-content"
@@ -431,9 +431,9 @@ const PdfAccessibility = ({}) => {
   );
 };
 
-PdfAccessibility.propTypes = {
+ElectronicSealAPI.propTypes = {
   theme: PropTypes.string,
   content: PropTypes.string
 };
 
-export { PdfAccessibility };
+export { ElectronicSealAPI };
