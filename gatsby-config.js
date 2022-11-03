@@ -21,7 +21,7 @@ module.exports = {
     pageImage: process.env.PAGE_IMAGE || 'dcsdk-main.jpg',
     docs: {
       title: 'Get credentials',
-      path: 'apis/interstitial/'
+      path: 'document-services/apis/interstitial/'
     },
     pages: [
       {

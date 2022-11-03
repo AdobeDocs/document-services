@@ -131,7 +131,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       // "https://www.adobe.com/go/extract_visualizer";
     }
 
-    getCredentialsButton.href = `${baseurl}`;
+    // getCredentialsButton.href = `${baseurl}`;
+    getCredentialsButton.setAttribute('target','_blank')
     getCredentialsButton.addEventListener("click",()=>reTargetingFun());
     
     let header = document.querySelector("header");
