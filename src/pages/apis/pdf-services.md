@@ -12,6 +12,7 @@ import DocumentServicesProductCards from './pdf-services/document-services-produ
 import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 import {APIPixelRetargeting} from '../../components/retargetting';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
+import EsealApiAnnouncement from './e-seal-api-announcement.md'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
@@ -27,6 +28,8 @@ apiHeroAssetImg doc-service-hero
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
 <WhyPDFServicesAPI />
+
+<EsealApiAnnouncement/>
 
 <!-- Carousel Block -->
 <AWSMSCarousel />

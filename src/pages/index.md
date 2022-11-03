@@ -13,6 +13,7 @@ import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './home/home-storyies.md'
 import {APIPixelRetargeting} from '../components/retargetting'
+import EsealApiAnnouncement from './apis/e-seal-api-announcement.md'
 
 <Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" className="homeherobgImage Hero-Banner"/>
 
@@ -23,6 +24,14 @@ From the company who created the PDF standard.
 - [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 homeheroAssertImage
+
+<AnnouncementBlock slots="heading, text, button" className='ms-announcement-blade' theme="dark"/>
+
+### Join the Beta program for our new PDF Electronic Seal API
+
+Sign up for the opportunity to try our latest API that helps you verify the identity and integrity of documents using an electronic seal.
+
+[Register now](src/pages/pricing/contact/sales/seal)
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
 

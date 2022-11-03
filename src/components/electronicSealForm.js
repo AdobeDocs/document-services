@@ -148,12 +148,12 @@ const ElectronicSealAPI = ({}) => {
     } else {
       error.company_website = "";
     }
-    if (_isEmpty(formValue?.phone)) {
-      error.phone = "Required *";
-      setBtnDisable(false)
-    } else {
-      error.phone = "";
-    }
+    // if (_isEmpty(formValue?.phone)) {
+    //   error.phone = "Required *";
+    //   setBtnDisable(false)
+    // } else {
+    //   error.phone = "";
+    // }
     if (_isEmpty(formValue?.job_title)) {
       error.job_title = "Required *";
       setBtnDisable(false)
@@ -206,7 +206,7 @@ const ElectronicSealAPI = ({}) => {
       !blacklist.test(formValue?.business_email) &&
       !_isEmpty(formValue?.company_website) &&
       !blacklist.test(formValue?.company_website) &&
-      !_isEmpty(formValue?.phone) &&
+      // !_isEmpty(formValue?.phone) &&
       !_isEmpty(formValue?.job_title) &&
       !blacklist.test(formValue?.job_title) &&
       !_isEmpty(formValue?.region) &&
@@ -372,7 +372,7 @@ const ElectronicSealAPI = ({}) => {
         rows="6"
         areaClassName="area-containers text-content"
         labelClassName="lable-content text-content"
-        placeholder="Please describe your intended application of our PDF Services APIs."
+        placeholder="Please describe your intended application of our Seal API."
         value={formValue?.use_case}
         onChange={e => onChnage(e)}
         errorMsg={errorMsg.use_case}
@@ -414,10 +414,10 @@ const ElectronicSealAPI = ({}) => {
           By clicking Submit, I agree that I have read and accepted the{" "}
           <a
             target="_blank"
-            href="https://www.adobe.com/legal/terms.html"
+            href="https://www.adobe.com/content/dam/cc/en/legal/documents/Seal_API_Pre-Release_Agreement_with_signature_Template_c2a.pdf"
             className="link-content"
           >
-            Terms of Use
+            Seal API Prerelease Agreement
           </a>
           .
         </div>
