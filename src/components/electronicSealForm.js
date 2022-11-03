@@ -372,7 +372,7 @@ const ElectronicSealAPI = ({}) => {
         rows="6"
         areaClassName="area-containers text-content"
         labelClassName="lable-content text-content"
-        placeholder="Please describe your intended application of our PDF Services APIs."
+        placeholder="Please describe your intended application of our Seal API."
         value={formValue?.use_case}
         onChange={e => onChnage(e)}
         errorMsg={errorMsg.use_case}
