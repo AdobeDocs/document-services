@@ -222,7 +222,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     });
 
     if (window.location.pathname.indexOf("pdf-services") >= 0) {
-      getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
+      // getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -234,7 +234,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
     } else if (window.location.pathname.indexOf("doc-generation") >= 0) {
-      getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
+      // getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -247,7 +247,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         
       });
     }  else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
-      getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
+      // getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -259,7 +259,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
-      getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
+      // getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
