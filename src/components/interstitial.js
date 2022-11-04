@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { css } from "@emotion/react";
 import classNames from "classnames";
 import "@spectrum-css/typography";
@@ -27,16 +27,22 @@ const contentData = [
 const Interstitial=()=>{
     const [select,setSelects] = useState()
 
+    useEffect(() => {
+        document.addEventListener('mouseup', function(e) {
+            var container = document.getElementById('container');
+            if (!container.contains(e.target)) {
+                setSelects({})
+            }
+        });
+        return () => {
+            document.removeEventListener('mouseup', function(e) {
+                console.log('test----------------------');
+            });
+        }
+    }, []);
     const activeFunc=(id)=>{
         setSelects({id})
     }
-
-    document.addEventListener('mouseup', function(e) {
-        var container = document.getElementById('container');
-        if (!container.contains(e.target)) {
-            setSelects({})
-        }
-    });
 
     return<div>
             <div className="intertitialWrapper" >
