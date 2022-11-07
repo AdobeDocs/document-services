@@ -38,7 +38,7 @@ apiHeroAssetImg doc-embed-hero
 
 - [Get free credentials](/document-services/apis/interstitial/?api=pdf-embed-api)
 
-<TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0 embed-key-features embed-key-features-code-block' />
+<TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0 embed-key-features embed-key-features-code-block tabBlockAlign' />
 
 ### Embed Modes
 
