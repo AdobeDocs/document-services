@@ -3091,3 +3091,6 @@ img[alt=adobe-support] {
     margin: 0 .25em;
   }
   
+.tabBlockAlign > div > div > div > div > div > span {
+    line-height: initial !important;
+}

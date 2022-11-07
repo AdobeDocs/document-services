@@ -1,4 +1,4 @@
-<TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView"/>
+<TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView tabBlockAlign"/>
 
 ##### Extract PDF Content & Structure
 
