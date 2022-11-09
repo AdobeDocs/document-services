@@ -110,15 +110,18 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     //local
     let navLinksBaseUrl = "";
     let isLocal = true;
+    let credentialsBtnUrl = ''
     // stage/deploy
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0)  {
       navLinksBaseUrl = "/document-services";
       isLocal = false;
+      credentialsBtnUrl = '/apis/interstitial/'
     }
     // stage
     let baseurl = "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
       // "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
     let referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
+    credentialsBtnUrl = '/document-services/apis/interstitial/'
     // production
     if (
       window.location.host.indexOf("developer.adobe.com") >= 0 ||
@@ -129,9 +132,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
       // visualizerBaseurl =
       // "https://www.adobe.com/go/extract_visualizer";
+      credentialsBtnUrl = '/document-services/apis/interstitial/'
     }
 
-    let credentialsBtnUrl = '/apis/interstitial/'
+    
     // getCredentialsButton.href = `${baseurl}`;
     getCredentialsButton.setAttribute('target','_blank')
     getCredentialsButton.addEventListener("click",()=>reTargetingFun());
