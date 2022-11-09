@@ -3069,3 +3069,25 @@ img[alt=adobe-support] {
     }
 
 }
+.btnWrapper{
+    display: flex;
+    justify-content: center;
+}
+.secondary-dcsdk-button .secondaryBtn {
+    color: #fff;
+    border-color: #0e6de0;
+    background-color: #0e6de0;
+  }
+
+.secondary-dcsdk-button {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2em;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 18px 4px;
+    margin: 0 .25em;
+  }
+  

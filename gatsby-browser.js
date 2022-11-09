@@ -131,6 +131,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       // "https://www.adobe.com/go/extract_visualizer";
     }
 
+    let credentialsBtnUrl = '/apis/interstitial/'
     // getCredentialsButton.href = `${baseurl}`;
     getCredentialsButton.setAttribute('target','_blank')
     getCredentialsButton.addEventListener("click",()=>reTargetingFun());
@@ -222,7 +223,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     });
 
     if (window.location.pathname.indexOf("pdf-services") >= 0) {
-      // getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
+      getCredentialsButton.href = `${credentialsBtnUrl}?api=pdf-services-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -234,7 +235,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
     } else if (window.location.pathname.indexOf("doc-generation") >= 0) {
-      // getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
+      getCredentialsButton.href = `${credentialsBtnUrl}?api=document-generation-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -247,7 +248,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         
       });
     }  else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
-      // getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
+      getCredentialsButton.href = `${credentialsBtnUrl}?api=pdf-extract-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -259,7 +260,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
-      // getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
+      getCredentialsButton.href = `${credentialsBtnUrl}?api=pdf-embed-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -758,6 +759,23 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     document.querySelectorAll(".news-letter a").forEach(link => {
       link.setAttribute("daa-ll", link.textContent);
     });
+
+    } else if (window.location.pathname.indexOf("interstitial") >= 0) {
+      document
+        .querySelector(".interstitialHeading")
+        .setAttribute("daa-lh", "Which of the following best describes what you are here for?");
+      
+      document
+        .querySelectorAll('.interstitialBox').forEach(text =>{
+          text.setAttribute("daa-ll", text.textContent)
+        })
+      
+      document
+        .querySelector('.dcsdk-button')
+        .setAttribute("daa-ll",'Sign in to get started')
+      document
+        .querySelector('.secondary-dcsdk-button')
+        .setAttribute("daa-ll",'Skip')
 
     } else if (window.location.pathname.indexOf("resources") >= 0) {
       document
