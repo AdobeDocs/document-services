@@ -6,6 +6,7 @@ import "@spectrum-css/typography";
 import pdfSolutionCardIcon from '../pages/images/pdfSolutionCardIcon.png'
 import pdfContentIcon from '../pages/images/pdfContentIcon.png'
 import doSomethingIcon from '../pages/images/doSomethingIcon.png'
+import { AnchorButton } from '@adobe/gatsby-theme-aio/src/components/AnchorButton';
 
 const contentData = [
     {
@@ -39,7 +40,7 @@ const Interstitial = () => {
 
         return () => {
             document.removeEventListener('mouseup', function (e) {
-                console.log('test----------------------');
+                console.log('');
             });
         }
     }, []);
@@ -47,16 +48,21 @@ const Interstitial = () => {
     const activeFunc = (id) => {
         setSelects({ id })
         document.querySelector('.dcsdk-button')
-        .setAttribute('daa-ll',id)
+            .setAttribute('daa-ll',id)
     }
 
     const onSignin = () => {
         const urlParams = window.location.search
         if (select?.id === undefined) {
-            alert("Please select anyone of the options you prefered")
+            alert("Please select one of the three options provided to proceed")
         } else {
             window.location.href = `https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
         }
+    }
+
+    const onSkip = () => {
+        const urlParams = window.location.search
+        window.location.href = `https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
     }
 
     return <div>
@@ -77,10 +83,20 @@ const Interstitial = () => {
                     Sign in to get started
                 </div>
             </div>
-            <div className="primary-button" style={{ cursor: 'pointer' }}>
-                <a className="secondary-dcsdk-button secondaryBtn" href='https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html' target='_parent'>
+            
+            <div
+                css={css`
+                  margin-top: 28px;
+                  margin-left: var(--spectrum-global-dimension-size-300);
+                  white-space: nowrap;
+                `}>
+                <AnchorButton
+                    className='secondary-dcsdk-button'
+                    variant="primary" href='javascript:void(0);' target='_parent'
+                    onClick={() => onSkip()}
+                >
                     Skip
-                </a>
+                </AnchorButton>
             </div>
         </div>
     </div>

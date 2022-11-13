@@ -12,14 +12,29 @@
 
 import React from 'react';
 import { GatsbyLink } from '@adobe/gatsby-theme-aio/src/components/GatsbyLink';
-import { getExternalLinkProps, isExternalLink, gdocsRelativeLinkFix } from '@adobe/gatsby-theme-aio/src/utils';
 import PropTypes from 'prop-types';
 import { Button } from '@adobe/gatsby-theme-aio/src/components/Button';
 import '@spectrum-css/button';
 import classNames from 'classnames';
 
 const AnchorButton = ({ className, href, variant, isQuiet, ...props }) => {
-  if (isExternalLink(href)) {
+  href = String(href).replace('#', '');
+  let isExternal = true;
+
+  try {
+    new URL(href);
+  } catch (e) {
+    isExternal = false;
+  }
+
+  if (isExternal && new URL(href).searchParams.has('aio_internal')) {
+    isExternal = false;
+  }
+  if (href.indexOf('interstitial') >= 0) {
+    isExternal = true;
+  }
+
+  if (isExternal) {
     return (
       <Button
         className={className}
@@ -27,7 +42,8 @@ const AnchorButton = ({ className, href, variant, isQuiet, ...props }) => {
         variant={variant}
         isQuiet={isQuiet}
         href={href}
-        {...getExternalLinkProps(href)}
+        target='_blank'
+        rel='noopener noreferrer nofollow'
         {...props}
       />
     );

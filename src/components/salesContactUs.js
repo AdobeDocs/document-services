@@ -20,7 +20,7 @@ const regionOptions = [
   },
   {
     key: 3,
-    label: "Asia/Pacific"
+    label: "Asia/Pacific/Japan"
   },
   {
     key: 4,

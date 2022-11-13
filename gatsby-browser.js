@@ -109,37 +109,30 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     //local
     let navLinksBaseUrl = "";
+    let referenceBaseUrl = "";
     let isLocal = true;
-    let credentialsBtnUrl = ''
+    let baseurl = "";
     // stage/deploy
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0)  {
       navLinksBaseUrl = "/document-services";
       isLocal = false;
-      credentialsBtnUrl = '/apis/interstitial/'
+      baseurl = '/apis/interstitial/'
     }
     // stage
-    let baseurl = "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
+    baseurl = "/document-services/apis/interstitial/";
       // "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
-    let referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
-    credentialsBtnUrl = '/document-services/apis/interstitial/'
+    referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
     // production
     if (
       window.location.host.indexOf("developer.adobe.com") >= 0 ||
       window.location.host.indexOf("adobe.io") >= 0
     ) {
-      baseurl =
-        "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
+      baseurl = "/document-services/apis/interstitial/";
         referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
       // visualizerBaseurl =
       // "https://www.adobe.com/go/extract_visualizer";
-      credentialsBtnUrl = '/document-services/apis/interstitial/'
     }
 
-    
-    // getCredentialsButton.href = `${baseurl}`;
-    getCredentialsButton.setAttribute('target','_blank')
-    getCredentialsButton.addEventListener("click",()=>reTargetingFun());
-    
     let header = document.querySelector("header");
     header.setAttribute("daa-lh", "Gnav");
     header
@@ -227,7 +220,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     });
 
     if (window.location.pathname.indexOf("pdf-services") >= 0) {
-      getCredentialsButton.href = `${credentialsBtnUrl}?api=pdf-services-api`;
+      getCredentialsButton.href = `${baseurl}?api=pdf-services-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -239,7 +232,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
     } else if (window.location.pathname.indexOf("doc-generation") >= 0) {
-      getCredentialsButton.href = `${credentialsBtnUrl}?api=document-generation-api`;
+      getCredentialsButton.href = `${baseurl}?api=document-generation-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -252,7 +245,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         
       });
     }  else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
-      getCredentialsButton.href = `${credentialsBtnUrl}?api=pdf-extract-api`;
+      getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -264,7 +257,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
-      getCredentialsButton.href = `${credentialsBtnUrl}?api=pdf-embed-api`;
+      getCredentialsButton.href = `${baseurl}?api=pdf-embed-api`;
       getCredentialsButton.addEventListener("click",()=>reTargetingFun())
 
       getStartedButtonArr.map(getStartedButton => {
@@ -290,13 +283,16 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
       });
     } else if (window.location.pathname.indexOf("sign-api") >= 0 || window.location.pathname.indexOf("microsoft-pa-integration") >= 0) {
-
+      getCredentialsButton.href = baseurl;
+      getCredentialsButton.addEventListener("click", () => reTargetingFun())
     }else {
       if (getStartedButtonArr) {
         getStartedButtonArr.map(getStartedButton => {
-          getStartedButton.href = `${baseurl}`;
+          getStartedButton.href = baseurl;
         });
       }
+      getCredentialsButton.href = baseurl;
+      getCredentialsButton.addEventListener("click", () => reTargetingFun())
     }
 
     if (

@@ -417,7 +417,7 @@ const ElectronicSealAPI = ({}) => {
             href="https://www.adobe.com/content/dam/cc/en/legal/documents/Seal_API_Pre-Release_Agreement_with_signature_Template_c2a.pdf"
             className="link-content"
           >
-            Seal API Prerelease Agreement
+            License Agreement for Prerelease Software, PDF Electronic Seal API Beta
           </a>
           .
         </div>
