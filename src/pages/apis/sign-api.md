@@ -23,7 +23,6 @@ apiHeroAssetImg sign-api-hero
 - [Create account](https://www.adobe.com/sign/developer-form.html)
 - [View documentation](https://opensource.adobe.com/acrobat-sign/developer_guide/)
 
-
 <PartnerWithUsBlade/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
@@ -39,7 +38,6 @@ apiHeroAssetImg sign-api-hero
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API"/>
 
 <PartnershipType/>
-
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-one"/>
 
@@ -60,7 +58,6 @@ Adobe, with our Document Generation API and other PDF Services APIs, makes it ea
 - [View e-signature workflows](https://opensource.adobe.com/acrobat-sign/developer_guide/apiusage.html#send-for-signing-create-an-agreement)
 
 ![EMPTY_ALT](../images/5_Devices_Store.png)
-
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-three"/>
 

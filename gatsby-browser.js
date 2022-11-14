@@ -467,7 +467,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".Hero-Banner a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
         if(link.textContent === 'Try for free'){
-          link.href = `${baseurl}?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate`;
+          link.href = `${baseurl}?api=pdf-services-api&source=pa&sdid=6S3T74M5&mv=affiliate`;
           link.addEventListener("click",()=>reTargetingFun());
         }
       });
