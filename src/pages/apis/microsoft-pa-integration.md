@@ -39,7 +39,7 @@ microsoftPAHeroImage
 
 Start your trial today and get 1,000 free document transactions.
 
-- [Try for free](/document-services/apis/interstitial/?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
+- [Try for free](/apis/interstitial/?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 
 <WrapperComponent slots="content" theme="lightest" className="Benefits-For-Enterprises"/>
 
