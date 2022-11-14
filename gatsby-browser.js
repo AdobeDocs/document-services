@@ -10,8 +10,6 @@
  * governing permissions and limitations under the License.
  */
 
-import {INTERSTITIAL_BASE_URL} from './src/utils'
-
 const isBrowser = typeof window !== "undefined";
 export const onRouteUpdate = ({ location, prevLocation }) => {
 
@@ -98,40 +96,23 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       el => el.textContent === "Get started"
     );
 
-     // stage
-    //  let visualizerBaseurl =
-    //  "https://www.adobe.com/go/stage_extract_visualizer";
-  
-    //dev
-    // if (window.location.host.indexOf("github.io") >= 0) {
-    //   visualizerBaseurl =
-    //   "https://www.adobe.com/go/dev_extract_visualizer";
-    // }
-
     //local
-    let navLinksBaseUrl = "";
-    let referenceBaseUrl = "";
     let isLocal = true;
-    let baseurl = "";
+    let navLinksBaseUrl = "";
+    let baseurl = "/apis/interstitial/";
+    let referenceBaseUrl = "https://developer-stage.adobe.com/document-services/docs/apis/"
     // stage/deploy
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0)  {
-      navLinksBaseUrl = "/document-services";
       isLocal = false;
-      baseurl = INTERSTITIAL_BASE_URL
+      navLinksBaseUrl = "/document-services";
+      baseurl = '/document-services/apis/interstitial/'
     }
-    // stage
-    baseurl = INTERSTITIAL_BASE_URL;
-      // "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
-    referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
     // production
     if (
       window.location.host.indexOf("developer.adobe.com") >= 0 ||
       window.location.host.indexOf("adobe.io") >= 0
     ) {
-      baseurl = INTERSTITIAL_BASE_URL;
-        referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
-      // visualizerBaseurl =
-      // "https://www.adobe.com/go/extract_visualizer";
+      referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
     }
 
     let header = document.querySelector("header");
@@ -208,9 +189,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector("a[href='/console']")
       ?.setAttribute("daa-ll", "Console");
       document.querySelectorAll('img[alt="EMPTY_ALT"]').forEach(link => {
-          link.setAttribute("alt", ''); 
-          link.setAttribute("title", '');
-        });
+        link.setAttribute("alt", ''); 
+        link.setAttribute("title", '');
+      });
               
     let footer = document.querySelector("footer");
     footer?.setAttribute("daa-lh", "Footer");
@@ -303,11 +284,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       startFreeTrialButtonArr.map(startFreeTrialButton => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
-
-      // let AdobePDFExtractAPIBtn = Array.from(document.querySelectorAll(".Adobe-PDF-Extract-API a")).find(
-      //     el =>  el.textContent === "Try the demo"
-      //   );
-      // AdobePDFExtractAPIBtn.href = `${visualizerBaseurl}`;
 
       document
         .querySelector(".Hero-Banner")
