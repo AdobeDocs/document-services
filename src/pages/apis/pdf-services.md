@@ -12,6 +12,7 @@ import DocumentServicesProductCards from './pdf-services/document-services-produ
 import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 import {APIPixelRetargeting} from '../../components/retargetting';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
+import EsealApiAnnouncement from './e-seal-api-announcement.md'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
@@ -21,12 +22,14 @@ Create, convert, transform, OCR PDFs and more.
 
 apiHeroAssetImg doc-service-hero
 
-- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Start free trial](/document-services/apis/interstitial/?api=pdf-services-api)
 
 <!-- Why PDF Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
 <WhyPDFServicesAPI />
+
+<EsealApiAnnouncement/>
 
 <!-- Carousel Block -->
 <AWSMSCarousel />
