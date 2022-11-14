@@ -30,7 +30,7 @@ const AnchorButton = ({ className, href, variant, isQuiet, ...props }) => {
   if (isExternal && new URL(href).searchParams.has('aio_internal')) {
     isExternal = false;
   }
-  if (href.indexOf('interstitial') >= 0) {
+  if (href.indexOf('interstitial') >= 0 || href == null) {
     isExternal = true;
   }
 

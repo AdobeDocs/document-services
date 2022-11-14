@@ -10,8 +10,9 @@
  * governing permissions and limitations under the License.
  */
 
-const isBrowser = typeof window !== "undefined";
+import {INTERSTITIAL_BASE_URL} from './src/utils'
 
+const isBrowser = typeof window !== "undefined";
 export const onRouteUpdate = ({ location, prevLocation }) => {
 
   const openPdf = (pdfUrl) =>{
@@ -116,10 +117,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0)  {
       navLinksBaseUrl = "/document-services";
       isLocal = false;
-      baseurl = '/apis/interstitial/'
+      baseurl = INTERSTITIAL_BASE_URL
     }
     // stage
-    baseurl = "/document-services/apis/interstitial/";
+    baseurl = INTERSTITIAL_BASE_URL;
       // "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
     referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
     // production
@@ -127,7 +128,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       window.location.host.indexOf("developer.adobe.com") >= 0 ||
       window.location.host.indexOf("adobe.io") >= 0
     ) {
-      baseurl = "/document-services/apis/interstitial/";
+      baseurl = INTERSTITIAL_BASE_URL;
         referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
       // visualizerBaseurl =
       // "https://www.adobe.com/go/extract_visualizer";
@@ -490,9 +491,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".Hero-Banner a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
         if(link.textContent === 'Try for free'){
+          link.href = `${baseurl}?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate`;
           link.addEventListener("click",()=>reTargetingFun());
-          // link.href = `${baseurl}`;
-          // link.href = `${baseurl}?sdid=2NVQC73G&mv=display`;
         }
       });
 

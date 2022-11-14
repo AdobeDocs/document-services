@@ -48,21 +48,35 @@ const Interstitial = () => {
     const activeFunc = (id) => {
         setSelects({ id })
         document.querySelector('.dcsdk-button')
-            .setAttribute('daa-ll',id)
+            .setAttribute('daa-ll', id)
+    }
+    const getBaseURL = () => {
+        const urlParams = window.location.search
+        // stage
+        let baseurl = `https://stage.documentservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
+
+        // production
+        if (
+            window.location.host.indexOf("developer.adobe.com") >= 0 ||
+            window.location.host.indexOf("adobe.io") >= 0
+        ) {
+            baseurl = `https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
+        }
+
+        return baseurl;
+
     }
 
     const onSignin = () => {
-        const urlParams = window.location.search
         if (select?.id === undefined) {
             alert("Please select one of the three options provided to proceed")
         } else {
-            window.location.href = `https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
+            window.location.href = getBaseURL();
         }
     }
 
     const onSkip = () => {
-        const urlParams = window.location.search
-        window.location.href = `https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
+        window.location.href = getBaseURL();
     }
 
     return <div>
@@ -83,7 +97,7 @@ const Interstitial = () => {
                     Sign in to get started
                 </div>
             </div>
-            
+
             <div
                 css={css`
                   margin-top: 28px;
