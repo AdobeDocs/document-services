@@ -11,6 +11,7 @@ import VisualizerHowItWorks from './pdf-extract/visualizer-how-it-works.md';
 import PdfExtractUseCases from './pdf-extract/pdf-extract-resource.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
+import EsealApiAnnouncement from './e-seal-api-announcement.md'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
 
@@ -21,7 +22,7 @@ Unlock the structure and content elements of any PDF with a web service powered 
 apiHeroAssetImg doc-ext-invoice
 
 - [Try the Demo](https://documentservices.adobe.com/dc-visualizer-app/index.html)
-- [Start Free Trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
+- [Start Free Trial](/apis/interstitial/?api=pdf-extract-api)
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>
 
@@ -38,6 +39,8 @@ apiHeroAssetImg doc-ext-invoice
 <WrapperComponent slots="content" repeat="1" theme="light" className="Get-started-in-minutes"/>
 
 <ExtractStepperComponent />
+
+<EsealApiAnnouncement/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
 

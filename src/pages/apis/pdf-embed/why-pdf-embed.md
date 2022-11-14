@@ -33,4 +33,4 @@ Use analytics to understand how users interact with PDFs, including time spent o
 
 <TextBlock slots="buttons" isCentered theme="light" className="margin-top-zero" />
 
-* [Get free credentials](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
+* [Get free credentials](/document-services/apis/interstitial/?api=pdf-embed-api)

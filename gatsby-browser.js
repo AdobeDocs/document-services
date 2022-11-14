@@ -11,7 +11,6 @@
  */
 
 const isBrowser = typeof window !== "undefined";
-
 export const onRouteUpdate = ({ location, prevLocation }) => {
 
   const openPdf = (pdfUrl) =>{
@@ -97,43 +96,25 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       el => el.textContent === "Get started"
     );
 
-     // stage
-    //  let visualizerBaseurl =
-    //  "https://www.adobe.com/go/stage_extract_visualizer";
-  
-    //dev
-    // if (window.location.host.indexOf("github.io") >= 0) {
-    //   visualizerBaseurl =
-    //   "https://www.adobe.com/go/dev_extract_visualizer";
-    // }
-
     //local
-    let navLinksBaseUrl = "";
     let isLocal = true;
+    let navLinksBaseUrl = "";
+    let baseurl = "/apis/interstitial/";
+    let referenceBaseUrl = "https://developer-stage.adobe.com/document-services/docs/apis/"
     // stage/deploy
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0)  {
-      navLinksBaseUrl = "/document-services";
       isLocal = false;
+      navLinksBaseUrl = "/document-services";
+      baseurl = '/document-services/apis/interstitial/'
     }
-    // stage
-    let baseurl = "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
-      // "https://dc.stage.acrobat.com/dc-integration-creation-app-cdn/main.html";
-    let referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
     // production
     if (
       window.location.host.indexOf("developer.adobe.com") >= 0 ||
       window.location.host.indexOf("adobe.io") >= 0
     ) {
-      baseurl =
-        "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html";
-        referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
-      // visualizerBaseurl =
-      // "https://www.adobe.com/go/extract_visualizer";
+      referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
     }
 
-    getCredentialsButton.href = `${baseurl}`;
-    getCredentialsButton.addEventListener("click",()=>reTargetingFun());
-    
     let header = document.querySelector("header");
     header.setAttribute("daa-lh", "Gnav");
     header
@@ -208,9 +189,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector("a[href='/console']")
       ?.setAttribute("daa-ll", "Console");
       document.querySelectorAll('img[alt="EMPTY_ALT"]').forEach(link => {
-          link.setAttribute("alt", ''); 
-          link.setAttribute("title", '');
-        });
+        link.setAttribute("alt", ''); 
+        link.setAttribute("title", '');
+      });
               
     let footer = document.querySelector("footer");
     footer?.setAttribute("daa-lh", "Footer");
@@ -284,13 +265,16 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         getStartedButton.href = `${baseurl}?api=pdf-embed-api`;
       });
     } else if (window.location.pathname.indexOf("sign-api") >= 0 || window.location.pathname.indexOf("microsoft-pa-integration") >= 0) {
-
+      getCredentialsButton.href = baseurl;
+      getCredentialsButton.addEventListener("click", () => reTargetingFun())
     }else {
       if (getStartedButtonArr) {
         getStartedButtonArr.map(getStartedButton => {
-          getStartedButton.href = `${baseurl}`;
+          getStartedButton.href = baseurl;
         });
       }
+      getCredentialsButton.href = baseurl;
+      getCredentialsButton.addEventListener("click", () => reTargetingFun())
     }
 
     if (
@@ -300,11 +284,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       startFreeTrialButtonArr.map(startFreeTrialButton => {
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
-
-      // let AdobePDFExtractAPIBtn = Array.from(document.querySelectorAll(".Adobe-PDF-Extract-API a")).find(
-      //     el =>  el.textContent === "Try the demo"
-      //   );
-      // AdobePDFExtractAPIBtn.href = `${visualizerBaseurl}`;
 
       document
         .querySelector(".Hero-Banner")
@@ -488,9 +467,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".Hero-Banner a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
         if(link.textContent === 'Try for free'){
+          link.href = `${baseurl}?api=pdf-services-api&source=pa&sdid=6S3T74M5&mv=affiliate`;
           link.addEventListener("click",()=>reTargetingFun());
-          // link.href = `${baseurl}`;
-          // link.href = `${baseurl}?sdid=2NVQC73G&mv=display`;
         }
       });
 
@@ -757,6 +735,23 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     document.querySelectorAll(".news-letter a").forEach(link => {
       link.setAttribute("daa-ll", link.textContent);
     });
+
+    } else if (window.location.pathname.indexOf("interstitial") >= 0) {
+      document
+        .querySelector(".interstitialHeading")
+        .setAttribute("daa-lh", "Which of the following best describes what you are here for?");
+      
+      document
+        .querySelectorAll('.interstitialBox').forEach(text =>{
+          text.setAttribute("daa-ll", text.textContent)
+        })
+      
+      document
+        .querySelector('.dcsdk-button')
+        .setAttribute("daa-ll",'Sign in to get started')
+      document
+        .querySelector('.secondary-dcsdk-button')
+        .setAttribute("daa-ll",'Skip')
 
     } else if (window.location.pathname.indexOf("resources") >= 0) {
       document

@@ -10,7 +10,7 @@ import Usecase from './sign-api/use-case.md'
 import OurPartners from './sign-api/our-partners.md'
 import OurPartnersTwo from './sign-api/our-partners-two.md'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
-
+import EsealApiAnnouncement from './e-seal-api-announcement.md'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth" primaryOutline variantsTypeSecondary='primary'  className="signApiHerobgImage Hero-Banner hero-btn-color"/>
 
@@ -23,7 +23,6 @@ apiHeroAssetImg sign-api-hero
 - [Create account](https://www.adobe.com/sign/developer-form.html)
 - [View documentation](https://opensource.adobe.com/acrobat-sign/developer_guide/)
 
-
 <PartnerWithUsBlade/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
@@ -34,10 +33,11 @@ apiHeroAssetImg sign-api-hero
 
 <TakeYourProjectCont/>
 
+<EsealApiAnnouncement/>
+
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API"/>
 
 <PartnershipType/>
-
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-one"/>
 
@@ -49,7 +49,6 @@ Merge and prefill data directly from you application and send documents for sign
 
 - [Access API samples](https://opensource.adobe.com/acrobat-sign/developer_guide/samples.html)
 
-
 <TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-two"/>
 
 ### Store documents in your own repository.
@@ -59,7 +58,6 @@ Adobe, with our Document Generation API and other PDF Services APIs, makes it ea
 - [View e-signature workflows](https://opensource.adobe.com/acrobat-sign/developer_guide/apiusage.html#send-for-signing-create-an-agreement)
 
 ![EMPTY_ALT](../images/5_Devices_Store.png)
-
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-three"/>
 

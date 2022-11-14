@@ -14,7 +14,7 @@ Start free trial with 1,000 Document Transactions for up to 6 months
 
 Start a free trial and download code samples for Node.js, Java, and .Net
 
-- [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
+- [Get started](/document-services/apis/interstitial/?api=document-generation-api)
 
 <TextBlock slots="heading, text, buttons" theme="light"  width="33%" variantsTypePrimary="primary" isPrimaryBtn className="align-left link  stepper-horizontal-align linking"/>
 

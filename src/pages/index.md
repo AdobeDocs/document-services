@@ -13,6 +13,7 @@ import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './home/home-storyies.md'
 import {APIPixelRetargeting} from '../components/retargetting'
+import EsealApiAnnouncement from './apis/e-seal-api-announcement.md'
 
 <Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" className="homeherobgImage Hero-Banner"/>
 
@@ -20,9 +21,17 @@ import {APIPixelRetargeting} from '../components/retargetting'
 
 From the company who created the PDF standard.
 
-- [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Get started](/document-services/apis/interstitial/)
 
 homeheroAssertImage
+
+<AnnouncementBlock slots="heading, text, button" className='ms-announcement-blade' theme="dark"/>
+
+### Join the Beta program for our new Adobe PDF Electronic Seal API
+
+Sign up for the opportunity to try our latest API that helps you verify the identity and integrity of documents using an electronic seal.
+
+[Register now](src/pages/pricing/contact/sales/seal)
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
 
@@ -97,7 +106,7 @@ samples for Angular and React.
 
 Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
 
-- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](/apis/interstitial/)
 
 <TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block' />
 
@@ -153,7 +162,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 Start free trial with 1,000 PDF transactions for up to 6 months.
 
-- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](/apis/interstitial/)
 - [Contact us](src/pages/pricing/contact.md)
 
 <APIPixelRetargeting/>
