@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Employee Onboarding Materials'
+title: 'Acrobat Services API Use Case: Employee Onboarding Materials'
 ---
 
 ## Employee Onboarding Materials
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Employee Onboarding Materials'
 
 Onboarding new customers into a company or new role takes time and resources. Human Resources often needs to share items like welcome packets, employee handbooks, and resource guides. Customizing onboarding documents for specific employees, roles, seniority levels, and regions improves the employee experience but can be very time consuming for HR teams when done manually.
 
-Adobe Document Services allows organizations to:
+Adobe Acrobat Services allows organizations to:
 
 * Create standard templates for employee onboarding documents
 * Merge specific employee data automatically (start date, onboarding task deadlines, etc.)

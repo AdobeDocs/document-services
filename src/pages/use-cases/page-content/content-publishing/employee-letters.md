@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Employee Letters'
+title: 'Acrobat Services API Use Case: Employee Letters'
 ---
 
 ## Employee Letters
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Employee Letters'
 
 Businesses generate employee letters for various formal communications, like compensation changes, awards letters, and performance reviews. Many of these letters need to include data stored in the HR system. For large organizations, creating custom letters manually for every employee becomes a time-consuming task.
 
-Adobe Document Services allows organizations to:
+Adobe Acrobat Services allows organizations to:
 
 * Create standard branded templates for employee letters
 * Merge employee data automatically into templates

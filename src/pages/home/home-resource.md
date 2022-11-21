@@ -1,6 +1,6 @@
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
-## Use cases for Adobe Document Services
+## Use cases for Adobe Acrobat Services
 
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />

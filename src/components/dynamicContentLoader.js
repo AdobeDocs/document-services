@@ -72,13 +72,13 @@ const StoriesContent = [
     Title: "K2 Nintex",
     URL: K2NintexPDF,
     Thumbnail: K2Nintex,
-    desc:"Nintex transforms K2 Cloud workflows with Adobe Document Services APIs."
+    desc:"Nintex transforms K2 Cloud workflows with Adobe Acrobat Services APIs."
   },
   {
     Title: "Adobe InDesign",
     URL: AdobeInDesignPDF,
     Thumbnail: AdobeInDesign,
-    desc:"Adobe InDesign brings its new share for review features to life with Adobe Document Services APIs."
+    desc:"Adobe InDesign brings its new share for review features to life with Adobe Acrobat Services APIs."
   },
   {
     Title: "Cambridge Assessment",

@@ -396,7 +396,7 @@ const PdfAccessibility = ({}) => {
           <a href="https://www.adobe.com/privacy.html" className="link-content">
             Adobe family of companies
           </a>{" "}
-          would like to keep you informed about Document Services APIs, which
+          would like to keep you informed about Acrobat Services APIs, which
           may include contacting you via email. By checking this box, you agree
           to being contacted via email. Please see our{" "}
           <a

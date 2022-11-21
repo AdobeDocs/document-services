@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Sales Proposals and Contracts'
+title: 'Acrobat Services API Use Case: Sales Proposals and Contracts'
 ---
 
 ## Sales Proposals and Contracts
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Sales Proposals and Contracts'
 
 Sales proposals set the tone for customer relationships. As they are often one of the first touchpoints a company has with a prospect, information included must be accurate, complete, and presented in a polished, brand-consistent manner. However, creating a sales proposal is a tedious and cumbersome process of mixing standard and deal-specific custom content, all of which takes valuable time away from actually selling.
 
-Using Adobe Document Services, sales teams can:
+Using Adobe Acrobat Services, sales teams can:
 
 * Design sales proposal and contract templates in Microsoft Word and merge data from CRM and other data systems
 * Create custom, on-brand PDF proposals and contracts

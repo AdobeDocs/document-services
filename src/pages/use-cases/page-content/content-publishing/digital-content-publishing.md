@@ -1,12 +1,12 @@
 ---
-title: 'Document Services API Use Case: Digital Content Publishing'
+title: 'Acrobat Services API Use Case: Digital Content Publishing'
 ---
 
 ## Digital Content Publishing
 
 ### Overview
 
-There are more than 2.5 trillion PDFs on the Internet, and one of the main reasons is that the format makes it extremely easy to publish well-designed content on the web and secure it. There is no need to redesign documents using HTML and CSS and lose granularity. With Adobe Document Services, it is now even easier to embed PDF documents inside of web pages, as well as understand exactly how users are consuming documents. Advanced features not found in traditional PDF desktop or web viewers let you:
+There are more than 2.5 trillion PDFs on the Internet, and one of the main reasons is that the format makes it extremely easy to publish well-designed content on the web and secure it. There is no need to redesign documents using HTML and CSS and lose granularity. With Adobe Acrobat Services, it is now even easier to embed PDF documents inside of web pages, as well as understand exactly how users are consuming documents. Advanced features not found in traditional PDF desktop or web viewers let you:
 
 * Add interactivity to PDF-based experiences
 * Provide PDF content for the rest of the brand experience on a website, including navigation, headers, and more

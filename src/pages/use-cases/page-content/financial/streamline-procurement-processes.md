@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Data Analysis for Finance'
+title: 'Acrobat Services API Use Case: Data Analysis for Finance'
 ---
 
 ## Streamline procurement processes
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Data Analysis for Finance'
 
 Procurement departments have many document types that need to be shared with suppliers as PDFs. These include Purchase Orders, Requests for Proposal, Requests for Quote, and different agreement types. Creating, processing, and reviewing documents can be very time consuming.
 
-With Adobe Document Services, companies save time by automating the following steps:
+With Adobe Acrobat Services, companies save time by automating the following steps:
 
 * Generate POs, RFPs, RFQs, or agreement documents in PDF from data in procurement management systems using Document Generation API
 * Combine, secure from editing, and view documents before sharing with suppliers using PDF Services API

@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Review and Approval'
+title: 'Acrobat Services API Use Case: Review and Approval'
 ---
 
 ## Review and Approval
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Review and Approval'
 
 With the COVID-19 pandemic came the immediate challenge to support remote workers. Teams and cross-functional groups need ways to share ideas and information, collaborate, and review digital documents. These end-user workflows often require an approval process to create final assets. However, not all users have access to the applications needed to view the various file formats. Additionally, teams often exchange feedback via manual methods, such as email and live meetings.
 
-Adobe Document Services lets teams:
+Adobe Acrobat Services lets teams:
 
 * Standardize document files into a common format (PDF)
 * Enable annotation, commenting, markup and more

@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Job Posting'
+title: 'Acrobat Services API Use Case: Job Posting'
 ---
 
 ## Job Posting
@@ -8,12 +8,12 @@ title: 'Document Services API Use Case: Job Posting'
 
 Job postings are usually limited to text-based content, but often additional supporting documents, such as PDF brochures, can better communicate the opportunity or the company.
 
-Adobe Document Services allows job sites to:
+Adobe Acrobat Services allows job sites to:
 
 * Show and render high-resolution supporting documents
 * Access analytics to understand what documents candidates are most interested in
 
-In addition, Adobe Document Services allows for documents uploaded in different formats, such as Microsoft Word, to be normalized into the PDF format.
+In addition, Adobe Acrobat Services allows for documents uploaded in different formats, such as Microsoft Word, to be normalized into the PDF format.
 
 ### Relevant APIs
 

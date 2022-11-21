@@ -4,7 +4,7 @@ title: Adobe Developer — API Extract  —  Product card
 
 <TitleBlock slots="heading" theme="light" className='titleBlock-align-left'/>
 
-## Explore other Adobe Document Services APIs
+## Explore other Adobe Acrobat Services APIs
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 

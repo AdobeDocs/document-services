@@ -1,12 +1,12 @@
 ---
-title: 'Document Services API Use Case: Legal Letters and Statements'
+title: 'Acrobat Services API Use Case: Legal Letters and Statements'
 ---
 
 ## Legal Letters and Statements
 
 ### Overview
 
-Legal firms and teams produce countless legal letters and statements for their clients. Drafting, client review, and signing take time — especially when done manually. The current process requires personally customizing templates with specific client information and then sending for review and signature. It’s repetitive and time consuming, and automation frees up valuable time. Adobe Document Services allows legal firms to:
+Legal firms and teams produce countless legal letters and statements for their clients. Drafting, client review, and signing take time — especially when done manually. The current process requires personally customizing templates with specific client information and then sending for review and signature. It’s repetitive and time consuming, and automation frees up valuable time. Adobe Acrobat Services allows legal firms to:
 
 * Create standard legal letter templates readily
 * Merge specific client data from any business system in a few clicks

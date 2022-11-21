@@ -19,7 +19,7 @@ If you are interested in using Adobe PDF Services API on a trial basis, consider
 
 <AccordionItem header="Why do I have to use a personal account when setting up a trial or account? Why can't I use my company's existing enterprise email/account?">
 
-Access to Adobe Document Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are working on a trial basis, it may be easier and faster to use a personal email than your existing Adobe ID.
+Access to Adobe Acrobat Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are working on a trial basis, it may be easier and faster to use a personal email than your existing Adobe ID.
 
 </AccordionItem>
 
@@ -29,9 +29,9 @@ Your Client ID (also known as API key) is unique to your account and provided on
 
 </AccordionItem>
 
-<AccordionItem header="How do I use my Adobe Document Services credentials in Microsoft Power Automate, if I initially created them via AWS Marketplace?">
+<AccordionItem header="How do I use my Adobe Acrobat Services credentials in Microsoft Power Automate, if I initially created them via AWS Marketplace?">
 
-For instructions on how to use your Adobe Document Services credentials that were created in AWS Marketplace for use in Power Automate, please reference this step-by-step guide: <a href="https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws">https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws</a>
+For instructions on how to use your Adobe Acrobat Services credentials that were created in AWS Marketplace for use in Power Automate, please reference this step-by-step guide: <a href="https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws">https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws</a>
 
 </AccordionItem>
 
@@ -41,11 +41,11 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 </AccordionItem>
 
-<AccordionItem header="Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Document Services?">
+<AccordionItem header="Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?">
 
 You should not use your free trial credentials (Credential Key aka API Key) beyond your free trial.
 
-When you start your Adobe Document Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complimentary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account.
+When you start your Adobe Acrobat Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complimentary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account.
 
 In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan.
 
@@ -109,19 +109,19 @@ However, support for sensitive personal data is coming soon.
 
 </AccordionItem>
 
-<AccordionItem header="How does Adobe Document Services use or store file content?">
+<AccordionItem header="How does Adobe Acrobat Services use or store file content?">
 
-Documents are only transferred to the cloud for processing. Adobe Document Services cloud infrastructure does not store the document but retains the document for a maximum of 24 hours as part of the processing. Documents are never stored permanently.
+Documents are only transferred to the cloud for processing. Adobe Acrobat Services cloud infrastructure does not store the document but retains the document for a maximum of 24 hours as part of the processing. Documents are never stored permanently.
 
 </AccordionItem>
 
-<AccordionItem header="How does Adobe Document Services manage content and identity data?">
+<AccordionItem header="How does Adobe Acrobat Services manage content and identity data?">
 
 The geographic location of identity data is on the AWS network; stored in multi-region, load-balanced data centers located in Virginia (US-East). Identity data is replicated across all data centers.
 
 Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="https://www.adobe.com/privacy/eudatatransfers.html">https://www.adobe.com/privacy/eudatatransfers.html</a>
 
-You can also check out the Adobe Document Services Security Overview: <a href="https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf">https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf</a>
+You can also check out the Adobe Acrobat Services Security Overview: <a href="https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf">https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf</a>
 
 </AccordionItem>
 
@@ -133,9 +133,9 @@ Adobe complies with applicable laws regarding cross-border data transfers as out
 
 </AccordionItem>
 
-<AccordionItem header="What regulatory compliances does Adobe Document Services provide?">
+<AccordionItem header="What regulatory compliances does Adobe Acrobat Services provide?">
 
-The current regulations and compliance for Adobe Document Services include:
+The current regulations and compliance for Adobe Acrobat Services include:
  - SOC 2. This is a set of security principles that define leading practice controls relevant to security, confidentiality, and privacy. Adobe Document Cloud services are SOC 2 Type 2 (security and availability) compliant.
  - ISO 27001. This is a set of globally adopted standards that outline stringent security requirements and provide a systematic approach to managing the confidentiality, integrity, and availability of customer information. Adobe Document Cloud services are compliant with ISO 27001:2013.
  - Full details are available at <a href="https://www.adobe.com/trust/compliance/compliance-list.html">https://www.adobe.com/trust/compliance/compliance-list.html</a>
@@ -158,7 +158,7 @@ See our latest privacy policy information at the Adobe Privacy Center: <a href="
 
 <AccordionItem header="Who can I contact with questions regarding Adobe's Privacy Policy?">
 
-If you have privacy questions related to Adobe Document Services, please contact our sales team for assistance at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
+If you have privacy questions related to Adobe Acrobat Services, please contact our sales team for assistance at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -170,7 +170,7 @@ If you'd like to request an NDA, please contact our sales team for assistance at
 
 <AccordionItem header="Where can I learn more about Adobe PDF Services API's security policies?">
 
-See the Adobe Trust Center (<a href="https://www.adobe.com/trust.html">https://www.adobe.com/trust.html</a>) and the Adobe Document Services Security Overview (<a href="https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf">https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf</a>).
+See the Adobe Trust Center (<a href="https://www.adobe.com/trust.html">https://www.adobe.com/trust.html</a>) and the Adobe Acrobat Services Security Overview (<a href="https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf">https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf</a>).
 
 </AccordionItem>
 
@@ -190,9 +190,9 @@ See additional information here: <a href="https://developer.adobe.com/document-s
 
 </AccordionItem>
 
-<AccordionItem header="How do I buy Adobe Document Services?">
+<AccordionItem header="How do I buy Adobe Acrobat Services?">
 
-There are two ways you can buy Adobe Document Services:
+There are two ways you can buy Adobe Acrobat Services:
 
 (1) U.S. listing: <a href="https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk ">https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk</a>
 
@@ -201,9 +201,9 @@ There are two ways you can buy Adobe Document Services:
 
 </AccordionItem>
 
-<AccordionItem header="I started my Adobe Document Services trial via Power Automate. Can I buy Adobe Document Services on Power Automate too?">
+<AccordionItem header="I started my Adobe Acrobat Services trial via Power Automate. Can I buy Adobe Acrobat Services on Power Automate too?">
 
-At this time, you can only buy Adobe Document Services via:
+At this time, you can only buy Adobe Acrobat Services via:
 (1) U.S. listing: <a href="https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk">https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk</a>
 
 (2) International listing : <a href="https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64">https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64</a> and <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>

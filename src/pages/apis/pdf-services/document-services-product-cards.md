@@ -1,10 +1,10 @@
 ---
-title: Adobe Developer — PDF Services API  —  Explore other Adobe Document services
+title: Adobe Developer — PDF Services API  —  Explore other Adobe Acrobat Services
 ---
 
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
-## Explore other Adobe Document Services APIs
+## Explore other Adobe Acrobat Services APIs
 
 <ProductCard slots="icon, heading, text, buttons" theme="light" width="33%" className="product-card-compact-img" iconStyle/>
 

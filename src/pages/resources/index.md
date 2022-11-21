@@ -1,6 +1,6 @@
 ---
-title: Developer Resources & Tutorials | Adobe PDF Services API | Adobe Document Services
-description: Get started with Adobe Document Services APIs. Videos, blogs, tutorials, and more to develop dynamic document workflows using Adobe PDF Services APIs to create, convert, OCR and extract PDF content. Free 6-month trial. Learn more today.
+title: Developer Resources & Tutorials | Adobe PDF Services API | Adobe Acrobat Services
+description: Get started with Adobe Acrobat Services APIs. Videos, blogs, tutorials, and more to develop dynamic document workflows using Adobe PDF Services APIs to create, convert, OCR and extract PDF content. Free 6-month trial. Learn more today.
 Tag 1: Adobe Content RTG - Site Retargeting 
 ---
 
@@ -34,7 +34,7 @@ Start integrating our APIs into your solutions
 
 ### We're ready to help
 
-Have questions about the Document Services APIs?
+Have questions about the Acrobat Services APIs?
 
 * [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 * [Contact us](../pricing/contact.md)

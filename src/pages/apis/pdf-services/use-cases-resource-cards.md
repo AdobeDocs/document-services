@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — PDF Services API  —   Use Cases for Document Services API
+title: Adobe Developer — PDF Services API  —   Use Cases for Acrobat Services API
 ---
 
 <!-- Resource Cards Block -->
