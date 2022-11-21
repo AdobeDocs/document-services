@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Job Posting'
+title: 'Acrobat Services API Use Case: Job Posting'
 ---
 
 ## Sales Quote
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Job Posting'
 
 Sales teams create many sales quotes for customers, and quotes need to be polished and accurate. Quotes include complex product pricing configurations and payment conditions, and they usually include information from the team’s CPQ software system. For many teams, this manual process takes away valuable time. Automating the process ensures information is accurate and delivered quickly.
 
-Adobe Document Services allows sales teams to:
+Adobe Acrobat Services allows sales teams to:
 
 * Create standard branded templates for sales quotes
 * Merge complex quote data automatically into templates

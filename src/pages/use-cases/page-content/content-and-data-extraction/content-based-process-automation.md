@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Content Based Process Automation'
+title: 'Acrobat Services API Use Case: Content Based Process Automation'
 ---
 
 ## Content Based Process Automation

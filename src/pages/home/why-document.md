@@ -1,6 +1,6 @@
 <TitleBlock slots="heading" theme="lightest" className="titleBlock-align-left"/>
 
-## Why Document Services?
+## Why Acrobat Services?
 
 <TextBlock slots="image,heading,text" width="33%" theme="lightest"  className="align-left img-m-size horizontal-align-heading home-list-points"/>
 

@@ -14,7 +14,7 @@ See how our customers are building great experiences and succeeding with Adobe.
 
 ### K2 NINTEX
 
-Nintex transforms K2 Cloud workflows with Adobe Document Services APIs.
+Nintex transforms K2 Cloud workflows with Adobe Acrobat Services APIs.
 
 
 <ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
@@ -25,7 +25,7 @@ Nintex transforms K2 Cloud workflows with Adobe Document Services APIs.
 
 ### ADOBE INDESIGN
 
-Adobe InDesign brings its new Share for Review features to life with Adobe Document Services APIs.
+Adobe InDesign brings its new Share for Review features to life with Adobe Acrobat Services APIs.
 
 
 

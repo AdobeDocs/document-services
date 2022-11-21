@@ -21,7 +21,7 @@ abm-landing-page-hero
 
 - [Start free trial](/document-services/apis/interstitial/)
 
-<!-- Why Adobe Document Services -->
+<!-- Why Adobe Acrobat Services -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
 <WhyDocumentServices />

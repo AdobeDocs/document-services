@@ -125,7 +125,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       ?.setAttribute("daa-ll", "Products");
     header
       .querySelector(`a[href='${navLinksBaseUrl}/homepage/']`)
-      ?.setAttribute("daa-ll", "Adobe Document Services");
+      ?.setAttribute("daa-ll", "Adobe Acrobat Services");
     header
       .querySelector(`a[href='${navLinksBaseUrl}/apis/pdf-services/']`)
       ?.setAttribute("daa-ll", "PDF Services");
@@ -343,7 +343,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       })
       document
         .querySelector(".Use-cases-for-Adobe-Document-Services")
-        .setAttribute("daa-lh", "Use cases for Adobe Document Services");
+        .setAttribute("daa-lh", "Use cases for Adobe Acrobat Services");
       document
         .querySelectorAll(".Use-cases-for-Adobe-Document-Services a")
         .forEach(link => {
@@ -389,7 +389,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
       .querySelector(".why-Adobe-document-services")
-      .setAttribute("daa-lh", "Why Adobe Document Services?")
+      .setAttribute("daa-lh", "Why Adobe Acrobat Services?")
 
       document
       .querySelector(".simple-integration")
@@ -473,7 +473,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
 
       document.querySelector(".ms-zigzag-cont-title")
-      .setAttribute("daa-lh", "Uplevel your document workflows easily with Adobe Document Services and Adobe Acrobat Sign on Microsoft Power Platform.")
+      .setAttribute("daa-lh", "Uplevel your document workflows easily with Adobe Acrobat Services and Adobe Acrobat Sign on Microsoft Power Platform.")
 
       document.querySelector(".ms-zigzag-cta-one")
       .setAttribute("daa-lh", "Low-code document automations.")
@@ -881,7 +881,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       // document
       //   .querySelector(".Explore-other-Adobe-Document-Services-APIs")
-      //   .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+      //   .setAttribute("daa-lh", "Explore other Adobe Acrobat Services APIs");
 
       // document
       //   .querySelectorAll(".Explore-other-Adobe-Document-Services-APIs a")
@@ -960,7 +960,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     document
     .querySelector(".Explore-other-Adobe-Document-Services-APIs")
-    .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+    .setAttribute("daa-lh", "Explore other Adobe Acrobat Services APIs");
 
   document
     .querySelectorAll(".Explore-other-Adobe-Document-Services-APIs a")
@@ -1057,7 +1057,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
         .querySelector(".Explore-other-Adobe-Document-Services-APIs")
-        .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+        .setAttribute("daa-lh", "Explore other Adobe Acrobat Services APIs");
 
       document
         .querySelectorAll(".Explore-other-Adobe-Document-Services-APIs a")
@@ -1316,7 +1316,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         });
       document
         .querySelector(".other-Adobe-Document-Services-APIs")
-        .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+        .setAttribute("daa-lh", "Explore other Adobe Acrobat Services APIs");
       document
         .querySelectorAll(".other-Adobe-Document-Services-APIs a")
         .forEach(link => {
@@ -1394,7 +1394,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         });
       document
         .querySelector(".other-Adobe-Document-Services-APIs")
-        .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+        .setAttribute("daa-lh", "Explore other Adobe Acrobat Services APIs");
       document
         .querySelectorAll(".other-Adobe-Document-Services-APIs a")
         .forEach(link => {

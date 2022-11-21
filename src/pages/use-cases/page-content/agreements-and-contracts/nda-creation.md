@@ -1,5 +1,5 @@
 ---
-title: Generate NDA documents  | Adobe PDF Services API | Adobe Document Services
+title: Generate NDA documents  | Adobe PDF Services API | Adobe Acrobat Services
 description: Quick dynamic NDA generation with Microsoft Word templates and your data. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
@@ -9,7 +9,7 @@ description: Quick dynamic NDA generation with Microsoft Word templates and your
 
 In business, it is often necessary for a company to create and then have another organization sign a non-disclosure agreement (NDA). The specific information required to customize the document is most likely already in a database or might be submitted in a web app. In addition, other items, such as logos, need to be applied. For many, the current method of creating these customized NDAs and then sending them out to be signed is a manual, slow process.
 
-With Adobe Document Services, companies can:
+With Adobe Acrobat Services, companies can:
 
 * Develop a standard, branded NDA template
 * Merge data from a specific company with the template to create a customized NDA

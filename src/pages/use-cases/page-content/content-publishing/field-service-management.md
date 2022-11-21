@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Data Analysis for Finance'
+title: 'Acrobat Services API Use Case: Data Analysis for Finance'
 ---
 
 ## Field service management
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Data Analysis for Finance'
 
 Many organizations perform services onsite at field locations involving installations, safety certifications, assessments, inspections, job orders, and more. Organizations benefit from streamlined digital document workflows to collect data, send for signature, create records, and archive for audit purposes. Customizing document workflows within different systems and applications can be challenging.
 
-Adobe Document Services allows companies to:
+Adobe Acrobat Services allows companies to:
 
 * Integrate customized document processing with existing applications using APIs
 * Automate approval and signature workflows to reduce processing errors

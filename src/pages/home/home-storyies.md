@@ -23,7 +23,7 @@ Waymark Tech enables rapid impact assessments and compliance workflows with Adob
 
 ### Adobe InDesign
 
-Adobe InDesign brings its new share for review features to life with Adobe Document Services APIs.
+Adobe InDesign brings its new share for review features to life with Adobe Acrobat Services APIs.
 
 
 
