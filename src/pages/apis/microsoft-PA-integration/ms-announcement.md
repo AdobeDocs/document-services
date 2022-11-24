@@ -4,4 +4,4 @@
 
 Register for the opportunity to experience an even simpler way to automate your e-signature work.
 
-[Register now](https://adobe.na1.adobesign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhDPMc3GCVZDIir1WNFxILxuivZXTJryZfN6s_hyQudW_BN7RVeyMODwRCEtuZPo5XU*)
+[Register now](https://www.adobeprerelease.com/beta/D57F06A0-643A-47B3-8E8B-14C918E91739#)
