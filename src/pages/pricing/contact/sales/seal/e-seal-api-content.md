@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer - Document Service Beta Program for PDF Electronic Seal API - form
+title: Adobe Developer - Acrobat Services Beta Program for PDF Electronic Seal API - form
 ---
 
 <TextBlock slots="heading, text" width="100%" theme="lightest"  alignment="yes"  className="py-0 text-align-left div-p-0 left-content accessibility-text-blade text-blade-header heading-accessibility" />

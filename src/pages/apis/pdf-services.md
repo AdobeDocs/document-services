@@ -1,5 +1,5 @@
 ---
-title: Adobe PDF Services | PDF Tools APIs | Adobe Document Services
+title: Adobe PDF Services | PDF Tools APIs | Adobe Acrobat Services
 description: Make life easier with our PDF Toolkit. Simplify workflows and improve UX. Our PDF Services API helps you create, convert, OCR PDFs and more. Learn more today.
 ---
 
@@ -71,7 +71,7 @@ apiHeroAssetImg doc-service-hero
 
 ## We're ready to help
 
-Have questions about the Document Services APIs?
+Have questions about the Acrobat Services APIs?
 
 - [Go to the Adobe Forum](https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all)
 - [Contact us](../pricing/contact.md)

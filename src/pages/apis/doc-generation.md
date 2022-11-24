@@ -64,7 +64,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <DgStartModifyingTitle/>
 
-<!-- Use case for Document Services API -->
+<!-- Use case for Acrobat Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="Use-cases-for-Document-Generation-API"/>
 
 <DgUseCaseDocServiceAPI className="Use-cases-for-Document-Generation-API"/>
@@ -87,7 +87,7 @@ apiHeroAssetImg doc-gen-invoice
 
 ### We're ready to help
 
-Have questions about the Document Services APIs?
+Have questions about the Acrobat Services APIs?
 
 - [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
 - [Contact us](../pricing/contact.md)

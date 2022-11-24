@@ -1,12 +1,12 @@
 ---
-title: 'Document Services API Use Case: Employee Offer Letters'
+title: 'Acrobat Services API Use Case: Employee Offer Letters'
 ---
 
 ## Employee Offer Letters
 
 ### Overview
 
-Employee offer letters are one of the first experiences new hires have with an organization, so these documents should be on-brand, professional, and uniform. However, creating documents in Microsoft Word from scratch wastes valuable resources and results in inconsistent experiences. Adobe Document Services helps streamline the process of generating and delivering offer letters in a variety of ways, letting you:
+Employee offer letters are one of the first experiences new hires have with an organization, so these documents should be on-brand, professional, and uniform. However, creating documents in Microsoft Word from scratch wastes valuable resources and results in inconsistent experiences. Adobe Acrobat Services helps streamline the process of generating and delivering offer letters in a variety of ways, letting you:
 
 * Create templates in Word and generate PDFs based on a simple data set using the Adobe Document Generation API
 * Merge data and HTML templates into a PDF letter using the Adobe PDF Services API

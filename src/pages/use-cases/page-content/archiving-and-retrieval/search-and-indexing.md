@@ -1,6 +1,6 @@
 ---
-title: PDF search and indexing | Adobe PDF Services API | Adobe Document Services
-description: Automate PDF search and indexing with Adobe Document Services. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
+title: PDF search and indexing | Adobe PDF Services API | Adobe Acrobat Services
+description: Automate PDF search and indexing with Adobe Acrobat Services. Our PDF Services API helps you create, convert, OCR PDFs and more. Free 6-month trial. Learn more today.
 ---
 
 ## Search and Indexing
@@ -9,7 +9,7 @@ description: Automate PDF search and indexing with Adobe Document Services. Our 
 
 With document digitization comes the problem of not only archiving accumulated files, but also the issue of unlocking the data in those documents. Many companies have a wealth of archived information stored in paper or scanned document archives—in a variety of formats—and they cannot be searched or indexed properly. Since the process of manually indexing and searching is incredibly labor intensive and not always accurate, the challenge is creating digital archives that are immediately accessible and available for editing or downstream processing.
 
-With Adobe Document Services, a workflow can:
+With Adobe Acrobat Services, a workflow can:
 
 * Convert a variety of files to PDF format for standardization
 * Run OCR (optical character recognition) on scanned images to convert to machine-readable text

@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Legal Contracts'
+title: 'Acrobat Services API Use Case: Legal Contracts'
 ---
 
 ## Legal Contracts
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Legal Contracts'
 
 Most organizations today have a variety of legal contracts that need to be created, edited, approved, and signed on a regular basis. In addition, many of these contracts require customization and branding to be applied. And no matter what, accurate document generation is crucial. The challenge is to automate what is now a manual process of including custom data elements to templates.
 
-Adobe Document Services will let organizations:
+Adobe Acrobat Services will let organizations:
 
 * Create templates with dynamic fields that can be automatically merged with data
 * Customize inputs and logic, for example adding clauses that only apply to specific geographies

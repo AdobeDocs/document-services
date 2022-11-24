@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Student-Teacher Collaboration'
+title: 'Acrobat Services API Use Case: Student-Teacher Collaboration'
 ---
 
 ## Student-Teacher Collaboration
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Student-Teacher Collaboration'
 
 The most effective and rewarding learning environments allow for seamless collaboration between teachers and students. The sudden rise in virtual learning environments has made this goal difficult to achieve, as different file formats, user platforms, and diverse learning levels make it much harder for students to maximize their learning.
 
-Adobe Document Services enables students to:
+Adobe Acrobat Services enables students to:
 
 * View learning materials in a seamless web experience despite multiple document formats
 * Collaborate easily with teachers and peers to benefit from the full classroom environment
