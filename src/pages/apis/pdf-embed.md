@@ -32,9 +32,9 @@ apiHeroAssetImg doc-embed-hero
 
 <WhyPdfEmbed />
 
-<SummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight  className="embed-key-features"/>
-  
-## Key features of our free PDF Embed API
+<SummaryBlock slots="heading, buttons" background="rgb(31, 42, 73)" buttonPositionRight  className="embed-key-features"/>
+
+### Key features of our free PDF Embed API
 
 - [Get free credentials](/document-services/apis/interstitial/?api=pdf-embed-api)
 
