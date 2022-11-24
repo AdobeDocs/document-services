@@ -1560,7 +1560,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           });
       }
       
-    } else if (window.location.pathname.indexOf("use-cases") >= 0) {
+    }else if(window.location.pathname.indexOf('faq/tech-support/ETLA-onboarding-steps')>=0){
+      document.querySelectorAll('.useCaseCard a').forEach(link=>{
+        openPdf(link.href)
+      })
+    }
+     else if (window.location.pathname.indexOf("use-cases") >= 0) {
       document
         .querySelector(".Hero-Banner")
         .closest("main")
