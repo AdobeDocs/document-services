@@ -13,88 +13,66 @@ import { css } from "@emotion/react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import nextId from "react-id-generator";
-import { GatsbyLink } from "@adobe/gatsby-theme-aio/src/components/GatsbyLink";
+import { GatsbyLink } from '@adobe/gatsby-theme-aio/src/components/GatsbyLink';
 import {
   ChevronDown,
   ChevronRight,
-} from "@adobe/gatsby-theme-aio/src/components/Icons";
-import { Menu } from "@adobe/gatsby-theme-aio/src/components/Menu";
+} from '@adobe/gatsby-theme-aio/src/components/Icons';
+import { Menu } from '@adobe/gatsby-theme-aio/src/components/Menu';
 import { graphql, useStaticQuery, withPrefix } from "gatsby";
-import Context from "@adobe/gatsby-theme-aio/src/components/Context";
+import Context from '@adobe/gatsby-theme-aio/src/components/Context';
 import {
   rootFix,
   findSelectedPages,
   normalizePagePath,
-} from "@adobe/gatsby-theme-aio/src/utils";
-import {
   TABLET_SCREEN_WIDTH,
-  MOBILE_SCREEN_WIDTH,
-} from "@adobe/gatsby-theme-aio/conf/globals";
+  MOBILE_SCREEN_WIDTH
+} from '@adobe/gatsby-theme-aio/src/utils';
 import "@spectrum-css/menu";
 
 // Import the svg image dynamically to use in menu item.
-const useDynamicSVGImport = (name, options = {}) => {
-  const ImportedIconRef = useRef();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState();
-  const [sidebarIcon, setSidebaricon] = useState()
-  const { onCompleted, onError } = options;
+// const useDynamicSVGImport = (name, options = {}) => {
+//   const ImportedIconRef = useRef();
+//   const [loading, setLoading] = useState(false);
+//   const [error, setError] = useState();
+//   const { onCompleted, onError } = options;
 
-  useEffect(() => {
-    setLoading(true);
-    const importIcon = async () => {
-      try {
-        setSidebaricon(await import(
-          `../../../../pages/images/${name}.svg`
-        ))
-        if (onCompleted) {
-          onCompleted(name, ImportedIconRef.current);
-        }
-      } catch (err) {
-        console.log("error", error);
-        if (onError) {
-          onError(err);
-        }
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    importIcon();
-  }, [name, onCompleted, onError, error]);
-  return { error, loading, SvgIcon: sidebarIcon?.default };
-};
+//   useEffect(() => {
+//     setLoading(true);
+//     const importIcon = async () => {
+//       try {
+//         // TODO must pass these in as the references are different now
+//         ImportedIconRef.current = await import(
+//           `../../../../pages/images/${name}.svg`
+//         );
+//         if (onCompleted) {
+//           onCompleted(name, ImportedIconRef.current);
+//         }
+//       } catch (err) {
+//         console.log("error", error);
+//         if (onError) {
+//           onError(err);
+//         }
+//         setError(err);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+//     importIcon();
+//   }, [name, onCompleted, onError, error]);
 
-//Create the image element to load the svg icon in each menu item.
-const Icon = ({ name, onCompleted, onError }) => {
-  const { error, SvgIcon } = useDynamicSVGImport(name, {
-    onCompleted,
-    onError,
-  });
-  if (error) {
-    return error.message;
-  }
-  if (SvgIcon) {
-    return (
-      <img
-        src={SvgIcon}
-        title=""
-        alt=""
-        style={{ width: 40, height: 40 }}
-      ></img>
-    );
-  }
-  return null;
-};
+//   return { error, loading, SvgIcon: ImportedIconRef.current?.default };
+// };
 
-const CustomMenuBlock = () => {
+
+const CustomMenuBlock = ( ) => {
   const [expandedMenus, setExpandedMenus] = useState([]);
   const [expandedHederMenus, setExpandedHederMenus] = useState([]);
   const min_mobile_screen_width = "767px";
-  //Fetch the sidebar menu item title, icon and path from config file by using the graphql query.
+   //Fetch the sidebar menu item title, icon and path from config file by using the graphql query.
   const data = useStaticQuery(
     graphql`
-      query MyQuery {
+      query MyQuery2 {
         site(children: {}) {
           id
           siteMetadata {
@@ -110,9 +88,40 @@ const CustomMenuBlock = () => {
             }
           }
         }
+        allFile(filter: { extension: { eq: "svg" } }) {
+          edges {
+            node {
+              publicURL
+            }
+          }
+        }
       }
     `
   );
+
+  //Create the image element to load the svg icon in each menu item.
+const Icon = ({ name, onCompleted, onError }) => {
+  const filterFile = fileArr.find((imgNode) => imgNode.node.publicURL.includes(name))?.node?.publicURL
+  if (filterFile) {
+    return (
+      <img
+        src={filterFile}
+        title=""
+        alt=""
+        style={{ width: 40, height: 40 }}
+      ></img>
+    );
+  }
+  return null;
+};
+
+
+  
+
+
+  const fileArr = data.allFile.edges
+
+ console.log('siteMetaData', data.site.siteMetadata)
 
   const { subMenuPages } = data.site.siteMetadata;
   const { location } = useContext(Context);
@@ -220,17 +229,17 @@ const CustomMenuBlock = () => {
                   e.currentTarget.parentElement.nextSibling && e.currentTarget.parentElement.nextSibling.childNodes[0].focus();
                 }
                 if (e.key === 'ArrowUp') {
-                  e.currentTarget.parentElement.previousSibling && e.currentTarget.parentElement.previousSibling.childNodes[0].focus();
+                  e.currentTarget.parentElement.previousSibling &&e.currentTarget.parentElement.previousSibling.childNodes[0].focus();
                 }
-                if (e.key === 'Enter') {
+                if( e.key === 'Enter'){
                   e.currentTarget.focus();
                 }
               }}
               onFocus={(e) => {
-                if (level === 1) {
+                if( level === 1) {
                   const inx = expandedHederMenus.indexOf(index);
                   const temArr = [...expandedHederMenus]
-                  if (inx === -1) {
+                  if(inx === -1) {
                     temArr.push(index);
                     setExpandedHederMenus(temArr)
                   }
@@ -240,7 +249,7 @@ const CustomMenuBlock = () => {
               className={classNames([
                 "spectrum-Menu-item",
                 {
-                  "is-open": isMenuSelected,
+                  "is-open":isMenuSelected,
                 },
               ])}
             >
@@ -251,8 +260,8 @@ const CustomMenuBlock = () => {
                       {isExpanded ? (
                         <ChevronDown className="spectrum-Menu-itemIcon" />
                       ) : (
-                          <ChevronRight className="spectrum-Menu-itemIcon" />
-                        )}
+                        <ChevronRight className="spectrum-Menu-itemIcon" />
+                      )}
                     </div>
                   }
                   <div>
@@ -294,7 +303,7 @@ const CustomMenuBlock = () => {
                     ? `
                   & > li > a {
                     padding-left: calc(${
-                    level + 1
+                      level + 1
                     } * var(--spectrum-global-dimension-size-150)) !important;
                   }
                 `

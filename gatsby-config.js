@@ -381,6 +381,13 @@ module.exports = {
       }
     ]
   },
-  plugins: [`@adobe/gatsby-theme-aio`],
+  plugins: [`@adobe/gatsby-theme-aio`,{
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `iamges`,
+      path: `${__dirname}/src/pages/images`,
+      ignore: [`**/\.*`], // ignore files starting with a dot
+    },
+  }],
   pathPrefix: process.env.PATH_PREFIX || '/document-services/'
 };
