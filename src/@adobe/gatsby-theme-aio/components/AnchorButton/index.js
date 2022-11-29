@@ -18,7 +18,7 @@ import '@spectrum-css/button';
 import classNames from 'classnames';
 
 const AnchorButton = ({ className, href, variant, isQuiet, ...props }) => {
-  href = String(href).replace('#', '');
+  // href = String(href).replace('#', '');
   let isExternal = true;
 
   try {
