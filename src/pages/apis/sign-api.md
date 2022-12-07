@@ -11,6 +11,7 @@ import OurPartners from './sign-api/our-partners.md'
 import OurPartnersTwo from './sign-api/our-partners-two.md'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 import EsealApiAnnouncement from './e-seal-api-announcement.md'
+import VideoCrop from '../videos/Adobe_AcrobatSignEmbed_AvionteCustomerSuccessStory_30s_CCen_FINAL.mp4'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth" primaryOutline variantsTypeSecondary='primary'  className="signApiHerobgImage Hero-Banner hero-btn-color"/>
 
@@ -38,6 +39,12 @@ apiHeroAssetImg sign-api-hero
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API"/>
 
 <PartnershipType/>
+
+<TextBlock slots="heading,text" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' videoSrcUrl={VideoCrop} variantStyleFill = "outline"   homeZigZag className=" zigzag-cta-two sign-api-video streamline_ability"/>
+
+### Hear from one our Sign Embed Partners.
+
+Avionté embeds Acrobat Sign APIs into their leading HR technology platform to create a frictionless experience where Talent can easily and seamlessly connect with their employers.
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-one"/>
 

@@ -3091,3 +3091,17 @@ img[alt=adobe-support] {
     margin: 0 .25em;
   }
   
+  .homeAutoCropVideo {
+      width: 500px;
+      height: 100%;
+  }
+  .sign-api-video > div{
+
+    /* padding: 20% !important; */
+  }
+  @media screen and (min-width:375px) and (max-width:767px) {
+    .homeAutoCropVideo{
+        width: 100% !important;
+        height: 100% !important;
+    }
+  }

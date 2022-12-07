@@ -9,7 +9,7 @@ import {
 } from "@adobe/gatsby-theme-aio/src/utils";
 import classNames from "classnames";
 import "@spectrum-css/typography";
-import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
+import { DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 
 const counter = {
   2: 0,
@@ -37,7 +37,7 @@ const mediaCSS = css`
 const Icons = ({ icons, isCentered }) =>
   icons
     ? cloneElement(icons, {
-        css: css`
+      css: css`
           list-style: none;
           padding: 0;
           margin-bottom: var(--spectrum-global-dimension-size-400) !important;
@@ -69,7 +69,7 @@ const Icons = ({ icons, isCentered }) =>
             object-fit: contain;
           }
         `,
-      })
+    })
     : null;
 
 const Texts = ({ texts }) => {
@@ -77,57 +77,57 @@ const Texts = ({ texts }) => {
   return textKeys.map((textKey) => texts[textKey]);
 };
 
-const Links = ({ links, isCentered, isLinksGroups=false }) =>
+const Links = ({ links, isCentered, isLinksGroups = false }) =>
   links
     ? cloneElement(links, {
-        css: css`
+      css: css`
           list-style: none;
           padding: 0;
           display: flex;
           justify-content: ${isCentered ? "center" : "flex-start"};
-          ${!isLinksGroups? "" : "flex-wrap: wrap;"}
+          ${!isLinksGroups ? "" : "flex-wrap: wrap;"}
           margin-top: ${isCentered || isLinksGroups
-            ? "var(--spectrum-global-dimension-size-200) !important;"
-            : "var(--spectrum-global-dimension-size-600) !important;"};
+          ? "var(--spectrum-global-dimension-size-200) !important;"
+          : "var(--spectrum-global-dimension-size-600) !important;"};
           & li {
             display: flex;
             align-items: center;
-            ${isLinksGroups 
-              ? `border-radius: 10px; 
+            ${isLinksGroups
+          ? `border-radius: 10px; 
                 border:solid 1.8px;
                 margin-right: var(--spectrum-global-dimension-size-200);
                 height: var(--spectrum-global-dimension-size-300);
                 margin-top: var(--spectrum-global-dimension-size-100);
                 background-color: #F7F7F7;
                 `
-              : "height: var(--spectrum-global-dimension-size-400)"};
+          : "height: var(--spectrum-global-dimension-size-400)"};
           }
 
           & li a {
             white-space: nowrap;           
-            ${isLinksGroups 
-              ? `margin: var(--spectrum-global-dimension-size-100); 
+            ${isLinksGroups
+          ? `margin: var(--spectrum-global-dimension-size-100); 
               color: currentColor;
               text-decoration: none;
-              font-size: var(--spectrum-global-dimension-size-175);` 
-              : "margin-right: var(--spectrum-global-dimension-size-600);"};
+              font-size: var(--spectrum-global-dimension-size-175);`
+          : "margin-right: var(--spectrum-global-dimension-size-600);"};
           }
 
           & li:last-of-type a {
-            margin-right: ${isLinksGroups ? "var(--spectrum-global-dimension-size-100)": "0"}
+            margin-right: ${isLinksGroups ? "var(--spectrum-global-dimension-size-100)" : "0"}
           }
 
           & li:hover{
-            ${isLinksGroups  ?
-            `background-color: var(--spectrum-button-primary-m-background-color-hover, var(--spectrum-global-color-gray-800));
+            ${isLinksGroups ?
+          `background-color: var(--spectrum-button-primary-m-background-color-hover, var(--spectrum-global-color-gray-800));
             border-color: var(--spectrum-button-primary-m-border-color-hover, var(--spectrum-global-color-gray-800));            color: var(--spectrum-button-primary-m-text-color-hover, var(--spectrum-global-color-gray-50));`
-            : ""}
+          : ""}
           }        
           & li:hover a{
-            ${isLinksGroups  ? `
+            ${isLinksGroups ? `
             color: var(--spectrum-button-primary-m-text-color-hover, var(--spectrum-global-color-gray-50));
             text-decoration: none;`
-            : ""}
+          : ""}
           }
 
           .gatsby-resp-image-wrapper {
@@ -155,18 +155,18 @@ const Links = ({ links, isCentered, isLinksGroups=false }) =>
             }
 
             li a {
-              ${isLinksGroups  
-                ? "font-size: var(--spectrum-global-dimension-size-130);` " 
-                : `margin-right: 0;`
-              }
+              ${isLinksGroups
+          ? "font-size: var(--spectrum-global-dimension-size-130);` "
+          : `margin-right: 0;`
+        }
             }
           }
 
           @media screen and (max-width: 767px) {
-            ${isLinksGroups  ? `width: min-content` : "" }
+            ${isLinksGroups ? `width: min-content` : ""}
           }
         `,
-      })
+    })
     : null;
 
 const TextBlock = ({
@@ -187,12 +187,13 @@ const TextBlock = ({
   headerElementType = "h3",
   imageOnly = false,
   imgWidth = "50%",
-  isPrimaryBtn=false,
-  variantsTypePrimary='cta',
-  variantsTypeSecondary='primary',
+  isPrimaryBtn = false,
+  variantsTypePrimary = 'cta',
+  variantsTypeSecondary = 'primary',
   hasCodeBlock = false,
   homeZigZag = false,
   isbuttonGroups = false,
+  videoSrcUrl = "",
   ...props
 }) => {
   const Element = headerElementType;
@@ -289,7 +290,7 @@ const TextBlock = ({
                 `,
               })}
             {assetImg &&
-                <div className={assetImg?.props?.children}/>}
+              <div className={assetImg?.props?.children} />}
 
             {heading && (
               <Element
@@ -310,7 +311,7 @@ const TextBlock = ({
             )}
             {subHeading && (
               <h3
-              className="spectrum-Heading spectrum-Heading--sizeM"
+                className="spectrum-Heading spectrum-Heading--sizeM"
                 css={css`
                   font-size: var(
                     --spectrum-global-dimension-size-225
@@ -334,7 +335,7 @@ const TextBlock = ({
             <HeroButtons
               buttons={buttons}
               quiets={[!isPrimaryBtn, !primaryOutline]}
-              variants={[variantsTypePrimary,variantsTypeSecondary]}
+              variants={[variantsTypePrimary, variantsTypeSecondary]}
               css={css`
                 margin-top: var(--spectrum-global-dimension-size-150);
                 margin-bottom: var(--spectrum-global-dimension-size-150);
@@ -348,15 +349,15 @@ const TextBlock = ({
           </div>
         </section>
         {width === "100%" ||
-        (typeof counter[columns] !== "undefined" &&
-          counter[columns] % columns === 0) ? (
+          (typeof counter[columns] !== "undefined" &&
+            counter[columns] % columns === 0) ? (
           <div aria-hidden="true" />
         ) : null}
       </>
     );
   } else {
     const isReversed =
-      props.slots.endsWith("image") || props.slots.endsWith("video");
+      props.slots.endsWith("image") || props.slots.endsWith("video") || videoSrcUrl !== "";
     return (
       <section
         className={classNames(className, `spectrum--${theme}`)}
@@ -388,8 +389,8 @@ const TextBlock = ({
               flex-direction: ${imageOnly
                 ? "column"
                 : isReversed
-                ? "row-reverse"
-                : "row"};
+                  ? "row-reverse"
+                  : "row"};
 
               @media screen and (max-width: ${MIN_TABLET_SCREEN_WIDTH}) {
                 flex-direction: column;
@@ -428,13 +429,19 @@ const TextBlock = ({
                   }
                 `,
               })}
-             {assetImg &&
-                <div className={assetImg?.props?.children}/>}
-
+            {assetImg &&
+              <div className={assetImg?.props?.children} />
+            }
+            {
+              videoSrcUrl &&
+              <video controls name="media3" loop="true" autoPlay className="homeAutoCropVideo">
+                <source src={videoSrcUrl} type="video/mp4" />
+              </video>
+            }
             <Media css={mediaCSS} video={video} />
             {!imageOnly && <div
               css={css`
-                ${hasCodeBlock ?`width: 70%;` : `width: 50%;`}
+                ${hasCodeBlock ? `width: 70%;` : `width: 50%;`}
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -468,9 +475,9 @@ const TextBlock = ({
                 </Element>
               )}
               {subHeading && !linksGroups && (
-              <h3
-              className="spectrum-Heading spectrum-Heading--sizeM"
-                css={css`
+                <h3
+                  className="spectrum-Heading spectrum-Heading--sizeM"
+                  css={css`
                 font-size: var(
                   --spectrum-global-dimension-size-225
                 ) !important;
@@ -483,17 +490,17 @@ const TextBlock = ({
                     margin-bottom: 0 !important;
                   }
                 `}
-              >
-                {subHeading.props.children}
-              </h3>
-            )}
+                >
+                  {subHeading.props.children}
+                </h3>
+              )}
 
               <Texts texts={props} />
 
               {subHeading && linksGroups && (
-              <h3
-              className="spectrum-Heading spectrum-Heading--sizeM"
-                css={css`
+                <h3
+                  className="spectrum-Heading spectrum-Heading--sizeM"
+                  css={css`
                   font-size: var(
                     --spectrum-global-dimension-size-225
                   ) !important;                  
@@ -506,10 +513,10 @@ const TextBlock = ({
                     margin-bottom: 0 !important;
                   }
                 `}
-              >
-                {subHeading.props.children}
-              </h3>
-            )}
+                >
+                  {subHeading.props.children}
+                </h3>
+              )}
 
               {linksGroups && (
                 <Links links={linksGroups} isCentered={isCentered} isLinksGroups />
@@ -518,7 +525,7 @@ const TextBlock = ({
               <HeroButtons
                 buttons={buttons}
                 quiets={[!isPrimaryBtn, !primaryOutline]}
-                variants={[variantsTypePrimary,variantsTypeSecondary]}
+                variants={[variantsTypePrimary, variantsTypeSecondary]}
                 heading={homeZigZag ? heading?.props?.children : ''}
                 css={css`
                   margin-top: var(--spectrum-global-dimension-size-200);
@@ -526,7 +533,7 @@ const TextBlock = ({
               />
 
               <Links links={links} isCentered={isCentered} />
-            </div> }
+            </div>}
           </div>
         </div>
       </section>
@@ -552,6 +559,7 @@ TextBlock.propTypes = {
   imgWidth: PropTypes.string,
   homeZigZag: PropTypes.bool,
   isbuttonGroups: PropTypes.bool,
+  videoSrcUrl: PropTypes.element
 };
 
 export { TextBlock };
