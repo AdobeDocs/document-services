@@ -5,11 +5,8 @@ Tag 1: Adobe Content RTG - Site Retargeting
 ---
 
 import '../../styles/developer-resource.css'
-
 import {DynamicContentLoader} from '../../components/dynamicContentLoader';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
-
-
 
 <Hero slots="heading, text" variant="fullwidth" theme="lightest" customLayout className="sub-title resource-banner"/>
 
@@ -20,7 +17,6 @@ Start integrating our APIs into your solutions
 <NewsLetterBlade className="news-letter"/>
 
 <DynamicContentLoader theme="lightest" content='usingAdobePDFService' api="https://experienceleague.adobe.com/api/articles?Solution=Document%20Services&Tags=Hero&page_size=1" className="Adobe-PDF-Services-API-Overview"/>
-
 
 <DynamicContentLoader theme="light" content='feature' className="feature-content" />
 

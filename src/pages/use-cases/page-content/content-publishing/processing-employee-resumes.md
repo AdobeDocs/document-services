@@ -16,7 +16,6 @@ Adobe Acrobat Services allows organizations to:
 * Extract resume data for upload into a third-party system
 * Review resumes and supporting documents such as portfolios
 
-
 ### Relevant APIs
 
 * [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
@@ -26,7 +25,6 @@ Adobe Acrobat Services allows organizations to:
 ### Scenario
 
 A candidate applies online. The backend system converts their resume into PDF format that the candidate reviews and approves. If a portfolio is submitted, it can be previewed inline on the submission website. Instead of requiring job histories to be entered separately, information can be extracted from the uploaded resume and inserted into online form fields, saving time and improving user experience.
-
 
 ### Building this Solution
 

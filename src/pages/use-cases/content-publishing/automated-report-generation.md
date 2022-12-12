@@ -5,11 +5,9 @@ description: Automate custom report generation with Microsoft Word templates and
 
 import AutomatedReportGeneration from '../page-content/content-publishing/automated-report-generation.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner Hero-Banner"/>
 
 # Acrobat Services API Use Cases
-
 
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Automated-Report-Generation"/>
 

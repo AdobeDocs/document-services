@@ -5,7 +5,6 @@ description: Create dynamic documents for content publishing with Adobe Acrobat 
 
 import IndexContent from '../page-content/content-and-data-extraction/content-based-process-automation.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner" />
 
 # Acrobat Services API Use Cases

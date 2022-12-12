@@ -5,12 +5,11 @@ description: Quickly create personalized employee onboarding documents with Adob
 
 import EmployeeOnboardingMaterials from '../page-content/content-publishing/employee-onboarding-materials.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner" />
 
 # Acrobat Services API Use Cases
 
-
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Employee-Onboarding-Materials"/>
 
 <EmployeeOnboardingMaterials />
+

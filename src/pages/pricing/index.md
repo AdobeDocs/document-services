@@ -12,7 +12,6 @@ import PDFService from './pdf-services-api.md'
 
 When you’re ready to purchase, flexible options to suit your needs.
 
-
 <WrapperComponent slots="content" theme="light" className="pdf-service"/>
 
 <PDFService/>

@@ -5,7 +5,6 @@ description: Publish PDFs in your website with multi-user collaboration using on
 
 import Collaboration from '../page-content/collaboration/student-teacher-collaboration.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases

@@ -5,11 +5,9 @@ description: Generate, convert, and extract resume data for automated processing
 
 import ProcessingEmployeeResumes from '../page-content/content-publishing/processing-employee-resumes.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner" />
 
 # Acrobat Services API Use Cases
-
 
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Processing-employee-resumes"/>
 

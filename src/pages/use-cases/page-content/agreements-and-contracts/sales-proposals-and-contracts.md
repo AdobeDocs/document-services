@@ -14,7 +14,6 @@ Using Adobe Acrobat Services, sales teams can:
 * Create custom, on-brand PDF proposals and contracts
 * Include the ability for customers to electronically sign documents
 
-
 ### Relevant APIs
 
 * [Adobe Document Generation API](/src/pages/apis/doc-generation.md)

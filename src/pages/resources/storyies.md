@@ -5,7 +5,6 @@
 
 See how our customers are building great experiences and succeeding with Adobe.
 
-
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest"  className='useCaseCard card-heading-size' isCustomStories/>
 
 [K2Nintext.pdf](K2Nintex.pdf)
@@ -15,7 +14,6 @@ See how our customers are building great experiences and succeeding with Adobe.
 ### K2 NINTEX
 
 Nintex transforms K2 Cloud workflows with Adobe Acrobat Services APIs.
-
 
 <ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
@@ -27,8 +25,6 @@ Nintex transforms K2 Cloud workflows with Adobe Acrobat Services APIs.
 
 Adobe InDesign brings its new Share for Review features to life with Adobe Acrobat Services APIs.
 
-
-
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
 [Cambridge-Assessment.pdf](Cambridge-Assessment.pdf)
@@ -38,7 +34,6 @@ Adobe InDesign brings its new Share for Review features to life with Adobe Acrob
 ### CAMBRIDGE ASSESSMENT
 
 Cambridge Assessment intends to digitize more than 100 years of test material with Adobe PDF Extract API.
-
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 

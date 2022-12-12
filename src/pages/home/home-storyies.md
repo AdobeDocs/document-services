@@ -14,7 +14,6 @@ See how our customers are building great experiences and succeeding with Adobe.
 
 Waymark Tech enables rapid impact assessments and compliance workflows with Adobe PDF Extract API.
 
-
 <ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
 [AdobeInDesign.pdf](../resources/AdobeInDesign.pdf)
@@ -25,8 +24,6 @@ Waymark Tech enables rapid impact assessments and compliance workflows with Adob
 
 Adobe InDesign brings its new share for review features to life with Adobe Acrobat Services APIs.
 
-
-
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size hme-custom-header' isCustomStories/>
 
 [Cambridge-Assessment.pdf](../resources/Cambridge-Assessment.pdf)
@@ -36,7 +33,6 @@ Adobe InDesign brings its new share for review features to life with Adobe Acrob
 ### Cambridge Assessment
 
 Cambridge Assessment intends to digitize more than 100 years of test material with Adobe PDF Extract API.
-
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 

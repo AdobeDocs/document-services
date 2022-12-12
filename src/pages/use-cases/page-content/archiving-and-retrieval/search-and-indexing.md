@@ -16,6 +16,7 @@ With Adobe Acrobat Services, a workflow can:
 * Enable easy and fast searching of converted documents
 
 ### Relevant APIs
+
 * [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 
 ### Scenario

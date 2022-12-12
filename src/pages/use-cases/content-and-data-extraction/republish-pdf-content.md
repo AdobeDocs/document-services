@@ -5,11 +5,9 @@ description: Unlock your PDF content to repurpose it for creation and republishi
 
 import RepublishPDFContent from '../page-content/content-and-data-extraction/republish-pdf-content.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases
-
 
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Republish-PDF-Content"/>
 
