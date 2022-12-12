@@ -12,4 +12,3 @@ import EmployeeOnboardingMaterials from '../page-content/content-publishing/empl
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Employee-Onboarding-Materials"/>
 
 <EmployeeOnboardingMaterials />
-
