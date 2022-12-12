@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Course and Degree Certificate'
+title: 'Acrobat Services API Use Case: Course and Degree Certificate'
 ---
 
 ## Course and Degree Certificate
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Course and Degree Certificate'
 
 Institutions offering degrees and certifications need to create many certificates of completion for their students. These certificates often include details about the student's performance and specific completed courses, which is tedious to create manually. Automation helps institutions create complex and personalized certificates quickly.
 
-Adobe Document Services allows institutions to:
+Adobe Acrobat Services allows institutions to:
 
 * Create standard branded templates for certificates
 * Merge student-specific data and course information automatically into templates

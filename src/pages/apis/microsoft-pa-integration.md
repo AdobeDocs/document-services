@@ -1,6 +1,6 @@
 ---
 title: Microsoft Power Automate Integration | PDF Services API Connector | Adobe Acrobat Sign Connector
-description: Build low-code, end-to-end document workflows easily with Adobe Document Services & Adobe Acrobat Sign on Microsoft Power Platform. From PDF creation and conversion to e-signatures, access over twenty PDF actions. Learn more and start a free trial today.
+description: Build low-code, end-to-end document workflows easily with Adobe Acrobat Services & Adobe Acrobat Sign on Microsoft Power Platform. From PDF creation and conversion to e-signatures, access over twenty PDF actions. Learn more and start a free trial today.
 ---
 
 import UplevelYourDocumentTitle from './microsoft-PA-integration/uplevel-your-document-title.md';

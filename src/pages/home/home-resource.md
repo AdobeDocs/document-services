@@ -1,7 +1,6 @@
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left"/>
 
-## Use cases for Adobe Document Services
-
+## Use cases for Adobe Acrobat Services
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 
@@ -23,8 +22,6 @@ Accelerate reusing content in systems of record and downstream processes, such a
 
 Generate legal contracts with dynamic terms and signatures.
 
-
-
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 
 [](/use-cases/content-and-data-extraction/data-analysis/)
@@ -34,8 +31,6 @@ Generate legal contracts with dynamic terms and signatures.
 ### Data analysis
 
 Extract data from complex tables including cell data, column and row headers, and table properties for use in machine learning models, analysis, or storage.
-
-
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard" />
 

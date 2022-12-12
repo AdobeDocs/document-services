@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Report Creation and Editing'
+title: 'Acrobat Services API Use Case: Report Creation and Editing'
 ---
 
 ## On-Demand Report Creation
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Report Creation and Editing'
 
 Creating reports is a common requirement for many applications and web experiences. Often, the displayed data and content is generated in HTML. However, many users want to download, share, review offline, or modify these reports, but the native format makes this difficult.
 
-Adobe Document Services allows developers to:
+Adobe Acrobat Services allows developers to:
 
 * Download an HTML report in a PDF format to share or review offline
 

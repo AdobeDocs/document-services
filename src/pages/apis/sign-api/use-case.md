@@ -17,7 +17,7 @@ Acrobat Sign APIs are used across a variety of industries to meet a wide range o
 
 ### Sales and procurement contracts.
 
-Reduce time creating, managing, and tracking sales and procurement contracts. Use Acrobat Sign APIs with Document Service to automate manual processes.
+Reduce time creating, managing, and tracking sales and procurement contracts. Use Acrobat Sign APIs with Acrobat Services to automate manual processes.
 
 - [Read story](https://business.adobe.com/customer-success-stories/lash-group-case-study.html)
 

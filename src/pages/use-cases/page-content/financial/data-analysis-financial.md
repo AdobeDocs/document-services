@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Data Analysis for Finance'
+title: 'Acrobat Services API Use Case: Data Analysis for Finance'
 ---
 
 ## Data Analysis

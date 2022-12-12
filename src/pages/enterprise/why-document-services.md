@@ -5,7 +5,7 @@ description: Adobe Document APIs for Enterprise Developers.
 
 <TitleBlock slots="heading" theme="lightest"  className="titleBlock-align-left why-Adobe-document-services" />
 
-## Why Adobe Document Services?
+## Why Adobe Acrobat Services?
 
 <TextBlock slots="image, text" width="33%" theme="lightest" className="align-left enterprise-icon-xl-size horizontal-align-heading py-0"/>
 

@@ -78,7 +78,7 @@ const issue_sub_url_array = [
   {
     issue_type: "Account Management",
     sub_issue_type:
-      "How do I use my Adobe Document Services credentials in Power Automate, if I initially created them via AWS Marketplace?",
+      "How do I use my Adobe Acrobat Services credentials in Power Automate, if I initially created them via AWS Marketplace?",
     sub_issue_type_id:
       "account-management-how-do-i-use-my-adobe-document-services-credentials-in-power-automate"
   },
@@ -92,21 +92,21 @@ const issue_sub_url_array = [
   {
     issue_type: "Account Management",
     sub_issue_type:
-      "Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Document Services?",
+      "Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?",
     sub_issue_type_id:
       "account-management-can-i-continue-using-my-same-trial-credentials"
   },
   {
     issue_type: "Data Security & Privacy",
     sub_issue_type:
-      "Is Adobe Document Services (PDF Services API and PDF Embed API) HIPAA compliant?",
+      "Is Adobe Acrobat Services (PDF Services API and PDF Embed API) HIPAA compliant?",
     sub_issue_type_id:
       "data-security--privacy-is-adobe-document-services--hipaa-compliant"
   },
   {
     issue_type: "Data Security & Privacy",
     sub_issue_type:
-      "Where are the data centers for Adobe Document Services based?",
+      "Where are the data centers for Adobe Acrobat Services based?",
     sub_issue_type_id:
       "data-security--privacy-where-are-the-data-centers-for-adobe-document-services-based"
   },
@@ -126,28 +126,28 @@ const issue_sub_url_array = [
   {
     issue_type: "Data Security & Privacy",
     sub_issue_type:
-      "How are data transfers by Adobe Document Services secured?",
+      "How are data transfers by Adobe Acrobat Services secured?",
     sub_issue_type_id:
       "data-security--privacy-how-are-data-transfers-by-adobe-document-services-secured"
   },
   {
     issue_type: "Data Security & Privacy",
     sub_issue_type:
-      "How does Adobe Document Services use or store file content and identity data?",
+      "How does Adobe Acrobat Services use or store file content and identity data?",
     sub_issue_type_id:
       "data-security--privacy-how-does-adobe-document-services-use-or-store-file-content"
   },
   {
     issue_type: "Data Security & Privacy",
     sub_issue_type:
-      "What regulatory compliances are Adobe Document Services certified for?",
+      "What regulatory compliances are Adobe Acrobat Services certified for?",
     sub_issue_type_id:
       "data-security--privacy-what-regulatory-compliances-are-adobe-document-services-certified-for"
   },
   {
     issue_type: "Data Security & Privacy",
     sub_issue_type:
-      "Can I use Adobe Document Services in a web, mobile, or desktop application?",
+      "Can I use Adobe Acrobat Services in a web, mobile, or desktop application?",
     sub_issue_type_id:
       "data-security--privacy-can-i-use-adobe-document-services-in-a-web-mobile-or-desktop-application"
   },
@@ -244,7 +244,7 @@ const issue_sub_url_array = [
   },
   {
     issue_type: "Features - PDF Services API",
-    sub_issue_type: "Can I run these document services on-premise?",
+    sub_issue_type: "Can I run these acrobat Services on-premise?",
     sub_issue_type_id:
       "features---pdf-services-api-can-i-run-these-document-services-on-premise"
   },
@@ -764,7 +764,7 @@ const TechSupportContactUs = ({}) => {
           <a href="https://www.adobe.com/privacy.html" className="link-content">
             Adobe family of companies
           </a>{" "}
-          would like to keep you informed about Document Services APIs, which
+          would like to keep you informed about Acrobat Services APIs, which
           may include contacting you via email. By checking this box, you agree
           to being contacted via email. Please see our{" "}
           <a

@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Data Analysis for Finance'
+title: 'Acrobat Services API Use Case: Data Analysis for Finance'
 ---
 
 ## Processing employee resumes
@@ -8,14 +8,13 @@ title: 'Document Services API Use Case: Data Analysis for Finance'
 
 Businesses face many challenges when accepting uploaded documents for job applications. Resumes may come in varying formats, be unsearchable, or be too large for storage. Organizations need to standardize and ingest data into other systems for processing, so they can find what they need when they need it.
 
-Adobe Document Services allows organizations to:
+Adobe Acrobat Services allows organizations to:
 
 * Preview PDFs when uploaded in a UI using Adobe PDF Embed API
 * Convert from other formats into PDF for consistency
 * Make scanned PDFs searchable upon upload (OCR)
 * Extract resume data for upload into a third-party system
 * Review resumes and supporting documents such as portfolios
-
 
 ### Relevant APIs
 
@@ -26,7 +25,6 @@ Adobe Document Services allows organizations to:
 ### Scenario
 
 A candidate applies online. The backend system converts their resume into PDF format that the candidate reviews and approves. If a portfolio is submitted, it can be previewed inline on the submission website. Instead of requiring job histories to be entered separately, information can be extracted from the uploaded resume and inserted into online form fields, saving time and improving user experience.
-
 
 ### Building this Solution
 

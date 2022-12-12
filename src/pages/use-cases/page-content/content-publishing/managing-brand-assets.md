@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Data Analysis for Finance'
+title: 'Acrobat Services API Use Case: Data Analysis for Finance'
 ---
 
 ## Managing brand assets
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Data Analysis for Finance'
 
 Marketing teams need to update documents regularly with new product information, messaging, and branding. It’s challenging to make updates broadly when rebranding occurs or when certain text strings need to be updated.
 
-Adobe Document Services allows organizations to:
+Adobe Acrobat Services allows organizations to:
 
 * Create searchable PDF documents using OCR
 * Preview PDFs in a UI using PDF Embed API
@@ -23,7 +23,6 @@ Adobe Document Services allows organizations to:
 ### Scenario
 
 A marketing team struggles to manage and update their many documents due to a recent branding change. They need an easy way to maintain internal- and external-facing marketing materials, search for terms, display documents, and edit dynamic fields to refresh and republish content.
-
 
 ### Building this Solution
 

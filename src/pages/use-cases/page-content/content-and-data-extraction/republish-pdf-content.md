@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Republish PDF Content'
+title: 'Acrobat Services API Use Case: Republish PDF Content'
 ---
 
 ## Republish PDF Content

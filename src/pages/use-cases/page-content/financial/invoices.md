@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Invoices'
+title: 'Acrobat Services API Use Case: Invoices'
 ---
 
 ## Invoices
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Invoices'
 
 Billing customers is a critical business activity, but creating invoices is tedious and time consuming. While accuracy is paramount, invoice data often comes from several systems and changes regularly, so the process can be prone to error. Finance and accounting teams at start-ups and enterprises alike need invoicing solutions that are accurate, reliable, and can scale as the business grows.
 
-Adobe Document Services can help businesses create invoices. After pulling relevant data from the various systems (CRM, ERP, PIM, etc.) into a JSON file, users can:
+Adobe Acrobat Services can help businesses create invoices. After pulling relevant data from the various systems (CRM, ERP, PIM, etc.) into a JSON file, users can:
 
 * Design invoice templates in Microsoft Word and add text tags for merging JSON data
 * Create invoices on demand using an automation tool, such as Microsoft Power Automate

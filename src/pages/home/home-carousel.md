@@ -15,10 +15,10 @@
 
 ![k2](../images/k2_2x.png)
 
-“Adobe Document Services helped us extend K2’s intelligent process automation solution to enable
+“Adobe Acrobat Services helped us extend K2’s intelligent process automation solution to enable
 integrated PDF document creation with a rich, interactive web experience for document review,
 approval, and e-signature processes with Adobe Acrobat Sign. Our developers were able to easily extend K2
-workflows that collect information from multiple data sources using Adobe Document Services APIs,
+workflows that collect information from multiple data sources using Adobe Acrobat Services APIs,
 enabling us to quickly deliver a solution for our customers to automate their document-oriented business processes in a more secure and scalable way.”
 
 **– Alex Cobb, VP Product Management, K2**
@@ -37,7 +37,7 @@ options with just a few lines of code.”
 
 “InfoDesk provides AI-driven technology and tools that enable organizations to make the smartest
 decisions confidently. This involves delivering highly relevant insights to our customers in a format that
-suits them best so they can harness the value of their information. By using Adobe’s Document Service
+suits them best so they can harness the value of their information. By using Adobe’s Acrobat Services
 API, our customers can easily convert PDF reports to PowerPoint for use in client presentations and
 internal stakeholder meetings. At InfoDesk, we are always looking for ways to add value for our clients
 and Adobe enables us to do exactly that.”

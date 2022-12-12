@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Purchase Orders'
+title: 'Acrobat Services API Use Case: Purchase Orders'
 ---
 
 ## Purchase Orders
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Purchase Orders'
 
 Many businesses need to generate a high volume of purchase orders (POs) in PDF format for services and source products. The data required for compliant POs is often tracked in several systems, and it becomes tedious for teams to manually include the correct details for different suppliers, products, regions, etc. Automating the generation of these documents saves time and boosts efficiency for these teams.
 
-Adobe Document Services allows organizations to:
+Adobe Acrobat Services allows organizations to:
 
 * Create standard branded templates for purchase orders
 * Merge purchase order data automatically into template documents

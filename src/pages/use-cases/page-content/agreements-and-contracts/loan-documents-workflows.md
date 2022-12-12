@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Data Analysis for Finance'
+title: 'Acrobat Services API Use Case: Data Analysis for Finance'
 ---
 
 ## Loan Document Workflows
@@ -8,15 +8,14 @@ title: 'Document Services API Use Case: Data Analysis for Finance'
 
 Loan industries are often overwhelmed with tedious administrative tasks, leading to slower transaction times and ultimately unhappy borrowers. This is further complicated by stringent regulations, which can pose high risk with financial penalties despite the labor-intensive verification process. The most pressing pain points around managing loan origination documents include
 
-
-Adobe Document Services allow companies to:
+Adobe Acrobat Services allow companies to:
 
 * Manually processing large volumes of documents in a variety of formats.
 * Data entry errors and duplications of sensitive information in a high compliance environment
 * Borrowers feeling rushed to review and sign the overwhelming stack of paperwork at closing, and frustrated at the lack of transparency of the entire process
 * Borrower’s lack of understanding about the costs and risks from complex forms that are filled with legal and technical acronyms to fulfill federal, state and local government requirements
 
-Adobe Document Services can help these organizations simplify the complex process by:
+Adobe Acrobat Services can help these organizations simplify the complex process by:
 
 * Standardizing on a single digital workflow that lets users assemble, manipulate, collaborate on, fill in, and sign documents
 * Making scanned PDFs searchable upon upload (OCR)
@@ -24,18 +23,15 @@ Adobe Document Services can help these organizations simplify the complex proces
 * Creating a seamless document viewing experience within the browser
 * Adding additional security to the PDF
 
-
 ### Relevant APIs
 
 * [Adobe PDF Embed API](/src/pages/apis/pdf-embed.md)
 * [Adobe PDF Services API](/src/pages/apis/pdf-services.md)
 * [Adobe PDF Extract API](/src/pages/apis/pdf-extract.md)
 
-
 ###  Scenario
 
 A borrower applies for a loan. When they submit the loan application and supporting documents, the backend system converts uploaded documents to PDF format, compresses the files, and OCRs any scanned PDFs. Data is extracted from the uploaded documents and stored in a database. The borrower is then presented with a preview of the loan package as an embedded PDF and can add comments directly in case there are any questions to resolve with the loan officer. After application review and approval, the final loan documents are sent for signature using Adobe Acrobat Sign
-
 
 ### Building this Solution
 

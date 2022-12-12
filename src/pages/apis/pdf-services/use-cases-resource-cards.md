@@ -1,5 +1,5 @@
 ---
-title: Adobe Developer — PDF Services API  —   Use Cases for Document Services API
+title: Adobe Developer — PDF Services API  —   Use Cases for Acrobat Services API
 ---
 
 <!-- Resource Cards Block -->
@@ -47,4 +47,3 @@ Publish whitepapers and marketing content with end-user interactivity, security 
 ### Job posting
 
 Automate job posting with supporting documents such as PDF brochures, relevant job supplements, and company details.
-

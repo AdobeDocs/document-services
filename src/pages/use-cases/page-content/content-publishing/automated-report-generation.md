@@ -1,5 +1,5 @@
 ---
-title: 'Document Services API Use Case: Job Posting'
+title: 'Acrobat Services API Use Case: Job Posting'
 ---
 
 ## Automated Report Generation
@@ -8,7 +8,7 @@ title: 'Document Services API Use Case: Job Posting'
 
 Many businesses create reports on project progress or the status of certain accounts for clients or stakeholders. This process is cumbersome and often uses data already in the company's customer relationship management (CRM) system. Automating report generation gives teams time back and ensures reports are as up-to-date as possible
 
-Adobe Document Services allows businesses to:
+Adobe Acrobat Services allows businesses to:
 
 * Create report templates for various purposes
 * Automatically merge data from business systems (e.g. CRM)
