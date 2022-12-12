@@ -1,0 +1,19 @@
+<svg id="_3_Reading_Order_Identification_Icon" data-name="3_Reading Order Identification Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92.648" height="90" viewBox="0 0 92.648 90">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_216999" data-name="Rectangle 216999" width="92.648" height="90" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_187347" data-name="Group 187347" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="Path_357934" data-name="Path 357934" d="M60.443,78.516H9.449A9.579,9.579,0,0,1,0,69.069q0-.013,0-.026V14.574a1.923,1.923,0,1,1,3.847,0V69.028a5.732,5.732,0,0,0,5.642,5.641H60.443a1.923,1.923,0,1,1,0,3.847Z" transform="translate(0 6.814)" fill="#b3b4b4"/>
+    <path id="Path_357935" data-name="Path 357935" d="M68,35.775a1.923,1.923,0,0,1-1.923-1.923v-12.1a5.978,5.978,0,0,0-1.9-4.267l-.05-.049L52.471,5.8a6.634,6.634,0,0,0-4.629-1.953H9.488A5.732,5.732,0,0,0,3.849,9.491V23.949a1.923,1.923,0,1,1-3.847,0V9.477q0-.013,0-.026A9.579,9.579,0,0,1,9.447,0H47.876A10.459,10.459,0,0,1,55.19,3.079L66.816,14.695a9.842,9.842,0,0,1,3.1,7.02q0,.013,0,.026V33.852A1.923,1.923,0,0,1,68,35.775Z" transform="translate(0.001 0)" fill="#b3b4b4"/>
+    <path id="Line_1" data-name="Line 1" d="M40.318,2.6H.673a1.923,1.923,0,0,1,0-3.847H40.318a1.923,1.923,0,0,1,0,3.847Z" transform="translate(14.604 24.156)" fill="#b3b4b4"/>
+    <path id="Line_2" data-name="Line 2" d="M28.991,2.6H.673a1.923,1.923,0,0,1,0-3.847H28.991a1.923,1.923,0,1,1,0,3.847Z" transform="translate(14.604 36.739)" fill="#b3b4b4"/>
+    <path id="Line_3" data-name="Line 3" d="M14.159,5.193H1.347a3.847,3.847,0,0,1,0-7.693H14.159a3.847,3.847,0,1,1,0,7.693Z" transform="translate(46.282 51.55)" fill="#b3b4b4"/>
+    <path id="Line_4" data-name="Line 4" d="M32.594,2.6H.673a1.923,1.923,0,1,1,0-3.847H32.594a1.923,1.923,0,1,1,0,3.847Z" transform="translate(14.604 49.174)" fill="#b3b4b4"/>
+    <path id="Line_5" data-name="Line 5" d="M30.238,2.6H.673a1.923,1.923,0,0,1,0-3.847H30.238a1.923,1.923,0,0,1,0,3.847Z" transform="translate(14.604 61.987)" fill="#b3b4b4"/>
+    <path id="Line_6" data-name="Line 6" d="M20.354,5.193H1.347a3.847,3.847,0,0,1,0-7.693H20.354a3.847,3.847,0,0,1,0,7.693Z" transform="translate(47.116 63.712)" fill="#b3b4b4"/>
+    <path id="Ellipse_20183" data-name="Ellipse 20183" d="M16.837-1.25A18.087,18.087,0,0,1,29.626,29.626,18.087,18.087,0,0,1,4.047,4.047,17.968,17.968,0,0,1,16.837-1.25Zm0,32.327A14.24,14.24,0,1,0,2.6,16.837,14.256,14.256,0,0,0,16.837,31.077Z" transform="translate(44.392 41.484)" fill="#eb1000"/>
+    <path id="Line_7" data-name="Line 7" d="M17.281,20.358a3.068,3.068,0,0,1-2.176-.9L-1.1,3.253A3.077,3.077,0,0,1,3.253-1.1l16.2,16.2a3.077,3.077,0,0,1-2.176,5.253Z" transform="translate(72.29 69.642)" fill="#eb1000"/>
+  </g>
+</svg>

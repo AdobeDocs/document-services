@@ -1,1 +1,0 @@
-{"version":3,"file":"4924-44672a07643f5413e1df.js","mappings":"oJAAA,UAAe,IAA0B,6D","sources":["webpack://dev-site-product-template/./src/pages/images/awsmplogo_white.svg"],"sourcesContent":["export default __webpack_public_path__ + \"static/awsmplogo_white-7c502c449ccf007d4a3af0e6771daeb7.svg\";"],"names":[],"sourceRoot":""}
