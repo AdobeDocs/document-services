@@ -27,7 +27,6 @@ With Adobe Acrobat Services, companies save time by automating the following ste
 
 A procurement team needs to send signed purchase orders frequently to suppliers, and they track all information about suppliers and processes in their procurement system. Currently, sending a PO involves manually copying information from the system to a Microsoft Word document, converting to PDF, uploading for internal review, manually sending for signature, and then sharing with the supplier. Fully automating this process would give team members time back.
 
-
 ### Building this solution
 
 Follow the steps below to automate PDF generation to streamline procurement processes:

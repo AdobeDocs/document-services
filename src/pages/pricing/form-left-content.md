@@ -9,7 +9,6 @@ title: Adobe Developer — Acrobat Services Form — Form
 
 The Adobe PDF Services API can help automate PDF generation, manipulation and transformation of content with a set of simple-to-use cloud-based operations
 
-
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content"/>
 
 - Create PDFs from any Microsoft 365 document, HTML pages or image files

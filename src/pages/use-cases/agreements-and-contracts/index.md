@@ -5,7 +5,6 @@ description: Easily generate dynamic sales contracts with Microsoft Word templat
 
 import IndexConent from '../page-content/agreements-and-contracts/sales-proposals-and-contracts.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark" customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases

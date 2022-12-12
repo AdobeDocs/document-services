@@ -1,5 +1,3 @@
-
-
 <DCSummaryBlock slots=" heading, text, buttons"  theme='lightest' />
 
 ### We're ready to help

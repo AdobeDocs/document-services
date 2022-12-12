@@ -2,7 +2,6 @@
 title: Doc Gen API Templates
 ---
 
-
 import { products,clouds } from '../../components/product.js';
 
 <Hero slots="heading" layout="section" variant="fullwidth" customLayout className="herobgImage Hero-Banner"/>

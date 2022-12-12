@@ -5,11 +5,9 @@ description: Quick and easy invoice generation with Microsoft Word templates and
 
 import InvoicesContent from '../page-content/financial/invoices.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases
-
 
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Invoices"/>
 

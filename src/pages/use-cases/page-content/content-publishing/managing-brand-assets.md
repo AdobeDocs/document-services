@@ -24,7 +24,6 @@ Adobe Acrobat Services allows organizations to:
 
 A marketing team struggles to manage and update their many documents due to a recent branding change. They need an easy way to maintain internal- and external-facing marketing materials, search for terms, display documents, and edit dynamic fields to refresh and republish content.
 
-
 ### Building this Solution
 
 In this solution, see how your organization can utilize this process:

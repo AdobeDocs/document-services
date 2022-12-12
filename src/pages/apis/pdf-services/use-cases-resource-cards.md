@@ -47,4 +47,3 @@ Publish whitepapers and marketing content with end-user interactivity, security 
 ### Job posting
 
 Automate job posting with supporting documents such as PDF brochures, relevant job supplements, and company details.
-

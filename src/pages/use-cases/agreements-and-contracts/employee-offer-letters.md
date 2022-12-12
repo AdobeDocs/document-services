@@ -5,7 +5,6 @@ description: Quickly generate personalized employee offer letters with Document 
 
 import EmployeeOffersLetters from '../page-content/agreements-and-contracts/employee-offer-letters.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner" />
 
 # Acrobat Services API Use Cases

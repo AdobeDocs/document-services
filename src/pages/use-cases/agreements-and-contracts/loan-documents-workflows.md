@@ -5,7 +5,6 @@ description: Automate loan document workflows quickly with Adobe Acrobat Service
 
 import LoanDocumentsWorkflows from '../page-content/agreements-and-contracts/loan-documents-workflows.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases

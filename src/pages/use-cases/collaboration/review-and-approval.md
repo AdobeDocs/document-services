@@ -5,7 +5,6 @@ description: Quickly publish PDF documents with commenting for review and approv
 
 import ReviewandApproval from '../page-content/collaboration/review-and-approval.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner" />
 
 # Acrobat Services API Use Cases

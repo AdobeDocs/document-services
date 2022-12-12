@@ -5,7 +5,6 @@ description: Unlock content elements from PDF files with machine learning for da
 
 import DataAnalysis from '../page-content/content-and-data-extraction/data-analysis.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases

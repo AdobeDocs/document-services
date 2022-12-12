@@ -25,7 +25,6 @@ Adobe Acrobat Services allows companies to:
 
 A company needs to automate the creation and management of daily shift reports from multiple field locations. Shift reports follow a standard template, but some are completed manually and scanned while others are made dynamically using data from databases onsite. Daily reports from each location must be combined into a single report, approved with signature by the field manager, protected with a password, then stored as documents of record for audit purposes.
 
-
 ### Building this solution
 
 In this solution, shift reports in the field are scanned using Adobe Scan or generated in PDF format dynamically. Then they are combined with other reports, sent for approval with signature, password protected, and archived.

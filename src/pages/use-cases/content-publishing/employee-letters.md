@@ -5,7 +5,6 @@ description: Create personalization at scale with dynamic employee letter genera
 
 import EmployeeLetters from '../page-content/content-publishing/employee-letters.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases

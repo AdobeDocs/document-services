@@ -5,11 +5,9 @@ description: Extract all content elements from your financial PDF documents to J
 
 import FinancialContent from '../page-content/financial/data-analysis-financial.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases
-
 
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Data-Analysis-for-Finance"/>
 

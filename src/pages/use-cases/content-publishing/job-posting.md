@@ -5,13 +5,10 @@ description: Create, transform, and publish dynamic documents for custom recruit
 
 import JobPosting from '../page-content/content-publishing/job-posting.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases
 
-
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Job-Posting"/>
 
 <JobPosting />
-

@@ -14,8 +14,6 @@
 
 - Leverage integrations with AEM, Adobe Analytics, and Adobe Acrobat Sign.
 
-
-
 <TextBlock slots="image,heading,text" width="33%" theme="lightest"   className="align-left img-m-size horizontal-align-heading home-list-points"/>
 
 ![EMPTY_ALT](../images/img-customized-experiences@2x.png)
@@ -27,8 +25,6 @@
 - Secure, reliable, and scalable.
 
 - Pay only for what you need.
-
-
 
 <TextBlock slots="image, heading, text" width="33%" theme="lightest"  className="align-left img-m-size horizontal-align-heading home-list-points"/>
 

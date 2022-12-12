@@ -30,4 +30,3 @@ An HR manager logs into a job posting site. After entering information about an 
 2. Process the document with PDF Services API OCR and Compress operations to streamline and normalize
 3. Pass the document to Extract API to extract data and send on through the system
 4. Use Adobe PDF Embed API to render the PDF on the submission page, inline
-

@@ -5,11 +5,9 @@ description: Quick and easy sales quote generation with Microsoft Word templates
 
 import SalesQuote from '../page-content/financial/sales-quote.md';
 
-
 <Hero slots="heading" variant="fullwidth" theme="dark"  customLayout className="herobgImage Hero-Banner"/>
 
 # Acrobat Services API Use Cases
-
 
 <MenuWrapperComponent  menuItem= 'subMenuPages'  slots="content"  repeat="1" theme="lightest" className="Sales-Quote"/>
 
