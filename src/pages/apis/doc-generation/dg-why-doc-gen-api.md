@@ -2,7 +2,7 @@
 title: Adobe Developer — Doc generation — Why Document Generation API
 ---
 
-<SummaryBlock slots="heading, buttons" theme="lightest" buttonPositionRight btnVariant="cta" isBtnVariant />
+<DCSummaryBlock slots="heading, buttons" theme="lightest" buttonPositionRight btnVariant="cta" isBtnVariant />
 
 ## Why Document Generation API?
 

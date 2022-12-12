@@ -20,7 +20,7 @@ When you’re ready to purchase, flexible options to suit your needs.
 
 <PDFEmbed/>
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="why-are-ready-to-help" />
+<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="why-are-ready-to-help" />
 
 ![We're ready](../images/bg-hero.jpeg)
 

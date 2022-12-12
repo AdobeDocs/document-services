@@ -39,7 +39,8 @@ apiHeroAssetImg sign-api-hero
 
 <PartnershipType/>
 
-<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-one"/>
+
+<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"   homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-one"/>
 
 ![EMPTY_ALT](../images/5_Devices_Merge.png)
 
@@ -49,7 +50,8 @@ Merge and prefill data directly from you application and send documents for sign
 
 - [Access API samples](https://opensource.adobe.com/acrobat-sign/developer_guide/samples.html)
 
-<TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-two"/>
+
+<TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"   homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-two"/>
 
 ### Store documents in your own repository.
 
@@ -59,7 +61,8 @@ Adobe, with our Document Generation API and other PDF Services APIs, makes it ea
 
 ![EMPTY_ALT](../images/5_Devices_Store.png)
 
-<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-three"/>
+
+<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"   homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-three"/>
 
 ![EMPTY_ALT](../images/5_Devices_OEM.png)
 
@@ -73,7 +76,7 @@ Add e-signatures as a feature or service within your own application and deliver
 
 <Usecase/>
 
-<TextBlock slots="buttons" isCentered theme="light" variantsTypePrimary='secondary'  isPrimaryBtn  className='padding-5 Use-cases-for-Adobe-Document-Services view-all-cta'/>
+<TextBlock slots="buttons" isCentered theme="light" variantsTypePrimary='secondary' variantStyleFill = "outline"   className='padding-5 Use-cases-for-Adobe-Document-Services view-all-cta'/>
 
 - [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 

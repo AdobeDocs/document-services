@@ -60,7 +60,7 @@ apiHeroAssetImg doc-ext-invoice
 
 <NewsLetterBlade className="news-letter"/>
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help"/>
+<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help"/>
 
 ![](../images/bg-hero.jpeg)
 

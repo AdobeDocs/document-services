@@ -87,7 +87,7 @@ Streamline legal contract and compliance processes to save time and reduce busin
 
 ![PDF Extract API Workflow](../images/mob_Image_Legal.jpg)
 
-<SummaryBlock slots="heading, text" theme="dark" background="rgb(31, 42, 73)" className="customer_stories py-1"/>
+<DCSummaryBlock slots="heading, text" theme="dark" background="rgb(31, 42, 73)" className="customer_stories py-1"/>
 
 ## Customer stories.
 
@@ -97,7 +97,7 @@ See how our customers are building smarter and faster document experiences.
 <WrapperComponent slots="content"  background="rgb(31, 42, 73)" className="customer_story_wrapper"/>
 <CustomerStory />
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" primaryOutline background="white" className="get-started-today py-2"/>
+<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" primaryOutline background="white" className="get-started-today py-2"/>
 
 ![summary block bg img](../images/bg-hero.jpeg)
 

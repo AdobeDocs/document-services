@@ -3,7 +3,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 ---
 
 
-<SummaryBlock slots="heading, buttons" theme="lightest" buttonPositionRight btnVariant="cta" isBtnVariant className="heading-align" />
+<DCSummaryBlock slots="heading, buttons" theme="lightest" buttonPositionRight  className="heading-align" />
 
 ### Key features of Adobe PDF Extract API
 

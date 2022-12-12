@@ -1,4 +1,4 @@
-<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-one zigzag-align"/>
+<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"  homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-one zigzag-align"/>
 
 ![EMPTY_ALT](../../images/lowCode_Image_Desktop.jpg)
 
@@ -9,7 +9,7 @@ With the Adobe PDF Services connector, select from over twenty PDF API actions s
 - [Learn more](https://docs.microsoft.com/en-us/connectors/adobepdftools/)
 
 
-<TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-two zigzag-align"/>
+<TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"   homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-two zigzag-align"/>
 
 ### End-to-end workflows, complete with a signature.
 
@@ -21,7 +21,7 @@ Agreements, contracts, offer letters – you name it. Easily build workflows tha
 ![EMPTY_ALT](../../images/endToEnd_Image_Desktop.jpg)
 
 
-<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-three zigzag-align"/>
+<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"  homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-three zigzag-align"/>
 
 ![EMPTY_ALT](../../images/simplify_Image_Desktop.jpg)
 
@@ -32,7 +32,7 @@ Get started quickly with 75+ ready-to-use templates for workflows using Adobe PD
 - [Learn more](https://powerautomate.microsoft.com/en-US/connectors/details/shared_adobepdftools/adobe-pdf-services/)
 
 
-<TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-four zigzag-align"/>
+<TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"  homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-four zigzag-align"/>
 
 ### Easily incorporate forms through Adobe Experience Manager.
 
@@ -43,7 +43,7 @@ Integrate Microsoft Dynamics and Power Automate with Adobe Experience Manager Fo
 ![EMPTY_ALT](../../images/forms_Image_Desktop.jpg)
 
 
-<TextBlock slots="image, heading,text" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-five zigzag-align"/>
+<TextBlock slots="image, heading,text" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"  homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-five zigzag-align"/>
 
 ![EMPTY_ALT](../../images/api_Image_Desktop.jpg)
 

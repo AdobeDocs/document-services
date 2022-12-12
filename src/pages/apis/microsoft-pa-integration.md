@@ -35,7 +35,7 @@ microsoftPAHeroImage
 
 <UplevelYourDocumentContent />
 
-<SummaryBlock slots="text, buttons" theme="dark"  buttonPositionRight btnVariant="cta" className="How-to-get-started key-features-code-block ms-pa-page hero-below-compo ms-pa-page-mob ms-pa-summary-blade" />
+<DCSummaryBlock slots="text, buttons" theme="dark"  buttonPositionRight btnVariant="cta" className="How-to-get-started key-features-code-block ms-pa-page hero-below-compo ms-pa-page-mob ms-pa-summary-blade" />
 
 Start your trial today and get 1,000 free document transactions.
 
@@ -49,7 +49,7 @@ Start your trial today and get 1,000 free document transactions.
 
 <UseCases/>
 
-<TextBlock slots="buttons" isCentered theme="lightest" variantsTypePrimary='secondary' isPrimaryBtn  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
+<TextBlock slots="buttons" isCentered theme="lightest" variantsTypePrimary='secondary' variantStyleFill = "outline"  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
 
 - [View all use cases](/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
