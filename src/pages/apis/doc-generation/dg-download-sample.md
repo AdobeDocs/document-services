@@ -6,7 +6,7 @@ description: Automatically generate custom branded sales proposals, legal contra
 
 import { sampleProducts,clouds } from '../../../components/product.js';
 
-<TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left pt-grid-title-padding-bottom link linking" id="sample-blade"/>
+<TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left pt-grid-title-padding-bottom link linking" />
 
 ## Download sample templates and data to get started
 
