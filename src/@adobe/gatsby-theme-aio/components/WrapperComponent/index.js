@@ -13,6 +13,7 @@ import {  DESKTOP_SCREEN_WIDTH } from "../../../../utils";
 const WrapperComponent = ({ 
   theme = 'lightest',
   className,
+  id = id ? id :'',
   content,
   background,
   enableMaxHeight=false,
@@ -26,6 +27,7 @@ const customWidth = enableMaxWidth ?  `${maxWidth}`: `${DESKTOP_SCREEN_WIDTH}`
 
   return (
     <section
+      id={id}
       className={classNames(className,`spectrum--${theme}`)}
       css={css`
         ${backgroundColor}
