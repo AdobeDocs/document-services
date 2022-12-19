@@ -3090,4 +3090,8 @@ img[alt=adobe-support] {
     padding: 4px 18px 4px;
     margin: 0 .25em;
   }
-  
+
+.video-content > div{
+    padding-top: var(--spectrum-global-dimension-size-0) !important;
+    padding-bottom: var(--spectrum-global-dimension-size-0) !important;
+}
