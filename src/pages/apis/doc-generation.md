@@ -60,7 +60,7 @@ apiHeroAssetImg doc-gen-invoice
 - [See all templates](./doc-gen-api-template.md)
 
 <!--  Start Modifying PDFs in a few Minutes -->
-<WrapperComponent slots="content" theme="light" className="Get-started-in-minutes"/>
+<WrapperComponent slots="content" theme="light" className="Get-started-in-minutes" id="sample-blade"/>
 
 <DgStartModifyingTitle/>
 
