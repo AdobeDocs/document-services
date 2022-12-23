@@ -51,7 +51,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <!-- Download Sample Templates and Data to Get Started -->
 
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="Download-sample-templates-and-data-to-get-started"/>
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="Download-sample-templates-and-data-to-get-started" id="sample-blade" />
 
 <DgDownloadSample/>
 
@@ -60,7 +60,7 @@ apiHeroAssetImg doc-gen-invoice
 - [See all templates](./doc-gen-api-template.md)
 
 <!--  Start Modifying PDFs in a few Minutes -->
-<WrapperComponent slots="content" theme="light" className="Get-started-in-minutes" id="sample-blade"/>
+<WrapperComponent slots="content" theme="light" className="Get-started-in-minutes" />
 
 <DgStartModifyingTitle/>
 
