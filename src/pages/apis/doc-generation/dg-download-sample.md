@@ -16,4 +16,4 @@ Review our sample Word templates with JSON data and [try the demo.](https://docu
 
 - [Get Microsoft Word add-in](/document-services/docs/overview/document-generation-api/wordaddin/)
 
-<ProductCardGrid clouds={clouds} products={sampleProducts} showName={true} showDescription={false} interaction={false} buttonName="Download" showBorder={false} imgHeight="1300" imgWidth="1500" isCentered={true} theme="lightest" className="padding-bottom-zero productCardGrid" containerWidth="950px"/>
+<ProductCardGrid clouds={clouds} products={sampleProducts} showName={true} showDescription={false} interaction={false} buttonName="Download" showBorder={false} imgHeight="1300" imgWidth="1500" isCentered={true} theme="lightest" className="padding-bottom-zero productCardGrid" containerWidth="950px" id="sample-blade" />

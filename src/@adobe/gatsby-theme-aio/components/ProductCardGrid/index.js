@@ -81,6 +81,7 @@ const additionalFilters = [
 ];
 
 const ProductCardGrid = ({
+  id="",
   clouds = [],
   products = [],
   interaction = false,
@@ -132,6 +133,7 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
     return (
     <section
       className={classNames(className, `spectrum--${theme}`)}
+      id={id}
       css={css`
         background: var(--spectrum-global-color-gray-100);
         padding-bottom: var(--spectrum-global-dimension-size-500);

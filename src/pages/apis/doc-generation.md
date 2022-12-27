@@ -51,7 +51,7 @@ apiHeroAssetImg doc-gen-invoice
 
 <!-- Download Sample Templates and Data to Get Started -->
 
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="Download-sample-templates-and-data-to-get-started" id="sample-blade" />
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="Download-sample-templates-and-data-to-get-started" />
 
 <DgDownloadSample/>
 
