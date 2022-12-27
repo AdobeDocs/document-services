@@ -133,7 +133,6 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
     return (
     <section
       className={classNames(className, `spectrum--${theme}`)}
-      id={id}
       css={css`
         background: var(--spectrum-global-color-gray-100);
         padding-bottom: var(--spectrum-global-dimension-size-500);
@@ -284,6 +283,7 @@ const updatePadding = !enablePicker ?  "padding-top: var(--spectrum-global-dimen
           >
             {filteredProducts.map((product) => (
               <div
+                id={id}
                 key={product.id}
                 role="figure"
                 className="spectrum-Card"
