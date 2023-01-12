@@ -425,7 +425,7 @@ const ElectronicSealAPI = ({}) => {
               <RadioBoxField 
               type="radio" className={errorMsg.radioOne === "Required *" ? "required-checkbox" : ""} id='radioOne' name="queries_first" value={data.answer} onChange={e => onChnage(e)}
               />
-              <label className="text-content checkbox-text-container">{data.answer}</label>
+               <label className="text-content checkbox-text-container"> {data.id == 4 ? <a className="link-content" href="https://blog.developer.adobe.com/introduction-to-adobe-pdf-electronic-seal-cf0c3901aa66" >{data.answer}</a>: data.answer}</label>
             </div>
           })}
         </div>
