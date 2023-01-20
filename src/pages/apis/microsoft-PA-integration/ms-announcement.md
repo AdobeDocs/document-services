@@ -1,6 +1,6 @@
 <AnnouncementBlock slots="heading, text, button" className='ms-announcement-blade'/>
 
-### Sign up for a preview program of Adobe Acrobat Sign with embedded Power Automate.
+### Sign up for a preview program of Adobe Acrobat Sign Workflow Automate integrated with Microsoft Power Automate.
 
 Register for the opportunity to experience an even simpler way to automate your e-signature work.
 
