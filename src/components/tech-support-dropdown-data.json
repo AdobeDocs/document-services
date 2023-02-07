@@ -46,7 +46,7 @@
                 },
                 {
                     "qst": "Will the choice to provision data in one data center over the other be irreversible?",
-                    "ans": "Acrobat Services APIs are transactional, and the selection of region applies to every transaction. Customers can specify the region where their documents will be processed in every transaction. Customers can choose to process some documents in the US data center and others in the EU data center. Additional details can be found <a href='https://github.com/adobe/pdfservices-java-sdk-samples/blob/master/src/main/java/com/adobe/pdfservices/operation/samples/customconfigurations/ExportPDFWithSpecifiedRegion.java#L53'>here</a>"
+                    "ans": "Acrobat Services APIs are transactional, and the selection of region applies to every transaction. Customers can specify the region where their documents will be processed in every transaction. Customers can choose to process some documents in the US data center and others in the EU data center. Additional details can be found (https://github.com/adobe/pdfservices-java-sdk-samples/blob/master/src/main/java/com/adobe/pdfservices/operation/samples/customconfigurations/ExportPDFWithSpecifiedRegion.java#L53)here"
                 },
                 {
                     "qst": "Does Adobe collect any data about the PDF being viewed or processed? Where are the server side components hosted?",
