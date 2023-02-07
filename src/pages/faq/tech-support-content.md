@@ -68,13 +68,15 @@ However, support for sensitive personal data is coming soon.
 
 <AccordionItem header="Where are the data centers for Adobe Acrobat Services based?" slot_id="data-security--privacy-where-are-the-data-centers-for-adobe-document-services-based">
 
+Data centers for Acrobat Services are hosted in United States and Europe. Customers can access the region of their choosing. 
+
 User-generated content that is uploaded to Document Cloud is stored temporarily, if needed, in AWS US-East (Virinia) regional data centers. It is never stored permanently. The geographic location of identity data is on the AWS network; stored in multi-region, load-balanced data centers located in Virginia (US-East), Oregon (US-West), Ireland (EU-West), and Singapore (AP-Southeast). Identity data is replicated across all data centers. Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="https://www.adobe.com/privacy/eudatatransfers.html.">https://www.adobe.com/privacy/eudatatransfers.html.</a>.
 
 </AccordionItem>
 
-<AccordionItem header="Do you have plans to have data centers in EU?" slot_id="data-security--privacy-do-you-have-plans-to-have-data-centers-in-eu">
+<AccordionItem header="Will the choice to provision data in one data center over the other be irreversible?" slot_id="data-security--privacy-will-the-choice-to-provision-data-in-one-data-center-over-the-other-be-irreversible">
 
-Currently, we do not offer data residency in EU data centers. We do plan to offer EU data residency in the future.
+Acrobat Services APIs are transactional, and the selection of region applies to every transaction. Customers can specify the region where their documents will be processed in every transaction. Customers can choose to process some documents in the US data center and others in the EU data center. Additional details can be found <a href="https://github.com/adobe/pdfservices-java-sdk-samples/blob/master/src/main/java/com/adobe/pdfservices/operation/samples/customconfigurations/ExportPDFWithSpecifiedRegion.java#L53">here</a>.
 
 </AccordionItem>
 
