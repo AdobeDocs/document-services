@@ -112,9 +112,9 @@ const issue_sub_url_array = [
   },
   {
     issue_type: "Data Security & Privacy",
-    sub_issue_type: "Do you have plans to have data centers in EU?",
+    sub_issue_type: "Will the choice to provision data in one data center over the other be irreversible?",
     sub_issue_type_id:
-      "data-security--privacy-do-you-have-plans-to-have-data-centers-in-eu"
+      "data-security--privacy-will-the-choice-to-provision-data-in-one-data-center-over-the-other-be-irreversible"
   },
   {
     issue_type: "Data Security & Privacy",
