@@ -76,7 +76,7 @@ User-generated content that is uploaded to Document Cloud is stored temporarily,
 
 <AccordionItem header="Will the choice to provision data in one data center over the other be irreversible?" slot_id="data-security--privacy-will-the-choice-to-provision-data-in-one-data-center-over-the-other-be-irreversible">
 
-Acrobat Services APIs are transactional, and the selection of region applies to every transaction. Customers can specify the region where their documents will be processed in every transaction. Customers can choose to process some documents in the US data center and others in the EU data center. Additional details can be found <a href="https://github.com/adobe/pdfservices-java-sdk-samples/blob/master/src/main/java/com/adobe/pdfservices/operation/samples/customconfigurations/ExportPDFWithSpecifiedRegion.java#L53">here</a>.
+Acrobat Services APIs are transactional, and the selection of region applies to every transaction. Customers can specify the region where their documents will be processed in every transaction. Customers can choose to process some documents in the US data center and others in the EU data center. Additional details can be found <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/service-region-configuration-for-apis/">here</a>.
 
 </AccordionItem>
 
