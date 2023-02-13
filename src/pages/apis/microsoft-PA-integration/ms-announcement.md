@@ -1,4 +1,4 @@
-<AnnouncementBlock slots="heading, text, button" className='ms-announcement-blade'/>
+<AnnouncementBlock slots="heading, text, button" variantStyleFill='outline' variantsTypePrimary='secondary' className='ms-announcement-blade'/>
 
 ### Sign up for a preview program of Adobe Acrobat Sign Workflow Automate integrated with Microsoft Power Automate.
 

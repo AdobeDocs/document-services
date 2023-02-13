@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  —  Adobe PDF Extract API
 ---
 
-<SummaryBlock slots="heading, text" theme="lightest" btnVariant="cta" isBtnVariant  className="pdfextractapi" />
+<DCSummaryBlock slots="heading, text" theme="lightest" btnVariant="cta" isBtnVariant  className="pdfextractapi" />
 
 ## Adobe PDF Extract API
 

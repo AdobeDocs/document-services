@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { AnchorButton } from "@adobe/gatsby-theme-aio/src/components/AnchorButton";
 import { Checkbox } from "@adobe/gatsby-theme-aio/src/components/Checkbox";
 import { Picker } from "@adobe/gatsby-theme-aio/src/components/Picker";
-import { Image } from "../Image";
+import { Image } from "@adobe/gatsby-theme-aio/src/components/Image";
 import classNames from "classnames";
 import { MOBILE_SCREEN_WIDTH,TABLET_SCREEN_WIDTH,layoutColumns} from "@adobe/gatsby-theme-aio/src/utils";
 

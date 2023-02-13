@@ -32,13 +32,13 @@ apiHeroAssetImg doc-embed-hero
 
 <WhyPdfEmbed />
 
-<SummaryBlock slots="heading, buttons" background="rgb(31, 42, 73)" buttonPositionRight  className="embed-key-features"/>
+<DCSummaryBlock slots="heading, buttons"  background="rgb(31, 42, 73)" buttonPositionRight variantsTypePrimary='secondary' variantStyleFill='outline'  className="embed-key-features"/>
 
 ### Key features of our free PDF Embed API
 
 - [Get free credentials](/document-services/apis/interstitial/?api=pdf-embed-api)
 
-<TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0 embed-key-features embed-key-features-code-block' />
+<TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0 embed-key-features embed-key-features-code-block tabBlockAlign' />
 
 ### Embed Modes
 
@@ -98,7 +98,7 @@ apiHeroAssetImg doc-embed-hero
 
 <NewsLetterBlade className="news-letter"/>
 
-<SummaryBlock slots="heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
+<DCSummaryBlock slots="heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
 
 ### We're ready to help
 

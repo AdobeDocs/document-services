@@ -9,7 +9,7 @@ description: Secure, powerful, and easy to use APIs to integrate e-signatures in
 
 Acrobat Sign APIs are used across a variety of industries to meet a wide range of needs.
 
-<ResourceCard slots="link, image, heading, text, buttons" width="25%" theme='light' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard resourceCardCont sales-cta" />
+<ResourceCard slots="link, image, heading, text, buttons" width="25%" theme='light' isFooter  btnVariant='cta' contHeight='180px' className="useCaseCard resourceCardCont sales-cta" />
 
 [](https://business.adobe.com/customer-success-stories/lash-group-case-study.html)
 
@@ -21,7 +21,7 @@ Reduce time creating, managing, and tracking sales and procurement contracts. Us
 
 - [Read story](https://business.adobe.com/customer-success-stories/lash-group-case-study.html)
 
-<ResourceCard slots="link, image, heading, text, buttons" width="25%" theme='light' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard resourceCardCont rental-cta"/>
+<ResourceCard slots="link, image, heading, text, buttons" width="25%" theme='light' isFooter btnVariant='cta' contHeight='180px' className="useCaseCard resourceCardCont rental-cta"/>
 
 [](https://business.adobe.com/customer-success-stories/ryder-case-study.html)
 
@@ -33,7 +33,7 @@ Create intuitive and streamlined leasing agreements for your customers that can 
 
 - [Read story](https://business.adobe.com/customer-success-stories/ryder-case-study.html)
 
-<ResourceCard slots="link, image, heading, text, buttons" width="25%" theme='light' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard new-hire-cta" />
+<ResourceCard slots="link, image, heading, text, buttons" width="25%" theme='light' isFooter btnVariant='cta' contHeight='180px' className="useCaseCard new-hire-cta" />
 
 [](https://business.adobe.com/customer-success-stories/cxc-case-study.html)
 
@@ -45,7 +45,7 @@ Streamline the hiring process by routing offer letters directly to candidates an
 
 - [Read story](https://business.adobe.com/customer-success-stories/cxc-case-study.html)
 
-<ResourceCard slots="link, image, heading, text, buttons" width="25%" theme='light' isFooter btnVarient='cta' contHeight='180px' className="useCaseCard financial-cta" />
+<ResourceCard slots="link, image, heading, text, buttons" width="25%" theme='light' isFooter btnVariant='cta' contHeight='180px' className="useCaseCard financial-cta" />
 
 [](https://business.adobe.com/customer-success-stories/imm-case-study.html)
 

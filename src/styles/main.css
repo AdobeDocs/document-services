@@ -3089,7 +3089,7 @@ img[alt=adobe-support] {
     font-size: 14px;
     padding: 4px 18px 4px;
     margin: 0 .25em;
-  }
+}
 
 .video-content > div{
     padding-top: var(--spectrum-global-dimension-size-0) !important;
@@ -3109,4 +3109,8 @@ img[alt=adobe-support] {
     
     scroll-margin-block-end: 110pxx;
     /*Adds margin to the bottom of the viewport*/
+}
+  
+.tabBlockAlign > div > div > div > div > div > span {
+    line-height: initial !important;
 }

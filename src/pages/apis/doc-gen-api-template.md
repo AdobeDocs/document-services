@@ -10,7 +10,7 @@ import { products,clouds } from '../../components/product.js';
 
 <ProductCardGrid clouds={clouds} products={products} showName={true} showDescription={false} interaction={true} buttonName="Download" showBorder={false} imgHeight="1300" isCentered={true} theme="light" className="Download-sample-templates"/>
 
-<SummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help" />
+<DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help" />
 
 ![summary block bg img](../images/bg-hero.jpeg)
 

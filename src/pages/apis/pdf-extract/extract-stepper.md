@@ -18,7 +18,7 @@ Obtain free credentials
 
 - [Get started](/document-services/apis/interstitial/?api=pdf-extract-api)
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='primary' variantsTypeSecondary='primary' isPrimaryBtn  primaryOutline className='align-left link'/>
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantsTypeSecondary='secondary' variantStyleFill="outline" variantStyleOutline="outline"  className='align-left link'/>
 
 ## Step 2
 
@@ -29,7 +29,7 @@ Download ready to run samples for Node.js, .Net, Java and Python
 - [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples)
 - [Python](https://adobe.com/go/dcExtract_python_sdk)
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" primaryOutline className='align-left horizontal-align link extract-stepper-api-reference' headerElementType="h2" />
+<TextBlock slots="heading, text, buttons" width="33%" theme="light"  className='align-left horizontal-align link extract-stepper-api-reference' headerElementType="h2" />
 
 ## Step 3
 
