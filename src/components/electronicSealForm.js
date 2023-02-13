@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import InputField from "./formComponent/InputField";
 import SelectField from "./formComponent/SelectField";
 import CheckBoxField from "./formComponent/CheckBoxField";
+import RadioBoxField from "./formComponent/RadioField"
 import _isEmpty from "lodash/isEmpty";
 import _times from "lodash/times";
 
@@ -42,6 +43,35 @@ const volumeOPtions = [
     label: "more than 50k transactions/mo"
   }
 ];
+const multipleChoiceQuories = [
+  {
+    id:1,
+    answer : 'Adobe Acrobat Sign webpage'
+  },
+  {
+    id:2,
+    answer : "Adobe Developer Document Services webpage"
+  },
+  {
+    id:3,
+    answer : "Social Media link – LinkedIn and Twitter"
+  },
+  {
+    id:4,
+    answer : "Blog entry post by Ray Camden"
+  }
+]
+
+const multipleChoiceQuoriesTwo = [
+  {
+    id:1,
+    answer : 'Yes – I will need a Test Certificate for trying out the API during the Beta Program'
+  },
+  {
+    id:2,
+    answer : 'No – I already have a Certificate that I can use with the Seal API for the Beta Program'
+  }
+]
 
 const ElectronicSealAPI = ({}) => {
   const [errorMsg, seterrorMsg] = useState({});
@@ -92,6 +122,12 @@ const ElectronicSealAPI = ({}) => {
     }
     if (e.target.id === "checkbox") {
       setFormValue({ ...formValue, checkbox: e.target.checked });
+    }
+    if(e.target.id === "radioOne"){
+      setFormValue({ ...formValue, where_did_you_hear_about_us: e.target.value });
+    }
+    if(e.target.id === "radioTwo"){
+      setFormValue({ ...formValue, need_test_certificate: e.target.value });
     }
   };
 
@@ -194,6 +230,18 @@ const ElectronicSealAPI = ({}) => {
     } else {
       error.checkbox = "";
     }
+    if(_isEmpty(formValue?.where_did_you_hear_about_us)){
+      error.radioOne = "Required *";
+      setBtnDisable(false)
+    }else{
+      error.radioOne =""
+    }
+    if(_isEmpty(formValue?.need_test_certificate)){
+      error.radioTwo = "Required *";
+      setBtnDisable(false)
+    }else{
+      error.radioTwo =""
+    }
     seterrorMsg({ ...error });
 
     if (
@@ -211,6 +259,8 @@ const ElectronicSealAPI = ({}) => {
       !blacklist.test(formValue?.job_title) &&
       !_isEmpty(formValue?.region) &&
       !_isEmpty(formValue?.expected_monthly_volume) &&
+      !_isEmpty(formValue?.where_did_you_hear_about_us) &&
+      !_isEmpty(formValue?.need_test_certificate) &&
       !_isEmpty(formValue?.use_case) &&
       !checkBlackWords &&
       formValue?.checkbox == true
@@ -239,6 +289,8 @@ const ElectronicSealAPI = ({}) => {
           setFormValue({
             firstName: "",
             lastName: "",
+            where_did_you_hear_about_us:false,
+            need_test_certificate:false,
             use_case: "",
             checkbox: false
           });
@@ -364,6 +416,30 @@ const ElectronicSealAPI = ({}) => {
           onChange={e => onChnage(e)}
           errorMsg={errorMsg.expected_monthly_volume}
         />
+      </div>
+      <div className="field-container-accessibility">
+        <div className="radio-field-container">
+          <p className="label font-weight-bold text-white lable-content text-content">Where did you hear about us from?</p>
+          {multipleChoiceQuories.map((data,index)=>{
+            return <div className="radio-field">
+              <RadioBoxField 
+              type="radio" className={errorMsg.radioOne === "Required *" ? "required-checkbox" : ""} id='radioOne' name="queries_first" value={data.answer} onChange={e => onChnage(e)}
+              />
+               <label className="text-content checkbox-text-container"> {data.id == 4 ? <a className="link-content" href="https://blog.developer.adobe.com/introduction-to-adobe-pdf-electronic-seal-cf0c3901aa66" target={'_blank'}>{data.answer}</a>: data.answer}</label>
+            </div>
+          })}
+        </div>
+        <div className="radio-field-container">
+          <p className="label font-weight-bold text-white lable-content text-content">Do you need a Test Certificate for trying out Seal API?</p>
+          {multipleChoiceQuoriesTwo.map((data,index)=>{
+            return <div className="radio-field">
+              <RadioBoxField 
+              type="radio" className={errorMsg.radioTwo === "Required *" ? "required-checkbox" : ""} id="radioTwo" name="queries_second" value={data.answer} onChange={e => onChnage(e)}
+              />
+              <label className="text-content checkbox-text-container">{data.answer}</label>
+            </div>
+          })}
+        </div>
       </div>
       <InputField
         id="use_case"

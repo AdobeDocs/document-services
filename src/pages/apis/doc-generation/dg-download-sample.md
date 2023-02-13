@@ -6,7 +6,7 @@ description: Automatically generate custom branded sales proposals, legal contra
 
 import { sampleProducts,clouds } from '../../../components/product.js';
 
-<TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left pt-grid-title-padding-bottom link linking" id="sample-blade"/>
+<TitleBlock slots="heading, text" theme="lightest" className="titleBlock-align-left pt-grid-title-padding-bottom link linking" />
 
 ## Download sample templates and data to get started
 
@@ -16,4 +16,4 @@ Review our sample Word templates with JSON data and [try the demo.](https://docu
 
 - [Get Microsoft Word add-in](/document-services/docs/overview/document-generation-api/wordaddin/)
 
-<ProductCardGrid clouds={clouds} products={sampleProducts} showName={true} showDescription={false} interaction={false} buttonName="Download" showBorder={false} imgHeight="1300" imgWidth="1500" isCentered={true} theme="lightest" className="padding-bottom-zero productCardGrid" containerWidth="950px"/>
+<ProductCardGrid clouds={clouds} products={sampleProducts} showName={true} showDescription={false} interaction={false} buttonName="Download" showBorder={false} imgHeight="1300" imgWidth="1500" isCentered={true} theme="lightest" className="padding-bottom-zero productCardGrid" containerWidth="950px" id="sample-blade" />

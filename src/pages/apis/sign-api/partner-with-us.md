@@ -7,4 +7,4 @@ description: Secure, powerful, and easy to use APIs to integrate e-signatures in
 
 Let's work together to build incredible digital experiences.
 
-- [Partner with us](https://www.adobe.com/documentcloud/integrations/isv-partner-form.html)
+- [Partner with us](https://partners.adobe.com/exchangeprogram/documentcloud/prereg.html)

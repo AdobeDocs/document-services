@@ -39,8 +39,15 @@ apiHeroAssetImg sign-api-hero
 
 <PartnershipType/>
 
+<TextBlock slots="heading,text,video" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="video-content div"/>
 
-<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"   homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-one"/>
+### Hear from one our Sign Embed Partners.
+
+Avionté embeds Acrobat Sign APIs into their leading HR technology platform to create a frictionless experience where Talent can easily and seamlessly connect with their employers.
+
+[Sign Embed Partners](https://www.youtube.com/watch?v=3Y0mT5BO3bw)
+
+<TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-one"/>
 
 ![EMPTY_ALT](../images/5_Devices_Merge.png)
 

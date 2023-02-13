@@ -614,7 +614,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
 
     document
-      .querySelector(".ms-announcement-blade").setAttribute("daa-lh", "Sign up for a preview program of Adobe Acrobat Sign with embedded Power Automate.")
+      .querySelector(".ms-announcement-blade").setAttribute("daa-lh", "Sign up for a preview program of Adobe Acrobat Sign Workflow Automate integrated with Microsoft Power Automate.")
     document.querySelectorAll(".ms-announcement-blade a").forEach(link =>{
       link.setAttribute("daa-ll", link.textContent);
     })
