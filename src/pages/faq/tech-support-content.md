@@ -68,7 +68,7 @@ However, support for sensitive personal data is coming soon.
 
 <AccordionItem header="Where are the data centers for Adobe Acrobat Services based?" slot_id="data-security--privacy-where-are-the-data-centers-for-adobe-document-services-based">
 
-Data centers for Acrobat Services are hosted in United States and Europe. Customers can access the region of their choosing. 
+Data centers for Acrobat Services are hosted in United States and Europe. Customers can access the region of their choosing.
 
 User-generated content that is uploaded to Document Cloud is stored temporarily, if needed, in AWS US-East (Virinia) regional data centers. It is never stored permanently. The geographic location of identity data is on the AWS network; stored in multi-region, load-balanced data centers located in Virginia (US-East), Oregon (US-West), Ireland (EU-West), and Singapore (AP-Southeast). Identity data is replicated across all data centers. Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="https://www.adobe.com/privacy/eudatatransfers.html.">https://www.adobe.com/privacy/eudatatransfers.html.</a>.
 
