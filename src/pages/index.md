@@ -22,7 +22,7 @@ import AnimationVideo from "./videos/Adobe_DCP_Marquee_Animation.json";
 
 From the company who created the PDF standard.
 
-- [Get started](/document-services/apis/interstitial/)
+- [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 homeheroAssertImage
 
@@ -107,7 +107,7 @@ samples for Angular and React.
 
 Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
 
-- [Start free trial](/apis/interstitial/)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 <TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
 
@@ -163,7 +163,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 Start free trial with 1,000 PDF transactions for up to 6 months.
 
-- [Start free trial](/apis/interstitial/)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Contact us](src/pages/pricing/contact.md)
 
 <APIPixelRetargeting/>
