@@ -3114,3 +3114,11 @@ img[alt=adobe-support] {
 .tabBlockAlign > div > div > div > div > div > span {
     line-height: initial !important;
 }
+
+.faq-content .page-content .spectrum-Heading a{
+    display: unset
+}
+
+.page-content .spectrum-Heading a{
+    display: unset
+}
