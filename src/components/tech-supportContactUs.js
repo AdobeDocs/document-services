@@ -112,7 +112,7 @@ const issue_sub_url_array = [
   },
   {
     issue_type: "Data Security & Privacy",
-    sub_issue_type: "Will the choice to provision data in one data center over the other be irreversible?",
+    sub_issue_type: "Will the choice to provision data in one data center over the other be irreversible?",
     sub_issue_type_id:
       "data-security--privacy-will-the-choice-to-provision-data-in-one-data-center-over-the-other-be-irreversible"
   },
@@ -140,7 +140,7 @@ const issue_sub_url_array = [
   {
     issue_type: "Data Security & Privacy",
     sub_issue_type:
-      "What regulatory compliances are Adobe Acrobat Services certified for?",
+      "What regulatory compliances is Adobe Acrobat Services certified for?",
     sub_issue_type_id:
       "data-security--privacy-what-regulatory-compliances-are-adobe-document-services-certified-for"
   },
@@ -232,7 +232,7 @@ const issue_sub_url_array = [
   {
     issue_type: "Features - PDF Services API",
     sub_issue_type:
-      "How is PDF Services API different from PDF Library? Or from Acrobat DC SDK?",
+      "How is PDF Services API different from PDF Library? Or from Acrobat DC SDK?",
     sub_issue_type_id:
       "features---pdf-services-api-how-is-pdf-services-api-different-from-pdf-library"
   },
@@ -257,7 +257,7 @@ const issue_sub_url_array = [
   {
     issue_type: "Features - PDF Services API",
     sub_issue_type:
-      "Tracked changes and comment support. What happens to any tracked changes and comments in the DOC or DOCX files that are converted to PDF? Are they rendered in the finalized document, or are tracked changes first accepted/rejected, and are comments removed from the output?",
+      "Tracked changes and comment support. What happens to any tracked changes and comments in the DOC or DOCX files that are converted to PDF? Are they rendered in the finalized document, or are tracked changes first accepted/rejected, and are comments removed from the output?",
     sub_issue_type_id:
       "features---pdf-services-api-tracked-changes-and-comment-support-what-happens-to-any-tracked-changes-and-comments-in-the-doc-or-docx-files"
   },

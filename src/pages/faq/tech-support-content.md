@@ -38,7 +38,7 @@ For instructions on how to use your Adobe Acrobat Services credentials that were
 
 <AccordionItem header="If I already have credentials and need new ones, how do I get them?" slot_id ="account-management-if-i-already-have-credentials-and-need-new-ones-how-do-i-get-them">
 
-Both paid and trial customers can create new credentials, as well as edit existing credentials, by going to the Admin Console: <a href="https://developer.adobe.com/console">https://developer.adobe.com/console</a>.
+Both paid and trial customers can create new credentials, as well as edit existing credentials, by going to the Admin Console: <a href="https://developer.adobe.com/console">https://developer.adobe.com/console</a>.
 
 </AccordionItem>
 
@@ -60,7 +60,7 @@ In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will 
 
 <AccordionItem header="Is Adobe Acrobat Services (PDF Services API and PDF Embed API) HIPAA compliant?" slot_id="data-security--privacy-is-adobe-document-services--hipaa-compliant">
 
-Currently, we do not support use of Document Cloud Services SDK to collect, process, or store sensitive personal data such as protected health information under HIPAA, children’s personal information under COPPA, and other similar information as described in our General Terms (<a href="https://www.adobe.com/legal/terms/enterprise-licensing/overview.html">https://www.adobe.com/legal/terms/enterprise-licensing/overview.html</a>) and and Developer Terms of Use (<a href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf">https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf</a>).
+No, it is not. Customer may process certain sensitive personal information pursuant to the applicable terms enterprise General Terms (<a href="https://www.adobe.com/legal/terms/enterprise-licensing/overview.html">https://www.adobe.com/legal/terms/enterprise-licensing/overview.html</a>) or the Developer Terms of Use (<a href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf">https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf</a>).
 
 However, support for sensitive personal data is coming soon.
 
@@ -70,13 +70,13 @@ However, support for sensitive personal data is coming soon.
 
 Data centers for Acrobat Services are hosted in United States and Europe. Customers can access the region of their choosing.
 
-User-generated content that is uploaded to Document Cloud is stored temporarily, if needed, in AWS US-East (Virinia) regional data centers. It is never stored permanently. The geographic location of identity data is on the AWS network; stored in multi-region, load-balanced data centers located in Virginia (US-East), Oregon (US-West), Ireland (EU-West), and Singapore (AP-Southeast). Identity data is replicated across all data centers. Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="https://www.adobe.com/privacy/eudatatransfers.html.">https://www.adobe.com/privacy/eudatatransfers.html.</a>.
+User-generated content that is uploaded to Document Cloud is stored temporarily, if needed, in AWS US-East (Virinia) regional data centers. It is never stored permanently. The geographic location of identity data is on the AWS network; stored in multi-region, load-balanced data centers located in Virginia (US-East), Oregon (US-West), Ireland (EU-West), and Singapore (AP-Southeast). Identity data is replicated across all data centers. Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="https://www.adobe.com/privacy/eudatatransfers.html.">https://www.adobe.com/privacy/eudatatransfers.html.</a>.
 
 </AccordionItem>
 
-<AccordionItem header="Will the choice to provision data in one data center over the other be irreversible?" slot_id="data-security--privacy-will-the-choice-to-provision-data-in-one-data-center-over-the-other-be-irreversible">
+<AccordionItem header="Will the choice to provision data in one data center over the other be irreversible?" slot_id="data-security--privacy-will-the-choice-to-provision-data-in-one-data-center-over-the-other-be-irreversible">
 
-Acrobat Services APIs are transactional, and the selection of region applies to every transaction. Customers can specify the region where their documents will be processed in every transaction. Customers can choose to process some documents in the US data center and others in the EU data center. Additional details can be found <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/service-region-configuration-for-apis/">here</a>.
+Acrobat Services APIs are transactional, and the selection of region applies to every transaction. Customers can specify the region where their documents will be processed in every transaction. Customers can choose to process some documents in the US data center and others in the EU data center. Additional details can be found <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/service-region-configuration-for-apis/">here</a>.
 
 </AccordionItem>
 
@@ -100,14 +100,9 @@ Documents are only transferred to the cloud for processing. Adobe Acrobat Servic
 
 </AccordionItem>
 
-<AccordionItem header="What regulatory compliances are Adobe Acrobat Services certified for?" slot_id="data-security--privacy-what-regulatory-compliances-are-adobe-document-services-certified-for">
+<AccordionItem header="What regulatory compliances is Adobe Acrobat Services certified for?" slot_id="data-security--privacy-what-regulatory-compliances-are-adobe-document-services-certified-for">
 
-The current regulations and compliance for Adobe Document  Services and PDF Services API include:
-
-- SOC 2. This is a set of security principles that define leading practice controls relevant to security, confidentiality, and privacy. Adobe Document Cloud services are SOC 2 Type 2 (security and availability) compliant.
-- ISO 27001. This is a set of globally adopted standards that outline stringent security requirements and provide a systematic approach to managing the confidentiality, integrity, and availability of customer information. Adobe Document Cloud services are compliant with ISO 27001:2013.
-
-Full details are available at: <a href="https://www.adobe.com/trust/compliance/compliance-list.html">https://www.adobe.com/trust/compliance/compliance-list.html</a>.
+The current compliance certifications and attestations for PDF Services API are available at <a href="https://www.adobe.com/trust/compliance/compliance-list.html">https://www.adobe.com/trust/compliance/compliance-list.html</a>.
 
 </AccordionItem>
 
@@ -137,13 +132,13 @@ No. While the API is entirely client-side JavaScript, the JavaScript library is 
 
 <AccordionItem header="Is there any cost to using the PDF Embed API?" slot_id="features---pdf-embed-api-is-there-any-cost-to-using-the-pdf-embed-api">
 
-No, the current services available in the PDF Embed API are free to use. This includes annotation tools, call back APIs, and events for Analytics.
+No, the current services available in the PDF Embed API are free to use. This includes annotation tools, call back APIs, and events for Analytics.
 
 </AccordionItem>
 
 <AccordionItem header="How can I set up Adobe Analytics with PDF Embed API?" slot_id="features---pdf-embed-api-how-can-i-set-up-adobe-analytics-with-pdf-embed-api">
 
-Yes, please check our documentation which explains how to set up integration with Adobe Analytics: <a href="https://experienceleague.adobe.com/docs/analytics.html">https://experienceleague.adobe.com/docs/analytics.html</a>.
+Yes, please check our documentation which explains how to set up integration with Adobe Analytics: <a href="https://experienceleague.adobe.com/docs/analytics.html">https://experienceleague.adobe.com/docs/analytics.html</a>.
 
 </AccordionItem>
 
@@ -208,9 +203,9 @@ Yes, it is possible to create a PDF from a HTML page that has multiple languages
 
 </AccordionItem>
 
-<AccordionItem header="How is PDF Services API different from PDF Library? Or from Acrobat DC SDK?" slot_id="features---pdf-services-api-how-is-pdf-services-api-different-from-pdf-library">
+<AccordionItem header="How is PDF Services API different from PDF Library? Or from Acrobat DC SDK?" slot_id="features---pdf-services-api-how-is-pdf-services-api-different-from-pdf-library">
 
-Adobe PDF Services API offers cloud-based APIs, whereas Acrobat DC SDK offers a set of desktop plug-ins that work in conjunction with desktop Acrobat. Each of your users will need a copy of Acrobat installed on their computers. The PDF Library SDK is a subset of the Acrobat DC SDK that can be used without the need for Acrobat.
+Adobe PDF Services API offers cloud-based APIs, whereas Acrobat DC SDK offers a set of desktop plug-ins that work in conjunction with desktop Acrobat. Each of your users will need a copy of Acrobat installed on their computers. The PDF Library SDK is a subset of the Acrobat DC SDK that can be used without the need for Acrobat.
 
 </AccordionItem>
 
@@ -222,7 +217,7 @@ The PDF Services API is REST based so any language that supports HTTP is support
 
 <AccordionItem header="Can I run these Acrobat Services on-premise?" slot_id="features---pdf-services-api-can-i-run-these-document-services-on-premise">
 
-Given that our service is cloud-based, processing will always happen in Adobe's cloud infrastructure. If an on-premise solution is required, please fill our our contact us form to discuss your options: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
+Given that our service is cloud-based, processing will always happen in Adobe's cloud infrastructure. If an on-premise solution is required, please fill our our contact us form to discuss your options: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>
 
 </AccordionItem>
 
@@ -234,7 +229,7 @@ For more details, see Create PDF documentation: <a href="https://developer.adobe
 
 </AccordionItem>
 
-<AccordionItem header="Tracked changes and comment support. What happens to any tracked changes and comments in the DOC or DOCX files that are converted to PDF? Are they rendered in the finalized document, or are tracked changes first accepted/rejected, and are comments removed from the output?"
+<AccordionItem header="Tracked changes and comment support. What happens to any tracked changes and comments in the DOC or DOCX files that are converted to PDF? Are they rendered in the finalized document, or are tracked changes first accepted/rejected, and are comments removed from the output?"
 slot_id="features---pdf-services-api-tracked-changes-and-comment-support-what-happens-to-any-tracked-changes-and-comments-in-the-doc-or-docx-files">
 
 The PDF will render to what is set in the Word file. For example, if the Word document is set up to show red lines, the converted PDF will show those red lines. Our APIs do not support executing reject/accept of changes.
