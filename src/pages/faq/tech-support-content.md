@@ -60,10 +60,8 @@ In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will 
 
 <AccordionItem header="Is Adobe Acrobat Services (PDF Services API and PDF Embed API) HIPAA compliant?" slot_id="data-security--privacy-is-adobe-document-services--hipaa-compliant">
 
-No, it is not. Customer may process certain sensitive personal information pursuant to the applicable terms enterprise General Terms (<a href="https://www.adobe.com/legal/terms/enterprise-licensing/overview.html">https://www.adobe.com/legal/terms/enterprise-licensing/overview.html</a>) or the Developer Terms of Use (<a href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf">https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf</a>).
-
-However, support for sensitive personal data is coming soon.
-
+No, it is not. Customer may process certain sensitive personal information pursuant to the applicable terms enterprise <a href="https://www.adobe.com/legal/terms/enterprise-licensing/overview.html">General Terms</a> or the Developer <a href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf">Terms of Use</a>.
+  
 </AccordionItem>
 
 <AccordionItem header="Where are the data centers for Adobe Acrobat Services based?" slot_id="data-security--privacy-where-are-the-data-centers-for-adobe-document-services-based">
