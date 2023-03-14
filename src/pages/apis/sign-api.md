@@ -57,7 +57,6 @@ Merge and prefill data directly from you application and send documents for sign
 
 - [Access API samples](https://opensource.adobe.com/acrobat-sign/developer_guide/samples.html)
 
-
 <TextBlock slots="heading,text,buttons,image" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"   homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-two"/>
 
 ### Store documents in your own repository.
@@ -67,7 +66,6 @@ Adobe, with our Document Generation API and other PDF Services APIs, makes it ea
 - [View e-signature workflows](https://opensource.adobe.com/acrobat-sign/developer_guide/apiusage.html#send-for-signing-create-an-agreement)
 
 ![EMPTY_ALT](../images/5_Devices_Store.png)
-
 
 <TextBlock slots="image, heading,text,buttons" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary' variantStyleFill = "outline"   homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API zigzag-cta-three"/>
 
