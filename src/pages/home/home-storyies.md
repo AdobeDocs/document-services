@@ -6,13 +6,13 @@ See how our customers are building great experiences and succeeding with Adobe.
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest"  className='useCaseCard card-heading-size' isCustomStories/>
 
-[Waymark-Story.pdf](../resources/Waymark-Story.pdf)
+[mtec-story.pdf](../resources/mtec-story.pdf)
 
-![EMPTY_ALT](../images/Waymark.jpg)
+![EMPTY_ALT](../images/mtec.png)
 
-### Waymark
+### MTEC
 
-Waymark Tech enables rapid impact assessments and compliance workflows with Adobe PDF Extract API.
+MTEC uses Adobe PDF Extract API to improve speed and accuracy of automatic text extraction from financial data PDF files.
 
 <ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
