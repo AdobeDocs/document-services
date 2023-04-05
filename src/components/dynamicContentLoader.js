@@ -26,6 +26,8 @@ import Epson from "../pages/images/epson.png";
 import EpsonStoryPDF from "../pages/resources/Epson-story-PDF.pdf";
 import MTEC from "../pages/images/mtec.png"
 import MtecStoryPDF from "../pages/resources/mtec-story.pdf"
+import AEStory from "../pages/images/AE_story.png"
+import AdobeExpCloudStoryPDF from "../pages/resources/AdobeExpCloudStory.pdf"
 
 //Filter the image url path for loading the image under image tag source.
 const getImageURl = (url) => {
@@ -119,6 +121,12 @@ const StoriesContent = [
     URL: EpsonStoryPDF,
     Thumbnail: Epson,
     desc: "Epson supports distributed workforces with fast and highly secure printing powered by Adobe."
+  },
+  {
+    Title: "AE Customer Story",
+    URL: AdobeExpCloudStoryPDF,
+    Thumbnail: AEStory,
+    desc: "Agreement Experience is projected to save deal desk and sales attorneys 36,000 hours annually on contracts."
   }
 ];
 

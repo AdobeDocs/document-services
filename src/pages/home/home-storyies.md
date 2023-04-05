@@ -16,13 +16,13 @@ MTEC uses Adobe PDF Extract API to improve speed and accuracy of automatic text 
 
 <ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
-[AdobeInDesign.pdf](../resources/AdobeInDesign.pdf)
+[AdobeExpCloudStory.pdf](../resources/AdobeExpCloudStory.pdf)
 
-![EMPTY_ALT](../images/AdobeInDesign.png)
+![EMPTY_ALT](../images/AE_story.png)
 
-### Adobe InDesign
+### AE Customer Story
 
-Adobe InDesign brings its new share for review features to life with Adobe Acrobat Services APIs.
+Agreement Experience is projected to save deal desk and sales attorneys 36,000 hours annually on contracts.
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size hme-custom-header' isCustomStories/>
 
