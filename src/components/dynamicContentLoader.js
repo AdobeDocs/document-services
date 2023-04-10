@@ -22,6 +22,12 @@ import CambridgeAssessmentPDF from "../pages/resources/Cambridge-Assessment.pdf"
 import EvisortPDF from "../pages/resources/Evisort.pdf";
 import WaymarkPDF from "../pages/resources/Waymark-Story.pdf";
 import AISingaporePDF from "../pages/resources/AI-Singapore-Story.pdf";
+import Epson from "../pages/images/epson.png";
+import EpsonStoryPDF from "../pages/resources/Epson-story-PDF.pdf";
+import MTEC from "../pages/images/mtec.png"
+import MtecStoryPDF from "../pages/resources/mtec-story.pdf"
+import AEStory from "../pages/images/AE_story.png"
+import AdobeExpCloudStoryPDF from "../pages/resources/AdobeExpCloudStory.pdf"
 
 //Filter the image url path for loading the image under image tag source.
 const getImageURl = (url) => {
@@ -69,7 +75,7 @@ const featuredContent = [
 //Construct the custom stories blade content.
 const StoriesContent = [
   {
-    Title: "K2 Nintex",
+    Title: "K2 Nintexfd",
     URL: K2NintexPDF,
     Thumbnail: K2Nintex,
     desc:"Nintex transforms K2 Cloud workflows with Adobe Acrobat Services APIs."
@@ -104,6 +110,24 @@ const StoriesContent = [
     Thumbnail: AISingapore,
     desc:"AI Singapore accelerates deep learning models with Adobe PDF Extract API."
   },
+  {
+    Title: "MTEC",
+    URL: MtecStoryPDF,
+    Thumbnail: MTEC,
+    desc: "MTEC uses Adobe PDF Extract API to improve speed and accuracy of automatic text extraction from financial data PDF files."
+  },
+  {
+    Title: "Epson",
+    URL: EpsonStoryPDF,
+    Thumbnail: Epson,
+    desc: "Epson supports distributed workforces with fast and highly secure printing powered by Adobe."
+  },
+  {
+    Title: "AE Customer Story",
+    URL: AdobeExpCloudStoryPDF,
+    Thumbnail: AEStory,
+    desc: "Agreement Experience is projected to save deal desk and sales attorneys 36,000 hours annually on contracts."
+  }
 ];
 
 const DynamicContentLoader = ({
@@ -163,7 +187,7 @@ const DynamicContentLoader = ({
                       "https://www.youtube.com/watch?v=GCpSy78IDoE&list=PLcVEYUqU7VRc1ipQLtY1kcmpf9wiCgXZ5"
                     }
                     target="_blank"
-                    
+
                     className="button-link"
                   >
                     Watch the video
@@ -224,7 +248,7 @@ const DynamicContentLoader = ({
                         </div>
                       );
                     })}
-                  </div>              
+                  </div>
                 </div>
             </section>
           </div>
@@ -343,7 +367,7 @@ const DynamicContentLoader = ({
                 <h3 className="spectrum-Heading spectrum-Heading--sizeL">
                 Customer stories
                 </h3>
-              </div>              
+              </div>
               <div class="headliner spectrum-Body--sizeL">
                 See how our customers are building great experiences and succeeding with Adobe
               </div>
@@ -362,7 +386,7 @@ const DynamicContentLoader = ({
                       <a href={data.URL}>
                         <div className="profile">{data.desc}</div>
                       </a>
-                    </div>                    
+                    </div>
                   );
                 })}
               </div>

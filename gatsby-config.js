@@ -63,7 +63,7 @@ module.exports = {
           }
         ]
       },
-      { 
+      {
         title: 'Use Cases',
         path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts.md'
       },
@@ -71,7 +71,7 @@ module.exports = {
         title: 'Pricing',
         path: 'pricing/main'
       },
-	  
+
       {
         title: 'Resources',
         menu: [{
@@ -82,7 +82,7 @@ module.exports = {
           path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'
         }, {
           title: 'Licensing',
-          path: 'document-services/docs/overview/pdf-services-api/dcserviceslicensing.md'
+          path: 'https://developer.adobe.com/document-services/docs/overview/limits/'
         },{
           title: 'Sales FAQ',
           path: 'faq/sales/'
@@ -136,7 +136,7 @@ module.exports = {
       {
         title: 'Account Management',
         path: '/faq/tech-support/#account-management',
-      },     
+      },
       {
         title: 'Data Security & Privacy',
         path: '/faq/tech-support/#data-security--privacy',
@@ -184,7 +184,7 @@ module.exports = {
       {
         title: 'Account Management',
         path: '/faq/tech-support/#account-management',
-      },     
+      },
       {
         title: 'Data Security & Privacy',
         path: '/faq/tech-support/#data-security--privacy',
