@@ -22,5 +22,5 @@ Enjoy complimentary access to our JavaScript API to easily embed PDFs with a few
 
 <TextBlock className="pricing-desc button-swap d-flex" slots="buttons" isCentered theme="light" width="25%" primaryOutline />
 
-- [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
-- [Try the demo](https://documentservices.adobe.com/view-sdk-demo/index.html)
+- [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
+- [Try the demo](https://acrobatservices.adobe.com/view-sdk-demo/index.html)

@@ -17,7 +17,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Html-To-PDF
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/htmltopdf' \
@@ -34,8 +34,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/htmltopd
     }
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-htmlToPDF
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-htmlToPDF
 ```
 
 #### Node js

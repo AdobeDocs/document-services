@@ -20,7 +20,7 @@ export const onRenderBody = ({setHeadComponents}) => {
            _linkedin_partner_id = '3803834';
 
            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-   
+
            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
          `}
 
@@ -28,7 +28,7 @@ export const onRenderBody = ({setHeadComponents}) => {
         <script type="text/javascript">{`
             (function(l) {
 
-              if (!l) { 
+              if (!l) {
                 window.lintrk = function(a,b) {
                   window.lintrk.q.push([a,b])
                 };
@@ -50,7 +50,7 @@ export const onRenderBody = ({setHeadComponents}) => {
       </script>,
 
     <script src={withPrefix('/gtag.js')}></script>,
-  
+
     process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
       <script type="text/javascript">{`
         window.marketingtech = {
@@ -67,7 +67,7 @@ export const onRenderBody = ({setHeadComponents}) => {
         };
       `}</script>
     ),
-    <script src="https://documentservices.adobe.com/view-sdk/main.js"></script>,
+    <script src="https://acrobatservices.adobe.com/view-sdk/main.js"></script>,
     process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
       <script async src="https://www.adobe.com/marketingtech/main.min.js"></script>
     )

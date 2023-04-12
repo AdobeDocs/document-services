@@ -17,7 +17,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Ocr
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/ocr' \
@@ -28,8 +28,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/ocr' \
     "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718"
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-ocr
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-ocr
 ```
 
 #### Node js
@@ -132,35 +132,35 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/ocr' \
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.ocrpdf.OcrPDF
- 
+
  public class OcrPDF {
- 
+
   // Initialize the logger.
   private static final Logger LOGGER = LoggerFactory.getLogger(OcrPDF.class);
- 
+
   public static void main(String[] args) {
- 
+
    try {
- 
+
     // Initial setup, create credentials instance.
     Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
       .fromFile("pdfservices-api-credentials.json")
       .build();
- 
+
     //Create an ExecutionContext using credentials and create a new operation instance.
     ExecutionContext executionContext = ExecutionContext.create(credentials);
     OCROperation ocrOperation = OCROperation.createNew();
- 
+
     // Set operation input from a source file.
     FileRef source = FileRef.createFromLocalFile("src/main/resources/ocrInput.pdf");
     ocrOperation.setInput(source);
- 
+
     // Execute the operation
     FileRef result = ocrOperation.execute(executionContext);
- 
+
     // Save the result at the specified location
     result.saveAs("output/ocrOutput.pdf");
- 
+
    } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
     LOGGER.error("Exception encountered while executing operation", ex);
    }

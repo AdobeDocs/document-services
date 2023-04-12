@@ -53,14 +53,14 @@ const Interstitial = () => {
     const getBaseURL = () => {
         const urlParams = window.location.search
         // stage
-        let baseurl = `https://stage.documentservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
+        let baseurl = `https://stage.acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
 
         // production
         if (
             window.location.host.indexOf("developer.adobe.com") >= 0 ||
             window.location.host.indexOf("adobe.io") >= 0
         ) {
-            baseurl = `https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
+            baseurl = `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html${urlParams ? urlParams : ''}`;
         }
 
         return baseurl;

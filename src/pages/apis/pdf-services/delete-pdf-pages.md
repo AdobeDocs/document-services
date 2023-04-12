@@ -17,7 +17,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Page-Manipulation
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemanipulation' \
@@ -40,8 +40,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
     ]
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-pageManipulation
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-pageManipulation
 ```
 
 #### Node js
@@ -123,24 +123,24 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
                   Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                                   .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                                   .Build();
-   
+
                   // Create an ExecutionContext using credentials.
                   ExecutionContext executionContext = ExecutionContext.Create(credentials);
-   
+
                   // Create a new operation instance
                   DeletePagesOperation deletePagesOperation = DeletePagesOperation.CreateNew();
-   
+
                   // Set operation input from a source file.
                   FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"deletePagesInput.pdf");
                   deletePagesOperation.SetInput(sourceFileRef);
-   
+
                   // Delete pages of the document (as specified by PageRanges).
                   PageRanges pageRangeForDeletion = GetPageRangeForDeletion();
                   deletePagesOperation.SetPageRanges(pageRangeForDeletion);
-   
+
                   // Execute the operation.
                   FileRef result = deletePagesOperation.Execute(executionContext);
-   
+
                   // Save the result to the specified location.
                   result.SaveAs(Directory.GetCurrentDirectory() + "/output/deletePagesOutput.pdf");
               }
@@ -150,19 +150,19 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
               }
               // Catch more errors here . . .
           }
-   
+
           private static PageRanges GetPageRangeForDeletion()
           {
               // Specify pages for deletion.
               PageRanges pageRangeForDeletion = new PageRanges();
               // Add page 1.
               pageRangeForDeletion.AddSinglePage(1);
-   
+
               // Add pages 3 to 4.
               pageRangeForDeletion.AddRange(3, 4);
               return pageRangeForDeletion;
           }
-   
+
           static void ConfigureLogging()
           {
               ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
@@ -178,8 +178,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.deletepages.DeletePDFPages
- 
-     
+
+
    public class DeletePDFPages {
 
    // Initialize the logger.

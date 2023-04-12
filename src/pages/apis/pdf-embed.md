@@ -26,7 +26,7 @@ Free JavaScript API to embed high-fidelity PDFs, enable collaboration, and see a
 
 apiHeroAssetImg doc-embed-hero
 
-- [Try the demo](https://documentservices.adobe.com/view-sdk-demo/index.html)
+- [Try the demo](https://acrobatservices.adobe.com/view-sdk-demo/index.html)
 
 <WrapperComponent slots="content" theme="light" className="WhyPdfEmbed"/>
 
@@ -36,7 +36,7 @@ apiHeroAssetImg doc-embed-hero
 
 ### Key features of our free PDF Embed API
 
-- [Get free credentials](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
+- [Get free credentials](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
 
 <TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0 embed-key-features embed-key-features-code-block tabBlockAlign' />
 

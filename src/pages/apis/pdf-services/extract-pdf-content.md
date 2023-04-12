@@ -17,7 +17,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Extract-PDF
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/extractpdf' \
@@ -29,15 +29,15 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/extractp
     "renditionsToExtract": [
         "tables",
         "figures"
-    ], 
+    ],
     "elementsToExtract": [
-        "text", 
+        "text",
         "tables"
     ]
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-extractPDF
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-extractPDF
 ```
 
 #### Node js
@@ -115,7 +115,7 @@ namespace ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF
                 Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                     .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                     .Build();
-    
+
                 // Create an ExecutionContext using credentials and create a new operation instance.
                 ExecutionContext executionContext = ExecutionContext.Create(credentials);
                 ExtractPDFOperation extractPdfOperation = ExtractPDFOperation.CreateNew();
@@ -123,15 +123,15 @@ namespace ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF
                 // Set operation input from a source file.
                 FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"extractPDFInput.pdf");
                 extractPdfOperation.SetInputFile(sourceFileRef);
-    
+
                 // Build ExtractPDF options and set them into the operation.
                 ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPDFOptionsBuilder()
                     .AddElementsToExtract(new List<ExtractElementType>(new []{ ExtractElementType.TEXT, ExtractElementType.TABLES}))
                     .AddElementsToExtractRenditions(new List<ExtractRenditionsElementType> (new []{ExtractRenditionsElementType.FIGURES, ExtractRenditionsElementType.TABLES}))
                     .Build();
-    
+
                 extractPdfOperation.SetOptions(extractPdfOptions);
-                
+
                 // Execute the operation.
                 FileRef result = extractPdfOperation.Execute(executionContext);
 
@@ -175,7 +175,7 @@ namespace ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.extractpdf.ExtractTextTableInfoWithRenditionsFromPDF
- 
+
 public class ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF {
 
       private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ExtractTextTableInfoWithFiguresTablesRenditionsFromPDF.class);
