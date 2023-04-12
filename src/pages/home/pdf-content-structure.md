@@ -12,14 +12,11 @@ Extract content from scanned and native PDFs to use for database insertion, cont
 
 ```bash
 // Please refer our Rest API docs for more information
-<<<<<<< HEAD
 // https://developer.adobe.com/document-services/docs/apis/#tag/Extract-PDF
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/extractpdf' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
 --header 'Content-Type: application/json' \
-=======
->>>>>>> 7b7c9969e... Enterprise Subdomain URL Change
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
     "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
@@ -34,11 +31,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/extractp
 }'
 
 // Legacy API can be found here
-<<<<<<< HEAD
 // https://acrobatservices.adobe.com/document-services/index.html#post-extractPDF
-=======
-// https://documentservices.adobe.com/document-services/index.html#post-extractPDF
->>>>>>> 7b7c9969e... Enterprise Subdomain URL Change
 ```
 
 #### Node js

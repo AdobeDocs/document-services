@@ -29,9 +29,14 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
     "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
     "compressionLevel": "MEDIUM"
 }'
+
 // Legacy API can be found here
 // https://acrobatservices.adobe.com/document-services/index.html#post-compressPDF
 ```
+
+#### Node js
+
+```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
 // node src/compresspdf/compress-pdf-with-options.js
