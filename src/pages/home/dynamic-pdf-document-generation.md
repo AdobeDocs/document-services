@@ -11,7 +11,7 @@ Merge your JSON data with custom Word templates to generate high-fidelity PDF an
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Document-Generation
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/documentgeneration' \
@@ -47,8 +47,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
     }
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-documentGeneration
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-documentGeneration
 ```
 
 #### Node js
@@ -126,25 +126,25 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
                    Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                             .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                             .Build();
-  
+
                    // Create an ExecutionContext using credentials.
                    ExecutionContext executionContext = ExecutionContext.Create(credentials);
-  
+
                    // Setup input data for the document merge process.
                    JObject jsonDataForMerge = JObject.Parse("{\"customerName\": \"Kane Miller\",\"customerVisits\": 100}");
-  
+
                    // Create a new DocumentMerge Options instance.
                    DocumentMergeOptions documentMergeOptions = new DocumentMergeOptions(jsonDataForMerge, OutputFormat.PDF);
-  
+
                    // Create a new DocumentMerge Operation instance with the DocumentMerge Options instance.
                    DocumentMergeOperation documentMergeOperation = DocumentMergeOperation.CreateNew(documentMergeOptions);
-  
+
                    // Set the operation input document template from a source file.
                    documentMergeOperation.SetInput(FileRef.CreateFromLocalFile(@"documentMergeTemplate.docx"));
-  
+
                    // Execute the operation.
                    FileRef result = documentMergeOperation.Execute(executionContext);
-  
+
                    // Save the result to the specified location.
                    result.SaveAs(Directory.GetCurrentDirectory() + "/output/documentMergeOutput.pdf");
                }
@@ -184,9 +184,9 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.documentmerge.MergeDocumentToDOCX
- 
+
    package com.adobe.pdfservices.operation.samples.documentmerge;
- 
+
    public class MergeDocumentToPDF {
       // Initialize the logger.
       private static final Logger LOGGER = LoggerFactory.getLogger(MergeDocumentToPDF.class);

@@ -19,7 +19,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Export-PDF
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/exportpdf' \
@@ -31,8 +31,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/exportpd
     "targetFormat": "docx"
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-exportPDF
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-exportPDF
 ```
 
 #### Node js
@@ -99,18 +99,18 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
           Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                   .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                   .Build();
- 
+
           //Create an ExecutionContext using credentials and create a new operation instance.
           ExecutionContext executionContext = ExecutionContext.Create(credentials);
           ExportPDFOperation exportPdfOperation = ExportPDFOperation.CreateNew(ExportPDFTargetFormat.DOCX);
- 
+
           // Set operation input from a local PDF file
           FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"exportPdfInput.pdf");
           exportPdfOperation.SetInput(sourceFileRef);
- 
+
           // Execute the operation.
           FileRef result = exportPdfOperation.Execute(executionContext);
- 
+
           // Save the result to the specified location.
           result.SaveAs(Directory.GetCurrentDirectory() + "/output/exportPdfOutput.docx");
         }
@@ -120,7 +120,7 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
         }
         // Catch more errors here. . .
       }
- 
+
       static void ConfigureLogging()
       {
         ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());

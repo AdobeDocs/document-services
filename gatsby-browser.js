@@ -36,7 +36,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
   };
 
   const reTargetingFun=()=>{
-  
+
       let isAvailable = document.body.querySelector('.retargeting')
 
       var img = document.createElement("img");
@@ -49,8 +49,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       if(isAvailable) {
         isAvailable.remove();
-      } 
-      document.body.append(img); 
+      }
+      document.body.append(img);
   }
 
   if (isBrowser) {
@@ -75,7 +75,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       console.error("Unable to set site section", err);
     }
 
-    try 
+    try
     {
       if (window._satellite && window.digitalData) {
         window._satellite.track("state", {
@@ -100,14 +100,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let isLocal = true;
     let navLinksBaseUrl = "";
     // let baseurl = "/apis/interstitial/";
-    let baseurl = "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html"
-    
+    let baseurl = "https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html"
+
     let referenceBaseUrl = "https://developer-stage.adobe.com/document-services/docs/apis/"
     // stage/deploy
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0)  {
       isLocal = false;
       navLinksBaseUrl = "/document-services";
-      baseurl = "https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html"
+      baseurl = "https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html"
     }
     // production
     if (
@@ -191,10 +191,10 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector("a[href='/console']")
       ?.setAttribute("daa-ll", "Console");
       document.querySelectorAll('img[alt="EMPTY_ALT"]').forEach(link => {
-        link.setAttribute("alt", ''); 
+        link.setAttribute("alt", '');
         link.setAttribute("title", '');
       });
-              
+
     let footer = document.querySelector("footer");
     footer?.setAttribute("daa-lh", "Footer");
     footer?.querySelectorAll("a").forEach(link => {
@@ -226,7 +226,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       startFreeTrialButtonArr.forEach((startFreeTrialButton, index) => {
         startFreeTrialButton.href = `${baseurl}?api=document-generation-api`;
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
-        
+
       });
     }  else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
       getCredentialsButton.href = `${baseurl}?api=pdf-extract-api`;
@@ -357,12 +357,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         .setAttribute("daa-lh", "Customer Stories");
       document.querySelectorAll(".Customer-Stories a").forEach(link => {
         link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
-        
+
         link.addEventListener("click", () => {
           openPdf(link.href)
           link.removeAttribute("href");
         })
-        
+
       });
 
       document
@@ -414,21 +414,21 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector(".sales-process")
       .setAttribute("daa-lh", "Speed up your sales process.");
       document.querySelectorAll(".sales-process a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);        
+        link.setAttribute("daa-ll", link.textContent);
       });
 
       document
       .querySelector(".employee-paperwork")
       .setAttribute("daa-lh", "Simplify employee paperwork.");
       document.querySelectorAll(".employee-paperwork a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);        
+        link.setAttribute("daa-ll", link.textContent);
       });
 
       document
       .querySelector(".legal-workflows")
       .setAttribute("daa-lh", "Automate legal workflows.");
       document.querySelectorAll(".legal-workflows a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);        
+        link.setAttribute("daa-ll", link.textContent);
       });
 
       document
@@ -444,7 +444,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         })
       });
 
-   
+
       document
       .querySelector(".get-started-today")
       .setAttribute("daa-lh", "Get started today.");
@@ -542,7 +542,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".ms-useCase-three a").forEach(link=>{
         link.setAttribute("daa-ll",link.textContent)
       })
-      
+
       document.querySelector(".ms-useCase-four")
       .setAttribute("daa-lh", "Onboarding and enrollment.")
       document.querySelectorAll(".ms-useCase-four a").forEach(link=>{
@@ -647,11 +647,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document
         .querySelector(".hero-below-compo")
         .setAttribute("daa-lh", "Let's work together to build incredible digital experience.")
-      
+
       document.querySelectorAll(".hero-below-compo a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
       })
-      
+
 
       document.querySelector(".take-your-project-cta").setAttribute("daa-lh", "Take your project to the next level.")
       document.querySelector(".easy-to-implement-cta").setAttribute("daa-lh", "Easy to implement.")
@@ -666,13 +666,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
         link.setAttribute("aria-label", "Learn more about Adobe Acrobat Sign security")
       })
-      
+
       document.querySelector(".scalable-cta").setAttribute("daa-lh", "Scalable.")
       document.querySelectorAll(".scalable-cta a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
         link.setAttribute("aria-label", "Learn more about our data centers")
       })
-      
+
       document.querySelector(".choose-partnership-title-cta").setAttribute("daa-lh", "Choose a partnership type to get access to the specific tools you need.")
       document.querySelector(".embedded-partner-cta").setAttribute("daa-lh", "OEM/Embedded Partner.")
       document.querySelectorAll(".embedded-partner-cta a").forEach(link =>{
@@ -683,7 +683,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         document.querySelectorAll(".integration-partners-cta a").forEach(link =>{
           link.setAttribute("daa-ll", link.textContent);
         })
-      
+
       document.querySelector(".zigzag-cta-one").setAttribute("daa-lh", "Merge data from your application.")
       document.querySelectorAll(".zigzag-cta-one a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
@@ -700,7 +700,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       })
 
       document.querySelector(".explore-usecase-cta").setAttribute("daa-lh", "Explore use cases.")
-      
+
       document.querySelector(".sales-cta").setAttribute("daa-lh", "Sales and procurement contracts.")
       document.querySelectorAll(".sales-cta a").forEach(link =>{
         link.setAttribute("daa-ll", link.textContent);
@@ -728,8 +728,8 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
       })
       document.querySelectorAll('img[title="EMPTY_TITLE"]').forEach(link => {
-                link.setAttribute("title", '');
-              });
+                link.setAttribute("title", '');
+              });
       document
       .querySelector(".news-letter")
       .setAttribute("daa-lh", "Newsletter");
@@ -742,12 +742,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document
         .querySelector(".interstitialHeading")
         .setAttribute("daa-lh", "Which of the following best describes what you are here for?");
-      
+
       document
         .querySelectorAll('.interstitialBox').forEach(text =>{
           text.setAttribute("daa-ll", text.textContent)
         })
-      
+
       document
         .querySelector('.dcsdk-button')
         .setAttribute("daa-ll",'Sign in to get started')
@@ -902,11 +902,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelector(".Hero-Banner")
       .closest("main")
       .setAttribute("daa-lh", "Body");
-      
+
       document
       .querySelector(".Hero-Banner")
       .setAttribute("daa-lh", "Adobe PDF Extract API");
-      document 
+      document
         .querySelectorAll(".Hero-Banner a").forEach(link =>{
           link.setAttribute("daa-ll", link.textContent);
         })
@@ -924,7 +924,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.href = `${baseurl}?api=pdf-extract-api`;
         }
       });
-    
+
     document.querySelectorAll(".extract-stepper-api-reference a").forEach(link=>{
       if(link.textContent === 'View API Reference'){
         link.href = `${referenceBaseUrl}#tag/Extract-PDF`;
@@ -1085,7 +1085,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath`);
         }
       });
-      
+
       document
       .querySelector(".news-letter")
       .setAttribute("daa-lh", "Newsletter");
@@ -1167,7 +1167,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         }
       });
 
-   
+
 
       document
         .querySelector(".key-features-code-block")
@@ -1337,7 +1337,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         document
         .querySelector(".news-letter")
         .setAttribute("daa-lh", "Newsletter");
-  
+
       document.querySelectorAll(".news-letter a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
@@ -1439,13 +1439,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         document.querySelectorAll(".accessibility-content a").forEach(link=>{
           link.setAttribute("daa-ll", link.textContent)
         })
-        
+
       } else if(window.location.pathname.indexOf("contact/sales") >= 0) {
         document
           .querySelector(".Sales-ContactUs")
           .closest("main")
           .setAttribute("daa-lh", "Body");
-        
+
         document
           .querySelector(".Hero-Banner")
           .setAttribute("daa-lh", "Hero Banner");
@@ -1500,7 +1500,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       }else if(window.location.pathname.indexOf("contacts")>= 0){
 
       } else if(window.location.pathname.indexOf("contact/sales/seal")>= 0){
-        
+
       } else if(window.location.pathname.indexOf("contact") >= 0) {
         document
           .querySelector(".Contact-Home")
@@ -1561,7 +1561,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
             link.setAttribute("daa-ll", link.textContent);
           });
       }
-      
+
     }else if(window.location.pathname.indexOf('faq/tech-support/ETLA-onboarding-steps')>=0){
       document.querySelectorAll('.useCaseCard a').forEach(link=>{
         openPdf(link.href)

@@ -10,7 +10,7 @@ import { sampleProducts,clouds } from '../../../components/product.js';
 
 ## Download sample templates and data to get started
 
-Review our sample Word templates with JSON data and [try the demo.](https://documentservices.adobe.com/dc-docgen-playground/index.html#/)
+Review our sample Word templates with JSON data and [try the demo.](https://acrobatservices.adobe.com/dc-docgen-playground/index.html#/)
 
 <TextBlock slots="buttons" width="100%" theme="lightest"  isCentered className="padding-zero ms-word-add-in-title"  />
 

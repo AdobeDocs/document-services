@@ -11,7 +11,7 @@ Create PDFs from a variety of formats, including static and dynamic HTML; Micros
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Create-PDF
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/createpdf' \
@@ -22,8 +22,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/createpd
     "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718"
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-createPDF
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-createPDF
 
 ```
 
@@ -32,7 +32,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/createpd
 ```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
-// node src/createpdf/create-pdf-from-docx.js 
+// node src/createpdf/create-pdf-from-docx.js
 
 const PDFservicesSdk = require('@adobe/pdfservices-node-sdk');
 
@@ -131,21 +131,21 @@ namespace CreatePDFFromDocx
 
 public class CreatePDFFromDOCX {
 
-    // Initialize the logger. 
+    // Initialize the logger.
     private static final Logger LOGGER = LoggerFactory.getLogger(CreatePDFFromDOCX .class);
     public static void main(String[] args) {
         try {
 
-            // Initial setup, create credentials instance. 
+            // Initial setup, create credentials instance.
             Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
                     .fromFile("pdfservices-api-credentials.json").build();
             //Create an ExecutionContext using credentials and create a new operation instance.
             ExecutionContext executionContext = ExecutionContext.create(credentials);
             CreatePDFOperation createPdfOperation = CreatePDFOperation.createNew();
-            // Set operation input from a source file. 
+            // Set operation input from a source file.
             FileRef source = FileRef.createFromLocalFile("src/main/resources/createPDFInput.docx");
             createPdfOperation.setInput(source);
-            // Execute the operation. 
+            // Execute the operation.
             FileRef result = createPdfOperation.execute(executionContext);
             // Save the result to the specified location.
             result.saveAs("output/createPDFFromDOCX.pdf");

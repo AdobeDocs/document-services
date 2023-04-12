@@ -17,7 +17,7 @@ See our public [API  Reference](https://developer.adobe.com/document-services/do
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Remove-Protection
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/removeprotection' \
@@ -29,8 +29,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/removepr
     "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718"
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-removeProtection
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-removeProtection
 
 
 ```
@@ -43,17 +43,17 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/removepr
 // node src/removeprotection/remove-protection.js
 
    const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
-  
+
    try {
      // Initial setup, create credentials instance.
      const credentials =  PDFServicesSdk.Credentials
          .serviceAccountCredentialsBuilder()
          .fromFile("pdfservices-api-credentials.json")
          .build();
-  
+
      // Create an ExecutionContext using credentials
      const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
-  
+
      // Create a new operation instance.
      const removeProtectionOperation = PDFServicesSdk.RemoveProtection.Operation.createNew(),
          input = PDFServicesSdk.FileRef.createFromLocalFile(
@@ -62,10 +62,10 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/removepr
          );
      // Set operation input from a source file.
      removeProtectionOperation.setInput(input);
-  
+
      // Set the password for removing security from a PDF document.
      removeProtectionOperation.setPassword("password");
-  
+
      // Execute the operation and Save the result to the specified location.
      removeProtectionOperation.execute(executionContext)
          .then(result => result.saveAsFile('output/removeProtectionOutput.pdf'))
@@ -106,23 +106,23 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/removepr
                 Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                                 .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                                 .Build();
- 
+
                 // Create an ExecutionContext using credentials.
                 ExecutionContext executionContext = ExecutionContext.Create(credentials);
- 
+
                 // Create a new operation instance
                 RemoveProtectionOperation removeProtectionOperation = RemoveProtectionOperation.CreateNew();
- 
+
                 // Set operation input from a source file.
                 FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"removeProtectionInput.pdf");
                 removeProtectionOperation.SetInput(sourceFileRef);
- 
+
                 // Set the password for removing security from a PDF document.
                 removeProtectionOperation.SetPassword("password");
- 
+
                 // Execute the operation.
                 FileRef result = removeProtectionOperation.Execute(executionContext);
- 
+
                 // Save the result to the specified location.
                 result.SaveAs(Directory.GetCurrentDirectory() + "/output/removeProtectionOutput.pdf");
             }
@@ -132,7 +132,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/removepr
             }
             // Catch more errors here . . .
         }
- 
+
         static void ConfigureLogging()
         {
             ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
@@ -148,40 +148,40 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/removepr
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.removeprotection.RemoveProtection
- 
+
   public class RemoveProtection {
- 
+
     // Initialize the logger.
     private static final Logger LOGGER = LoggerFactory.getLogger(RemoveProtection.class);
- 
+
     public static void main(String[] args) {
         try {
             // Initial setup, create credentials instance.
             Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
                     .fromFile("pdfservices-api-credentials.json")
                     .build();
- 
+
             // Create an ExecutionContext using credentials and create a new operation instance.
             ExecutionContext executionContext = ExecutionContext.create(credentials);
             RemoveProtectionOperation removeProtectionOperation = RemoveProtectionOperation.createNew();
- 
+
             // Set operation input from a source file.
             FileRef source = FileRef.createFromLocalFile("src/main/resources/removeProtectionInput.pdf");
             removeProtectionOperation.setInput(source);
- 
+
             // Set the password for removing security from a PDF document.
             removeProtectionOperation.setPassword("password");
- 
+
             // Execute the operation.
             FileRef result = removeProtectionOperation.execute(executionContext);
- 
+
             // Save the result to the specified location.
             result.saveAs("output/removeProtectionOutput.pdf");
- 
+
         } catch (IOException | ServiceApiException | SdkException | ServiceUsageException e) {
             LOGGER.error("Exception encountered while executing operation", e);
         }
     }
-  }  
+  }
 
 ```

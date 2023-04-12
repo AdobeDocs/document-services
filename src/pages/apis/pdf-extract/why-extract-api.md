@@ -7,7 +7,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 
 ### Key features of Adobe PDF Extract API
 
-* [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
+* [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 <TextBlock slots="image, heading, text" width="25%" theme="lightest" className="align-left icon-xl-size padding-top-zero horizontal-align-heading" />
 

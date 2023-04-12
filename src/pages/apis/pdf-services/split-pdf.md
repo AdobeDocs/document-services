@@ -17,7 +17,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Split-PDF
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf' \
@@ -31,8 +31,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
     }
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-splitPDF
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-splitPDF
 ```
 
 #### Node js
@@ -111,23 +111,23 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
                  Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                                  .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                                  .Build();
-  
+
                  // Create an ExecutionContext using credentials.
                  ExecutionContext executionContext = ExecutionContext.Create(credentials);
-  
+
                  // Create a new operation instance
                  SplitPDFOperation splitPDFOperation = SplitPDFOperation.CreateNew();
-  
+
                  // Set operation input from a source file.
                  FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"splitPDFInput.pdf");
                  splitPDFOperation.SetInput(sourceFileRef);
-  
+
                  // Set the maximum number of pages each of the output files can have.
                  splitPDFOperation.SetPageCount(2);
-  
+
                  // Execute the operation.
                  List result = splitPDFOperation.Execute(executionContext);
-  
+
                  // Save the result to the specified location.
                  int index = 0;
                  foreach (FileRef fileRef in result)
@@ -135,7 +135,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
                      fileRef.SaveAs(Directory.GetCurrentDirectory() + "/output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
                      index++;
                  }
-  
+
              }
              catch (ServiceUsageException ex)
              {
@@ -143,7 +143,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
              }
              // Catch more errors here . . .
          }
-  
+
          static void ConfigureLogging()
          {
              ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
@@ -159,44 +159,44 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.splitpdf.SplitPDFByNumberOfPages
- 
+
    public class SplitPDFByNumberOfPages {
-  
+
      // Initialize the logger.
      private static final Logger LOGGER = LoggerFactory.getLogger(SplitPDFByNumberOfPages.class);
-  
+
      public static void main(String[] args) {
          try {
              // Initial setup, create credentials instance.
              Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
                      .fromFile("pdfservices-api-credentials.json")
                      .build();
-  
+
              // Create an ExecutionContext using credentials and create a new operation instance.
              ExecutionContext executionContext = ExecutionContext.create(credentials);
              SplitPDFOperation splitPDFOperation = SplitPDFOperation.createNew();
-  
+
              // Set operation input from a source file.
              FileRef source = FileRef.createFromLocalFile("src/main/resources/splitPDFInput.pdf");
              splitPDFOperation.setInput(source);
-  
+
              // Set the maximum number of pages each of the output files can have.
              splitPDFOperation.setPageCount(2);
-  
+
              // Execute the operation.
              List result = splitPDFOperation.execute(executionContext);
-  
+
              // Save the result to the specified location.
              int index = 0;
              for (FileRef fileRef : result) {
                  fileRef.saveAs("output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
                  index++;
              }
-  
+
          } catch (IOException| ServiceApiException | SdkException | ServiceUsageException e) {
              LOGGER.error("Exception encountered while executing operation", e);
          }
      }
-  
+
    }
 ```
