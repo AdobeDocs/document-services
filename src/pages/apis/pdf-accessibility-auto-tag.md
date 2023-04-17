@@ -13,7 +13,7 @@ import AccessibilityAdobeDoc from './accessibility-auto-tag-api/accessibility-ad
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 import {AutoTag} from '../../components/auto-tag';
 
-<Hero slots="heading, text, assetsImg, buttons" customLayout variantsTypePrimary='primary' variant="fullwidth"  className="autoTagherobgImage Hero-Banner autoTagAPI-content"/>
+<Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variantsTypeSecondary='primary' variant="fullwidth"  className="autoTagherobgImage Hero-Banner autoTagAPI-content"/>
 
 # Adobe PDF Accessibility Auto-Tag API
 
@@ -21,7 +21,8 @@ Our API makes it easy to scale PDF accessibility. Auto-tag content more accurate
 
 autoTagapiHeroAssetImg  accessibility-auto-tag-hero
 
-- [Get early access](../pricing/contact/sales/accessibility)
+- [Try the Demo](https://documentservices.adobe.com/dc-accessibility-playground/main.html)
+- [Start Free Trial](../pricing/contact/sales/accessibility)
 
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="why-pdf-services Why-PDF-Services-API"/>
