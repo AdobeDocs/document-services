@@ -19,6 +19,8 @@ module.exports = {
     baseUrl: process.env.BASEURL || '',
     productionDomain: process.env.PRODUCTION_DOMAIN || 'https://www.adobe.io',
     pageImage: process.env.PAGE_IMAGE || 'dcsdk-main.jpg',
+    DESKTOP_SCREEN_WIDTH: process.env.GATSBY_DESKTOP_SCREEN_WIDTH || '1280px',
+    DESKTOP_FOOTER_SCREEN_WIDTH_MAX: process.env.GATSBY_DESKTOP_FOOTER_SCREEN_WIDTH_MAX || '1280px',
     docs: {
       title: 'Get credentials',
       path: 'https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html'
@@ -61,7 +63,7 @@ module.exports = {
             description: 'Build workflows on Microsoft Power Platform easily',
             path: 'apis/microsoft-pa-integration/'
           },
-          { 
+          {
             title: 'PDF Accessibility Auto-Tag',
             description: 'Auto-tag PDF content to improve accessibility',
             path: 'apis/pdf-accessibility-auto-tag/'
