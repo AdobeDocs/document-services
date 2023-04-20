@@ -313,6 +313,13 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
 
       document
+        .querySelector(".Adobe-PDF-Accessibility")
+        .setAttribute("daa-lh", "Adobe PDF Extract API");
+      document.querySelectorAll(".Adobe-PDF-Accessibility a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
         .querySelector(".Adobe-Document-Generation-API")
         .setAttribute("daa-lh", "Adobe Document Generation API");
       document

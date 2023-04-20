@@ -42,7 +42,22 @@ Do more with this API.
 
 - [Learn more](/src/pages/apis/pdf-services.md)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Accessibility"/>
+
+### Adobe PDF Accessibility Auto-Tag
+
+### Auto-tag PDF content to improve accessibility.
+
+This AI-powered API automatically tag tables, paragraphs, lists, headings and more to improve the reading experience of native or scanned PDFs in assistive technologies. It also identifies the reading order to ensure the logical flow of information with multiple columns or elements across pages. Apply this to document backlogs or new document workflows and move towards compliance with greater ease.
+
+- [Try the demo](https://documentservices.adobe.com/dc-accessibility-playground/main.html)
+- [Learn more](/src/pages/apis/pdf-accessibility-auto-tag.md)
+
+![EMPTY_ALT](images/Accessibility_API.png)
+
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+
+![EMPTY_ALT](images/pdfExtract.jpg)
 
 ### Adobe PDF Extract API
 
@@ -57,11 +72,7 @@ on both scanned and native PDFs and is included with PDF Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-![EMPTY_ALT](images/pdfExtract.jpg)
-
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
-
-![EMPTY_ALT](images/docGen.jpg)
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
 
 ### Adobe Document Generation API
 
@@ -76,7 +87,11 @@ Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
+![EMPTY_ALT](images/docGen.jpg)
+
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
+
+![EMPTY_ALT](images/pdfEmbed.jpg)
 
 ### Adobe PDF Embed API
 
@@ -90,8 +105,6 @@ samples for Angular and React.
 
 - [Try the demo](https://acrobatservices.adobe.com/view-sdk-demo/index.html)
 - [Learn more](/src/pages/apis/pdf-embed.md)
-
-![EMPTY_ALT](images/pdfEmbed.jpg)
 
 <DCSummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
 
