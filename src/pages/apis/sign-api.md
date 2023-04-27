@@ -33,6 +33,8 @@ apiHeroAssetImg sign-api-hero
 
 <TakeYourProjectCont/>
 
+<EsealApiAnnouncement/>
+
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API"/>
 
 <PartnershipType/>

@@ -29,6 +29,8 @@ apiHeroAssetImg doc-service-hero
 
 <WhyPDFServicesAPI />
 
+<EsealApiAnnouncement/>
+
 <!-- Carousel Block -->
 <AWSMSCarousel />
 
