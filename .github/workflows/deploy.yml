@@ -140,9 +140,11 @@ jobs:
           GATSBY_ALGOLIA_API_KEY: ${{ secrets.AIO_ALGOLIA_API_KEY }}
           GATSBY_ALGOLIA_INDEX_ALL_SRC: ${{ secrets.AIO_ALGOLIA_INDEX_ALL_SRC }}
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
+          GATSBY_ALGOLIA_INDEX_ENV_PREFIX: ${{ secrets.AIO_ALGOLIA_INDEX_ENV_PREFIX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
           GATSBY_DC_LINKED_IN: ${{ secrets.DC_LINKED_IN }}
-
+          GATSBY_DESKTOP_SCREEN_WIDTH: ${{ secrets.DESKTOP_SCREEN_WIDTH }}
+          GATSBY_DESKTOP_FOOTER_SCREEN_WIDTH_MAX: ${{ secrets.DESKTOP_FOOTER_SCREEN_WIDTH_MAX }}
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:
@@ -249,9 +251,11 @@ jobs:
           ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME || github.event.repository.name }}
           GATSBY_ALGOLIA_INDEX_ALL_SRC: ${{ secrets.AIO_ALGOLIA_INDEX_ALL_SRC }}
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
+          GATSBY_ALGOLIA_INDEX_ENV_PREFIX: ${{ secrets.AIO_ALGOLIA_INDEX_ENV_PREFIX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
           GATSBY_DC_LINKED_IN: ${{ secrets.DC_LINKED_IN }}
-
+          GATSBY_DESKTOP_SCREEN_WIDTH: ${{ secrets.DESKTOP_SCREEN_WIDTH }}
+          GATSBY_DESKTOP_FOOTER_SCREEN_WIDTH_MAX: ${{ secrets.DESKTOP_FOOTER_SCREEN_WIDTH_MAX }}
       - name: Deploy
         uses: icaraps/static-website-deploy@master
         with:
