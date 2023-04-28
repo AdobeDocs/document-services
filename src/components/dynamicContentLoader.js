@@ -123,7 +123,7 @@ const StoriesContent = [
     desc: "Epson supports distributed workforces with fast and highly secure printing powered by Adobe."
   },
   {
-    Title: "AE Customer Story",
+    Title: "Adobe",
     URL: AdobeExpCloudStoryPDF,
     Thumbnail: AEStory,
     desc: "Agreement Experience is projected to save deal desk and sales attorneys 36,000 hours annually on contracts."
