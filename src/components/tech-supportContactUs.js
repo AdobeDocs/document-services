@@ -78,13 +78,6 @@ const issue_sub_url_array = [
   {
     issue_type: "Account Management",
     sub_issue_type:
-      "How do I use my Adobe Acrobat Services credentials in Power Automate, if I initially created them via AWS Marketplace?",
-    sub_issue_type_id:
-      "account-management-how-do-i-use-my-adobe-document-services-credentials-in-power-automate"
-  },
-  {
-    issue_type: "Account Management",
-    sub_issue_type:
       "If I already have credentials and need new ones, how do I get them?",
     sub_issue_type_id:
       "account-management-if-i-already-have-credentials-and-need-new-ones-how-do-i-get-them"
