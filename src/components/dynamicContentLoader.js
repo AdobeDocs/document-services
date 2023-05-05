@@ -265,7 +265,7 @@ const DynamicContentLoader = ({
                   Tutorials
                 </h3>
                 <a
-                  href="https://experienceleague.adobe.com/docs/document-services/document-services/overview.html"
+                  href="https://experienceleague.adobe.com/docs/acrobat-services-learn/tutorials/overview.html"
                   target="_blank"
                   rel="noreferrer"
                   css={css`
