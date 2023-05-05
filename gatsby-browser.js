@@ -259,7 +259,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       startFreeTrialButtonArr
     ) {
       startFreeTrialButtonArr.map(startFreeTrialButton => {
-        startFreeTrialButton.href = `${baseurl}?api=pdf-embed-api`;
+        startFreeTrialButton.href = `${baseurl}`;
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
       getStartedButtonArr.map(getStartedButton => {
