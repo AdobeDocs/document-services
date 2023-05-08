@@ -34,6 +34,14 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 </AccordionItem>
 
+<AccordionItem header='Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?' slot_id="account-management-can-i-continue-using-my-same-trial-credentials">
+
+You should not use your free trial credentials (Credential Key aka API Key) beyond your trial.
+
+When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials.
+
+</AccordionItem>
+
 </Accordion>
 
 ## Billing
@@ -155,7 +163,7 @@ See the Adobe Trust Center (<a href="<https://www.adobe.com/trust.html>">https:/
 
 <AccordionItem header="What payment plans does Adobe offer? Which payment plan is right for me?" slot_id="which_payment_plan_is_right_for_me">
 
-At this moment, an Enterprise Term License Agreement (ETLA) is the only way to purchase our APIs. Please fill out our contact us form<a href="<https://developer.adobe.com/document-services/pricing/contact/sales/>">https://developer.adobe.com/document-services/pricing/contact/sales</a>and connect with our expert sales team to get a quote.
+At this moment, an Enterprise Term License Agreement (ETLA) is the only way to purchase our APIs. Please fill out our  <a href="https://developer.adobe.com/document-services/pricing/contact/sales/">contact us form</a> and connect with our expert sales team to get a quote.
 
 See additional information here: <a href="<https://developer.adobe.com/document-services/pricing/>">https://developer.adobe.com/document-services/pricing/</a>
 
