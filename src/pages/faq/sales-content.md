@@ -153,11 +153,17 @@ See the Adobe Trust Center (<a href="<https://www.adobe.com/trust.html>">https:/
 
 <Accordion>
 
+<AccordionItem header="What payment plans does Adobe offer? Which payment plan is right for me?" slot_id="which_payment_plan_is_right_for_me">
+
+At this moment, an Enterprise Term License Agreement (ETLA) is the only way to purchase our APIs. Please fill out our contact us form<a href="<https://developer.adobe.com/document-services/pricing/contact/sales/>">https://developer.adobe.com/document-services/pricing/contact/sales</a>and connect with our expert sales team to get a quote.
+
+See additional information here: <a href="<https://developer.adobe.com/document-services/pricing/>">https://developer.adobe.com/document-services/pricing/</a>
+
+</AccordionItem>
+
 <AccordionItem header="Can I buy PDF Services API via a reseller?" slot_id="ordering-can-i-buy-pdf-services-api-via-a-reseller">
 
-No. The two ways you can buy PDF Services API are via:
-(1) Pay-as-you-go via AWS Marketplace
-(2) Volume pricing via an Adobe Enterprise Term License Agreement (ETLA)
+No. The only way you can buy PDF Services API is via an Adobe Enterprise Term License Agreement (ETLA)
 
 For more details, see our pricing page: <a href="<https://developer.adobe.com/document-services/pricing/>">https://developer.adobe.com/document-services/pricing/</a>
 

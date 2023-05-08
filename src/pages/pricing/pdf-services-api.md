@@ -8,6 +8,6 @@ import PDFServiceContent from './pdf-services-content.md'
 
 ## Adobe PDF Services API
 
-<WrapperComponent slots="content" theme="light" className="div-flex overflow-hidden"/>
+<WrapperComponent slots="content" theme="light" className="div-flex overflow-hidden pricing-wrapper"/>
 
 <PDFServiceContent/>

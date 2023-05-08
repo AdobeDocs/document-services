@@ -38,9 +38,7 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 You should not use your free trial credentials (Credential Key aka API Key) beyond your trial.
 
-When you start your Adobe Acrobat Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complementary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account.
-
-In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan.
+When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials.
 
 </AccordionItem>
 

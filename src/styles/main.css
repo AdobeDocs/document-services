@@ -3122,3 +3122,11 @@ img[alt=adobe-support] {
 .page-content .spectrum-Heading a{
     display: unset
 }
+
+.pricing-h2 > div > div > div > h3{
+    margin-bottom: 0px !important;
+}
+
+.pricing-wrapper > div{
+    padding-top: 0px !important;
+}
