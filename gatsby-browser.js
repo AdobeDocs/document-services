@@ -259,7 +259,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       startFreeTrialButtonArr
     ) {
       startFreeTrialButtonArr.map(startFreeTrialButton => {
-        startFreeTrialButton.href = `${baseurl}`;
+        startFreeTrialButton.href = `${baseurl}?api=pdf-services-api`;
         startFreeTrialButton.addEventListener("click",()=>reTargetingFun());
       });
       getStartedButtonArr.map(getStartedButton => {
