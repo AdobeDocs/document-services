@@ -24,7 +24,6 @@ apiHeroAssetImg doc-ext-invoice
 - [Try the Demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
 - [Start Free Trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
-
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>
 
 <WhyExtractAPI/>
