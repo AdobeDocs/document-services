@@ -10,10 +10,12 @@ title: Adobe Developer — DC Platform SDK Resources
 
 - 1,000 Document Transactions for up to 6 months
 
+- Access to all 15+ PDF Services including PDF Extract and Document Generation
+
 - Easy to sign up and create credentials in minutes
 
 - No credit card or commitment required
 
 <TextBlock slots="buttons" width="100%" theme="light"  alignment="yes" paddingTop="5" paddingBottom='5' primaryOutline className="pb-1 border-right left-Contact div-p-0 left-content"  />
 
-- [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start free trial](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
