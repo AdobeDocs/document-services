@@ -20,7 +20,7 @@ MTEC uses Adobe PDF Extract API to improve speed and accuracy of automatic text 
 
 ![EMPTY_ALT](../images/AE_story.png)
 
-### AE Customer Story
+### Adobe
 
 Agreement Experience is projected to save deal desk and sales attorneys 36,000 hours annually on contracts.
 

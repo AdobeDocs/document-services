@@ -5,7 +5,7 @@
             "questions": [
                 {
                     "qst": "How do I see how many API transactions or calls I've used?",
-                    "ans": "For AWS Marketplace customers, you can login to your AWS account and visit billing dashboard to see your usage: https: //us-east-1.console.aws.amazon.com/billing For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage."
+                    "ans": "For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage."
                 },
                 {
                     "qst": "My company has an existing Enterprise Agreement with Adobe. Can I use the same Adobe credentials for PDF Services API?",
@@ -20,16 +20,12 @@
                     "ans": "Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the 'client_id' key used in the back-end code to make free trial calls against."
                 },
                 {
-                    "qst": "How do I use my Adobe Acrobat Services credentials in Power Automate, if I initially created them via AWS Marketplace?",
-                    "ans": "For instructions on how to use your Adobe Acrobat Services credentials that were created in AWS Marketplace for use in Power Automate, please reference this step-by-step guide: https: //helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws"
-                },
-                {
                     "qst": "If I already have credentials and need new ones, how do I get them?",
                     "ans": "Both paid and trial customers can create new credentials, as well as edit existing) credentials, by going to the Admin Console: https: //developer.adobe.com/console"
                 },
                 {
                     "qst": "Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?",
-                    "ans": "You should not use your free trial credentials (Credential Key aka API Key) beyond your trial. When you start your Adobe Acrobat Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complimentary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account. In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan."
+                    "ans": "You should not use your free trial credentials (Credential Key aka API Key) beyond your trial. When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials."
                 }
             ]
         },

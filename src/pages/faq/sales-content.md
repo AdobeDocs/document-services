@@ -4,7 +4,6 @@
 
 <AccordionItem header="How do I see how many API transactions or calls I've used?" slot_id="account-management-how-do-i-see-how-many-api-transactions-or-calls-used">
 
-For AWS Marketplace customers, you can login to your AWS account and visit billing dashboard to see your usage: <a href="<https://us-east-1.console.aws.amazon.com/billing>">https://us-east-1.console.aws.amazon.com/billing</a>
 For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage.
 
 </AccordionItem>
@@ -29,25 +28,17 @@ Your Client ID (also known as API key) is unique to your account and provided on
 
 </AccordionItem>
 
-<AccordionItem header="How do I use my Adobe Acrobat Services credentials in Microsoft Power Automate, if I initially created them via AWS Marketplace?" slot_id="account-managment-how-do-i-use-my-adobe-acrobate-services-credentials-in-microsoft-power-automate">
-
-For instructions on how to use your Adobe Acrobat Services credentials that were created in AWS Marketplace for use in Power Automate, please reference this step-by-step guide: <a href="<https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws>">https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws</a>
-
-</AccordionItem>
-
 <AccordionItem header="If I already have credentials and need new ones, how do I get them?" slot_id="account-managment-if-i-already-have-credentials-and-need-new-ones">
 
 Both paid and trial customers can create new credentials, as well as edit existing credentials, by going to the Admin Console: <a href="<https://developer.adobe.com/console>">https://developer.adobe.com/console</a>
 
 </AccordionItem>
 
-<AccordionItem header="Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?" slot_id="account-managment-can-continue-using-my-same-trial-credentials">
+<AccordionItem header='Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?' slot_id="account-management-can-i-continue-using-my-same-trial-credentials">
 
-You should not use your free trial credentials (Credential Key aka API Key) beyond your free trial.
+You should not use your free trial credentials (Credential Key aka API Key) beyond your trial.
 
-When you start your Adobe Acrobat Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complimentary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account.
-
-In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan.
+When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials.
 
 </AccordionItem>
 
@@ -60,18 +51,6 @@ In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will 
 <AccordionItem header="My company has an existing Enterprise Agreement with Adobe. Can I add PDF Services API to that existing agreement?" slot_id="billing-my-company-has-an-existing-emterprise-agreement-with-adobe">
 
 Please contact your account representative to discuss your requirement. There is minimum threshold needs to be met for the Enterprise Agreement with Adobe PDF Services API.
-
-</AccordionItem>
-
-<AccordionItem header="How will I be billed through AWS?" slot_id="billing-how-will-i-billed-through-aws">
-
-Customers are billed monthly by AWS in arrears for the number of Document Transactions (as defined here: <a href="<https://www.adobe.com/go/aws-docsvs-eula>">https://www.adobe.com/go/aws-docsvs-eula</a>) that have been used in that billing cycle. Specific form of payment can be determined in the AWS console. The number of Document Transactions depends on API calls plus document length for some actions as defined here in our licensing metrics page.
-
-</AccordionItem>
-
-<AccordionItem header="Is there a way to put a limit on my AWS Pay-As-You-Go usage. How can I ensure that some runaway process (or compromised credentials) are not running up the bill?" slot_id="billing-its-there-a-way-to-put-a-limit-on-my-aws-pay-as-you-go-usage">
-
-Although there isn't a way to place limits for usage, there is an option to set up billing alerts through AWS. See: <a href="<https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html>">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html</a>
 
 </AccordionItem>
 
@@ -182,55 +161,17 @@ See the Adobe Trust Center (<a href="<https://www.adobe.com/trust.html>">https:/
 
 <Accordion>
 
-<AccordionItem header="What payment plans does Adobe offer? Which payment plan is right for me?" slot_id="ordering-what-payment-plans-does-adobe-offer">
+<AccordionItem header="What payment plans does Adobe offer? Which payment plan is right for me?" slot_id="which_payment_plan_is_right_for_me">
 
-If you are just starting and have lower volume, or are unsure of what your annual volume will be, pay-as-you-go via AWS Marketplace is a great option, with a 5 cents/document transaction flat fee.
-
-If you have a large annual volume, at least 500,000 document transactions, an Enterprise Term License Agreement will likely be the better plan for you. Please fill out our contact us form <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a> and connect with our expert sales team to get a quote.
+At this moment, an Enterprise Term License Agreement (ETLA) is the only way to purchase our APIs. Please fill out our  <a href="https://developer.adobe.com/document-services/pricing/contact/sales/">contact us form</a> and connect with our expert sales team to get a quote.
 
 See additional information here: <a href="<https://developer.adobe.com/document-services/pricing/>">https://developer.adobe.com/document-services/pricing/</a>
 
 </AccordionItem>
 
-<AccordionItem header="How do I buy Adobe Acrobat Services?" slot_id="ordering-how-do-i-buy-adobe-acrobat-services">
-
-There are two ways you can buy Adobe Acrobat Services:
-
-(1) U.S. listing: <a href="<https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk> ">https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk</a>
-
-(2) International listing: <a href="<https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64>">https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64</a> and
-<a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
-
-</AccordionItem>
-
-<AccordionItem header="I started my Adobe Acrobat Services trial via Power Automate. Can I buy Adobe Acrobat Services on Power Automate too?" slot_id="ordering-i-started-my-adobe-acrobat-services-trial-via-power-automate">
-
-At this time, you can only buy Adobe Acrobat Services via:
-(1) U.S. listing: <a href="<https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk>">https://aws.amazon.com/marketplace/pp/prodview-wzykfz2grnbdk</a>
-
-(2) International listing : <a href="<https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64>">https://aws.amazon.com/marketplace/pp/prodview-g2ikxe6zxsi64</a> and <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
-
-</AccordionItem>
-
-<AccordionItem header="I'm currently on a AWS pay-as-you-go plan, but would like to switch to ETLA. How do I that?" slot_id="ordering-im-currently-on-a-aws-pay-as-you-go-plan">
-
-Contact our sales representative by filling out our contact us form: <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
-
-</AccordionItem>
-
-<AccordionItem header="What countries can I buy PDF Services API pay-as-you-go on AWS Marketplace?" slot_id="ordering-what-countries-can-i-buy-pdf-services-api-pay-as-you-go-on-aws-marketplace">
-
-India, Indonesia, Canada, Malaysia, South Africa, Japan, Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Isle of Man, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, and UK.
-
-For the latest list, see: <a href="<https://developer.adobe.com/document-services/docs/overview/pdf-services-api/awsmarketplace/>">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/awsmarketplace/</a>
-
-</AccordionItem>
-
 <AccordionItem header="Can I buy PDF Services API via a reseller?" slot_id="ordering-can-i-buy-pdf-services-api-via-a-reseller">
 
-No. The two ways you can buy PDF Services API are via:
-(1) Pay-as-you-go via AWS Marketplace
-(2) Volume pricing via an Adobe Enterprise Term License Agreement (ETLA)
+No. The only way you can buy PDF Services API is via an Adobe Enterprise Term License Agreement (ETLA)
 
 For more details, see our pricing page: <a href="<https://developer.adobe.com/document-services/pricing/>">https://developer.adobe.com/document-services/pricing/</a>
 
@@ -238,7 +179,7 @@ For more details, see our pricing page: <a href="<https://developer.adobe.com/do
 
 <AccordionItem header="Can I buy PDF Services API transactions via the Microsoft PowerAutomate connectors?" slot_id="ordering-can-i-buy-pdf-services-api-transactions-via-the-microsoft-power-automate-connectors">
 
-You can try PDF Services API via Microsoft PowerAutomate connector. However, at this time to buy you would choose between pay-as-you-go (via AWS Marketplace) or volume pricing (via an enterprise agreement directly with Adobe).
+You can try PDF Services API via Microsoft PowerAutomate connector. However, at this time to buy you would choose volume pricing via an enterprise agreement directly with Adobe.
 
 </AccordionItem>
 
@@ -302,12 +243,6 @@ Customers with an Adobe Enterprise Term License Agreement (ETLA) receive enterpr
 
 </AccordionItem>
 
-<AccordionItem header="What support comes with AWS PAYG subscription of PDF Services API?" slot_id="pricing-what-support-comes-with-aws-payg-subscriptions-of-pdf-services-api">
-
-Customers with a Pay-As-You-Go subscription via AWS Marketplace can leverage the online community forum for support: <a href="<https://community.adobe.com/t5/document-services-apis/ct-p/ct-Document-Cloud-SDK>">https://community.adobe.com/t5/document-services-apis/ct-p/ct-Document-Cloud-SDK</a>
-
-</AccordionItem>
-
 </Accordion>
 
 ## Trials
@@ -328,7 +263,7 @@ Trial extensions can be granted at Adobe's discretion. If you'd like to request 
 
 <AccordionItem header="What happens after I use up my free trial quota?" slot_id="trials-what-happens-after-i-use-up-my-free-trial-quota">
 
-You will be notified before you reach the limits of the free trial quota. But at any point during the trial, you can meet with an Adobe representative who can answer questions about the trial and how to convert to a commercial agreement using paid credentials. You can also directly subscribe for a pay-as-you-go plan via AWS Marketplace.
+You will be notified before you reach the limits of the free trial quota. But at any point during the trial, you can meet with an Adobe representative who can answer questions about the trial and how to convert to a commercial agreement using paid credentials.
 
 </AccordionItem>
 

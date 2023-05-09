@@ -9,7 +9,7 @@ variantsTypePrimary="accent" variantsTypeSecondary="secondary" variantStyleFill=
 ### PDF and Word document generation with dynamic data
 
 - [Learn more](/src/pages/apis/doc-generation.md)
-- [Try the demo](https://documentservices.adobe.com/dc-docgen-playground/index.html#/)
+- [Try the demo](https://acrobatservices.adobe.com/dc-docgen-playground/index.html#/)
 
 Generate PDF or Word documents from Microsoft Word templates and your data. Merge dynamic data with your custom templates to generate on brand contracts, proposals, invoices, NDAs, and more.
 
@@ -22,9 +22,8 @@ See our public  [API Reference](https://developer.adobe.com/document-services/do
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Document-Generation
-
 curl --location --request POST 'https://pdf-services.adobe.io/operation/documentgeneration' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
 --header 'Content-Type: application/json' \
@@ -57,9 +56,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
         "photograph": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88h8AAu0B9XNPCQQAAAAASUVORK5CYII="
     }
 }'
-
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-documentGeneration
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-documentGeneration
 ```
 
 #### Node js
@@ -68,35 +66,27 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
 // node src/documentmerge/merge-document-to-docx.js
-
  const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
-
  try {
    // Initial setup, create credentials instance.
    const credentials =  PDFServicesSdk.Credentials
        .serviceAccountCredentialsBuilder()
        .fromFile("pdfservices-api-credentials.json")
        .build();
-
    // Setup input data for the document merge process.
    const jsonString = "{\"customerName\": \"Kane Miller\", \"customerVisits\": 100}",
        jsonDataForMerge = JSON.parse(jsonString);
-
    // Create an ExecutionContext using credentials.
    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
-
    // Create a new DocumentMerge options instance.
    const documentMerge = PDFServicesSdk.DocumentMerge,
        documentMergeOptions = documentMerge.options,
        options = new documentMergeOptions.DocumentMergeOptions(jsonDataForMerge, documentMergeOptions.OutputFormat.PDF);
-
    // Create a new operation instance using the options instance.
    const documentMergeOperation = documentMerge.Operation.createNew(options);
-
    // Set operation input document template from a source file.
    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/documentMergeTemplate.docx');
    documentMergeOperation.setInput(input);
-
    // Execute the operation and Save the result to the specified location.
    documentMergeOperation.execute(executionContext)
        .then(result => result.saveAsFile('output/documentMergeOutput.pdf'))
@@ -121,13 +111,12 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 // Run the sample:
 // cd MergeDocumentToDocx/
 // dotnet run MergeDocumentToDOCX.csproj
-
   namespace MergeDocumentToPDF
    {
        class Program
        {
            private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-  
+
            static void Main()
            {
                //Configure the logging.
@@ -138,25 +127,25 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
                    Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                             .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                             .Build();
-  
+
                    // Create an ExecutionContext using credentials.
                    ExecutionContext executionContext = ExecutionContext.Create(credentials);
-  
+
                    // Setup input data for the document merge process.
                    JObject jsonDataForMerge = JObject.Parse("{\"customerName\": \"Kane Miller\",\"customerVisits\": 100}");
-  
+
                    // Create a new DocumentMerge Options instance.
                    DocumentMergeOptions documentMergeOptions = new DocumentMergeOptions(jsonDataForMerge, OutputFormat.PDF);
-  
+
                    // Create a new DocumentMerge Operation instance with the DocumentMerge Options instance.
                    DocumentMergeOperation documentMergeOperation = DocumentMergeOperation.CreateNew(documentMergeOptions);
-  
+
                    // Set the operation input document template from a source file.
                    documentMergeOperation.SetInput(FileRef.CreateFromLocalFile(@"documentMergeTemplate.docx"));
-  
+
                    // Execute the operation.
                    FileRef result = documentMergeOperation.Execute(executionContext);
-  
+
                    // Save the result to the specified location.
                    result.SaveAs(Directory.GetCurrentDirectory() + "/output/documentMergeOutput.pdf");
                }
@@ -181,7 +170,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
                    log.Error("Exception encountered while executing operation", ex);
                }
            }
-  
+
            static void ConfigureLogging()
            {
                ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
@@ -197,49 +186,48 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.documentmerge.MergeDocumentToDOCX
- 
+
    package com.adobe.pdfservices.operation.samples.documentmerge;
- 
+
    public class MergeDocumentToPDF {
- 
+
       // Initialize the logger.
       private static final Logger LOGGER = LoggerFactory.getLogger(MergeDocumentToPDF.class);
- 
+
       public static void main(String[] args) {
- 
+
           try {
- 
+
             // Initial setup, create credentials instance.
             Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
                     .fromFile("pdfservices-api-credentials.json")
                     .build();
- 
+
             // Setup input data for the document merge process.
             JSONObject jsonDataForMerge = new JSONObject("{\"customerName\": \"Kane Miller\",\"customerVisits\": 100}");
- 
+
             // Create an ExecutionContext using credentials.
             ExecutionContext executionContext = ExecutionContext.create(credentials);
- 
+
             // Create a new DocumentMergeOptions instance.
             DocumentMergeOptions documentMergeOptions = new DocumentMergeOptions(jsonDataForMerge, OutputFormat.PDF);
- 
+
             // Create a new DocumentMergeOperation instance with the DocumentMergeOptions instance.
             DocumentMergeOperation documentMergeOperation = DocumentMergeOperation.createNew(documentMergeOptions);
- 
+
             // Set the operation input document template from a source file.
             FileRef documentTemplate = FileRef.createFromLocalFile("src/main/resources/documentMergeTemplate.docx");
             documentMergeOperation.setInput(documentTemplate);
- 
+
             // Execute the operation.
             FileRef result = documentMergeOperation.execute(executionContext);
- 
+
             // Save the result to the specified location.
             result.saveAs("output/documentMergeOutput.pdf");
- 
+
           } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
               LOGGER.error("Exception encountered while executing operation", ex);
           }
       }
    }
-
 ```

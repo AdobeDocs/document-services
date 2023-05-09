@@ -2,17 +2,7 @@
 title: Adobe Developer — PDF Services API  —  Carousel PDF
 ---
 
-<Carousel slots="bgimage, image, heading, text, buttons" repeat="3"  theme="lightest" enableNavigation slideTheme='dark' className="carousel-padding-top-zero aws-carousel" varient="fullWidth" navigationNext="white-swiper-button" navigationPre="white-swiper-button" isCenter  />
-
-carousel-adobe
-
-![Adobe + AWS logos](../../images/adobe_aws_logo.png)
-
-## AWS marketplace partnership
-
-### We now offer all of our PDF Services APIs for purchase as a subscription in AWS console
-
-- [Learn more](/src/pages/pricing/#AWS)
+<Carousel slots="bgimage, image, heading, text, buttons" repeat="2"  theme="lightest" enableNavigation slideTheme='dark' className="carousel-padding-top-zero aws-carousel" varient="fullWidth" navigationNext="white-swiper-button" navigationPre="white-swiper-button" isCenter  />
 
 carousel-micosoft
 

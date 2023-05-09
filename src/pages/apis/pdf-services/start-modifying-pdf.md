@@ -14,9 +14,9 @@ Start your free 6-month trial today with 1,000 PDF transactions
 
 Obtain free credentials
 
-- [Get started](https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
-<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantsTypeSecondary='secondary' variantStyleFill="outline"  
+<TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantsTypeSecondary='secondary' variantStyleFill="outline"
 variantStyleOutline= "outline" className="align-left horizontal-align link" headerElementType="h2"/>
 
 ## Step 2

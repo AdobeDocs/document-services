@@ -123,7 +123,7 @@ const StoriesContent = [
     desc: "Epson supports distributed workforces with fast and highly secure printing powered by Adobe."
   },
   {
-    Title: "AE Customer Story",
+    Title: "Adobe",
     URL: AdobeExpCloudStoryPDF,
     Thumbnail: AEStory,
     desc: "Agreement Experience is projected to save deal desk and sales attorneys 36,000 hours annually on contracts."
@@ -265,7 +265,7 @@ const DynamicContentLoader = ({
                   Tutorials
                 </h3>
                 <a
-                  href="https://experienceleague.adobe.com/docs/document-services/document-services/overview.html"
+                  href="https://experienceleague.adobe.com/docs/acrobat-services-learn/tutorials/overview.html"
                   target="_blank"
                   rel="noreferrer"
                   css={css`

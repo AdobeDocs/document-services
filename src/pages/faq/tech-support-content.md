@@ -4,8 +4,6 @@
 
 <AccordionItem header="How do I see how many API transactions or calls I've used?" slot_id="account-management-how-do-i-see-how-many-api-transactions-or-calls">
 
-For AWS Marketplace customers, you can login to your AWS account and visit billing dashboard to see your usage: <a href="https://us-east-1.console.aws.amazon.com/billing">https://us-east-1.console.aws.amazon.com/billing</a>.
-
 For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage.
 
 </AccordionItem>
@@ -30,12 +28,6 @@ Your Client ID (also known as API key) is unique to your account and provided on
 
 </AccordionItem>
 
-<AccordionItem header="How do I use my Adobe Acrobat Services credentials in Power Automate, if I initially created them via AWS Marketplace?" slot_id="account-management-how-do-i-use-my-adobe-document-services-credentials-in-power-automate">
-
-For instructions on how to use your Adobe Acrobat Services credentials that were created in AWS Marketplace for use in Power Automate, please reference this step-by-step guide:<a href=" https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws"> https://helpx.adobe.com/document-cloud/help/pdf-connector-for-microsoft-power-automate.html#pdf-services-with-aws</a>.
-
-</AccordionItem>
-
 <AccordionItem header="If I already have credentials and need new ones, how do I get them?" slot_id ="account-management-if-i-already-have-credentials-and-need-new-ones-how-do-i-get-them">
 
 Both paid and trial customers can create new credentials, as well as edit existing credentials, by going to the Admin Console: <a href="https://developer.adobe.com/console">https://developer.adobe.com/console</a>.
@@ -46,9 +38,7 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 You should not use your free trial credentials (Credential Key aka API Key) beyond your trial.
 
-When you start your Adobe Acrobat Services pay-as-you-go subscription via AWS Marketplace, you will receive new credentials to use for your paid plan. Note that your first 500 transactions or two weeks on the new AWS credential are complementary--your card will be charged automatically after that. Furthermore, there can only be one active pay-as-you-go credential associated with an account.
-
-In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will want to exchange their free trial credentials with the new credentials provided alongside their ETLA plan.
+When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials.
 
 </AccordionItem>
 
@@ -61,7 +51,7 @@ In a similar fashion, Enterprise Term Licensing Agreement (ETLA) customers will 
 <AccordionItem header="Is Adobe Acrobat Services (PDF Services API and PDF Embed API) HIPAA compliant?" slot_id="data-security--privacy-is-adobe-document-services--hipaa-compliant">
 
 No, it is not. Customer may process certain sensitive personal information pursuant to the applicable terms enterprise <a href="https://www.adobe.com/legal/terms/enterprise-licensing/overview.html">General Terms</a> or the Developer <a href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf">Terms of Use</a>.
-  
+
 </AccordionItem>
 
 <AccordionItem header="Where are the data centers for Adobe Acrobat Services based?" slot_id="data-security--privacy-where-are-the-data-centers-for-adobe-document-services-based">

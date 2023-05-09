@@ -17,7 +17,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Linearize-PDF
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/linearizepdf' \
@@ -28,8 +28,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/lineariz
     "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718"
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-linearizePDF
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-linearizePDF
 
 ```
 
@@ -41,23 +41,23 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/lineariz
 // node src/linearizepdf/linearize-pdf.js
 
    const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
-  
+
    try {
      // Initial setup, create credentials instance.
      const credentials =  PDFServicesSdk.Credentials
          .serviceAccountCredentialsBuilder()
          .fromFile("pdfservices-api-credentials.json")
          .build();
-  
+
      // Create an ExecutionContext using credentials and create a new operation instance.
      const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
          linearizePDF = PDFServicesSdk.LinearizePDF,
          linearizePDFOperation = linearizePDF.Operation.createNew();
-  
+
      // Set operation input from a source file.
      const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/linearizePDFInput.pdf');
      linearizePDFOperation.setInput(input);
-  
+
      // Execute the operation and Save the result to the specified location.
      linearizePDFOperation.execute(executionContext)
          .then(result => result.saveAsFile('output/linearizePDFOutput.pdf'))
@@ -134,33 +134,33 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/lineariz
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.linearizepdf.LinearizePDF
- 
+
      public class LinearizePDF {
        // Initialize the logger.
        private static final Logger LOGGER = LoggerFactory.getLogger(LinearizePDF.class);
-    
+
        public static void main(String[] args) {
-    
+
            try {
                // Initial setup, create credentials instance.
                Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
                        .fromFile("pdfservices-api-credentials.json")
                        .build();
-    
+
                // Create an ExecutionContext using credentials and create a new operation instance.
                ExecutionContext executionContext = ExecutionContext.create(credentials);
                LinearizePDFOperation linearizePDFOperation = LinearizePDFOperation.createNew();
-    
+
                // Set operation input from a source file.
                FileRef source = FileRef.createFromLocalFile("src/main/resources/linearizePDFInput.pdf");
                linearizePDFOperation.setInput(source);
-    
+
                // Execute the operation
                FileRef result = linearizePDFOperation.execute(executionContext);
-    
+
                // Save the result at the specified location
                result.saveAs("output/linearizePDFOutput.pdf");
-    
+
            } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
                LOGGER.error("Exception encountered while executing operation", ex);
            }

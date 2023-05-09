@@ -19,9 +19,11 @@ module.exports = {
     baseUrl: process.env.BASEURL || '',
     productionDomain: process.env.PRODUCTION_DOMAIN || 'https://www.adobe.io',
     pageImage: process.env.PAGE_IMAGE || 'dcsdk-main.jpg',
+    DESKTOP_SCREEN_WIDTH: process.env.GATSBY_DESKTOP_SCREEN_WIDTH || '1280px',
+    DESKTOP_FOOTER_SCREEN_WIDTH_MAX: process.env.GATSBY_DESKTOP_FOOTER_SCREEN_WIDTH_MAX || '1280px',
     docs: {
       title: 'Get credentials',
-      path: 'https://documentservices.adobe.com/dc-integration-creation-app-cdn/main.html'
+      path: 'https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html'
     },
     pages: [
       {

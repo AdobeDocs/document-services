@@ -53,7 +53,7 @@ import { MDXBlocks } from './MDXBlocks';
 const filterChildren = ({ childrenArray, query, hasSideNav }) => {
   const filteredChildren = [];
 
-  let heroChild = null;  
+  let heroChild = null;
   let resourcesChild = null;
 
   while (childrenArray.length) {

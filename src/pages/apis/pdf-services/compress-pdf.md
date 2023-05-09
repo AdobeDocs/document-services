@@ -19,9 +19,8 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Compress-PDF
-
 curl --location --request POST 'https://pdf-services.adobe.io/operation/compresspdf' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
 --header 'Content-Type: application/json' \
@@ -31,8 +30,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
     "compressionLevel": "MEDIUM"
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-compressPDF
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-compressPDF
 ```
 
 #### Node js
@@ -41,31 +40,25 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
 // node src/compresspdf/compress-pdf-with-options.js
-
  const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
-
  try {
    // Initial setup, create credentials instance.
    const credentials =  PDFServicesSdk.Credentials
        .serviceAccountCredentialsBuilder()
        .fromFile("pdfservices-api-credentials.json")
        .build();
-
    // Create an ExecutionContext using credentials and create a new operation instance.
    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
        compressPDF = PDFServicesSdk.CompressPDF,
        compressPDFOperation = compressPDF.Operation.createNew();
-
    // Set operation input from a source file.
    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/compressPDFInput.pdf');
    compressPDFOperation.setInput(input);
-
    // Provide any custom configuration options for the operation.
    const options = new compressPDF.options.CompressPDFOptions.Builder()
        .withCompressionLevel(PDFServicesSdk.CompressPDF.options.CompressionLevel.MEDIUM)
        .build();
    compressPDFOperation.setOptions(options);
-
    // Execute the operation and Save the result to the specified location.
    compressPDFOperation.execute(executionContext)
        .then(result => result.saveAsFile('output/compressPDFWithOptionsOutput.pdf'))
@@ -89,7 +82,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
 // Run the sample:
 // cd CompressPDF/
 // dotnet run CompressPDFWithOptions.csproj
-
   namespace CompressPDFWithOptions
   {
     class Program
@@ -105,24 +97,24 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
                 Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                                 .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                                 .Build();
- 
+
                 // Create an ExecutionContext using credentials and create a new operation instance.
                 ExecutionContext executionContext = ExecutionContext.Create(credentials);
                 CompressPDFOperation compressPDFOperation = CompressPDFOperation.CreateNew();
- 
+
                 // Set operation input from a source file.
                 FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"compressPDFInput.pdf");
                 compressPDFOperation.SetInput(sourceFileRef);
- 
+
                 // Build CompressPDF options from supported compression levels and set them into the operation
                 CompressPDFOptions compressPDFOptions = CompressPDFOptions.CompressPDFOptionsBuilder()
                         .WithCompressionLevel(CompressionLevel.LOW)
                         .Build();
                 compressPDFOperation.SetOptions(compressPDFOptions);
- 
+
                 // Execute the operation.
                 FileRef result = compressPDFOperation.Execute(executionContext);
- 
+
                 // Save the result to the specified location.
                 result.SaveAs(Directory.GetCurrentDirectory() + "/output/compressPDFWithOptionsOutput.pdf");
             }
@@ -132,7 +124,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
             }
             // Catch more errors here . . .
         }
- 
+
         static void ConfigureLogging()
         {
             ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
@@ -148,39 +140,39 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.compresspdf.CompressPDFWithOptions
- 
+
     public class CompressPDFWithOptions {
       // Initialize the logger.
       private static final Logger LOGGER = LoggerFactory.getLogger(CompressPDFWithOptions.class);
-   
+
       public static void main(String[] args) {
-   
+
           try {
               // Initial setup, create credentials instance.
               Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
                       .fromFile("pdfservices-api-credentials.json")
                       .build();
-   
+
               // Create an ExecutionContext using credentials and create a new operation instance.
               ExecutionContext executionContext = ExecutionContext.create(credentials);
               CompressPDFOperation compressPDFOperation = CompressPDFOperation.createNew();
-   
+
               // Set operation input from a source file.
               FileRef source = FileRef.createFromLocalFile("src/main/resources/compressPDFInput.pdf");
               compressPDFOperation.setInput(source);
-   
+
               // Build CompressPDF options from supported compression levels and set them into the operation
               CompressPDFOptions compressPDFOptions = CompressPDFOptions.compressPDFOptionsBuilder()
                       .withCompressionLevel(CompressionLevel.LOW)
                       .build();
               compressPDFOperation.setOptions(compressPDFOptions);
-   
+
               // Execute the operation
               FileRef result = compressPDFOperation.execute(executionContext);
-   
+
               // Save the result at the specified location
               result.saveAs("output/compressPDFWithOptionsOutput.pdf");
-   
+
           } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
               LOGGER.error("Exception encountered while executing operation", ex);
           }

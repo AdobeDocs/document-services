@@ -17,7 +17,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Combine-PDF
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/combinepdf' \
@@ -47,8 +47,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
     ]
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-combinePDF
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-combinePDF
 ```
 
 #### Node js
@@ -59,7 +59,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 // node src/combinepdf/combine-pdf-with-page-ranges.js
 
   const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
- 
+
   const getPageRangesForFirstFile = () => {
     // Specify which pages of the first file are to be included in the combined file.
     const pageRangesForFirstFile = new PDFServicesSdk.PageRanges();
@@ -71,7 +71,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
     pageRangesForFirstFile.addPageRange(3, 4);
     return pageRangesForFirstFile;
   };
- 
+
   const getPageRangesForSecondFile = () => {
     // Specify which pages of the second file are to be included in the combined file.
     const pageRangesForSecondFile = new PDFServicesSdk.PageRanges();
@@ -79,30 +79,30 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
     pageRangesForSecondFile.addAllFrom(3);
     return pageRangesForSecondFile;
   };
- 
+
   try {
     // Initial setup, create credentials instance.
     const credentials =  PDFServicesSdk.Credentials
         .serviceAccountCredentialsBuilder()
         .fromFile("pdfservices-api-credentials.json")
         .build();
- 
+
     // Create an ExecutionContext using credentials and create a new operation instance.
     const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
         combineFilesOperation = PDFServicesSdk.CombineFiles.Operation.createNew();
- 
+
     // Create a FileRef instance from a local file.
     const combineSource1 = PDFServicesSdk.FileRef.createFromLocalFile('resources/combineFilesInput1.pdf'),
         pageRangesForFirstFile = getPageRangesForFirstFile();
     // Add the first file as input to the operation, along with its page range.
     combineFilesOperation.addInput(combineSource1, pageRangesForFirstFile);
- 
+
     // Create a second FileRef instance using a local file.
     const combineSource2 = PDFServicesSdk.FileRef.createFromLocalFile('resources/combineFilesInput2.pdf'),
         pageRangesForSecondFile = getPageRangesForSecondFile();
     // Add the second file as input to the operation, along with its page range.
     combineFilesOperation.addInput(combineSource2, pageRangesForSecondFile);
- 
+
     // Execute the operation and Save the result to the specified location.
     combineFilesOperation.execute(executionContext)
         .then(result => result.saveAsFile('output/combineFilesWithPageRangesOutput.pdf'))
@@ -138,34 +138,34 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
         ConfigureLogging();
         try
         {
- 
+
           // Initial setup, create credentials instance.
           Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
                   .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
                   .Build();
- 
+
           //Create an ExecutionContext using credentials and create a new operation instance.
           ExecutionContext executionContext = ExecutionContext.Create(credentials);
           CombineFilesOperation combineFilesOperation = CombineFilesOperation.CreateNew();
- 
+
           // Create a FileRef instance from a local file.
           FileRef firstFileToCombine = FileRef.CreateFromLocalFile(@"combineFileWithPageRangeInput1.pdf");
           PageRanges pageRangesForFirstFile = GetPageRangeForFirstFile();
           // Add the first file as input to the operation, along with its page range.
           combineFilesOperation.AddInput(firstFileToCombine, pageRangesForFirstFile);
- 
+
           // Create a second FileRef instance using a local file.
           FileRef secondFileToCombine = FileRef.CreateFromLocalFile(@"combineFileWithPageRangeInput2.pdf");
           PageRanges pageRangesForSecondFile = GetPageRangeForSecondFile();
           // Add the second file as input to the operation, along with its page range.
           combineFilesOperation.AddInput(secondFileToCombine, pageRangesForSecondFile);
- 
+
           // Execute the operation.
           FileRef result = combineFilesOperation.Execute(executionContext);
- 
+
           // Save the result to the specified location.
           result.SaveAs(Directory.GetCurrentDirectory() + "/output/combineFilesOutput.pdf");
- 
+
         }
         catch (ServiceUsageException ex)
         {
@@ -173,7 +173,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
         }
         // Catch more errors here. . .
       }
- 
+
       private static PageRanges GetPageRangeForSecondFile()
       {
         // Specify which pages of the second file are to be included in the combined file.
@@ -182,7 +182,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
         pageRangesForSecondFile.AddAllFrom(5);
         return pageRangesForSecondFile;
       }
- 
+
       private static PageRanges GetPageRangeForFirstFile()
       {
         // Specify which pages of the first file are to be included in the combined file.
@@ -195,7 +195,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
         pageRangesForFirstFile.AddRange(5, 7);
         return pageRangesForFirstFile;
       }
- 
+
       static void ConfigureLogging()
       {
         ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
@@ -211,48 +211,48 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.combinepdf.CombinePDFWithPageRanges
- 
+
  public class CombinePDFWithPageRanges {
- 
+
     // Initialize the logger.
     private static final Logger LOGGER = LoggerFactory.getLogger(CombinePDFWithPageRanges.class);
- 
+
     public static void main(String[] args) {
- 
+
       try {
- 
+
         // Initial setup, create credentials instance.
         Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
             .fromFile("pdfservices-api-credentials.json")
             .build();
- 
+
         //Create an ExecutionContext using credentials and create a new operation instance.
         ExecutionContext executionContext = ExecutionContext.create(credentials);
         CombineFilesOperation combineFilesOperation = CombineFilesOperation.createNew();
- 
+
         // Create a FileRef instance from a local file.
         FileRef firstFileToCombine = FileRef.createFromLocalFile("src/main/resources/combineFileWithPageRangeInput1.pdf");
         PageRanges pageRangesForFirstFile = getPageRangeForFirstFile();
         // Add the first file as input to the operation, along with its page range.
         combineFilesOperation.addInput(firstFileToCombine, pageRangesForFirstFile);
- 
+
         // Create a second FileRef instance using a local file.
         FileRef secondFileToCombine = FileRef.createFromLocalFile("src/main/resources/combineFileWithPageRangeInput2.pdf");
         PageRanges pageRangesForSecondFile = getPageRangeForSecondFile();
         // Add the second file as input to the operation, along with its page range.
         combineFilesOperation.addInput(secondFileToCombine, pageRangesForSecondFile);
- 
+
         // Execute the operation.
         FileRef result = combineFilesOperation.execute(executionContext);
- 
+
         // Save the result to the specified location.
         result.saveAs("output/combineFilesWithPageOptionsOutput.pdf");
- 
+
       } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
         LOGGER.error("Exception encountered while executing operation", ex);
       }
     }
- 
+
     private static PageRanges getPageRangeForSecondFile() {
       // Specify which pages of the second file are to be included in the combined file.
       PageRanges pageRangesForSecondFile = new PageRanges();
@@ -260,7 +260,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
       pageRangesForSecondFile.addAllFrom(3);
       return pageRangesForSecondFile;
     }
- 
+
     private static PageRanges getPageRangeForFirstFile() {
       // Specify which pages of the first file are to be included in the combined file.
       PageRanges pageRangesForFirstFile = new PageRanges();

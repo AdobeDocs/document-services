@@ -19,7 +19,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information 
+// Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Properties
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/pdfproperties' \
@@ -31,8 +31,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pdfprope
     "pageLevel": false
 }'
 
-// Legacy API can be found here 
-// https://documentservices.adobe.com/document-services/index.html#post-pdfProperties
+// Legacy API can be found here
+// https://acrobatservices.adobe.com/document-services/index.html#post-pdfProperties
 ```
 
 #### Node js
@@ -102,20 +102,20 @@ namespace GetPDFProperties
                 //Create an ExecutionContext using credentials and create a new operation instance.
                 ExecutionContext executionContext = ExecutionContext.Create(credentials);
                 PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.CreateNew();
-                
+
                 // Provide an input FileRef for the operation.
                 FileRef source = FileRef.CreateFromLocalFile(@"pdfPropertiesInput.pdf");
                 pdfPropertiesOperation.SetInput(source);
-                
+
                 // Build PDF Properties options to include page level properties and set them into the operation.
                 PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
-                        .IncludePageLevelProperties(true)               
+                        .IncludePageLevelProperties(true)
                         .Build();
                 pdfPropertiesOperation.SetOptions(pdfPropertiesOptions);
-            
+
                 // Execute the operation.
                 PDFProperties pdfProperties = pdfPropertiesOperation.Execute(executionContext);
-                
+
                 // Fetch the requisite properties of the specified PDF.
                 log.Info("The size of input PDF is : " + pdfProperties.Document?.FileSize);
                 log.Info("Input PDF Version is : " + pdfProperties.Document?.PDFVersion);
