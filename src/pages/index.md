@@ -5,6 +5,7 @@ description: Own the end-to-end customer experience. Our SDK Developer kits are 
 
 import '../styles/main.css'
 import CreatePdfFromUrl from './home/create-pdf-from-url.md';
+import AccessibilityAutoTagApi from './home/accessbility-auto-tag.md'
 import DynamicPdfDocumentGeneration from './home/dynamic-pdf-document-generation.md';
 import ExtractPdfContentStructure from './home/pdf-content-structure.md';
 import EmbedPdfViewingAnalytics from './home/embed-pdf-viewing-analytics.md';
@@ -50,7 +51,22 @@ Do more with this API.
 
 - [Learn more](/src/pages/apis/pdf-services.md)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Accessibility"/>
+
+### Adobe PDF Accessibility Auto-Tag API
+
+### Auto-tag PDF content to improve accessibility.
+
+This AI-powered API automatically tag tables, paragraphs, lists, headings and more to improve the reading experience of native or scanned PDFs with assistive technologies. It also identifies the reading order to ensure the logical flow of information with multiple columns or elements across pages. Apply this to document backlogs or new document workflows and move towards compliance with greater ease.
+
+- [Try the demo](https://acrobatservices.adobe.com/dc-accessibility-playground/main.html)
+- [Learn more](/src/pages/apis/pdf-accessibility-auto-tag.md)
+
+![EMPTY_ALT](images/Accessibility_API.png)
+
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+
+![EMPTY_ALT](images/pdfExtract.jpg)
 
 ### Adobe PDF Extract API
 
@@ -65,11 +81,7 @@ on both scanned and native PDFs and is included with PDF Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-![EMPTY_ALT](images/pdfExtract.jpg)
-
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
-
-![EMPTY_ALT](images/docGen.jpg)
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
 
 ### Adobe Document Generation API
 
@@ -84,7 +96,11 @@ Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
+![EMPTY_ALT](images/docGen.jpg)
+
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
+
+![EMPTY_ALT](images/pdfEmbed.jpg)
 
 ### Adobe PDF Embed API
 
@@ -99,8 +115,6 @@ samples for Angular and React.
 - [Try the demo](https://acrobatservices.adobe.com/view-sdk-demo/index.html)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
-![EMPTY_ALT](images/pdfEmbed.jpg)
-
 <DCSummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
 
 ## Designed for developers
@@ -109,7 +123,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 - [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="4"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="5"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
 
 ### Create PDF from Word
 
@@ -134,6 +148,12 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 ![EMPTY_ALT](images/embed.svg)
 
 <EmbedPdfViewingAnalytics/>
+
+### Auto-tag PDF
+
+![EMPTY_ALT](images/autotagIcon.svg)
+
+<AccessibilityAutoTagApi/>
 
 <WrapperComponent slots="content" theme="lightest" className="why-docment-services"/>
 

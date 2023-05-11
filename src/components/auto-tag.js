@@ -40,9 +40,9 @@ const AutoTag =({})=>{
               color: #fff !important;
               font-weight: lighter;
             `}>
-               To read a document's text and accurately format it for assistive technologies like screen readers and other 
+               To read a document's text and accurately format it for assistive technologies like screen readers and other
                text-to-speech tools, a PDF must have document structure tags that define the reading order. Identifying headings,
-               paragraphs, sections, tables, and other page elements is necessary to achive accessible, readable PDFs.
+               paragraphs, sections, tables, and other page elements is necessary to achieve accessible, readable PDFs.
             </p>
             <div class="mp-cta-wrapper">
                 <a
@@ -70,7 +70,7 @@ const AutoTag =({})=>{
               font-weight: lighter;
             `}>
               The API tags untagged PDFs, tags partially tagged PDFs from scratch while maintaining any existing Alt-text, and
-              offers a tagging report for both. 
+              offers a tagging report for both.
           </p>
         </div>
       </div>

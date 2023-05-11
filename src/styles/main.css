@@ -3130,3 +3130,8 @@ img[alt=adobe-support] {
 .pricing-wrapper > div{
     padding-top: 0px !important;
 }
+
+.custom-stories-grid > div > div > div > div > div > div > div {
+    width: auto;
+    height: var(--spectrum-global-dimension-size-1125) !important;
+}
