@@ -9,6 +9,7 @@
 ![EMPTY_ALT](../../images/8_PDF_Accessibility_101_Image.jpg)
 
 ## PDF Accessibility 101
+
 Combining PDF file format accessibility features with Adobe Acrobat and Adobe Reader allow universal access to documents.
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard-doc-gen" />
@@ -18,6 +19,7 @@ Combining PDF file format accessibility features with Adobe Acrobat and Adobe Re
 ![EMPTY_ALT](../../images/8_Creating_accessible_PDFs_Image.jpg)
 
 ## Creating accessibile PDFs
+
 Create accessible PDFs by following the steps outlined in this workflow.
 
 <ResourceCard slots="link, image, heading, text" width="25%" theme='light' className="useCaseCard-doc-gen" />
@@ -27,4 +29,5 @@ Create accessible PDFs by following the steps outlined in this workflow.
 ![EMPTY_ALT](../../images/8_Acrobat_Accessibility_Webinar_Series.jpg)
 
 ## Acrobat Accessibility webinar series
+
 Watch our six-part webinar series and follow along using practice files to expand your accessibility knowledge.
