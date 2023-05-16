@@ -297,7 +297,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".Hero-Banner a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-
+      document
+        .querySelector(".Adobe-PDF-Accessibility")
+        .setAttribute("daa-lh", "Adobe PDF Extract API");
+      document.querySelectorAll(".Adobe-PDF-Accessibility a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
       document
         .querySelector(".Adobe-PDF-Services-API")
         .setAttribute("daa-lh", "Adobe PDF Services API");
@@ -454,6 +459,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.href = `${baseurl}`;
         }
       });
+
 
     }else if (window.location.pathname.indexOf("microsoft-pa-integration") >= 0) {
 
@@ -628,6 +634,104 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       link.setAttribute("daa-ll", link.textContent);
     });
 
+    } else if (window.location.pathname.indexOf("pdf-accessibility-auto-tag") >= 0) {
+
+      document
+        .querySelector(".Hero-Banner")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+
+      document
+        .querySelector(".Hero-Banner")
+        .setAttribute("daa-lh", "Hero Banner");
+
+      document.querySelectorAll(".Hero-Banner a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document.querySelector(".accessibility-key-feature-title")
+        .setAttribute("daa-lh", "Key features of Adobe PDF Accessibility Auto-Tag API")
+
+      document.querySelector(".Benefits-one")
+        .setAttribute("daa-lh", "Highly accurate content tagging")
+      document.querySelector(".Benefits-two")
+        .setAttribute("daa-lh", "Reading order identification")
+      document.querySelector(".Benefits-three")
+        .setAttribute("daa-lh", "Wide range of doc types, at scale")
+      document.querySelector(".Benefits-four")
+        .setAttribute("daa-lh", "Tailored tagging report")
+
+      document.querySelector(".zig-zag-title")
+        .setAttribute("daa-lh", "Benefits of PDF Accessibility Auto-Tag API")
+      document.querySelector(".zig-zag-cont-one")
+        .setAttribute("daa-lh", "Improve PDF accessibility for all users")
+      document.querySelector(".zig-zag-cont-two")
+        .setAttribute("daa-lh", "Remediate easily at scale")
+      document.querySelector(".zig-zag-cont-three")
+        .setAttribute("daa-lh", "Move toward compliance with greater ease")
+
+      document.querySelectorAll(".tag-structure h2").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      document.querySelectorAll(".tag-structure a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".technical-case-title")
+        .setAttribute("daa-lh", "Technical use cases")
+
+      document.querySelector(".technical-case-one")
+        .setAttribute("daa-lh", "Improve accessibility of PDF backlogs")
+      document.querySelector(".technical-case-two")
+        .setAttribute("daa-lh", "Accelerate accessibility workflows")
+
+      document.querySelector(".industry-usecase-title")
+        .setAttribute("daa-lh", "For use across industries")
+
+      document.querySelectorAll(".useCaseCard-doc-gen a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".accessibility-summary-two")
+        .setAttribute("daa-lh", "We're ready to help")
+      document.querySelectorAll(".accessibility-summary-two a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
+      document.querySelector(".accessibility-title")
+        .setAttribute("daa-lh", "Learn more about PDF accessibility")
+
+      document.querySelectorAll(".useCaseCard-doc-gen a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      })
+      document
+        .querySelector(".Explore-other-Adobe-Document-Services-APIs")
+        .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+
+      document
+        .querySelectorAll(".Explore-other-Adobe-Document-Services-APIs a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
+
+      document
+        .querySelector(".news-letter")
+        .setAttribute("daa-lh", "Newsletter");
+
+      document.querySelectorAll(".news-letter a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+      document
+        .querySelector(".accessbility-stepper")
+        .setAttribute("daa-lh", "Start embedding PDFs in a few minutes");
+      document.querySelectorAll(".accessbility-stepper a").forEach(link => {
+        if (link.textContent == "Get started"){
+          link.href = `${baseurl}?api=pdf-accessibility-auto-tag-api`
+        }
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+
     } else if (window.location.pathname.indexOf("sign-api") >= 0) {
 
       document
@@ -753,6 +857,16 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document
         .querySelector('.secondary-dcsdk-button')
         .setAttribute("daa-ll",'Skip')
+
+    } else if (window.location.pathname.indexOf("customer-stories") >= 0){
+
+      document.querySelectorAll(".Customer-Stories a").forEach(link => {
+        link.setAttribute("daa-ll", link.querySelector("h3")?.textContent);
+        link.addEventListener("click", () => {
+          openPdf(link.href)
+          link.removeAttribute("href");
+        })
+      })
 
     } else if (window.location.pathname.indexOf("resources") >= 0) {
       document
@@ -1289,6 +1403,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll",link.textContent)
         if(link.textContent === "API Reference"){
           link.href = `${referenceBaseUrl}#tag/Page-Manipulation`;
+        }
+      })
+      document.querySelectorAll(".auto-tag a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent)
+        if (link.textContent === "API Reference") {
+          link.href = `${referenceBaseUrl}#tag/Auto-Tag`;
         }
       })
 

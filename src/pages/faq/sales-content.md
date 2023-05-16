@@ -191,11 +191,9 @@ You can try PDF Services API via Microsoft PowerAutomate connector. However, at 
 
 <AccordionItem header="How much does PDF Services API cost?" slot_id="pricing-how-much-does-pdf-services-api-cost">
 
-That standard pricing for our API service is US$0.05 (that's 5 cents) per Document Transaction, which is based on the initial endpoint request (i.e., API call) and the digital output.
+Please contact our sales team for a quote at: <a href="https://developer.adobe.com/document-services/pricing/contact/sales">https://developer.adobe.com/document-services/pricing/contact/sales</a>.
 
-For more details and examples of how to calculate document transactions, please see: <a href="<https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/>">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
-
-Volume pricing is available. You may contact our sales team for a quote at: <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
+For details and examples on how to calculate the document transactions required, please see: <a href="https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>.
 
 </AccordionItem>
 
