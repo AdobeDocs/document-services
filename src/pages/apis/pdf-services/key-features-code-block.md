@@ -145,5 +145,3 @@ import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
 ![EMPTY_ALT](../../images/rotate_page.svg)
 
 <RotatePDFPages/>
-
-

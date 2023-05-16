@@ -25,7 +25,6 @@ autoTagapiHeroAssetImg  accessibility-auto-tag-hero
 - [Try the Demo](https://acrobatservices.adobe.com/dc-accessibility-playground/main.html)
 - [Start Free Trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-accessibility-auto-tag-api)
 
-
 <WrapperComponent slots="content" repeat="1" theme="light" className="why-pdf-services Why-PDF-Services-API"/>
 
 <AutoTagAPI />
