@@ -20,6 +20,7 @@ import ReplacePDFPages from './replace-pdf-pages.md';
 import DeletePDFPages from './delete-pdf-pages.md';
 import RotatePDFPages from './rotate-pdf-pages.md';
 import HTMLToPDF from './html-to-pdf.md';
+import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
 
 <!-- Key Features of Adobe PDF Services API -->
 
@@ -29,13 +30,19 @@ import HTMLToPDF from './html-to-pdf.md';
 
 - [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" repeat="18"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
+<TabsBlock orientation="vertical" slots="heading, image, content" repeat="19"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
 
 ### Extract PDF Content
 
 ![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
 
 <ExtractPDFContent/>
+
+### Auto-tag PDF
+
+![EMPTY_ALT](../../images/autotagIcon.svg)
+
+<AccessibilityAutoTagApi/>
 
 ### Create PDF
 
