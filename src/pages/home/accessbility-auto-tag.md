@@ -12,7 +12,7 @@ Auto-tag PDF content to improve accessibility.
 
 ```bash
 // Please refer our Rest API docs for more information
-// https://developer.adobe.com/document-services/docs/apis/#tag/Auto-Tag
+// https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Accessibility-Auto-Tag
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/autotag' \
 --header 'x-api-key: {{Placeholder for client_id}}' \

@@ -10,7 +10,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 Tag PDFs to improve accessibility. Identify the content structure and reading order, and tag tables, paragraphs, lists, headings, figures, and more to improve the reading experience of native or scanned PDFs with assistive technologies. Generate a tailored tagging report about added tags and any content that needs additional review.
 
-See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Auto-Tag) and quickly try our APIs using the Postman collections
+See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Accessibility-Auto-Tag) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js,.net,java" />
 
@@ -18,7 +18,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 
 ```bash
 // Please refer our Rest API docs for more information
-// https://developer.adobe.com/document-services/docs/apis/#tag/Auto-Tag
+// https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Accessibility-Auto-Tag
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/autotag' \
 --header 'x-api-key: {{Placeholder for client_id}}' \

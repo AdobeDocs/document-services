@@ -36,4 +36,4 @@ Download ready to run samples for Node.js, .Net, Java and Python
 Add credentials to your code and experience the power of the API
 
 - [View docs](https://developer.adobe.com/document-services/docs/overview/pdf-accessibility-auto-tag-api/)
-- [View API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Auto-Tag)
+- [View API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Accessibility-Auto-Tag)

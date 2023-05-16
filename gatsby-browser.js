@@ -1408,7 +1408,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".auto-tag a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent)
         if (link.textContent === "API Reference") {
-          link.href = `${referenceBaseUrl}#tag/Auto-Tag`;
+          link.href = `${referenceBaseUrl}#tag/PDF-Accessibility-Auto-Tag`;
         }
       })
 
