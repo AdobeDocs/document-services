@@ -19,7 +19,6 @@ Automatically tag tables, paragraphs, lists, and headings to improve the reading
 
 Identify the logical flow of information, even with multiple columns and elements across multiple pages.
 
-
 <TextBlock slots="image, heading, text" width="25%" theme="light" className="align-left iocn-size  link horizontal-align-heading linking Benefits-three"/>
 
 ![EMPTY_ALT](../../images/wideRange.svg)

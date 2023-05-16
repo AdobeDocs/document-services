@@ -6,7 +6,6 @@ Improve the user experience for all stakeholders, including employees, customers
 
 ![EMPTY_ALT](../../images/improvePDFAccessibility.jpg)
 
-
 <TextBlock slots="image,heading,text" theme="lightest" headerElementType="h2" variantsTypePrimary='secondary'  isPrimaryBtn homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API ms-zigzag-cta-one zigzag-align zig-zag-cont-two"/>
 
 ![EMPTY_ALT](../../images/remediateEasily.jpg)

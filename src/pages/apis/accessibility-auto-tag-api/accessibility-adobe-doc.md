@@ -23,7 +23,6 @@ Extract text, tables, images, and document structure.
 * [Learn more](/src/pages/apis/pdf-extract.md)
 * [Demo](https://www.adobe.com/go/extract_visualizer)
 
-
 <ProductCard slots="icon, heading, text, buttons" theme="lightest" width="33%" className="product-card-compact-img product-card-compact-img-service"/>
 
 ![EMPTY_ALT](../../images/customizable_experience.svg)
