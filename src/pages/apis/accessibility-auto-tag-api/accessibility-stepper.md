@@ -8,7 +8,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Stepper Componen
 
 ## Get started in minutes
 
-Start your free 6-month trial today with 1,000 PDF transactions
+Start with the Free Tier and get 500 free Document Transactions per month.
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light"  className='align-left horizontal-align'/>
 
@@ -36,4 +36,4 @@ Download ready to run samples for Node.js, .Net, Java and Python
 Add credentials to your code and experience the power of the API
 
 - [View docs](https://developer.adobe.com/document-services/docs/overview/pdf-accessibility-auto-tag-api/)
-- [View API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Auto-Tag)
+- [View API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Accessibility-Auto-Tag)

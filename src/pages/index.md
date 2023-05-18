@@ -16,6 +16,7 @@ import CustomerStory from './home/home-storyies.md'
 import {APIPixelRetargeting} from '../components/retargetting'
 import EsealApiAnnouncement from './apis/e-seal-api-announcement.md'
 import AnimationVideo from "./videos/Adobe_DCP_Marquee_Animation.json";
+import ESealAPI from './home/e-seal.md'
 
 <Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" animationVideo={AnimationVideo} className="homeherobgImage Hero-Banner"/>
 
@@ -26,14 +27,6 @@ From the company who created the PDF standard.
 - [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 homeheroAssertImage
-
-<AnnouncementBlock slots="heading, text, button" className='ms-announcement-blade' theme="dark"/>
-
-### Join the Beta program for our new Adobe PDF Electronic Seal API
-
-Sign up for the opportunity to try our latest API that helps you verify the identity and integrity of documents using an electronic seal.
-
-[Register now](src/pages/pricing/contact/sales/seal)
 
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
 
@@ -64,9 +57,19 @@ This AI-powered API automatically tag tables, paragraphs, lists, headings and mo
 
 ![EMPTY_ALT](images/Accessibility_API.png)
 
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding e-seal-api linking"/>
 
-![EMPTY_ALT](images/pdfExtract.jpg)
+![EMPTY_ALT](images/Electronic_Seal.jpg)
+
+### Adobe PDF Electronic Seal API
+
+### Apply an electronic seal to documents at scale easily.
+
+Apply an electronic seal to documents at scale using a certificate issued by certain TSPs (Trust Service Providers) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). The electronic seal helps verify the identity and integrity of documents. This can be used to e-seal documents at scale and is included with PDF Services API.
+
+- [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
+
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
 
 ### Adobe PDF Extract API
 
@@ -81,7 +84,11 @@ on both scanned and native PDFs and is included with PDF Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
+![EMPTY_ALT](images/pdfExtract.jpg)
+
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
+
+![EMPTY_ALT](images/docGen.jpg)
 
 ### Adobe Document Generation API
 
@@ -96,11 +103,7 @@ Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
-![EMPTY_ALT](images/docGen.jpg)
-
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
-
-![EMPTY_ALT](images/pdfEmbed.jpg)
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
 
 ### Adobe PDF Embed API
 
@@ -115,15 +118,17 @@ samples for Angular and React.
 - [Try the demo](https://acrobatservices.adobe.com/view-sdk-demo/index.html)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
+![EMPTY_ALT](images/pdfEmbed.jpg)
+
 <DCSummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
 
 ## Designed for developers
 
 Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
 
-- [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="5"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="6"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
 
 ### Create PDF from Word
 
@@ -136,6 +141,12 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 ![EMPTY_ALT](images/ic-dynamic-pdf-gen-40.svg)
 
 <DynamicPdfDocumentGeneration/>
+
+### E-seal API
+
+![EMPTY_ALT](images/electronic-seal.svg)
+
+<ESealAPI/>
 
 ### Extract PDF Content & Structure
 
@@ -181,9 +192,9 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 ### How to get started?
 
-Start free trial with 1,000 PDF transactions for up to 6 months.
+Start with the Free Tier and get 500 free Document Transactions per month.
 
-- [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Contact us](src/pages/pricing/contact.md)
 
 <APIPixelRetargeting/>

@@ -31,8 +31,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-protectPDF
-
+// https://documentcloud.adobe.com/document-services/index.html#post-protectPDF
 ```
 
 #### Node js
@@ -45,44 +44,44 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
     const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
     try {
-      // Initial setup, create credentials instance.
-      const credentials =  PDFServicesSdk.Credentials
-          .serviceAccountCredentialsBuilder()
-          .fromFile("pdfservices-api-credentials.json")
-          .build();
+        // Initial setup, create credentials instance.
+        const credentials =  PDFServicesSdk.Credentials
+            .servicePrincipalCredentialsBuilder()
+            .withClientId("PDF_SERVICES_CLIENT_ID")
+            .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+            .build();
 
-      // Create an ExecutionContext using credentials
-      const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
+        // Create an ExecutionContext using credentials
+        const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
 
-      // Build ProtectPDF options by setting a User Password and Encryption
-      // Algorithm (used for encrypting the PDF file).
-      const protectPDF = PDFServicesSdk.ProtectPDF,
-          options = new protectPDF.options.PasswordProtectOptions.Builder()
-              .setUserPassword("encryptPassword")
-              .setEncryptionAlgorithm(PDFServicesSdk.ProtectPDF.options.EncryptionAlgorithm.AES_256)
-              .build();
+        // Build ProtectPDF options by setting a User Password and Encryption Algorithm (used for encrypting the PDF file).
+        const protectPDF = PDFServicesSdk.ProtectPDF,
+            options = new protectPDF.options.PasswordProtectOptions.Builder()
+                .setUserPassword("encryptPassword")
+                .setEncryptionAlgorithm(PDFServicesSdk.ProtectPDF.options.EncryptionAlgorithm.AES_256)
+                .build();
 
-      // Create a new operation instance.
-      const protectPDFOperation = protectPDF.Operation.createNew(options);
+        // Create a new operation instance.
+        const protectPDFOperation = protectPDF.Operation.createNew(options);
 
-      // Set operation input from a source file.
-      const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/protectPDFInput.pdf');
-      protectPDFOperation.setInput(input);
+        // Set operation input from a source file.
+        const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/protectPDFInput.pdf');
+        protectPDFOperation.setInput(input);
 
-      // Execute the operation and Save the result to the specified location.
-      protectPDFOperation.execute(executionContext)
-          .then(result => result.saveAsFile('output/protectPDFOutput.pdf'))
-          .catch(err => {
-              if(err instanceof PDFServicesSdk.Error.ServiceApiError
-                  || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-                  console.log('Exception encountered while executing operation', err);
-              } else {
-                  console.log('Exception encountered while executing operation', err);
-              }
-          });
+        // Execute the operation and Save the result to the specified location.
+        protectPDFOperation.execute(executionContext)
+            .then(result => result.saveAsFile('output/protectPDFOutput.pdf'))
+            .catch(err => {
+                if(err instanceof PDFServicesSdk.Error.ServiceApiError
+                    || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                    console.log('Exception encountered while executing operation', err);
+                } else {
+                    console.log('Exception encountered while executing operation', err);
+                }
+            });
     } catch (err) {
-      console.log('Exception encountered while executing operation', err);
-    }
+        console.log('Exception encountered while executing operation', err);
+}
 ```
 
 #### .Net
@@ -93,8 +92,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
 // cd ProtectPDF/
 // dotnet run ProtectPDF.csproj
 
-  namespace ProtectPDF
-  {
+namespace ProtectPDF
+{
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
@@ -105,19 +104,19 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
             try
             {
                 // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                                .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                                .Build();
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
                 // Create an ExecutionContext using credentials.
                 ExecutionContext executionContext = ExecutionContext.Create(credentials);
 
-                // Build ProtectPDF options by setting a User Password and Encryption
-                // Algorithm (used for encrypting the PDF file).
+                // Build ProtectPDF options by setting a User Password and Encryption Algorithm (used for encrypting the PDF file).
                 ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.PasswordProtectOptionsBuilder()
-                        .SetUserPassword("encryptPassword")
-                        .SetEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
-                        .Build();
+                    .SetUserPassword("encryptPassword")
+                    .SetEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
+                    .Build();
 
                 // Create a new operation instance
                 ProtectPDFOperation protectPDFOperation = ProtectPDFOperation.CreateNew(protectPDFOptions);
@@ -145,7 +144,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
         }
     }
-  }
+}
 ```
 
 #### Java
@@ -155,44 +154,44 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/protectp
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.protectpdf.ProtectPDF
 
-      public class ProtectPDF {
-        // Initialize the logger.
-        private static final Logger LOGGER = LoggerFactory.getLogger(ProtectPDF.class);
+public class ProtectPDF {
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(ProtectPDF.class);
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            try {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                        .fromFile("pdfservices-api-credentials.json")
-                        .build();
+        try {
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
-                // Create an ExecutionContext using credentials.
-                ExecutionContext executionContext = ExecutionContext.create(credentials);
+            // Create an ExecutionContext using credentials.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
 
-                // Build ProtectPDF options by setting a User Password and Encryption
-                // Algorithm (used for encrypting the PDF file).
-                ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.passwordProtectOptionsBuilder()
-                        .setUserPassword("encryptPassword")
-                        .setEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
-                        .build();
+            // Build ProtectPDF options by setting a User Password and Encryption Algorithm (used for encrypting the PDF file).
+            ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.passwordProtectOptionsBuilder()
+                .setUserPassword("encryptPassword")
+                .setEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
+                .build();
 
-                // Create a new operation instance.
-                ProtectPDFOperation protectPDFOperation = ProtectPDFOperation.createNew(protectPDFOptions);
+            // Create a new operation instance.
+            ProtectPDFOperation protectPDFOperation = ProtectPDFOperation.createNew(protectPDFOptions);
 
-                // Set operation input from a source file.
-                FileRef source = FileRef.createFromLocalFile("src/main/resources/protectPDFInput.pdf");
-                protectPDFOperation.setInput(source);
+            // Set operation input from a source file.
+            FileRef source = FileRef.createFromLocalFile("src/main/resources/protectPDFInput.pdf");
+            protectPDFOperation.setInput(source);
 
-                // Execute the operation
-                FileRef result = protectPDFOperation.execute(executionContext);
+            // Execute the operation
+            FileRef result = protectPDFOperation.execute(executionContext);
 
-                // Save the result at the specified location
-                result.saveAs("output/protectPDFOutput.pdf");
+            // Save the result at the specified location
+            result.saveAs("output/protectPDFOutput.pdf");
 
-            } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
                 LOGGER.error("Exception encountered while executing operation", ex);
-            }
         }
-      }
+    }
+}
 ```

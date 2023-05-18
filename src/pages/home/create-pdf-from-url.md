@@ -23,8 +23,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/createpd
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-createPDF
-
+// https://documentcloud.adobe.com/document-services/index.html#post-createPDF
 ```
 
 #### Node js
@@ -36,36 +35,36 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/createpd
 
 const PDFservicesSdk = require('@adobe/pdfservices-node-sdk');
 
- try {
-   // Initial setup, create credentials instance.
-   const credentials =  PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile("pdfservices-api-credentials.json")
-       .build();
+try {
+    // Initial setup, create credentials instance.
+    const credentials =  PDFServicesSdk.Credentials
+        .servicePrincipalCredentialsBuilder()
+        .withClientId("PDF_SERVICES_CLIENT_ID")
+        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+        .build();
 
-   // Create an ExecutionContext using credentials and create a new operation instance.
-   const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-       createPdfOperation = PDFServicesSdk.CreatePDF.Operation.createNew();
+    // Create an ExecutionContext using credentials and create a new operation instance.
+    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
+        createPdfOperation = PDFServicesSdk.CreatePDF.Operation.createNew();
 
-   // Set operation input from a source file.
-   const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/createPDFInput.docx');
-   createPdfOperation.setInput(input);
+    // Set operation input from a source file.
+    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/createPDFInput.docx');
+    createPdfOperation.setInput(input);
 
-   // Execute the operation and Save the result to the specified location.
-   createPdfOperation.execute(executionContext)
-       .then(result => result.saveAsFile('output/createPDFFromDOCX.pdf'))
-       .catch(err => {
-           if(err instanceof PDFServicesSdk.Error.ServiceApiError
-               || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-               console.log('Exception encountered while executing operation', err);
-           } else {
-               console.log('Exception encountered while executing operation', err);
-           }
-       });
- } catch (err) {
+    // Execute the operation and Save the result to the specified location.
+    createPdfOperation.execute(executionContext)
+        .then(result => result.saveAsFile('output/createPDFFromDOCX.pdf'))
+        .catch(err => {
+            if(err instanceof PDFServicesSdk.Error.ServiceApiError
+                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                console.log('Exception encountered while executing operation', err);
+            } else {
+                console.log('Exception encountered while executing operation', err);
+            }
+    });
+} catch (err) {
    console.log('Exception encountered while executing operation', err);
- }
-
+}
 ```
 
 #### .Net
@@ -77,49 +76,50 @@ const PDFservicesSdk = require('@adobe/pdfservices-node-sdk');
 // dotnet run CreatePDFFromDocx.csproj
 
 namespace CreatePDFFromDocx
- {
-   class Program
-   {
-     private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-     static void Main()
-     {
-       //Configure the logging
-       ConfigureLogging();
-       try
-       {
-         // Initial setup, create credentials instance.
-         Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                 .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                 .Build();
+{
+    class Program
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
+        {
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
-         //Create an ExecutionContext using credentials and create a new operation instance.
-         ExecutionContext executionContext = ExecutionContext.Create(credentials);
-         CreatePDFOperation createPdfOperation = CreatePDFOperation.CreateNew();
+                //Create an ExecutionContext using credentials and create a new operation instance.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                CreatePDFOperation createPdfOperation = CreatePDFOperation.CreateNew();
 
-         // Set operation input from a source file.
-         FileRef source = FileRef.CreateFromLocalFile(@"createPdfInput.docx");
-         createPdfOperation.SetInput(source);
+                // Set operation input from a source file.
+                FileRef source = FileRef.CreateFromLocalFile(@"createPdfInput.docx");
+                createPdfOperation.SetInput(source);
 
-         // Execute the operation.
-         FileRef result = createPdfOperation.Execute(executionContext);
+                // Execute the operation.
+                FileRef result = createPdfOperation.Execute(executionContext);
 
-         // Save the result to the specified location.
-         result.SaveAs(Directory.GetCurrentDirectory() + "/output/createPdfOutput.pdf");
-       }
-       catch (ServiceUsageException ex)
-       {
-         log.Error("Exception encountered while executing operation", ex);
-       }
-       // Catch more errors here. . .
-     }
+                // Save the result to the specified location.
+                result.SaveAs(Directory.GetCurrentDirectory() + "/output/createPdfOutput.pdf");
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            // Catch more errors here. . .
+        }
 
-     static void ConfigureLogging()
-     {
-       ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-       XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-     }
-   }
- }
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
+    }
+}
 ```
 
 #### Java
@@ -133,20 +133,28 @@ public class CreatePDFFromDOCX {
 
     // Initialize the logger.
     private static final Logger LOGGER = LoggerFactory.getLogger(CreatePDFFromDOCX .class);
+
     public static void main(String[] args) {
+
         try {
 
             // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                    .fromFile("pdfservices-api-credentials.json").build();
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
+
             //Create an ExecutionContext using credentials and create a new operation instance.
             ExecutionContext executionContext = ExecutionContext.create(credentials);
             CreatePDFOperation createPdfOperation = CreatePDFOperation.createNew();
+
             // Set operation input from a source file.
             FileRef source = FileRef.createFromLocalFile("src/main/resources/createPDFInput.docx");
             createPdfOperation.setInput(source);
+
             // Execute the operation.
             FileRef result = createPdfOperation.execute(executionContext);
+
             // Save the result to the specified location.
             result.saveAs("output/createPDFFromDOCX.pdf");
 

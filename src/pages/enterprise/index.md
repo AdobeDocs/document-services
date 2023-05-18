@@ -19,7 +19,7 @@ Get 1,000 document transactions for free.
 
 abm-landing-page-hero
 
-- [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
 <!-- Why Adobe Acrobat Services -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
@@ -103,9 +103,9 @@ See how our customers are building smarter and faster document experiences.
 
 ### Get started today.
 
-Activate your free trial and build better document workflows today.
+Activate your free tier and build better document workflows today.
 
-- [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Talk to an expert](/pricing/contact/)
 
 <APIPixelRetargeting/>

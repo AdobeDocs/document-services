@@ -25,10 +25,14 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
+    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
     "splitoption": {
+        "pageCount": 9
+    }
+}'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-splitPDF
+// https://documentcloud.adobe.com/document-services/index.html#post-splitPDF
 ```
 
 #### Node js
@@ -38,50 +42,51 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
 // Run the sample:
 // node src/splitpdf/split-pdf-by-number-of-pages.js
 
- const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
- try {
-   // Initial setup, create credentials instance.
-   const credentials =  PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile("pdfservices-api-credentials.json")
-       .build();
+try {
+    // Initial setup, create credentials instance.
+    const credentials =  PDFServicesSdk.Credentials
+        .servicePrincipalCredentialsBuilder()
+        .withClientId("PDF_SERVICES_CLIENT_ID")
+        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+        .build();
 
-   // Create an ExecutionContext using credentials
-   const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
+    // Create an ExecutionContext using credentials
+    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
 
-   // Create a new operation instance.
-   const splitPDFOperation = PDFServicesSdk.SplitPDF.Operation.createNew(),
-       input = PDFServicesSdk.FileRef.createFromLocalFile(
-           'resources/splitPDFInput.pdf',
-           PDFServicesSdk.SplitPDF.SupportedSourceFormat.pdf
-       );
-   // Set operation input from a source file.
-   splitPDFOperation.setInput(input);
+    // Create a new operation instance.
+    const splitPDFOperation = PDFServicesSdk.SplitPDF.Operation.createNew(),
+        input = PDFServicesSdk.FileRef.createFromLocalFile(
+            'resources/splitPDFInput.pdf',
+            PDFServicesSdk.SplitPDF.SupportedSourceFormat.pdf
+        );
+    // Set operation input from a source file.
+    splitPDFOperation.setInput(input);
 
-   // Set the maximum number of pages each of the output files can have.
-   splitPDFOperation.setPageCount(2);
+    // Set the maximum number of pages each of the output files can have.
+    splitPDFOperation.setPageCount(2);
 
-   // Execute the operation and Save the result to the specified location.
-   splitPDFOperation.execute(executionContext)
-       .then(result => {
-           let saveFilesPromises = [];
-           for(let i = 0; i < result.length; i++){
-               saveFilesPromises.push(result[i].saveAsFile(`output/SplitPDFByNumberOfPagesOutput_${i}.pdf`));
-           }
-           return Promise.all(saveFilesPromises);
-       })
-       .catch(err => {
-           if(err instanceof PDFServicesSdk.Error.ServiceApiError
-               || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-               console.log('Exception encountered while executing operation', err);
-           } else {
-               console.log('Exception encountered while executing operation', err);
-           }
-       });
- } catch (err) {
-   console.log('Exception encountered while executing operation', err);
- }
+    // Execute the operation and Save the result to the specified location.
+    splitPDFOperation.execute(executionContext)
+        .then(result => {
+            let saveFilesPromises = [];
+            for(let i = 0; i < result.length; i++){
+                saveFilesPromises.push(result[i].saveAsFile(`output/SplitPDFByNumberOfPagesOutput_${i}.pdf`));
+            }
+            return Promise.all(saveFilesPromises);
+        })
+        .catch(err => {
+            if(err instanceof PDFServicesSdk.Error.ServiceApiError
+                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                console.log('Exception encountered while executing operation', err);
+            } else {
+                console.log('Exception encountered while executing operation', err);
+            }
+        });
+} catch (err) {
+    console.log('Exception encountered while executing operation', err);
+}
 ```
 
 #### .Net
@@ -92,61 +97,62 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
 // cd SplitPDFByNumberOfPages/
 // dotnet run SplitPDFByNumberOfPages.csproj
 
-   namespace SplitPDFByNumberOfPages
-   {
-     class Program
-     {
-         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-         static void Main()
-         {
-             //Configure the logging
-             ConfigureLogging();
-             try
-             {
-                 // Initial setup, create credentials instance.
-                 Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                                 .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                                 .Build();
+namespace SplitPDFByNumberOfPages
+{
+    class Program
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
+        {
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
-                 // Create an ExecutionContext using credentials.
-                 ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                // Create an ExecutionContext using credentials.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
 
-                 // Create a new operation instance
-                 SplitPDFOperation splitPDFOperation = SplitPDFOperation.CreateNew();
+                // Create a new operation instance
+                SplitPDFOperation splitPDFOperation = SplitPDFOperation.CreateNew();
 
-                 // Set operation input from a source file.
-                 FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"splitPDFInput.pdf");
-                 splitPDFOperation.SetInput(sourceFileRef);
+                // Set operation input from a source file.
+                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"splitPDFInput.pdf");
+                splitPDFOperation.SetInput(sourceFileRef);
 
-                 // Set the maximum number of pages each of the output files can have.
-                 splitPDFOperation.SetPageCount(2);
+                // Set the maximum number of pages each of the output files can have.
+                splitPDFOperation.SetPageCount(2);
 
-                 // Execute the operation.
-                 List result = splitPDFOperation.Execute(executionContext);
+                // Execute the operation.
+                List result = splitPDFOperation.Execute(executionContext);
 
-                 // Save the result to the specified location.
-                 int index = 0;
-                 foreach (FileRef fileRef in result)
-                 {
-                     fileRef.SaveAs(Directory.GetCurrentDirectory() + "/output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
-                     index++;
-                 }
+                // Save the result to the specified location.
+                int index = 0;
+                foreach (FileRef fileRef in result)
+                {
+                    fileRef.SaveAs(Directory.GetCurrentDirectory() + "/output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
+                    index++;
+                }
 
-             }
-             catch (ServiceUsageException ex)
-             {
-                 log.Error("Exception encountered while executing operation", ex);
-             }
-             // Catch more errors here . . .
-         }
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            // Catch more errors here . . .
+        }
 
-         static void ConfigureLogging()
-         {
-             ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-         }
-     }
-   }
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
+    }
+}
 ```
 
 #### Java
@@ -156,43 +162,44 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.splitpdf.SplitPDFByNumberOfPages
 
-   public class SplitPDFByNumberOfPages {
+public class SplitPDFByNumberOfPages {
 
-     // Initialize the logger.
-     private static final Logger LOGGER = LoggerFactory.getLogger(SplitPDFByNumberOfPages.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(SplitPDFByNumberOfPages.class);
 
-     public static void main(String[] args) {
-         try {
-             // Initial setup, create credentials instance.
-             Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                     .fromFile("pdfservices-api-credentials.json")
-                     .build();
+    public static void main(String[] args) {
+        try {
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
-             // Create an ExecutionContext using credentials and create a new operation instance.
-             ExecutionContext executionContext = ExecutionContext.create(credentials);
-             SplitPDFOperation splitPDFOperation = SplitPDFOperation.createNew();
+            // Create an ExecutionContext using credentials and create a new operation instance.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            SplitPDFOperation splitPDFOperation = SplitPDFOperation.createNew();
 
-             // Set operation input from a source file.
-             FileRef source = FileRef.createFromLocalFile("src/main/resources/splitPDFInput.pdf");
-             splitPDFOperation.setInput(source);
+            // Set operation input from a source file.
+            FileRef source = FileRef.createFromLocalFile("src/main/resources/splitPDFInput.pdf");
+            splitPDFOperation.setInput(source);
 
-             // Set the maximum number of pages each of the output files can have.
-             splitPDFOperation.setPageCount(2);
+            // Set the maximum number of pages each of the output files can have.
+            splitPDFOperation.setPageCount(2);
 
-             // Execute the operation.
-             List result = splitPDFOperation.execute(executionContext);
+            // Execute the operation.
+            List result = splitPDFOperation.execute(executionContext);
 
-             // Save the result to the specified location.
-             int index = 0;
-             for (FileRef fileRef : result) {
-                 fileRef.saveAs("output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
-                 index++;
-             }
+            // Save the result to the specified location.
+            int index = 0;
+            for (FileRef fileRef : result) {
+                fileRef.saveAs("output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
+                index++;
+            }
 
-         } catch (IOException| ServiceApiException | SdkException | ServiceUsageException e) {
-             LOGGER.error("Exception encountered while executing operation", e);
-         }
-     }
+        } catch (IOException| ServiceApiException | SdkException | ServiceUsageException e) {
+            LOGGER.error("Exception encountered while executing operation", e);
+        }
+    }
 
-   }
+}
 ```

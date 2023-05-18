@@ -996,6 +996,20 @@ pre .prism-code.spectrum-Code {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    word-break: break-word !important;
+}
+
+pre .prism-code.spectrum-Code>div>span:first-child{
+    white-space: nowrap !important;
+}
+
+pre .prism-code.spectrum-Code::-webkit-scrollbar {
+    background-color: transparent !important;
+}
+
+pre.prism-code.spectrum-Code {
+    scrollbar-color: transparent !important;
+    scrollbar-width: thin !important;
 }
 
 @media screen and (max-width: 1024px) {
@@ -3133,5 +3147,46 @@ img[alt=adobe-support] {
 
 .custom-stories-grid > div > div > div > div > div > div > div {
     width: auto;
-    height: var(--spectrum-global-dimension-size-1125) !important;
+}
+
+.Designed-for-developers #tabItem_2 img, .service-code-block #tabItem_5 img{
+    width: 75% !important;
+    margin: auto !important;
+}
+
+.custom-stories-grid>div>div>div:first-child{
+    display: none !important;
+}
+
+.custom-stories-grid>div>div>div:nth-child(2)>div{
+     grid-template-columns: repeat(auto-fit, calc(var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-1000))) !important;
+}
+
+.custom-stories-grid>div>div>div:nth-child(2)>div>div{
+    width: var(--spectrum-global-dimension-size-3600) !important;
+}
+
+.custom-stories-grid>div>div>div:nth-child(2)>div>div>div{
+        overflow: hidden !important;
+}
+
+.custom-stories-grid>div>div>div:nth-child(2)>div>div>div:nth-child(2){
+    margin: 3% 0 0 0 !important;
+}
+
+@media screen and (min-width: 375px) and (max-width:1024px){
+    .custom-stories-grid>div>div>div:nth-child(2)>div>div{
+        height: calc(var(--spectrum-global-dimension-size-6000) - var(--spectrum-global-dimension-size-1700)) !important;
+    }
+
+}
+
+@media screen and (min-width: 375px) and (max-width:767px){
+    .custom-stories-grid>div{
+        width: calc(3.5 * var(--spectrum-global-dimension-static-grid-fixed-max-width) / var(--spectrum-global-dimension-static-grid-columns))!important;
+    }
+
+    .custom-stories-grid>div>div>div:nth-child(2)>div{
+        margin: auto !important;
+    }
 }

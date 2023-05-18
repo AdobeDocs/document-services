@@ -41,7 +41,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-pageManipulation
+// https://documentcloud.adobe.com/document-services/index.html#post-pageManipulation
 ```
 
 #### Node js
@@ -51,53 +51,53 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 // Run the sample:
 // node src/replacepages/replace-pdf-pages.js
 
- const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
- const getPageRangesForDeletion = () => {
-   // Specify pages for deletion.
-   const pageRangesForDeletion = new PDFServicesSdk.PageRanges();
-   // Add page 1.
-   pageRangesForDeletion.addSinglePage(1);
+const getPageRangesForDeletion = () => {
+    // Specify pages for deletion.
+    const pageRangesForDeletion = new PDFServicesSdk.PageRanges();
+    // Add page 1.
+    pageRangesForDeletion.addSinglePage(1);
 
-   // Add pages 3 to 4.
-   pageRangesForDeletion.addPageRange(3, 4);
-   return pageRangesForDeletion;
- };
+    // Add pages 3 to 4.
+    pageRangesForDeletion.addPageRange(3, 4);
+    return pageRangesForDeletion;
+};
 
- try {
-   // Initial setup, create credentials instance.
-   const credentials = PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile("pdfservices-api-credentials.json")
-       .build();
+try {
+    // Initial setup, create credentials instance.
+    const credentials =  PDFServicesSdk.Credentials
+        .servicePrincipalCredentialsBuilder()
+        .withClientId("PDF_SERVICES_CLIENT_ID")
+        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+        .build();
 
-   // Create an ExecutionContext using credentials and create a new operation instance.
-   const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-       deletePagesOperation = PDFServicesSdk.DeletePages.Operation.createNew();
+    // Create an ExecutionContext using credentials and create a new operation instance.
+    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
+    deletePagesOperation = PDFServicesSdk.DeletePages.Operation.createNew();
 
-   // Set operation input from a source file.
-   const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/deletePagesInput.pdf');
-   deletePagesOperation.setInput(input);
+    // Set operation input from a source file.
+    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/deletePagesInput.pdf');
+    deletePagesOperation.setInput(input);
 
-   // Delete pages of the document (as specified by PageRanges).
-   const pageRangesForDeletion = getPageRangesForDeletion();
-   deletePagesOperation.setPageRanges(pageRangesForDeletion);
+    // Delete pages of the document (as specified by PageRanges).
+    const pageRangesForDeletion = getPageRangesForDeletion();
+    deletePagesOperation.setPageRanges(pageRangesForDeletion);
 
-   // Execute the operation and Save the result to the specified location.
-   deletePagesOperation.execute(executionContext)
-       .then(result => result.saveAsFile('output/deletePagesOutput.pdf'))
-       .catch(err => {
-           if (err instanceof PDFServicesSdk.Error.ServiceApiError
-               || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-               console.log('Exception encountered while executing operation', err);
-           } else {
-               console.log('Exception encountered while executing operation', err);
-           }
-       });
- } catch (err) {
-   console.log('Exception encountered while executing operation', err);
- }
-
+    // Execute the operation and Save the result to the specified location.
+    deletePagesOperation.execute(executionContext)
+        .then(result => result.saveAsFile('output/deletePagesOutput.pdf'))
+        .catch(err => {
+            if (err instanceof PDFServicesSdk.Error.ServiceApiError
+                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                console.log('Exception encountered while executing operation', err);
+            } else {
+                console.log('Exception encountered while executing operation', err);
+            }
+        });
+} catch (err) {
+    console.log('Exception encountered while executing operation', err);
+}
 ```
 
 #### .Net
@@ -108,68 +108,69 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 // cd DeletePDFPages/
 // dotnet run DeletePDFPages.csproj
 
-    namespace DeletePDFPages
+namespace DeletePDFPages
+{
+    class Program
     {
-      class Program
-      {
-          private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-          static void Main()
-          {
-              // Configure the logging
-              ConfigureLogging();
-              try
-              {
-                  // Initial setup, create credentials instance.
-                  Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                                  .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                                  .Build();
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
+        {
+            // Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
-                  // Create an ExecutionContext using credentials.
-                  ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                // Create an ExecutionContext using credentials.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
 
-                  // Create a new operation instance
-                  DeletePagesOperation deletePagesOperation = DeletePagesOperation.CreateNew();
+                // Create a new operation instance
+                DeletePagesOperation deletePagesOperation = DeletePagesOperation.CreateNew();
 
-                  // Set operation input from a source file.
-                  FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"deletePagesInput.pdf");
-                  deletePagesOperation.SetInput(sourceFileRef);
+                // Set operation input from a source file.
+                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"deletePagesInput.pdf");
+                deletePagesOperation.SetInput(sourceFileRef);
 
-                  // Delete pages of the document (as specified by PageRanges).
-                  PageRanges pageRangeForDeletion = GetPageRangeForDeletion();
-                  deletePagesOperation.SetPageRanges(pageRangeForDeletion);
+                // Delete pages of the document (as specified by PageRanges).
+                PageRanges pageRangeForDeletion = GetPageRangeForDeletion();
+                deletePagesOperation.SetPageRanges(pageRangeForDeletion);
 
-                  // Execute the operation.
-                  FileRef result = deletePagesOperation.Execute(executionContext);
+                // Execute the operation.
+                FileRef result = deletePagesOperation.Execute(executionContext);
 
-                  // Save the result to the specified location.
-                  result.SaveAs(Directory.GetCurrentDirectory() + "/output/deletePagesOutput.pdf");
-              }
-              catch (ServiceUsageException ex)
-              {
-                  log.Error("Exception encountered while executing operation", ex);
-              }
-              // Catch more errors here . . .
-          }
+                // Save the result to the specified location.
+                result.SaveAs(Directory.GetCurrentDirectory() + "/output/deletePagesOutput.pdf");
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            // Catch more errors here . . .
+        }
 
-          private static PageRanges GetPageRangeForDeletion()
-          {
-              // Specify pages for deletion.
-              PageRanges pageRangeForDeletion = new PageRanges();
-              // Add page 1.
-              pageRangeForDeletion.AddSinglePage(1);
+        private static PageRanges GetPageRangeForDeletion()
+        {
+            // Specify pages for deletion.
+            PageRanges pageRangeForDeletion = new PageRanges();
+            // Add page 1.
+            pageRangeForDeletion.AddSinglePage(1);
 
-              // Add pages 3 to 4.
-              pageRangeForDeletion.AddRange(3, 4);
-              return pageRangeForDeletion;
-          }
+            // Add pages 3 to 4.
+            pageRangeForDeletion.AddRange(3, 4);
+            return pageRangeForDeletion;
+        }
 
-          static void ConfigureLogging()
-          {
-              ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-              XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-          }
-      }
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
     }
+}
 ```
 
 #### Java
@@ -180,50 +181,51 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.deletepages.DeletePDFPages
 
 
-   public class DeletePDFPages {
+public class DeletePDFPages {
 
-   // Initialize the logger.
-   private static final Logger LOGGER = LoggerFactory.getLogger(DeletePDFPages.class);
+// Initialize the logger.
+private static final Logger LOGGER = LoggerFactory.getLogger(DeletePDFPages.class);
 
-   public static void main(String[] args) {
-       try {
-           // Initial setup, create credentials instance.
-           Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                   .fromFile("pdfservices-api-credentials.json")
-                   .build();
+public static void main(String[] args) {
+    try {
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
-           // Create an ExecutionContext using credentials and create a new operation instance.
-           ExecutionContext executionContext = ExecutionContext.create(credentials);
-           DeletePagesOperation deletePagesOperation = DeletePagesOperation.createNew();
+            // Create an ExecutionContext using credentials and create a new operation instance.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            DeletePagesOperation deletePagesOperation = DeletePagesOperation.createNew();
 
-           // Set operation input from a source file.
-           FileRef source = FileRef.createFromLocalFile("src/main/resources/deletePagesInput.pdf");
-           deletePagesOperation.setInput(source);
+            // Set operation input from a source file.
+            FileRef source = FileRef.createFromLocalFile("src/main/resources/deletePagesInput.pdf");
+            deletePagesOperation.setInput(source);
 
-           // Delete pages of the document (as specified by PageRanges).
-           PageRanges pageRangeForDeletion = getPageRangeForDeletion();
-           deletePagesOperation.setPageRanges(pageRangeForDeletion);
+            // Delete pages of the document (as specified by PageRanges).
+            PageRanges pageRangeForDeletion = getPageRangeForDeletion();
+            deletePagesOperation.setPageRanges(pageRangeForDeletion);
 
-           // Execute the operation.
-           FileRef result = deletePagesOperation.execute(executionContext);
+            // Execute the operation.
+            FileRef result = deletePagesOperation.execute(executionContext);
 
-           // Save the result to the specified location.
-           result.saveAs("output/deletePagesOutput.pdf");
+            // Save the result to the specified location.
+            result.saveAs("output/deletePagesOutput.pdf");
 
-       } catch (IOException | ServiceApiException | SdkException | ServiceUsageException e) {
-           LOGGER.error("Exception encountered while executing operation", e);
-       }
-   }
+        } catch (IOException | ServiceApiException | SdkException | ServiceUsageException e) {
+            LOGGER.error("Exception encountered while executing operation", e);
+        }
+    }
 
-   private static PageRanges getPageRangeForDeletion() {
-       // Specify pages for deletion.
-       PageRanges pageRangeForDeletion = new PageRanges();
-       // Add page 1.
-       pageRangeForDeletion.addSinglePage(1);
+    private static PageRanges getPageRangeForDeletion() {
+        // Specify pages for deletion.
+        PageRanges pageRangeForDeletion = new PageRanges();
+        // Add page 1.
+        pageRangeForDeletion.addSinglePage(1);
 
-       // Add pages 3 to 4.
-       pageRangeForDeletion.addRange(3, 4);
-       return pageRangeForDeletion;
-   }
- }
+        // Add pages 3 to 4.
+        pageRangeForDeletion.addRange(3, 4);
+        return pageRangeForDeletion;
+    }
+}
 ```

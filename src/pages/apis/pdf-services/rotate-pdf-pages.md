@@ -25,7 +25,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
-    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718",
+    "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718f",
     "pageActions": [
         {
             "rotate": {
@@ -52,7 +52,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-pageManipulation
+// https://documentcloud.adobe.com/document-services/index.html#post-pageManipulation
 ```
 
 #### Node js
@@ -62,9 +62,9 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 // Run the sample:
 // node src/rotatepages/rotate-pdf-pages.js
 
-  const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
-  const getFirstPageRangeForRotation = () => {
+const getFirstPageRangeForRotation = () => {
     // Specify pages for rotation.
     const firstPageRange = new PDFServicesSdk.PageRanges();
     // Add page 1.
@@ -74,39 +74,38 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
     firstPageRange.addPageRange(3, 4);
 
     return firstPageRange;
-  };
+};
 
-  const getSecondPageRangeForRotation = () => {
+const getSecondPageRangeForRotation = () => {
     // Specify pages for rotation.
     const secondPageRange = new PDFServicesSdk.PageRanges();
     // Add page 2.
     secondPageRange.addSinglePage(2);
 
     return secondPageRange;
-  };
+};
 
-  try {
+try {
     // Initial setup, create credentials instance.
-    const credentials = PDFServicesSdk.Credentials
-        .serviceAccountCredentialsBuilder()
-        .fromFile("pdfservices-api-credentials.json")
+    const credentials =  PDFServicesSdk.Credentials
+        .servicePrincipalCredentialsBuilder()
+        .withClientId("PDF_SERVICES_CLIENT_ID")
+        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
         .build();
 
     // Create an ExecutionContext using credentials and create a new operation instance.
     const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-        rotatePagesOperation = PDFServicesSdk.RotatePages.Operation.createNew();
+    rotatePagesOperation = PDFServicesSdk.RotatePages.Operation.createNew();
 
     // Set operation input from a source file.
     const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/rotatePagesInput.pdf');
     rotatePagesOperation.setInput(input);
 
-    // Sets angle by 90 degrees (in clockwise direction) for rotating the specified pages of
-    // the input PDF file.
+    // Sets angle by 90 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
     const firstPageRange = getFirstPageRangeForRotation();
     rotatePagesOperation.setAngleToRotatePagesBy(PDFServicesSdk.RotatePages.Angle._90, firstPageRange);
 
-    // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of
-    // the input PDF file.
+    // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
     const secondPageRange = getSecondPageRangeForRotation();
     rotatePagesOperation.setAngleToRotatePagesBy(PDFServicesSdk.RotatePages.Angle._180,secondPageRange);
 
@@ -121,9 +120,9 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
                 console.log('Exception encountered while executing operation', err);
             }
         });
-  } catch (err) {
+} catch (err) {
     console.log('Exception encountered while executing operation', err);
-  }
+}
 ```
 
 #### .Net
@@ -134,8 +133,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 // cd RotatePDFPages/
 // dotnet run RotatePDFPages.csproj
 
-  namespace RotatePDFPages
-  {
+namespace RotatePDFPages
+{
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
@@ -146,9 +145,10 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
             try
             {
                 // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                                .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                                .Build();
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
                 // Create an ExecutionContext using credentials.
                 ExecutionContext executionContext = ExecutionContext.Create(credentials);
@@ -160,13 +160,11 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
                 FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"rotatePagesInput.pdf");
                 rotatePagesOperation.SetInput(sourceFileRef);
 
-                // Sets angle by 90 degrees (in clockwise direction) for rotating the specified pages of
-                // the input PDF file.
+                // Sets angle by 90 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
                 PageRanges firstPageRange = GetFirstPageRangeForRotation();
                 rotatePagesOperation.SetAngleToRotatePagesBy(Angle._90, firstPageRange);
 
-                // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of
-                // the input PDF file.
+                // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
                 PageRanges secondPageRange = GetSecondPageRangeForRotation();
                 rotatePagesOperation.SetAngleToRotatePagesBy(Angle._180, secondPageRange);
 
@@ -211,7 +209,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
             return secondPageRange;
         }
     }
-  }
+}
 ```
 
 #### Java
@@ -221,7 +219,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.rotatepages.RotatePDFPages
 
-  public class RotatePDFPages {
+public class RotatePDFPages {
 
     // Initialize the logger.
     private static final Logger LOGGER = LoggerFactory.getLogger(RotatePDFPages.class);
@@ -229,9 +227,10 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
     public static void main(String[] args) {
         try {
             // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                    .fromFile("pdfservices-api-credentials.json")
-                    .build();
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
             // Create an ExecutionContext using credentials and create a new operation instance.
             ExecutionContext executionContext = ExecutionContext.create(credentials);
@@ -241,13 +240,11 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
             FileRef source = FileRef.createFromLocalFile("src/main/resources/rotatePagesInput.pdf");
             rotatePagesOperation.setInput(source);
 
-            // Sets angle by 90 degrees (in clockwise direction) for rotating the specified pages of
-            // the input PDF file.
+            // Sets angle by 90 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
             PageRanges firstPageRange = getFirstPageRangeForRotation();
             rotatePagesOperation.setAngleToRotatePagesBy(Angle._90, firstPageRange);
 
-            // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of
-            // the input PDF file.
+            // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
             PageRanges secondPageRange = getSecondPageRangeForRotation();
             rotatePagesOperation.setAngleToRotatePagesBy(Angle._180, secondPageRange);
 
@@ -281,5 +278,5 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 
         return secondPageRange;
     }
-  }
+}
 ```

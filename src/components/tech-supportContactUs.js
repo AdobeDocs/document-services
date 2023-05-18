@@ -65,9 +65,9 @@ const issue_sub_url_array = [
   {
     issue_type: "Account Management",
     sub_issue_type:
-      "Why do I have to use a personal account when setting up a trial or account? Why can't I use my company's existing enterprise email/account?",
+      "Why do I have to use a personal account when setting up a Free tier or account? Why can't I use my company's existing enterprise email/account?",
     sub_issue_type_id:
-      "account-management-why-do-i-have-to-use-a-personal-account-when-setting-up-a-trial-or-account"
+      "account-management-why-do-i-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account"
   },
   {
     issue_type: "Account Management",
@@ -85,9 +85,9 @@ const issue_sub_url_array = [
   {
     issue_type: "Account Management",
     sub_issue_type:
-      "Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?",
+      "Can I continue using my same Free Tier credentials when I pay for Adobe Acrobat Services?",
     sub_issue_type_id:
-      "account-management-can-i-continue-using-my-same-trial-credentials"
+      "account-management-can-i-continue-using-my-same-free-tier-credentials"
   },
   {
     issue_type: "Data Security & Privacy",
