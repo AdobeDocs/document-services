@@ -1,7 +1,7 @@
 <AnnouncementBlock slots="heading, text, button" variantStyleFill='outline' variantsTypePrimary='secondary' className='ms-announcement-blade'/>
 
-### Sign up for a preview program of Adobe Acrobat Sign Workflow Automate integrated with Microsoft Power Automate.
+### Try Adobe Acrobat Sign Workflow Automation integrated with Microsoft Power Automate.
 
-Register for the opportunity to experience an even simpler way to automate your e-signature work.
+Goodbye, repetitive tasks. Now, use Power Automate from within Acrobat Sign.
 
-[Register now](https://www.adobeprerelease.com/beta/D57F06A0-643A-47B3-8E8B-14C918E91739#)
+[Learn more](https://blog.adobe.com/en/publish/2023/05/23/low-code-end-to-end-e-signature-workflow-automation-within-adobe-acrobat-sign)

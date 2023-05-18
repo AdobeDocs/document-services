@@ -6,7 +6,7 @@
 
 ## Step 1
 
-Sign up for a free trial.
+Sign up for a free tier.
 
 - [Get started](https://www.adobe.com/go/powerautomate_getstarted)
 

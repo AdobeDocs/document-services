@@ -38,7 +38,7 @@ Get started quickly with 75+ ready-to-use templates for workflows using Adobe PD
 
 Integrate Microsoft Dynamics and Power Automate with Adobe Experience Manager Forms for form review workflows. Deliver seamless enrollment experiences with Adobe and Microsoft solutions.
 
-- [Learn more](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-microsoft-power-automate-integration.html)
+- [Learn more](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/forms-cs-and-power-automate/integrate-formscs-power-automate.html?lang=en)
 
 ![EMPTY_ALT](../../images/forms_Image_Desktop.jpg)
 
