@@ -365,8 +365,23 @@ const DynamicContentLoader = ({
             <div class="stories-container">
               <div className="header-and-more">
                 <h3 className="spectrum-Heading spectrum-Heading--sizeL">
-                Customer stories
+                  Customer stories
                 </h3>
+                <a
+                  href="/document-services/resources/customer-stories/"
+                  target="_blank"
+                  rel="noreferrer"
+                  css={css`
+                    text-decoration: none;
+                  `}
+                >
+                  <div className="more-items">
+                    <span>All customer stories</span>
+                    <div className="more-arrow1">
+                      <div className="arrow1 right"></div>
+                    </div>
+                  </div>
+                </a>
               </div>
               <div class="headliner spectrum-Body--sizeL">
                 See how our customers are building great experiences and succeeding with Adobe
