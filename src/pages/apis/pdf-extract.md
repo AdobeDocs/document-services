@@ -40,8 +40,6 @@ apiHeroAssetImg doc-ext-invoice
 
 <ExtractStepperComponent />
 
-<EsealApiAnnouncement/>
-
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
 
 <PdfExtractResourceTitle/>
