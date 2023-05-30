@@ -18,7 +18,7 @@ Combining PDF file format accessibility features with Adobe Acrobat and Adobe Re
 
 ![EMPTY_ALT](../../images/8_Creating_accessible_PDFs_Image.jpg)
 
-## Creating accessibile PDFs
+## Creating accessible PDFs
 
 Create accessible PDFs by following the steps outlined in this workflow.
 
