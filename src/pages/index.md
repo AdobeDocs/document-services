@@ -27,14 +27,6 @@ From the company who created the PDF standard.
 
 homeheroAssertImage
 
-<AnnouncementBlock slots="heading, text, button" className='ms-announcement-blade' theme="dark"/>
-
-### Join the Beta program for our new Adobe PDF Electronic Seal API
-
-Sign up for the opportunity to try our latest API that helps you verify the identity and integrity of documents using an electronic seal.
-
-[Register now](src/pages/pricing/contact/sales/seal)
-
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
 
 ![EMPTY_ALT](images/pdfServices.jpg)
