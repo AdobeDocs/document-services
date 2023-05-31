@@ -4,4 +4,4 @@
 
 Goodbye, repetitive tasks. Now, use Power Automate from within Acrobat Sign.
 
-[Register now](https://blog.adobe.com/en/publish/2023/05/23/low-code-end-to-end-e-signature-workflow-automation-within-adobe-acrobat-sign)
+[Learn more](https://blog.adobe.com/en/publish/2023/05/23/low-code-end-to-end-e-signature-workflow-automation-within-adobe-acrobat-sign)
