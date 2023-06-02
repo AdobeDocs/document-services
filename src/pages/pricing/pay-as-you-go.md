@@ -8,9 +8,9 @@ title: Adobe Developer — DC Platform SDK Resources
 
 <TextBlock slots="text" width="100%" theme="light"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 list-points border-right div-p-0 left-content"/>
 
-- 1,000 Document Transactions for up to 6 months
+- 500 free Document Transactions per month
 
-- Access to all 15+ PDF Services including PDF Extract and Document Generation
+- Access to all 15+ PDF Services including PDF Extract, PDF Accessibility Auto-Tag API, and Document Generation
 
 - Easy to sign up and create credentials in minutes
 
