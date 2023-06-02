@@ -6,13 +6,13 @@ title: Adobe Developer — Doc generation — Start Modifying PDFs in a few Minu
 
 ## Get started in minutes
 
-Start free trial with 1,000 Document Transactions for up to 6 months
+Start free tier with 1,000 Document Transactions for up to 6 months
 
 <TextBlock slots="heading, text, buttons" theme="light"  width="33%" className="align-left  stepper-horizontal-align"/>
 
 ## Step 1
 
-Start a free trial and download code samples for Node.js, Java, and .Net
+Start a free tier and download code samples for Node.js, Java, and .Net
 
 - [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
 

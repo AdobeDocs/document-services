@@ -17,7 +17,7 @@
                 },
                 {
                     "qst": "Where do I find my Client ID or API key?",
-                    "ans": "Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the 'client_id' key used in the back-end code to make free trial calls against."
+                    "ans": "Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the 'client_id' key used in the back-end code to make free tier calls against."
                 },
                 {
                     "qst": "If I already have credentials and need new ones, how do I get them?",
@@ -25,7 +25,7 @@
                 },
                 {
                     "qst": "Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?",
-                    "ans": "You should not use your free trial credentials (Credential Key aka API Key) beyond your trial. When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials."
+                    "ans": "You should not use your free tier credentials (Credential Key aka API Key) beyond your trial. When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free tier credentials with those new ETLA credentials."
                 }
             ]
         },

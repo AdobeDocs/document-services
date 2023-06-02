@@ -24,7 +24,7 @@ Access to Adobe Acrobat Services APIs or SDKs is only available when it is attac
 
 <AccordionItem header="Where do I find my Client ID or API key?" slot_id="account-managment-where-do-i-find-my-client-id-or-api-key">
 
-Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the "client_id" key used in the back-end code to make free trial calls against. You can always access your Client ID from your Adobe Developer Console: <a href="<https://console.adobe.io>">https://console.adobe.io</a>
+Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the "client_id" key used in the back-end code to make free tier calls against. You can always access your Client ID from your Adobe Developer Console: <a href="<https://console.adobe.io>">https://console.adobe.io</a>
 
 </AccordionItem>
 
@@ -36,9 +36,9 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 <AccordionItem header='Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?' slot_id="account-management-can-i-continue-using-my-same-trial-credentials">
 
-You should not use your free trial credentials (Credential Key aka API Key) beyond your trial.
+You should not use your free tier credentials (Credential Key aka API Key) beyond your trial.
 
-When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials.
+When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free tier credentials with those new ETLA credentials.
 
 </AccordionItem>
 
@@ -238,30 +238,6 @@ For a quote, you can contact our sales team at: <a href="<https://developer.adob
 <AccordionItem header="What support comes with an ETLA subscription of PDF Services API?" slot_id="pricing-what-support-comes-with-an-ETLA-subscription-of-pdf-services-API">
 
 Customers with an Adobe Enterprise Term License Agreement (ETLA) receive enterprise support and can submit support tickets via the Support Tab in the Admin Console: <a href="<https://helpx.adobe.com/enterprise/using/support-and-expert-services.html>">https://helpx.adobe.com/enterprise/using/support-and-expert-services.html</a>
-
-</AccordionItem>
-
-</Accordion>
-
-## Trials
-
-<Accordion>
-
-<AccordionItem header="What trial does Adobe offer for PDF Services API?" slot_id="trials-what-trial-does-adobe-offer-for-pdf-services-api">
-
-The free trial program for the Adobe PDF Services API provides credentials that enable the processing of 1,000 Document Transactions or use of the service for six months, whichever is earlier, so that you can test and validate the features included in the API.
-
-</AccordionItem>
-
-<AccordionItem header="Can I extend my trial of PDF Services API?" slot_id="trials-can-i-extend-my-trial-of-pdf-services-api">
-
-Trial extensions can be granted at Adobe's discretion. If you'd like to request a trial extension, fill out the contact us form: <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
-
-</AccordionItem>
-
-<AccordionItem header="What happens after I use up my free trial quota?" slot_id="trials-what-happens-after-i-use-up-my-free-trial-quota">
-
-You will be notified before you reach the limits of the free trial quota. But at any point during the trial, you can meet with an Adobe representative who can answer questions about the trial and how to convert to a commercial agreement using paid credentials.
 
 </AccordionItem>
 

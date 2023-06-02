@@ -28,7 +28,7 @@ import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
 
 ## Key features of Adobe PDF Services API
 
-- [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
 <TabsBlock orientation="vertical" slots="heading, image, content" repeat="19"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
 

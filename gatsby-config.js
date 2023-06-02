@@ -181,10 +181,6 @@ module.exports = {
       {
         title: 'Support',
         path: '/faq/sales/#support',
-      },
-      {
-        title: 'Trials',
-        path: '/faq/sales/#trials',
       }
     ],
     techSupportFAQMenus: [
@@ -229,10 +225,6 @@ module.exports = {
       {
         title: 'Support',
         path: '/faq/sales/#support',
-      },
-      {
-        title: 'Trials',
-        path: '/faq/sales/#trials',
       }
     ],
     subMenuPages: [

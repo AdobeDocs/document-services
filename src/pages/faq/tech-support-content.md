@@ -24,7 +24,7 @@ Access to Adobe Acrobat Services APIs or SDKs is only available when it is attac
 
 <AccordionItem header="Where do I find my Client ID or API key?" slot_id="account-management-where-do-i-find-my-client-id-or-api-key">
 
-Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the "client_id" key used in the back-end code to make free trial calls against.
+Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the "client_id" key used in the back-end code to make free tier calls against.
 
 </AccordionItem>
 
@@ -36,9 +36,9 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 <AccordionItem header='Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?' slot_id="account-management-can-i-continue-using-my-same-trial-credentials">
 
-You should not use your free trial credentials (Credential Key aka API Key) beyond your trial.
+You should not use your free tier credentials (Credential Key aka API Key) beyond your trial.
 
-When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials.
+When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free tier credentials with those new ETLA credentials.
 
 </AccordionItem>
 

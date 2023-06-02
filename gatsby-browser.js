@@ -91,7 +91,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     );
     let startFreeTrialButtonArr = Array.from(
       document.querySelectorAll("a")
-    ).filter(el => el.textContent === "Start free trial");
+    ).filter(el => el.textContent === "Start for free");
     let getStartedButtonArr = Array.from(document.querySelectorAll("a")).filter(
       el => el.textContent === "Get started"
     );
@@ -386,7 +386,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .setAttribute("daa-lh", "ABM Campaign");
       document.querySelectorAll(".Hero-Banner a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
-        if(link.textContent === 'Start free trial'){
+        if (link.textContent === 'Start for free'){
           link.addEventListener("click",()=>reTargetingFun());
           link.href = `${baseurl}`;
           // link.href = `${baseurl}?sdid=2NVQC73G&mv=display`;
@@ -407,7 +407,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document.querySelectorAll(".reimagine a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
-        if(link.textContent === 'Start free trial'){
+        if (link.textContent === 'Start for free'){
           link.addEventListener("click",()=>reTargetingFun());
           link.href = `${baseurl}`;
           // link.href = `${baseurl}?sdid=2K4PCBTH&mv=display`;
@@ -454,7 +454,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .setAttribute("daa-lh", "Get started today.");
       document.querySelectorAll(".get-started-today a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
-        if(link.textContent === 'Start free trial'){
+        if (link.textContent === 'Start for free'){
           link.addEventListener("click",()=>reTargetingFun());
           link.href = `${baseurl}`;
         }
@@ -1033,7 +1033,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       .querySelectorAll(".Key-features-of-Adobe-PDF-Extract-API a")
       .forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
-        if(link.textContent === 'Start free trial'){
+        if (link.textContent === 'Start for free'){
           link.href = `${baseurl}?api=pdf-extract-api`;
         }
       });
@@ -1546,7 +1546,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         })
         document.querySelectorAll(".explore-content-two a").forEach((link)=>{
           link.setAttribute("daa-ll", link.textContent)
-          if(link.textContent === 'Start free trial'){
+          if (link.textContent === 'Start for free'){
             link.href = `${baseurl}`;
           }
         })
