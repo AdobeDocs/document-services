@@ -16,6 +16,7 @@ import CustomerStory from './home/home-storyies.md'
 import {APIPixelRetargeting} from '../components/retargetting'
 import EsealApiAnnouncement from './apis/e-seal-api-announcement.md'
 import AnimationVideo from "./videos/Adobe_DCP_Marquee_Animation.json";
+import ESealAPI from './home/e-seal.md'
 
 <Hero slots="heading, text, buttons, assetsImg" customLayout variant="video" animationVideo={AnimationVideo} className="homeherobgImage Hero-Banner"/>
 
@@ -127,7 +128,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 - [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="5"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="6"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
 
 ### Create PDF from Word
 
@@ -140,6 +141,12 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 ![EMPTY_ALT](images/ic-dynamic-pdf-gen-40.svg)
 
 <DynamicPdfDocumentGeneration/>
+
+### E-seal API
+
+![EMPTY_ALT](images/electronic-seal.svg)
+
+<ESealAPI/>
 
 ### Extract PDF Content & Structure
 
