@@ -56,9 +56,19 @@ This AI-powered API automatically tag tables, paragraphs, lists, headings and mo
 
 ![EMPTY_ALT](images/Accessibility_API.png)
 
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding e-seal-api linking"/>
 
-![EMPTY_ALT](images/pdfExtract.jpg)
+![EMPTY_ALT](images/Electronic_Seal.jpg)
+
+### Adobe PDF Electronic Seal API
+
+### Apply an electronic seal to documents at scale easily.
+
+The PDF Electronic Seal API allows organizations to apply an electronic seal (e-seal) to a PDF document using a digital certificate to verify the identity and integrity of a document. The API provides an end-to-end cloud-based solution and works with certificates from any TSP (Trust Service Provider) or CA (Certifying Authority) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). This can be used seal documents at scale across functions and is included with PDF Services API.
+
+- [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
+
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
 
 ### Adobe PDF Extract API
 
@@ -73,7 +83,11 @@ on both scanned and native PDFs and is included with PDF Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
+![EMPTY_ALT](images/pdfExtract.jpg)
+
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
+
+![EMPTY_ALT](images/docGen.jpg)
 
 ### Adobe Document Generation API
 
@@ -88,11 +102,7 @@ Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
-![EMPTY_ALT](images/docGen.jpg)
-
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
-
-![EMPTY_ALT](images/pdfEmbed.jpg)
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
 
 ### Adobe PDF Embed API
 
@@ -106,6 +116,8 @@ samples for Angular and React.
 
 - [Try the demo](https://acrobatservices.adobe.com/view-sdk-demo/index.html)
 - [Learn more](/src/pages/apis/pdf-embed.md)
+
+![EMPTY_ALT](images/pdfEmbed.jpg)
 
 <DCSummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
 

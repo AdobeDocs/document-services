@@ -304,6 +304,12 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
       });
       document
+        .querySelector(".e-seal-api")
+        .setAttribute("daa-lh", "Adobe PDF Electronic Seal API");
+      document.querySelectorAll(".e-seal-api a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+      document
         .querySelector(".Adobe-PDF-Services-API")
         .setAttribute("daa-lh", "Adobe PDF Services API");
       document.querySelectorAll(".Adobe-PDF-Services-API a").forEach(link => {
