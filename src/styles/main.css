@@ -3135,3 +3135,7 @@ img[alt=adobe-support] {
     width: auto;
     height: var(--spectrum-global-dimension-size-1125) !important;
 }
+
+.Designed-for-developers #tabItem_2 img, .service-code-block #tabItem_5 img{
+    width: 85% !important;
+}

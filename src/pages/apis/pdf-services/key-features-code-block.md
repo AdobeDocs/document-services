@@ -21,6 +21,7 @@ import DeletePDFPages from './delete-pdf-pages.md';
 import RotatePDFPages from './rotate-pdf-pages.md';
 import HTMLToPDF from './html-to-pdf.md';
 import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
+import EsealAPI from './e-seal.md'
 
 <!-- Key Features of Adobe PDF Services API -->
 
@@ -30,7 +31,7 @@ import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
 
 - [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" repeat="19"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
+<TabsBlock orientation="vertical" slots="heading, image, content" repeat="20"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
 
 ### Extract PDF Content
 
@@ -61,6 +62,12 @@ import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
 ![EMPTY_ALT](../../images/ic-dynamic-pdf-gen-40.svg)
 
 <DocumentGeneration/>
+
+### E-seal API
+
+![EMPTY_ALT](../../images/electronic-seal.svg)
+
+<EsealAPI/>
 
 ### Convert PDF
 
