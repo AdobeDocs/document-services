@@ -3137,5 +3137,6 @@ img[alt=adobe-support] {
 }
 
 .Designed-for-developers #tabItem_2 img, .service-code-block #tabItem_5 img{
-    width: 85% !important;
+    width: 75% !important;
+    margin: auto !important;
 }
