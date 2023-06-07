@@ -35,7 +35,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/htmltopd
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-htmlToPDF
+// https://documentcloud.adobe.com/document-services/index.html#post-htmlToPDF
 ```
 
 #### Node js
@@ -63,10 +63,11 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
  try {
    // Initial setup, create credentials instance.
-   const credentials =  PDFServicesSdk.Credentials
-     .serviceAccountCredentialsBuilder()
-     .fromFile("pdfservices-api-credentials.json")
-     .build();
+     const credentials =  PDFServicesSdk.Credentials
+         .servicePrincipalsCredentialsBuilder()
+         .withClientId("PDF_SERVICES_CLIENT_ID")
+         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+         .build();
 
    // Create an ExecutionContext using credentials and create a new operation instance.
    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
@@ -114,10 +115,11 @@ namespace CreatePDFFromStaticHtml
        ConfigureLogging();
        try
        {
-         // Initial setup, create credentials instance.
-         Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                 .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                 .Build();
+           // Initial setup, create credentials instance.
+           Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                .WithClientId("PDF_SERVICES_CLIENT_ID")
+                .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .Build();
 
          //Create an ExecutionContext using credentials and create a new operation instance.
          ExecutionContext executionContext = ExecutionContext.Create(credentials);
@@ -183,9 +185,10 @@ public class CreatePDFFromStaticHTML {
      try {
 
        // Initial setup, create credentials instance.
-       Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-           .fromFile("pdfservices-api-credentials.json")
-           .build();
+       Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+          .withClientId("PDF_SERVICES_CLIENT_ID")
+          .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+          .build();
 
        //Create an ExecutionContext using credentials and create a new operation instance.
        ExecutionContext executionContext = ExecutionContext.create(credentials);

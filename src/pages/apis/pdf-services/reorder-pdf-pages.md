@@ -47,7 +47,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-combinePDF
+// https://documentcloud.adobe.com/document-services/index.html#post-combinePDF
 ```
 
 #### Node js
@@ -73,10 +73,11 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
  };
  try {
    // Initial setup, create credentials instance.
-   const credentials = PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile("pdfservices-api-credentials.json")
-       .build();
+     const credentials =  PDFServicesSdk.Credentials
+         .servicePrincipalsCredentialsBuilder()
+         .withClientId("PDF_SERVICES_CLIENT_ID")
+         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+         .build();
 
    // Create an ExecutionContext using credentials and create a new operation instance.
    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
@@ -125,9 +126,10 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
            try
            {
                // Initial setup, create credentials instance.
-               Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                               .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                               .Build();
+               Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
                // Create an ExecutionContext using credentials.
                ExecutionContext executionContext = ExecutionContext.Create(credentials);
@@ -192,9 +194,10 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
    public static void main(String[] args) {
        try {
            // Initial setup, create credentials instance.
-           Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                   .fromFile("pdfservices-api-credentials.json")
-                   .build();
+           Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                    .withClientId("PDF_SERVICES_CLIENT_ID")
+                    .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .build();
 
            // Create an ExecutionContext using credentials and create a new operation instance.
            ExecutionContext executionContext = ExecutionContext.create(credentials);

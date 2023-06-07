@@ -48,7 +48,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-documentGeneration
+// https://documentcloud.adobe.com/document-services/index.html#post-documentGeneration
 ```
 
 #### Node js
@@ -62,10 +62,11 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 
  try {
    // Initial setup, create credentials instance.
-   const credentials =  PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile("pdfservices-api-credentials.json")
-       .build();
+     const credentials =  PDFServicesSdk.Credentials
+         .servicePrincipalsCredentialsBuilder()
+         .withClientId("PDF_SERVICES_CLIENT_ID")
+         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+         .build();
 
    // Setup input data for the document merge process.
    const jsonString = "{\"customerName\": \"Kane Miller\", \"customerVisits\": 100}",
@@ -116,6 +117,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
        class Program
        {
            private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+
            static void Main()
            {
                //Configure the logging.
@@ -123,8 +125,9 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
                try
                {
                    // Initial setup, create credentials instance.
-                   Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                            .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
+                   Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                            .WithClientId("PDF_SERVICES_CLIENT_ID")
+                            .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
                             .Build();
 
                    // Create an ExecutionContext using credentials.
@@ -169,6 +172,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
                    log.Error("Exception encountered while executing operation", ex);
                }
            }
+
            static void ConfigureLogging()
            {
                ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
@@ -188,29 +192,42 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
    package com.adobe.pdfservices.operation.samples.documentmerge;
 
    public class MergeDocumentToPDF {
+
       // Initialize the logger.
       private static final Logger LOGGER = LoggerFactory.getLogger(MergeDocumentToPDF.class);
+
       public static void main(String[] args) {
+
           try {
+
             // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                    .fromFile("pdfservices-api-credentials.json")
-                    .build();
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
+
             // Setup input data for the document merge process.
             JSONObject jsonDataForMerge = new JSONObject("{\"customerName\": \"Kane Miller\",\"customerVisits\": 100}");
+
             // Create an ExecutionContext using credentials.
             ExecutionContext executionContext = ExecutionContext.create(credentials);
+
             // Create a new DocumentMergeOptions instance.
             DocumentMergeOptions documentMergeOptions = new DocumentMergeOptions(jsonDataForMerge, OutputFormat.PDF);
+
             // Create a new DocumentMergeOperation instance with the DocumentMergeOptions instance.
             DocumentMergeOperation documentMergeOperation = DocumentMergeOperation.createNew(documentMergeOptions);
+
             // Set the operation input document template from a source file.
             FileRef documentTemplate = FileRef.createFromLocalFile("src/main/resources/documentMergeTemplate.docx");
             documentMergeOperation.setInput(documentTemplate);
+
             // Execute the operation.
             FileRef result = documentMergeOperation.execute(executionContext);
+
             // Save the result to the specified location.
             result.saveAs("output/documentMergeOutput.pdf");
+
           } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
               LOGGER.error("Exception encountered while executing operation", ex);
           }
