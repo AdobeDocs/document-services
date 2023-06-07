@@ -24,6 +24,7 @@ See our public  [API Reference](https://developer.adobe.com/document-services/do
 ```bash
 // Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Document-Generation
+
 curl --location --request POST 'https://pdf-services.adobe.io/operation/documentgeneration' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
 --header 'Content-Type: application/json' \
@@ -56,8 +57,9 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
         "photograph": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88h8AAu0B9XNPCQQAAAAASUVORK5CYII="
     }
 }'
+
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-documentGeneration
+// https://documentcloud.adobe.com/document-services/index.html#post-documentGeneration
 ```
 
 #### Node js
@@ -66,27 +68,36 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
 // node src/documentmerge/merge-document-to-docx.js
+
  const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+
  try {
    // Initial setup, create credentials instance.
-   const credentials =  PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile("pdfservices-api-credentials.json")
-       .build();
+     const credentials =  PDFServicesSdk.Credentials
+         .servicePrincipalsCredentialsBuilder()
+         .withClientId("PDF_SERVICES_CLIENT_ID")
+         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+         .build();
+
    // Setup input data for the document merge process.
    const jsonString = "{\"customerName\": \"Kane Miller\", \"customerVisits\": 100}",
        jsonDataForMerge = JSON.parse(jsonString);
+
    // Create an ExecutionContext using credentials.
    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
+
    // Create a new DocumentMerge options instance.
    const documentMerge = PDFServicesSdk.DocumentMerge,
        documentMergeOptions = documentMerge.options,
        options = new documentMergeOptions.DocumentMergeOptions(jsonDataForMerge, documentMergeOptions.OutputFormat.PDF);
+
    // Create a new operation instance using the options instance.
    const documentMergeOperation = documentMerge.Operation.createNew(options);
+
    // Set operation input document template from a source file.
    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/documentMergeTemplate.docx');
    documentMergeOperation.setInput(input);
+
    // Execute the operation and Save the result to the specified location.
    documentMergeOperation.execute(executionContext)
        .then(result => result.saveAsFile('output/documentMergeOutput.pdf'))
@@ -111,6 +122,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 // Run the sample:
 // cd MergeDocumentToDocx/
 // dotnet run MergeDocumentToDOCX.csproj
+
   namespace MergeDocumentToPDF
    {
        class Program
@@ -124,8 +136,9 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
                try
                {
                    // Initial setup, create credentials instance.
-                   Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                            .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
+                   Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                            .WithClientId("PDF_SERVICES_CLIENT_ID")
+                            .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
                             .Build();
 
                    // Create an ExecutionContext using credentials.
@@ -199,9 +212,10 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
           try {
 
             // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                    .fromFile("pdfservices-api-credentials.json")
-                    .build();
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
             // Setup input data for the document merge process.
             JSONObject jsonDataForMerge = new JSONObject("{\"customerName\": \"Kane Miller\",\"customerVisits\": 100}");

@@ -21,6 +21,7 @@ See our public [API Reference](https://developer.adobe.com/document-services/doc
 ```bash
 // Please refer our Rest API docs for more information
 // https://developer.adobe.com/document-services/docs/apis/#tag/Export-PDF
+
 curl --location --request POST 'https://pdf-services.adobe.io/operation/exportpdf' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
 --header 'Content-Type: application/json' \
@@ -31,7 +32,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/exportpd
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-exportPDF
+// https://documentcloud.adobe.com/document-services/index.html#post-exportPDF
 ```
 
 #### Node js
@@ -40,20 +41,26 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/exportpd
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
 // node src/exportpdf/export-pdf-to-docx.js
+
 const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+
  try {
    // Initial setup, create credentials instance.
-   const credentials =  PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile("pdfservices-api-credentials.json")
-       .build();
+     const credentials =  PDFServicesSdk.Credentials
+         .servicePrincipalsCredentialsBuilder()
+         .withClientId("PDF_SERVICES_CLIENT_ID")
+         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+         .build();
+
    //Create an ExecutionContext using credentials and create a new operation instance.
    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
        exportPDF = PDFServicesSdk.ExportPDF,
        exportPdfOperation = exportPDF.Operation.createNew(exportPDF.SupportedTargetFormats.DOCX);
+
    // Set operation input from a source file
    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/exportPDFInput.pdf');
    exportPdfOperation.setInput(input);
+
    // Execute the operation and Save the result to the specified location.
    exportPdfOperation.execute(executionContext)
        .then(result => result.saveAsFile('output/exportPdfOutput.docx'))
@@ -77,6 +84,7 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 // Run the sample:
 // cd ExportPDFToDocx/
 // dotnet run ExportPDFToDocx.csproj
+
  namespace ExportPDFToDocx
   {
     class Program
@@ -88,10 +96,11 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
         ConfigureLogging();
         try
         {
-          // Initial setup, create credentials instance.
-          Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                  .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                  .Build();
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
           //Create an ExecutionContext using credentials and create a new operation instance.
           ExecutionContext executionContext = ExecutionContext.Create(credentials);
@@ -129,25 +138,34 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.exportpdf.ExportPDFToDOCX
+
 public class ExportPDFToDOCX {
+
    // Initialize the logger.
    private static final Logger LOGGER = LoggerFactory.getLogger(ExportPDFToDOCX.class);
+
    public static void main(String[] args) {
+
      try {
        // Initial setup, create credentials instance.
-       Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-           .fromFile("pdfservices-api-credentials.json")
-           .build();
+       Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+          .withClientId("PDF_SERVICES_CLIENT_ID")
+          .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+          .build();
        //Create an ExecutionContext using credentials and create a new operation instance.
        ExecutionContext executionContext = ExecutionContext.create(credentials);
        ExportPDFOperation exportPdfOperation = ExportPDFOperation.createNew(ExportPDFTargetFormat.DOCX);
+
        // Set operation input from a local PDF file
        FileRef sourceFileRef = FileRef.createFromLocalFile("src/main/resources/exportPDFInput.pdf");
        exportPdfOperation.setInput(sourceFileRef);
+
        // Execute the operation.
        FileRef result = exportPdfOperation.execute(executionContext);
+
        // Save the result to the specified location.
        result.saveAs("output/exportPdfOutput.docx");
+
      } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
        LOGGER.error("Exception encountered while executing operation", ex);
      }

@@ -30,7 +30,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/createpd
 }'
 
 // Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-createPDF
+// https://documentcloud.adobe.com/document-services/index.html#post-createPDF
 ```
 
 #### Node js
@@ -44,10 +44,11 @@ const PDFservicesSdk = require('@adobe/pdfservices-node-sdk');
 
  try {
    // Initial setup, create credentials instance.
-   const credentials =  PDFServicesSdk.Credentials
-       .serviceAccountCredentialsBuilder()
-       .fromFile("pdfservices-api-credentials.json")
-       .build();
+     const credentials =  PDFServicesSdk.Credentials
+         .servicePrincipalsCredentialsBuilder()
+         .withClientId("PDF_SERVICES_CLIENT_ID")
+         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+         .build();
 
    // Create an ExecutionContext using credentials and create a new operation instance.
    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
@@ -71,7 +72,6 @@ const PDFservicesSdk = require('@adobe/pdfservices-node-sdk');
  } catch (err) {
    console.log('Exception encountered while executing operation', err);
  }
-
 ```
 
 #### .Net
@@ -93,10 +93,11 @@ namespace CreatePDFFromDocx
        ConfigureLogging();
        try
        {
-         // Initial setup, create credentials instance.
-         Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-                 .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-                 .Build();
+           // Initial setup, create credentials instance.
+           Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                .WithClientId("PDF_SERVICES_CLIENT_ID")
+                .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .Build();
 
          //Create an ExecutionContext using credentials and create a new operation instance.
          ExecutionContext executionContext = ExecutionContext.Create(credentials);
@@ -126,7 +127,6 @@ namespace CreatePDFFromDocx
      }
    }
  }
-
 ```
 
 #### Java
@@ -146,8 +146,10 @@ public class CreatePDFFromDOCX {
         try {
 
             // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                    .fromFile("pdfservices-api-credentials.json").build();
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
             //Create an ExecutionContext using credentials and create a new operation instance.
             ExecutionContext executionContext = ExecutionContext.create(credentials);

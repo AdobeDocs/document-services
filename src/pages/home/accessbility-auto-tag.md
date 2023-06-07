@@ -11,8 +11,8 @@ Auto-tag PDF content to improve accessibility.
 #### REST API
 
 ```bash
-// Please refer our Rest API docs for more information
-// https://developer.adobe.com/document-services/docs/apis/#tag/Auto-Tag
+// Please refer our REST API docs for more information
+// https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Accessibility-Auto-Tag
 
 curl --location --request POST 'https://pdf-services.adobe.io/operation/autotag' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
@@ -21,26 +21,23 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/autotag'
 --data-raw '{
     "assetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-46d6-87f2-087832fca718"
 }'
-
-// Legacy API can be found here
-// https://acrobatservices.adobe.com/document-services/index.html#post-createPDF
-
 ```
 
 #### Node js
 
 ```js
-// Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
+// Get the samples from https://github.com/adobe/pdfservices-node-sdk-samples
 // Run the sample:
-// node src/createpdf/create-pdf-from-docx.js
+// node src/autotagpdf/autotag-pdf.js
 
 const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
 try {
     // Initial setup, create credentials instance.
     const credentials =  PDFServicesSdk.Credentials
-        .serviceAccountCredentialsBuilder()
-        .fromFile("pdfservices-api-credentials.json")
+        .servicePrincipalsCredentialsBuilder()
+        .withClientId("PDF_SERVICES_CLIENT_ID")
+        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
         .build();
 
     // Create an ExecutionContext using credentials and create a new operation instance.
@@ -69,16 +66,15 @@ try {
 } catch (err) {
     console.log('Exception encountered while executing operation', err);
 }
-
 ```
 
 #### .Net
 
 ```clike
-// Get the samples from https://www.adobe.com/go/pdftoolsapi_net_samples
+// Get the samples from https://github.com/adobe/PDFServices.NET.SDK.Samples
 // Run the sample:
-// cd CreatePDFFromDocx/
-// dotnet run CreatePDFFromDocx.csproj
+// cd AutotagPDF/
+// dotnet run AutotagPDF.csproj
 
 namespace AutotagPDF
 {
@@ -93,9 +89,10 @@ namespace AutotagPDF
         try
         {
             // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.ServiceAccountCredentialsBuilder()
-            .FromFile(Directory.GetCurrentDirectory() + "/pdfservices-api-credentials.json")
-            .Build();
+            Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
             //Create an ExecutionContext using credentials and create a new operation instance.
             ExecutionContext executionContext = ExecutionContext.Create(credentials);
@@ -144,9 +141,9 @@ namespace AutotagPDF
 #### Java
 
 ```javascript
-// Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
+// Get the samples from https://github.com/adobe/pdfservices-java-sdk-samples
 // Run the sample:
-// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.createpdf.CreatePDFFromDOCX
+// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.autotagpdf.AutotagPDF
 
 public class AutotagPDF {
     // Initialize the logger.
@@ -156,9 +153,10 @@ public class AutotagPDF {
 
         try {
             // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
-                    .fromFile("pdfservices-api-credentials.json")
-                    .build();
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
             // Create an ExecutionContext using credentials and create a new operation instance.
             ExecutionContext executionContext = ExecutionContext.create(credentials);
