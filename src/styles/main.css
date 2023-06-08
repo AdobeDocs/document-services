@@ -3133,5 +3133,41 @@ img[alt=adobe-support] {
 
 .custom-stories-grid > div > div > div > div > div > div > div {
     width: auto;
-    height: var(--spectrum-global-dimension-size-1125) !important;
+}
+
+.custom-stories-grid>div>div>div:first-child{
+    display: none !important;
+}
+
+.custom-stories-grid>div>div>div:nth-child(2)>div{
+    grid-template-columns: repeat(auto-fit, calc(var(--spectrum-global-dimension-size-5000) - var(--spectrum-global-dimension-size-900))) !important;
+}
+
+.custom-stories-grid>div>div>div:nth-child(2)>div>div{
+    width: var(--spectrum-global-dimension-size-4000) !important;
+}
+
+.custom-stories-grid>div>div>div:nth-child(2)>div>div>div{
+        overflow: hidden !important;
+}
+
+.custom-stories-grid>div>div>div:nth-child(2)>div>div>div:nth-child(2){
+    margin: 3% 0 0 0 !important;
+}
+
+@media screen and (min-width: 375px) and (max-width:1024px){
+    .custom-stories-grid>div>div>div:nth-child(2)>div>div{
+        height: calc(var(--spectrum-global-dimension-size-6000) - var(--spectrum-global-dimension-size-1700)) !important;
+    }
+
+}
+
+@media screen and (min-width: 375px) and (max-width:767px){
+    .custom-stories-grid>div{
+        width: calc(3.5 * var(--spectrum-global-dimension-static-grid-fixed-max-width) / var(--spectrum-global-dimension-static-grid-columns))!important;
+    }
+
+    .custom-stories-grid>div>div>div:nth-child(2)>div{
+        margin: auto !important;
+    }
 }
