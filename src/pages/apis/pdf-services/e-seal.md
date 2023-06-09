@@ -2,13 +2,15 @@
 title: Adobe Developer — PDF Services API  — E seal API
 ---
 
-<TextBlock slots="heading, buttons, text" hasCodeBlock theme="dark" className="bgBlue linking get-properties"/>
+<TextBlock slots="heading, buttons, text1,text2" hasCodeBlock theme="dark" className="bgBlue linking get-properties"/>
 
 ### PDF Electronic Seal API
 
 - [See documentation](/document-services/docs/overview/pdf-electronic-seal-api/)
 
-An Electronic Seal in PDF is akin to an organization's rubber stamp on a paper, but it’s more secure.
+Apply an electronic seal to documents at scale using a certificate issued by a Trust Service Provider on Adobe’s Approved Trust List (AATL). The electronic seal helps verify the identity and integrity of documents.
+
+See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Electronic-Seal) and quickly try our APIs using the Postman collections.
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js, .net, java" />
 
