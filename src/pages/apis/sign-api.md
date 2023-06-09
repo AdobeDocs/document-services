@@ -39,7 +39,7 @@ apiHeroAssetImg sign-api-hero
 
 Try our latest API that helps you verify the identity and integrity of documents using an electronic seal.
 
-[Try the demo](https://www.adobe.io/apis/creativecloud/photo-imaging-api/api-demo.html)
+[Try the demo](/pricing/contact/sales/seal/)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API"/>
 
