@@ -63,7 +63,7 @@ import EsealAPI from './e-seal.md'
 
 <DocumentGeneration/>
 
-### E-seal API
+### Electronically Seal PDF
 
 ![EMPTY_ALT](../../images/electronic-seal.svg)
 
