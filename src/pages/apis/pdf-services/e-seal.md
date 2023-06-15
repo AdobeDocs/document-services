@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — E seal API
 ---
 
-<TextBlock slots="heading, buttons, text1,text2" hasCodeBlock theme="dark" className="bgBlue linking e-seal-api"/>
+<TextBlock slots="heading, buttons, text1,text2" hasCodeBlock theme="dark" className="bgBlue linking link e-seal-api"/>
 
 ### PDF Electronic Seal API
 

@@ -999,10 +999,6 @@ pre .prism-code.spectrum-Code {
     word-break: break-word !important;
 }
 
-.e-seal-api a{
-    text-decoration: underline !important;
-}
-
 pre .prism-code.spectrum-Code>div>span:first-child{
     white-space: nowrap !important;
 }

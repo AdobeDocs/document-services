@@ -65,7 +65,7 @@ This AI-powered API automatically tag tables, paragraphs, lists, headings and mo
 
 ### Apply an electronic seal to documents at scale easily.
 
-The PDF Electronic Seal API allows organizations to apply an electronic seal (e-seal) to a PDF document using a digital certificate to verify the identity and integrity of a document. The API provides an end-to-end cloud-based solution and works with certificates from any TSP (Trust Service Provider) or CA (Certifying Authority) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). This can be used seal documents at scale across functions and is included with PDF Services API.
+The PDF Electronic Seal API allows organizations to apply an electronic seal (e-seal) to a PDF document using a digital certificate to verify the identity and integrity of a document. The API provides an end-to-end cloud-based solution and works with certificates from certain TSPs (Trust Service Providers) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). This can be used to e-seal documents at scale and is included with PDF Services API
 
 - [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
 
