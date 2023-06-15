@@ -41,39 +41,39 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
 // Run the sample:
 // node src/compresspdf/compress-pdf.js
 
-   const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
-   try {
-     // Initial setup, create credentials instance.
-       const credentials =  PDFServicesSdk.Credentials
-           .servicePrincipalsCredentialsBuilder()
-           .withClientId("PDF_SERVICES_CLIENT_ID")
-           .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-           .build();
+try {
+    // Initial setup, create credentials instance.
+    const credentials =  PDFServicesSdk.Credentials
+        .servicePrincipalCredentialsBuilder()
+        .withClientId("PDF_SERVICES_CLIENT_ID")
+        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+        .build();
 
-     // Create an ExecutionContext using credentials and create a new operation instance.
-     const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-         compressPDF = PDFServicesSdk.CompressPDF,
-         compressPDFOperation = compressPDF.Operation.createNew();
+    // Create an ExecutionContext using credentials and create a new operation instance.
+    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
+        compressPDF = PDFServicesSdk.CompressPDF,
+        compressPDFOperation = compressPDF.Operation.createNew();
 
-     // Set operation input from a source file.
-     const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/compressPDFInput.pdf');
-     compressPDFOperation.setInput(input);
+    // Set operation input from a source file.
+    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/compressPDFInput.pdf');
+    compressPDFOperation.setInput(input);
 
-     // Execute the operation and Save the result to the specified location.
-     compressPDFOperation.execute(executionContext)
-         .then(result => result.saveAsFile('output/compressPDFOutput.pdf'))
-         .catch(err => {
-             if(err instanceof PDFServicesSdk.Error.ServiceApiError
-                 || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-                 console.log('Exception encountered while executing operation', err);
-             } else {
-                 console.log('Exception encountered while executing operation', err);
-             }
-         });
-   } catch (err) {
-     console.log('Exception encountered while executing operation', err);
-   }
+    // Execute the operation and Save the result to the specified location.
+    compressPDFOperation.execute(executionContext)
+        .then(result => result.saveAsFile('output/compressPDFOutput.pdf'))
+        .catch(err => {
+            if(err instanceof PDFServicesSdk.Error.ServiceApiError
+                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                console.log('Exception encountered while executing operation', err);
+            } else {
+                console.log('Exception encountered while executing operation', err);
+            }
+        });
+} catch (err) {
+    console.log('Exception encountered while executing operation', err);
+}
 ```
 
 #### .Net
@@ -84,51 +84,51 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
 // cd CompressPDF/
 // dotnet run CompressPDF.csproj
 
- namespace CompressPDF
- {
-   class Program
-   {
-       private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-       static void Main()
-       {
-           //Configure the logging
-           ConfigureLogging();
-           try
-           {
-               // Initial setup, create credentials instance.
-               Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+namespace CompressPDF
+{
+    class Program
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
+        {
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
                     .WithClientId("PDF_SERVICES_CLIENT_ID")
                     .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
                     .Build();
 
-               // Create an ExecutionContext using credentials and create a new operation instance.
-               ExecutionContext executionContext = ExecutionContext.Create(credentials);
-               CompressPDFOperation compressPDFOperation = CompressPDFOperation.CreateNew();
+                // Create an ExecutionContext using credentials and create a new operation instance.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                CompressPDFOperation compressPDFOperation = CompressPDFOperation.CreateNew();
 
-               // Set operation input from a source file.
-               FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"compressPDFInput.pdf");
-               compressPDFOperation.SetInput(sourceFileRef);
+                // Set operation input from a source file.
+                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"compressPDFInput.pdf");
+                compressPDFOperation.SetInput(sourceFileRef);
 
-               // Execute the operation.
-               FileRef result = compressPDFOperation.Execute(executionContext);
+                // Execute the operation.
+                FileRef result = compressPDFOperation.Execute(executionContext);
 
-               // Save the result to the specified location.
-               result.SaveAs(Directory.GetCurrentDirectory() + "/output/compressPDFOutput.pdf");
-           }
-           catch (ServiceUsageException ex)
-           {
-               log.Error("Exception encountered while executing operation", ex);
-           }
-           // Catch more errors here . . .
-       }
+                // Save the result to the specified location.
+                result.SaveAs(Directory.GetCurrentDirectory() + "/output/compressPDFOutput.pdf");
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            // Catch more errors here . . .
+        }
 
-       static void ConfigureLogging()
-       {
-           ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-           XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-       }
-   }
- }
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
+    }
+}
 ```
 
 #### Java
@@ -138,36 +138,36 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/compress
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.compresspdf.CompressPDF
 
-   public class CompressPDF {
-     // Initialize the logger.
-     private static final Logger LOGGER = LoggerFactory.getLogger(CompressPDF.class);
+public class CompressPDF {
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(CompressPDF.class);
 
-     public static void main(String[] args) {
+    public static void main(String[] args) {
 
-         try {
-             // Initial setup, create credentials instance.
+        try {
+            // Initial setup, create credentials instance.
             Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
                 .withClientId("PDF_SERVICES_CLIENT_ID")
                 .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
                 .build();
 
-             // Create an ExecutionContext using credentials and create a new operation instance.
-             ExecutionContext executionContext = ExecutionContext.create(credentials);
-             CompressPDFOperation compressPDFOperation = CompressPDFOperation.createNew();
+            // Create an ExecutionContext using credentials and create a new operation instance.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            CompressPDFOperation compressPDFOperation = CompressPDFOperation.createNew();
 
-             // Set operation input from a source file.
-             FileRef source = FileRef.createFromLocalFile("src/main/resources/compressPDFInput.pdf");
-             compressPDFOperation.setInput(source);
+            // Set operation input from a source file.
+            FileRef source = FileRef.createFromLocalFile("src/main/resources/compressPDFInput.pdf");
+            compressPDFOperation.setInput(source);
 
-             // Execute the operation
-             FileRef result = compressPDFOperation.execute(executionContext);
+            // Execute the operation
+            FileRef result = compressPDFOperation.execute(executionContext);
 
-             // Save the result at the specified location
-             result.saveAs("output/compressPDFOutput.pdf");
+            // Save the result at the specified location
+            result.saveAs("output/compressPDFOutput.pdf");
 
-         } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
-             LOGGER.error("Exception encountered while executing operation", ex);
-         }
-     }
-   }
+        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+            LOGGER.error("Exception encountered while executing operation", ex);
+        }
+    }
+}
 ```

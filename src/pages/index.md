@@ -192,7 +192,7 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 ### How to get started?
 
-Start free tier with 1,000 PDF transactions for up to 6 months.
+Start with the Free Tier and get 500 free Document Transactions per month.
 
 - [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Contact us](src/pages/pricing/contact.md)

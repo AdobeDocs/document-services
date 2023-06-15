@@ -6,7 +6,7 @@ title: Adobe Developer — Doc generation — Start Modifying PDFs in a few Minu
 
 ## Get started in minutes
 
-Start free tier with 1,000 Document Transactions for up to 6 months
+Start with the Free Tier and get 500 free Document Transactions per month.
 
 <TextBlock slots="heading, text, buttons" theme="light"  width="33%" className="align-left  stepper-horizontal-align"/>
 

@@ -37,7 +37,7 @@ microsoftPAHeroImage
 
 <DCSummaryBlock slots="text, buttons" theme="dark"  buttonPositionRight btnVariant="cta" className="How-to-get-started key-features-code-block ms-pa-page hero-below-compo ms-pa-page-mob ms-pa-summary-blade" />
 
-Start your trial today and get 1,000 free document transactions.
+Start with the Free Tier and get 500 free Document Transactions per month.
 
 - [Try for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 

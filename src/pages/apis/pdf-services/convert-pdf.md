@@ -44,37 +44,37 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/exportpd
 
 const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
- try {
-   // Initial setup, create credentials instance.
-     const credentials =  PDFServicesSdk.Credentials
-         .servicePrincipalsCredentialsBuilder()
-         .withClientId("PDF_SERVICES_CLIENT_ID")
-         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-         .build();
+try {
+    // Initial setup, create credentials instance.
+    const credentials =  PDFServicesSdk.Credentials
+        .servicePrincipalCredentialsBuilder()
+        .withClientId("PDF_SERVICES_CLIENT_ID")
+        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+        .build();
 
-   //Create an ExecutionContext using credentials and create a new operation instance.
-   const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-       exportPDF = PDFServicesSdk.ExportPDF,
-       exportPdfOperation = exportPDF.Operation.createNew(exportPDF.SupportedTargetFormats.DOCX);
+    //Create an ExecutionContext using credentials and create a new operation instance.
+    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
+        exportPDF = PDFServicesSdk.ExportPDF,
+        exportPdfOperation = exportPDF.Operation.createNew(exportPDF.SupportedTargetFormats.DOCX);
 
-   // Set operation input from a source file
-   const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/exportPDFInput.pdf');
-   exportPdfOperation.setInput(input);
+    // Set operation input from a source file
+    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/exportPDFInput.pdf');
+    exportPdfOperation.setInput(input);
 
-   // Execute the operation and Save the result to the specified location.
-   exportPdfOperation.execute(executionContext)
-       .then(result => result.saveAsFile('output/exportPdfOutput.docx'))
-       .catch(err => {
-           if(err instanceof PDFServicesSdk.Error.ServiceApiError
-               || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-               console.log('Exception encountered while executing operation', err);
-           } else {
-               console.log('Exception encountered while executing operation', err);
-           }
-       });
- } catch (err) {
-   console.log('Exception encountered while executing operation', err);
- }
+    // Execute the operation and Save the result to the specified location.
+    exportPdfOperation.execute(executionContext)
+        .then(result => result.saveAsFile('output/exportPdfOutput.docx'))
+        .catch(err => {
+            if(err instanceof PDFServicesSdk.Error.ServiceApiError
+                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                console.log('Exception encountered while executing operation', err);
+            } else {
+                console.log('Exception encountered while executing operation', err);
+            }
+        });
+} catch (err) {
+    console.log('Exception encountered while executing operation', err);
+}
 ```
 
 #### .Net
@@ -86,50 +86,50 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 // dotnet run ExportPDFToDocx.csproj
 
  namespace ExportPDFToDocx
-  {
+{
     class Program
     {
-      private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-      static void Main()
-      {
-        //Configure the logging
-        ConfigureLogging();
-        try
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
         {
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
                     .WithClientId("PDF_SERVICES_CLIENT_ID")
                     .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
                     .Build();
 
-          //Create an ExecutionContext using credentials and create a new operation instance.
-          ExecutionContext executionContext = ExecutionContext.Create(credentials);
-          ExportPDFOperation exportPdfOperation = ExportPDFOperation.CreateNew(ExportPDFTargetFormat.DOCX);
+                //Create an ExecutionContext using credentials and create a new operation instance.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                ExportPDFOperation exportPdfOperation = ExportPDFOperation.CreateNew(ExportPDFTargetFormat.DOCX);
 
-          // Set operation input from a local PDF file
-          FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"exportPdfInput.pdf");
-          exportPdfOperation.SetInput(sourceFileRef);
+                // Set operation input from a local PDF file
+                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"exportPdfInput.pdf");
+                exportPdfOperation.SetInput(sourceFileRef);
 
-          // Execute the operation.
-          FileRef result = exportPdfOperation.Execute(executionContext);
+                // Execute the operation.
+                FileRef result = exportPdfOperation.Execute(executionContext);
 
-          // Save the result to the specified location.
-          result.SaveAs(Directory.GetCurrentDirectory() + "/output/exportPdfOutput.docx");
+                // Save the result to the specified location.
+                result.SaveAs(Directory.GetCurrentDirectory() + "/output/exportPdfOutput.docx");
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            // Catch more errors here. . .
         }
-        catch (ServiceUsageException ex)
+
+        static void ConfigureLogging()
         {
-          log.Error("Exception encountered while executing operation", ex);
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
         }
-        // Catch more errors here. . .
-      }
-
-      static void ConfigureLogging()
-      {
-        ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-        XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-      }
     }
-  }
+}
 ```
 
 #### Java
@@ -141,34 +141,34 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
 public class ExportPDFToDOCX {
 
-   // Initialize the logger.
-   private static final Logger LOGGER = LoggerFactory.getLogger(ExportPDFToDOCX.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExportPDFToDOCX.class);
 
-   public static void main(String[] args) {
+    public static void main(String[] args) {
 
-     try {
-       // Initial setup, create credentials instance.
-       Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-          .withClientId("PDF_SERVICES_CLIENT_ID")
-          .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-          .build();
-       //Create an ExecutionContext using credentials and create a new operation instance.
-       ExecutionContext executionContext = ExecutionContext.create(credentials);
-       ExportPDFOperation exportPdfOperation = ExportPDFOperation.createNew(ExportPDFTargetFormat.DOCX);
+        try {
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
+            //Create an ExecutionContext using credentials and create a new operation instance.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            ExportPDFOperation exportPdfOperation = ExportPDFOperation.createNew(ExportPDFTargetFormat.DOCX);
 
-       // Set operation input from a local PDF file
-       FileRef sourceFileRef = FileRef.createFromLocalFile("src/main/resources/exportPDFInput.pdf");
-       exportPdfOperation.setInput(sourceFileRef);
+            // Set operation input from a local PDF file
+            FileRef sourceFileRef = FileRef.createFromLocalFile("src/main/resources/exportPDFInput.pdf");
+            exportPdfOperation.setInput(sourceFileRef);
 
-       // Execute the operation.
-       FileRef result = exportPdfOperation.execute(executionContext);
+            // Execute the operation.
+            FileRef result = exportPdfOperation.execute(executionContext);
 
-       // Save the result to the specified location.
-       result.saveAs("output/exportPdfOutput.docx");
+            // Save the result to the specified location.
+            result.saveAs("output/exportPdfOutput.docx");
 
-     } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
-       LOGGER.error("Exception encountered while executing operation", ex);
-     }
-   }
- }
+        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+            LOGGER.error("Exception encountered while executing operation", ex);
+        }
+    }
+}
 ```
