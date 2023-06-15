@@ -46,15 +46,15 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 // Run the sample:
 // node src/combinepdf/combine-pdf.js
 
- const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
-  try {
+try {
     // Initial setup, create credentials instance.
-      const credentials =  PDFServicesSdk.Credentials
-          .servicePrincipalsCredentialsBuilder()
-          .withClientId("PDF_SERVICES_CLIENT_ID")
-          .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-          .build();
+    const credentials =  PDFServicesSdk.Credentials
+      .servicePrincipalCredentialsBuilder()
+      .withClientId("PDF_SERVICES_CLIENT_ID")
+      .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+      .build();
 
     // Create an ExecutionContext using credentials and create a new operation instance.
     const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
@@ -77,9 +77,9 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
                 console.log('Exception encountered while executing operation', err);
             }
         });
-  } catch (err) {
+} catch (err) {
     console.log('Exception encountered while executing operation', err);
-  }
+}
 ```
 
 #### .Net
@@ -90,54 +90,54 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 // cd CombinePDF/
 // dotnet run CombinePDF.csproj
 
- namespace CombinePDF
- {
-   class Program
-   {
-     private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-     static void Main()
-     {
-       //Configure the logging
-       ConfigureLogging();
-       try
-       {
-           // Initial setup, create credentials instance.
-           Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                .WithClientId("PDF_SERVICES_CLIENT_ID")
-                .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .Build();
+namespace CombinePDF
+{
+    class Program
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
+        {
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                    .WithClientId("PDF_SERVICES_CLIENT_ID")
+                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                    .Build();
 
-         //Create an ExecutionContext using credentials and create a new operation instance.
-         ExecutionContext executionContext = ExecutionContext.Create(credentials);
-         CombineFilesOperation combineFilesOperation = CombineFilesOperation.CreateNew();
+                //Create an ExecutionContext using credentials and create a new operation instance.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                CombineFilesOperation combineFilesOperation = CombineFilesOperation.CreateNew();
 
-         // Add operation input from source files.
-         FileRef combineSource1 = FileRef.CreateFromLocalFile(@"combineFilesInput1.pdf");
-         FileRef combineSource2 = FileRef.CreateFromLocalFile(@"combineFilesInput2.pdf");
-         combineFilesOperation.AddInput(combineSource1);
-         combineFilesOperation.AddInput(combineSource2);
+                // Add operation input from source files.
+                FileRef combineSource1 = FileRef.CreateFromLocalFile(@"combineFilesInput1.pdf");
+                FileRef combineSource2 = FileRef.CreateFromLocalFile(@"combineFilesInput2.pdf");
+                combineFilesOperation.AddInput(combineSource1);
+                combineFilesOperation.AddInput(combineSource2);
 
-         // Execute the operation.
-         FileRef result = combineFilesOperation.Execute(executionContext);
+                // Execute the operation.
+                FileRef result = combineFilesOperation.Execute(executionContext);
 
-         // Save the result to the specified location.
-         result.SaveAs(Directory.GetCurrentDirectory() + "/output/combineFilesOutput.pdf");
+                // Save the result to the specified location.
+                result.SaveAs(Directory.GetCurrentDirectory() + "/output/combineFilesOutput.pdf");
 
-       }
-       catch (ServiceUsageException ex)
-       {
-         log.Error("Exception encountered while executing operation", ex);
-       }
-       // Catch more errors here. . .
-     }
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            // Catch more errors here. . .
+        }
 
-     static void ConfigureLogging()
-     {
-       ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-       XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-     }
-   }
- }
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
+    }
+}
 ```
 
 #### Java
@@ -147,38 +147,38 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.combinepdf.CombinePDF
 
- public class CombinePDF {
+public class CombinePDF {
 
-   // Initialize the logger.
-   private static final Logger LOGGER = LoggerFactory.getLogger(CombinePDF.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(CombinePDF.class);
 
-   public static void main(String[] args) {
-     try {
-       // Initial setup, create credentials instance.
-        Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-            .withClientId("PDF_SERVICES_CLIENT_ID")
-            .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-            .build();
+    public static void main(String[] args) {
+        try {
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
-       //Create an ExecutionContext using credentials and create a new operation instance.
-       ExecutionContext executionContext = ExecutionContext.create(credentials);
-       CombineFilesOperation combineFilesOperation = CombineFilesOperation.createNew();
+            //Create an ExecutionContext using credentials and create a new operation instance.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            CombineFilesOperation combineFilesOperation = CombineFilesOperation.createNew();
 
-       // Add operation input from source files.
-       FileRef combineSource1 = FileRef.createFromLocalFile("src/main/resources/combineFilesInput1.pdf");
-       FileRef combineSource2 = FileRef.createFromLocalFile("src/main/resources/combineFilesInput2.pdf");
-       combineFilesOperation.addInput(combineSource1);
-       combineFilesOperation.addInput(combineSource2);
+            // Add operation input from source files.
+            FileRef combineSource1 = FileRef.createFromLocalFile("src/main/resources/combineFilesInput1.pdf");
+            FileRef combineSource2 = FileRef.createFromLocalFile("src/main/resources/combineFilesInput2.pdf");
+            combineFilesOperation.addInput(combineSource1);
+            combineFilesOperation.addInput(combineSource2);
 
-       // Execute the operation.
-       FileRef result = combineFilesOperation.execute(executionContext);
+            // Execute the operation.
+            FileRef result = combineFilesOperation.execute(executionContext);
 
-       // Save the result to the specified location.
-       result.saveAs("output/combineFilesOutput.pdf");
+            // Save the result to the specified location.
+            result.saveAs("output/combineFilesOutput.pdf");
 
-     } catch (IOException | ServiceApiException | SdkException | ServiceUsageException e) {
-       LOGGER.error("Exception encountered while executing operation", e);
-     }
-   }
- }
+        } catch (IOException | ServiceApiException | SdkException | ServiceUsageException e) {
+            LOGGER.error("Exception encountered while executing operation", e);
+        }
+    }
+}
 ```

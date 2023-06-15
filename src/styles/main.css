@@ -996,6 +996,24 @@ pre .prism-code.spectrum-Code {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    word-break: break-word !important;
+}
+
+.e-seal-api a{
+    text-decoration: underline !important;
+}
+
+pre .prism-code.spectrum-Code>div>span:first-child{
+    white-space: nowrap !important;
+}
+
+pre .prism-code.spectrum-Code::-webkit-scrollbar {
+    background-color: transparent !important;
+}
+
+pre.prism-code.spectrum-Code {
+    scrollbar-color: transparent !important;
+    scrollbar-width: thin !important;
 }
 
 @media screen and (max-width: 1024px) {

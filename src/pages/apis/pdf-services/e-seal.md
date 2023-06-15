@@ -2,7 +2,7 @@
 title: Adobe Developer — PDF Services API  — E seal API
 ---
 
-<TextBlock slots="heading, buttons, text1,text2" hasCodeBlock theme="dark" className="bgBlue linking get-properties"/>
+<TextBlock slots="heading, buttons, text1,text2" hasCodeBlock theme="dark" className="bgBlue linking e-seal-api"/>
 
 ### PDF Electronic Seal API
 
@@ -10,7 +10,7 @@ title: Adobe Developer — PDF Services API  — E seal API
 
 Apply an electronic seal to documents at scale using a certificate issued by a Trust Service Provider on Adobe’s Approved Trust List (AATL). The electronic seal helps verify the identity and integrity of documents.
 
-See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Electronic-Seal) and quickly try our APIs using the Postman collections.
+See our public [API Reference](/document-services/docs/apis/#tag/Electronic-Seal) and quickly try our APIs using the Postman collections.
 
 <CodeBlock slots="heading, code" repeat="4" languages="curl, js, .net, java" />
 
@@ -85,8 +85,8 @@ try {
     //Get the input document to perform the sealing operation
     const sourceFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/sampleInvoice.pdf'),
 
-        //Get the background seal image for signature , if required.
-        sealImageFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/sampleSealImage.png');
+    //Get the background seal image for signature , if required.
+    sealImageFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/sampleSealImage.png');
 
     // Set the Seal Field Name to be created in input PDF document.
     sealFieldName = "Signature1";
@@ -153,7 +153,7 @@ try {
             } else {
                 console.log('Exception encountered while executing operation', err);
             }
-        });
+    });
 ```
 
 #### .Net

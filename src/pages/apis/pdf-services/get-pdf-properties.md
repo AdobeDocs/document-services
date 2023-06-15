@@ -47,7 +47,7 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 try {
     // Initial setup, create credentials instance.
     const credentials =  PDFServicesSdk.Credentials
-        .servicePrincipalsCredentialsBuilder()
+        .servicePrincipalCredentialsBuilder()
         .withClientId("PDF_SERVICES_CLIENT_ID")
         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
         .build();
@@ -96,48 +96,48 @@ namespace GetPDFProperties
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
         static void Main()
-    {
-        //Configure the logging
-        ConfigureLogging();
-        try
         {
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
                     .WithClientId("PDF_SERVICES_CLIENT_ID")
                     .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
                     .Build();
 
-            //Create an ExecutionContext using credentials and create a new operation instance.
-            ExecutionContext executionContext = ExecutionContext.Create(credentials);
-            PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.CreateNew();
+                //Create an ExecutionContext using credentials and create a new operation instance.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.CreateNew();
 
-            // Provide an input FileRef for the operation
-            FileRef source = FileRef.CreateFromLocalFile(@"pdfPropertiesInput.pdf");
-            pdfPropertiesOperation.SetInput(source);
+                // Provide an input FileRef for the operation
+                FileRef source = FileRef.CreateFromLocalFile(@"pdfPropertiesInput.pdf");
+                pdfPropertiesOperation.SetInput(source);
 
-            // Build PDF Properties options to include page level properties and set them into the operation
-            PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
-            .IncludePageLevelProperties(true)
-            .Build();
-            pdfPropertiesOperation.SetOptions(pdfPropertiesOptions);
+                // Build PDF Properties options to include page level properties and set them into the operation
+                PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
+                .IncludePageLevelProperties(true)
+                .Build();
+                pdfPropertiesOperation.SetOptions(pdfPropertiesOptions);
 
-            // Execute the operation ang get properties of the PDF in PDFProperties object.
-            PDFProperties pdfProperties = pdfPropertiesOperation.Execute(executionContext);
-            Console.WriteLine("The resultant PDF Properties are: " + result.ToString());
+                // Execute the operation ang get properties of the PDF in PDFProperties object.
+                PDFProperties pdfProperties = pdfPropertiesOperation.Execute(executionContext);
+                Console.WriteLine("The resultant PDF Properties are: " + result.ToString());
 
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            // Catch more errors here. . .
         }
-        catch (ServiceUsageException ex)
-        {
-            log.Error("Exception encountered while executing operation", ex);
-        }
-        // Catch more errors here. . .
-    }
 
         static void ConfigureLogging()
-    {
-        ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-        XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-    }
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
     }
 }
 ```
@@ -149,48 +149,48 @@ namespace GetPDFProperties
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.pdfproperties.GetPDFProperties
 
-  public class GetPDFProperties {
+public class GetPDFProperties {
 
     // Initialize the logger.
     private static final Logger LOGGER = LoggerFactory.getLogger(GetPDFProperties.class);
 
     public static void main(String[] args) {
 
-      try {
+        try {
 
-        // Initial setup, create credentials instance.
-        Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-           .withClientId("PDF_SERVICES_CLIENT_ID")
-           .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-           .build();
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
-        //Create an ExecutionContext using credentials and create a new operation instance.
-        ExecutionContext executionContext = ExecutionContext.create(credentials);
-        PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.createNew();
+            //Create an ExecutionContext using credentials and create a new operation instance.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            PDFPropertiesOperation pdfPropertiesOperation = PDFPropertiesOperation.createNew();
 
-        // Provide an input FileRef for the operation
-        FileRef source = FileRef.createFromLocalFile("src/main/resources/pdfPropertiesInput.pdf");
-        pdfPropertiesOperation.setInputFile(source);
+            // Provide an input FileRef for the operation
+            FileRef source = FileRef.createFromLocalFile("src/main/resources/pdfPropertiesInput.pdf");
+            pdfPropertiesOperation.setInputFile(source);
 
-        // Build PDF Properties options to include page level properties and set them into the operation
-        PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
-              .includePageLevelProperties(true)
-              .build();
-        pdfPropertiesOperation.setOptions(pdfPropertiesOptions);
+            // Build PDF Properties options to include page level properties and set them into the operation
+            PDFPropertiesOptions pdfPropertiesOptions = PDFPropertiesOptions.PDFPropertiesOptionsBuilder()
+                .includePageLevelProperties(true)
+                .build();
+            pdfPropertiesOperation.setOptions(pdfPropertiesOptions);
 
-        // Execute the operation ang get properties of the PDF in PDFProperties object.
-        PDFProperties result = pdfPropertiesOperation.execute(executionContext);
+            // Execute the operation ang get properties of the PDF in PDFProperties object.
+            PDFProperties result = pdfPropertiesOperation.execute(executionContext);
 
-        // Get properties of the PDF
-        LOGGER.info("The Page level properties of the PDF: {}", result.getDocument().getPageCount());
-        LOGGER.info("The Fonts used in the PDF: ");
-        for(Font font: result.getDocument().getFonts()) {
-            LOGGER.info(font.getName());
+            // Get properties of the PDF
+            LOGGER.info("The Page level properties of the PDF: {}", result.getDocument().getPageCount());
+            LOGGER.info("The Fonts used in the PDF: ");
+            for(Font font: result.getDocument().getFonts()) {
+                LOGGER.info(font.getName());
+            }
+
+        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+            LOGGER.error("Exception encountered while executing operation", ex);
         }
-
-      } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
-        LOGGER.error("Exception encountered while executing operation", ex);
-      }
     }
-  }
+}
 ```
