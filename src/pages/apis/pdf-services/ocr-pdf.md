@@ -39,38 +39,38 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/ocr' \
 // Run the sample:
 // node src/ocr/ocr-pdf.js
 
- const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
- try {
-   // Initial setup, create credentials instance.
-     const credentials =  PDFServicesSdk.Credentials
-         .servicePrincipalsCredentialsBuilder()
-         .withClientId("PDF_SERVICES_CLIENT_ID")
-         .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-         .build();
+try {
+    // Initial setup, create credentials instance.
+    const credentials =  PDFServicesSdk.Credentials
+        .servicePrincipalCredentialsBuilder()
+        .withClientId("PDF_SERVICES_CLIENT_ID")
+        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+        .build();
 
-   // Create an ExecutionContext using credentials and create a new operation instance.
-   const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-       ocrOperation = PDFServicesSdk.OCR.Operation.createNew();
+    // Create an ExecutionContext using credentials and create a new operation instance.
+    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
+    ocrOperation = PDFServicesSdk.OCR.Operation.createNew();
 
-   // Set operation input from a source file.
-   const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/ocrInput.pdf');
-   ocrOperation.setInput(input);
+    // Set operation input from a source file.
+    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/ocrInput.pdf');
+    ocrOperation.setInput(input);
 
-   // Execute the operation and Save the result to the specified location.
-   ocrOperation.execute(executionContext)
-       .then(result => result.saveAsFile('output/ocrOutput.pdf'))
-       .catch(err => {
-           if(err instanceof PDFServicesSdk.Error.ServiceApiError
-               || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-               console.log('Exception encountered while executing operation', err);
-           } else {
-               console.log('Exception encountered while executing operation', err);
-           }
-       });
- } catch (err) {
+    // Execute the operation and Save the result to the specified location.
+    ocrOperation.execute(executionContext)
+        .then(result => result.saveAsFile('output/ocrOutput.pdf'))
+        .catch(err => {
+            if(err instanceof PDFServicesSdk.Error.ServiceApiError
+                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
+                console.log('Exception encountered while executing operation', err);
+            } else {
+                console.log('Exception encountered while executing operation', err);
+            }
+      });
+} catch (err) {
    console.log('Exception encountered while executing operation', err);
- }
+}
 ```
 
 #### .Net
@@ -81,51 +81,51 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/ocr' \
 // cd OcrPDF/
 // dotnet run OcrPDF.csproj
 
- namespace OcrPDF
- {
+namespace OcrPDF
+{
    class Program
    {
-     private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-     static void Main()
-     {
-       //Configure the logging
-       ConfigureLogging();
-       try
-       {
-           // Initial setup, create credentials instance.
-           Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                .WithClientId("PDF_SERVICES_CLIENT_ID")
-                .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .Build();
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+        static void Main()
+        {
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance.
+                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
+                  .WithClientId("PDF_SERVICES_CLIENT_ID")
+                  .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                  .Build();
 
-         //Create an ExecutionContext using credentials and create a new operation instance.
-         ExecutionContext executionContext = ExecutionContext.Create(credentials);
-         OCROperation ocrOperation = OCROperation.CreateNew();
+                //Create an ExecutionContext using credentials and create a new operation instance.
+                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                OCROperation ocrOperation = OCROperation.CreateNew();
 
-         // Set operation input from a source file.
-         FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"ocrInput.pdf");
-         ocrOperation.SetInput(sourceFileRef);
+                // Set operation input from a source file.
+                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"ocrInput.pdf");
+                ocrOperation.SetInput(sourceFileRef);
 
-         // Execute the operation.
-         FileRef result = ocrOperation.Execute(executionContext);
+                // Execute the operation.
+                FileRef result = ocrOperation.Execute(executionContext);
 
-         // Save the result to the specified location.
-         result.SaveAs(Directory.GetCurrentDirectory() + "/output/ocrOperationOutput.pdf");
-       }
-       catch (ServiceUsageException ex)
-       {
-         log.Error("Exception encountered while executing operation", ex);
-       }
-       // Catch more errors here. . .
-     }
+                // Save the result to the specified location.
+                result.SaveAs(Directory.GetCurrentDirectory() + "/output/ocrOperationOutput.pdf");
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            // Catch more errors here. . .
+        }
 
-     static void ConfigureLogging()
-     {
-       ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-       XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-     }
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
    }
- }
+}
 ```
 
 #### Java
@@ -135,38 +135,38 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/ocr' \
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.ocrpdf.OcrPDF
 
- public class OcrPDF {
+public class OcrPDF {
 
-  // Initialize the logger.
-  private static final Logger LOGGER = LoggerFactory.getLogger(OcrPDF.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(OcrPDF.class);
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-   try {
+        try {
 
-    // Initial setup, create credentials instance.
-    Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-        .withClientId("PDF_SERVICES_CLIENT_ID")
-        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-        .build();
+            // Initial setup, create credentials instance.
+            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
+                .withClientId("PDF_SERVICES_CLIENT_ID")
+                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                .build();
 
-    //Create an ExecutionContext using credentials and create a new operation instance.
-    ExecutionContext executionContext = ExecutionContext.create(credentials);
-    OCROperation ocrOperation = OCROperation.createNew();
+            //Create an ExecutionContext using credentials and create a new operation instance.
+            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            OCROperation ocrOperation = OCROperation.createNew();
 
-    // Set operation input from a source file.
-    FileRef source = FileRef.createFromLocalFile("src/main/resources/ocrInput.pdf");
-    ocrOperation.setInput(source);
+            // Set operation input from a source file.
+            FileRef source = FileRef.createFromLocalFile("src/main/resources/ocrInput.pdf");
+            ocrOperation.setInput(source);
 
-    // Execute the operation
-    FileRef result = ocrOperation.execute(executionContext);
+            // Execute the operation
+            FileRef result = ocrOperation.execute(executionContext);
 
-    // Save the result at the specified location
-    result.saveAs("output/ocrOutput.pdf");
+            // Save the result at the specified location
+            result.saveAs("output/ocrOutput.pdf");
 
-   } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
-    LOGGER.error("Exception encountered while executing operation", ex);
-   }
-  }
- }
+        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+            LOGGER.error("Exception encountered while executing operation", ex);
+        }
+    }
+}
 ```

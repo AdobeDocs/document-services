@@ -11,13 +11,13 @@ An Electronic Seal in PDF is akin to an organization's rubber stamp on a paper, 
 #### REST API
 
 ```bash
-curl --location --request POST 'https://pdf-services.adobe.io/operation/electronicseal'\
+curl --location --request POST 'https://pdf-services.adobe.io/operation/electronicseal' \
 --header 'x-api-key: {{Placeholder for client_id}}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
- "inputDocumentAssetID": "urn:aaid:AS:UE1:23c30ee0-2c4d-xxxx-xxxx-087832fca718",
-     "sealImageAssetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-xxxx-xxxx-087832fca718",
+    "inputDocumentAssetID": "urn:aaid:AS:UE1:23c30ee0-2c4d-xxxx-xxxx-087832fca718",
+    "sealImageAssetID": "urn:aaid:AS:UE1:23c30ee0-2e4d-xxxx-xxxx-087832fca718",
     "sealOptions": {
         "signatureFormat": "PKCS7",
         "cscCredentialOptions": {
@@ -57,12 +57,6 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/electron
 #### Node js
 
 ```js
-// Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
-// Run the sample:
-// node src/createpdf/create-pdf-from-docx.js
-
-const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
-
 try {
     // Initial setup, create credentials instance.
     const credentials =  PDFServicesSdk.Credentials
@@ -154,11 +148,6 @@ try {
 #### .Net
 
 ```clike
-// Get the samples from https://www.adobe.com/go/pdftoolsapi_net_samples
-// Run the sample:
-// cd CreatePDFFromDocx/
-// dotnet run CreatePDFFromDocx.csproj
-
 namespace ElectronicSeal
 {
     class Program
@@ -278,9 +267,6 @@ namespace ElectronicSeal
 #### Java
 
 ```javascript
-// Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
-// Run the sample:
-// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.createpdf.CreatePDFFromDOCX
 public class ElectronicSeal {
 
     // Initialize the logger.

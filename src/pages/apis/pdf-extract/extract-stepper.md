@@ -8,7 +8,7 @@ title: Adobe Developer — Wrapper Components  —  API Extract Stepper Componen
 
 ## Get started in minutes
 
-Start your free 6-month trial today with 1,000 PDF transactions
+Start with the Free Tier and get 500 free Document Transactions per month.
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light"  className='align-left horizontal-align'/>
 
