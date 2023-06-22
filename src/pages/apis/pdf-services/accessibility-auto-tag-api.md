@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 ##### Adobe PDF Accessibility Auto-Tag API
 
-- [See documentation](document-services/docs/overview/pdf-services-api/howtos/pdf-accessibility-auto-tag-pdf/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/pdf-accessibility-auto-tag-pdf/)
 
 Tag PDFs to improve accessibility. Identify the content structure and reading order, and tag tables, paragraphs, lists, headings, figures, and more to improve the reading experience of native or scanned PDFs with assistive technologies. Generate a tailored tagging report about added tags and any content that needs additional review.
 
