@@ -218,7 +218,7 @@ namespace ElectronicSeal
                 string providerName = "<PROVIDER_NAME>";
 
                 //Set the access token to be used to access TSP provider hosted APIs.
-                string accessToken = "<ACCESS TOKEN>";
+                string accessToken = "<ACCESS_TOKEN>";
 
                 //Set the credential ID.
                 string credentialID = "<CREDENTIAL_ID>";
@@ -313,7 +313,7 @@ public class ElectronicSeal {
             FileRef sealImageFile = FileRef.createFromLocalFile("src/main/resources/sampleSealImage.png");
 
             //Set the Seal Field Name to be created in input PDF document.
-            String sealFieldName = "signature1";
+            String sealFieldName = "Signature1";
 
             //Set the page number in input document for applying seal.
             Integer sealPageNumber = 1;
