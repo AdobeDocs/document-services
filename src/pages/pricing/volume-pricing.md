@@ -8,9 +8,9 @@ title: Adobe Developer — DC Platform SDK Resources
 
 <TextBlock slots="text" width="100%" theme="light"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 list-points div-p-0 left-content"/>
 
-- Access to all 15+ PDF Services including PDF Extract and Document Generation
-
 - Volume and multi-product discounts
+
+- Access to all 15+ PDF Services including PDF Extract, PDF Accessibility Auto-Tag API, and Document Generation
 
 - Technical Support included (different tiers available)
 

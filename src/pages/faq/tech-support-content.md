@@ -16,15 +16,15 @@ If you are interested in using Adobe PDF Services API on a trial basis, consider
 
 </AccordionItem>
 
-<AccordionItem header="Why do I have to use a personal account when setting up a trial or account? Why can't I use my company's existing enterprise email/account?" slot_id="account-management-why-do-i-have-to-use-a-personal-account-when-setting-up-a-trial-or-account">
+<AccordionItem header="Why do I have to use a personal account when setting up a Free tier or account? Why can't I use my company's existing enterprise email/account?" slot_id="account-management-why-do-i-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account">
 
-Access to Adobe Acrobat Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are working on a trial basis, it may be easier and faster to use a personal email than your existing Adobe ID.
+Access to Adobe Acrobat Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are using the Free Tier, it may be easier and faster to use a personal email than your existing Adobe ID.
 
 </AccordionItem>
 
 <AccordionItem header="Where do I find my Client ID or API key?" slot_id="account-management-where-do-i-find-my-client-id-or-api-key">
 
-Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the "client_id" key used in the back-end code to make free trial calls against.
+Your Client ID (also known as API key) is unique to your account and provided on the successful trial creation confirmation page. This is the "client_id" key used in the back-end code to make free tier calls against.
 
 </AccordionItem>
 
@@ -34,11 +34,11 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 </AccordionItem>
 
-<AccordionItem header='Can I continue using my same trial credentials (i.e. keys) when I have paid for Adobe Acrobat Services?' slot_id="account-management-can-i-continue-using-my-same-trial-credentials">
+<AccordionItem header='Can I continue using my same Free Tier credentials when I pay for Adobe Acrobat Services?' slot_id="account-management-can-i-continue-using-my-same-free-tier-credentials">
 
-You should not use your free trial credentials (Credential Key aka API Key) beyond your trial.
+You should not use your Free Tier credentials (Credential Key aka API Key) outside the Free Tier.
 
-When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free trial credentials with those new ETLA credentials.
+When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free tier credentials with those new ETLA credentials.
 
 </AccordionItem>
 

@@ -1,6 +1,6 @@
 ---
 title: Extract Text from PDF | Extract Data from PDF | Visualizer
-description: Extract the text, data and content elements of any PDF with a web service powered by Adobe Sensei's machine learning. Try a free trial of Adobe PDF Extract today!
+description: Extract the text, data and content elements of any PDF with a web service powered by Adobe Sensei's machine learning. Try a free tier of Adobe PDF Extract today!
 ---
 
 import ExtractStepperComponent from './pdf-extract/extract-stepper.md';
@@ -22,7 +22,7 @@ Unlock the structure and content elements of any PDF with a web service powered 
 apiHeroAssetImg doc-ext-invoice
 
 - [Try the Demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
-- [Start Free Trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
+- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-extract-api)
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="padding-zero Key-features-of-Adobe-PDF-Extract-API" enableMaxHeight/>
 
@@ -39,8 +39,6 @@ apiHeroAssetImg doc-ext-invoice
 <WrapperComponent slots="content" repeat="1" theme="light" className="Get-started-in-minutes"/>
 
 <ExtractStepperComponent />
-
-<EsealApiAnnouncement/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest"/>
 

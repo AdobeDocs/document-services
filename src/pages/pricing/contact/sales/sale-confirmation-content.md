@@ -11,7 +11,7 @@ Meanwhile, we encourage you to explore your <a title='pricing' href="/document-s
 
 <TextBlock slots="text, buttons" width="100%" theme="lightest"  alignment="yes" primaryOutline  className="padding-confiramtion text-align-left div-p-0  link linking how-it-work-richText explore-content-two confirmation-h-pad" />
 
-If you haven't already, sign up for a [free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html) to start building and testing your document management workflows.
+If you haven't already, sign up for a [free tier](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html) to start building and testing your document management workflows.
 
-- [Start free trial](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
 - [Visit FAQ](/faq/sales/)

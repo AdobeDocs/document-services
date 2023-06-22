@@ -33,7 +33,13 @@ apiHeroAssetImg sign-api-hero
 
 <TakeYourProjectCont/>
 
-<EsealApiAnnouncement/>
+<AnnouncementBlock slots="heading, text, button" theme="dark" />
+
+### Check out our new Adobe PDF Electronic Seal API
+
+Try our latest API that helps you verify the identity and integrity of documents using an electronic seal.
+
+[Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="padding-zero Key-features-of-Adobe-PDF-Extract-API"/>
 
