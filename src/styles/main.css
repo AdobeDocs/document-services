@@ -208,6 +208,13 @@ h1 {
     border-bottom-left-radius: var(--spectrum-card-border-radius, var(--spectrum-alias-border-radius-regular));
     height: 120px;
 }
+.useCaseCard-seal-api .spectrum-Card-body:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: var(--spectrum-card-border-radius, var(--spectrum-alias-border-radius-regular));
+    border-bottom-left-radius: var(--spectrum-card-border-radius, var(--spectrum-alias-border-radius-regular));
+    height: 135px;
+}
 
 .useCaseCard .spectrum-Card-content{
     margin-top: 15px;
@@ -2867,6 +2874,11 @@ img[alt=adobe-support] {
     background-repeat: no-repeat;
     background-size: cover !important;
 }
+.eSealApibgImage {
+    background: rgb(250, 105, 85) url('../pages/images/bg-hero-doc-gen.jpeg') !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
 
 .autoTagapiHeroAssetImg {
     margin: 0 auto !important;
@@ -2876,6 +2888,14 @@ img[alt=adobe-support] {
     width: 100%;
     height: 21rem;
 }
+.e-Seal-API-HeroAssetImg {
+    margin: 0 auto !important;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+    height: 29rem;
+}
 .autoTagAPI-content div > p{
     width: 865px !important;
 }
@@ -2883,7 +2903,9 @@ img[alt=adobe-support] {
 .accessibility-auto-tag-hero{
     background-image: url('../pages/images/2_Marquee_VisualAutoTag.png') !important;
 }
-
+.e-seal-api-hero{
+    background-image: url('../pages/images/e-seal-desktop2.png') !important;
+}
 
 @media screen and (min-width: 1024px){
 
@@ -2895,6 +2917,14 @@ img[alt=adobe-support] {
         width: 48.625rem;
         height: 18rem;
     }
+    .e-Seal-API-HeroAssetImg {
+        margin: 0 auto !important;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        width: 37.625rem;
+        height: 22rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width:1023px){
@@ -2905,9 +2935,19 @@ img[alt=adobe-support] {
         width: 44rem;
         height: 18rem;
     }
+    .e-Seal-API-HeroAssetImg {
+        margin: 0 auto !important;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        width: 30rem;
+        height: 18rem;
+    }
     .accessibility-auto-tag-hero{
         background-image: url('../pages/images/visual_autoTag_mob.png') !important;
-
+    }
+    .e-seal-api-hero{
+        background-image: url('../pages/images/e-seal-mob.png') !important;
     }
     .autoTagAPI-content div > p{
         width: 700px !important;
@@ -2922,9 +2962,19 @@ img[alt=adobe-support] {
         width: 20rem;
         height: 8rem;
     }
-
+    .e-Seal-API-HeroAssetImg {
+        margin: 0 auto !important;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        width: 20rem;
+        height: 12rem;
+    }
     .accessibility-auto-tag-hero{
         background-image: url('../pages/images/visual_autoTag_mob.png') !important;
+    }
+    .e-seal-api-hero{
+        background-image: url('../pages/images/e-seal-tab.png') !important;
     }
     .autoTagAPI-content div > p{
         width: 282px !important;
