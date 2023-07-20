@@ -16,7 +16,7 @@ If you are interested in using Adobe PDF Services API on a trial basis, consider
 
 </AccordionItem>
 
-<AccordionItem header="Why do I have to use a personal account when setting up a Free tier or account? Why can't I use my company's existing enterprise email/account?" slot_id="account-management-why-i-do-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account">
+<AccordionItem header="Why do I have to use a personal account when setting up a Free Tier or account? Why can't I use my company's existing enterprise email/account?" slot_id="account-management-why-i-do-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account">
 
 Access to Adobe Acrobat Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are using the Free Tier, it may be easier and faster to use a personal email than your existing Adobe ID.
 

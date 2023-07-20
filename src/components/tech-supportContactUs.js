@@ -65,7 +65,7 @@ const issue_sub_url_array = [
   {
     issue_type: "Account Management",
     sub_issue_type:
-      "Why do I have to use a personal account when setting up a Free tier or account? Why can't I use my company's existing enterprise email/account?",
+      "Why do I have to use a personal account when setting up a Free Tier or account? Why can't I use my company's existing enterprise email/account?",
     sub_issue_type_id:
       "account-management-why-do-i-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account"
   },
