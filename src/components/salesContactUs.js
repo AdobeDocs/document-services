@@ -31,11 +31,11 @@ const regionOptions = [
 const volumeOPtions = [
   {
     key: 1,
-    label: "less than 10K transactions/mo"
+    label: "less than 15k transactions/mo"
   },
   {
     key: 2,
-    label: "10-50k transactions/mo"
+    label: "15k-50k transactions/mo"
   },
   {
     key: 3,
