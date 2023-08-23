@@ -67,6 +67,7 @@ This AI-powered API automatically tag tables, paragraphs, lists, headings and mo
 
 Apply an electronic seal to documents at scale using a certificate issued by certain TSPs (Trust Service Providers) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). The electronic seal helps verify the identity and integrity of documents. This can be used to e-seal documents at scale and is included with PDF Services API.
 
+- [Try the demo](https://acrobatservices.adobe.com/dc-eseal-playground/index.html#/)
 - [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
 
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />

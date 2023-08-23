@@ -466,6 +466,94 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       });
 
 
+    } else if (window.location.pathname.indexOf("electronic-seal-api") >= 0) {
+      document
+        .querySelector(".Hero-Banner")
+        .closest("main")
+        .setAttribute("daa-lh", "Body");
+
+      document
+        .querySelector(".Hero-Banner")
+        .setAttribute("daa-lh", "Adobe PDF Electronic Seal API");
+      document.querySelectorAll(".Hero-Banner a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".e-seal-key-feature-title")
+        .setAttribute("daa-lh", "Key features of PDF Electronic Seal API");
+      document.querySelectorAll(".Why-PDF-Services-API a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+
+      document
+        .querySelector(".e-seal-Benefits-one")
+        .setAttribute("daa-lh", "Electronic seal application")
+      document
+        .querySelector(".e-seal-Benefits-two")
+        .setAttribute("daa-lh", "E-seal verification")
+      document
+        .querySelector(".e-seal-Benefits-three")
+        .setAttribute("daa-lh", "Compliance with eIDAS")
+      document
+        .querySelector(".e-seal-Benefits-four")
+        .setAttribute("daa-lh", "Platform Agnostic REST API")
+      document
+        .querySelector(".e-seal-Benefits-five")
+        .setAttribute("daa-lh", "Customizable & easy to use")
+      document
+        .querySelector(".e-seal-Benefits-six")
+        .setAttribute("daa-lh", "Partnership with TSPs")
+      document.querySelectorAll(".e-seal-Benefits-six a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".zig-zag-title")
+        .setAttribute("daa-lh", "Benefits of PDF Electronic Seal API")
+      document
+        .querySelector(".zig-zag-cont-one")
+        .setAttribute("daa-lh", "Make critical business documents tamper-evident")
+      document
+        .querySelector(".zig-zag-cont-two")
+        .setAttribute("daa-lh", "Enable end-to-end automated sealing workflows")
+      document
+        .querySelector(".zig-zag-cont-three")
+        .setAttribute("daa-lh", "Meet security and reliability needs")
+      document
+        .querySelector(".industry-usecase-title")
+        .setAttribute("daa-lh", "Explore use cases")
+
+      document
+        .querySelector(".Get-started-in-minutes")
+        .setAttribute("daa-lh", "Get started in minutes");
+
+      document.querySelectorAll(".Get-started-in-minutes a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      });
+
+      document
+        .querySelector(".Explore-other-Adobe-Document-Services-APIs")
+        .setAttribute("daa-lh", "Explore other Adobe Document Services APIs");
+
+      document
+        .querySelectorAll(".Explore-other-Adobe-Document-Services-APIs a")
+        .forEach(link => {
+          link.setAttribute("daa-ll", link.textContent);
+        });
+
+      document
+        .querySelector(".news-letter")
+        .setAttribute("daa-lh", "Newsletter");
+
+
+      document.querySelector(".accessibility-summary-two")
+        .setAttribute("daa-lh", "We're ready to help")
+      document.querySelectorAll(".accessibility-summary-two a").forEach(link => {
+        link.setAttribute("daa-ll", link.textContent);
+      })
+
     } else if (window.location.pathname.indexOf("microsoft-pa-integration") >= 0) {
 
       document

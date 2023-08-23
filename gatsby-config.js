@@ -54,6 +54,11 @@ module.exports = {
             path: 'apis/doc-generation/'
           },
           {
+            title: 'Electronic Seal API',
+            description: 'Electronically seal PDF documents at scale to provide document athenticity and identity',
+            path: 'apis/electronic-seal-api/'
+          },
+          {
             title: 'PDF Embed',
             description: 'Embed high-fidelity PDFs in web apps with analytics',
             path: 'apis/pdf-embed/'
