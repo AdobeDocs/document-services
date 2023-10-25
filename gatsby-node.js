@@ -14,6 +14,9 @@ const webpack = require('webpack');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
+    externals: {
+      jquery: 'jQuery',
+    },
     resolve: {
       fallback: {
         fs: false,
@@ -84,7 +87,7 @@ exports.createResolvers = ({ createResolvers, addFrontmatterType }) => {
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     let temp = [
-      { filePath: './src/pages/index.md', url:'homepage' }     
+      { filePath: './src/pages/index.md', url:'homepage' }
     ]
     // { filePath: './src/pages/pricing/index.md', url:'pricing/main' },
 
