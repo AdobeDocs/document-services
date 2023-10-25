@@ -9,7 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-import jQuery from 'jquery';
+
 const isBrowser = typeof window !== "undefined";
 export const onRouteUpdate = ({ location, prevLocation }) => {
 
@@ -34,42 +34,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       { embedMode: "LIGHT_BOX" }
     );
   };
-  const jQueryForm = () => {
-    return new Promise((resolve, reject) => {
-      jQuery(document).ready(function () {
-      return  jQuery(document).ready(function (e) {
-        resolve(jQuery("#form").faas({ //change targeted element to fit your
-          "id": 67, //formtemplate id
-          "l": "en_us", //local - optional
-          "d": "/training.html", // destination url
-          "as": false, //autosubmit - optional
-          "pc": {
-            "1": "js",
-            "2": "faas_submission",
-            "3": "sfdc",
-            "4": "demandbase"
-          },
-          "p": {
-            "js": {
-              "36": "70114000002XWHZAA4", //
-              "77": "1",
-              "78": "1",
-              "79": "1",
-              "90": "DESBU",
-              "92": "2846", //form_type
-              "93": "2851", //form_subtype
-              "94": "3084" // product of interest
-              //"6": "marketing_web_form",
-              //"7": "whitepaper_form",
-              //"31": "Acrobat",
-            }
-          }
-        }))
-                })
-        // Resolve the promise with the content
-      });
-    });
-  }
   const reTargetingFun = () => {
 
     let isAvailable = document.body.querySelector('.retargeting')
@@ -1065,20 +1029,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".news-letter a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-
-    } else if  (window.location.pathname.indexOf("jquery-form") >= 0){
-      const faasForm = async () => {
-        var form = document.getElementById("form");
-        try {
-          const content = await jQueryForm();
-          console.log('Returned Content:', content);
-          form.innerHTML += await content
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      }
-
-      faasForm();
 
     } else if (window.location.pathname.indexOf("pdf-extract") >= 0) {
 
