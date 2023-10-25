@@ -22,7 +22,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         fs: false,
         path: require.resolve('path-browserify'),
         https: require.resolve('https-browserify'),
-        http: require.resolve('stream-http')
+        http: require.resolve('stream-http'),
+        tty: require.resolve('tty-browserify'),
+        os: require.resolve('os-browserify/browser'),
+        crypto: require.resolve('crypto-browserify'),
+        zlib: require.resolve('browserify-zlib'),
+        stream: require.resolve('stream-browserify')
       }
     },
     plugins: [
