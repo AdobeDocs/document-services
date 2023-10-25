@@ -34,7 +34,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       { embedMode: "LIGHT_BOX" }
     );
   };
-
   const reTargetingFun = () => {
 
     let isAvailable = document.body.querySelector('.retargeting')
@@ -114,6 +113,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       window.location.host.indexOf("adobe.io") >= 0
     ) {
       referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
+    }
+
+    // set sales form iframe src to point to correct location
+    let salesForm = document.querySelector('#salesForm')
+    if (salesForm) {
+      if (!isLocal) {
+        salesForm.src = navLinksBaseUrl + '/' + salesForm.src.split("/").pop();
+      }
     }
 
     let header = document.querySelector("header");
@@ -1660,22 +1667,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           .querySelector(".Sales-ContactUs")
           .closest("main")
           .setAttribute("daa-lh", "Body");
-
-        document
-          .querySelector(".Hero-Banner")
-          .setAttribute("daa-lh", "Hero Banner");
-
-        document.querySelectorAll(".Hero-Banner a").forEach((link) => {
-          link.setAttribute("daa-ll", link.textContent);
-        });
-
-        document
-          .querySelector(".Sales-Form")
-          .setAttribute("daa-lh", "Sales Form");
-
-        document.querySelectorAll(".Sales-Form a").forEach((link) => {
-          link.setAttribute("daa-ll", `Sales | ${link.textContent}`);
-        });
       } else if (window.location.pathname.indexOf("contact/support/confirmation") >= 0) {
         document
           .querySelector(".support-confirmation")

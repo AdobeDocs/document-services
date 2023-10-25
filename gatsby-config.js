@@ -72,7 +72,7 @@ module.exports = {
             title: 'Power Automate Connector',
             description: 'Build workflows on Microsoft Power Platform easily',
             path: 'apis/microsoft-pa-integration/'
-          }
+          },
         ]
       },
       {
