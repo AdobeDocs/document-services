@@ -70,6 +70,6 @@ export const onRenderBody = ({setHeadComponents}) => {
     <script src="https://acrobatservices.adobe.com/view-sdk/main.js"></script>,
     process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
       <script async src="https://www.adobe.com/marketingtech/main.min.js"></script>
-    )
+    ),
   ]);
 };
