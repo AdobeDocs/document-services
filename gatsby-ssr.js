@@ -16,7 +16,6 @@ import {withPrefix} from 'gatsby';
 export const onRenderBody = ({setHeadComponents}) => {
   setHeadComponents([
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>,
-    <script type="text/javascript" language="javascript" src="https://staging.apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>,
         <script type="text/javascript">
           {`
            _linkedin_partner_id = '3803834';
@@ -72,6 +71,7 @@ export const onRenderBody = ({setHeadComponents}) => {
     <script src="https://acrobatservices.adobe.com/view-sdk/main.js"></script>,
     process.env.GATSBY_ADOBE_ANALYTICS_ENV && (
       <script async src="https://www.adobe.com/marketingtech/main.min.js"></script>
-    )
+    ),
+    <script type="text/javascript" language="javascript" src="https://staging.apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
   ]);
 };

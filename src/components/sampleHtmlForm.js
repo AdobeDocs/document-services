@@ -1,26 +1,33 @@
 import React, { useEffect } from 'react';
-import jQuery from 'jquery';
+import $ from 'jquery';
 
 const JqueryFormAccess = () => {
     useEffect(() => {
-        // jQuery(document).ready(function () {
-        //     // Your jQueryForm function here
-        //     jQueryForm()
-        //         .then((content) => {
-        //             console.log('Returned Content:', content);
-        //             var form = document.getElementById("form");
-        //             form.innerHTML += content;
-        //         })
-        //         .catch((error) => {
-        //             console.error('Error:', error);
-        //         });
-        // });
+        myjQueryFunction();
     }, []); // Empty dependency array ensures the effect runs after the component mounts
+
+
+const myjQueryFunction=()=> {
+        // Use $() to access jQuery
+        $(document).ready(() => {
+            // Your jQueryForm function here
+            jQueryForm()
+                .then((content) => {
+                    console.log('Returned Content:', content);
+                    const form = document.getElementById("form");
+                    form.innerHTML += content;
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+    }
+
 
 const jQueryForm = () => {
         return new Promise((resolve) => {
-            jQuery(document).ready(function () {
-                resolve(jQuery("#form").faas({
+            $(document).ready(function () {
+                resolve($("#form").faas({
                     "id": 67, //formtemplate id
                     "l": "en_us", //local - optional
                     "d": "/training.html", // destination url
