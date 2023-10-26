@@ -14,12 +14,22 @@ const webpack = require('webpack');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
+    externals: {
+      jquery: 'jQuery',
+    },
     resolve: {
       fallback: {
         fs: false,
         path: require.resolve('path-browserify'),
         https: require.resolve('https-browserify'),
-        http: require.resolve('stream-http')
+        http: require.resolve('stream-http'),
+        tty: require.resolve('tty-browserify'),
+        os: require.resolve('os-browserify/browser'),
+        crypto: require.resolve('crypto-browserify'),
+        zlib: require.resolve('browserify-zlib'),
+        stream: require.resolve('stream-browserify'),
+        assign: require.resolve('object.assign/polyfill'),
+        assert: require.resolve('assert'),
       }
     },
     plugins: [
@@ -84,7 +94,7 @@ exports.createResolvers = ({ createResolvers, addFrontmatterType }) => {
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     let temp = [
-      { filePath: './src/pages/index.md', url:'homepage' }     
+      { filePath: './src/pages/index.md', url:'homepage' }
     ]
     // { filePath: './src/pages/pricing/index.md', url:'pricing/main' },
 
