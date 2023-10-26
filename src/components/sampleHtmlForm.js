@@ -3,21 +3,21 @@ import jQuery from 'jquery';
 
 const JqueryFormAccess = () => {
     useEffect(() => {
-        jQuery(document).ready(function () {
-            // Your jQueryForm function here
-            jQueryForm()
-                .then((content) => {
-                    console.log('Returned Content:', content);
-                    var form = document.getElementById("form");
-                    form.innerHTML += content;
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-        });
+        // jQuery(document).ready(function () {
+        //     // Your jQueryForm function here
+        //     jQueryForm()
+        //         .then((content) => {
+        //             console.log('Returned Content:', content);
+        //             var form = document.getElementById("form");
+        //             form.innerHTML += content;
+        //         })
+        //         .catch((error) => {
+        //             console.error('Error:', error);
+        //         });
+        // });
     }, []); // Empty dependency array ensures the effect runs after the component mounts
 
-    const jQueryForm = () => {
+const jQueryForm = () => {
         return new Promise((resolve) => {
             jQuery(document).ready(function () {
                 resolve(jQuery("#form").faas({
@@ -49,7 +49,7 @@ const JqueryFormAccess = () => {
                 }));
             });
         });
-    }
+}
 
     return (
         <div>
