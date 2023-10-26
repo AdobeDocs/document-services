@@ -14,6 +14,9 @@ const webpack = require('webpack');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
+    // externals: {
+    //   jquery: 'jQuery',
+    // },
     resolve: {
       fallback: {
         fs: false,
