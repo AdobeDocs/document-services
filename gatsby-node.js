@@ -28,7 +28,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         crypto: require.resolve('crypto-browserify'),
         zlib: require.resolve('browserify-zlib'),
         stream: require.resolve('stream-browserify'),
-        assign: require.resolve('object.assign/polyfill'),
+        assert: require.resolve('assert'),
       }
     },
     plugins: [
