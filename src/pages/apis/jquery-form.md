@@ -1,4 +1,4 @@
 ---
 frameSrc: /sales.html
-frameHeight: 700px
+frameHeight: 100%
 ---
