@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" language="javascript" src="https://staging.apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
+
+    <script type="text/javascript" language="javascript">
+         (function ($) {
+            $(document).ready(function (e) {
+                $("#form").faas({
+                    "id": 67, //formtemplate id
+                    "l": "en_us", //local - optional
+                    "d": "/training.html", // destination url
+                    "as": false, //autosubmit - optional
+                    "pc": {
+                        "1": "js",
+                        "2": "faas_submission",
+                        "3": "sfdc",
+                        "4": "demandbase"
+                    },
+                    "p": {
+                        "js": {
+                            "36": "70114000002XWHZAA4",
+                            "77": "1",
+                            "78": "1",
+                            "79": "1",
+                            "90": "DESBU",
+                            "92": "2846", //form_type
+                            "93": "2851", //form_subtype
+                            "94": "3084" // product of interest
+                            //"6": "marketing_web_form",
+                            //"7": "whitepaper_form",
+                            //"31": "Acrobat",
+                        }
+                    }
+                });
+            });
+        })(jQuery);
+    </script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>iFrame source file</h1>
+    <form id="form">
+
+    </form>
+</body>
+
+</html>

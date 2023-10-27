@@ -390,11 +390,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [`@adobe/gatsby-theme-aio`, {
-    resolve: 'gatsby-plugin-load-script',
-    options: {
-      src: 'https://code.jquery.com/jquery-3.7.1.min.js' // URL to your jQuery script
-    }
-  }],
+  plugins: [`@adobe/gatsby-theme-aio`],
   pathPrefix: process.env.PATH_PREFIX || '/document-services/'
 };
