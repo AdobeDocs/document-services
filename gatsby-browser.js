@@ -115,6 +115,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
     }
 
+    // set sales form iframe src to point to correct location
+    let salesForm = document.querySelector('#salesForm')
+    if(salesForm) {
+      if(!isLocal) {
+        salesForm.src = navLinksBaseUrl + salesForm.src.split("/").pop();
+      }
+    }
+
     let header = document.querySelector("header");
     header
       .querySelector("a[href='/']")
