@@ -104,7 +104,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     // stage/deploy
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0) {
       isLocal = false;
-      navLinksBaseUrl = "/document-servicesfaas";
+      navLinksBaseUrl = "/document-services";
       baseurl = "https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html"
     }
     // production
@@ -119,7 +119,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let salesForm = document.querySelector('#salesForm')
     if(salesForm) {
       if(!isLocal) {
-        salesForm.src = navLinksBaseUrl + salesForm.src.split("/").pop();
+        salesForm.src = navLinksBaseUrl + '/' + salesForm.src.split("/").pop();
       }
     }
 
