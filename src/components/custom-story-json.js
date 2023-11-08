@@ -92,6 +92,16 @@ const products=[
         docs: false,
         lastUpdated: "2020",
         cloud: clouds[0],
+    },
+    {
+        id: 9,
+        name: "AFTIA",
+        description: "AFTIA helps a multinational financial services company better serve clients by accelerating client onboarding with Adobe apps and APIs.",
+        icon: `${baseUrl}/img/custom-stories-icon/aftia.png`,
+        discover: `${baseUrl}/img/custom-story-docs/aftia-story.pdf`,
+        docs: false,
+        lastUpdated: "2020",
+        cloud: clouds[0],
     }
 ]
 

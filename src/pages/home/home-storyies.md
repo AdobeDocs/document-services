@@ -26,13 +26,13 @@ Agreement Experience is projected to save deal desk and sales attorneys 36,000 h
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size hme-custom-header' isCustomStories/>
 
-[Cambridge-Assessment.pdf](../resources/Cambridge-Assessment.pdf)
+[aftia-story.pdf](../resources/aftia-story.pdf)
 
-![EMPTY_ALT](../images/Cambridge-Assessment.jpeg)
+![EMPTY_ALT](../images/aftia.png)
 
-### Cambridge Assessment
+### AFTIA
 
-Cambridge Assessment intends to digitize more than 100 years of test material with Adobe PDF Extract API.
+AFTIA helps a multinational financial services company better serve clients by accelerating client onboarding with Adobe apps and APIs.
 
 <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
