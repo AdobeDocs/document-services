@@ -3240,3 +3240,50 @@ img[alt=adobe-support] {
         margin: auto !important;
     }
 }
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  /* height: 1500px; */
+}
+.iframe-container.gdpr {
+    height: 1040px !important;
+}
+/* Style the FaaS form iframe inside the container */
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .iframe-container {
+    padding-bottom: 75%;
+    height: 900px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+  .iframe-container {
+    padding-bottom: 75%;
+    height: 760px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .iframe-container {
+    padding-bottom: 133.33%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding-top: 25px;
+    height: 950px !important;
+  }
+  .iframe-container.gdpr {
+    height: 1090px !important;
+  }
+}
