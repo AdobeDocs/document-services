@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="spectrum spectrum--light spectrum--medium" dir="ltr" lang="eng">
+
+<head>
+  <title> FaaS Test FaaS form </title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/lazy-styles.css">
+</head>
+
+<script async src="https://www.adobe.com/marketingtech/main.min.js"></script>
+<script>
+  function isStageOrProd(host) {
+    if (host.indexOf(('localhost') >= 0) || host.indexOf('developer-stage') >= 0) {
+      return 'dev';
+    } else if (host.indexOf('developer.adobe.com') >= 0) {
+      return 'production';
+    }
+  }
+
+  function setAnalytics() {
+    console.log('setting analytics');
+    if (isStageOrProd(window.location.host) === 'production') {
+      window.marketingtech = {
+        adobe: {
+          launch: {
+            property: 'global',
+            environment: 'production',
+          },
+          analytics: {
+            additionalAccounts: 'pgeo1xxpnwadobeio-prod',
+          }
+        }
+      };
+    } else if (isStageOrProd(window.location.host) === 'dev') {
+      window.marketingtech = {
+        adobe: {
+          launch: {
+            property: 'global',
+            environment: 'dev',
+          },
+          analytics: {
+            additionalAccounts: 'pgeo1xxpnwadobeio-qa',
+          }
+        }
+      }
+
+      console.log(window.marketingtech)
+    }
+  }
+
+  (function () {
+    setAnalytics();
+  })()
+</script>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" language="javascript"
+    src="https://apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
+  <script type="text/javascript" language="javascript">
+      ; (function ($) {
+        $(document).ready(function (e) {
+          $("#form").faas({
+            "id": 54,
+            "l": "en_us", //locale
+            "d": "/document-services/pricing/contact/sales/confirmation", //thank you page url
+            "as": false, /*auto submit - optional*/
+            "pc": { //pre-populate sources
+              "1": "js",
+              "2": "faas_submission",
+              "3": "sfdc",
+              "4": 'demandbase'
+            },
+            "p": { // this is the prepopulation
+              "js": { // this is manual prepopulation...
+                "6": "marketing_web_form", //event type
+                "7": "request_for_information", //Channel subtype
+                "94": "3316", //SKU (DOCUMENT SERVICE)
+                "36": "7015Y000003pFaCQAU", //campaign ID
+                "77": "1", //allowmmmailind
+                "78": "1", //ok to call
+                "79": "1", //ok to mail
+                "90": "FAAS", //source system
+                "92": "2846",
+                "93": "2847"
+              }
+            },
+            e: {
+              /*put all callbacks here*/
+              afterYiiLoadedCallback: function () {
+                $(".faas-header").css("display", "flex");
+                $('label[for="Form54_26"]').html('Use case <span class="required">*</span>').addClass('required');
+                $("#Form54_26").addClass("required");
+                $("#Form54_26").attr("rows", 6);
+                $("#Form54_26").attr("placeholder", "Please describe your intended application of our PDF Services APIs.");
+                $("#Form54_26_em_").text("Use case cannot be blank.");
+
+                $('#Form54_14').on('change', function () {
+                  var $this = $(this);
+                  var $iframeContainer = $('.iframe-container', window.parent.document);
+                  setTimeout(() => {
+                    if($this.closest('#faas-form-54').find('.korean_disclaimers:visible').length){
+                      $iframeContainer.addClass('gdpr');
+                    } else {
+                      $iframeContainer.removeClass('gdpr');
+                    }
+                  }, 100);
+                });
+
+                $('#Form54_26').on('blur', function () {
+                  var $this = $(this);
+                  if (!$this.val()) {
+                    setTimeout(() => {
+                      $this.closest('.textarea').removeClass('success').addClass('error');
+                    }, 200);
+                    $('#Form54_submit').prop('disabled', true);
+                  } else {
+                    $('#Form54_submit').prop('disabled', false);
+                  }
+                });
+
+                $('#Form54_submit').on('click', function () {
+                  var $this = $(this);
+
+                  if ($('#Form54_1').val() && $('#Form54_8').val() && $('#Form54_9').val() && $('#Form54_10').val() && $('#Form54_11').val() && (($this.closest('#faas-form-54').find('.korean_disclaimers:visible').length && $('#Form54_84:checked').val() && $('#Form54_87:checked').val()) || $('#Form54_14').val()) && $('#Form54_16').val() && $('#Form54_17').val() && $('#Form54_18').val() && $('#Form54_19').val() && $('#Form54_20').val() && $('#Form54_33').val() && !$('#Form54_26').val()) {
+                    $('#Form54_26').closest('.textarea').removeClass('success').addClass('error');
+                    $this.prop('disabled', true);
+                  } else {
+                    $this.prop('disabled', false);
+                  }
+                });
+
+                $(".faas-header a").each(function () {
+                  var linkText = $(this).text();
+                  $(this).attr("data-ll", linkText.trim());
+                });
+                $(".faas-form a").each(function () {
+                  var linkText = $(this).text();
+                  $(this).attr("data-ll", linkText.trim());
+                });
+              },
+
+              beforeValidationCallback: function () {
+                var $useCaseField = $('#Form54_26');
+                if (!$useCaseField.val()) {
+                  setTimeout(function () {
+                    $useCaseField.closest('.textarea').removeClass('success').addClass('error');
+                    return false;
+                  }, 200)
+                }
+                return true;
+              },
+              afterSubmitCallback: function (data) {
+                // Redirect to the thank you page outside of the iframe
+                top.location.href = "/document-services/pricing/contact/sales/confirmation";
+              }
+            }
+          });
+        });
+      })(jQuery);
+  </script>
+  <div class="resource-form">
+    <div class="block faas white column2 faas-form-40">
+      <div class="faas-header">
+        <div class="caption">
+          Get info about pricing, billing, and licensing.
+        </div>
+        <div class="faq-text">
+          Please visit our
+          <a class="link-content" target="_blank" href="/document-services/faq/sales/">
+            FAQ
+          </a>
+          or fill out the form below to speak with an Adobe rep.
+        </div>
+        <div class="faq-text">
+          For technical inquiries, submit a tech support request
+          <a class="link-content" target="_blank" href="/document-services/pricing/contact/support/">
+            here.
+          </a>
+        </div>
+      </div>
+      <div class="faas faas-form" id="form">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
