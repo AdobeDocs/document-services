@@ -56,7 +56,7 @@
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" language="javascript"
-    src="https://apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
+    src="https://qa.apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
   <script type="text/javascript" language="javascript">
       ; (function ($) {
         $(document).ready(function (e) {
@@ -76,7 +76,7 @@
                 "6": "marketing_web_form", //event type
                 "7": "request_for_information", //Channel subtype
                 "94": "3316", //SKU (DOCUMENT SERVICE)
-                "36": "7015Y000003pFaCQAU", //campaign ID
+                "36": "70130000000kYe0AAE", //campaign ID
                 "77": "1", //allowmmmailind
                 "78": "1", //ok to call
                 "79": "1", //ok to mail
@@ -88,6 +88,9 @@
             e: {
               /*put all callbacks here*/
               afterYiiLoadedCallback: function () {
+                // Hide and set true as default value for 'Contact me to schedule a product demonstration' checkbox field
+                $('#Form54_35').prop('checked', true).closest('.FaaS-35').addClass('hide');
+
                 $(".faas-header").css("display", "flex");
                 $('label[for="Form54_26"]').html('Use case <span class="required">*</span>').addClass('required');
                 $("#Form54_26").addClass("required");
