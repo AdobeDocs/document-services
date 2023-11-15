@@ -548,6 +548,9 @@ body > header {
   margin-left: 4px;
   margin-top: 2px !important;
 }
+.hide {
+  display: none !important;
+}
   /* for mobile */
   @media (max-width:799.99px) {
 

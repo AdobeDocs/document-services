@@ -88,6 +88,9 @@
             e: {
               /*put all callbacks here*/
               afterYiiLoadedCallback: function () {
+                // Hide and set true as default value for 'Contact me to schedule a product demonstration' checkbox field
+                $('#Form54_35').prop('checked', true).closest('.FaaS-35').addClass('hide');
+
                 $(".faas-header").css("display", "flex");
                 $('label[for="Form54_26"]').html('Use case <span class="required">*</span>').addClass('required');
                 $("#Form54_26").addClass("required");
