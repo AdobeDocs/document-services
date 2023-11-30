@@ -28,6 +28,8 @@ import MTEC from "../pages/images/mtec.png"
 import MtecStoryPDF from "../pages/resources/mtec-story.pdf"
 import AEStory from "../pages/images/AE_story.png"
 import AdobeExpCloudStoryPDF from "../pages/resources/AdobeExpCloudStory.pdf"
+import AftiaStoryPDF from '../pages/resources/aftia-story.pdf'
+import AftiaStory from '../pages/images/aftia.png'
 
 //Filter the image url path for loading the image under image tag source.
 const getImageURl = (url) => {
@@ -127,6 +129,12 @@ const StoriesContent = [
     URL: AdobeExpCloudStoryPDF,
     Thumbnail: AEStory,
     desc: "Agreement Experience is projected to save deal desk and sales attorneys 36,000 hours annually on contracts."
+  },
+  {
+    Title: "AFTIA",
+    URL: AftiaStoryPDF,
+    Thumbnail: AftiaStory,
+    desc: "AFTIA helps a multinational financial services company better serve clients by accelerating client onboarding with Adobe apps and APIs."
   }
 ];
 
