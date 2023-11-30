@@ -49,7 +49,7 @@ const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
 
 const setCustomOptions = (htmlToPDFOperation) => {
     // Define the page layout, in this case an 8 x 11.5 inch page (effectively portrait orientation).
-    const pageLayout = new PDFServicesSdk.CreatePDF.options.PageLayout();
+    const pageLayout = new PDFServicesSdk.CreatePDF.options.html.PageLayout();
     pageLayout.setPageSize(8, 11.5);
 
     // Set the desired HTML-to-PDF conversion options.
