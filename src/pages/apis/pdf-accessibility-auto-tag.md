@@ -29,6 +29,14 @@ autoTagapiHeroAssetImg  accessibility-auto-tag-hero
 
 <AutoTagAPI />
 
+<AnnouncementBlock slots="heading, text, button" theme="dark" />
+
+### Join our Beta program for the PDF Accessibility Checker API
+
+Sign up for access to try our latest API that helps you check the accessibility of PDFs at scale.
+
+[Sign up](../pricing/contact/sales/accessibilitychecker)
+
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
 <BenefitsOfAccessibilityTitle/>
