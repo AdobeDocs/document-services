@@ -168,35 +168,47 @@ public class SplitPDFByNumberOfPages {
     private static final Logger LOGGER = LoggerFactory.getLogger(SplitPDFByNumberOfPages.class);
 
     public static void main(String[] args) {
-        try {
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .build();
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/splitPDFInput.pdf").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                    System.getenv("PDF_SERVICES_CLIENT_ID"),
+                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-            // Create an ExecutionContext using credentials and create a new operation instance.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
-            SplitPDFOperation splitPDFOperation = SplitPDFOperation.createNew();
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-            // Set operation input from a source file.
-            FileRef source = FileRef.createFromLocalFile("src/main/resources/splitPDFInput.pdf");
-            splitPDFOperation.setInput(source);
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
 
-            // Set the maximum number of pages each of the output files can have.
-            splitPDFOperation.setPageCount(2);
+            // Create parameters for the job
+            SplitPDFParams splitPDFParams = new SplitPDFParams();
+            // Sets the maximum number of pages each of the output files can have
+            splitPDFParams.setPageCount(2);
 
-            // Execute the operation.
-            List result = splitPDFOperation.execute(executionContext);
+            // Creates a new job instance
+            SplitPDFJob splitPDFJob = new SplitPDFJob(asset, splitPDFParams);
 
-            // Save the result to the specified location.
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(splitPDFJob);
+            PDFServicesResponse<SplitPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, SplitPDFResult.class);
+
+            // Get content from the resulting asset(s)
+            List<Asset> resultAssets = pdfServicesResponse.getResult().getAssets();
+
+            Files.createDirectories(Paths.get("output/"));
             int index = 0;
-            for (FileRef fileRef : result) {
-                fileRef.saveAs("output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
+            for (Asset resultAsset : resultAssets) {
+                StreamAsset streamAsset = pdfServices.getContent(resultAsset);
+
+                // Creates an output stream and copy stream asset's content to it
+                OutputStream outputStream = Files.newOutputStream(new File("output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf").toPath());
+                LOGGER.info("Saving asset at output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
+                IOUtils.copy(streamAsset.getInputStream(), outputStream);
+                outputStream.close();
                 index++;
             }
 
-        } catch (IOException| ServiceApiException | SdkException | ServiceUsageException e) {
+        } catch (IOException| ServiceApiException | SDKException | ServiceUsageException e) {
             LOGGER.error("Exception encountered while executing operation", e);
         }
     }

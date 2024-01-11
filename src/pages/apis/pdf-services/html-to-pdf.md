@@ -174,54 +174,62 @@ namespace CreatePDFFromStaticHtml
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.createpdf.CreatePDFFromStaticHTML
 
-public class CreatePDFFromStaticHTML {
+// Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
+// Run the sample:
+// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.htmltopdf.StaticHTMLToPDF
 
-    // Initialize the logger.
-    private static final Logger LOGGER = LoggerFactory.getLogger(CreatePDFFromStaticHTML.class);
+public class StaticHTMLToPDF {
 
-    public static void main(String[] args) {
+  // Initialize the logger.
+  private static final Logger LOGGER = LoggerFactory.getLogger(StaticHTMLToPDF.class);
 
-        try {
+  public static void main(String[] args) {
 
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .build();
+    try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/createPDFFromStaticHtmlInput.zip").toPath())) {
+       // Initial setup, create credentials instance
+       Credentials credentials = new ServicePrincipalCredentials(
+               System.getenv("PDF_SERVICES_CLIENT_ID"),
+               System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-            //Create an ExecutionContext using credentials and create a new operation instance.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
-            CreatePDFOperation htmlToPDFOperation = CreatePDFOperation.createNew();
+       // Creates a PDF Services instance
+       PDFServices pdfServices = new PDFServices(credentials);
 
-            // Set operation input from a source file.
-            FileRef source = FileRef.createFromLocalFile("src/main/resources/createPDFFromStaticHtmlInput.zip");
-            htmlToPDFOperation.setInput(source);
+       // Creates an asset(s) from source file(s) and upload
+       Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.ZIP.getMediaType());
 
-            // Provide any custom configuration options for the operation.
-            setCustomOptions(htmlToPDFOperation);
+       // Create parameters for the job
+       HTMLToPDFParams htmlToPDFParams = getHTMLToPDFParams();
 
-           // Execute the operation.
-            FileRef result = htmlToPDFOperation.execute(executionContext);
+       // Creates a new job instance
+       HTMLToPDFJob htmLtoPDFJob = new HTMLToPDFJob(asset)
+               .setParams(htmlToPDFParams);
 
-            // Save the result to the specified location.
-            result.saveAs("output/createPDFFromStaticHtmlOutput.pdf");
+       // Submit the job and gets the job result
+       String location = pdfServices.submit(htmLtoPDFJob);
+       PDFServicesResponse<HTMLToPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, HTMLToPDFResult.class);
 
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
-            LOGGER.error("Exception encountered while executing operation", ex);
-        }
+       // Get content from the resulting asset(s)
+       Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+       StreamAsset streamAsset = pdfServices.getContent(resultAsset);
+
+       // Creates an output stream and copy stream asset's content to it
+       File.createDirectories(Paths.get("output/"));
+       OutputStream outputStream = Files.newOutputStream(new File("output/staticHTMLToPDFOutput.pdf").toPath());
+       LOGGER.info("Saving asset at output/staticHTMLToPDFOutput.pdf");
+       IOUtils.copy(streamAsset.getInputStream(), outputStream);
+       outputStream.close();
+    } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+       LOGGER.error("Exception encountered while executing operation", ex);
     }
+  }
+   private static HTMLToPDFParams getHTMLToPDFParams() {
+       // Define the page layout, in this case an 8 x 11.5 inch page (effectively portrait orientation)
+       PageLayout pageLayout = new PageLayout();
+       pageLayout.setPageSize(8, 11.5);
 
-    private static void setCustomOptions(CreatePDFOperation htmlToPDFOperation) {
-        // Define the page layout, in this case an 8 x 11.5 inch page (effectively portrait orientation).
-        PageLayout pageLayout = new PageLayout();
-        pageLayout.setPageSize(8, 11.5);
-
-        // Set the desired HTML-to-PDF conversion options.
-        CreatePDFOptions htmlToPdfOptions = CreatePDFOptions.htmlOptionsBuilder()
-            .includeHeaderFooter(true)
-            .withPageLayout(pageLayout)
-            .build();
-        htmlToPDFOperation.setOptions(htmlToPdfOptions);
-    }
+       return new HTMLToPDFParams.Builder()
+           .includeHeaderFooter(true).withPageLayout(pageLayout)
+           .build();
+   }
 }
 ```

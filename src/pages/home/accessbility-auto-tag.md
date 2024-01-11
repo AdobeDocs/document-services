@@ -151,32 +151,41 @@ public class AutotagPDF {
 
     public static void main(String[] args) {
 
-        try {
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .build();
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/autotagPDFInput.pdf").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-            // Create an ExecutionContext using credentials and create a new operation instance.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
-            AutotagPDFOperation autotagPDFOperation = AutotagPDFOperation.createNew();
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-            // Set operation input from a source file.
-            FileRef source = FileRef.createFromLocalFile("autotagPDFInput.pdf");
-            autotagPDFOperation.setInput(source);
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
 
-            // Execute the operation
-            AutotagPDFOutput autotagPDFOutput = autotagPDFOperation.execute(executionContext);
+            // Creates a new job instance
+            AutotagPDFJob autotagPDFJob = new AutotagPDFJob(asset);
 
-            // Save the tagged PDF output at the specified location
-            autotagPDFOutput.getTaggedPDF().saveAs("autotagPDFOutput.pdf");
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(autotagPDFJob);
+            PDFServicesResponse<AutotagPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, AutotagPDFResult.class);
 
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getTaggedPDF();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
+
+            // Creates an output stream and copy stream asset's content to it
+            Files.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/autotagPDFOutput.pdf").toPath());
+            LOGGER.info("Saving asset at output/autotagPDFOutput.pdf");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
+
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
             LOGGER.error("Exception encountered while executing operation", ex);
         }
     }
-
+}
 ```
 
 #### Python
