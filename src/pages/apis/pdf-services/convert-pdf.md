@@ -146,27 +146,39 @@ public class ExportPDFToDOCX {
 
     public static void main(String[] args) {
 
-        try {
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/exportPDFInput.pdf").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                    System.getenv("PDF_SERVICES_CLIENT_ID"),
+                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
+
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
+
+            // Create parameters for the job
+            ExportPDFParams exportPDFParams = ExportPDFParams.exportPDFParamsBuilder(ExportPDFTargetFormat.DOCX)
                 .build();
-            //Create an ExecutionContext using credentials and create a new operation instance.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
-            ExportPDFOperation exportPdfOperation = ExportPDFOperation.createNew(ExportPDFTargetFormat.DOCX);
 
-            // Set operation input from a local PDF file
-            FileRef sourceFileRef = FileRef.createFromLocalFile("src/main/resources/exportPDFInput.pdf");
-            exportPdfOperation.setInput(sourceFileRef);
+            // Creates a new job instance
+            ExportPDFJob exportPDFJob = new ExportPDFJob(asset, exportPDFParams);
 
-            // Execute the operation.
-            FileRef result = exportPdfOperation.execute(executionContext);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(exportPDFJob);
+            PDFServicesResponse<ExportPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, ExportPDFResult.class);
 
-            // Save the result to the specified location.
-            result.saveAs("output/exportPdfOutput.docx");
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+            // Creates an output stream and copy stream asset's content to it
+            Files.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/exportPdfOutput.docx").toPath());
+            LOGGER.info("Saving asset at output/exportPdfOutput.docx");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
             LOGGER.error("Exception encountered while executing operation", ex);
         }
     }

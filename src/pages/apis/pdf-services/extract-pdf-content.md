@@ -171,40 +171,46 @@ namespace ExtractTextInfoFromPDF
 
 public class ExtractTextInfoFromPDF {
 
-    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ExtractTextInfoFromPDF.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExtractTextInfoFromPDF.class);
 
     public static void main(String[] args) {
 
-        try {
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/extractPdfInput.pdf").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .build();
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-            // Create an ExecutionContext using credentials.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
 
-            ExtractPDFOperation extractPDFOperation = ExtractPDFOperation.createNew();
+            // Create parameters for the job
+            ExtractPDFParams extractPDFParams = ExtractPDFParams.extractPDFParamsBuilder()
+                .addElementsToExtract(Arrays.asList(ExtractElementType.TEXT)).build();
 
-            // Provide an input FileRef for the operation
-            FileRef source = FileRef.createFromLocalFile("src/main/resources/extractPdfInput.pdf");
-            extractPDFOperation.setInputFile(source);
+            // Creates a new job instance
+            ExtractPDFJob extractPDFJob = new ExtractPDFJob(asset)
+                .setParams(extractPDFParams);
 
-            // Build ExtractPDF options and set them into the operation
-            ExtractPDFOptions extractPDFOptions = ExtractPDFOptions.extractPdfOptionsBuilder()
-                    .addElementsToExtract(Arrays.asList(ExtractElementType.TEXT))
-                    .build();
-            extractPDFOperation.setOptions(extractPDFOptions);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(extractPDFJob);
+            PDFServicesResponse<ExtractPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, ExtractPDFResult.class);
 
-            // Execute the operation
-            FileRef result = extractPDFOperation.execute(executionContext);
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getResource();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-            // Save the result at the specified location
-            result.saveAs("output/ExtractTextInfoFromPDF.zip");
+            // Creates an output stream and copy stream asset's content to it
+            Files.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/ExtractTextInfoFromPDF.zip").toPath());
+            LOGGER.info("Saving asset at output/ExtractTextInfoFromPDF.zip");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
 
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException e) {
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException e) {
             LOGGER.error("Exception encountered while executing operation", e);
         }
     }

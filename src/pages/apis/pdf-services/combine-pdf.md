@@ -147,38 +147,54 @@ namespace CombinePDF
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.combinepdf.CombinePDF
 
-public class CombinePDF {
+ public class CombinePDF {
 
-    // Initialize the logger.
-    private static final Logger LOGGER = LoggerFactory.getLogger(CombinePDF.class);
+   // Initialize the logger.
+   private static final Logger LOGGER = LoggerFactory.getLogger(CombinePDF.class);
 
-    public static void main(String[] args) {
-        try {
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .build();
+   public static void main(String[] args) {
+     try (InputStream inputStream1 = Files.newInputStream(new File("src/main/resources/combineFilesInput1.pdf").toPath());
+          InputStream inputStream2 = Files.newInputStream(new File("src/main/resources/combineFilesInput2.pdf").toPath())) {
+        // Initial setup, create credentials instance
+        Credentials credentials = new ServicePrincipalCredentials(
+            System.getenv("PDF_SERVICES_CLIENT_ID"),
+            System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-            //Create an ExecutionContext using credentials and create a new operation instance.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
-            CombineFilesOperation combineFilesOperation = CombineFilesOperation.createNew();
+        // Creates a PDF Services instance
+        PDFServices pdfServices = new PDFServices(credentials);
 
-            // Add operation input from source files.
-            FileRef combineSource1 = FileRef.createFromLocalFile("src/main/resources/combineFilesInput1.pdf");
-            FileRef combineSource2 = FileRef.createFromLocalFile("src/main/resources/combineFilesInput2.pdf");
-            combineFilesOperation.addInput(combineSource1);
-            combineFilesOperation.addInput(combineSource2);
+        // Creates an asset(s) from source file(s) and upload
+        List<StreamAsset> streamAssets = new ArrayList<>();
+        streamAssets.add(new StreamAsset(inputStream1, PDFServicesMediaType.PDF.getMediaType()));
+        streamAssets.add(new StreamAsset(inputStream2, PDFServicesMediaType.PDF.getMediaType()));
+        List<Asset> assets = pdfServices.uploadAssets(streamAssets);
 
-            // Execute the operation.
-            FileRef result = combineFilesOperation.execute(executionContext);
+        // Create parameters for the job
+        CombinePDFParams combinePDFParams = CombinePDFParams.combinePDFParamsBuilder()
+            .addAsset(assets.get(0))
+            .addAsset(assets.get(1))
+            .build();
 
-            // Save the result to the specified location.
-            result.saveAs("output/combineFilesOutput.pdf");
+        // Creates a new job instance
+        CombinePDFJob combinePDFJob = new CombinePDFJob(combinePDFParams);
 
-        } catch (IOException | ServiceApiException | SdkException | ServiceUsageException e) {
-            LOGGER.error("Exception encountered while executing operation", e);
-        }
-    }
-}
+        // Submit the job and gets the job result
+        String location = pdfServices.submit(combinePDFJob);
+        PDFServicesResponse<CombinePDFResult> pdfServicesResponse = pdfServices.getJobResult(location, CombinePDFResult.class);
+
+        // Get content from the resulting asset(s)
+        Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+        StreamAsset streamAsset = pdfServices.getContent(resultAsset);
+
+        // Creates an output stream and copy stream asset's content to it
+        Files.createDirectories(Paths.get("output/"));
+        OutputStream outputStream = Files.newOutputStream(new File("output/combineFilesOutput.pdf").toPath());
+        LOGGER.info("Saving asset at output/combineFilesOutput.pdf");
+        IOUtils.copy(streamAsset.getInputStream(), outputStream);
+        outputStream.close();
+     } catch (IOException | ServiceApiException | SDKException | ServiceUsageException e) {
+       LOGGER.error("Exception encountered while executing operation", e);
+     }
+   }
+ }
 ```
