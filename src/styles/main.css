@@ -89,6 +89,9 @@ h1 {
 .spectrum--dark.tabsBlock .spectrum-Tabs .spectrum-Tabs-item.tabItem:hover, .spectrum--dark.tabsBlock .spectrum-Tabs .spectrum-Tabs-item.is-selected.tabItem {
     color: var(--spectrum-global-color-gray-50);
 }
+.spectrum--dark button {
+    top:-40px !important
+}
 .bgBlue {
     background-color: #202947 !important;
 }

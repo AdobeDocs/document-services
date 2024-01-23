@@ -137,36 +137,42 @@ namespace OcrPDF
 
 public class OcrPDF {
 
-    // Initialize the logger.
-    private static final Logger LOGGER = LoggerFactory.getLogger(OcrPDF.class);
+  // Initialize the logger.
+  private static final Logger LOGGER = LoggerFactory.getLogger(OcrPDF.class);
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/ocrInput.pdf").toPath())) {
+             // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                    System.getenv("PDF_SERVICES_CLIENT_ID"),
+                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-        try {
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .build();
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
 
-            //Create an ExecutionContext using credentials and create a new operation instance.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
-            OCROperation ocrOperation = OCROperation.createNew();
+            // Creates a new job instance
+            OCRJob ocrJob = new OCRJob(asset);
 
-            // Set operation input from a source file.
-            FileRef source = FileRef.createFromLocalFile("src/main/resources/ocrInput.pdf");
-            ocrOperation.setInput(source);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(ocrJob);
+            PDFServicesResponse<OCRResult> pdfServicesResponse = pdfServices.getJobResult(location, OCRResult.class);
 
-            // Execute the operation
-            FileRef result = ocrOperation.execute(executionContext);
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-            // Save the result at the specified location
-            result.saveAs("output/ocrOutput.pdf");
-
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
-            LOGGER.error("Exception encountered while executing operation", ex);
-        }
-    }
+            // Creates an output stream and copy stream asset's content to it
+            Files.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/ocrOutput.pdf").toPath());
+            LOGGER.info("Saving asset at output/ocrOutput.pdf");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
+       } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+        LOGGER.error("Exception encountered while executing operation", ex);
+       }
+  }
 }
 ```

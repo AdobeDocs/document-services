@@ -296,85 +296,95 @@ public class ElectronicSeal {
     private static final Logger LOGGER = LoggerFactory.getLogger(ElectronicSeal.class);
 
     public static void main(String[] args) {
-        try {
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                    .withClientId("PDF_SERVICES_CLIENT_ID")
-                    .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                    .build();
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/sampleInvoice.pdf").toPath());
+             InputStream inputStreamSealImage = Files.newInputStream(new File("src/main/resources/sampleSealImage.png").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-            // Create an ExecutionContext using credentials.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-            //Get the input document to perform the sealing operation
-            FileRef sourceFile = FileRef.createFromLocalFile("src/main/resources/sampleInvoice.pdf");
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
+            Asset sealImageAsset = pdfServices.upload(inputStreamSealImage, PDFServicesMediaType.PNG.getMediaType());
 
-            //Get the background seal image for signature , if required.
-            FileRef sealImageFile = FileRef.createFromLocalFile("src/main/resources/sampleSealImage.png");
+            // Set the document level permission to be applied for output document
+            DocumentLevelPermission documentLevelPermission = DocumentLevelPermission.FORM_FILLING;
 
-            //Set the Seal Field Name to be created in input PDF document.
+            // Sets the Seal Field Name to be created in input PDF document.
             String sealFieldName = "Signature1";
 
-            //Set the page number in input document for applying seal.
+            // Sets the page number in input document for applying seal.
             Integer sealPageNumber = 1;
 
-            //Set if seal should be visible or invisible.
+            // Sets if seal should be visible or invisible.
             Boolean sealVisible = true;
 
-            //Create FieldLocation instance and set the coordinates for applying signature
+            // Creates FieldLocation instance and set the coordinates for applying signature
             FieldLocation fieldLocation = new FieldLocation(150, 250, 350, 200);
 
-            //Create FieldOptions instance with required details.
+            // Create FieldOptions instance with required details.
             FieldOptions fieldOptions = new FieldOptions.Builder(sealFieldName)
-                    .setFieldLocation(fieldLocation)
-                    .setPageNumber(sealPageNumber)
-                    .setVisible(sealVisible)
-                    .build();
+                .setFieldLocation(fieldLocation)
+                .setPageNumber(sealPageNumber)
+                .setVisible(sealVisible)
+                .build();
 
-            //Set the name of TSP Provider being used.
+            // Sets the name of TSP Provider being used.
             String providerName = "<PROVIDER_NAME>";
 
-            //Set the access token to be used to access TSP provider hosted APIs.
+            // Sets the access token to be used to access TSP provider hosted APIs.
             String accessToken = "<ACCESS_TOKEN>";
 
-            //Set the credential ID.
+            // Sets the credential ID.
             String credentialID = "<CREDENTIAL_ID>";
 
-            //Set the PIN generated while creating credentials.
+            // Sets the PIN generated while creating credentials.
             String pin = "<PIN>";
 
-            //Create CSCAuthContext instance using access token and token type.
+            // Creates CSCAuthContext instance using access token and token type.
             CSCAuthContext cscAuthContext = new CSCAuthContext(accessToken, "Bearer");
 
-            //Create CertificateCredentials instance with required certificate details.
+            // Create CertificateCredentials instance with required certificate details.
             CertificateCredentials certificateCredentials = CertificateCredentials.cscCredentialBuilder()
-                    .withProviderName(providerName)
-                    .withCredentialID(credentialID)
-                    .withPin(pin)
-                    .withCSCAuthContext(cscAuthContext)
-                    .build();
+                .withProviderName(providerName)
+                .withCredentialID(credentialID)
+                .withPin(pin)
+                .withCSCAuthContext(cscAuthContext)
+                .build();
 
-            //Create SealOptions instance with sealing parameters.
-            SealOptions sealOptions = new SealOptions.Builder(certificateCredentials, fieldOptions).build();
+            // Create parameters for the job
+            PDFElectronicSealParams pdfElectronicSealParams = PDFElectronicSealParams
+                .pdfElectronicSealParamsBuilder(certificateCredentials, fieldOptions)
+                .withDocumentLevelPermission(documentLevelPermission)
+                .build();
 
-            //Create the PDFElectronicSealOperation instance using the SealOptions instance
-            PDFElectronicSealOperation pdfElectronicSealOperation = PDFElectronicSealOperation.createNew(sealOptions);
+            // Creates a new job instance
+            PDFElectronicSealJob pdfElectronicSealJob = new PDFElectronicSealJob(asset, pdfElectronicSealParams);
 
-            //Set the input source file for PDFElectronicSealOperation instance
-            pdfElectronicSealOperation.setInput(sourceFile);
+            // Sets the optional input seal image for PDFElectronicSealOperation instance
+            pdfElectronicSealJob.setSealImageAsset(sealImageAsset);
 
-            //Set the optional input seal image for PDFElectronicSealOperation instance
-            pdfElectronicSealOperation.setSealImage(sealImageFile);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(pdfElectronicSealJob);
+            PDFServicesResponse<PDFElectronicSealResult> pdfServicesResponse = pdfServices.getJobResult(location, PDFElectronicSealResult.class);
 
-            //Execute the operation
-            FileRef result = pdfElectronicSealOperation.execute(executionContext);
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-            //Save the output at specified location
-            result.saveAs("output/ElectronicSeal/sealedOutput.pdf");
+            // Creates an output stream and copy stream asset's content to it
+            Files.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/sealedOutput.pdf").toPath());
+            LOGGER.info("Saving asset at output/sealedOutput.pdf");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
 
-
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
             LOGGER.error("Exception encountered while executing operation", ex);
         }
     }
+}
 ```

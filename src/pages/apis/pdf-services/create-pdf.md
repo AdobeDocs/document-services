@@ -139,35 +139,41 @@ namespace CreatePDFFromDocx
 public class CreatePDFFromDOCX {
 
     // Initialize the logger.
-    private static final Logger LOGGER = LoggerFactory.getLogger(CreatePDFFromDOCX .class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CreatePDFFromDOCX.class);
 
     public static void main(String[] args) {
 
-        try {
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/createPDFInput.docx").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                    System.getenv("PDF_SERVICES_CLIENT_ID"),
+                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .build();
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-            //Create an ExecutionContext using credentials and create a new operation instance.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
-            CreatePDFOperation createPdfOperation = CreatePDFOperation.createNew();
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.DOCX.getMediaType());
 
-            // Set operation input from a source file.
-            FileRef source = FileRef.createFromLocalFile("src/main/resources/createPDFInput.docx");
-            createPdfOperation.setInput(source);
+            // Creates a new job instance
+            CreatePDFJob createPDFJob = new CreatePDFJob(asset);
 
-            // Execute the operation.
-            FileRef result = createPdfOperation.execute(executionContext);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(createPDFJob);
+            PDFServicesResponse<CreatePDFResult> pdfServicesResponse = pdfServices.getJobResult(location, CreatePDFResult.class);
 
-            // Save the result to the specified location.
-            result.saveAs("output/createPDFFromDOCX.pdf");
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
-            LOGGER.error("Exception encountered while executing
-                    operation", ex);
+            // Creates an output stream and copy stream asset's content to it
+            File.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/createPDFFromDOCX.pdf").toPath());
+            LOGGER.info("Saving asset at output/createPDFFromDOCX.pdf");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+            LOGGER.error("Exception encountered while executing the operation", ex);
         }
     }
 }

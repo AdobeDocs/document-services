@@ -160,36 +160,43 @@ public class ProtectPDF {
 
     public static void main(String[] args) {
 
-        try {
-            // Initial setup, create credentials instance.
-            Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-                .withClientId("PDF_SERVICES_CLIENT_ID")
-                .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                .build();
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/protectPDFInput.pdf").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                    System.getenv("PDF_SERVICES_CLIENT_ID"),
+                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-            // Create an ExecutionContext using credentials.
-            ExecutionContext executionContext = ExecutionContext.create(credentials);
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-            // Build ProtectPDF options by setting a User Password and Encryption Algorithm (used for encrypting the PDF file).
-            ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.passwordProtectOptionsBuilder()
-                .setUserPassword("encryptPassword")
-                .setEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
-                .build();
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
 
-            // Create a new operation instance.
-            ProtectPDFOperation protectPDFOperation = ProtectPDFOperation.createNew(protectPDFOptions);
+            // Create parameters for the job
+            ProtectPDFParams protectPDFParams = ProtectPDFParams.passwordProtectOptionsBuilder()
+                    .setUserPassword("password")
+                    .setEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
+                    .build();
 
-            // Set operation input from a source file.
-            FileRef source = FileRef.createFromLocalFile("src/main/resources/protectPDFInput.pdf");
-            protectPDFOperation.setInput(source);
+            // Creates a new job instance
+            ProtectPDFJob protectPDFJob = new ProtectPDFJob(asset, protectPDFParams);
 
-            // Execute the operation
-            FileRef result = protectPDFOperation.execute(executionContext);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(protectPDFJob);
+            PDFServicesResponse<ProtectPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, ProtectPDFResult.class);
 
-            // Save the result at the specified location
-            result.saveAs("output/protectPDFOutput.pdf");
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
+            // Creates an output stream and copy stream asset's content to it
+            Files.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/protectPDFOutput.pdf").toPath());
+            LOGGER.info("Saving asset at output/protectPDFOutput.pdf");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
+
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
                 LOGGER.error("Exception encountered while executing operation", ex);
         }
     }

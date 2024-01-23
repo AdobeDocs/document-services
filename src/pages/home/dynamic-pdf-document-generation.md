@@ -198,38 +198,45 @@ public class MergeDocumentToPDF {
 
     public static void main(String[] args) {
 
-        try {
+          try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/documentMergeTemplate.docx").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                    System.getenv("PDF_SERVICES_CLIENT_ID"),
+                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-        // Initial setup, create credentials instance.
-        Credentials credentials = Credentials.servicePrincipalCredentialsBuilder()
-            .withClientId("PDF_SERVICES_CLIENT_ID")
-            .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-            .build();
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-        // Setup input data for the document merge process.
-        JSONObject jsonDataForMerge = new JSONObject("{\"customerName\": \"Kane Miller\",\"customerVisits\": 100}");
+            // Setup input data for the document merge process.
+            JSONObject jsonDataForMerge = new JSONObject("{\"customerName\": \"Kane Miller\",\"customerVisits\": 100}");
 
-        // Create an ExecutionContext using credentials.
-        ExecutionContext executionContext = ExecutionContext.create(credentials);
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.DOCX.getMediaType());
 
-        // Create a new DocumentMergeOptions instance.
-        DocumentMergeOptions documentMergeOptions = new DocumentMergeOptions(jsonDataForMerge, OutputFormat.PDF);
+            // Create parameters for the job
+            DocumentMergeParams documentMergeParams = DocumentMergeParams.documentMergeParamsBuilder()
+                    .withJsonDataForMerge(jsonDataForMerge)
+                    .withOutputFormat(OutputFormat.PDF)
+                    .build();
 
-        // Create a new DocumentMergeOperation instance with the DocumentMergeOptions instance.
-        DocumentMergeOperation documentMergeOperation = DocumentMergeOperation.createNew(documentMergeOptions);
+            // Creates a new job instance
+            DocumentMergeJob documentMergeJob = new DocumentMergeJob(asset, documentMergeParams);
 
-        // Set the operation input document template from a source file.
-        FileRef documentTemplate = FileRef.createFromLocalFile("src/main/resources/documentMergeTemplate.docx");
-        documentMergeOperation.setInput(documentTemplate);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(documentMergeJob);
+            PDFServicesResponse<DocumentMergeResult> pdfServicesResponse = pdfServices.getJobResult(location, DocumentMergeResult.class);
 
-        // Execute the operation.
-        FileRef result = documentMergeOperation.execute(executionContext);
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-        // Save the result to the specified location.
-        result.saveAs("output/documentMergeOutput.pdf");
+            // Creates an output stream and copy stream asset's content to it
+            OutputStream outputStream = Files.newOutputStream(new File("output/documentMergeOutput.pdf").toPath());
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
 
-        } catch (ServiceApiException | IOException | SdkException | ServiceUsageException ex) {
-            LOGGER.error("Exception encountered while executing operation", ex);
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+              LOGGER.error("Exception encountered while executing operation", ex);
         }
     }
 }
