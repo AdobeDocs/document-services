@@ -139,7 +139,7 @@ namespace CreatePDFFromDocx
 public class CreatePDFFromDOCX {
 
     // Initialize the logger.
-    private static final Logger LOGGER = LoggerFactory.getLogger(CreatePDFFromDOCX .class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CreatePDFFromDOCX.class);
 
     public static void main(String[] args) {
 
