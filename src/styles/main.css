@@ -1000,13 +1000,8 @@ img[alt=thumbnail] {
 }
 
 pre .prism-code.spectrum-Code {
-    overflow-x: hidden !important;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
+    overflow: scroll;
     word-wrap: break-word;
-    word-break: break-word !important;
 }
 
 pre .prism-code.spectrum-Code>div>span:first-child{
@@ -1014,11 +1009,9 @@ pre .prism-code.spectrum-Code>div>span:first-child{
 }
 
 pre .prism-code.spectrum-Code::-webkit-scrollbar {
-    background-color: transparent !important;
 }
 
 pre.prism-code.spectrum-Code {
-    scrollbar-color: transparent !important;
     scrollbar-width: thin !important;
 }
 
