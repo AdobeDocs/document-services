@@ -218,7 +218,9 @@ public class ReplacePDFPages {
     private static final Logger LOGGER = LoggerFactory.getLogger(ReplacePDFPages.class);
 
     public static void main(String[] args) {
-        try (InputStream baseInputStream = Files.newInputStream(new File("src/main/resources/baseInput.pdf").toPath()); InputStream inputStream1 = Files.newInputStream(new File("src/main/resources/replacePagesInput1.pdf").toPath()); InputStream inputStream2 = Files.newInputStream(new File("src/main/resources/replacePagesInput2.pdf").toPath())) {
+        try (InputStream baseInputStream = Files.newInputStream(new File("src/main/resources/baseInput.pdf").toPath()); 
+            InputStream inputStream1 = Files.newInputStream(new File("src/main/resources/replacePagesInput1.pdf").toPath()); 
+            InputStream inputStream2 = Files.newInputStream(new File("src/main/resources/replacePagesInput2.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
                 System.getenv("PDF_SERVICES_CLIENT_ID"),

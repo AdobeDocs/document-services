@@ -227,7 +227,9 @@ public class InsertPDFPages {
     private static final Logger LOGGER = LoggerFactory.getLogger(InsertPDFPages.class);
 
     public static void main(String[] args) {
-        try (InputStream baseInputStream = Files.newInputStream(new File("src/main/resources/baseInput.pdf").toPath()); InputStream firstInputStreamToInsert = Files.newInputStream(new File("src/main/resources/firstFileToInsertInput.pdf").toPath()); InputStream secondInputStreamToInsert = Files.newInputStream(new File("src/main/resources/secondFileToInsertInput.pdf").toPath())) {
+        try (InputStream baseInputStream = Files.newInputStream(new File("src/main/resources/baseInput.pdf").toPath()); 
+            InputStream firstInputStreamToInsert = Files.newInputStream(new File("src/main/resources/firstFileToInsertInput.pdf").toPath()); 
+            InputStream secondInputStreamToInsert = Files.newInputStream(new File("src/main/resources/secondFileToInsertInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
                 System.getenv("PDF_SERVICES_CLIENT_ID"),
