@@ -223,17 +223,15 @@ namespace InsertPDFPages
 
 public class InsertPDFPages {
 
-     // Initialize the logger.
-     private static final Logger LOGGER = LoggerFactory.getLogger(InsertPDFPages.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(InsertPDFPages.class);
 
-     public static void main(String[] args) {
-         try (InputStream baseInputStream = Files.newInputStream(new File("src/main/resources/baseInput.pdf").toPath());
-              InputStream firstInputStreamToInsert = Files.newInputStream(new File("src/main/resources/firstFileToInsertInput.pdf").toPath());
-              InputStream secondInputStreamToInsert = Files.newInputStream(new File("src/main/resources/secondFileToInsertInput.pdf").toPath())) {
+    public static void main(String[] args) {
+        try (InputStream baseInputStream = Files.newInputStream(new File("src/main/resources/baseInput.pdf").toPath()); InputStream firstInputStreamToInsert = Files.newInputStream(new File("src/main/resources/firstFileToInsertInput.pdf").toPath()); InputStream secondInputStreamToInsert = Files.newInputStream(new File("src/main/resources/secondFileToInsertInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
@@ -247,16 +245,16 @@ public class InsertPDFPages {
 
             // Create parameters for the job
             InsertPagesParams insertPagesParams = InsertPagesParams.insertPagesParamsBuilder(baseAsset)
-                    .addPagesToInsertAt(firstAssetToInsert, pageRanges, 2) // Add the first asset as input to the params, along with its page ranges and base page
-                    .addPagesToInsertAt(secondAssetToInsert, 3) // Add the seccond asset as input to the params, along with base page
-                    .build();
+                .addPagesToInsertAt(firstAssetToInsert, pageRanges, 2) // Add the first asset as input to the params, along with its page ranges and base page
+                .addPagesToInsertAt(secondAssetToInsert, 3) // Add the seccond asset as input to the params, along with base page
+                .build();
 
             // Creates a new job instance
             InsertPagesPDFJob insertPagesJob = new InsertPagesPDFJob(insertPagesParams);
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(insertPagesJob);
-            PDFServicesResponse<InsertPagesResult> pdfServicesResponse = pdfServices.getJobResult(location, InsertPagesResult.class);
+            PDFServicesResponse < InsertPagesResult > pdfServicesResponse = pdfServices.getJobResult(location, InsertPagesResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();
@@ -268,21 +266,21 @@ public class InsertPDFPages {
             LOGGER.info("Saving asset at output/insertPagesOutput.pdf");
             IOUtils.copy(streamAsset.getInputStream(), outputStream);
             outputStream.close();
-         } catch (IOException | ServiceApiException | SDKException | ServiceUsageException e) {
-             LOGGER.error("Exception encountered while executing operation", e);
-         }
-     }
+        } catch (IOException | ServiceApiException | SDKException | ServiceUsageException e) {
+            LOGGER.error("Exception encountered while executing operation", e);
+        }
+    }
 
-     private static PageRanges getPageRangeForFirstFile() {
-         // Specify which pages of the first file are to be inserted in the base file
-         PageRanges pageRanges = new PageRanges();
-         // Add pages 1 to 3
-         pageRanges.addRange(1, 3);
+    private static PageRanges getPageRangeForFirstFile() {
+        // Specify which pages of the first file are to be inserted in the base file
+        PageRanges pageRanges = new PageRanges();
+        // Add pages 1 to 3
+        pageRanges.addRange(1, 3);
 
-         // Add page 4.
-         pageRanges.addSinglePage(4);
+        // Add page 4.
+        pageRanges.addSinglePage(4);
 
-         return pageRanges;
-     }
+        return pageRanges;
+    }
 }
 ```

@@ -168,7 +168,7 @@ public class AutotagPDF {
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(autotagPDFJob);
-            PDFServicesResponse<AutotagPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, AutotagPDFResult.class);
+            PDFServicesResponse < AutotagPDFResult > pdfServicesResponse = pdfServices.getJobResult(location, AutotagPDFResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getTaggedPDF();

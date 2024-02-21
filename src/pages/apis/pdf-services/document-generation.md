@@ -209,11 +209,11 @@ public class MergeDocumentToPDF {
 
     public static void main(String[] args) {
 
-          try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/documentMergeTemplate.docx").toPath())) {
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/documentMergeTemplate.docx").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
@@ -226,16 +226,16 @@ public class MergeDocumentToPDF {
 
             // Create parameters for the job
             DocumentMergeParams documentMergeParams = DocumentMergeParams.documentMergeParamsBuilder()
-                    .withJsonDataForMerge(jsonDataForMerge)
-                    .withOutputFormat(OutputFormat.PDF)
-                    .build();
+                .withJsonDataForMerge(jsonDataForMerge)
+                .withOutputFormat(OutputFormat.PDF)
+                .build();
 
             // Creates a new job instance
             DocumentMergeJob documentMergeJob = new DocumentMergeJob(asset, documentMergeParams);
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(documentMergeJob);
-            PDFServicesResponse<DocumentMergeResult> pdfServicesResponse = pdfServices.getJobResult(location, DocumentMergeResult.class);
+            PDFServicesResponse < DocumentMergeResult > pdfServicesResponse = pdfServices.getJobResult(location, DocumentMergeResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();
@@ -247,7 +247,7 @@ public class MergeDocumentToPDF {
             outputStream.close();
 
         } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
-              LOGGER.error("Exception encountered while executing operation", ex);
+            LOGGER.error("Exception encountered while executing operation", ex);
         }
     }
 }

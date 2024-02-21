@@ -1000,7 +1000,7 @@ img[alt=thumbnail] {
 }
 
 pre .prism-code.spectrum-Code {
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
@@ -1009,17 +1009,21 @@ pre .prism-code.spectrum-Code {
     word-break: break-word !important;
 }
 
+pre.prism-code.spectrum-Code>div>span:nth-child(2) , .css-1exaq6k {
+    margin-right: 0 !important;
+}   
+
+pre.prism-code.spectrum-Code {
+    white-space: break-spaces !important;
+    overflow: hidden !important;
+}
+    
 pre .prism-code.spectrum-Code>div>span:first-child{
     white-space: nowrap !important;
 }
 
 pre .prism-code.spectrum-Code::-webkit-scrollbar {
     background-color: transparent !important;
-}
-
-pre.prism-code.spectrum-Code {
-    scrollbar-color: transparent !important;
-    scrollbar-width: thin !important;
 }
 
 @media screen and (max-width: 1024px) {

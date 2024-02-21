@@ -228,8 +228,8 @@ public class RotatePDFPages {
         try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/rotatePagesInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
@@ -245,16 +245,16 @@ public class RotatePDFPages {
 
             // Create parameters for the job
             RotatePagesParams rotatePagesParams = RotatePagesParams.rotatePagesParamsBuilder()
-                    .withAngleToRotatePagesBy(Angle._90, firstPageRange)
-                    .withAngleToRotatePagesBy(Angle._180, secondPageRange)
-                    .build();
+                .withAngleToRotatePagesBy(Angle._90, firstPageRange)
+                .withAngleToRotatePagesBy(Angle._180, secondPageRange)
+                .build();
 
             // Creates a new job instance
             RotatePagesJob rotatePagesJob = new RotatePagesJob(asset, rotatePagesParams);
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(rotatePagesJob);
-            PDFServicesResponse<RotatePagesResult> pdfServicesResponse = pdfServices.getJobResult(location, RotatePagesResult.class);
+            PDFServicesResponse < RotatePagesResult > pdfServicesResponse = pdfServices.getJobResult(location, RotatePagesResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();

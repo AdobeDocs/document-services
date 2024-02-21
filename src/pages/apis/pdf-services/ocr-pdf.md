@@ -137,15 +137,15 @@ namespace OcrPDF
 
 public class OcrPDF {
 
-  // Initialize the logger.
-  private static final Logger LOGGER = LoggerFactory.getLogger(OcrPDF.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(OcrPDF.class);
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
         try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/ocrInput.pdf").toPath())) {
-             // Initial setup, create credentials instance
+            // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
@@ -158,7 +158,7 @@ public class OcrPDF {
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(ocrJob);
-            PDFServicesResponse<OCRResult> pdfServicesResponse = pdfServices.getJobResult(location, OCRResult.class);
+            PDFServicesResponse < OCRResult > pdfServicesResponse = pdfServices.getJobResult(location, OCRResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();
@@ -170,9 +170,9 @@ public class OcrPDF {
             LOGGER.info("Saving asset at output/ocrOutput.pdf");
             IOUtils.copy(streamAsset.getInputStream(), outputStream);
             outputStream.close();
-       } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
-        LOGGER.error("Exception encountered while executing operation", ex);
-       }
-  }
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+            LOGGER.error("Exception encountered while executing operation", ex);
+        }
+    }
 }
 ```

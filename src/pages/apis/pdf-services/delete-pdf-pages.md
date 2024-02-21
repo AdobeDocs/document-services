@@ -183,15 +183,15 @@ namespace DeletePDFPages
 
 public class DeletePDFPages {
 
-// Initialize the logger.
-private static final Logger LOGGER = LoggerFactory.getLogger(DeletePDFPages.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(DeletePDFPages.class);
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/deletePagesInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
@@ -210,7 +210,7 @@ public static void main(String[] args) {
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(deletePagesJob);
-            PDFServicesResponse<DeletePagesResult> pdfServicesResponse = pdfServices.getJobResult(location, DeletePagesResult.class);
+            PDFServicesResponse < DeletePagesResult > pdfServicesResponse = pdfServices.getJobResult(location, DeletePagesResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();
@@ -222,10 +222,10 @@ public static void main(String[] args) {
             LOGGER.info("Saving asset at output/deletePagesOutput.pdf");
             IOUtils.copy(streamAsset.getInputStream(), outputStream);
             outputStream.close();
-       } catch (IOException | ServiceApiException | SDKException | ServiceUsageException e) {
-           LOGGER.error("Exception encountered while executing operation", e);
-       }
-   }
+        } catch (IOException | ServiceApiException | SDKException | ServiceUsageException e) {
+            LOGGER.error("Exception encountered while executing operation", e);
+        }
+    }
 
     private static PageRanges getPageRangeForDeletion() {
         // Specify pages for deletion
@@ -233,7 +233,7 @@ public static void main(String[] args) {
         // Add page 1
         pageRangeForDeletion.addSinglePage(1);
 
-          // Add pages 3 to 4
+        // Add pages 3 to 4
         pageRangeForDeletion.addRange(3, 4);
         return pageRangeForDeletion;
     }

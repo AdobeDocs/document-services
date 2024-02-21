@@ -362,7 +362,7 @@ public class ElectronicSeal {
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(pdfElectronicSealJob);
-            PDFServicesResponse<PDFElectronicSealResult> pdfServicesResponse = pdfServices.getJobResult(location, PDFElectronicSealResult.class);
+            PDFServicesResponse < PDFElectronicSealResult > pdfServicesResponse = pdfServices.getJobResult(location, PDFElectronicSealResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();

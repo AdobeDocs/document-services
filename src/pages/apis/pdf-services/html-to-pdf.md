@@ -180,56 +180,56 @@ namespace CreatePDFFromStaticHtml
 
 public class StaticHTMLToPDF {
 
-  // Initialize the logger.
-  private static final Logger LOGGER = LoggerFactory.getLogger(StaticHTMLToPDF.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(StaticHTMLToPDF.class);
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/createPDFFromStaticHtmlInput.zip").toPath())) {
-       // Initial setup, create credentials instance
-       Credentials credentials = new ServicePrincipalCredentials(
-               System.getenv("PDF_SERVICES_CLIENT_ID"),
-               System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/createPDFFromStaticHtmlInput.zip").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-       // Creates a PDF Services instance
-       PDFServices pdfServices = new PDFServices(credentials);
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-       // Creates an asset(s) from source file(s) and upload
-       Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.ZIP.getMediaType());
+            // Creates an asset(s) from source file(s) and upload
+            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.ZIP.getMediaType());
 
-       // Create parameters for the job
-       HTMLToPDFParams htmlToPDFParams = getHTMLToPDFParams();
+            // Create parameters for the job
+            HTMLToPDFParams htmlToPDFParams = getHTMLToPDFParams();
 
-       // Creates a new job instance
-       HTMLToPDFJob htmLtoPDFJob = new HTMLToPDFJob(asset)
-               .setParams(htmlToPDFParams);
+            // Creates a new job instance
+            HTMLToPDFJob htmLtoPDFJob = new HTMLToPDFJob(asset)
+                .setParams(htmlToPDFParams);
 
-       // Submit the job and gets the job result
-       String location = pdfServices.submit(htmLtoPDFJob);
-       PDFServicesResponse<HTMLToPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, HTMLToPDFResult.class);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(htmLtoPDFJob);
+            PDFServicesResponse < HTMLToPDFResult > pdfServicesResponse = pdfServices.getJobResult(location, HTMLToPDFResult.class);
 
-       // Get content from the resulting asset(s)
-       Asset resultAsset = pdfServicesResponse.getResult().getAsset();
-       StreamAsset streamAsset = pdfServices.getContent(resultAsset);
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-       // Creates an output stream and copy stream asset's content to it
-       File.createDirectories(Paths.get("output/"));
-       OutputStream outputStream = Files.newOutputStream(new File("output/staticHTMLToPDFOutput.pdf").toPath());
-       LOGGER.info("Saving asset at output/staticHTMLToPDFOutput.pdf");
-       IOUtils.copy(streamAsset.getInputStream(), outputStream);
-       outputStream.close();
-    } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
-       LOGGER.error("Exception encountered while executing operation", ex);
+            // Creates an output stream and copy stream asset's content to it
+            File.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/staticHTMLToPDFOutput.pdf").toPath());
+            LOGGER.info("Saving asset at output/staticHTMLToPDFOutput.pdf");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+            LOGGER.error("Exception encountered while executing operation", ex);
+        }
     }
-  }
-   private static HTMLToPDFParams getHTMLToPDFParams() {
-       // Define the page layout, in this case an 8 x 11.5 inch page (effectively portrait orientation)
-       PageLayout pageLayout = new PageLayout();
-       pageLayout.setPageSize(8, 11.5);
+    private static HTMLToPDFParams getHTMLToPDFParams() {
+        // Define the page layout, in this case an 8 x 11.5 inch page (effectively portrait orientation)
+        PageLayout pageLayout = new PageLayout();
+        pageLayout.setPageSize(8, 11.5);
 
-       return new HTMLToPDFParams.Builder()
-           .includeHeaderFooter(true).withPageLayout(pageLayout)
-           .build();
-   }
+        return new HTMLToPDFParams.Builder()
+            .includeHeaderFooter(true).withPageLayout(pageLayout)
+            .build();
+    }
 }
 ```

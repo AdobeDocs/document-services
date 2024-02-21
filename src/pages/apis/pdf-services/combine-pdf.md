@@ -147,54 +147,53 @@ namespace CombinePDF
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.combinepdf.CombinePDF
 
- public class CombinePDF {
+public class CombinePDF {
 
-   // Initialize the logger.
-   private static final Logger LOGGER = LoggerFactory.getLogger(CombinePDF.class);
+    // Initialize the logger.
+    private static final Logger LOGGER = LoggerFactory.getLogger(CombinePDF.class);
 
-   public static void main(String[] args) {
-     try (InputStream inputStream1 = Files.newInputStream(new File("src/main/resources/combineFilesInput1.pdf").toPath());
-          InputStream inputStream2 = Files.newInputStream(new File("src/main/resources/combineFilesInput2.pdf").toPath())) {
-        // Initial setup, create credentials instance
-        Credentials credentials = new ServicePrincipalCredentials(
-            System.getenv("PDF_SERVICES_CLIENT_ID"),
-            System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+    public static void main(String[] args) {
+        try (InputStream inputStream1 = Files.newInputStream(new File("src/main/resources/combineFilesInput1.pdf").toPath()); InputStream inputStream2 = Files.newInputStream(new File("src/main/resources/combineFilesInput2.pdf").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-        // Creates a PDF Services instance
-        PDFServices pdfServices = new PDFServices(credentials);
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-        // Creates an asset(s) from source file(s) and upload
-        List<StreamAsset> streamAssets = new ArrayList<>();
-        streamAssets.add(new StreamAsset(inputStream1, PDFServicesMediaType.PDF.getMediaType()));
-        streamAssets.add(new StreamAsset(inputStream2, PDFServicesMediaType.PDF.getMediaType()));
-        List<Asset> assets = pdfServices.uploadAssets(streamAssets);
+            // Creates an asset(s) from source file(s) and upload
+            List < StreamAsset > streamAssets = new ArrayList < > ();
+            streamAssets.add(new StreamAsset(inputStream1, PDFServicesMediaType.PDF.getMediaType()));
+            streamAssets.add(new StreamAsset(inputStream2, PDFServicesMediaType.PDF.getMediaType()));
+            List < Asset > assets = pdfServices.uploadAssets(streamAssets);
 
-        // Create parameters for the job
-        CombinePDFParams combinePDFParams = CombinePDFParams.combinePDFParamsBuilder()
-            .addAsset(assets.get(0))
-            .addAsset(assets.get(1))
-            .build();
+            // Create parameters for the job
+            CombinePDFParams combinePDFParams = CombinePDFParams.combinePDFParamsBuilder()
+                .addAsset(assets.get(0))
+                .addAsset(assets.get(1))
+                .build();
 
-        // Creates a new job instance
-        CombinePDFJob combinePDFJob = new CombinePDFJob(combinePDFParams);
+            // Creates a new job instance
+            CombinePDFJob combinePDFJob = new CombinePDFJob(combinePDFParams);
 
-        // Submit the job and gets the job result
-        String location = pdfServices.submit(combinePDFJob);
-        PDFServicesResponse<CombinePDFResult> pdfServicesResponse = pdfServices.getJobResult(location, CombinePDFResult.class);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(combinePDFJob);
+            PDFServicesResponse < CombinePDFResult > pdfServicesResponse = pdfServices.getJobResult(location, CombinePDFResult.class);
 
-        // Get content from the resulting asset(s)
-        Asset resultAsset = pdfServicesResponse.getResult().getAsset();
-        StreamAsset streamAsset = pdfServices.getContent(resultAsset);
+            // Get content from the resulting asset(s)
+            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-        // Creates an output stream and copy stream asset's content to it
-        Files.createDirectories(Paths.get("output/"));
-        OutputStream outputStream = Files.newOutputStream(new File("output/combineFilesOutput.pdf").toPath());
-        LOGGER.info("Saving asset at output/combineFilesOutput.pdf");
-        IOUtils.copy(streamAsset.getInputStream(), outputStream);
-        outputStream.close();
-     } catch (IOException | ServiceApiException | SDKException | ServiceUsageException e) {
-       LOGGER.error("Exception encountered while executing operation", e);
-     }
-   }
- }
+            // Creates an output stream and copy stream asset's content to it
+            Files.createDirectories(Paths.get("output/"));
+            OutputStream outputStream = Files.newOutputStream(new File("output/combineFilesOutput.pdf").toPath());
+            LOGGER.info("Saving asset at output/combineFilesOutput.pdf");
+            IOUtils.copy(streamAsset.getInputStream(), outputStream);
+            outputStream.close();
+        } catch (IOException | ServiceApiException | SDKException | ServiceUsageException e) {
+            LOGGER.error("Exception encountered while executing operation", e);
+        }
+    }
+}
 ```

@@ -156,36 +156,36 @@ public class GetPDFProperties {
 
     public static void main(String[] args) {
 
-      try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/pdfPropertiesInput.pdf").toPath())) {
-        // Initial setup, create credentials instance
-        Credentials credentials = new ServicePrincipalCredentials(
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/pdfPropertiesInput.pdf").toPath())) {
+            // Initial setup, create credentials instance
+            Credentials credentials = new ServicePrincipalCredentials(
                 System.getenv("PDF_SERVICES_CLIENT_ID"),
                 System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
-        // Creates a PDF Services instance
-        PDFServices pdfServices = new PDFServices(credentials);
+            // Creates a PDF Services instance
+            PDFServices pdfServices = new PDFServices(credentials);
 
-        // Create parameters for the job
-        PDFPropertiesParams pdfPropertiesParams = PDFPropertiesParams.pdfPropertiesParamsBuilder()
+            // Create parameters for the job
+            PDFPropertiesParams pdfPropertiesParams = PDFPropertiesParams.pdfPropertiesParamsBuilder()
                 .includePageLevelProperties()
                 .build();
 
-        // Creates a new job instance
-        PDFPropertiesJob pdfPropertiesJob = new PDFPropertiesJob(asset)
+            // Creates a new job instance
+            PDFPropertiesJob pdfPropertiesJob = new PDFPropertiesJob(asset)
                 .setParams(pdfPropertiesParams);
 
-        // Submit the job and gets the job result
-        String location = pdfServices.submit(pdfPropertiesJob);
-        PDFServicesResponse<PDFPropertiesResult> pdfServicesResponse = pdfServices.getJobResult(location, PDFPropertiesResult.class);
+            // Submit the job and gets the job result
+            String location = pdfServices.submit(pdfPropertiesJob);
+            PDFServicesResponse < PDFPropertiesResult > pdfServicesResponse = pdfServices.getJobResult(location, PDFPropertiesResult.class);
 
-        PDFProperties pdfProperties = pdfServicesResponse.getResult().getPdfProperties();
+            PDFProperties pdfProperties = pdfServicesResponse.getResult().getPdfProperties();
 
-        // Fetch the requisite properties of the specified PDF.
-        LOGGER.info("Size of the specified PDF file: {}", pdfProperties.getDocument().getFileSize());
-        LOGGER.info("Version of the specified PDF file: {}", pdfProperties.getDocument().getPDFVersion());
-        LOGGER.info("Page count of the specified PDF file: {}", pdfProperties.getDocument().getPageCount());
+            // Fetch the requisite properties of the specified PDF.
+            LOGGER.info("Size of the specified PDF file: {}", pdfProperties.getDocument().getFileSize());
+            LOGGER.info("Version of the specified PDF file: {}", pdfProperties.getDocument().getPDFVersion());
+            LOGGER.info("Page count of the specified PDF file: {}", pdfProperties.getDocument().getPageCount());
 
-        }  catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
             LOGGER.error("Exception encountered while executing operation", ex);
         }
     }

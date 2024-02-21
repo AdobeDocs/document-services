@@ -149,8 +149,8 @@ public class ExportPDFToDOCX {
         try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/exportPDFInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
 
@@ -166,7 +166,7 @@ public class ExportPDFToDOCX {
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(exportPDFJob);
-            PDFServicesResponse<ExportPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, ExportPDFResult.class);
+            PDFServicesResponse < ExportPDFResult > pdfServicesResponse = pdfServices.getJobResult(location, ExportPDFResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();

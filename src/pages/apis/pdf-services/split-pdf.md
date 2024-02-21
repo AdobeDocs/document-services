@@ -171,8 +171,8 @@ public class SplitPDFByNumberOfPages {
         try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/splitPDFInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
@@ -190,14 +190,14 @@ public class SplitPDFByNumberOfPages {
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(splitPDFJob);
-            PDFServicesResponse<SplitPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, SplitPDFResult.class);
+            PDFServicesResponse < SplitPDFResult > pdfServicesResponse = pdfServices.getJobResult(location, SplitPDFResult.class);
 
             // Get content from the resulting asset(s)
-            List<Asset> resultAssets = pdfServicesResponse.getResult().getAssets();
+            List < Asset > resultAssets = pdfServicesResponse.getResult().getAssets();
 
             Files.createDirectories(Paths.get("output/"));
             int index = 0;
-            for (Asset resultAsset : resultAssets) {
+            for (Asset resultAsset: resultAssets) {
                 StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
                 // Creates an output stream and copy stream asset's content to it
@@ -208,7 +208,7 @@ public class SplitPDFByNumberOfPages {
                 index++;
             }
 
-        } catch (IOException| ServiceApiException | SDKException | ServiceUsageException e) {
+        } catch (IOException | ServiceApiException | SDKException | ServiceUsageException e) {
             LOGGER.error("Exception encountered while executing operation", e);
         }
     }

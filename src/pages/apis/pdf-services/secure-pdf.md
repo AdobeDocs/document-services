@@ -163,8 +163,8 @@ public class ProtectPDF {
         try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/protectPDFInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
@@ -174,16 +174,16 @@ public class ProtectPDF {
 
             // Create parameters for the job
             ProtectPDFParams protectPDFParams = ProtectPDFParams.passwordProtectOptionsBuilder()
-                    .setUserPassword("password")
-                    .setEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
-                    .build();
+                .setUserPassword("password")
+                .setEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
+                .build();
 
             // Creates a new job instance
             ProtectPDFJob protectPDFJob = new ProtectPDFJob(asset, protectPDFParams);
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(protectPDFJob);
-            PDFServicesResponse<ProtectPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, ProtectPDFResult.class);
+            PDFServicesResponse < ProtectPDFResult > pdfServicesResponse = pdfServices.getJobResult(location, ProtectPDFResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();
@@ -197,7 +197,7 @@ public class ProtectPDF {
             outputStream.close();
 
         } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
-                LOGGER.error("Exception encountered while executing operation", ex);
+            LOGGER.error("Exception encountered while executing operation", ex);
         }
     }
 }

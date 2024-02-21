@@ -190,11 +190,11 @@ public class ReorderPDFPages {
     private static final Logger LOGGER = LoggerFactory.getLogger(ReorderPDFPages.class);
 
     public static void main(String[] args) {
-       try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/reorderPagesInput.pdf").toPath())) {
+        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/reorderPagesInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"),
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                System.getenv("PDF_SERVICES_CLIENT_ID"),
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
 
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
@@ -207,15 +207,15 @@ public class ReorderPDFPages {
 
             // Create parameters for the job
             ReorderPagesParams reorderPagesParams = ReorderPagesParams
-                    .reorderPagesParamsBuilder(asset, pagesToReorder) // Add the asset as input to the params, along with its page order
-                    .build();
+                .reorderPagesParamsBuilder(asset, pagesToReorder) // Add the asset as input to the params, along with its page order
+                .build();
 
             // Creates a new job instance
             ReorderPagesPDFJob reorderPagesPDFJob = new ReorderPagesPDFJob(reorderPagesParams);
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(reorderPagesPDFJob);
-            PDFServicesResponse<ReorderPagesResult> pdfServicesResponse = pdfServices.getJobResult(location, ReorderPagesResult.class);
+            PDFServicesResponse < ReorderPagesResult > pdfServicesResponse = pdfServices.getJobResult(location, ReorderPagesResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getAsset();
@@ -235,7 +235,7 @@ public class ReorderPDFPages {
     }
 
     private static PageRanges getPageRangeForReorder() {
-       // Specify order of the pages for an output document
+        // Specify order of the pages for an output document
         PageRanges pageRanges = new PageRanges();
         // Add pages 3 to 4
         pageRanges.addRange(3, 4);

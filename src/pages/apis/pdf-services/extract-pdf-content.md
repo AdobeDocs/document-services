@@ -197,7 +197,7 @@ public class ExtractTextInfoFromPDF {
 
             // Submit the job and gets the job result
             String location = pdfServices.submit(extractPDFJob);
-            PDFServicesResponse<ExtractPDFResult> pdfServicesResponse = pdfServices.getJobResult(location, ExtractPDFResult.class);
+            PDFServicesResponse < ExtractPDFResult > pdfServicesResponse = pdfServices.getJobResult(location, ExtractPDFResult.class);
 
             // Get content from the resulting asset(s)
             Asset resultAsset = pdfServicesResponse.getResult().getResource();
