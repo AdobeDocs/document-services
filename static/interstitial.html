@@ -59,7 +59,7 @@
           $("#form").faas({
             "id": 54,
             "l": "en_us", //locale
-            "d": `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=${getQueryParams}`, //thank you page url
+            "d": getQueryParams ?  `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=${getQueryParams}` : `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html`, //thank you page url
             "as": false, /*auto submit - optional*/
             "pc": { //pre-populate sources
               "1": "js",
@@ -151,7 +151,7 @@
               },
               afterSubmitCallback: function (data) {
                 // Redirect to the thank you page outside of the iframe
-                top.location.href = `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=${getQueryParams}`;
+                top.location.href = getQueryParams ?  `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=${getQueryParams}` : `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html`;
                 window.reload();
               }
             }
@@ -172,7 +172,8 @@
 
             let parentUrl = window.parent.location.href;
             let urlParams = new URLSearchParams(parentUrl.split('?')[1]);
-            const getQueryParams = urlParams.get('api');
+            let getQueryParams = urlParams.get('api');
+            getQueryParams = getQueryParams ? getQueryParams : "";
 
             const serviceJSON = {
               "pdf-services-api" : {
@@ -202,8 +203,8 @@
 
             }
 
-            document.getElementById("faasHeader").innerHTML = serviceJSON[getQueryParams].header;
-            document.getElementById("faasText").innerHTML = serviceJSON[getQueryParams].text;
+            document.getElementById("faasHeader").innerHTML = serviceJSON[getQueryParams]?.header ? serviceJSON[getQueryParams]?.header  : "Get Started with Acrobat Services APIs";
+            document.getElementById("faasText").innerHTML = serviceJSON[getQueryParams]?.text ?  serviceJSON[getQueryParams]?.text : "To get started, sign in or create your free Adobe account and create unique credentials you'll use in your project.";
         </script>
     </body>
 </html>
