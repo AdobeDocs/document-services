@@ -12,7 +12,7 @@
 
 module.exports = {
   siteMetadata: {
-    siteTitle:'Adobe Developers',
+    siteTitle: 'Adobe Developers',
     author: process.env.AUTHOR || 'Adobe I/O — Adobe Developers',
     creator: process.env.CREATOR || '@adobedevs',
     siteUrl: process.env.SITE_URL || 'https://developer.adobe.com/',
@@ -23,7 +23,7 @@ module.exports = {
     DESKTOP_FOOTER_SCREEN_WIDTH_MAX: process.env.GATSBY_DESKTOP_FOOTER_SCREEN_WIDTH_MAX || '1280px',
     docs: {
       title: 'Get credentials',
-      path: 'https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html'
+      path: 'interstitial/index.md'
     },
     pages: [
       {
@@ -95,13 +95,13 @@ module.exports = {
         }, {
           title: 'Licensing',
           path: 'https://developer.adobe.com/document-services/docs/overview/limits/'
-        },{
+        }, {
           title: 'Sales FAQ',
           path: 'faq/sales/'
-        },{
+        }, {
           title: 'Tech Support FAQ',
           path: 'faq/tech-support/ '
-        },{
+        }, {
           title: 'Contact Us',
           path: 'pricing/contact/'
         }]
@@ -236,7 +236,7 @@ module.exports = {
       {
         title: 'Agreements and Contracts',
         path: 'use-cases/agreements-and-contracts',
-        icon:'ic-category-agreements',
+        icon: 'ic-category-agreements',
         pages: [
           {
             title: 'Sales Proposals and Contracts',
@@ -267,7 +267,7 @@ module.exports = {
       {
         title: 'Content & Data Extraction',
         path: 'use-cases/content-and-data-extraction',
-        icon:'ic-extract-40',
+        icon: 'ic-extract-40',
         pages: [
           {
             title: 'Content Based Process Automation',
@@ -286,7 +286,7 @@ module.exports = {
       {
         title: 'Content Publishing',
         path: 'use-cases/content-publishing',
-        icon:'ic-category-content-publishing',
+        icon: 'ic-category-content-publishing',
         pages: [
           {
             title: 'Digital Content Publishing',
@@ -333,7 +333,7 @@ module.exports = {
       {
         title: 'Collaboration',
         path: 'use-cases/collaboration',
-        icon:'ic-category-collaboration',
+        icon: 'ic-category-collaboration',
         pages: [
           {
             title: 'Student-Teacher Collaboration',
@@ -348,7 +348,7 @@ module.exports = {
       {
         title: 'Financial',
         path: 'use-cases/financial',
-        icon:'ic-category-financial',
+        icon: 'ic-category-financial',
         pages: [
           {
             title: 'Data Analysis',
@@ -375,7 +375,7 @@ module.exports = {
       {
         title: 'Archiving and Retrieval',
         path: 'use-cases/archiving-and-retrieval',
-        icon:'ic-category-archiving',
+        icon: 'ic-category-archiving',
         pages: [
           {
             title: 'Search and Indexing',

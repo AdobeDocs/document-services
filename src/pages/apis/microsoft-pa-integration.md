@@ -23,7 +23,7 @@ Start with the Free Tier and get 500 free Document Transactions per month.
 
 microsoftPAHeroImage
 
-- [Try for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
+- [Try for free](/interstitial/?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="Uplevel-Your-DocumentTitle"/>
 
@@ -39,7 +39,7 @@ microsoftPAHeroImage
 
 Start with the Free Tier and get 500 free Document Transactions per month.
 
-- [Try for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
+- [Try for free](/interstitial/?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 
 <WrapperComponent slots="content" theme="lightest" className="Benefits-For-Enterprises"/>
 

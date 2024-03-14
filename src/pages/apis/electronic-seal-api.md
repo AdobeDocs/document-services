@@ -20,7 +20,7 @@ Electronically seal PDF documents at scale to provide document authenticity and 
 e-Seal-API-HeroAssetImg  e-seal-api-hero
 
 - [Try the Demo](https://acrobatservices.adobe.com/dc-eseal-playground/index.html#/)
-- [Try for Free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Try for Free](/interstitial/?api=pdf-services-api)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="why-pdf-services Why-PDF-Services-API"/>
 

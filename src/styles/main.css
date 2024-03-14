@@ -141,6 +141,10 @@ h1 {
     margin-top: 0px !important;
 }
 
+.css-1516f4v-O{
+    display: none !important;
+}
+
 @media screen and (max-width: 765px) {
     /* .tabView div[class^="spectrum"] {
         display: none;

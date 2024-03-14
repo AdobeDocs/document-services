@@ -36,7 +36,7 @@ apiHeroAssetImg doc-embed-hero
 
 ### Key features of our free PDF Embed API
 
-- [Get free credentials](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-embed-api)
+- [Get free credentials](/interstitial/?api=pdf-embed-api)
 
 <TabsBlock orientation="vertical" slots="heading, image, content"  repeat="6" theme="dark"  className='bgBlue code-block-0 embed-key-features embed-key-features-code-block tabBlockAlign' />
 

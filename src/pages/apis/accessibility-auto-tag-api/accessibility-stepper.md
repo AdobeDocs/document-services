@@ -16,7 +16,7 @@ Start with the Free Tier and get 500 free Document Transactions per month.
 
 Obtain free credentials
 
-- [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-accessibility-auto-tag-api)
+- [Get started](/interstitial/?api=pdf-accessibility-auto-tag-api)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantsTypeSecondary='secondary' variantStyleFill="outline" variantStyleOutline="outline"  className='align-left link'/>
 
