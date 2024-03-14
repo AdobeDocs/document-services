@@ -59,7 +59,7 @@
           $("#form").faas({
             "id": 54,
             "l": "en_us", //locale
-            "d": getQueryParams ?  `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=${getQueryParams}` : `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html`, //thank you page url
+            "d": `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html${getQueryParams ? `?api=${getQueryParams}` : ''}`, //thank you page url
             "as": false, /*auto submit - optional*/
             "pc": { //pre-populate sources
               "1": "js",
@@ -151,7 +151,7 @@
               },
               afterSubmitCallback: function (data) {
                 // Redirect to the thank you page outside of the iframe
-                top.location.href = getQueryParams ?  `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=${getQueryParams}` : `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html`;
+                top.location.href = `https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html${getQueryParams ? `?api=${getQueryParams}` : ''}`;
                 window.reload();
               }
             }
