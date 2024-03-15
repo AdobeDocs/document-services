@@ -13,8 +13,6 @@
 const isBrowser = typeof window !== "undefined";
 export const onRouteUpdate = ({ location, prevLocation }) => {
 
-  document.getElementById("getCredentialID").removeAttribute("target");
-
   const openPdf = (pdfUrl) => {
     var adobeDCView;
     if (location.host.endsWith('github.io')) {
