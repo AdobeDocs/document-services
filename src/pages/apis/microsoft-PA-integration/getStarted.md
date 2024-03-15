@@ -8,7 +8,7 @@
 
 Sign up for a free tier.
 
-- [Get started](https://www.adobe.com/go/powerautomate_getstarted)
+- [Get started](/interstitial/?api=pdf-services-api&source=pa#&sdid=6S3T74M5&mv=affiliate)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantStyleFill = "outline"  className="align-left horizontal-align ms-step-two" headerElementType="h2" />
 
