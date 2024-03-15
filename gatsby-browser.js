@@ -123,6 +123,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     // set interstitial page iframe src to point to correct location
     let interstitialForm = document.querySelector('#interstitial')
+    console.log("navLinksBaseUrl + '/' + interstitialForm.src.split().pop()",navLinksBaseUrl + '/' + interstitialForm.src.split("/").pop())
     if (interstitialForm && !isLocal) {
       interstitialForm.src = navLinksBaseUrl + '/' + interstitialForm.src.split("/").pop();
     }
