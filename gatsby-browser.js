@@ -105,7 +105,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0) {
       isLocal = false;
       navLinksBaseUrl = "/document-services";
-      baseurl = "/interstitial"
+      baseurl = navLinksBaseUrl + "/interstitial"
     }
     // production
     if (
@@ -117,10 +117,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     // set sales form iframe src to point to correct location
     let salesForm = document.querySelector('#salesForm')
-    if (salesForm) {
-      if (!isLocal) {
-        salesForm.src = navLinksBaseUrl + '/' + salesForm.src.split("/").pop();
-      }
+    if (salesForm && !isLocal) {
+      salesForm.src = navLinksBaseUrl + '/' + salesForm.src.split("/").pop();
+    }
+
+    // set interstitial page iframe src to point to correct location
+    let interstitialForm = document.querySelector('#interstitial')
+    if (interstitialForm && !isLocal) {
+      interstitialForm.src = navLinksBaseUrl + '/' + interstitialForm.src.split("/").pop();
     }
 
     let header = document.querySelector("header");
