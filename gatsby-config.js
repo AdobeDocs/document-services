@@ -23,7 +23,7 @@ module.exports = {
     DESKTOP_FOOTER_SCREEN_WIDTH_MAX: process.env.GATSBY_DESKTOP_FOOTER_SCREEN_WIDTH_MAX || '1280px',
     docs: {
       title: 'Get credentials',
-      path: 'interstitial/index.md'
+      path: 'faas-form/index.md'
     },
     pages: [
       {
