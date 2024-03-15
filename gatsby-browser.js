@@ -13,6 +13,8 @@
 const isBrowser = typeof window !== "undefined";
 export const onRouteUpdate = ({ location, prevLocation }) => {
 
+  document.getElementById("getCredentialID").removeAttribute("target");
+
   const openPdf = (pdfUrl) => {
     var adobeDCView;
     if (location.host.endsWith('github.io')) {
@@ -123,7 +125,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     // set interstitial page iframe src to point to correct location
     let interstitialForm = document.querySelector('#interstitial')
-    console.log("navLinksBaseUrl + '/' + interstitialForm.src.split().pop()",navLinksBaseUrl + '/' + interstitialForm.src.split("/").pop())
     if (interstitialForm && !isLocal) {
       interstitialForm.src = navLinksBaseUrl + '/' + interstitialForm.src.split("/").pop();
     }
