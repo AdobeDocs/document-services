@@ -56,15 +56,9 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to convert an HTML file to PDF. The HTML file and its associated dependencies must be
- * in a single ZIP file
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let readStream;
     try {
@@ -80,7 +74,7 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/createPDFFromStaticHtmlInput.zip");
+        readStream = fs.createReadStream("./createPDFFromStaticHtmlInput.zip");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.ZIP
@@ -111,7 +105,7 @@ const fs = require("fs");
         });
 
         // Creates an output stream and copy result asset's content to it
-        const outputFilePath = createOutputFilePath();
+        const outputFilePath = "createPdfFromStaticHtmlOutput.pdf";
         console.log(`Saving asset at ${outputFilePath}`);
 
         const outputStream = fs.createWriteStream(outputFilePath);
@@ -138,19 +132,6 @@ function getHTMLToPDFParams() {
         pageLayout,
         includeHeaderFooter: true,
     });
-}
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/StaticHTMLToPDF/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}create${dateString}.pdf`);
 }
 ```
 

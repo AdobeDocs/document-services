@@ -79,17 +79,9 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to apply electronic seal over the PDF document using default appearance options.
- *
- * <p>
- * To know more about PDF Electronic Seal, please see the <<a href="https://www.adobe.com/go/dc_eseal_overview_doc" target="_blank">documentation</a>.
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let sourceFileReadStream;
     let sealImageReadStream;
@@ -106,8 +98,8 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        sourceFileReadStream = fs.createReadStream("resources/sampleInvoice.pdf")
-        sealImageReadStream = fs.createReadStream("resources/sampleSealImage.png");
+        sourceFileReadStream = fs.createReadStream("./sampleInvoice.pdf")
+        sealImageReadStream = fs.createReadStream("./sampleSealImage.png");
         const [sourceFileAsset, sealImageAsset] = await pdfServices.uploadAssets({
             streamAssets: [{
                 readStream: sourceFileReadStream,
@@ -202,7 +194,7 @@ const fs = require("fs");
         });
 
         // Creates a write stream and copy stream asset's content to it
-        const outputFilePath = createOutputFilePath();
+        const outputFilePath = "./sealedOutput.pdf";
         console.log(`Saving asset at ${outputFilePath}`);
 
         const writeStream = fs.createWriteStream(outputFilePath);
@@ -218,19 +210,6 @@ const fs = require("fs");
         sealImageReadStream?.destroy();
     }
 })();
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/ElectronicSeal/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}seal${dateString}.pdf`);
-}
 ```
 
 #### .Net

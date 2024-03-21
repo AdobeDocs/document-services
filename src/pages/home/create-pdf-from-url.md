@@ -31,7 +31,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/createpd
 ```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
-// node src/createpdf/create-pdf-from-docx.js
+// node src/createpdf/create-pdf-from-docx.js 
 
 const {
     ServicePrincipalCredentials,
@@ -42,14 +42,9 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to create a PDF file from a DOCX file.
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let readStream;
     try {
@@ -65,7 +60,7 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/createPDFInput.docx");
+        readStream = fs.createReadStream("./createPDFInput.docx");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.DOCX
@@ -92,7 +87,7 @@ const fs = require("fs");
         });
 
         // Creates an output stream and copy result asset's content to it
-        const outputFilePath = createOutputFilePath();
+        const outputFilePath = "./createPDFFromDOCX.pdf";
         console.log(`Saving asset at ${outputFilePath}`);
 
         const outputStream = fs.createWriteStream(outputFilePath);
@@ -107,19 +102,6 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/CreatePDFFromDOCX/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}create${dateString}.pdf`);
-}
 ```
 
 #### .Net

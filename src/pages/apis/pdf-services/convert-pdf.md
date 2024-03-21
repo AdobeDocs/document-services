@@ -40,27 +40,23 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/exportpd
 ```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
-// node src/exportpdf/export-pdf-to-docx.js
+// node src/exportpdftoimages/export-pdf-to-jpeg.js
 
 const {
     ServicePrincipalCredentials,
     PDFServices,
     MimeType,
-    ExportPDFJob,
-    ExportPDFParams,
-    ExportPDFTargetFormat,
-    ExportPDFResult,
+    ExportPDFToImagesJob,
+    ExportPDFToImagesTargetFormat,
+    ExportPDFToImagesOutputType,
+    ExportPDFToImagesParams,
+    ExportPDFToImagesResult,
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to export a PDF file to a Word (DOCX) file
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let readStream;
     try {
@@ -76,19 +72,20 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/exportPDFInput.pdf");
+        readStream = fs.createReadStream("./exportPDFToImageInput.pdf");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.PDF
         });
 
         // Create parameters for the job
-        const params = new ExportPDFParams({
-            targetFormat: ExportPDFTargetFormat.DOCX
+        const params = new ExportPDFToImagesParams({
+            targetFormat: ExportPDFToImagesTargetFormat.JPEG,
+            outputType: ExportPDFToImagesOutputType.LIST_OF_PAGE_IMAGES
         });
 
         // Creates a new job instance
-        const job = new ExportPDFJob({
+        const job = new ExportPDFToImagesJob({
             inputAsset,
             params
         });
@@ -99,21 +96,24 @@ const fs = require("fs");
         });
         const pdfServicesResponse = await pdfServices.getJobResult({
             pollingURL,
-            resultType: ExportPDFResult
+            resultType: ExportPDFToImagesResult
         });
 
         // Get content from the resulting asset(s)
-        const resultAsset = pdfServicesResponse.result.asset;
-        const streamAsset = await pdfServices.getContent({
-            asset: resultAsset
-        });
+        const resultAssets = pdfServicesResponse.result.assets;
 
-        // Creates an output stream and copy stream asset's content to it
-        const outputFilePath = createOutputFilePath();
-        console.log(`Saving asset at ${outputFilePath}`);
+        for (let i = 0; i < resultAssets.length; i++) {
+            const _outputFilePath = "./exportPDFToImageOutput_${i}.jpeg";
+            console.log(`Saving asset at ${_outputFilePath}`);
 
-        const outputStream = fs.createWriteStream(outputFilePath);
-        streamAsset.readStream.pipe(outputStream);
+            const streamAsset = await pdfServices.getContent({
+                asset: resultAssets[i]
+            });
+
+            // Creates an output stream and copy stream asset's content to it
+            const outputStream = fs.createWriteStream(_outputFilePath);
+            streamAsset.readStream.pipe(outputStream);
+        }
     } catch (err) {
         if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
             console.log("Exception encountered while executing operation", err);
@@ -124,19 +124,6 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/ExportPDFToDOCX/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}export${dateString}.docx`);
-}
 ```
 
 #### .Net

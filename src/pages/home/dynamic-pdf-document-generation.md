@@ -69,17 +69,9 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to merge the Word based document template with the input JSON data to generate
- * the output document in the PDF format.
- * <p>
- * To know more about document generation and document templates, please see the <a href="http://www.adobe.com/go/dcdocgen_overview_doc">documentation</a>
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let readStream;
     try {
@@ -94,19 +86,22 @@ const fs = require("fs");
             credentials
         });
 
+        // Setup input data for the document merge process
+        const jsonDataForMerge = {
+            customerName: "Kane Miller",
+            customerVisits: 100
+        }
+
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/salesOrderTemplate.docx");
+        readStream = fs.createReadStream("./documentMergeTemplate.docx");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.DOCX
         });
 
-        // Setup input data for the document merge process
-        const jsonString = fs.readFileSync('resources/salesOrder.json', 'utf-8');
-
         // Create parameters for the job
         const params = new DocumentMergeParams({
-            jsonDataForMerge: JSON.parse(jsonString),
+            jsonDataForMerge,
             outputFormat: OutputFormat.PDF
         });
 
@@ -132,7 +127,7 @@ const fs = require("fs");
         });
 
         // Creates a write stream and copy stream asset's content to it
-        const outputFilePath = createOutputFilePath();
+        const outputFilePath = "./documentMergeOutput.pdf";
         console.log(`Saving asset at ${outputFilePath}`);
 
         const writeStream = fs.createWriteStream(outputFilePath);
@@ -147,19 +142,6 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/MergeDocumentToPDF/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}merge${dateString}.pdf`);
-}
 ```
 
 #### .Net

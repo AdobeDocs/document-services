@@ -36,17 +36,9 @@ const {
     MimeType,
     AutotagPDFJob,
     AutotagPDFResult,
-    SDKError,
-    ServiceUsageError,
-    ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to generate a tagged PDF.
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let readStream;
     try {
@@ -62,7 +54,7 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/autotagPDFInput.pdf");
+        readStream = fs.createReadStream("./autotagPDFInput.pdf");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.PDF
@@ -89,11 +81,11 @@ const fs = require("fs");
         });
 
         // Creates an output stream and copy stream asset's content to it
-        const outputFilePath = createOutputFilePath();
+        const outputFilePath = "./autotag-tagged.pdf";
         console.log(`Saving asset at ${outputFilePath}`);
 
-        const outputStream = fs.createWriteStream(outputFilePath);
-        streamAsset.readStream.pipe(outputStream);
+        let writeStream = fs.createWriteStream(outputFilePath);
+        streamAsset.readStream.pipe(writeStream);
     } catch (err) {
         if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
             console.log("Exception encountered while executing operation", err);
@@ -104,19 +96,6 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/AutotagPDF/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}autotag${dateString}.pdf`);
-}
 ```
 
 #### .Net

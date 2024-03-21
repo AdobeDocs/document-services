@@ -52,15 +52,9 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to split input PDF into multiple PDF files on the basis of the maximum number
- * of pages each of the output files can have.
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let readStream;
     try {
@@ -76,7 +70,7 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/splitPDFInput.pdf")
+        readStream = fs.createReadStream("./splitPDFInput.pdf")
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.PDF
@@ -104,14 +98,14 @@ const fs = require("fs");
 
         // Get content from the resulting asset(s)
         const resultAssets = pdfServicesResponse.result.assets;
-        let getOutputFilePathForIndex = createOutputFilePath();
+
         for (let i = 0; i < resultAssets.length; i++) {
             const streamAsset = await pdfServices.getContent({
                 asset: resultAssets[i]
             });
 
             // Creates an output stream and copy stream asset's content to it
-            const _outputFilePath = getOutputFilePathForIndex(i);
+            const _outputFilePath = "./SplitPDFByNumberOfPagesOutput_" + i + ".pdf";
             console.log(`Saving asset at ${_outputFilePath}`);
 
             const writeStream = fs.createWriteStream(_outputFilePath);
@@ -127,19 +121,6 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/SplitPDFByNumberOfPages/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (index) => `${filePath}split${dateString}_${index}.pdf`;
-}
 ```
 
 #### .Net

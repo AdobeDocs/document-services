@@ -53,14 +53,9 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to extract Text Information from PDF.
- * <p>
- * Refer to README.md for instructions on how to run the samples & understand output zip file
- */
 (async () => {
     let readStream;
     try {
@@ -76,7 +71,7 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/extractPDFInput.pdf");
+        readStream = fs.createReadStream("./extractPDFInput.pdf");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.PDF
@@ -109,7 +104,7 @@ const fs = require("fs");
         });
 
         // Creates a write stream and copy stream asset's content to it
-        const outputFilePath = createOutputFilePath();
+        const outputFilePath = "./ExtractTextInfoFromPDF.zip";
         console.log(`Saving asset at ${outputFilePath}`);
 
         const writeStream = fs.createWriteStream(outputFilePath);
@@ -124,19 +119,6 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/ExtractTextInfoFromPDF/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}extract${dateString}.zip`);
-}
 ```
 
 #### .Net

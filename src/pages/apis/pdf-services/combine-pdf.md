@@ -56,16 +56,9 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to combine multiple PDF files into a single PDF file.
- * <p>
- * Note that the SDK supports combining upto 20 files in one operation.
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let readStream1;
     let readStream2;
@@ -82,8 +75,8 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream1 = fs.createReadStream("resources/combineFilesInput1.pdf");
-        readStream2 = fs.createReadStream("resources/combineFilesInput2.pdf");
+        readStream1 = fs.createReadStream("./combineFilesInput1.pdf");
+        readStream2 = fs.createReadStream("./combineFilesInput2.pdf");
         const [inputAsset1, inputAsset2] = await pdfServices.uploadAssets({
             streamAssets: [{
                 readStream: readStream1,
@@ -120,7 +113,7 @@ const fs = require("fs");
         });
 
         // Creates an output stream and copy result asset's content to it
-        const outputFilePath = createOutputFilePath();
+        const outputFilePath = "./combineFilesOutput.pdf";
         console.log(`Saving asset at ${outputFilePath}`);
 
         const outputStream = fs.createWriteStream(outputFilePath);
@@ -136,19 +129,6 @@ const fs = require("fs");
         readStream2?.destroy();
     }
 })();
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/CombinePDF/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}combine${dateString}.pdf`);
-}
 ```
 
 #### .Net

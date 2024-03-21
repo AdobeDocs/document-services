@@ -52,14 +52,9 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
 
-/**
- * This sample illustrates how to retrieve properties of an input PDF file
- *
- * Refer to README.md for instructions on how to run the samples.
- */
 (async () => {
     let readStream;
     try {
@@ -75,7 +70,7 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/pdfPropertiesInput.pdf");
+        readStream = fs.createReadStream("./pdfPropertiesInput.pdf");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.PDF

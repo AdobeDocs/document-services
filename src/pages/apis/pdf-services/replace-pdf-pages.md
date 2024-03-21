@@ -75,14 +75,8 @@ const {
     SDKError,
     ServiceUsageError,
     ServiceApiError
-} = require("@dcloud/pdfservices-node-sdk");
+} = require("@adobe/pdfservices-node-sdk");
 const fs = require("fs");
-
-/**
- * This sample illustrates how to replace specific pages in a PDF file
- * <p>
- * Refer to README.md for instructions on how to run the samples.
- */
 
 (async () => {
     let baseReadStream;
@@ -101,9 +95,9 @@ const fs = require("fs");
         });
 
         // Creates an asset(s) from source file(s) and upload
-        baseReadStream = fs.createReadStream("resources/baseInput.pdf");
-        readStream1 = fs.createReadStream("resources/replacePagesInput1.pdf");
-        readStream2 = fs.createReadStream("resources/replacePagesInput2.pdf");
+        baseReadStream = fs.createReadStream("./baseInput.pdf");
+        readStream1 = fs.createReadStream("./replacePagesInput1.pdf");
+        readStream2 = fs.createReadStream("./replacePagesInput2.pdf");
         const [baseAsset, asset1, asset2] = await pdfServices.uploadAssets({
             streamAssets: [{
                 readStream: baseReadStream,
@@ -152,7 +146,7 @@ const fs = require("fs");
         });
 
         // Creates an output stream and copy result asset's content to it
-        const outputFilePath = createOutputFilePath();
+        const outputFilePath = "./replacePagesOutput.pdf";
         console.log(`Saving asset at ${outputFilePath}`);
 
         const outputStream = fs.createWriteStream(outputFilePath);
@@ -178,19 +172,6 @@ function getPageRangesForFirstFile() {
     // Add page 4
     pageRanges.addSinglePage(4);
     return pageRanges;
-}
-
-// Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath() {
-    const filePath = "output/ReplacePages/";
-    const date = new Date();
-    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
-        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
-        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
-    fs.mkdirSync(filePath, {
-        recursive: true
-    });
-    return (`${filePath}replace${dateString}.pdf`);
 }
 ```
 
