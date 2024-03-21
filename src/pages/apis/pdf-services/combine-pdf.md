@@ -59,6 +59,13 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to combine multiple PDF files into a single PDF file.
+ * <p>
+ * Note that the SDK supports combining upto 20 files in one operation.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream1;
     let readStream2;
@@ -67,6 +74,11 @@ const fs = require("fs");
         const credentials = new ServicePrincipalCredentials({
             clientId: process.env.PDF_SERVICES_CLIENT_ID,
             clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
+        });
+
+        // Creates a PDF Services instance
+        const pdfServices = new PDFServices({
+            credentials
         });
 
         // Creates an asset(s) from source file(s) and upload
@@ -86,6 +98,12 @@ const fs = require("fs");
         const params = new CombinePDFParams()
             .addAsset(inputAsset1)
             .addAsset(inputAsset2);
+
+        // Create a new job instance
+        const job = new CombinePDFJob({
+            params
+        });
+
         // Submit the job and get the job result
         const pollingURL = await pdfServices.submit({
             job

@@ -56,6 +56,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to export a PDF file to a Word (DOCX) file
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -75,7 +80,7 @@ const fs = require("fs");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.PDF
-        })
+        });
 
         // Create parameters for the job
         const params = new ExportPDFParams({

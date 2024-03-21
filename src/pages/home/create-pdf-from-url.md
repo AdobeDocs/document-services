@@ -37,18 +37,19 @@ const {
     ServicePrincipalCredentials,
     PDFServices,
     MimeType,
-    ClientConfig,
     CreatePDFJob,
     CreatePDFResult,
-    ProxyServerConfig,
-    ProxyScheme,
-    UsernamePasswordCredentials,
     SDKError,
     ServiceUsageError,
     ServiceApiError
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to create a PDF file from a DOCX file.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -58,38 +59,13 @@ const fs = require("fs");
             clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
         });
 
-        /*
-        Initial setup, creates proxy server config instance for client config.
-        Replace the values of PROXY_HOSTNAME with the proxy server hostname.
-        Replace the username and password with Proxy Server Authentication credentials.
-        If the scheme of proxy server is not HTTP then, replace ProxyScheme parameter with HTTPS.
-        If the port for proxy server is diff than the default port for HTTP and HTTPS, then please set the
-        PROXY_PORT,
-        else, remove its setter statement.
-        */
-        const proxyServerConfig = new ProxyServerConfig({
-            host: "PROXY_HOSTNAME",
-            port: 443,
-            scheme: ProxyScheme.HTTP,
-            credentials: new UsernamePasswordCredentials({
-                username: "USERNAME",
-                password: "PASSWORD"
-            })
-        });
-
-        // Creates client config instance
-        const clientConfig = new ClientConfig({
-            proxyServerConfig
-        });
-
         // Creates a PDF Services instance
         const pdfServices = new PDFServices({
-            credentials,
-            clientConfig
+            credentials
         });
 
         // Creates an asset(s) from source file(s) and upload
-        readStream = fs.createReadStream("resources/createPDFInput.docx")
+        readStream = fs.createReadStream("resources/createPDFInput.docx");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.DOCX
@@ -115,12 +91,12 @@ const fs = require("fs");
             asset: resultAsset
         });
 
-        // Creates a write stream and copy stream asset's content to it
+        // Creates an output stream and copy result asset's content to it
         const outputFilePath = createOutputFilePath();
         console.log(`Saving asset at ${outputFilePath}`);
 
-        const writeStream = fs.createWriteStream(outputFilePath);
-        streamAsset.readStream.pipe(writeStream);
+        const outputStream = fs.createWriteStream(outputFilePath);
+        streamAsset.readStream.pipe(outputStream);
     } catch (err) {
         if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
             console.log("Exception encountered while executing operation", err);
@@ -134,7 +110,7 @@ const fs = require("fs");
 
 // Generates a string containing a directory structure and file name for the output file
 function createOutputFilePath() {
-    const filePath = "output/CreatePDFWithAuthenticatedProxyServer/";
+    const filePath = "output/CreatePDFFromDOCX/";
     const date = new Date();
     const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
         ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +

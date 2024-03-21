@@ -71,6 +71,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to reorder the pages in a PDF file
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -122,6 +127,7 @@ const fs = require("fs");
         // Creates an output stream and copy result asset's content to it
         const outputFilePath = createOutputFilePath();
         console.log(`Saving asset at ${outputFilePath}`);
+
         const outputStream = fs.createWriteStream(outputFilePath);
         streamAsset.readStream.pipe(outputStream);
     } catch (err) {

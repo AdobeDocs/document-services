@@ -55,6 +55,12 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to convert a PDF file into a password protected PDF file
+ * The password is used for encrypting PDF contents and will be required for viewing the PDF file
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -82,6 +88,12 @@ const fs = require("fs");
             encryptionAlgorithm: EncryptionAlgorithm.AES_256
         });
 
+        // Create a new job instance
+        const job = new ProtectPDFJob({
+            inputAsset,
+            params
+        });
+
         // Submit the job and get the job result
         const pollingURL = await pdfServices.submit({
             job
@@ -90,6 +102,7 @@ const fs = require("fs");
             pollingURL,
             resultType: ProtectPDFResult
         });
+
         // Get content from the resulting asset(s)
         const resultAsset = pdfServicesResponse.result.asset;
         const streamAsset = await pdfServices.getContent({

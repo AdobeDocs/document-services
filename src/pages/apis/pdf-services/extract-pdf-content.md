@@ -56,6 +56,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to extract Text Information from PDF.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples & understand output zip file
+ */
 (async () => {
     let readStream;
     try {
@@ -64,7 +69,6 @@ const fs = require("fs");
             clientId: process.env.PDF_SERVICES_CLIENT_ID,
             clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
         });
-
 
         // Creates a PDF Services instance
         const pdfServices = new PDFServices({
@@ -107,6 +111,7 @@ const fs = require("fs");
         // Creates a write stream and copy stream asset's content to it
         const outputFilePath = createOutputFilePath();
         console.log(`Saving asset at ${outputFilePath}`);
+
         const writeStream = fs.createWriteStream(outputFilePath);
         streamAsset.readStream.pipe(writeStream);
     } catch (err) {

@@ -87,6 +87,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to insert specific pages of multiple PDF files into a single PDF file
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let baseReadStream;
     let firstReadStreamToInsert;
@@ -147,6 +152,7 @@ const fs = require("fs");
             pollingURL,
             resultType: InsertPagesResult
         });
+
         // Get content from the resulting asset(s)
         const resultAsset = pdfServicesResponse.result.asset;
         const streamAsset = await pdfServices.getContent({

@@ -78,6 +78,12 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to replace specific pages in a PDF file
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
+
 (async () => {
     let baseReadStream;
     let readStream1;

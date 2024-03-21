@@ -82,6 +82,14 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to apply electronic seal over the PDF document using default appearance options.
+ *
+ * <p>
+ * To know more about PDF Electronic Seal, please see the <<a href="https://www.adobe.com/go/dc_eseal_overview_doc" target="_blank">documentation</a>.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let sourceFileReadStream;
     let sealImageReadStream;
@@ -91,6 +99,7 @@ const fs = require("fs");
             clientId: process.env.PDF_SERVICES_CLIENT_ID,
             clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
         });
+
         // Creates a PDF Services instance
         const pdfServices = new PDFServices({
             credentials
@@ -142,6 +151,7 @@ const fs = require("fs");
 
         // Set the access token to be used to access TSP provider hosted APIs
         const accessToken = "<ACCESS_TOKEN>";
+
         // Set the credential ID
         const credentialId = "<CREDENTIAL_ID>";
 

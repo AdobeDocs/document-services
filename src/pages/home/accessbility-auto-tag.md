@@ -42,6 +42,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to generate a tagged PDF.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -54,13 +59,18 @@ const fs = require("fs");
         // Creates a PDF Services instance
         const pdfServices = new PDFServices({
             credentials
-        });;
+        });
 
         // Creates an asset(s) from source file(s) and upload
         readStream = fs.createReadStream("resources/autotagPDFInput.pdf");
         const inputAsset = await pdfServices.upload({
             readStream,
             mimeType: MimeType.PDF
+        });
+
+        // Creates a new job instance
+        const job = new AutotagPDFJob({
+            inputAsset
         });
 
         // Submit the job and get the job result
@@ -71,6 +81,7 @@ const fs = require("fs");
             pollingURL,
             resultType: AutotagPDFResult
         });
+
         // Get content from the resulting asset(s)
         const resultAsset = pdfServicesResponse.result.taggedPDF;
         const streamAsset = await pdfServices.getContent({
@@ -93,6 +104,7 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
+
 // Generates a string containing a directory structure and file name for the output file
 function createOutputFilePath() {
     const filePath = "output/AutotagPDF/";

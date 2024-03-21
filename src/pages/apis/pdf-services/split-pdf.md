@@ -55,6 +55,12 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to split input PDF into multiple PDF files on the basis of the maximum number
+ * of pages each of the output files can have.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -78,7 +84,7 @@ const fs = require("fs");
 
         // Create parameters for the job
         const params = new SplitPDFParams({
-            fileCount: 2
+            pageCount: 2
         });
 
         // Creates a new job instance
@@ -87,6 +93,7 @@ const fs = require("fs");
             params
         });
 
+        // Submit the job and get the job result
         const pollingURL = await pdfServices.submit({
             job
         });
@@ -94,6 +101,7 @@ const fs = require("fs");
             pollingURL,
             resultType: SplitPDFResult
         });
+
         // Get content from the resulting asset(s)
         const resultAssets = pdfServicesResponse.result.assets;
         let getOutputFilePathForIndex = createOutputFilePath();
@@ -119,9 +127,10 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
+
 // Generates a string containing a directory structure and file name for the output file
 function createOutputFilePath() {
-    const filePath = "output/SplitPDFIntoNumberOfFiles/";
+    const filePath = "output/SplitPDFByNumberOfPages/";
     const date = new Date();
     const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
         ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +

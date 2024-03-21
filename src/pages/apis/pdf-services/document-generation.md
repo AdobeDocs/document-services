@@ -83,6 +83,14 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to merge the Word based document template with the input JSON data to generate
+ * the output document in the PDF format.
+ * <p>
+ * To know more about document generation and document templates, please see the <a href="http://www.adobe.com/go/dcdocgen_overview_doc">documentation</a>
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -127,6 +135,7 @@ const fs = require("fs");
             pollingURL,
             resultType: DocumentMergeResult
         });
+
         // Get content from the resulting asset(s)
         const resultAsset = pdfServicesResponse.result.asset;
         const streamAsset = await pdfServices.getContent({

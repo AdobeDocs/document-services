@@ -40,7 +40,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pdfprope
 ```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
-// node src/exportpdf/get-pdf-properties.js
+// node src/pdfproperties/get-pdf-properties.js
 
 const {
     ServicePrincipalCredentials,
@@ -55,6 +55,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to retrieve properties of an input PDF file
+ *
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {

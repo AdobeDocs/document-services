@@ -74,6 +74,7 @@ const {
     ServicePrincipalCredentials,
     PDFServices,
     MimeType,
+    DocumentLevelPermission,
     FieldLocation,
     FieldOptions,
     CSCAuthContext,
@@ -81,17 +82,21 @@ const {
     PDFElectronicSealParams,
     PDFElectronicSealJob,
     PDFElectronicSealResult,
-    AppearanceOptions,
-    AppearanceItem,
     SDKError,
     ServiceUsageError,
-    ServiceApiError,
-    DocumentLevelPermission
+    ServiceApiError
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to apply electronic seal over the PDF document using default appearance options.
+ *
+ * <p>
+ * To know more about PDF Electronic Seal, please see the <<a href="https://www.adobe.com/go/dc_eseal_overview_doc" target="_blank">documentation</a>.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
-
     let sourceFileReadStream;
     let sealImageReadStream;
     try {
@@ -121,17 +126,6 @@ const fs = require("fs");
 
         // Set the document level permission to be applied for output document
         const documentLevelPermission = DocumentLevelPermission.FORM_FILLING;
-
-        // Create AppearanceOptions and add the required signature appearance items
-        const sealAppearanceOptions = new AppearanceOptions({
-            items: [
-                AppearanceItem.DATE,
-                AppearanceItem.SEAL_IMAGE,
-                AppearanceItem.NAME,
-                AppearanceItem.LABELS,
-                AppearanceItem.DISTINGUISHED_NAME
-            ]
-        });
 
         // Set the Seal Field Name to be created in input PDF document
         const sealFieldName = "Signature1";
@@ -163,6 +157,7 @@ const fs = require("fs");
 
         // Set the access token to be used to access TSP provider hosted APIs
         const accessToken = "<ACCESS_TOKEN>";
+
         // Set the credential ID
         const credentialId = "<CREDENTIAL_ID>";
 
@@ -185,10 +180,9 @@ const fs = require("fs");
 
         // Create parameters for the job
         const params = new PDFElectronicSealParams({
-            documentLevelPermission,
             certificateCredentials,
             sealFieldOptions,
-            sealAppearanceOptions
+            documentLevelPermission,
         });
 
         // Creates a new job instance
@@ -233,7 +227,7 @@ const fs = require("fs");
 
 // Generates a string containing a directory structure and file name for the output file
 function createOutputFilePath() {
-    const filePath = "output/ElectronicSealWithAppearanceOptions/";
+    const filePath = "output/ElectronicSeal/";
     const date = new Date();
     const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
         ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +

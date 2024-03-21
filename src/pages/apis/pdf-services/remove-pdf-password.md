@@ -53,6 +53,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to remove password security from a PDF document.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -104,7 +109,6 @@ const fs = require("fs");
         const outputFilePath = createOutputFilePath();
         console.log(`Saving asset at ${outputFilePath}`);
 
-
         const outputStream = fs.createWriteStream(outputFilePath);
         streamAsset.readStream.pipe(outputStream);
     } catch (err) {
@@ -117,6 +121,7 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
+
 // Generates a string containing a directory structure and file name for the output file
 function createOutputFilePath() {
     const filePath = "output/RemoveProtection/";

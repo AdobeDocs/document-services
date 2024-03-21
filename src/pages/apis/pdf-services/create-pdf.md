@@ -52,6 +52,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to create a PDF file from a DOCX file.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -60,6 +65,7 @@ const fs = require("fs");
             clientId: process.env.PDF_SERVICES_CLIENT_ID,
             clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
         });
+
         // Creates a PDF Services instance
         const pdfServices = new PDFServices({
             credentials
@@ -108,6 +114,7 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
+
 // Generates a string containing a directory structure and file name for the output file
 function createOutputFilePath() {
     const filePath = "output/CreatePDFFromDOCX/";

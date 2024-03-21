@@ -43,11 +43,12 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/htmltopd
 ```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
-// node src/createpdf/create-pdf-from-static-html.js
+// node src/htmltopdf/static-html-to-pdf.js
 
 const {
     ServicePrincipalCredentials,
     PDFServices,
+    MimeType,
     PageLayout,
     HTMLToPDFParams,
     HTMLToPDFResult,
@@ -58,7 +59,14 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to convert an HTML file to PDF. The HTML file and its associated dependencies must be
+ * in a single ZIP file
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
+    let readStream;
     try {
         // Initial setup, create credentials instance
         const credentials = new ServicePrincipalCredentials({
@@ -71,14 +79,19 @@ const fs = require("fs");
             credentials
         });
 
-        const inputURL = "<HTML_URL>";
+        // Creates an asset(s) from source file(s) and upload
+        readStream = fs.createReadStream("resources/createPDFFromStaticHtmlInput.zip");
+        const inputAsset = await pdfServices.upload({
+            readStream,
+            mimeType: MimeType.ZIP
+        });
 
         // Create parameters for the job
         const params = getHTMLToPDFParams();
 
         // Creates a new job instance
         const job = new HTMLToPDFJob({
-            inputURL,
+            inputAsset,
             params
         });
 
@@ -109,6 +122,8 @@ const fs = require("fs");
         } else {
             console.log("Exception encountered while executing operation", err);
         }
+    } finally {
+        readStream?.destroy();
     }
 })();
 
@@ -120,14 +135,14 @@ function getHTMLToPDFParams() {
     });
 
     return new HTMLToPDFParams({
+        pageLayout,
         includeHeaderFooter: true,
-        pageLayout
     });
 }
 
 // Generates a string containing a directory structure and file name for the output file
 function createOutputFilePath() {
-    const filePath = "output/HTMLToPDFFromURL/";
+    const filePath = "output/StaticHTMLToPDF/";
     const date = new Date();
     const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
         ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +

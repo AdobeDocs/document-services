@@ -49,7 +49,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/pagemani
 ```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
-// node src/replacepages/replace-pdf-pages.js
+// node src/deletepages/delete-pdf-pages.js
 
 const {
     ServicePrincipalCredentials,
@@ -65,6 +65,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to delete pages in a PDF file
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {

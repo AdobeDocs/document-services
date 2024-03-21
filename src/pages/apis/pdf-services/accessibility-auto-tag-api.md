@@ -40,7 +40,6 @@ const {
     ServicePrincipalCredentials,
     PDFServices,
     MimeType,
-    AutotagPDFParams,
     AutotagPDFJob,
     AutotagPDFResult,
     SDKError,
@@ -49,6 +48,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to generate a tagged PDF.
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -70,16 +74,9 @@ const fs = require("fs");
             mimeType: MimeType.PDF
         });
 
-        // Create parameters for the job
-        const params = new AutotagPDFParams({
-            generateReport: true,
-            shiftHeadings: true
-        });
-
         // Creates a new job instance
         const job = new AutotagPDFJob({
-            inputAsset,
-            params
+            inputAsset
         });
 
         // Submit the job and get the job result
@@ -93,24 +90,16 @@ const fs = require("fs");
 
         // Get content from the resulting asset(s)
         const resultAsset = pdfServicesResponse.result.taggedPDF;
-        const resultAssetReport = pdfServicesResponse.result.report;
         const streamAsset = await pdfServices.getContent({
             asset: resultAsset
         });
-        const streamAssetReport = await pdfServices.getContent({
-            asset: resultAssetReport
-        });
 
         // Creates an output stream and copy stream asset's content to it
-        const outputFilePath = createOutputFilePath(".pdf");
-        const outputFilePathReport = createOutputFilePath(".xlsx");
+        const outputFilePath = createOutputFilePath();
         console.log(`Saving asset at ${outputFilePath}`);
-        console.log(`Saving asset at ${outputFilePathReport}`);
 
-        let writeStream = fs.createWriteStream(outputFilePath);
-        streamAsset.readStream.pipe(writeStream);
-        writeStream = fs.createWriteStream(outputFilePathReport);
-        streamAssetReport.readStream.pipe(writeStream);
+        const outputStream = fs.createWriteStream(outputFilePath);
+        streamAsset.readStream.pipe(outputStream);
     } catch (err) {
         if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
             console.log("Exception encountered while executing operation", err);
@@ -121,9 +110,10 @@ const fs = require("fs");
         readStream?.destroy();
     }
 })();
+
 // Generates a string containing a directory structure and file name for the output file
-function createOutputFilePath(extension) {
-    const filePath = "output/AutotagPDFWithOptions/";
+function createOutputFilePath() {
+    const filePath = "output/AutotagPDF/";
     const date = new Date();
     const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
         ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
@@ -131,7 +121,7 @@ function createOutputFilePath(extension) {
     fs.mkdirSync(filePath, {
         recursive: true
     });
-    return (`${filePath}autotag${dateString}${extension}`);
+    return (`${filePath}autotag${dateString}.pdf`);
 }
 ```
 

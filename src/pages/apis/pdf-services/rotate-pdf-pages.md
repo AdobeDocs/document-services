@@ -77,6 +77,11 @@ const {
 } = require("@dcloud/pdfservices-node-sdk");
 const fs = require("fs");
 
+/**
+ * This sample illustrates how to rotate pages in a PDF file
+ * <p>
+ * Refer to README.md for instructions on how to run the samples.
+ */
 (async () => {
     let readStream;
     try {
@@ -157,6 +162,14 @@ function getFirstPageRangeForRotation() {
     return firstPageRange;
 }
 
+function getSecondPageRangeForRotation() {
+    // Specify pages for rotation.
+    const secondPageRange = new PageRanges();
+    // Add page 2.
+    secondPageRange.addSinglePage(2);
+    return secondPageRange;
+}
+
 // Generates a string containing a directory structure and file name for the output file
 function createOutputFilePath() {
     const filePath = "output/RotatePages/";
@@ -169,7 +182,6 @@ function createOutputFilePath() {
     });
     return (`${filePath}rotate${dateString}.pdf`);
 }
-
 ```
 
 #### .Net
