@@ -42,50 +42,94 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/splitpdf
 // Run the sample:
 // node src/splitpdf/split-pdf-by-number-of-pages.js
 
-const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const {
+    ServicePrincipalCredentials,
+    PDFServices,
+    MimeType,
+    SplitPDFParams,
+    SplitPDFJob,
+    SplitPDFResult,
+    SDKError,
+    ServiceUsageError,
+    ServiceApiError
+} = require("@dcloud/pdfservices-node-sdk");
+const fs = require("fs");
 
-try {
-    // Initial setup, create credentials instance.
-    const credentials =  PDFServicesSdk.Credentials
-        .servicePrincipalCredentialsBuilder()
-        .withClientId("PDF_SERVICES_CLIENT_ID")
-        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-        .build();
-
-    // Create an ExecutionContext using credentials
-    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
-
-    // Create a new operation instance.
-    const splitPDFOperation = PDFServicesSdk.SplitPDF.Operation.createNew(),
-        input = PDFServicesSdk.FileRef.createFromLocalFile(
-            'resources/splitPDFInput.pdf',
-            PDFServicesSdk.SplitPDF.SupportedSourceFormat.pdf
-        );
-    // Set operation input from a source file.
-    splitPDFOperation.setInput(input);
-
-    // Set the maximum number of pages each of the output files can have.
-    splitPDFOperation.setPageCount(2);
-
-    // Execute the operation and Save the result to the specified location.
-    splitPDFOperation.execute(executionContext)
-        .then(result => {
-            let saveFilesPromises = [];
-            for(let i = 0; i < result.length; i++){
-                saveFilesPromises.push(result[i].saveAsFile(`output/SplitPDFByNumberOfPagesOutput_${i}.pdf`));
-            }
-            return Promise.all(saveFilesPromises);
-        })
-        .catch(err => {
-            if(err instanceof PDFServicesSdk.Error.ServiceApiError
-                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-                console.log('Exception encountered while executing operation', err);
-            } else {
-                console.log('Exception encountered while executing operation', err);
-            }
+(async () => {
+    let readStream;
+    try {
+        // Initial setup, create credentials instance
+        const credentials = new ServicePrincipalCredentials({
+            clientId: process.env.PDF_SERVICES_CLIENT_ID,
+            clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
         });
-} catch (err) {
-    console.log('Exception encountered while executing operation', err);
+
+        // Creates a PDF Services instance
+        const pdfServices = new PDFServices({
+            credentials
+        });
+
+        // Creates an asset(s) from source file(s) and upload
+        readStream = fs.createReadStream("resources/splitPDFInput.pdf")
+        const inputAsset = await pdfServices.upload({
+            readStream,
+            mimeType: MimeType.PDF
+        });
+
+        // Create parameters for the job
+        const params = new SplitPDFParams({
+            fileCount: 2
+        });
+
+        // Creates a new job instance
+        const job = new SplitPDFJob({
+            inputAsset,
+            params
+        });
+
+        const pollingURL = await pdfServices.submit({
+            job
+        });
+        const pdfServicesResponse = await pdfServices.getJobResult({
+            pollingURL,
+            resultType: SplitPDFResult
+        });
+        // Get content from the resulting asset(s)
+        const resultAssets = pdfServicesResponse.result.assets;
+        let getOutputFilePathForIndex = createOutputFilePath();
+        for (let i = 0; i < resultAssets.length; i++) {
+            const streamAsset = await pdfServices.getContent({
+                asset: resultAssets[i]
+            });
+
+            // Creates an output stream and copy stream asset's content to it
+            const _outputFilePath = getOutputFilePathForIndex(i);
+            console.log(`Saving asset at ${_outputFilePath}`);
+
+            const writeStream = fs.createWriteStream(_outputFilePath);
+            streamAsset.readStream.pipe(writeStream);
+        }
+    } catch (err) {
+        if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
+            console.log("Exception encountered while executing operation", err);
+        } else {
+            console.log("Exception encountered while executing operation", err);
+        }
+    } finally {
+        readStream?.destroy();
+    }
+})();
+// Generates a string containing a directory structure and file name for the output file
+function createOutputFilePath() {
+    const filePath = "output/SplitPDFIntoNumberOfFiles/";
+    const date = new Date();
+    const dateString = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
+        ("0" + date.getDate()).slice(-2) + "T" + ("0" + date.getHours()).slice(-2) + "-" +
+        ("0" + date.getMinutes()).slice(-2) + "-" + ("0" + date.getSeconds()).slice(-2);
+    fs.mkdirSync(filePath, {
+        recursive: true
+    });
+    return (index) => `${filePath}split${dateString}_${index}.pdf`;
 }
 ```
 
