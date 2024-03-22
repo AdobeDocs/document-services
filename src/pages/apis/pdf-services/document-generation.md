@@ -69,50 +69,90 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/document
 // Run the sample:
 // node src/documentmerge/merge-document-to-pdf.js
 
- const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const {
+    ServicePrincipalCredentials,
+    PDFServices,
+    MimeType,
+    DocumentMergeParams,
+    OutputFormat,
+    DocumentMergeJob,
+    DocumentMergeResult,
+    SDKError,
+    ServiceUsageError,
+    ServiceApiError
+} = require("@adobe/pdfservices-node-sdk");
+const fs = require("fs");
 
-try {
-    // Initial setup, create credentials instance.
-    const credentials =  PDFServicesSdk.Credentials
-        .servicePrincipalCredentialsBuilder()
-        .withClientId("PDF_SERVICES_CLIENT_ID")
-        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-        .build();
-
-    // Setup input data for the document merge process.
-    const jsonString = "{\"customerName\": \"Kane Miller\", \"customerVisits\": 100}",
-        jsonDataForMerge = JSON.parse(jsonString);
-
-    // Create an ExecutionContext using credentials.
-    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
-
-    // Create a new DocumentMerge options instance.
-    const documentMerge = PDFServicesSdk.DocumentMerge,
-        documentMergeOptions = documentMerge.options,
-        options = new documentMergeOptions.DocumentMergeOptions(jsonDataForMerge, documentMergeOptions.OutputFormat.PDF);
-
-    // Create a new operation instance using the options instance.
-    const documentMergeOperation = documentMerge.Operation.createNew(options);
-
-    // Set operation input document template from a source file.
-    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/documentMergeTemplate.docx');
-    documentMergeOperation.setInput(input);
-
-    // Execute the operation and Save the result to the specified location.
-    documentMergeOperation.execute(executionContext)
-        .then(result => result.saveAsFile('output/documentMergeOutput.pdf'))
-        .catch(err => {
-            if(err instanceof PDFServicesSdk.Error.ServiceApiError
-                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-                console.log('Exception encountered while executing operation', err);
-            } else {
-                console.log('Exception encountered while executing operation', err);
-            }
+(async () => {
+    let readStream;
+    try {
+        // Initial setup, create credentials instance
+        const credentials = new ServicePrincipalCredentials({
+            clientId: process.env.PDF_SERVICES_CLIENT_ID,
+            clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
         });
-}
-catch (err) {
-    console.log('Exception encountered while executing operation', err);
-}
+
+        // Creates a PDF Services instance
+        const pdfServices = new PDFServices({
+            credentials
+        });
+
+        // Setup input data for the document merge process
+        const jsonDataForMerge = {
+            customerName: "Kane Miller",
+            customerVisits: 100
+        }
+
+        // Creates an asset(s) from source file(s) and upload
+        readStream = fs.createReadStream("./documentMergeTemplate.docx");
+        const inputAsset = await pdfServices.upload({
+            readStream,
+            mimeType: MimeType.DOCX
+        });
+
+        // Create parameters for the job
+        const params = new DocumentMergeParams({
+            jsonDataForMerge,
+            outputFormat: OutputFormat.PDF
+        });
+
+        // Creates a new job instance
+        const job = new DocumentMergeJob({
+            inputAsset,
+            params
+        });
+
+        // Submit the job and get the job result
+        const pollingURL = await pdfServices.submit({
+            job
+        });
+        const pdfServicesResponse = await pdfServices.getJobResult({
+            pollingURL,
+            resultType: DocumentMergeResult
+        });
+
+        // Get content from the resulting asset(s)
+        const resultAsset = pdfServicesResponse.result.asset;
+        const streamAsset = await pdfServices.getContent({
+            asset: resultAsset
+        });
+
+        // Creates a write stream and copy stream asset's content to it
+        const outputFilePath = "./documentMergeOutput.pdf";
+        console.log(`Saving asset at ${outputFilePath}`);
+
+        const writeStream = fs.createWriteStream(outputFilePath);
+        streamAsset.readStream.pipe(writeStream);
+    } catch (err) {
+        if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
+            console.log("Exception encountered while executing operation", err);
+        } else {
+            console.log("Exception encountered while executing operation", err);
+        }
+    } finally {
+        readStream?.destroy();
+    }
+})();
 ```
 
 #### .NET

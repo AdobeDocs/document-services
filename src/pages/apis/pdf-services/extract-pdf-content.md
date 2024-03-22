@@ -42,48 +42,83 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/extractp
 // Run the sample:
 // node src/extractpdf/extract-text-info-from-pdf.js
 
-const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
-try {
-    // Initial setup, create credentials instance.
-    const credentials =  PDFServicesSdk.Credentials
-        .servicePrincipalCredentialsBuilder()
-        .withClientId("PDF_SERVICES_CLIENT_ID")
-        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-        .build();
+const {
+    ServicePrincipalCredentials,
+    PDFServices,
+    MimeType,
+    ExtractPDFParams,
+    ExtractElementType,
+    ExtractPDFJob,
+    ExtractPDFResult,
+    SDKError,
+    ServiceUsageError,
+    ServiceApiError
+} = require("@adobe/pdfservices-node-sdk");
+const fs = require("fs");
 
-    // Create an ExecutionContext using credentials
-    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
-
-    // Build extractPDF options
-    const options = new PDFServicesSdk.ExtractPDF.options.ExtractPdfOptions.Builder()
-        .addElementsToExtract(PDFServicesSdk.ExtractPDF.options.ExtractElementType.TEXT).build();
-
-    // Create a new operation instance.
-    const extractPDFOperation = PDFServicesSdk.ExtractPDF.Operation.createNew(),
-        input = PDFServicesSdk.FileRef.createFromLocalFile(
-            'resources/extractPDFInput.pdf',
-            PDFServicesSdk.ExtractPDF.SupportedSourceFormat.pdf
-        );
-
-    // Set operation input from a source file.
-    extractPDFOperation.setInput(input);
-
-    // Set options
-    extractPDFOperation.setOptions(options);
-
-    extractPDFOperation.execute(executionContext)
-        .then(result => result.saveAsFile('output/ExtractTextInfoFromPDF.zip'))
-        .catch(err => {
-            if(err instanceof PDFServicesSdk.Error.ServiceApiError
-                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-                console.log('Exception encountered while executing operation', err);
-            } else {
-                console.log('Exception encountered while executing operation', err);
-            }
+(async () => {
+    let readStream;
+    try {
+        // Initial setup, create credentials instance
+        const credentials = new ServicePrincipalCredentials({
+            clientId: process.env.PDF_SERVICES_CLIENT_ID,
+            clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
         });
-} catch (err) {
-    console.log('Exception encountered while executing operation', err);
-}
+
+        // Creates a PDF Services instance
+        const pdfServices = new PDFServices({
+            credentials
+        });
+
+        // Creates an asset(s) from source file(s) and upload
+        readStream = fs.createReadStream("./extractPDFInput.pdf");
+        const inputAsset = await pdfServices.upload({
+            readStream,
+            mimeType: MimeType.PDF
+        });
+
+        // Create parameters for the job
+        const params = new ExtractPDFParams({
+            elementsToExtract: [ExtractElementType.TEXT]
+        });
+
+        // Creates a new job instance
+        const job = new ExtractPDFJob({
+            inputAsset,
+            params
+        });
+
+        // Submit the job and get the job result
+        const pollingURL = await pdfServices.submit({
+            job
+        });
+        const pdfServicesResponse = await pdfServices.getJobResult({
+            pollingURL,
+            resultType: ExtractPDFResult
+        });
+
+        // Get content from the resulting asset(s)
+        const resultAsset = pdfServicesResponse.result.resource;
+        const streamAsset = await pdfServices.getContent({
+            asset: resultAsset
+        });
+
+        // Creates a write stream and copy stream asset's content to it
+        const outputFilePath = "./ExtractTextInfoFromPDF.zip";
+        console.log(`Saving asset at ${outputFilePath}`);
+
+        const writeStream = fs.createWriteStream(outputFilePath);
+        streamAsset.readStream.pipe(writeStream);
+    } catch (err) {
+        if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
+            console.log("Exception encountered while executing operation", err);
+        } else {
+            console.log("Exception encountered while executing operation", err);
+        }
+    } finally {
+        readStream?.destroy();
+    }
+})();
 ```
 
 #### .Net

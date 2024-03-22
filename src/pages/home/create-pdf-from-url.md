@@ -31,40 +31,77 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/createpd
 ```js
 // Get the samples from http://www.adobe.com/go/pdftoolsapi_node_sample
 // Run the sample:
-// node src/createpdf/create-pdf-from-docx.js
+// node src/createpdf/create-pdf-from-docx.js 
 
-const PDFservicesSdk = require('@adobe/pdfservices-node-sdk');
+const {
+    ServicePrincipalCredentials,
+    PDFServices,
+    MimeType,
+    CreatePDFJob,
+    CreatePDFResult,
+    SDKError,
+    ServiceUsageError,
+    ServiceApiError
+} = require("@adobe/pdfservices-node-sdk");
+const fs = require("fs");
 
-try {
-    // Initial setup, create credentials instance.
-    const credentials =  PDFServicesSdk.Credentials
-        .servicePrincipalCredentialsBuilder()
-        .withClientId("PDF_SERVICES_CLIENT_ID")
-        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-        .build();
+(async () => {
+    let readStream;
+    try {
+        // Initial setup, create credentials instance
+        const credentials = new ServicePrincipalCredentials({
+            clientId: process.env.PDF_SERVICES_CLIENT_ID,
+            clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
+        });
 
-    // Create an ExecutionContext using credentials and create a new operation instance.
-    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-        createPdfOperation = PDFServicesSdk.CreatePDF.Operation.createNew();
+        // Creates a PDF Services instance
+        const pdfServices = new PDFServices({
+            credentials
+        });
 
-    // Set operation input from a source file.
-    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/createPDFInput.docx');
-    createPdfOperation.setInput(input);
+        // Creates an asset(s) from source file(s) and upload
+        readStream = fs.createReadStream("./createPDFInput.docx");
+        const inputAsset = await pdfServices.upload({
+            readStream,
+            mimeType: MimeType.DOCX
+        });
 
-    // Execute the operation and Save the result to the specified location.
-    createPdfOperation.execute(executionContext)
-        .then(result => result.saveAsFile('output/createPDFFromDOCX.pdf'))
-        .catch(err => {
-            if(err instanceof PDFServicesSdk.Error.ServiceApiError
-                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-                console.log('Exception encountered while executing operation', err);
-            } else {
-                console.log('Exception encountered while executing operation', err);
-            }
-    });
-} catch (err) {
-   console.log('Exception encountered while executing operation', err);
-}
+        // Creates a new job instance
+        const job = new CreatePDFJob({
+            inputAsset
+        });
+
+        // Submit the job and get the job result
+        const pollingURL = await pdfServices.submit({
+            job
+        });
+        const pdfServicesResponse = await pdfServices.getJobResult({
+            pollingURL,
+            resultType: CreatePDFResult
+        });
+
+        // Get content from the resulting asset(s)
+        const resultAsset = pdfServicesResponse.result.asset;
+        const streamAsset = await pdfServices.getContent({
+            asset: resultAsset
+        });
+
+        // Creates an output stream and copy result asset's content to it
+        const outputFilePath = "./createPDFFromDOCX.pdf";
+        console.log(`Saving asset at ${outputFilePath}`);
+
+        const outputStream = fs.createWriteStream(outputFilePath);
+        streamAsset.readStream.pipe(outputStream);
+    } catch (err) {
+        if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
+            console.log("Exception encountered while executing operation", err);
+        } else {
+            console.log("Exception encountered while executing operation", err);
+        }
+    } finally {
+        readStream?.destroy();
+    }
+})();
 ```
 
 #### .Net
