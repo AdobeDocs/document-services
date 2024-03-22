@@ -57,51 +57,93 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/combinep
 // Run the sample:
 // node src/reorderpages/reorder-pdf-pages.js
 
-const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
+const {
+    ServicePrincipalCredentials,
+    PDFServices,
+    MimeType,
+    PageRanges,
+    ReorderPagesParams,
+    ReorderPagesJob,
+    ReorderPagesResult,
+    SDKError,
+    ServiceUsageError,
+    ServiceApiError
+} = require("@adobe/pdfservices-node-sdk");
+const fs = require("fs");
 
-const getPageRangeForReorder = () => {
-    // Specify order of the pages for an output document.
-    const pageRanges = new PDFServicesSdk.PageRanges();
-
-    // Add pages 3 to 4.
-    pageRanges.addPageRange(3, 4);
-
-   // Add page 1.
-   pageRanges.addSinglePage(1);
-
-    return pageRanges;
-};
-try {
-    // Initial setup, create credentials instance.
-    const credentials =  PDFServicesSdk.Credentials
-        .servicePrincipalCredentialsBuilder()
-        .withClientId("PDF_SERVICES_CLIENT_ID")
-        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-        .build();
-
-    // Create an ExecutionContext using credentials and create a new operation instance.
-    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials),
-        reorderPagesOperation = PDFServicesSdk.ReorderPages.Operation.createNew();
-
-    // Set operation input from a source file, along with specifying the order of the pages for rearranging the pages in a PDF file.
-    const input = PDFServicesSdk.FileRef.createFromLocalFile('resources/reorderPagesInput.pdf');
-    const pageRanges = getPageRangeForReorder();
-    reorderPagesOperation.setInput(input);
-    reorderPagesOperation.setPagesOrder(pageRanges);
-
-    // Execute the operation and Save the result to the specified location.
-    reorderPagesOperation.execute(executionContext)
-        .then(result => result.saveAsFile('output/reorderPagesOutput.pdf'))
-        .catch(err => {
-            if(err instanceof PDFServicesSdk.Error.ServiceApiError
-                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-                console.log('Exception encountered while executing operation', err);
-            } else {
-                console.log('Exception encountered while executing operation', err);
-            }
+(async () => {
+    let readStream;
+    try {
+        // Initial setup, create credentials instance
+        const credentials = new ServicePrincipalCredentials({
+            clientId: process.env.PDF_SERVICES_CLIENT_ID,
+            clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
         });
-} catch (err) {
-    console.log('Exception encountered while executing operation', err);
+
+        // Creates a PDF Services instance
+        const pdfServices = new PDFServices({
+            credentials
+        });
+
+        // Creates an asset(s) from source file(s) and upload
+        readStream = fs.createReadStream("./reorderPagesInput.pdf");
+        const inputAsset = await pdfServices.upload({
+            readStream,
+            mimeType: MimeType.PDF
+        });
+
+        // Create parameters for the job
+        // Add the asset as input to the params, along with its page order
+        const params = new ReorderPagesParams({
+            asset: inputAsset,
+            pageRanges: getPageRangeForReorder()
+        });
+
+        // Creates a new job instance
+        const job = new ReorderPagesJob({
+            params
+        });
+
+        // Submit the job and get the job result
+        const pollingURL = await pdfServices.submit({
+            job
+        });
+        const pdfServicesResponse = await pdfServices.getJobResult({
+            pollingURL,
+            resultType: ReorderPagesResult
+        });
+
+        // Get content from the resulting asset(s)
+        const resultAsset = pdfServicesResponse.result.asset;
+        const streamAsset = await pdfServices.getContent({
+            asset: resultAsset
+        });
+
+        // Creates an output stream and copy result asset's content to it
+        const outputFilePath = "./reorderPagesOutput.pdf";
+        console.log(`Saving asset at ${outputFilePath}`);
+
+        const outputStream = fs.createWriteStream(outputFilePath);
+        streamAsset.readStream.pipe(outputStream);
+    } catch (err) {
+        if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
+            console.log("Exception encountered while executing operation", err);
+        } else {
+            console.log("Exception encountered while executing operation", err);
+        }
+    } finally {
+        readStream?.destroy();
+    }
+})();
+
+function getPageRangeForReorder() {
+    // Specify order of the pages for an output document
+    const pageRanges = new PageRanges();
+    // Add pages 3 to 4
+    pageRanges.addRange(3, 4);
+    // Add page 1
+    pageRanges.addSinglePage(1);
+    return pageRanges;
 }
 ```
 
