@@ -2,7 +2,6 @@
 title: Acrobat Sign API | Easy and Secure eSignature API
 description: Secure, powerful, and easy to use APIs to integrate e-signatures into your platform, app, or workflow quickly.
 ---
-import PartnerWithUsBlade from './sign-api/partner-with-us.md'
 import TakeYourProject from './sign-api/take-your-project-nxt-lvl.md'
 import TakeYourProjectCont from './sign-api/take-your-project-content.md'
 import PartnershipType from './sign-api/partnership-type.md'
@@ -22,8 +21,6 @@ apiHeroAssetImg sign-api-hero
 
 - [Create account](https://www.adobe.com/sign/developer-form.html)
 - [View documentation](https://opensource.adobe.com/acrobat-sign/developer_guide/)
-
-<PartnerWithUsBlade/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
