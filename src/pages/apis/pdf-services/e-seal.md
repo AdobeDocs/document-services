@@ -70,93 +70,152 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/electron
 // Run the sample:
 // node src/electronicseal/electronic-seal.js
 
-const PDFServicesSdk = require('@adobe/pdfservices-node-sdk');
-try {
-    // Initial setup, create credentials instance.
-    const credentials =  PDFServicesSdk.Credentials
-        .servicePrincipalCredentialsBuilder()
-        .withClientId("PDF_SERVICES_CLIENT_ID")
-        .withClientSecret("PDF_SERVICES_CLIENT_SECRET")
-        .build();
+const {
+    ServicePrincipalCredentials,
+    PDFServices,
+    MimeType,
+    DocumentLevelPermission,
+    FieldLocation,
+    FieldOptions,
+    CSCAuthContext,
+    CSCCredential,
+    PDFElectronicSealParams,
+    PDFElectronicSealJob,
+    PDFElectronicSealResult,
+    SDKError,
+    ServiceUsageError,
+    ServiceApiError
+} = require("@adobe/pdfservices-node-sdk");
+const fs = require("fs");
 
-    // Create an ExecutionContext using credentials
-    const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
+(async () => {
+    let sourceFileReadStream;
+    let sealImageReadStream;
+    try {
+        // Initial setup, create credentials instance
+        const credentials = new ServicePrincipalCredentials({
+            clientId: process.env.PDF_SERVICES_CLIENT_ID,
+            clientSecret: process.env.PDF_SERVICES_CLIENT_SECRET
+        });
 
-    const pdfElectronicSeal = PDFServicesSdk.PDFElectronicSeal,
-        options = pdfElectronicSeal.options;
+        // Creates a PDF Services instance
+        const pdfServices = new PDFServices({
+            credentials
+        });
 
-    //Get the input document to perform the sealing operation
-    const sourceFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/sampleInvoice.pdf'),
+        // Creates an asset(s) from source file(s) and upload
+        sourceFileReadStream = fs.createReadStream("./sampleInvoice.pdf")
+        sealImageReadStream = fs.createReadStream("./sampleSealImage.png");
+        const [sourceFileAsset, sealImageAsset] = await pdfServices.uploadAssets({
+            streamAssets: [{
+                readStream: sourceFileReadStream,
+                mimeType: MimeType.PDF
+            }, {
+                readStream: sealImageReadStream,
+                mimeType: MimeType.PNG
+            }]
+        });
 
-    //Get the background seal image for signature , if required.
-    sealImageFile = PDFServicesSdk.FileRef.createFromLocalFile('resources/sampleSealImage.png');
+        // Set the document level permission to be applied for output document
+        const documentLevelPermission = DocumentLevelPermission.FORM_FILLING;
 
-    // Set the Seal Field Name to be created in input PDF document.
-    sealFieldName = "Signature1";
+        // Set the Seal Field Name to be created in input PDF document
+        const sealFieldName = "Signature1";
 
-    // Set the page number in input document for applying seal.
-    sealPageNumber = 1;
+        // Set the page number in input document for applying seal
+        const sealPageNumber = 1;
 
-    // Set if seal should be visible or invisible.
-    sealVisible = true;
+        // Set if seal should be visible or invisible
+        const sealVisible = true;
 
-    //Create FieldLocation instance and set the coordinates for applying signature
-    fieldLocation = new options.FieldLocation(150,250,350,200);
+        // Create FieldLocation instance and set the coordinates for applying signature
+        const fieldLocation = new FieldLocation({
+            left: 150,
+            top: 250,
+            right: 350,
+            bottom: 200
+        });
 
-    //Create FieldOptions instance with required details.
-    fieldOptions = new options.FieldOptions.Builder(sealFieldName)
-        .setFieldLocation(fieldLocation)
-        .setPageNumber(sealPageNumber)
-        .setVisible(sealVisible)
-        .build();
+        // Create FieldOptions instance with required details
+        const sealFieldOptions = new FieldOptions({
+            visible: sealVisible,
+            location: fieldLocation,
+            fieldName: sealFieldName,
+            pageNumber: sealPageNumber,
+        });
 
-    //Set the name of TSP Provider being used.
-    providerName = "<PROVIDER_NAME>";
+        // Set the name of TSP Provider being used
+        const providerName = "<PROVIDER_NAME>";
 
-    //Set the access token to be used to access TSP provider hosted APIs.
-    accessToken = "<ACCESS_TOKEN>";
+        // Set the access token to be used to access TSP provider hosted APIs
+        const accessToken = "<ACCESS_TOKEN>";
 
-    //Set the credential ID.
-    credentialID = "<CREDENTIAL_ID>";
+        // Set the credential ID
+        const credentialId = "<CREDENTIAL_ID>";
 
-    //Set the PIN generated while creating credentials.
-    pin = "<PIN>";
+        // Set the PIN generated while creating credentials
+        const pin = "<PIN>";
 
-    //Create CSCAuthContext instance using access token and token type.
-    cscAuthContext = new options.CSCAuthContext(accessToken, "Bearer");
+        // Create CSCAuthContext instance using access token and token type
+        const authorizationContext = new CSCAuthContext({
+            accessToken,
+            tokenType: "Bearer"
+        });
 
-    //Create CertificateCredentials instance with required certificate details.
-    certificateCredentials = options.CertificateCredentials.cscCredentialBuilder()
-        .withProviderName(providerName)
-        .withCredentialID(credentialID)
-        .withPin(pin)
-        .withCSCAuthContext(cscAuthContext)
-        .build();
+        // Create CertificateCredentials instance with required certificate details
+        const certificateCredentials = new CSCCredential({
+            providerName,
+            credentialId,
+            pin,
+            authorizationContext,
+        });
 
-    //Create SealOptions instance with sealing parameters.
-    sealOptions = new options.SealOptions.Builder(certificateCredentials, fieldOptions)
-        .build()
+        // Create parameters for the job
+        const params = new PDFElectronicSealParams({
+            certificateCredentials,
+            sealFieldOptions,
+            documentLevelPermission,
+        });
 
-    //Create the PDFElectronicSealOperation instance using the SealOptions instance
-    const pdfElectronicSealOperation = pdfElectronicSeal.Operation.createNew(sealOptions);
+        // Creates a new job instance
+        const job = new PDFElectronicSealJob({
+            inputAsset: sourceFileAsset,
+            sealImageAsset,
+            params,
+        });
 
-    //Set the input source file for PDFElectronicSealOperation instance
-    pdfElectronicSealOperation.setInput(sourceFile);
+        // Submit the job and get the job result
+        const pollingURL = await pdfServices.submit({
+            job
+        });
+        const pdfServicesResponse = await pdfServices.getJobResult({
+            pollingURL,
+            resultType: PDFElectronicSealResult
+        });
 
-    //Set the optional input seal image for PDFElectronicSealOperation instance
-    pdfElectronicSealOperation.setSealImage(sealImageFile);
+        // Get content from the resulting asset(s)
+        const resultAsset = pdfServicesResponse.result.asset;
+        const streamAsset = await pdfServices.getContent({
+            asset: resultAsset
+        });
 
-    // Execute the operation and Save the result to the specified location.
-    pdfElectronicSealOperation.execute(executionContext)
-        .then(result => result.saveAsFile("output/ElectronicSeal/sealedOutput.pdf"))
-        .catch(err => {
-            if(err instanceof PDFServicesSdk.Error.ServiceApiError
-                || err instanceof PDFServicesSdk.Error.ServiceUsageError) {
-                console.log('Exception encountered while executing operation', err);
-            } else {
-                console.log('Exception encountered while executing operation', err);
-            }
-    });
+        // Creates a write stream and copy stream asset's content to it
+        const outputFilePath = "./sealedOutput.pdf";
+        console.log(`Saving asset at ${outputFilePath}`);
+
+        const writeStream = fs.createWriteStream(outputFilePath);
+        streamAsset.readStream.pipe(writeStream);
+    } catch (err) {
+        if (err instanceof SDKError || err instanceof ServiceUsageError || err instanceof ServiceApiError) {
+            console.log("Exception encountered while executing operation", err);
+        } else {
+            console.log("Exception encountered while executing operation", err);
+        }
+    } finally {
+        sourceFileReadStream?.destroy();
+        sealImageReadStream?.destroy();
+    }
+})();
 ```
 
 #### .Net
