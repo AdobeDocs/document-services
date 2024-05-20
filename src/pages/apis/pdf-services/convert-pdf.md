@@ -244,8 +244,7 @@ public class ExportPDFToDOCX {
 # Initialize the logger
 logging.basicConfig(level=logging.INFO)
 
-
-class ExportPDFtoJPEG:
+class ExportPDFToDOCX:
     def __init__(self):
         try:
             file = open("./exportPDFToImageInput.pdf", "rb")
