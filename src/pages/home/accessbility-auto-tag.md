@@ -228,39 +228,55 @@ public class AutotagPDF {
 # Run the sample:
 # python src/autotagpdf/autotag_pdf.py
 
-logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO'))
+# Initialize the logger
+logging.basicConfig(level=logging.INFO)
 
-try:
-    # get base path.
-    base_path = str(Path(__file__).parents[2])
 
-    # Initial setup, create credentials instance.
-    credentials = Credentials.service_principal_credentials_builder()
-        .with_client_id('PDF_SERVICES_CLIENT_ID')
-        .with_client_secret('PDF_SERVICES_CLIENT_SECRET')
-        .build()
+class AutoTagPDF:
+    def __init__(self):
+        try:
+            file = open("autotagPDFInput.pdf", "rb")
+            input_stream = file.read()
+            file.close()
 
-    # Create an ExecutionContext using credentials and create a new operation instance.
-    execution_context = ExecutionContext.create(credentials)
-    autotag_pdf_operation = AutotagPDFOperation.create_new()
+            # Initial setup, create credentials instance
+            credentials = ServicePrincipalCredentials(
+                client_id=os.getenv("PDF_SERVICES_CLIENT_ID"),
+                client_secret=os.getenv("PDF_SERVICES_CLIENT_SECRET"),
+            )
 
-    # Set operation input from a source file.
-    input_file_path = 'autotagPdfInput.pdf'
-    source = FileRef.create_from_local_file(base_path + '/resources/' + input_file_path)
-    autotag_pdf_operation.set_input(source)
+            # Creates a PDF Services instance
+            pdf_services = PDFServices(credentials=credentials)
 
-    # Execute the operation.
-    autotag_pdf_output: AutotagPDFOutput = autotag_pdf_operation.execute(execution_context)
+            # Creates an asset(s) from source file(s) and upload
+            input_asset = pdf_services.upload(
+                input_stream=input_stream, mime_type=PDFServicesMediaType.PDF
+            )
 
-    input_file_name = Path(input_file_path).stem
-    base_output_path = base_path + '/output/AutotagPDF/'
+            # Creates a new job instance
+            autotag_pdf_job = AutotagPDFJob(input_asset)
 
-    Path(base_output_path).mkdir(parents=True, exist_ok=True)
-    tagged_pdf_path = f'{base_output_path}{input_file_name}-tagged.pdf'
+            # Submit the job and gets the job result
+            location = pdf_services.submit(autotag_pdf_job)
+            pdf_services_response = pdf_services.get_job_result(
+                location, AutotagPDFResult
+            )
 
-    # Save the result to the specified location.
-    autotag_pdf_output.get_tagged_pdf().save_as(tagged_pdf_path)
+            # Get content from the resulting asset(s)
+            result_asset: CloudAsset = (
+                pdf_services_response.get_result().get_tagged_pdf()
+            )
+            stream_asset: StreamAsset = pdf_services.get_content(result_asset)
 
-except (ServiceApiException, ServiceUsageException, SdkException) as e:
-    logging.exception(f'Exception encountered while executing operation: {e}')
+            # Creates an output stream and copy stream asset's content to it
+            output_file_path = "autoTagPDFOutput.pdf"
+            with open(output_file_path, "wb") as file:
+                file.write(stream_asset.get_input_stream())
+
+        except (ServiceApiException, ServiceUsageException, SdkException) as e:
+            logging.exception(f"Exception encountered while executing operation: {e}")
+
+
+if __name__ == "__main__":
+    AutoTagPDF()
 ```
