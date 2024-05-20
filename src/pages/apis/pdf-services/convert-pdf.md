@@ -14,7 +14,7 @@ Support for PDF to DOC, PDF to DOCX, PDF to JPEG, PDF to PNG, PDF to PPTX, PDF t
 
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Export-PDF) and quickly try our APIs using the Postman collections
 
-<CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET, Java" />
+<CodeBlock slots="heading, code" repeat="5" languages="curl,JS,.NET, Java,python" />
 
 #### REST API
 
@@ -232,4 +232,74 @@ public class ExportPDFToDOCX {
         }
     }
 }
+```
+
+#### Python
+
+```python
+# Get the samples https://github.com/adobe/pdfservices-python-sdk-samples
+# Run the sample:
+# python python src/exportpdftoimages/export_pdf_to_jpeg.py
+
+# Initialize the logger
+logging.basicConfig(level=logging.INFO)
+
+
+class ExportPDFtoJPEG:
+    def __init__(self):
+        try:
+            file = open("./exportPDFToImageInput.pdf", "rb")
+            input_stream = file.read()
+            file.close()
+
+            # Initial setup, create credentials instance
+            credentials = ServicePrincipalCredentials(
+                client_id=os.getenv("PDF_SERVICES_CLIENT_ID"),
+                client_secret=os.getenv("PDF_SERVICES_CLIENT_SECRET"),
+            )
+
+            # Creates a PDF Services instance
+            pdf_services = PDFServices(credentials=credentials)
+
+            # Creates an asset(s) from source file(s) and upload
+            input_asset = pdf_services.upload(
+                input_stream=input_stream, mime_type=PDFServicesMediaType.PDF
+            )
+
+            # Create parameters for the job
+            export_pdf_to_images_params = ExportPDFtoImagesParams(
+                export_pdf_to_images_target_format=ExportPDFToImagesTargetFormat.JPEG,
+                export_pdf_to_images_output_type=ExportPDFToImagesOutputType.LIST_OF_PAGE_IMAGES,
+            )
+
+            # Creates a new job instance
+            export_pdf_to_images_job = ExportPDFtoImagesJob(
+                input_asset=input_asset,
+                export_pdf_to_images_params=export_pdf_to_images_params,
+            )
+
+            # Submit the job and gets the job result
+            location = pdf_services.submit(export_pdf_to_images_job)
+            pdf_services_response = pdf_services.get_job_result(
+                location, ExportPDFtoImagesResult
+            )
+
+            # Get content from the resulting asset(s)
+            result_assets = pdf_services_response.get_result().get_assets()
+
+            output_file_path = "output/ExportPDFToImages"
+
+            for (asset_index, asset) in enumerate(result_assets):
+                save_output_file_path = f"{output_file_path}_{asset_index}.jpeg"
+                stream_asset: StreamAsset = pdf_services.get_content(asset)
+                # Creates an output stream and copy stream asset's content to it
+                with open(save_output_file_path, "wb") as file:
+                    file.write(stream_asset.get_input_stream())
+
+        except (ServiceApiException, ServiceUsageException, SdkException) as e:
+            logging.exception(f"Exception encountered while executing operation: {e}")
+
+
+if __name__ == "__main__":
+    ExportPDFtoJPEG()
 ```

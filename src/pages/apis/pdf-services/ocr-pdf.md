@@ -12,7 +12,7 @@ Use built-in optical character recognition (OCR) to convert images to text and e
 
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/OCR) and quickly try our APIs using the Postman collections
 
-<CodeBlock slots="heading, code" repeat="4" languages="curl,JS,.NET, Java" />
+<CodeBlock slots="heading, code" repeat="5" languages="curl,JS,.NET, Java,python" />
 
 #### REST API
 
@@ -204,4 +204,59 @@ public class OcrPDF {
        }
   }
 }
+```
+#### Python
+
+```python
+# Get the samples https://github.com/adobe/pdfservices-python-sdk-samples
+# Run the sample:
+# python src/ocrpdf/ocr_pdf.py
+
+# Initialize the logger
+logging.basicConfig(level=logging.INFO)
+
+
+class OcrPDF(object):
+    def __init__(self):
+        try:
+            file = open("./ocrInput.pdf", "rb")
+            input_stream = file.read()
+            file.close()
+
+            # Initial setup, create credentials instance
+            credentials = ServicePrincipalCredentials(
+                client_id=os.getenv("PDF_SERVICES_CLIENT_ID"),
+                client_secret=os.getenv("PDF_SERVICES_CLIENT_SECRET"),
+            )
+
+            # Creates a PDF Services instance
+            pdf_services = PDFServices(credentials=credentials)
+
+            # Creates an asset(s) from source file(s) and upload
+            input_asset = pdf_services.upload(
+                input_stream=input_stream, mime_type=PDFServicesMediaType.PDF
+            )
+
+            # Creates a new job instance
+            ocr_pdf_job = OCRPDFJob(input_asset=input_asset)
+
+            # Submit the job and gets the job result
+            location = pdf_services.submit(ocr_pdf_job)
+            pdf_services_response = pdf_services.get_job_result(location, OCRPDFResult)
+
+            # Get content from the resulting asset(s)
+            result_asset: CloudAsset = pdf_services_response.get_result().get_asset()
+            stream_asset: StreamAsset = pdf_services.get_content(result_asset)
+
+            # Creates an output stream and copy stream asset's content to it
+            output_file_path = "output/OcrPDF.pdf"
+            with open(output_file_path, "wb") as file:
+                file.write(stream_asset.get_input_stream())
+
+        except (ServiceApiException, ServiceUsageException, SdkException) as e:
+            logging.exception(f"Exception encountered while executing operation: {e}")
+
+
+if __name__ == "__main__":
+    OcrPDF()
 ```
