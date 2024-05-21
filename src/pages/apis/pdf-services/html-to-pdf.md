@@ -274,7 +274,7 @@ public class StaticHTMLToPDF {
 }
 ```
 
-#### Python 
+#### Python
 
 ```python
 # Get the samples https://github.com/adobe/pdfservices-python-sdk-samples

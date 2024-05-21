@@ -290,7 +290,8 @@ public class ReorderPDFPages {
 }
 ```
 
-#### Python 
+#### Python
+
 ```python
 # Get the samples from https://github.com/adobe/pdfservices-python-sdk-samples
 # Run the sample:
