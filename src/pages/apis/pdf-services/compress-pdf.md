@@ -216,7 +216,8 @@ public class CompressPDF {
 }
 ```
 
-#### Python 
+#### Python
+
 ```python
 # Get the samples https://github.com/adobe/pdfservices-python-sdk-samples
 # Run the sample:

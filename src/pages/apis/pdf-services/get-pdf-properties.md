@@ -223,7 +223,9 @@ public class GetPDFProperties {
     }
 }
 ```
-#### Python 
+
+#### Python
+
 ```python
 # Get the samples from https://www.github.com/adobe/pdfservices-sdk-python-samples
 # Run the sample:
