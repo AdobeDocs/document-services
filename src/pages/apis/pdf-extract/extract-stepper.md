@@ -22,7 +22,7 @@ Obtain free credentials
 
 ## Step 2
 
-Download ready to run samples for Node.js, .Net, Java and Python
+Download ready to run samples for Node.js, Java, .Net, and Python
 
 - [Node.js](https://adobe.com/go/dcExtract_node_sdk)
 - [Java](https://adobe.com/go/dcExtract_java_sdk)
