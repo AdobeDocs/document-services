@@ -21,11 +21,12 @@ variantStyleOutline= "outline" className="align-left horizontal-align link" head
 
 ## Step 2
 
-Download ready to run samples for Node.js, Java, and .NET
+Download ready to run samples for Node.js, Java, .NET, and Python
 
 - [Node js](https://github.com/adobe/pdfservices-node-sdk-samples)
 - [Java](https://github.com/adobe/pdfservices-java-sdk-samples)
 - [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples)
+- [Python](https://github.com/adobe/pdfservices-python-sdk-samples)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light"  className="align-left horizontal-align link services-step-three" headerElementType="h2"/>
 

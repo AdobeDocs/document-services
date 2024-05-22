@@ -16,11 +16,12 @@ Obtain free credentials
 
 ## Step 2
 
-Download ready to run samples for Node.js, .Net, Java
+Download ready to run samples for Node.js, .Net, Java, and Python
 
 - [Node.js](https://github.com/adobe/pdfservices-node-sdk-samples)
 - [Java](https://github.com/adobe/pdfservices-java-sdk-samples)
 - [.Net](https://github.com/adobe/PDFServices.NET.SDK.Samples)
+- [Python](https://github.com/adobe/pdfservices-python-sdk-samples)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="lightest"  className='align-left horizontal-align link extract-stepper-api-reference Explore-other-Adobe-Document-Services-APIs' headerElementType="h2" />
 
