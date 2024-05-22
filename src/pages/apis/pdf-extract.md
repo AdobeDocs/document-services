@@ -28,6 +28,14 @@ apiHeroAssetImg doc-ext-invoice
 
 <WhyExtractAPI/>
 
+<AnnouncementBlock slots="heading, text, button" theme="dark" />
+
+### Join our Beta program for the Import/Export PDF Form Data APIs
+
+Sign up for access to try our latest set of APIs that import and export data from form fields at scale.
+
+[Sign Up](../pricing/contact/support-beta.md)
+
 <WrapperComponent slots="content" repeat="1" theme="light" className="How-it-works"/>
 
 <VisualizerHowItWorks/>
