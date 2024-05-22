@@ -12,7 +12,7 @@ Start with the Free Tier and get 500 free Document Transactions per month.
 
 ## Step 1
 
-Start a free tier and download code samples for Node.js, Java, and .Net
+Start a free tier and download code samples for Node.js, Java, .Net, and Python
 
 - [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
 

@@ -22,7 +22,7 @@ Obtain free credentials
 
 ## Step 2
 
-Download ready to run samples for Node.js, .Net, Java and Python
+Download ready to run samples for Node.js, Java, .Net, and Python
 
 - [Node.js](https://github.com/adobe/pdfservices-node-sdk-samples)
 - [Java](https://github.com/adobe/pdfservices-java-sdk-samples)

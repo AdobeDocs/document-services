@@ -255,41 +255,64 @@ public class ExtractTextInfoFromPDF {
 #### Python
 
 ```py
-# Get the samples from http://www.adobe.com/go/pdftoolsapi_python_sample
+# Get the samples from https://github.com/adobe/pdfservices-python-sdk-samples
 # Run the sample:
-# python src/extractpdf/extract_txt_from_pdf.py
+# python src/extractpdf/extract_text_info_from_pdf.py
 
-logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
+# Initialize the logger
+logging.basicConfig(level=logging.INFO)
 
-try:
-    #get base path.
-    base_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-    #Initial setup, create credentials instance.
-    credentials = Credentials.service_principal_credentials_builder()
-        .with_client_id('PDF_SERVICES_CLIENT_ID')
-        .with_client_secret('PDF_SERVICES_CLIENT_SECRET')
-        .build()
+class ExtractTextInfoFromPDF:
+    def __init__(self):
+        try:
+            file = open("extractPdfInput.pdf", "rb")
+            input_stream = file.read()
+            file.close()
 
-    #Create an ExecutionContext using credentials and create a new operation instance.
-    execution_context = ExecutionContext.create(credentials)
-    extract_pdf_operation = ExtractPDFOperation.create_new()
+            # Initial setup, create credentials instance
+            credentials = ServicePrincipalCredentials(
+                client_id=os.getenv("PDF_SERVICES_CLIENT_ID"),
+                client_secret=os.getenv("PDF_SERVICES_CLIENT_SECRET"),
+            )
 
-    #Set operation input from a source file.
-    source = FileRef.create_from_local_file(base_path + "/resources/extractPdfInput.pdf")
-    extract_pdf_operation.set_input(source)
+            # Creates a PDF Services instance
+            pdf_services = PDFServices(credentials=credentials)
 
-    #Build ExtractPDF options and set them into the operation
-    extract_pdf_options: ExtractPDFOptions = ExtractPDFOptions.builder() \
-        .with_element_to_extract(ExtractElementType.TEXT) \
-        .build()
-    extract_pdf_operation.set_options(extract_pdf_options)
+            # Creates an asset(s) from source file(s) and upload
+            input_asset = pdf_services.upload(
+                input_stream=input_stream, mime_type=PDFServicesMediaType.PDF
+            )
 
-    #Execute the operation.
-    result: FileRef = extract_pdf_operation.execute(execution_context)
+            # Create parameters for the job
+            extract_pdf_params = ExtractPDFParams(
+                elements_to_extract=[ExtractElementType.TEXT],
+            )
 
-    #Save the result to the specified location.
-    result.save_as(base_path + "/output/ExtractTextInfoFromPDF.zip")
-except (ServiceApiException, ServiceUsageException, SdkException):
-    logging.exception("Exception encountered while executing operation")
+            # Creates a new job instance
+            extract_pdf_job = ExtractPDFJob(
+                input_asset=input_asset, extract_pdf_params=extract_pdf_params
+            )
+
+            # Submit the job and gets the job result
+            location = pdf_services.submit(extract_pdf_job)
+            pdf_services_response = pdf_services.get_job_result(
+                location, ExtractPDFResult
+            )
+
+            # Get content from the resulting asset(s)
+            result_asset: CloudAsset = pdf_services_response.get_result().get_resource()
+            stream_asset: StreamAsset = pdf_services.get_content(result_asset)
+
+            # Creates an output stream and copy stream asset's content to it
+            output_file_path = "extractTextInfoFromPDF.zip"
+            with open(output_file_path, "wb") as file:
+                file.write(stream_asset.get_input_stream())
+
+        except (ServiceApiException, ServiceUsageException, SdkException) as e:
+            logging.exception(f"Exception encountered while executing operation: {e}")
+
+
+if __name__ == "__main__":
+    ExtractTextInfoFromPDF()
 ```
