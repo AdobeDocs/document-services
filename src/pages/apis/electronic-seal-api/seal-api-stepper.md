@@ -10,7 +10,7 @@ Start with the Free Tier and get 500 free Document Transactions per month.
 
 Obtain free credentials
 
-- [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-electronic-seal-api)
+- [Get started](/interstitial/?api=pdf-electronic-seal-api)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="lightest" variantsTypePrimary='secondary' variantsTypeSecondary='secondary' variantStyleFill="outline" variantStyleOutline="outline"  className='align-left link Explore-other-Adobe-Document-Services-APIs'/>
 

@@ -22,7 +22,7 @@ Create, convert, transform, OCR PDFs and more.
 
 apiHeroAssetImg doc-service-hero
 
-- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Start for free](/interstitial/?api=pdf-services-api)
 
 <!-- Why PDF Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>

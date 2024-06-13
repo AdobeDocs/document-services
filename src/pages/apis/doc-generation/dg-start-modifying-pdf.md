@@ -14,7 +14,7 @@ Start with the Free Tier and get 500 free Document Transactions per month.
 
 Start a free tier and download code samples for Node.js, Java, .Net, and Python
 
-- [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=document-generation-api)
+- [Get started](/interstitial/?api=document-generation-api)
 
 <TextBlock slots="heading, text, buttons" theme="light"  width="33%" variantsTypePrimary="secondary" variantStyleFill="outline" isPrimaryBtn className="align-left link  stepper-horizontal-align linking"/>
 

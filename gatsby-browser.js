@@ -98,14 +98,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let isLocal = true;
     let navLinksBaseUrl = "";
     // let baseurl = "/apis/interstitial/";
-    let baseurl = "https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html"
+    let baseurl = "/faas-form"
 
     let referenceBaseUrl = "https://developer-stage.adobe.com/document-services/docs/apis/"
     // stage/deploy
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0) {
       isLocal = false;
       navLinksBaseUrl = "/document-services";
-      baseurl = "https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html"
+      baseurl = navLinksBaseUrl + "/faas-form"
     }
     // production
     if (
@@ -117,10 +117,14 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
     // set sales form iframe src to point to correct location
     let salesForm = document.querySelector('#salesForm')
-    if (salesForm) {
-      if (!isLocal) {
-        salesForm.src = navLinksBaseUrl + '/' + salesForm.src.split("/").pop();
-      }
+    if (salesForm && !isLocal) {
+      salesForm.src = navLinksBaseUrl + '/' + salesForm.src.split("/").pop();
+    }
+
+    // set faas-form page iframe src to point to correct location
+    let fassForm = document.querySelector('#faasForm');
+    if (fassForm && !isLocal) {
+      fassForm.src = navLinksBaseUrl + '/' + fassForm.src.split("/").pop();
     }
 
     let header = document.querySelector("header");

@@ -14,7 +14,7 @@ Start with the Free Tier and get 500 free Document Transactions per month.
 
 Obtain free credentials
 
-- [Get started](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
+- [Get started](/interstitial/?api=pdf-services-api)
 
 <TextBlock slots="heading, text, buttons" width="33%" theme="light" variantsTypePrimary='secondary' variantsTypeSecondary='secondary' variantStyleFill="outline"
 variantStyleOutline= "outline" className="align-left horizontal-align link" headerElementType="h2"/>
