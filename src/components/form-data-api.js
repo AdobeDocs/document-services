@@ -40,7 +40,7 @@ const volumeOPtions = [
   }
 ];
 
-const ExtractCheckerForm = ({ }) => {
+const FormDataAPI = ({ }) => {
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({});
   const [btnDisable, setBtnDisable] = useState(false)
@@ -211,10 +211,10 @@ const ExtractCheckerForm = ({ }) => {
     }
   };
   return (
-    <form className="form-container Sales-Form" id="my_form">
+    <form className="form-container Form-Data-API" id="my_form">
       <div className="head-container-accessibility">
         <div className="caption">
-          Request access to PDF Accessibility Checker API Beta Program
+          Request access to the Beta Program
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}
@@ -340,9 +340,7 @@ const ExtractCheckerForm = ({ }) => {
           <a href="https://www.adobe.com/privacy.html" className="link-content">
             Adobe family of companies
           </a>{" "}
-          would like to keep you informed about Acrobat Services APIs, which
-          may include contacting you via email. By checking this box, you agree
-          to being contacted via email. Please see our{" "}
+          would like to keep you informed about Acrobat Services APIs, which may include contacting you via email. By checking this box, you agree to being contacted via email. Please see our{" "}
           <a
             target="_blank"
             href="https://www.adobe.com/privacy.html"
@@ -358,10 +356,10 @@ const ExtractCheckerForm = ({ }) => {
           By clicking Submit, I agree that I have read and accepted the{" "}
           <a
             target="_blank"
-            href="https://www.adobe.com/content/dam/cc/en/legal/documents/Accessibility_Checker_API_Pre-Release_Agreement.pdf"
+            href="https://www.adobe.com/content/dam/cc/en/legal/documents/Prerelease-Software-License-Agreement_20240619-ImportExport-APIs.pdf"
             className="link-content"
           >
-            License Agreement for Prerelease Software, PDF Accessibility Checker API Beta
+            License Agreement for Prerelease Software, Import/Export PDF Form Data API Beta
           </a>
           .
         </div>
@@ -375,9 +373,9 @@ const ExtractCheckerForm = ({ }) => {
   );
 };
 
-ExtractCheckerForm.propTypes = {
+FormDataAPI.propTypes = {
   theme: PropTypes.string,
   content: PropTypes.string
 };
 
-export { ExtractCheckerForm };
+export { FormDataAPI };

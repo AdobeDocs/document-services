@@ -28,4 +28,4 @@ Primary capabilities of the Import PDF Form Data API include:
 
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content accessibility-text-blade"/>
 
-Use this form to have an Adobe representative contact you with more information about the Beta program or to answer other questions you have about the APIs. For additional information, please refer to the [documentation](https://developer.adobe.com/document-services/docs/apis/#tag/Extract-PDF).
+Use this form to have an Adobe representative contact you with more information about the Beta program or to answer other questions you have about the APIs. For additional information, please refer to the [documentation](https://developer.adobe.com/document-services/docs/apis/#tag/Export-PDF-Form-Data/operation/pdfoperations.getformdata.jobstatus).

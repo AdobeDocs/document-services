@@ -1707,7 +1707,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       } else if (window.location.pathname.indexOf("contact/sales/seal") >= 0) {
 
-      } else if (window.location.pathname.indexOf("contact/form-data-api") >= 0) {
+      } else if (window.location.pathname.indexOf("contact/sales/form-data-api") >= 0) {
 
         document
           .querySelector(".Form-Data-API-ContactUs")
