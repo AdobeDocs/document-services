@@ -218,7 +218,7 @@ const FormDataAPI = ({ }) => {
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}
-          <a className="link-content" href="/document-services/pricing/contact/support/">
+          <a className="link-content" href="https://developer.adobe.com/document-services/pricing/contact/support/">
             here.
           </a>
         </div>
