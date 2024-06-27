@@ -1,6 +1,3 @@
-// import classNames from "classnames";
-// import { css } from "@emotion/react";
-// import "@spectrum-css/typography";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import InputField from "./formComponent/InputField";
@@ -31,11 +28,11 @@ const regionOptions = [
 const volumeOPtions = [
   {
     key: 1,
-    label: "less than 15k transactions/mo"
+    label: "less than 10K transactions/mo"
   },
   {
     key: 2,
-    label: "15k-50k transactions/mo"
+    label: "10-50k transactions/mo"
   },
   {
     key: 3,
@@ -43,7 +40,7 @@ const volumeOPtions = [
   }
 ];
 
-const FormDataAPI = ({ }) => {
+const ExtractCheckerForm = ({ }) => {
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({});
   const [btnDisable, setBtnDisable] = useState(false)
@@ -78,30 +75,27 @@ const FormDataAPI = ({ }) => {
     }
   };
 
-  const onSubmit = async (e) => {
-
+  const onSubmit = async e => {
     e.preventDefault();
     setBtnDisable(true)
 
-    let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var blacklist = /\b(death|kill|murder)\b/;
-    var checkBadWords;
-    let error = {};
     let randomString = _times(16, () =>
       ((Math.random() * 0xf) << 0).toString(16)
     ).join("");
-    // setLoading(true)
+    let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var blacklist = /\b(death|kill|murder)\b/;
+    var checkBlackWords;
+    let error = {};
 
     if (_isEmpty(formValue?.firstName)) {
       error.firstName = "Required *";
       setBtnDisable(false)
-    } else if (blacklist.test(formValue?.firstName)) {
+    } else if (blacklist.test(formValue.firstName)) {
       error.firstName = "Please avoid inappropriate words";
       setBtnDisable(false)
     } else {
       error.firstName = "";
     }
-
     if (_isEmpty(formValue?.lastName)) {
       error.lastName = "Required *";
       setBtnDisable(false)
@@ -124,7 +118,6 @@ const FormDataAPI = ({ }) => {
     } else {
       error.business_email = "";
     }
-
     if (_isEmpty(formValue?.company_website)) {
       error.company_website = "Required *";
       setBtnDisable(false)
@@ -134,14 +127,6 @@ const FormDataAPI = ({ }) => {
     } else {
       error.company_website = "";
     }
-
-    if (_isEmpty(formValue?.phone)) {
-      error.phone = "Required *";
-      setBtnDisable(false)
-    } else {
-      error.phone = "";
-    }
-
     if (_isEmpty(formValue?.job_title)) {
       error.job_title = "Required *";
       setBtnDisable(false)
@@ -151,7 +136,6 @@ const FormDataAPI = ({ }) => {
     } else {
       error.job_title = "";
     }
-
     if (_isEmpty(formValue?.region)) {
       error.region = "Required *";
       setBtnDisable(false)
@@ -171,6 +155,7 @@ const FormDataAPI = ({ }) => {
       error.checkbox = "";
     }
     seterrorMsg({ ...error });
+
     if (
       !_isEmpty(formValue?.firstName) &&
       !blacklist.test(formValue?.firstName) &&
@@ -181,17 +166,16 @@ const FormDataAPI = ({ }) => {
       !blacklist.test(formValue?.business_email) &&
       !_isEmpty(formValue?.company_website) &&
       !blacklist.test(formValue?.company_website) &&
-      !_isEmpty(formValue?.phone) &&
       !_isEmpty(formValue?.job_title) &&
       !blacklist.test(formValue?.job_title) &&
       !_isEmpty(formValue?.region) &&
       !_isEmpty(formValue?.expected_monthly_volume) &&
-      !checkBadWords &&
+      !checkBlackWords &&
       formValue?.checkbox == true
     ) {
-      let betaFormData = {
+      let pdfElectronicSealAPIData = {
         ...formValue,
-        formType: "sales",
+        formType: "pdfAccessibility",
         formId: randomString
       };
       try {
@@ -201,58 +185,45 @@ const FormDataAPI = ({ }) => {
             Accept: "application/json",
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(betaFormData)
+          body: JSON.stringify(pdfElectronicSealAPIData)
         };
-        const response = await fetch(
+        const resp = await fetch(
           `https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit`,
           config
         );
-        if (response.status === 200) {
-          window.location.href = `/document-services/pricing/contact/sales/confirmation/`;
+        const response = await resp.json();
+        if (resp.status === 200) {
+          setFormValue({
+            firstName: "",
+            lastName: "",
+            where_did_you_hear_about_us: false,
+            need_test_certificate: false,
+            checkbox: false
+          });
+          alert(
+            "Thank you! Your information has been successfully submitted."
+          );
+          setBtnDisable(false)
         }
       } catch (err) {
         console.log("err", err);
       }
     }
   };
-
   return (
-    <form className="form-container Form-Data-API">
-      <div className="head-container">
+    <form className="form-container Sales-Form" id="my_form">
+      <div className="head-container-accessibility">
         <div className="caption">
-          Interested in joining the Beta Program for the Adobe Import/Export Form Data APIs?
+          Request access to PDF Accessibility Checker API Beta Program
         </div>
         <div className="faq-text">
-          The Import/Export PDF Form Data APIs programmatically import and export data from form fields at scale.
-        </div>
-        <div className="faq-text">
-          Primary capabilities of the Export PDF Form Data API include:
-        </div>
-        <div>
-          <ul>
-            <li className="faq-text">Export the form data as key/value pairs from a filled interactive PDF form (AcroForm/Static XFA). </li>
-            <li className="faq-text">Export the JSON structure from an empty interactive PDF form (AcroForm/Static XFA), to populate with values for use in the Import Form Data service. </li>
-          </ul>
-        </div>
-        <div className="faq-text">
-          Primary capabilities of the Import PDF Form Data API include:
-        </div>
-        <div className="faq-text">
-          <ul>
-            <li className="faq-text">
-              Import the form data from key/value pair into an empty interactive PDF form (AcroForm/Static XFA).
-            </li>
-          </ul>
-        </div>
-        <div className="faq-text">
-          Use this form to have an Adobe representative contact you with more information about the Beta program or to answer other questions you have about the APIs. For additional information, please refer to the documentation [insert link].
-        </div>
-        <div className="request-access-beta">
-          <div className="caption">Request access to the Beta Program </div>
-          <div className="faq-text">For technical inquiries, submit a tech support request <a href="https://developer.adobe.com/document-services/pricing/contact/support/">here.</a></div>
+          For technical inquiries, submit a tech support request{" "}
+          <a className="link-content" href="/document-services/pricing/contact/support/">
+            here.
+          </a>
         </div>
       </div>
-      <div className="field-container">
+      <div className="field-container-accessibility">
         <InputField
           id="firstName"
           label="First Name"
@@ -276,11 +247,11 @@ const FormDataAPI = ({ }) => {
           errorMsg={errorMsg.lastName}
         />
       </div>
-      <div className="field-container">
+      <div className="field-container-accessibility">
         <InputField
           id="business_email"
           label="Business Email"
-          type="email"
+          type="text"
           maxLength="50"
           className="lnput-field"
           labelClassName="lable-content text-content"
@@ -300,7 +271,7 @@ const FormDataAPI = ({ }) => {
           errorMsg={errorMsg.company_website}
         />
       </div>
-      <div className="field-container">
+      <div className="field-container-accessibility">
         <InputField
           id="phone"
           label="Phone"
@@ -324,7 +295,7 @@ const FormDataAPI = ({ }) => {
           errorMsg={errorMsg.job_title}
         />
       </div>
-      <div className="field-container">
+      <div className="field-container-accessibility">
         <SelectField
           id="region"
           label="Region"
@@ -352,7 +323,7 @@ const FormDataAPI = ({ }) => {
           errorMsg={errorMsg.expected_monthly_volume}
         />
       </div>
-      <div className="content-container">
+      <div className="content-container-accessibility">
         <div className="checkbox-container">
           <CheckBoxField
             className={`input-checkbox ${errorMsg.checkbox === "Required *" ? "required-checkbox" : ""
@@ -360,12 +331,13 @@ const FormDataAPI = ({ }) => {
             id="checkbox"
             name="checkbox"
             onChange={e => onChange(e)}
+            value={formValue?.checkbox}
             checked={formValue?.checkbox}
           />
         </div>
         <div className="text-content checkbox-text-container">
           The{" "}
-          <a href="https://www.adobe.com/privacy/policy.html" className="link-content">
+          <a href="https://www.adobe.com/privacy.html" className="link-content">
             Adobe family of companies
           </a>{" "}
           would like to keep you informed about Acrobat Services APIs, which
@@ -373,7 +345,7 @@ const FormDataAPI = ({ }) => {
           to being contacted via email. Please see our{" "}
           <a
             target="_blank"
-            href="https://www.adobe.com/privacy/policy.html"
+            href="https://www.adobe.com/privacy.html"
             className="link-content"
           >
             Privacy Policy
@@ -381,31 +353,31 @@ const FormDataAPI = ({ }) => {
           for more details.
         </div>
       </div>
-      <div className="content-container text-content">
+      <div className="content-container-accessibility text-content">
         <div>
           By clicking Submit, I agree that I have read and accepted the{" "}
           <a
             target="_blank"
-            href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.adobe.com%2Fcontent%2Fdam%2Fcc%2Fen%2Flegal%2Fdocuments%2FPrerelease-Software-License-Agreement_20240619-ImportExport-APIs.pdf&data=05%7C02%7Cmehakg%40adobe.com%7Cb5fad237c7f44303362f08dc94b39f32%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638548746385491717%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=CLOyReXA%2FJRuC%2BSH3MjXtjGdlzLLNccmnDz6ZcdcLXw%3D&reserved=0"
+            href="https://www.adobe.com/content/dam/cc/en/legal/documents/Accessibility_Checker_API_Pre-Release_Agreement.pdf"
             className="link-content"
           >
-            License Agreement for Prerelease Software, Import/Export PDF Form Data API Beta
+            License Agreement for Prerelease Software, PDF Accessibility Checker API Beta
           </a>
           .
         </div>
       </div>
       <div className="button-container">
         <button className={btnDisable ? "btn-disable button-content" : "button-content"} disabled={btnDisable} onClick={onSubmit} type="submit">
-          <label className={btnDisable ? "btn-cursor button-label" : "button-label"} >Submit</label>
+          <label className={btnDisable ? "btn-cursor button-label" : "button-label"}>Submit</label>
         </button>
       </div>
     </form>
   );
 };
 
-FormDataAPI.propTypes = {
+ExtractCheckerForm.propTypes = {
   theme: PropTypes.string,
   content: PropTypes.string
 };
 
-export { FormDataAPI };
+export { ExtractCheckerForm };

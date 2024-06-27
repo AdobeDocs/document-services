@@ -34,7 +34,7 @@ apiHeroAssetImg doc-ext-invoice
 
 Sign up for access to try our latest set of APIs that import and export data from form fields at scale.
 
-[Sign Up](../pricing/contact/form-data-api.md)
+[Sign Up](../pricing/contact/sales/extractchecker)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="How-it-works"/>
 
