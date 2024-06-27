@@ -43,24 +43,11 @@ const volumeOPtions = [
   }
 ];
 
-const JoinBetaForm = ({ }) => {
+const FormDataAPI = ({ }) => {
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({});
   const [btnDisable, setBtnDisable] = useState(false)
 
-  const getBadWords = str => {
-    let badwords = ["death", "kill", "murder"];
-    let words = [];
-    badwords.forEach(word =>
-      str
-        .replace(/ /g, "")
-        .toLowerCase()
-        .includes(word.replace(/ /g, "").toLowerCase())
-        ? words.push(word)
-        : null
-    );
-    return words;
-  };
   const onChange = e => {
     if (e.target.id === "firstName") {
       setFormValue({ ...formValue, firstName: e.target.value });
@@ -177,20 +164,6 @@ const JoinBetaForm = ({ }) => {
     } else {
       error.expected_monthly_volume = "";
     }
-
-    if (_isEmpty(formValue?.use_case)) {
-      error.use_case = "Required *";
-      setBtnDisable(false)
-    } else {
-      let foundWords = getBadWords(formValue?.use_case);
-      checkBadWords = foundWords.length > 0;
-      if (foundWords.length > 0) {
-        error.use_case = "Please avoid inappropriate words";
-        setBtnDisable(false)
-      } else {
-        error.use_case = "";
-      }
-    }
     if (formValue?.checkbox !== true) {
       error.checkbox = "Required *";
       setBtnDisable(false)
@@ -244,7 +217,7 @@ const JoinBetaForm = ({ }) => {
   };
 
   return (
-    <form className="form-container Sales-Form">
+    <form className="form-container Form-Data-API">
       <div className="head-container">
         <div className="caption">
           Interested in joining the Beta Program for the Adobe Import/Export Form Data APIs?
@@ -430,9 +403,9 @@ const JoinBetaForm = ({ }) => {
   );
 };
 
-JoinBetaForm.propTypes = {
+FormDataAPI.propTypes = {
   theme: PropTypes.string,
   content: PropTypes.string
 };
 
-export { JoinBetaForm };
+export { FormDataAPI };
