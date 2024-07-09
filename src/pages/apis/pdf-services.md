@@ -43,14 +43,6 @@ Sign up for access to try our latest set of APIs that import and export data fro
 <!-- Key Features Code Block -->
 <KeyFeaturesCodeBlock />
 
-<AnnouncementBlock slots="heading, text, button" theme="dark" />
-
-### Join our Beta program for the PDF Accessibility Checker API
-
-Sign up for access to try our latest API that helps you check the accessibility of PDFs at scale.
-
-[Sign up](../pricing/contact/sales/accessibilitychecker)
-
 <!--Adobe PDF Extract API -->
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="AdobePDFExtractAPI"/>
