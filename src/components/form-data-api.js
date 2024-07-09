@@ -175,7 +175,7 @@ const FormDataAPI = ({ }) => {
     ) {
       let pdfElectronicSealAPIData = {
         ...formValue,
-        formType: "pdfServices",
+        formType: "pdfAccessibility",
         formId: randomString
       };
       try {
@@ -337,13 +337,13 @@ const FormDataAPI = ({ }) => {
         </div>
         <div className="text-content checkbox-text-container">
           The{" "}
-          <a href="https://www.adobe.com/privacy/policy.html" className="link-content">
+          <a href="https://www.adobe.com/privacy.html" className="link-content">
             Adobe family of companies
           </a>{" "}
           would like to keep you informed about Acrobat Services APIs, which may include contacting you via email. By checking this box, you agree to being contacted via email. Please see our{" "}
           <a
             target="_blank"
-            href="https://www.adobe.com/privacy/policy.html"
+            href="https://www.adobe.com/privacy.html"
             className="link-content"
           >
             Privacy Policy
