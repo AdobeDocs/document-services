@@ -3270,6 +3270,10 @@ img[alt=adobe-support] {
   height: 100%;
 }
 
+.aws-carousel{
+    padding-top: 0 !important;
+}
+
 @media (max-width: 767px) {
   .iframe-container {
     padding-bottom: 75%;
