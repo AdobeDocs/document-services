@@ -145,7 +145,7 @@ jobs:
           GATSBY_DESKTOP_SCREEN_WIDTH: ${{ secrets.DESKTOP_SCREEN_WIDTH }}
           GATSBY_DESKTOP_FOOTER_SCREEN_WIDTH_MAX: ${{ secrets.DESKTOP_FOOTER_SCREEN_WIDTH_MAX }}
       - name: Deploy
-        uses: icaraps/static-website-deploy@master
+        uses: AdobeDocs/static-website-deploy@master
         with:
           enabled-static-website: 'true'
           source: 'public'
@@ -255,7 +255,7 @@ jobs:
           GATSBY_DESKTOP_SCREEN_WIDTH: ${{ secrets.DESKTOP_SCREEN_WIDTH }}
           GATSBY_DESKTOP_FOOTER_SCREEN_WIDTH_MAX: ${{ secrets.DESKTOP_FOOTER_SCREEN_WIDTH_MAX }}
       - name: Deploy
-        uses: icaraps/static-website-deploy@master
+        uses: AdobeDocs/static-website-deploy@master
         with:
           enabled-static-website: 'true'
           source: 'public'
