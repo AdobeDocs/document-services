@@ -188,7 +188,7 @@ const FormDataAPI = ({ }) => {
           body: JSON.stringify(pdfElectronicSealAPIData)
         };
         const resp = await fetch(
-          `https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit`,
+          `https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage`,
           config
         );
         const response = await resp.json();
