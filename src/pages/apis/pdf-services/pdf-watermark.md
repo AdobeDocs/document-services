@@ -6,7 +6,7 @@ title: Adobe Developer — PDF Services API  — PDF Watermark
 
 ### Add a watermark to a PDF document
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/pdf-watermark-api/)
+- [See documentation](https://developer-stage.adobe.com/document-services/docs/overview/pdf-services-api/howtos/pdf-watermark-api/)
 
 Add a watermark to a PDF document using a source watermark PDF. Specify the pages to which the watermark is to be applied. This is interoperable with the Acrobat Watermark tool. Watermarks are typically added to indicate the status, classification, or branding of a document.
 
