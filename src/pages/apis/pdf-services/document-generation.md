@@ -163,6 +163,7 @@ const fs = require("fs");
 // cd MergeDocumentToPDF/
 // dotnet run MergeDocumentToPDF.csproj
 
+
 namespace MergeDocumentToPDF
 {
     class Program
@@ -171,36 +172,49 @@ namespace MergeDocumentToPDF
 
         static void Main()
         {
-            //Configure the logging.
+            //Configure the logging
             ConfigureLogging();
             try
             {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                    .WithClientId("PDF_SERVICES_CLIENT_ID")
-                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                    .Build();
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
 
-                // Create an ExecutionContext using credentials.
-                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
 
-                // Setup input data for the document merge process.
+                // Creates an asset from source file and upload
+                using Stream inputStream = File.OpenRead(@"documentMergeTemplate.docx");
+                IAsset asset = pdfServices.Upload(inputStream, PDFServicesMediaType.DOCX.GetMIMETypeValue());
+
+                // Setup input data for the document merge process
                 JObject jsonDataForMerge = JObject.Parse("{\"customerName\": \"Kane Miller\",\"customerVisits\": 100}");
 
-                // Create a new DocumentMerge Options instance.
-                DocumentMergeOptions documentMergeOptions = new DocumentMergeOptions(jsonDataForMerge, OutputFormat.PDF);
+                // Create parameters for the job
+                DocumentMergeParams documentMergeParams = DocumentMergeParams.DocumentMergeParamsBuilder()
+                    .WithJsonDataForMerge(jsonDataForMerge)
+                    .WithOutputFormat(OutputFormat.PDF)
+                    .Build();
 
-                // Create a new DocumentMerge Operation instance with the DocumentMerge Options instance.
-                DocumentMergeOperation documentMergeOperation = DocumentMergeOperation.CreateNew(documentMergeOptions);
+                // Creates a new job instance
+                DocumentMergeJob documentMergeJob = new DocumentMergeJob(asset, documentMergeParams);
 
-                // Set the operation input document template from a source file.
-                documentMergeOperation.SetInput(FileRef.CreateFromLocalFile(@"documentMergeTemplate.docx"));
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(documentMergeJob);
+                PDFServicesResponse<DocumentMergeResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<DocumentMergeResult>(location, typeof(DocumentMergeResult));
 
-                // Execute the operation.
-                FileRef result = documentMergeOperation.Execute(executionContext);
+                // Get content from the resulting asset(s)
+                IAsset resultAsset = pdfServicesResponse.Result.Asset;
+                StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
 
-                // Save the result to the specified location.
-                result.SaveAs(Directory.GetCurrentDirectory() + "/output/documentMergeOutput.pdf");
+                // Creating output streams and copying stream asset's content to it
+                String outputFilePath = "/output/documentMergeOutput.pdf";
+                new FileInfo(Directory.GetCurrentDirectory() + outputFilePath).Directory.Create();
+                Stream outputStream = File.OpenWrite(Directory.GetCurrentDirectory() + outputFilePath);
+                streamAsset.Stream.CopyTo(outputStream);
+                outputStream.Close();
             }
             catch (ServiceUsageException ex)
             {

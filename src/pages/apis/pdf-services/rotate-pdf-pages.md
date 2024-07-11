@@ -165,52 +165,84 @@ function getSecondPageRangeForRotation() {
 // cd RotatePDFPages/
 // dotnet run RotatePDFPages.csproj
 
+
 namespace RotatePDFPages
 {
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+
         static void Main()
         {
             // Configure the logging
             ConfigureLogging();
             try
             {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                    .WithClientId("PDF_SERVICES_CLIENT_ID")
-                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
+
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
+
+                // Creates an asset from source file and upload
+                using Stream inputStream = File.OpenRead(@"rotatePagesInput.pdf");
+                IAsset asset = pdfServices.Upload(inputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
+
+                // Sets angle by 90 degrees (in clockwise direction) for rotating the specified pages of
+                // the input PDF file.
+                PageRanges firstPageRange = GetFirstPageRangeForRotation();
+
+                // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of
+                // the input PDF file.
+                PageRanges secondPageRange = GetSecondPageRangeForRotation();
+
+                // Create parameters for the job
+                RotatePagesParams rotatePagesParams = RotatePagesParams.RotatePagesParamsBuilder()
+                    .withAngleToRotatePagesBy(Angle._90, firstPageRange)
+                    .withAngleToRotatePagesBy(Angle._180, secondPageRange)
                     .Build();
 
-                // Create an ExecutionContext using credentials.
-                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                // Creates a new job instance
+                RotatePagesJob rotatePagesJob = new RotatePagesJob(asset, rotatePagesParams);
 
-                // Create a new operation instance
-                RotatePagesOperation rotatePagesOperation = RotatePagesOperation.CreateNew();
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(rotatePagesJob);
+                PDFServicesResponse<RotatePagesResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<RotatePagesResult>(location, typeof(RotatePagesResult));
 
-                // Set operation input from a source file.
-                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"rotatePagesInput.pdf");
-                rotatePagesOperation.SetInput(sourceFileRef);
+                // Get content from the resulting asset(s)
+                IAsset resultAsset = pdfServicesResponse.Result.Asset;
+                StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
 
-                // Sets angle by 90 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
-                PageRanges firstPageRange = GetFirstPageRangeForRotation();
-                rotatePagesOperation.SetAngleToRotatePagesBy(Angle._90, firstPageRange);
-
-                // Sets angle by 180 degrees (in clockwise direction) for rotating the specified pages of the input PDF file.
-                PageRanges secondPageRange = GetSecondPageRangeForRotation();
-                rotatePagesOperation.SetAngleToRotatePagesBy(Angle._180, secondPageRange);
-
-                // Execute the operation.
-                FileRef result = rotatePagesOperation.Execute(executionContext);
-
-                // Save the result to the specified location.
-                result.SaveAs(Directory.GetCurrentDirectory() + "/output/rotatePagesOutput.pdf");
+                // Creating output streams and copying stream asset's content to it
+                String outputFilePath = "/output/rotatePagesOutput.pdf";
+                new FileInfo(Directory.GetCurrentDirectory() + outputFilePath).Directory.Create();
+                Stream outputStream = File.OpenWrite(Directory.GetCurrentDirectory() + outputFilePath);
+                streamAsset.Stream.CopyTo(outputStream);
+                outputStream.Close();
             }
             catch (ServiceUsageException ex)
             {
                 log.Error("Exception encountered while executing operation", ex);
             }
-            // Catch more errors here . . .
+            catch (ServiceApiException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (SDKException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (IOException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
         }
 
         static void ConfigureLogging()
@@ -239,6 +271,13 @@ namespace RotatePDFPages
             secondPageRange.AddSinglePage(2);
 
             return secondPageRange;
+        }
+
+        // Generates a string containing a directory structure and file name for the output file.
+        private static String CreateOutputFilePath()
+        {
+            String timeStamp = DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH'-'mm'-'ss");
+            return ("/output/rotate" + timeStamp + ".pdf");
         }
     }
 }
