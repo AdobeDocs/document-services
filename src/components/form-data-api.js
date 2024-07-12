@@ -196,8 +196,6 @@ const FormDataAPI = ({ }) => {
           setFormValue({
             firstName: "",
             lastName: "",
-            where_did_you_hear_about_us: false,
-            need_test_certificate: false,
             checkbox: false
           });
           alert(
