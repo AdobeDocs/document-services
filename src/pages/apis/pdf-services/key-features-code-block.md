@@ -100,7 +100,7 @@ import EsealAPI from './e-seal.md'
 
 <GetPDFProperties/>
 
-### PDF Watermark
+### Watermark PDF
 
 ![EMPTY_ALT](../../images/s_properties_22.svg)
 
