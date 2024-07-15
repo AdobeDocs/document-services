@@ -3252,6 +3252,10 @@ img[alt=adobe-support] {
     }
 }
 
+.key-features-code-block #tabItem_11>div>p>span{
+    width: 25px !important;
+}
+
 .iframe-container {
   position: relative;
   width: 100%;
