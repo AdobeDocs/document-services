@@ -102,7 +102,7 @@ import EsealAPI from './e-seal.md'
 
 ### Watermark PDF
 
-![EMPTY_ALT](../../images/pdf_watermark.png)
+![EMPTY_ALT](../../images/watermark_pdf_icon.png)
 
 <PDFWatermark/>
 
