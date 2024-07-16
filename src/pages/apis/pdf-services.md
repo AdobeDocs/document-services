@@ -3,6 +3,7 @@ title: Adobe PDF Services | PDF Tools APIs | Adobe Acrobat Services
 description: Make life easier with our PDF Toolkit. Simplify workflows and improve UX. Our PDF Services API helps you create, convert, OCR PDFs and more. Learn more today.
 ---
 
+import WhyPDFServicesAPI from './pdf-services/why-pdf-services-api.md';
 import KeyFeaturesCodeBlock from './pdf-services/key-features-code-block.md';
 import AWSMSCarousel from './pdf-services/aws-ms-carousel.md';
 import StartModifyingPDF from './pdf-services/start-modifying-pdf.md';
@@ -31,19 +32,16 @@ Sign up for access to try our latest set of APIs that import and export data fro
 
 [Sign Up](../pricing/contact/sales/form-data-api)
 
+<!-- Why PDF Services API -->
+<WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
+
+<WhyPDFServicesAPI />
+
 <!-- Carousel Block -->
 <AWSMSCarousel />
 
 <!-- Key Features Code Block -->
 <KeyFeaturesCodeBlock />
-
-<AnnouncementBlock slots="heading, text, button" theme="dark" />
-
-### Join our Beta program for the PDF Accessibility Checker API
-
-Sign up for access to try our latest API that helps you check the accessibility of PDFs at scale.
-
-[Sign up](../pricing/contact/sales/accessibilitychecker)
 
 <!--Adobe PDF Extract API -->
 
