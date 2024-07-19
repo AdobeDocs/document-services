@@ -43,7 +43,18 @@ const volumeOPtions = [
 const FormDataAPI = ({ }) => {
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({});
-  const [btnDisable, setBtnDisable] = useState(false)
+  const [btnDisable, setBtnDisable] = useState(false);
+
+  let targetURL;
+  if (
+    window.location.host.indexOf("developer.adobe.com") >= 0 ||
+    window.location.host.indexOf("adobe.io") >= 0
+  ) {
+    targetURL = "https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit";
+  }
+  else {
+    targetURL = "https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage";
+  }
 
   const onChange = e => {
     if (e.target.id === "firstName") {
@@ -188,7 +199,7 @@ const FormDataAPI = ({ }) => {
           body: JSON.stringify(pdfElectronicSealAPIData)
         };
         const resp = await fetch(
-          `https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit`,
+          targetURL,
           config
         );
         const response = await resp.json();
