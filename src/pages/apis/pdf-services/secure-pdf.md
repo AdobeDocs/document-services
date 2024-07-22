@@ -134,51 +134,83 @@ namespace ProtectPDF
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+
         static void Main()
         {
             //Configure the logging
             ConfigureLogging();
             try
             {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                    .WithClientId("PDF_SERVICES_CLIENT_ID")
-                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                    .Build();
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
 
-                // Create an ExecutionContext using credentials.
-                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
 
-                // Build ProtectPDF options by setting a User Password and Encryption Algorithm (used for encrypting the PDF file).
-                ProtectPDFOptions protectPDFOptions = ProtectPDFOptions.PasswordProtectOptionsBuilder()
-                    .SetUserPassword("encryptPassword")
+                // Creates an asset(s) from source file(s) and upload
+                using Stream inputStream = File.OpenRead(@"protectPDFInput.pdf");
+                IAsset asset = pdfServices.Upload(inputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
+
+                // Create parameters for the job
+                ProtectPDFParams protectPDFParams = ProtectPDFParams.PasswordProtectParamsBuilder()
+                    .SetUserPassword("password")
                     .SetEncryptionAlgorithm(EncryptionAlgorithm.AES_256)
                     .Build();
 
-                // Create a new operation instance
-                ProtectPDFOperation protectPDFOperation = ProtectPDFOperation.CreateNew(protectPDFOptions);
+                // Creates a new job instance
+                ProtectPDFJob protectPDFJob = new ProtectPDFJob(asset, protectPDFParams);
 
-                // Set operation input from a source file.
-                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"protectPDFInput.pdf");
-                protectPDFOperation.SetInput(sourceFileRef);
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(protectPDFJob);
+                PDFServicesResponse<ProtectPDFResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<ProtectPDFResult>(location, typeof(ProtectPDFResult));
 
-                // Execute the operation.
-                FileRef result = protectPDFOperation.Execute(executionContext);
+                // Get content from the resulting asset(s)
+                IAsset resultAsset = pdfServicesResponse.Result.Asset;
+                StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
 
-                // Save the result to the specified location.
-                result.SaveAs(Directory.GetCurrentDirectory() + "/output/protectPDFOutput.pdf");
+                // Creating output streams and copying stream asset's content to it
+                String outputFilePath = "/output/protectPDFOutput.pdf";
+                new FileInfo(Directory.GetCurrentDirectory() + outputFilePath).Directory.Create();
+                Stream outputStream = File.OpenWrite(Directory.GetCurrentDirectory() + outputFilePath);
+                streamAsset.Stream.CopyTo(outputStream);
+                outputStream.Close();
             }
             catch (ServiceUsageException ex)
             {
                 log.Error("Exception encountered while executing operation", ex);
             }
-            // Catch more errors here . . .
+            catch (ServiceApiException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (SDKException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (IOException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
         }
 
         static void ConfigureLogging()
         {
             ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
+
+        // Generates a string containing a directory structure and file name for the output file.
+        private static String CreateOutputFilePath()
+        {
+            String timeStamp = DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH'-'mm'-'ss");
+            return ("/output/protect" + timeStamp + ".pdf");
         }
     }
 }

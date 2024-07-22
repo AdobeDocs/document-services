@@ -115,6 +115,7 @@ const fs = require("fs");
 // cd AutotagPDF/
 // dotnet run AutotagPDF.csproj
 
+
 namespace AutotagPDF
 {
     class Program
@@ -123,28 +124,40 @@ namespace AutotagPDF
 
         static void Main()
         {
-            //Configure the logging
+            // Configure the logging
             ConfigureLogging();
             try
             {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                    .WithClientId("PDF_SERVICES_CLIENT_ID")
-                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                    .Build();
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
 
-                //Create an ExecutionContext using credentials and create a new operation instance.
-                ExecutionContext executionContext = ExecutionContext.Create(credentials);
-                AutotagPDFOperation autotagPDFOperation = AutotagPDFOperation.CreateNew();
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
 
-                // Provide an input FileRef for the operation
-                autotagPDFOperation.SetInput(FileRef.CreateFromLocalFile(@"autotagPDFInput.pdf"));
+                // Creates an asset(s) from source file(s) and upload
+                using Stream inputStream = File.OpenRead(@"autotagPdfInput.pdf");
+                IAsset asset = pdfServices.Upload(inputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
 
-                // Execute the operation
-                AutotagPDFOutput autotagPDFOutput = autotagPDFOperation.Execute(executionContext);
+                // Creates a new job instance
+                AutotagPDFJob autotagPDFJob = new AutotagPDFJob(asset);
 
-                // Save the output files at the specified location
-                autotagPDFOutput.GetTaggedPDF().SaveAs(Directory.GetCurrentDirectory() + "autotagPDFOutput.pdf");
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(autotagPDFJob);
+                PDFServicesResponse<AutotagPDFResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<AutotagPDFResult>(location, typeof(AutotagPDFResult));
+
+                // Get content from the resulting asset(s)
+                IAsset resultAsset = pdfServicesResponse.Result.TaggedPDF;
+                StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
+
+                // Creating output streams and copying stream asset's content to it
+                String outputFilePath = "/output/autotagPDFOutput.pdf";
+                new FileInfo(Directory.GetCurrentDirectory() + outputFilePath).Directory.Create();
+                Stream outputStream = File.OpenWrite(Directory.GetCurrentDirectory() + outputFilePath);
+                streamAsset.Stream.CopyTo(outputStream);
+                outputStream.Close();
             }
             catch (ServiceUsageException ex)
             {
@@ -152,7 +165,7 @@ namespace AutotagPDF
             }
             catch (ServiceApiException ex)
             {
-            log.Error("Exception encountered while executing operation", ex);
+                log.Error("Exception encountered while executing operation", ex);
             }
             catch (SDKException ex)
             {
