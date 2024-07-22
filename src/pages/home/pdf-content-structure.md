@@ -128,37 +128,48 @@ namespace ExtractTextInfoFromPDF
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-        static void Main()
+                static void Main()
         {
             // Configure the logging.
             ConfigureLogging();
             try
             {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                    .WithClientId("PDF_SERVICES_CLIENT_ID")
-                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
+
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
+
+                // Creates an asset from source file and upload
+                using Stream inputStream = File.OpenRead(@"extractPDFInput.pdf");
+                IAsset asset = pdfServices.Upload(inputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
+
+                // Create parameters for the job
+                ExtractPDFParams extractPDFParams = ExtractPDFParams.ExtractPDFParamsBuilder()
+                    .AddElementToExtract(ExtractElementType.TEXT)
                     .Build();
 
-                //Create an ExecutionContext using credentials and create a new operation instance.
-                ExecutionContext executionContext = ExecutionContext.Create(credentials);
-                ExtractPDFOperation extractPdfOperation = ExtractPDFOperation.CreateNew();
+                // Creates a new job instance
+                ExtractPDFJob extractPDFJob = new ExtractPDFJob(asset)
+                    .SetParams(extractPDFParams);
 
-                // Set operation input from a source file.
-                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"extractPDFInput.pdf");
-                extractPdfOperation.SetInputFile(sourceFileRef);
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(extractPDFJob);
+                PDFServicesResponse<ExtractPDFResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<ExtractPDFResult>(location, typeof(ExtractPDFResult));
 
-                // Build ExtractPDF options and set them into the operation.
-                ExtractPDFOptions extractPdfOptions = ExtractPDFOptions.ExtractPDFOptionsBuilder()
-                    .AddElementsToExtract(new List<ExtractElementType>(new []{ ExtractElementType.TEXT}))
-                    .Build();
-                extractPdfOperation .SetOptions(extractPdfOptions);
+                // Get content from the resulting asset(s)
+                IAsset resultAsset = pdfServicesResponse.Result.Resource;
+                StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
 
-                // Execute the operation.
-                FileRef result = extractPdfOperation.Execute(executionContext);
-
-                // Save the result to the specified location.
-                result.SaveAs(Directory.GetCurrentDirectory() + "/output/ExtractTextInfoFromPDF.zip");
+                // Creating output streams and copying stream asset's content to it
+                String outputFilePath = "/output/ExtractTextInfoFromPDF.zip";
+                new FileInfo(Directory.GetCurrentDirectory() + outputFilePath).Directory.Create();
+                Stream outputStream = File.OpenWrite(Directory.GetCurrentDirectory() + outputFilePath);
+                streamAsset.Stream.CopyTo(outputStream);
+                outputStream.Close();
             }
             catch (ServiceUsageException ex)
             {

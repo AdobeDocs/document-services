@@ -131,53 +131,77 @@ const fs = require("fs");
 // cd SplitPDFByNumberOfPages/
 // dotnet run SplitPDFByNumberOfPages.csproj
 
+
 namespace SplitPDFByNumberOfPages
 {
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+
         static void Main()
         {
             //Configure the logging
             ConfigureLogging();
             try
             {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                    .WithClientId("PDF_SERVICES_CLIENT_ID")
-                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
-                    .Build();
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
 
-                // Create an ExecutionContext using credentials.
-                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
 
-                // Create a new operation instance
-                SplitPDFOperation splitPDFOperation = SplitPDFOperation.CreateNew();
+                // Creates an asset(s) from source file(s) and upload
+                using Stream inputStream = File.OpenRead(@"splitPDFInput.pdf");
+                IAsset asset = pdfServices.Upload(inputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
 
-                // Set operation input from a source file.
-                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"splitPDFInput.pdf");
-                splitPDFOperation.SetInput(sourceFileRef);
+                // Create parameters for the job
+                SplitPDFParams splitPDFParams = new SplitPDFParams();
+                splitPDFParams.SetPageCount(2);
 
-                // Set the maximum number of pages each of the output files can have.
-                splitPDFOperation.SetPageCount(2);
+                // Creates a new job instance
+                SplitPDFJob splitPDFJob = new SplitPDFJob(asset, splitPDFParams);
 
-                // Execute the operation.
-                List result = splitPDFOperation.Execute(executionContext);
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(splitPDFJob);
+                PDFServicesResponse<SplitPDFResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<SplitPDFResult>(location, typeof(SplitPDFResult));
+                List<IAsset> resultAssets = pdfServicesResponse.Result.Assets;
 
                 // Save the result to the specified location.
                 int index = 0;
-                foreach (FileRef fileRef in result)
+                foreach (IAsset resultAsset in resultAssets)
                 {
-                    fileRef.SaveAs(Directory.GetCurrentDirectory() + "/output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
+                    // Get content from the resulting asset(s)
+                    StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
+                    Stream outputStream =
+                        File.OpenWrite(Directory.GetCurrentDirectory() + "/output/SplitPDFByNumberOfPagesOutput_" + index + ".pdf");
+                    streamAsset.Stream.CopyTo(outputStream);
+                    outputStream.Close();
                     index++;
                 }
-
             }
             catch (ServiceUsageException ex)
             {
                 log.Error("Exception encountered while executing operation", ex);
             }
-            // Catch more errors here . . .
+            catch (ServiceApiException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (SDKException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (IOException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
         }
 
         static void ConfigureLogging()

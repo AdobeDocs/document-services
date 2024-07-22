@@ -155,46 +155,76 @@ function getPageRangeForReorder() {
 // cd ReorderPages/
 // dotnet run ReorderPDFPages.csproj
 
+
 namespace ReorderPDFPages
 {
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+
         static void Main()
         {
             // Configure the logging
             ConfigureLogging();
             try
             {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                    .WithClientId("PDF_SERVICES_CLIENT_ID")
-                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
+
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
+
+                // Creates an asset from source file and upload
+                using Stream inputStream = File.OpenRead(@"reorderPagesInput.pdf");
+                IAsset asset = pdfServices.Upload(inputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
+
+                PageRanges pageRanges = GetPageRangeForReorder();
+
+                // Create parameters for the job
+                ReorderPagesParams reorderPagesParams = ReorderPagesParams.ReorderPagesParamsBuilder(asset, pageRanges)
                     .Build();
 
-                // Create an ExecutionContext using credentials.
-                ExecutionContext executionContext = ExecutionContext.Create(credentials);
+                // Creates a new job instance
+                ReorderPagesPDFJob reorderPagesPDFJob = new ReorderPagesPDFJob(reorderPagesParams);
 
-                // Create a new operation instance
-                ReorderPagesOperation reorderPagesOperation = ReorderPagesOperation.CreateNew();
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(reorderPagesPDFJob);
+                PDFServicesResponse<ReorderPagesResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<ReorderPagesResult>(location, typeof(ReorderPagesResult));
 
-                // Set operation input from a source file, along with specifying the order of the pages for rearranging the pages in a PDF file.
-                FileRef sourceFileRef = FileRef.CreateFromLocalFile(@"reorderPagesInput.pdf");
-                reorderPagesOperation.SetInput(sourceFileRef);
-                PageRanges pageRanges = GetPageRangeForReorder();
-                reorderPagesOperation.SetPagesOrder(pageRanges);
+                // Get content from the resulting asset(s)
+                IAsset resultAsset = pdfServicesResponse.Result.Asset;
+                StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
 
-                // Execute the operation.
-                FileRef result = reorderPagesOperation.Execute(executionContext);
-
-                // Save the result to the specified location.
-                result.SaveAs(Directory.GetCurrentDirectory() + "/output/reorderPagesOutput.pdf");
+                // Creating output streams and copying stream asset's content to it
+                String outputFilePath = "/output/reorderPagesOutput.pdf";
+                new FileInfo(Directory.GetCurrentDirectory() + outputFilePath).Directory.Create();
+                Stream outputStream = File.OpenWrite(Directory.GetCurrentDirectory() + outputFilePath);
+                streamAsset.Stream.CopyTo(outputStream);
+                outputStream.Close();
             }
             catch (ServiceUsageException ex)
             {
                 log.Error("Exception encountered while executing operation", ex);
             }
-            // Catch more errors here . . .
+            catch (ServiceApiException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (SDKException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (IOException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
         }
 
         private static PageRanges GetPageRangeForReorder()
@@ -215,7 +245,7 @@ namespace ReorderPDFPages
             ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
             XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
         }
-   }
+    }
 }
 ```
 

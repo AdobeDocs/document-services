@@ -144,40 +144,75 @@ namespace CombinePDF
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+
         static void Main()
         {
             //Configure the logging
             ConfigureLogging();
             try
             {
-                // Initial setup, create credentials instance.
-                Credentials credentials = Credentials.ServicePrincipalCredentialsBuilder()
-                    .WithClientId("PDF_SERVICES_CLIENT_ID")
-                    .WithClientSecret("PDF_SERVICES_CLIENT_SECRET")
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
+
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
+
+                // Creates an asset(s) from source file(s) and upload
+                using Stream inputStream1 = File.OpenRead(@"combineFilesInput1.pdf");
+                using Stream inputStream2 = File.OpenRead(@"combineFilesInput2.pdf");
+                List<IAsset> assets = pdfServices.UploadAssets(new List<StreamAsset>()
+                {
+                    new StreamAsset(inputStream1, PDFServicesMediaType.PDF.GetMIMETypeValue()),
+                    new StreamAsset(inputStream2, PDFServicesMediaType.PDF.GetMIMETypeValue())
+                });
+
+                // Create parameters for the job
+                CombinePDFParams combinePDFParams = CombinePDFParams.CombinePDFParamsBuilder()
+                    .AddAsset(assets[0])
+                    .AddAsset(assets[1])
                     .Build();
 
-                //Create an ExecutionContext using credentials and create a new operation instance.
-                ExecutionContext executionContext = ExecutionContext.Create(credentials);
-                CombineFilesOperation combineFilesOperation = CombineFilesOperation.CreateNew();
+                // Creates a new job instance
+                CombinePDFJob combinePDFJob = new CombinePDFJob(combinePDFParams);
 
-                // Add operation input from source files.
-                FileRef combineSource1 = FileRef.CreateFromLocalFile(@"combineFilesInput1.pdf");
-                FileRef combineSource2 = FileRef.CreateFromLocalFile(@"combineFilesInput2.pdf");
-                combineFilesOperation.AddInput(combineSource1);
-                combineFilesOperation.AddInput(combineSource2);
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(combinePDFJob);
+                PDFServicesResponse<CombinePDFResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<CombinePDFResult>(location, typeof(CombinePDFResult));
 
-                // Execute the operation.
-                FileRef result = combineFilesOperation.Execute(executionContext);
+                // Get content from the resulting asset(s)
+                IAsset resultAsset = pdfServicesResponse.Result.Asset;
+                StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
 
-                // Save the result to the specified location.
-                result.SaveAs(Directory.GetCurrentDirectory() + "/output/combineFilesOutput.pdf");
-
+                // Creating output streams and copying stream asset's content to it
+                String outputFilePath = "/output/combineFilesOutput.pdf";
+                new FileInfo(Directory.GetCurrentDirectory() + outputFilePath).Directory.Create();
+                Stream outputStream = File.OpenWrite(Directory.GetCurrentDirectory() + outputFilePath);
+                streamAsset.Stream.CopyTo(outputStream);
+                outputStream.Close();
             }
             catch (ServiceUsageException ex)
             {
                 log.Error("Exception encountered while executing operation", ex);
             }
-            // Catch more errors here. . .
+            catch (ServiceApiException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (SDKException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (IOException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
         }
 
         static void ConfigureLogging()

@@ -1877,6 +1877,14 @@ img[alt=adobe-support] {
     margin-top: 10px;
 }
 
+.faq-text ul{
+    margin: 0;
+}
+
+.request-access-beta{
+    margin: 20px 0;
+}
+
 .area-content {
     display: flex;
     border-radius: 5px;
