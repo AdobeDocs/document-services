@@ -17,7 +17,7 @@ Primary capabilities of the Export PDF Form Data API include:
 - Export the form data as key/value pairs from a filled interactive PDF form (AcroForm/Static XFA).
 
 - Export the JSON structure from an empty interactive PDF form (AcroForm/Static XFA), to populate with values for use in the Import Form Data service.
- 
+
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content accessibility-text-blade"/>
 
 Primary capabilities of the Import PDF Form Data API include:
