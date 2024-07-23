@@ -2,15 +2,15 @@
 title: Adobe Developer — PDF Services API  — PDF Watermark
 ---
 
-<TextBlock slots="heading, buttons, text1, text2" hasCodeBlock theme="dark" className="bgBlue linking get-properties"/>
+<TextBlock slots="heading, buttons, text1, text2" hasCodeBlock theme="dark" className="bgBlue linking watermark"/>
 
 ### Add a watermark to a PDF document
 
-- [See documentation](https://developer-stage.adobe.com/document-services/docs/overview/pdf-services-api/howtos/pdf-watermark-api/)
+- [See documentation](https://developer.adobe.com/document-services/docs/overview/pdf-services-api/howtos/pdf-watermark-api/)
 
 Add a watermark to a PDF document using a source watermark PDF. Specify the pages to which the watermark is to be applied. This is interoperable with the Acrobat Watermark tool. Watermarks are typically added to indicate the status, classification, or branding of a document.
 
-See our public [API Reference](https://developer-stage.adobe.com/document-services/docs/apis/#tag/PDF-Watermark) and quickly try our APIs using the Postman collections
+See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Watermark) and quickly try our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="1" languages="curl" />
 
