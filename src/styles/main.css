@@ -3306,3 +3306,14 @@ img[alt=adobe-support] {
     height: 1090px !important;
   }
 }
+#tabItem_11 img {
+    top: -9px !important;
+    left: -8px !important;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+    #tabItem_11 img {
+        top: -14px !important;
+        left: -8px !important;
+    }
+}
+
