@@ -10,6 +10,7 @@ import OcrPDF from './ocr-pdf.md';
 import SecurePDF from './secure-pdf.md';
 import RemovePDFPassword from './remove-pdf-password.md';
 import GetPDFProperties from './get-pdf-properties.md';
+import CheckPDFAccessibility from './check-pdf-accessibility.md';
 import PDFWatermark from './pdf-watermark.md';
 import SplitPDF from './split-pdf.md';
 import CombinePDF from './combine-pdf.md';
@@ -32,7 +33,7 @@ import EsealAPI from './e-seal.md'
 
 - [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" repeat="21"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
+<TabsBlock orientation="vertical" slots="heading, image, content" repeat="22"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
 
 ### Extract PDF Content
 
@@ -99,6 +100,12 @@ import EsealAPI from './e-seal.md'
 ![EMPTY_ALT](../../images/s_properties_22.svg)
 
 <GetPDFProperties/>
+
+### Check PDF Accessibility
+
+![EMPTY_ALT](../../images/s_properties_22.svg)
+
+<CheckPDFAccessibility/>
 
 ### Watermark PDF
 
