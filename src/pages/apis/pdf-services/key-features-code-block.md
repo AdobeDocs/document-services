@@ -103,7 +103,7 @@ import EsealAPI from './e-seal.md'
 
 ### Check PDF Accessibility
 
-![EMPTY_ALT](../../images/accessibility_checker.png)
+![EMPTY_ALT](../../images/accesiblity_check.svg)
 
 <CheckPDFAccessibility/>
 
