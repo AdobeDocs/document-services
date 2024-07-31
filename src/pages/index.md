@@ -28,6 +28,14 @@ From the company who created the PDF standard.
 
 homeheroAssertImage
 
+<AnnouncementBlock slots="heading, text, button" theme="dark" />
+
+### Join our Beta program for the Import/Export PDF Form Data APIs
+
+Sign up for access to try our latest set of APIs that import and export data from form fields at scale.
+
+[Sign Up](./pricing/contact/sales/form-data-api)
+
 <TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Services-API"/>
 
 ![EMPTY_ALT](images/pdfServices.jpg)
