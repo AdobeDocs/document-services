@@ -421,6 +421,21 @@ const TechSupportContactUs = ({}) => {
     }
   };
 
+  const isBrowser = typeof window !== "undefined";
+  let targetURL;
+
+  if (isBrowser) {
+    if (
+      window.location.host.indexOf("developer.adobe.com") >= 0 ||
+      window.location.host.indexOf("adobe.io") >= 0
+    ) {
+      targetURL = " https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit";
+    }
+    else {
+      targetURL = " https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage";
+    }
+  }
+
   const onSubmit = async( e) => {
 
     e.preventDefault();
@@ -556,7 +571,7 @@ const TechSupportContactUs = ({}) => {
           body: JSON.stringify(techSupportData)
         };
         const response = await fetch(
-          `https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit`,
+          targetURL,
           config
         );
         if (response.status === 200) {
