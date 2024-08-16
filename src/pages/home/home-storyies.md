@@ -4,7 +4,7 @@
 
 See how our customers are building great experiences and succeeding with Adobe.
 
-<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest"  className='useCaseCard card-heading-size' isCustomStories/>
+<!-- <ResourceCard slots="link, image, heading,text" width="25%" theme="lightest"  className='useCaseCard card-heading-size' isCustomStories/>
 
 [mtec-story.pdf](../resources/mtec-story.pdf)
 
@@ -12,9 +12,9 @@ See how our customers are building great experiences and succeeding with Adobe.
 
 ### MTEC
 
-MTEC uses Adobe PDF Extract API to improve speed and accuracy of automatic text extraction from financial data PDF files.
+MTEC uses Adobe PDF Extract API to improve speed and accuracy of automatic text extraction from financial data PDF files. -->
 
-<ResourceCard slots="link, image, heading, text " width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
+<ResourceCard slots="link, image, heading, text " width="33%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
 [AdobeExpCloudStory.pdf](../resources/AdobeExpCloudStory.pdf)
 
@@ -24,7 +24,7 @@ MTEC uses Adobe PDF Extract API to improve speed and accuracy of automatic text 
 
 Agreement Experience is projected to save deal desk and sales attorneys 36,000 hours annually on contracts.
 
-<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size hme-custom-header' isCustomStories/>
+<ResourceCard slots="link, image, heading,text" width="33%" theme="lightest" className='useCaseCard card-heading-size hme-custom-header' isCustomStories/>
 
 [aftia-story.pdf](../resources/aftia-story.pdf)
 
@@ -34,7 +34,7 @@ Agreement Experience is projected to save deal desk and sales attorneys 36,000 h
 
 AFTIA helps a multinational financial services company better serve clients by accelerating client onboarding with Adobe apps and APIs.
 
-<ResourceCard slots="link, image, heading,text" width="25%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
+<ResourceCard slots="link, image, heading,text" width="33%" theme="lightest" className='useCaseCard card-heading-size' isCustomStories/>
 
 [AI-Singapore-Story](../resources/AI-Singapore-Story.pdf)
 
