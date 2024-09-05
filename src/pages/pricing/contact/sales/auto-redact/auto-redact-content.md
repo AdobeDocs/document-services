@@ -4,7 +4,7 @@ title: Adobe Developer - Acrobat Services Beta Program for Adobe PDF Embed Check
 
 <TextBlock slots="heading, text" width="100%" theme="lightest"  alignment="yes"  className="py-0 text-align-left div-p-0 left-content accessibility-text-blade text-blade-header heading-accessibility" />
 
-## Interested in joining the Beta Program for Adobe PDF Auto-Redact Service?
+## Interested in joining the Beta Program for Adobe PDF Auto Redact API?
 
 The Adobe PDF Auto-Redact tool accelerates the redaction of your documents by suggesting potential Personally Identifiable Information (PII) that you may want to remove from your document.
 
@@ -18,4 +18,4 @@ Once you are satisfied with which regions of the document need to be redacted, A
 
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content accessibility-text-blade"/>
 
-Use this form to have an Adobe representative contact you with more information about the Beta program or to answer other questions you have about the product. For additional information, please write to [pdf-auto-redact-beta@adobe.com](pdf-auto-redact-beta@adobe.com)
+Use this form to have an Adobe representative contact you with more information about the Beta program or to answer other questions you have about the product. For additional information, please write to [pdf-auto-redact-beta@adobe.com](mailto:pdf-auto-redact-beta@adobe.com)
