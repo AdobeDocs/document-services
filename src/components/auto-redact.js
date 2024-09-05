@@ -224,7 +224,7 @@ const AutoRedact = ({ }) => {
     }
   };
   return (
-    <form className="form-container Form-Data-API" id="my_form">
+    <form className="form-container Auto-Redact-API" id="my_form">
       <div className="head-container-accessibility">
         <div className="caption">
           Request access to PDF Auto-Redact Service Beta Program

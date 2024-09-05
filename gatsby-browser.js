@@ -1734,6 +1734,21 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           .querySelector(".Hero-Banner")
           .setAttribute("daa-lh", "Hero Banner");
 
+      } else if (window.location.pathname.indexOf("contact/sales/auto-redact") >= 0) {
+
+        document
+          .querySelector(".Auto-Redact-Contact-Us")
+          .closest("main")
+          .setAttribute("daa-lh", "Body");
+
+        document
+          .querySelector(".Auto-Redact-API")
+          .setAttribute("daa-lh", "Form Data API");
+
+        document
+          .querySelector(".Hero-Banner")
+          .setAttribute("daa-lh", "Hero Banner");
+
       } else if (window.location.pathname.indexOf("contact") >= 0) {
         document
           .querySelector(".Contact-Home")
