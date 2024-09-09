@@ -190,7 +190,7 @@ const AutoRedact = ({ }) => {
     ) {
       let pdfElectronicSealAPIData = {
         ...formValue,
-        formType: "pdfServices",
+        formType: "autoRedact",
         formId: randomString
       };
       try {
