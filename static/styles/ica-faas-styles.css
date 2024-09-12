@@ -1,0 +1,49 @@
+.ica-faas-header {
+    /*padding-left: 15px;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.row.textfield.FaaS-1{
+    display: none;
+}
+
+.row.textfield.FaaS-8{
+    display: none;
+}
+
+.row.textfield.FaaS-9{
+    display: none;
+}
+
+.row.dropdownlist.FaaS-14{
+    display: none;
+}
+
+.row.textfield.FaaS-10{
+    width: 250px;
+    padding-bottom: 0;
+}
+
+.row.textfield.FaaS-11{
+    width: 250px;
+    padding-bottom: 0;
+}
+
+.faas-form label {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+#userGreeting {
+    margin-bottom: 25px;
+}
+
+.row.submit {
+    display: block !important;
+}
+
+#Form120_submit {
+    width: 80px;
+    font-size: 14px !important;
+}
