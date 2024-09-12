@@ -272,30 +272,17 @@
         "ZM": "2699",
         "ZW": "2700"
     };
-    const REDIRECT_URL = "https://local-test.acrobat.com:11005/dc-integration-creation-app-cdn/main.html?api=pdf-services-api";
 
     function getFaasCountryValueForCountryCode(countryCode) {
         return COUNTRY_CODE_TO_FaaS_VALUE_MAPPING[countryCode] || "2580";
     }
 
-    function getPelicanParams(discoverApiResponseJson) {
-        const SCHEMA_ID_KEY = "{schema_id}";
-        const SCHEMA_ID_VALUE = "\"view_sdk\"";
-        const SCHEMA_VERSION_KEY = "{schema_version}";
-        const SCHEMA_VERSION_VALUE = "\"v1\"";
-
-        let pelicanUri = discoverApiResponseJson.templates.pelican_uri;
-        window.pelicanUri = pelicanUri;
-
-        let acceptHeaderPelicanCreate = discoverApiResponseJson.resources.pelican.create_record.accept["record_identifier.json"];
-        acceptHeaderPelicanCreate = acceptHeaderPelicanCreate.replace(SCHEMA_ID_KEY, SCHEMA_ID_VALUE);
-        acceptHeaderPelicanCreate = acceptHeaderPelicanCreate.replace(SCHEMA_VERSION_KEY, SCHEMA_VERSION_VALUE);
-        window.acceptHeaderPelicanCreate = acceptHeaderPelicanCreate;
-
-        let contentTypeHeaderPelicanCreate = discoverApiResponseJson.resources.pelican.create_record.content_type["create_record.json"];
-        contentTypeHeaderPelicanCreate = contentTypeHeaderPelicanCreate.replace(SCHEMA_ID_KEY, SCHEMA_ID_VALUE);
-        contentTypeHeaderPelicanCreate = contentTypeHeaderPelicanCreate.replace(SCHEMA_VERSION_KEY, SCHEMA_VERSION_VALUE);
-        window.contentTypeHeaderPelicanCreate = contentTypeHeaderPelicanCreate;
+    function isStageOrProd(host) {
+        if (host.indexOf(('localhost') >= 0) || host.indexOf('developer-stage') >= 0) {
+            return 'stg1';
+        } else if (host.indexOf('developer.adobe.com') >= 0) {
+            return 'prod';
+        }
     }
 
     (function ($) {
@@ -303,7 +290,7 @@
             $("#form").faas({
                 "id": 120,
                 "l": "en_us", //locale
-                "d": REDIRECT_URL, //thank you page url
+                "d": "", //thank you page url
                 "as": false, /*auto submit - optional*/
                 "pc": { //pre-populate sources
                     "1": "js",
@@ -329,77 +316,17 @@
                     afterYiiLoadedCallback: () => {
                         console.log("Inside afterYiiLoadedCallback");
 
-                        $(".faas-header").css("display", "flex");
+                        $(".ica-faas-header").css("display", "flex");
                         $('#Form120_submit').val('Next');
                         $("#Form120_1").val(window.imsUserEmail);
                         $("#Form120_8").val(window.imsUserFirstName);
                         $("#Form120_9").val(window.imsUserLastName);
                         $("#Form120_14").val(getFaasCountryValueForCountryCode(window.imsCountryCode));
-
-                        const discoveryAPIConfig = {
-                            url: "https://dc-api-dev.adobe.io/discovery",
-                            method: "GET",
-                            headers: {
-                                "Accept": "application/vnd.adobe.dc+json; profile=\"https://dc-api-dev.adobe.io/schemas/discovery_v1.json\"",
-                                "Authorization": `Bearer ${window.imsAccessToken}`
-                            },
-                            success: (response) => {
-                                // console.log("Discovery call success", JSON.stringify(response));
-                                getPelicanParams(response);
-                                // console.log("window.pelicanUri", window.pelicanUri);
-                                // console.log("window.acceptHeaderPelicanCreate", window.acceptHeaderPelicanCreate);
-                                // console.log("window.contentTypeHeaderPelicanCreate", window.contentTypeHeaderPelicanCreate);
-                                // sendEvent(AnalyticsConstants.PELICAN_API_CALL, {subcategory: "Create", type: "Success"});
-                            },
-                            error: (response) => {
-                                console.log("Discovery call failed", JSON.stringify(response));
-                                // sendEvent(AnalyticsConstants.PELICAN_API_CALL, {subcategory: "Create", type: "Fail"});
-                            },
-                        };
-
-                        // console.log("Sending request to discovery service", settings);
-
-                        $.ajax(discoveryAPIConfig);
                     },
 
                     afterSubmitCallback: function (data) {
-                        // Redirect to the thank you page outside of the iframe
-
                         console.log("Inside afterSubmitCallback");
                         window.parent.postMessage('afterSubmitCallback executed', 'https://local-test.acrobat.com:11005');
-
-                        const pelicanCreateAPIConfig = {
-                            url: window.pelicanUri + "/create_record",
-                            method: "POST",
-                            headers: {
-                                "Accept": window.acceptHeaderPelicanCreate,
-                                "Content-Type": window.contentTypeHeaderPelicanCreate,
-                                "Authorization": `Bearer ${window.imsAccessToken}`
-                            },
-
-                            data: JSON.stringify({
-                                "resource_data": {
-                                    "user_id": window.imsUserId,
-                                    "pdf_services_faas_form_details": {
-                                        "is_submitted": true,
-                                        "updated_at_ts": new Date().valueOf(),
-                                    }
-                                }
-                            }),
-                            success: (response) => {
-                                console.log("Successfully saved FaaS Form submission via pelican service", JSON.stringify(response));
-                                // sendEvent(AnalyticsConstants.PELICAN_API_CALL, {subcategory: "Create", type: "Success"});
-
-                            },
-                            error: (response) => {
-                                console.log("Failed to save FaaS Form submission via pelican service", JSON.stringify(response));
-                                // sendEvent(AnalyticsConstants.PELICAN_API_CALL, {subcategory: "Create", type: "Fail"});
-                            },
-                        };
-
-                        console.log("Sending request to pelican service", pelicanCreateAPIConfig);
-
-                        $.ajax(pelicanCreateAPIConfig);
                     }
                 }
             });
@@ -408,32 +335,17 @@
 </script>
 <div class="resource-form">
     <div>
-        <!--        <div class="faas-header">-->
-        <!--            <div class="caption">-->
-        <!--                Get info about pricing, billing, and licensing.-->
-        <!--            </div>-->
-        <!--            <div class="faq-text">-->
-        <!--                Please visit our-->
-        <!--                <a class="link-content" target="_blank" href="/document-services/faq/sales/">-->
-        <!--                    FAQ-->
-        <!--                </a>-->
-        <!--                or fill out the form below to speak with an Adobe rep.-->
-        <!--            </div>-->
-        <!--            <div class="faq-text">-->
-        <!--                For technical inquiries, submit a tech support request-->
-        <!--                <a class="link-content" target="_blank" href="/document-services/pricing/contact/support/">-->
-        <!--                    here.-->
-        <!--                </a>-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <div class="ica-faas-header">
-            <div id="userGreeting">
-            </div>
-            <div>
-                Thank you for your interest in Acrobat Services API. Please fill out the form below to get started with
-                our Free Tier and get access to all 20+ PDF Services including PDF Extract, Document Generation, Create
-                PDF, PDF Accessibility Auto-Tag and more.
+        <div>
+            <div class="ica-faas-header">
+                <div id="userGreeting">
+                </div>
+                <div>
+                    Thank you for your interest in Acrobat Services API. Please fill out the form below to get started
+                    with
+                    our Free Tier and get access to all 20+ PDF Services including PDF Extract, Document Generation,
+                    Create
+                    PDF, PDF Accessibility Auto-Tag and more.
+                </div>
             </div>
             <div class="faas faas-form" id="form">
             </div>

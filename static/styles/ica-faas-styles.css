@@ -1,6 +1,10 @@
+html * {
+    color: #222;
+    font-size: 14px;
+}
+
 .ica-faas-header {
-    /*padding-left: 15px;*/
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -44,6 +48,26 @@
 }
 
 #Form120_submit {
-    width: 80px;
+    width: 80px !important;
     font-size: 14px !important;
+}
+
+label {
+    color: #464646 !important;
+    font-size: 12px !important;
+}
+
+a {
+    color: #0054b6 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+.errorMessage {
+    color: #d31510 !important;
+    margin: 5px 0 0 !important;
+    font-size: 12px !important;
 }
