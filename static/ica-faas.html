@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="spectrum spectrum--light spectrum--medium" dir="ltr" lang="eng">
+
+<head>
+    <title> FaaS Test FaaS form </title>
+    <link rel="stylesheet" href="styles/ica-faas-styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/lazy-styles.css">
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" language="javascript"
+        src="https://apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
+<script>
+    function getEnvironment() {
+        const host = window.location.host;
+        if (host.indexOf(('local') >= 0) || host.indexOf('developer-stage') >= 0) {
+            return 'stage';
+        } else if (host.indexOf('developer.adobe.com') >= 0) {
+            return 'prod';
+        }
+    }
+
+    const env = getEnvironment();
+
+    function logInConsole(title, message) {
+        if (env === 'stage') {
+            console.log(title, message);
+        }
+    }
+
+
+    window.adobeid = {
+        client_id: "dc-services-self-onboarding",
+        scope: "AdobeID,openid,DCAPI",
+        environment: env === "stage" ? "stg1" : "prod",
+        autoValidateToken: true,
+        async onReady() {
+            logInConsole('Adobe IMS ready');
+            if (window.adobeIMS.isSignedInUser()) {
+                logInConsole('User is signed in');
+                const imsUserProfile = await adobeIMS.getProfile();
+                logInConsole('User profile', imsUserProfile);
+                window.imsUserFirstName = imsUserProfile.first_name;
+                window.imsUserLastName = imsUserProfile.last_name;
+                window.imsUserEmail = imsUserProfile.email;
+                window.imsCountryCode = imsUserProfile.countryCode;
+                document.getElementById('userGreeting').textContent = `Hello ${window.imsUserFirstName}!`;
+            } else {
+                window.adobeIMS.signIn();
+                logInConsole('User is not signed in');
+            }
+        },
+    };
+
+    const imsLibScript = window.document.createElement("script");
+    if (env === "stage") {
+        imsLibScript.setAttribute("src", "https://auth-stg1.services.adobe.com/imslib/imslib.js");
+    } else {
+        imsLibScript.setAttribute("src", "https://auth.services.adobe.com/imslib/imslib.min.js");
+    }
+    window.document.head.appendChild(imsLibScript);
+
+</script>
+
+<script type="text/javascript" language="javascript">
+    const COUNTRY_CODE_TO_FaaS_VALUE_MAPPING = {
+        "US": "2580",
+        "GB": "1035",
+        "CA": "674",
+        "JP": "1579",
+        "IN": "1432",
+        "AF": "555",
+        "AL": "558",
+        "DZ": "859",
+        "AD": "546",
+        "AO": "561",
+        "AI": "557",
+        "AQ": "562",
+        "AG": "556",
+        "AR": "563",
+        "AM": "559",
+        "AW": "609",
+        "AU": "600",
+        "AT": "590",
+        "AZ": "610",
+        "BS": "669",
+        "BH": "635",
+        "BD": "613",
+        "BB": "612",
+        "BY": "672",
+        "BE": "614",
+        "BZ": "673",
+        "BJ": "637",
+        "BM": "638",
+        "BT": "670",
+        "BO": "640",
+        "BA": "611",
+        "BW": "671",
+        "BR": "641",
+        "IO": "1468",
+        "BN": "639",
+        "BG": "625",
+        "BF": "624",
+        "MM": "1730",
+        "BI": "636",
+        "KH": "1630",
+        "CM": "737",
+        "CV": "810",
+        "KY": "1654",
+        "CF": "690",
+        "TD": "2354",
+        "CL": "721",
+        "CN": "738",
+        "CX": "811",
+        "CC": "688",
+        "CO": "771",
+        "KM": "1632",
+        "CD": "689",
+        "CG": "691",
+        "CK": "720",
+        "CR": "807",
+        "HR": "1306",
+        "CY": "812",
+        "CZ": "813",
+        "DK": "840",
+        "DJ": "839",
+        "DM": "857",
+        "DO": "858",
+        "TL": "2439",
+        "EC": "860",
+        "EG": "863",
+        "SV": "2350",
+        "GQ": "1239",
+        "ER": "868",
+        "EE": "862",
+        "ET": "920",
+        "FK": "929",
+        "FO": "931",
+        "FJ": "928",
+        "FI": "921",
+        "FR": "932",
+        "GF": "1232",
+        "PF": "1883",
+        "GA": "1034",
+        "GM": "1236",
+        "GE": "1231",
+        "DE": "822",
+        "GH": "1233",
+        "GI": "1234",
+        "GR": "1240",
+        "GL": "1235",
+        "GD": "1230",
+        "GP": "1238",
+        "GT": "1295",
+        "GN": "1237",
+        "GW": "1296",
+        "GY": "1297",
+        "HT": "1328",
+        "HN": "1305",
+        "HK": "1298",
+        "HU": "1329",
+        "IS": "1471",
+        "ID": "1370",
+        "IQ": "1469",
+        "IE": "1398",
+        "IL": "1425",
+        "IT": "1472",
+        "CI": "719",
+        "JM": "1577",
+        "JO": "1578",
+        "KZ": "1655",
+        "KE": "1627",
+        "KI": "1631",
+        "KR": "1635",
+        "XK": "3141",
+        "KW": "1653",
+        "KG": "1629",
+        "LA": "1669",
+        "LV": "1678",
+        "LB": "1670",
+        "LS": "1675",
+        "LR": "1674",
+        "LY": "1679",
+        "LI": "1672",
+        "LT": "1676",
+        "LU": "1677",
+        "MO": "1732",
+        "MK": "1728",
+        "MG": "1726",
+        "MW": "1739",
+        "MY": "1774",
+        "MV": "1738",
+        "ML": "1729",
+        "MT": "1736",
+        "MH": "1727",
+        "MQ": "1733",
+        "MR": "1734",
+        "MU": "1737",
+        "YT": "2685",
+        "MX": "1740",
+        "FM": "930",
+        "MD": "1682",
+        "MC": "1681",
+        "MN": "1731",
+        "ME": "1725",
+        "MS": "1735",
+        "MA": "1680",
+        "MZ": "1793",
+        "NA": "1794",
+        "NR": "1838",
+        "NP": "1837",
+        "NL": "1800",
+        "AN": "560",
+        "NC": "1795",
+        "NZ": "1843",
+        "NI": "1799",
+        "NE": "1796",
+        "NG": "1798",
+        "NU": "1842",
+        "NF": "1797",
+        "NO": "1817",
+        "OM": "1856",
+        "PK": "1986",
+        "PS": "2046",
+        "PA": "1857",
+        "PG": "1884",
+        "PY": "2088",
+        "PE": "1858",
+        "PH": "1885",
+        "PN": "2045",
+        "PL": "1994",
+        "PT": "2047",
+        "QA": "2089",
+        "RO": "2091",
+        "RU": "2135",
+        "RW": "2247",
+        "RE": "2090",
+        "SH": "2276",
+        "KN": "1633",
+        "LC": "1671",
+        "PM": "2044",
+        "VC": "2646",
+        "BL": "3144",
+        "WS": "2683",
+        "SM": "2345",
+        "SA": "2248",
+        "SN": "2346",
+        "RS": "2134",
+        "SC": "2250",
+        "SL": "2344",
+        "SG": "2274",
+        "SK": "2339",
+        "SI": "2277",
+        "SB": "2249",
+        "SO": "2347",
+        "ZA": "2686",
+        "GS": "1294",
+        "SS": "3145",
+        "ES": "869",
+        "LK": "1673",
+        "SR": "2348",
+        "SJ": "2338",
+        "SZ": "2352",
+        "SE": "2252",
+        "CH": "692",
+        "ST": "2349",
+        "TW": "2525",
+        "TJ": "2437",
+        "TZ": "2547",
+        "TH": "2356",
+        "TG": "2355",
+        "TK": "2438",
+        "TO": "2442",
+        "TT": "2523",
+        "TN": "2441",
+        "TR": "2443",
+        "TM": "2440",
+        "TC": "2353",
+        "TV": "2524",
+        "UG": "2578",
+        "UA": "2548",
+        "AE": "547",
+        "UM": "2579",
+        "UY": "2641",
+        "UZ": "2644",
+        "VU": "2681",
+        "VA": "2645",
+        "VE": "2647",
+        "VN": "2679",
+        "VG": "2674",
+        "WF": "2682",
+        "EH": "867",
+        "YE": "2684",
+        "ZM": "2699",
+        "ZW": "2700"
+    };
+
+    function getFaasCountryValueForCountryCode(countryCode) {
+        return COUNTRY_CODE_TO_FaaS_VALUE_MAPPING[countryCode] || "2580";
+    }
+
+    (function ($) {
+        $(document).ready(function (e) {
+            $("#form").faas({
+                "id": 120,
+                "l": "en_us", //locale
+                "d": "", //thank you page url
+                "as": false, /*auto submit - optional*/
+                "pc": { //pre-populate sources
+                    "1": "js",
+                    "2": "faas_submission",
+                    "3": "sfdc",
+                    "4": 'demandbase'
+                },
+                "p": { // this is the prepopulation
+                    "js": { // this is manual prepopulation...
+                        "6": "marketing_web_form", //event type
+                        "7": "request_for_information", //Channel subtype
+                        "94": "3316", //SKU (DOCUMENT SERVICE)
+                        "36": "7015Y0000048OFxQAM", //campaign ID
+                        "77": "1", //allowmmmailind
+                        "78": "1", //ok to call
+                        "79": "1", //ok to mail
+                        "90": "ICA", //source system
+                        "92": "2846",
+                        "93": "2847"
+                    }
+                },
+                e: {
+                    afterYiiLoadedCallback: () => {
+                        logInConsole("Inside afterYiiLoadedCallback");
+                        $(".ica-faas-header").css("display", "flex");
+                        $('#Form120_submit').val('Next');
+                        $("#Form120_1").val(window.imsUserEmail);
+                        $("#Form120_8").val(window.imsUserFirstName);
+                        $("#Form120_9").val(window.imsUserLastName);
+                        $("#Form120_14").val(getFaasCountryValueForCountryCode(window.imsCountryCode));
+                    },
+
+                    afterSubmitCallback: function (data) {
+                        logInConsole("Inside afterSubmitCallback");
+                        window.parent.postMessage('afterSubmitCallback executed', '*');
+                    }
+                }
+            });
+        });
+    })(jQuery);
+</script>
+<div class="resource-form">
+    <div>
+        <div>
+            <div class="ica-faas-header">
+                <div id="userGreeting">
+                </div>
+                <div>
+                    Thank you for your interest in Acrobat Services API. Please fill out the form below to get started
+                    with
+                    our Free Tier and get access to all 20+ PDF Services including PDF Extract, Document Generation,
+                    Create
+                    PDF, PDF Accessibility Auto-Tag and more.
+                </div>
+            </div>
+            <div class="faas faas-form" id="form">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
