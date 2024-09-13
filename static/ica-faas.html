@@ -39,8 +39,6 @@
                 window.imsUserLastName = imsUserProfile.last_name;
                 window.imsUserEmail = imsUserProfile.email;
                 window.imsCountryCode = imsUserProfile.countryCode;
-                window.imsUserId = imsUserProfile.userId;
-                window.imsAccessToken = window.adobeIMS.getAccessToken().token
                 document.getElementById('userGreeting').textContent = `Hello ${window.imsUserFirstName}!`;
             } else {
                 window.adobeIMS.signIn();
