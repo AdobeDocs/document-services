@@ -15,7 +15,7 @@
 <script>
     function getEnvironment() {
         const host = window.location.host;
-        if (host.indexOf(('localhost') >= 0) || host.indexOf('developer-stage') >= 0) {
+        if (host.indexOf(('local') >= 0) || host.indexOf('developer-stage') >= 0) {
             return 'stage';
         } else if (host.indexOf('developer.adobe.com') >= 0) {
             return 'prod';
@@ -24,17 +24,24 @@
 
     const env = getEnvironment();
 
+    function logInConsole(title, message) {
+        if (env === 'stage') {
+            console.log(title, message);
+        }
+    }
+
+
     window.adobeid = {
         client_id: "dc-services-self-onboarding",
         scope: "AdobeID,openid,DCAPI",
         environment: env === "stage" ? "stg1" : "prod",
         autoValidateToken: true,
         async onReady() {
-            console.log('Adobe IMS ready');
+            logInConsole('Adobe IMS ready');
             if (window.adobeIMS.isSignedInUser()) {
-                console.log('User is signed in');
+                logInConsole('User is signed in');
                 const imsUserProfile = await adobeIMS.getProfile();
-                console.log('User profile', imsUserProfile);
+                logInConsole('User profile', imsUserProfile);
                 window.imsUserFirstName = imsUserProfile.first_name;
                 window.imsUserLastName = imsUserProfile.last_name;
                 window.imsUserEmail = imsUserProfile.email;
@@ -42,7 +49,7 @@
                 document.getElementById('userGreeting').textContent = `Hello ${window.imsUserFirstName}!`;
             } else {
                 window.adobeIMS.signIn();
-                console.log('User is not signed in');
+                logInConsole('User is not signed in');
             }
         },
     };
@@ -323,8 +330,7 @@
                 },
                 e: {
                     afterYiiLoadedCallback: () => {
-                        console.log("Inside afterYiiLoadedCallback");
-
+                        logInConsole("Inside afterYiiLoadedCallback");
                         $(".ica-faas-header").css("display", "flex");
                         $('#Form120_submit').val('Next');
                         $("#Form120_1").val(window.imsUserEmail);
@@ -334,8 +340,8 @@
                     },
 
                     afterSubmitCallback: function (data) {
-                        console.log("Inside afterSubmitCallback");
-                        window.parent.postMessage('afterSubmitCallback executed', 'https://local-test.acrobat.com:11005');
+                        logInConsole("Inside afterSubmitCallback");
+                        window.parent.postMessage('afterSubmitCallback executed', '*');
                     }
                 }
             });
