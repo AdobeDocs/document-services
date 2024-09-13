@@ -8,16 +8,26 @@
     <link rel="stylesheet" href="styles/lazy-styles.css">
 </head>
 
-
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript" language="javascript"
-        src="https://qa.apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
+        src="https://apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
 <script>
+    function getEnvironment() {
+        const host = window.location.host;
+        if (host.indexOf(('localhost') >= 0) || host.indexOf('developer-stage') >= 0) {
+            return 'stage';
+        } else if (host.indexOf('developer.adobe.com') >= 0) {
+            return 'prod';
+        }
+    }
+
+    const env = getEnvironment();
+
     window.adobeid = {
         client_id: "dc-services-self-onboarding",
         scope: "AdobeID,openid,DCAPI",
-        environment: 'stg1',
+        environment: env === "stage" ? "stg1" : "prod",
         autoValidateToken: true,
         async onReady() {
             console.log('Adobe IMS ready');
@@ -38,8 +48,17 @@
             }
         },
     };
+
+    const imsLibScript = window.document.createElement("script");
+    if (env === "stage") {
+        imsLibScript.setAttribute("src", "https://auth-stg1.services.adobe.com/imslib/imslib.js");
+    } else {
+        imsLibScript.setAttribute("src", "https://auth.services.adobe.com/imslib/imslib.min.js");
+    }
+    window.document.head.appendChild(imsLibScript);
+
 </script>
-<script src="https://auth-stg1.services.adobe.com/imslib/imslib.js"></script>
+
 <script type="text/javascript" language="javascript">
     const COUNTRY_CODE_TO_FaaS_VALUE_MAPPING = {
         "US": "2580",
@@ -275,14 +294,6 @@
 
     function getFaasCountryValueForCountryCode(countryCode) {
         return COUNTRY_CODE_TO_FaaS_VALUE_MAPPING[countryCode] || "2580";
-    }
-
-    function isStageOrProd(host) {
-        if (host.indexOf(('localhost') >= 0) || host.indexOf('developer-stage') >= 0) {
-            return 'stg1';
-        } else if (host.indexOf('developer.adobe.com') >= 0) {
-            return 'prod';
-        }
     }
 
     (function ($) {
