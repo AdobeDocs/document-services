@@ -306,7 +306,7 @@
             $("#form").faas({
                 "id": 120,
                 "l": "en_us", //locale
-                "d": "", //thank you page url
+                "d": "/ica-faas.html", //thank you page url
                 "as": false, /*auto submit - optional*/
                 "pc": { //pre-populate sources
                     "1": "js",
@@ -337,6 +337,7 @@
                         $("#Form120_8").val(window.imsUserFirstName);
                         $("#Form120_9").val(window.imsUserLastName);
                         $("#Form120_14").val(getFaasCountryValueForCountryCode(window.imsCountryCode));
+                        window.parent.postMessage('afterYiiLoadedCallback executed', '*');
                     },
 
                     afterSubmitCallback: function (data) {
