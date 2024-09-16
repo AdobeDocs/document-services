@@ -50,11 +50,20 @@ html * {
 #Form120_submit {
     width: 80px !important;
     font-size: 14px !important;
+    background-color: #0265DC !important;
+}
+
+#Form120_submit:hover {
+    background-color: #0054B6 !important;
 }
 
 label {
     color: #464646 !important;
     font-size: 12px !important;
+}
+
+.legalnotice {
+    font-size: 14px !important;
 }
 
 a {
