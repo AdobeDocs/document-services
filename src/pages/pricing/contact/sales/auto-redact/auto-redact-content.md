@@ -6,10 +6,7 @@ title: Adobe Developer - Acrobat Services Beta Program for Adobe PDF Embed Check
 
 ## Interested in joining the Beta Program for Adobe PDF Auto Redact API?
 
-The Adobe PDF Auto-Redact tool accelerates the redaction of your documents by suggesting potential Personally Identifiable Information (PII) that you may want to remove from your document.
-
-<TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content accessibility-text-blade"/>
-
+The Adobe PDF Auto-Redact tool accelerates the redaction of your documents by suggesting potential Personally Identifiable Information (PII) that you may want to remove from your document. <br />
 You stay in full control by choosing whether the items identified by the AI-powered solution should be redacted, and you can manually add more fields to be redacted.
 
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content accessibility-text-blade"/>
