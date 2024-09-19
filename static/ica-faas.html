@@ -30,7 +30,6 @@
         }
     }
 
-
     window.adobeid = {
         client_id: "dc-services-self-onboarding",
         scope: "AdobeID,openid,DCAPI",
@@ -48,6 +47,8 @@
                 window.imsCountryCode = imsUserProfile.countryCode;
                 document.getElementById('userGreeting').textContent = `Hello ${window.imsUserFirstName}!`;
             } else {
+                logInConsole('User is not signed in, signing in...');
+                window.parent.postMessage('userNotSignedIn', '*');
                 window.adobeIMS.signIn();
                 logInConsole('User is not signed in');
             }
@@ -306,7 +307,7 @@
             $("#form").faas({
                 "id": 120,
                 "l": "en_us", //locale
-                "d": "", //thank you page url
+                "d": "/ica-faas.html", //thank you page url
                 "as": false, /*auto submit - optional*/
                 "pc": { //pre-populate sources
                     "1": "js",
@@ -337,6 +338,8 @@
                         $("#Form120_8").val(window.imsUserFirstName);
                         $("#Form120_9").val(window.imsUserLastName);
                         $("#Form120_14").val(getFaasCountryValueForCountryCode(window.imsCountryCode));
+                        window.parent.postMessage('afterYiiLoadedCallback executed', '*');
+                        logInConsole("window.imsUserEmail", window.imsUserEmail);
                     },
 
                     afterSubmitCallback: function (data) {
