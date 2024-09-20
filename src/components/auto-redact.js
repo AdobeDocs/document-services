@@ -1,6 +1,3 @@
-// import classNames from "classnames";
-// import { css } from "@emotion/react";
-// import "@spectrum-css/typography";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import InputField from "./formComponent/InputField";
@@ -43,26 +40,27 @@ const volumeOPtions = [
   }
 ];
 
-const PdfAccessibility = ({}) => {
+const AutoRedact = ({ }) => {
   const [errorMsg, seterrorMsg] = useState({});
   const [formValue, setFormValue] = useState({});
-  const [btnDisable, setBtnDisable] = useState(false)
+  const [btnDisable, setBtnDisable] = useState(false);
 
-  const getBlackListWords = str => {
-    let blacklistWords = ["death", "kill", "murder"];
-    let words = [];
-    blacklistWords.forEach(word =>
-      str
-        .replace(/ /g, "")
-        .toLowerCase()
-        .includes(word.replace(/ /g, "").toLowerCase())
-        ? words.push(word)
-        : null
-    );
-    return words;
-  };
+  const isBrowser = typeof window !== "undefined";
+  let targetURL;
 
-  const onChnage = e => {
+  if (isBrowser) {
+    if (
+      window.location.host.indexOf("developer.adobe.com") >= 0 ||
+      window.location.host.indexOf("adobe.io") >= 0
+    ) {
+      targetURL = "https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit";
+    }
+    else {
+      targetURL = "https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage";
+    }
+  }
+
+  const onChange = e => {
     if (e.target.id === "firstName") {
       setFormValue({ ...formValue, firstName: e.target.value });
     }
@@ -87,31 +85,12 @@ const PdfAccessibility = ({}) => {
     if (e.target.id === "expected_monthly_volume") {
       setFormValue({ ...formValue, expected_monthly_volume: e.target.value });
     }
-    if (e.target.id === "use_case") {
-      setFormValue({ ...formValue, use_case: e.target.value });
-    }
     if (e.target.id === "checkbox") {
       setFormValue({ ...formValue, checkbox: e.target.checked });
     }
   };
 
-  const isBrowser = typeof window !== "undefined";
-  let targetURL;
-
-  if (isBrowser) {
-    if (
-      window.location.host.indexOf("developer.adobe.com") >= 0 ||
-      window.location.host.indexOf("adobe.io") >= 0
-    ) {
-      targetURL = " https://927029-dcpm.adobeioruntime.net/api/v1/web/default/submit";
-    }
-    else {
-      targetURL = " https://927029-dcpm-stage.adobeioruntime.net/api/v1/web/default/submitstage";
-    }
-  }
-
   const onSubmit = async e => {
-    
     e.preventDefault();
     setBtnDisable(true)
 
@@ -163,12 +142,6 @@ const PdfAccessibility = ({}) => {
     } else {
       error.company_website = "";
     }
-    if (_isEmpty(formValue?.phone)) {
-      error.phone = "Required *";
-      setBtnDisable(false)
-    } else {
-      error.phone = "";
-    }
     if (_isEmpty(formValue?.job_title)) {
       error.job_title = "Required *";
       setBtnDisable(false)
@@ -190,19 +163,6 @@ const PdfAccessibility = ({}) => {
     } else {
       error.expected_monthly_volume = "";
     }
-    if (_isEmpty(formValue?.use_case)) {
-      error.use_case = "Required *";
-      setBtnDisable(false)
-    } else {
-      let foundWords = getBlackListWords(formValue?.use_case);
-      checkBlackWords = foundWords.length > 0;
-      if (foundWords.length > 0) {
-        error.use_case = "Please avoid inappropriate words";
-        setBtnDisable(false)
-      } else {
-        error.use_case = "";
-      }
-    }
     if (formValue?.checkbox !== true) {
       error.checkbox = "Required *";
       setBtnDisable(false)
@@ -221,18 +181,16 @@ const PdfAccessibility = ({}) => {
       !blacklist.test(formValue?.business_email) &&
       !_isEmpty(formValue?.company_website) &&
       !blacklist.test(formValue?.company_website) &&
-      !_isEmpty(formValue?.phone) &&
       !_isEmpty(formValue?.job_title) &&
       !blacklist.test(formValue?.job_title) &&
       !_isEmpty(formValue?.region) &&
       !_isEmpty(formValue?.expected_monthly_volume) &&
-      !_isEmpty(formValue?.use_case) &&
       !checkBlackWords &&
       formValue?.checkbox == true
     ) {
-      let pdfAccessibilityData = {
+      let pdfElectronicSealAPIData = {
         ...formValue,
-        formType: "pdfAccessibility",
+        formType: "autoRedact",
         formId: randomString
       };
       try {
@@ -242,9 +200,8 @@ const PdfAccessibility = ({}) => {
             Accept: "application/json",
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(pdfAccessibilityData)
+          body: JSON.stringify(pdfElectronicSealAPIData)
         };
-
         const resp = await fetch(
           targetURL,
           config
@@ -254,7 +211,6 @@ const PdfAccessibility = ({}) => {
           setFormValue({
             firstName: "",
             lastName: "",
-            use_case: "",
             checkbox: false
           });
           alert(
@@ -268,14 +224,14 @@ const PdfAccessibility = ({}) => {
     }
   };
   return (
-    <form className="form-container Sales-Form" id="my_form">
+    <form className="form-container Auto-Redact-API" id="my_form">
       <div className="head-container-accessibility">
         <div className="caption">
-          Request early access to the PDF Accessibility Auto-Tag API
+          Request access to PDF Auto-Redact Service Beta Program
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}
-          <a className="link-content" href="/document-services/pricing/contact/support/">
+          <a className="link-content" href="https://developer.adobe.com/document-services/pricing/contact/support/">
             here.
           </a>
         </div>
@@ -289,7 +245,7 @@ const PdfAccessibility = ({}) => {
           className="lnput-field"
           labelClassName="lable-content text-content"
           value={formValue?.firstName}
-          onChange={e => onChnage(e)}
+          onChange={e => onChange(e)}
           errorMsg={errorMsg.firstName}
         />
         <InputField
@@ -300,7 +256,7 @@ const PdfAccessibility = ({}) => {
           className="lnput-field"
           labelClassName="lable-content text-content"
           value={formValue?.lastName}
-          onChange={e => onChnage(e)}
+          onChange={e => onChange(e)}
           errorMsg={errorMsg.lastName}
         />
       </div>
@@ -313,7 +269,7 @@ const PdfAccessibility = ({}) => {
           className="lnput-field"
           labelClassName="lable-content text-content"
           value={formValue?.business_email}
-          onChange={e => onChnage(e)}
+          onChange={e => onChange(e)}
           errorMsg={errorMsg.business_email}
         />
         <InputField
@@ -324,7 +280,7 @@ const PdfAccessibility = ({}) => {
           className="lnput-field"
           labelClassName="lable-content text-content"
           value={formValue?.company_website}
-          onChange={e => onChnage(e)}
+          onChange={e => onChange(e)}
           errorMsg={errorMsg.company_website}
         />
       </div>
@@ -337,7 +293,7 @@ const PdfAccessibility = ({}) => {
           className="lnput-field"
           labelClassName="lable-content text-content"
           value={formValue?.phone}
-          onChange={e => onChnage(e)}
+          onChange={e => onChange(e)}
           errorMsg={errorMsg.phone}
         />
         <InputField
@@ -348,7 +304,7 @@ const PdfAccessibility = ({}) => {
           className="lnput-field"
           labelClassName="lable-content text-content"
           value={formValue?.job_title}
-          onChange={e => onChnage(e)}
+          onChange={e => onChange(e)}
           errorMsg={errorMsg.job_title}
         />
       </div>
@@ -363,7 +319,7 @@ const PdfAccessibility = ({}) => {
           options={regionOptions}
           initialOption="Select your geography"
           value={formValue?.region}
-          onChange={e => onChnage(e)}
+          onChange={e => onChange(e)}
           errorMsg={errorMsg.region}
         />
         <SelectField
@@ -376,47 +332,31 @@ const PdfAccessibility = ({}) => {
           options={volumeOPtions}
           initialOption="Select your anticipated volume"
           value={formValue?.expected_monthly_volume}
-          onChange={e => onChnage(e)}
+          onChange={e => onChange(e)}
           errorMsg={errorMsg.expected_monthly_volume}
         />
       </div>
-      <InputField
-        id="use_case"
-        textAreaPlaceholder="Use Case"
-        type="textarea"
-        rows="6"
-        areaClassName="area-containers text-content"
-        labelClassName="lable-content text-content"
-        placeholder="Please describe your intended application of our PDF Services APIs."
-        value={formValue?.use_case}
-        onChange={e => onChnage(e)}
-        errorMsg={errorMsg.use_case}
-        divClassName="area-content-accessibility"
-      />
       <div className="content-container-accessibility">
         <div className="checkbox-container">
           <CheckBoxField
-            className={`input-checkbox ${
-              errorMsg.checkbox === "Required *" ? "required-checkbox" : ""
-            }`}
+            className={`input-checkbox ${errorMsg.checkbox === "Required *" ? "required-checkbox" : ""
+              }`}
             id="checkbox"
             name="checkbox"
-            onChange={e => onChnage(e)}
+            onChange={e => onChange(e)}
             value={formValue?.checkbox}
             checked={formValue?.checkbox}
           />
         </div>
         <div className="text-content checkbox-text-container">
           The{" "}
-          <a href="https://www.adobe.com/privacy.html" className="link-content">
+          <a href="https://www.adobe.com/privacy/policy.html" className="link-content">
             Adobe family of companies
           </a>{" "}
-          would like to keep you informed about Acrobat Services APIs, which
-          may include contacting you via email. By checking this box, you agree
-          to being contacted via email. Please see our{" "}
+          would like to keep you informed about Acrobat Services APIs, which may include contacting you via email. By checking this box, you agree to being contacted via email. Please see our{" "}
           <a
             target="_blank"
-            href="https://www.adobe.com/privacy.html"
+            href="https://www.adobe.com/privacy/policy.html"
             className="link-content"
           >
             Privacy Policy
@@ -429,16 +369,16 @@ const PdfAccessibility = ({}) => {
           By clicking Submit, I agree that I have read and accepted the{" "}
           <a
             target="_blank"
-            href="https://www.adobe.com/legal/terms.html"
+            href="https://www.adobe.com/content/dam/cc/en/legal/documents/Prerelease-Software-License-Agreement_20240827-PDF-Auto-Redact.pdf"
             className="link-content"
           >
-            Terms of Use
+            License Agreement for Prerelease Software, PDF Auto-Redact Service.
           </a>
           .
         </div>
       </div>
       <div className="button-container">
-        <button className={ btnDisable ? "btn-disable button-content" : "button-content"}  disabled={btnDisable} onClick={onSubmit} type="submit">
+        <button className={btnDisable ? "btn-disable button-content" : "button-content"} disabled={btnDisable} onClick={onSubmit} type="submit">
           <label className={btnDisable ? "btn-cursor button-label" : "button-label"}>Submit</label>
         </button>
       </div>
@@ -446,9 +386,9 @@ const PdfAccessibility = ({}) => {
   );
 };
 
-PdfAccessibility.propTypes = {
+AutoRedact.propTypes = {
   theme: PropTypes.string,
   content: PropTypes.string
 };
 
-export { PdfAccessibility };
+export { AutoRedact };

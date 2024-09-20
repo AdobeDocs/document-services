@@ -1674,6 +1674,44 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
             link.href = `${baseurl}`;
           }
         })
+      } else if (window.location.pathname.indexOf("contact/sales/form-data-api") >= 0) {
+
+        document
+          .querySelector(".Form-Data-API-ContactUs")
+          .closest("main")
+          .setAttribute("daa-lh", "Body");
+
+        document
+          .querySelector(".Form-Data-API-ContactUs")
+          .setAttribute("daa-lh", "Form-Data-API-Header");
+
+        document
+          .querySelector(".Form-Data-API")
+          .setAttribute("daa-lh", "Form Data API");
+
+        document.querySelectorAll(".Form-Data-API a").forEach((link) => {
+          link.setAttribute("daa-ll", `Form-Data-API | ${link.textContent}`);
+        });
+
+      } else if (window.location.pathname.indexOf("contact/sales/auto-redact") >= 0) {
+
+        document
+          .querySelector(".Auto-Redact-Contact-Us")
+          .closest("main")
+          .setAttribute("daa-lh", "Body");
+
+        document
+          .querySelector(".Auto-Redact-Contact-Us")
+          .setAttribute("daa-lh", "Auto-Redact-Contact-Us");
+
+        document
+          .querySelector(".Auto-Redact-API")
+          .setAttribute("daa-lh", "Auto-Redact-API");
+
+          document.querySelectorAll(".Auto-Redact-API a").forEach((link) => {
+            link.setAttribute("daa-ll", `Auto-Redact-API | ${link.textContent}`);
+          });
+
       } else if (window.location.pathname.indexOf("contact/sales") >= 0) {
         document
           .querySelector(".Sales-ContactUs")
@@ -1718,21 +1756,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       } else if (window.location.pathname.indexOf("contacts") >= 0) {
 
       } else if (window.location.pathname.indexOf("contact/sales/seal") >= 0) {
-
-      } else if (window.location.pathname.indexOf("contact/sales/form-data-api") >= 0) {
-
-        document
-          .querySelector(".Form-Data-API-ContactUs")
-          .closest("main")
-          .setAttribute("daa-lh", "Body");
-
-        document
-          .querySelector(".Form-Data-API")
-          .setAttribute("daa-lh", "Form Data API");
-
-        document
-          .querySelector(".Hero-Banner")
-          .setAttribute("daa-lh", "Hero Banner");
 
       } else if (window.location.pathname.indexOf("contact") >= 0) {
         document
