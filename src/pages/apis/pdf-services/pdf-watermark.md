@@ -382,5 +382,5 @@ class PDFWatermark:
             logging.exception(f'Exception encountered while executing operation: {e}')
 
     if __name__ == "__main__":
-        PDFWatermark:()
+        PDFWatermark()
 ```
