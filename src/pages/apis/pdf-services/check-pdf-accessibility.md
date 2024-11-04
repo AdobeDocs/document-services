@@ -31,6 +31,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/accessib
 // Get the samples from https://github.com/adobe/pdfservices-node-sdk-samples
 // Run the sample:
 // node src/pdfaccessibilitychecker/pdf-accessibility-checker.js
+
 const {
     ServicePrincipalCredentials,
     PDFServices,
@@ -108,6 +109,7 @@ const fs = require("fs");
 // Run the sample:
 // cd PDFAccessibilityChecker/
 // dotnet run PDFAccessibilityChecker.csproj
+
 namespace PDFAccessibilityChecker
 {
     public class Program {
@@ -184,6 +186,7 @@ namespace PDFAccessibilityChecker
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.pdfaccessibilitychecker.PDFAccessibilityChecker
+
 public class PDFAccessibilityChecker {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PDFAccessibilityChecker.class);
