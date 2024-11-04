@@ -22,9 +22,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/accessib
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
-    "assetID": "urn:aaid:AS:UE1:54cbf87f-d7f5-4918-8e4b-9f1878678e68",
-    "pageStart":1,
-    "pageEnd":5
+    "assetID": "urn:aaid:AS:UE1:54cbf87f-d7f5-4918-8e4b-9f1878678e68"
 }'
 ```
 #### Node js
@@ -32,8 +30,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/accessib
 ```js
 // Get the samples from https://github.com/adobe/pdfservices-node-sdk-samples
 // Run the sample:
-// node src/pdfaccessibilitychecker/pdf-accessibility-checker-with-options.js
-
+// node src/pdfaccessibilitychecker/pdf-accessibility-checker.js
 const {
     ServicePrincipalCredentials,
     PDFServices,
@@ -65,11 +62,8 @@ const fs = require("fs");
             mimeType: MimeType.PDF
         });
 
-        // Create parameters for the job
-        const params = new PDFAccessibilityCheckerParams({pageStart:1, pageEnd:5});
-
         // Create a new job instance
-        const job = new PDFAccessibilityCheckerJob({inputAsset, params});
+        const job = new PDFAccessibilityCheckerJob({inputAsset});
 
         // Submit the job and get the job result
         const pollingURL = await pdfServices.submit({job});
@@ -112,10 +106,9 @@ const fs = require("fs");
 ```clike
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_net_samples
 // Run the sample:
-// cd PDFAccessibilityCheckerWithOptions/
-// dotnet run PDFAccessibilityCheckerWithOptions.csproj
-
-namespace PDFAccessibilityCheckerWithOptions
+// cd PDFAccessibilityChecker/
+// dotnet run PDFAccessibilityChecker.csproj
+namespace PDFAccessibilityChecker
 {
     public class Program {
         private static readonly ILog log = LogManager.GetLogger(typeof (Program));
@@ -136,16 +129,8 @@ namespace PDFAccessibilityCheckerWithOptions
                 using Stream inputStream = File.OpenRead(@"checkerPDFInput.pdf");
                 IAsset inputDocumentAsset = pdfServices.Upload(inputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
 
-                // Set up PDF Accessibility Checker parameters
-                PDFAccessibilityCheckerParams pdfAccessibilityCheckerParams = PDFAccessibilityCheckerParams
-                    .PDFAccessibilityCheckerParamsBuilder()
-                    .WithPageStart(1)
-                    .WithPageEnd(5)
-                    .Build();
-
                 // Create the PDF Accessibility Checker job instance
-                PDFAccessibilityCheckerJob pdfAccessibilityCheckerJob =
-                    new PDFAccessibilityCheckerJob(inputDocumentAsset).SetParams(pdfAccessibilityCheckerParams);
+                PDFAccessibilityCheckerJob pdfAccessibilityCheckerJob = new PDFAccessibilityCheckerJob(inputDocumentAsset);
 
                 // Submits the job and gets the job result
                 String location = pdfServices.Submit(pdfAccessibilityCheckerJob);
@@ -198,11 +183,10 @@ namespace PDFAccessibilityCheckerWithOptions
 ```javascript
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
-// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.pdfaccessibilitychecker.PDFAccessibilityCheckerWithOptions
+// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.pdfaccessibilitychecker.PDFAccessibilityChecker
+public class PDFAccessibilityChecker {
 
-public class PDFAccessibilityCheckerWithOptions {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(PDFAccessibilityCheckerWithOptions.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PDFAccessibilityChecker.class);
 
     public static void main(String[] args) {
 
@@ -220,13 +204,8 @@ public class PDFAccessibilityCheckerWithOptions {
             // Creates an asset(s) from source file(s) and upload
             Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
 
-            // Creates parameters for the job
-            PDFAccessibilityCheckerParams pdfAccessibilityCheckerParams = PDFAccessibilityCheckerParams
-                .pdfAccessibilityCheckerParamsBuilder().withPageStart(1).withPageEnd(5).build();
-        
             // Creates a new job instance
-            PDFAccessibilityCheckerJob pdfAccessibilityCheckerJob = new PDFAccessibilityCheckerJob(asset)
-                .setParams(pdfAccessibilityCheckerParams);
+            PDFAccessibilityCheckerJob pdfAccessibilityCheckerJob = new PDFAccessibilityCheckerJob(asset);
             
             // Submit the job and gets the job result
             String location = pdfServices.submit(PDFAccessibilityCheckerJob);
@@ -288,13 +267,9 @@ class PDFAccessibilityChecker:
             
             # Creates an asset(s) from source file(s) and upload
             input_asset = pdf_services.upload(input_stream=input_stream, mime_type=PDFServicesMediaType.PDF)
-            
-            # Create parameters for the job
-            pdf_accessibility_checker_params = PDFAccessibilityCheckerParams(page_start=1, page_end=5)
-            
+    
             # Creates a new job instance
-            pdf_accessibility_checker_job = PDFAccessibilityCheckerJob(input_asset=input_asset,
-                pdf_accessibility_checker_params=pdf_accessibility_checker_params)
+            pdf_accessibility_checker_job = PDFAccessibilityCheckerJob(input_asset=input_asset)
             
             # Submit the job and gets the job result
             location = pdf_services.submit(pdf_accessibility_checker_job)
@@ -318,7 +293,7 @@ class PDFAccessibilityChecker:
         except (ServiceApiException, ServiceUsageException, SdkException) as e:
             logging.exception(f'Exception encountered while executing operation: {e}')
         
-    
+        
     if __name__ == "__main__":
         PDFAccessibilityChecker()
 ```

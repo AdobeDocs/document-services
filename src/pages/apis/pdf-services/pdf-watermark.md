@@ -23,21 +23,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/addwater
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
     "inputDocumentAssetID": "urn:aaid:AS:UE1:54cbf87f-d7f5-4918-8e4b-9f68",
-    "watermarkDocumentAssetID": "urn:aaid:AS:UE1:54cbf87f-d7f5-4918-8e4b-9f1878678e68",
-    "pageRanges": [
-        {
-           "start": 2,
-           "end": 5
-        },
-        {
-           "start": 8,
-           "end": 10
-        }
-    ],
-    "appearance": {
-        "opacity": 50,
-        "appearOnForeground": true
-    }
+    "watermarkDocumentAssetID": "urn:aaid:AS:UE1:54cbf87f-d7f5-4918-8e4b-9f1878678e68"
 }'
 ```
 
@@ -46,7 +32,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/addwater
 ```js
 // Get the samples from https://github.com/adobe/pdfservices-node-sdk-samples
 // Run the sample:
-// node src/pdfwatermark/pdf-watermark-with-options.js
+// node src/pdfwatermark/pdf-watermark.js
 
 const {
     ServicePrincipalCredentials,
@@ -86,28 +72,11 @@ const fs = require("fs");
                 mimeType: MimeType.PDF
             }]
         });
-        
-        const pageRangesForWatermark = new PageRanges();
-
-        pageRangesForWatermark.addRange(2, 5);
-        pageRangesForWatermark.addRange(8, 10);
-        
-        const watermarkAppearance = new WatermarkAppearance({
-            appearOnForeground: true,
-            opacity: 50,
-        });
-
-        // Create parameters for the job
-        const pdfWatermarkParams = new PDFWatermarkParams({
-            watermarkAppearance: watermarkAppearance,
-            pageRanges: pageRangesForWatermark
-        })
 
         // Creates a new job instance
         const job = new PDFWatermarkJob({
             inputAsset: inputAsset,
-            watermarkAsset: watermarkAsset,
-            params: pdfWatermarkParams
+            watermarkAsset: watermarkAsset
         });
 
         // Submit the job and get the job result
@@ -145,10 +114,10 @@ const fs = require("fs");
 ```clike
 // Get the samples from https://github.com/adobe/PDFServices.NET.SDK.Samples
 // Run the sample:
-// cd PDFWatermarkWithOptions/
-// dotnet run PDFWatermarkWithOptions.csproj
+// cd PDFWatermark/
+// dotnet run PDFWatermark.csproj
 
-namespace PDFWatermarkWithOptions
+namespace PDFWatermark
 {
     class Program
     {
@@ -177,24 +146,9 @@ namespace PDFWatermarkWithOptions
                 // Creates a watermark asset from source file(s) and upload
                 Stream watermarkFileInputStream = File.OpenRead(@"watermark.pdf");
                 IAsset watermarkDocumentAsset = pdfServices.Upload(watermarkFileInputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
-
-                // Watermark pages of the document
-                PageRanges pageRangeForPDFWatermark = new PageRanges();
                 
-                pageRangeForPDFWatermark.AddRange(2, 5);
-                pageRangeForPDFWatermark.AddRange(8, 10);
-                
-                // Creates PDF Watermark appearance option
-                WatermarkAppearance watermarkAppearance = new WatermarkAppearance();
-                watermarkAppearance.SetOpacity(50);
-
-                // Create parameters for the job
-                PDFWatermarkParams pdfWatermarkParams = PDFWatermarkParams.PDFWatermarkParamsBuilder()
-                                                            .WithPageRanges(pageRangesForPDFWatermark)
-                                                            .WithWatermarkAppearance(watermarkAppearance).Build();
-
                 // Submits the job and gets the job result
-                PDFWatermarkJob pdfWatermarkJob = new PDFWatermarkJob(inputDocumentAsset, watermarkDocumentAsset).SetParams(pdfWatermarkParams);
+                PDFWatermarkJob pdfWatermarkJob = new PDFWatermarkJob(inputDocumentAsset, watermarkDocumentAsset);
                 String location = pdfServices.Submit(pdfWatermarkJob);
 
                 // Get content from the resulting asset(s)
@@ -248,14 +202,14 @@ namespace PDFWatermarkWithOptions
 ```javascript
 // Get the samples from https://github.com/adobe/pdfservices-java-sdk-samples
 // Run the sample:
-// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.pdfwatermark.PDFWatermarkWithOptions
+// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.pdfwatermark.PDFWatermark
 
 package com.adobe.pdfservices.operation.samples.pdfwatermark;
 
-public class PDFWatermarkWithOptions {
+public class PDFWatermark {
 
     // Initialize the logger
-    private static final Logger LOGGER = LoggerFactory.getLogger(PDFWatermarkWithOptions.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PDFWatermark.class);
 
     public static void main(String[] args) {
 
@@ -276,27 +230,9 @@ public class PDFWatermarkWithOptions {
             // Creates a new job instance
             PDFServices pdfServices = new PDFServices(credentials);
 
-            // Watermark pages of the document (as specified by PageRanges).
-            PageRanges pageRangeForPDFWatermark = new PageRanges();
-
-            pageRangeForPDFWatermark.addRange(2, 5);
-            pageRangeForPDFWatermark.addRange(8, 10);
-
-            // Creates PDF Watermark appearance option
-            WatermarkAppearance watermarkAppearance = new WatermarkAppearance();
-            watermarkAppearance.setOpacity(50);
-        
-            // Create parameters for the job
-            PDFWatermarkParams pdfWatermarkParams = PDFWatermarkParams.pdfWatermarkParamsBuilder()
-                .withPageRanges(pageRangeForPDFWatermark)
-                .withWatermarkAppearance(watermarkAppearance)
-                .build();
-        
             // Creates a new job instance
-            PDFWatermarkJob pdfWatermarkJob = new PDFWatermarkJob(inputDocumentAsset, watermarkDocumentAsset)
-                .setParams(pdfWatermarkParams);
-        
-        
+            PDFWatermarkJob pdfWatermarkJob = new PDFWatermarkJob(inputDocumentAsset, watermarkDocumentAsset);
+            
             // Submit the job and gets the job result
             String location = pdfServices.submit(pdfWatermarkJob);
             PDFServicesResponse<PDFWatermarkResult> pdfServicesResponse = pdfServices.getJobResult(location, PDFWatermarkResult.class);
@@ -323,7 +259,7 @@ public class PDFWatermarkWithOptions {
 ```python
 # Get the samples from https://github.com/adobe/pdfservices-python-sdk-samples
 # Run the sample:
-# python src/pdfwatermark/watermark_pdf_with_params.py
+# python src/pdfwatermark/watermark_pdf.py
 
 # Initialize the logger
 logging.basicConfig(level=logging.INFO)
@@ -351,19 +287,9 @@ class PDFWatermark:
             # Creates an asset(s) from source file(s) and upload
             input_asset = pdf_services.upload(input_stream=source_file_input_stream, mime_type=PDFServicesMediaType.PDF)
             watermark_asset = pdf_services.upload(input_stream=watermark_file_input_stream, mime_type=PDFServicesMediaType.PDF)
-            
-            watermark_appearance = WatermarkAppearance(appear_on_foreground=True, opacity=50)
-            
-            page_ranges = PageRanges()
-            page_ranges.add_range(2, 5)
-            page_ranges.add_range(8, 10)
 
-            # Create parameters for the job
-            pdf_watermark_params = PDFWatermarkParams(page_ranges=page_ranges, watermark_appearance=watermark_appearance)
-            
             # Creates a new job instance
-            pdf_watermark_job = PDFWatermarkJob(input_asset=input_asset, watermark_asset=watermark_asset,
-                pdf_watermark_params=pdf_watermark_params)
+            pdf_watermark_job = PDFWatermarkJob(input_asset=input_asset, watermark_asset=watermark_asset)
 
             # Submit the job and gets the job result
             location = pdf_services.submit(pdf_watermark_job)
