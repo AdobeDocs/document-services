@@ -101,13 +101,13 @@ import EsealAPI from './e-seal.md'
 
 <GetPDFProperties/>
 
-### Check PDF Accessibility
+### PDF Accessibility Checker
 
 ![EMPTY_ALT](../../images/accesiblity_check.svg)
 
 <CheckPDFAccessibility/>
 
-### Watermark PDF
+### PDF Watermark
 
 ![EMPTY_ALT](../../images/watermark_pdf_icon.png)
 
