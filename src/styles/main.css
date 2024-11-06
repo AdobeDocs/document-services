@@ -3309,3 +3309,12 @@ img[alt=adobe-support] {
 #tabItem_11 img {
     width: 25px !important;
 }
+
+.bgBlue > div> div{
+    grid-template-columns: 320px calc(100% - 300px);
+}
+
+#tabItem_11 {
+    width: calc(var(--spectrum-global-dimension-size-2200) + var(--spectrum-global-dimension-size-600)) !important;
+}
+
