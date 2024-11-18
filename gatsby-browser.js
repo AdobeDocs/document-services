@@ -1695,26 +1695,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       }
 
-      else if (window.location.pathname.indexOf("contact/sales/generative-summary-api") >= 0) {
-
-        document
-          .querySelector(".Generative-Summary-API-ContactUs")
-          .closest("main")
-          .setAttribute("daa-lh", "Body");
-
-        document
-          .querySelector(".Generative-Summary-API-ContactUs")
-          .setAttribute("daa-lh", "Generative-Summary-API-Header");
-
-        document
-          .querySelector(".Generative-Summary-API")
-          .setAttribute("daa-lh", "Generative-Summary-API");
-
-        document.querySelectorAll(".Generative-Summary-API a").forEach((link) => {
-          link.setAttribute("daa-ll", `Generative-Summary-API | ${link.textContent}`);
-        });
-
-      }
       else if (window.location.pathname.indexOf("contact/sales/auto-redact") >= 0) {
 
         document
