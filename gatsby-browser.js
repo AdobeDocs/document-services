@@ -1693,7 +1693,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", `Form-Data-API | ${link.textContent}`);
         });
 
-      } else if (window.location.pathname.indexOf("contact/sales/auto-redact") >= 0) {
+      }
+
+      else if (window.location.pathname.indexOf("contact/sales/auto-redact") >= 0) {
 
         document
           .querySelector(".Auto-Redact-Contact-Us")
@@ -1708,9 +1710,9 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           .querySelector(".Auto-Redact-API")
           .setAttribute("daa-lh", "Auto-Redact-API");
 
-          document.querySelectorAll(".Auto-Redact-API a").forEach((link) => {
-            link.setAttribute("daa-ll", `Auto-Redact-API | ${link.textContent}`);
-          });
+        document.querySelectorAll(".Auto-Redact-API a").forEach((link) => {
+          link.setAttribute("daa-ll", `Auto-Redact-API | ${link.textContent}`);
+        });
 
       } else if (window.location.pathname.indexOf("contact/sales") >= 0) {
         document
