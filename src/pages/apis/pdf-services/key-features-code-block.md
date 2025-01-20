@@ -24,6 +24,8 @@ import RotatePDFPages from './rotate-pdf-pages.md';
 import HTMLToPDF from './html-to-pdf.md';
 import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
 import EsealAPI from './e-seal.md'
+import ExportFormData from './export-pdf-form-data.md'
+import ImportFormData from './import-pdf-form-data.md'
 
 <!-- Key Features of Adobe PDF Services API -->
 
@@ -33,91 +35,13 @@ import EsealAPI from './e-seal.md'
 
 - [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" repeat="22"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
-
-### Extract PDF Content
-
-![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
-
-<ExtractPDFContent/>
+<TabsBlock orientation="vertical" slots="heading, image, content" repeat="24"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
 
 ### Auto-tag PDF
 
 ![EMPTY_ALT](../../images/autotagIcon.svg)
 
 <AccessibilityAutoTagApi/>
-
-### Create PDF
-
-![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
-
-<CreatePDF/>
-
-### HTML to PDF
-
-![EMPTY_ALT](../../images/s_html-to-pdf.svg)
-
-<HTMLToPDF/>
-
-### Document Generation
-
-![EMPTY_ALT](../../images/ic-dynamic-pdf-gen-40.svg)
-
-<DocumentGeneration/>
-
-### Electronically Seal PDF
-
-![EMPTY_ALT](../../images/electronic-seal.svg)
-
-<EsealAPI/>
-
-### Convert PDF
-
-![EMPTY_ALT](../../images/export_page.svg)
-
-<ConvertPDF/>
-
-### OCR PDF
-
-![EMPTY_ALT](../../images/recognize_text.svg)
-
-<OcrPDF/>
-
-### Secure PDF
-
-![EMPTY_ALT](../../images/s_protect_24.svg)
-
-<SecurePDF/>
-
-### Remove PDF Password
-
-![EMPTY_ALT](../../images/s_unlock-pdf_22.svg)
-
-<RemovePDFPassword/>
-
-### Get PDF Properties
-
-![EMPTY_ALT](../../images/s_properties_22.svg)
-
-<GetPDFProperties/>
-
-### PDF Accessibility Checker
-
-![EMPTY_ALT](../../images/accesiblity_check.svg)
-
-<CheckPDFAccessibility/>
-
-### PDF Watermark
-
-![EMPTY_ALT](../../images/watermark_pdf_icon.png)
-
-<PDFWatermark/>
-
-### Split PDF
-
-![EMPTY_ALT](../../images/s_split-pdf_22.svg)
-
-<SplitPDF/>
 
 ### Combine PDF
 
@@ -131,29 +55,17 @@ import EsealAPI from './e-seal.md'
 
 <CompressPDF/>
 
-### Reorder PDF Pages
+### Convert PDF
 
-![EMPTY_ALT](../../images/reorder_page.svg)
+![EMPTY_ALT](../../images/export_page.svg)
 
-<ReorderPDFPages/>
+<ConvertPDF/>
 
-### Linearize PDF
+### Create PDF
 
-![EMPTY_ALT](../../images/linearize_pdf.svg)
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
 
-<LinearizePDF/>
-
-### Insert PDF Pages
-
-![EMPTY_ALT](../../images/insert_page.svg)
-
-<InsertPDFPages/>
-
-### Replace PDF Pages
-
-![EMPTY_ALT](../../images/replace_page.svg)
-
-<ReplacePDFPages/>
+<CreatePDF/>
 
 ### Delete PDF Pages
 
@@ -161,8 +73,110 @@ import EsealAPI from './e-seal.md'
 
 <DeletePDFPages/>
 
+### Document Generation
+
+![EMPTY_ALT](../../images/ic-dynamic-pdf-gen-40.svg)
+
+<DocumentGeneration/>
+
+### Electronically Seal PDF
+
+![EMPTY_ALT](../../images/electronic-seal.svg)
+
+<EsealAPI/>
+
+### Export Form Data
+
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
+
+<ExportFormData/>
+
+### Extract PDF Content
+
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
+
+<ExtractPDFContent/>
+
+### Get PDF Properties
+
+![EMPTY_ALT](../../images/s_properties_22.svg)
+
+<GetPDFProperties/>
+
+### HTML to PDF
+
+![EMPTY_ALT](../../images/s_html-to-pdf.svg)
+
+<HTMLToPDF/>
+
+### Import Form Data
+
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
+
+<ImportFormData/>
+
+### Insert PDF Pages
+
+![EMPTY_ALT](../../images/insert_page.svg)
+
+<InsertPDFPages/>
+
+### Linearize PDF
+
+![EMPTY_ALT](../../images/linearize_pdf.svg)
+
+<LinearizePDF/>
+
+### OCR PDF
+
+![EMPTY_ALT](../../images/recognize_text.svg)
+
+<OcrPDF/>
+
+### PDF Accessibility Checker
+
+![EMPTY_ALT](../../images/accesiblity_check.svg)
+
+<CheckPDFAccessibility/>
+
+### PDF Watermark
+
+![EMPTY_ALT](../../images/watermark_pdf_icon.png)
+
+<PDFWatermark/>
+
+### Remove PDF Password
+
+![EMPTY_ALT](../../images/s_unlock-pdf_22.svg)
+
+<RemovePDFPassword/>
+
+### Reorder PDF Pages
+
+![EMPTY_ALT](../../images/reorder_page.svg)
+
+<ReorderPDFPages/>
+
+### Replace PDF Pages
+
+![EMPTY_ALT](../../images/replace_page.svg)
+
+<ReplacePDFPages/>
+
 ### Rotate PDF Pages
 
 ![EMPTY_ALT](../../images/rotate_page.svg)
 
 <RotatePDFPages/>
+
+### Secure PDF
+
+![EMPTY_ALT](../../images/s_protect_24.svg)
+
+<SecurePDF/>
+
+### Split PDF
+
+![EMPTY_ALT](../../images/s_split-pdf_22.svg)
+
+<SplitPDF/>
