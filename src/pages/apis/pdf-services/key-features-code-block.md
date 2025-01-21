@@ -37,29 +37,17 @@ import ImportFormData from './import-pdf-form-data.md'
 
 <TabsBlock orientation="vertical" slots="heading, image, content" repeat="24"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
 
+### Extract PDF Content
+
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
+
+<ExtractPDFContent/>
+
 ### Auto-tag PDF
 
 ![EMPTY_ALT](../../images/autotagIcon.svg)
 
 <AccessibilityAutoTagApi/>
-
-### Combine PDF
-
-![EMPTY_ALT](../../images/s_combinefiles_color_24.svg)
-
-<CombinePDF/>
-
-### Compress PDF
-
-![EMPTY_ALT](../../images/compress_pdf.svg)
-
-<CompressPDF/>
-
-### Convert PDF
-
-![EMPTY_ALT](../../images/export_page.svg)
-
-<ConvertPDF/>
 
 ### Create PDF
 
@@ -67,11 +55,11 @@ import ImportFormData from './import-pdf-form-data.md'
 
 <CreatePDF/>
 
-### Delete PDF Pages
+### HTML to PDF
 
-![EMPTY_ALT](../../images/delete_page.svg)
+![EMPTY_ALT](../../images/s_html-to-pdf.svg)
 
-<DeletePDFPages/>
+<HTMLToPDF/>
 
 ### Document Generation
 
@@ -85,53 +73,35 @@ import ImportFormData from './import-pdf-form-data.md'
 
 <EsealAPI/>
 
-### Export Form Data
+### Convert PDF
 
-![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
+![EMPTY_ALT](../../images/export_page.svg)
 
-<ExportFormData/>
-
-### Extract PDF Content
-
-![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
-
-<ExtractPDFContent/>
-
-### Get PDF Properties
-
-![EMPTY_ALT](../../images/s_properties_22.svg)
-
-<GetPDFProperties/>
-
-### HTML to PDF
-
-![EMPTY_ALT](../../images/s_html-to-pdf.svg)
-
-<HTMLToPDF/>
-
-### Import Form Data
-
-![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
-
-<ImportFormData/>
-
-### Insert PDF Pages
-
-![EMPTY_ALT](../../images/insert_page.svg)
-
-<InsertPDFPages/>
-
-### Linearize PDF
-
-![EMPTY_ALT](../../images/linearize_pdf.svg)
-
-<LinearizePDF/>
+<ConvertPDF/>
 
 ### OCR PDF
 
 ![EMPTY_ALT](../../images/recognize_text.svg)
 
 <OcrPDF/>
+
+### Secure PDF
+
+![EMPTY_ALT](../../images/s_protect_24.svg)
+
+<SecurePDF/>
+
+### Remove PDF Password
+
+![EMPTY_ALT](../../images/s_unlock-pdf_22.svg)
+
+<RemovePDFPassword/>
+
+### Get PDF Properties
+
+![EMPTY_ALT](../../images/s_properties_22.svg)
+
+<GetPDFProperties/>
 
 ### PDF Accessibility Checker
 
@@ -145,11 +115,23 @@ import ImportFormData from './import-pdf-form-data.md'
 
 <PDFWatermark/>
 
-### Remove PDF Password
+### Split PDF
 
-![EMPTY_ALT](../../images/s_unlock-pdf_22.svg)
+![EMPTY_ALT](../../images/s_split-pdf_22.svg)
 
-<RemovePDFPassword/>
+<SplitPDF/>
+
+### Combine PDF
+
+![EMPTY_ALT](../../images/s_combinefiles_color_24.svg)
+
+<CombinePDF/>
+
+### Compress PDF
+
+![EMPTY_ALT](../../images/compress_pdf.svg)
+
+<CompressPDF/>
 
 ### Reorder PDF Pages
 
@@ -157,11 +139,29 @@ import ImportFormData from './import-pdf-form-data.md'
 
 <ReorderPDFPages/>
 
+### Linearize PDF
+
+![EMPTY_ALT](../../images/linearize_pdf.svg)
+
+<LinearizePDF/>
+
+### Insert PDF Pages
+
+![EMPTY_ALT](../../images/insert_page.svg)
+
+<InsertPDFPages/>
+
 ### Replace PDF Pages
 
 ![EMPTY_ALT](../../images/replace_page.svg)
 
 <ReplacePDFPages/>
+
+### Delete PDF Pages
+
+![EMPTY_ALT](../../images/delete_page.svg)
+
+<DeletePDFPages/>
 
 ### Rotate PDF Pages
 
@@ -169,14 +169,14 @@ import ImportFormData from './import-pdf-form-data.md'
 
 <RotatePDFPages/>
 
-### Secure PDF
+### Import PDF Form Data
 
-![EMPTY_ALT](../../images/s_protect_24.svg)
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
 
-<SecurePDF/>
+<ImportFormData/>
 
-### Split PDF
+### Export PDF Form Data
 
-![EMPTY_ALT](../../images/s_split-pdf_22.svg)
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
 
-<SplitPDF/>
+<ExportFormData/>

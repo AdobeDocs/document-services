@@ -8,9 +8,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 - [See documentation](/document-services/docs/overview/pdf-services-api/howtos/create-pdf/)
 
-Extract structured data from PDF forms with ease. Retrieve form field data as a JSON file, where field names serve as
-keys and corresponding inputs as values. Simplify data processing from PDF forms for seamless integration into your
-workflows.
+The Import PDF Form Data API allows you to seamlessly populate a PDF form with data provided in JSON format. It takes the field names as keys and the corresponding values from the input JSON to fill the respective form fields, generating a completed PDF with the integrated data for efficient document processing.
 
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Create-PDF) and quickly try
 our APIs using the Postman collections
@@ -28,35 +26,26 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/setformd
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{Placeholder for token}}' \
 --data-raw '{
-  "input": {
-    "uri": "{{InputSignedUrl}}",
-    "storage": "S3"
-  },
-  "output": {
-    "uri": "{{OutputSignedUrl}}",
-    "storage": "S3"
-  },
-  "params": {
+    "assetID": "urn:aaid:AS:UE1:23c30ee0-2c4d-46d6-87f2-087832fca718",
     "jsonFormFieldsData": {
-      "dob": "10/10/1989",
-      "billTo": {
-        "zip": "12401",
-        "address": {
-          "line": {
-            "1": "132",
-            "2": "My Street"
-          }
+        "dob": "10/10/1989",
+        "billTo": {
+           "zip": "12401",
+           "address": {
+              "line": {
+                 "1": "132",
+                 "2": "My Street"
+              }
+           },
+           "city": "Kingston",
+           "state": "New York"
         },
-        "city": "Kingston",
-        "state": "New York"
-      },
-      "name": {
-        "middle": "",
-        "last": "Smith",
-        "first": "John"
-      },
-      "age": "34"
-    }
-  }
+        "name": {
+            "middle": "",
+            "last": "Smith",
+            "first": "John"
+        },
+        "age": "34"
+    },
 }'
 ```
