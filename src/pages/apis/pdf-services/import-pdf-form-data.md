@@ -6,11 +6,11 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 ### Adobe PDF Import Form Data API
 
-- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/create-pdf/)
+- [See documentation](/document-services/docs/overview/pdf-services-api/howtos/import-pdf-form-data/)
 
 Effortlessly populate PDF forms using the Import PDF Form Data API. Provide form data in JSON format, where field names act as keys and corresponding values are used to fill the appropriate fields. Generate a completed PDF with integrated data for streamlined document processing.
 
-See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Create-PDF) and quickly try
+See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Import-PDF-Form-Data) and quickly try
 our APIs using the Postman collections
 
 <CodeBlock slots="heading, code" repeat="1" languages="curl, js,.net,java,python" />
