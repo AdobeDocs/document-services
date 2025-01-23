@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 <TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link linking create-pdf"/>
 
-### Adobe PDF Import Form Data
+### Import PDF Form Data
 
 - [See documentation](/document-services/docs/overview/pdf-services-api/howtos/import-pdf-form-data/)
 
