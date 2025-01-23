@@ -44,8 +44,7 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/setformd
             "middle": "",
             "last": "Smith",
             "first": "John"
-        },
-        "age": "34"
+        }
     },
 }'
 ```
