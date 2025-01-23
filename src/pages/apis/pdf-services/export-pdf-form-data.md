@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 <TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link linking create-pdf"/>
 
-### Adobe PDF Export Form Data API
+### Adobe PDF Export Form Data
 
 - [See documentation](/document-services/docs/overview/pdf-services-api/howtos/export-pdf-form-data/)
 
