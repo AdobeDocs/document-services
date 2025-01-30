@@ -26,6 +26,7 @@ import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
 import EsealAPI from './e-seal.md'
 import ExportFormData from './export-pdf-form-data.md'
 import ImportFormData from './import-pdf-form-data.md'
+import './key-features-code-block.css'
 
 <!-- Key Features of Adobe PDF Services API -->
 

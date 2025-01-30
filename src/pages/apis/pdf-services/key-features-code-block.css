@@ -1,0 +1,11 @@
+.spectrum-Tabs.spectrum-Tabs--vertical {
+    max-height: 900px;
+    overflow-y: auto;
+    padding-right: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.spectrum-Tabs.spectrum-Tabs--vertical::-webkit-scrollbar {
+    display: none;
+}
