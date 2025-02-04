@@ -28,7 +28,6 @@ apiHeroAssetImg doc-ext-invoice
 
 <WhyExtractAPI/>
 
-
 <WrapperComponent slots="content" repeat="1" theme="light" className="How-it-works"/>
 
 <VisualizerHowItWorks/>
