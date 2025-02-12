@@ -24,14 +24,6 @@ apiHeroAssetImg doc-service-hero
 
 - [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
-<AnnouncementBlock slots="heading, text, button" theme="dark" />
-
-### Join our Beta program for the Import/Export PDF Form Data APIs
-
-Sign up for access to try our latest set of APIs that import and export data from form fields at scale.
-
-[Sign Up](../pricing/contact/sales/form-data-api)
-
 <!-- Why PDF Services API -->
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
