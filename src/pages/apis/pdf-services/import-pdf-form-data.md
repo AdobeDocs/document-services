@@ -56,23 +56,25 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/setformd
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.importpdfformdata.ImportPDFFormData
 
 public class ImportPDFFormData {
+    
     // Initialize the logger
     private static final Logger LOGGER = LoggerFactory.getLogger(ImportPDFFormData.class);
 
     public static void main(String[] args) {
-        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/importPdfFormDataInput.pdf").toPath())) {
-            // Initial setup, create credentials instance
-            Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"), 
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+      try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/importPdfFormDataInput.pdf").toPath())) {
+        // Initial setup, create credentials instance
+        Credentials credentials = new ServicePrincipalCredentials(
+                System.getenv("PDF_SERVICES_CLIENT_ID"), 
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
         
-            // Creates a PDF Services instance
-            PDFServices pdfServices = new PDFServices(credentials);
+        // Creates a PDF Services instance
+        PDFServices pdfServices = new PDFServices(credentials);
         
-            // Creates an asset(s) from source file(s) and upload
-            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
-            // Create parameters for the job
-            ImportPDFFormDataParams importPDFFormDataParams = ImportPDFFormDataParams.importPdfFormDataParamsBuilder()
+        // Creates an asset(s) from source file(s) and upload
+        Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
+        
+        // Create parameters for the job
+        ImportPDFFormDataParams importPDFFormDataParams = ImportPDFFormDataParams.importPdfFormDataParamsBuilder()
                 .withJsonFormFieldsData(new JSONObject("{\n" +
                     "  \"dob\": \"10/10/1989\",\n" +
                     "  \"billTo\": {\n" +
@@ -91,30 +93,30 @@ public class ImportPDFFormData {
                     "    \"last\": \"Smith\",\n" +
                     "    \"first\": \"John\"\n" +
                     "  }\n" +
-                    "}\n"))
+                    "}"))
                 .build();
         
-            // Creates a new job instance
-            ImportPDFFormDataJob importPDFFormDataJob = new ImportPDFFormDataJob(asset);
-            importPDFFormDataJob.setParams(importPDFFormDataParams);
+        // Creates a new job instance
+        ImportPDFFormDataJob importPDFFormDataJob = new ImportPDFFormDataJob(asset);
+        importPDFFormDataJob.setParams(importPDFFormDataParams);
         
-            // Submit the job and gets the job result
-            String location = pdfServices.submit(importPDFFormDataJob);
-            PDFServicesResponse<ImportPDFFormDataResult> pdfServicesResponse = pdfServices.getJobResult(location, ImportPDFFormDataResult.class);
+        // Submit the job and gets the job result
+        String location = pdfServices.submit(importPDFFormDataJob);
+        PDFServicesResponse<ImportPDFFormDataResult> pdfServicesResponse = pdfServices.getJobResult(location, ImportPDFFormDataResult.class);
         
-            // Get content from the resulting asset(s)
-            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
-            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
+        // Get content from the resulting asset(s)
+        Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+        StreamAsset streamAsset = pdfServices.getContent(resultAsset);
         
-            // Creates an output stream and copy stream asset's content to it
-            Files.createDirectories(Paths.get("output/"));
-            OutputStream outputStream = Files.newOutputStream(new File("output/ImportPDFFormData.pdf").toPath());
-            LOGGER.info("Saving asset at output/ImportPDFFormData.pdf");
-            IOUtils.copy(streamAsset.getInputStream(), outputStream);
-            outputStream.close();
-        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
-            LOGGER.error("Exception encountered while executing operation", ex);
-        }
+        // Creates an output stream and copy stream asset's content to it
+        Files.createDirectories(Paths.get("output/"));
+        OutputStream outputStream = Files.newOutputStream(new File("output/ImportPDFFormData.pdf").toPath());
+        LOGGER.info("Saving asset at output/ImportPDFFormData.pdf");
+        IOUtils.copy(streamAsset.getInputStream(), outputStream);
+        outputStream.close();
+      } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+        LOGGER.error("Exception encountered while executing operation", ex);
+      }
     }
 }
 ```

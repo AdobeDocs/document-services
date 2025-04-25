@@ -37,41 +37,43 @@ curl --location  --request POST 'https://pdf-services.adobe.io/operation/getform
 // mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.exportpdfformdata.ExportPDFFormData
 
 public class ExportPDFFormData {
+    
     // Initialize the logger
     private static final Logger LOGGER = LoggerFactory.getLogger(ExportPDFFormData.class);
 
     public static void main(String[] args) {
-        try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/exportPdfFormDataInput.pdf").toPath())) {
-            // Initial setup, create credentials instance
-            Credentials credentials = new ServicePrincipalCredentials(
-                    System.getenv("PDF_SERVICES_CLIENT_ID"), 
-                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
         
-            // Creates a PDF Services instance
-            PDFServices pdfServices = new PDFServices(credentials);
+      try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/exportPdfFormDataInput.pdf").toPath())) {
+        // Initial setup, create credentials instance
+        Credentials credentials = new ServicePrincipalCredentials(
+                System.getenv("PDF_SERVICES_CLIENT_ID"), 
+                System.getenv("PDF_SERVICES_CLIENT_SECRET"));
         
-            // Creates an asset(s) from source file(s) and upload
-            Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
+        // Creates a PDF Services instance
+        PDFServices pdfServices = new PDFServices(credentials);
         
-            // Creates a new job instance
-            ExportPDFFormDataJob exportPDFFormDataJob = new ExportPDFFormDataJob(asset);
+        // Creates an asset(s) from source file(s) and upload
+        Asset asset = pdfServices.upload(inputStream, PDFServicesMediaType.PDF.getMediaType());
         
-            // Submit the job and gets the job result
-            String location = pdfServices.submit(exportPDFFormDataJob);
-            PDFServicesResponse<ExportPDFFormDataResult> pdfServicesResponse = pdfServices.getJobResult(location, ExportPDFFormDataResult.class);
+        // Creates a new job instance
+        ExportPDFFormDataJob exportPDFFormDataJob = new ExportPDFFormDataJob(asset);
         
-            // Get content from the resulting asset(s)
-            Asset resultAsset = pdfServicesResponse.getResult().getAsset();
-            StreamAsset streamAsset = pdfServices.getContent(resultAsset);
+        // Submit the job and gets the job result
+        String location = pdfServices.submit(exportPDFFormDataJob);
+        PDFServicesResponse<ExportPDFFormDataResult> pdfServicesResponse = pdfServices.getJobResult(location, ExportPDFFormDataResult.class);
+        
+        // Get content from the resulting asset(s)
+        Asset resultAsset = pdfServicesResponse.getResult().getAsset();
+        StreamAsset streamAsset = pdfServices.getContent(resultAsset);
 
-            Files.createDirectories(Paths.get("output/"));
-            OutputStream outputStream = Files.newOutputStream(new File("output/ExportPDFFormData.pdf").toPath());
-            LOGGER.info(String.format("Saving asset at output/ExportPDFFormData.pdf", outputFilePath));
-            IOUtils.copy(streamAsset.getInputStream(), outputStream);
-            outputStream.close();
-        } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
-            LOGGER.error("Exception encountered while executing operation", ex);
-        }
+        Files.createDirectories(Paths.get("output/"));
+        OutputStream outputStream = Files.newOutputStream(new File("output/ExportPDFFormData.pdf").toPath());
+        LOGGER.info(String.format("Saving asset at output/ExportPDFFormData.pdf", outputFilePath));
+        IOUtils.copy(streamAsset.getInputStream(), outputStream);
+        outputStream.close();
+      } catch (ServiceApiException | IOException | SDKException | ServiceUsageException ex) {
+        LOGGER.error("Exception encountered while executing operation", ex);
+      }
     }
 }
 ```
