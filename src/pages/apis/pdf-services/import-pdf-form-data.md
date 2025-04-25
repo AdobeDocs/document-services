@@ -53,18 +53,18 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/setformd
 ```javascript
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
-// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.ImportPdfFormData
+// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.importpdfformdata.ImportPDFFormData
 
-public class ImportPdfFormData {
+public class ImportPDFFormData {
     // Initialize the logger
-    private static final Logger LOGGER = LoggerFactory.getLogger(ImportPdfFormData.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ImportPDFFormData.class);
 
     public static void main(String[] args) {
         try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/importPdfFormDataInput.pdf").toPath())) {
             // Initial setup, create credentials instance
             Credentials credentials = new ServicePrincipalCredentials(
-                                            System.getenv("PDF_SERVICES_CLIENT_ID"), 
-                                            System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+                    System.getenv("PDF_SERVICES_CLIENT_ID"), 
+                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
         
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);

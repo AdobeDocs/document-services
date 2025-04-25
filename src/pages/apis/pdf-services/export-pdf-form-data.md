@@ -34,7 +34,7 @@ curl --location  --request POST 'https://pdf-services.adobe.io/operation/getform
 ```javascript
 // Get the samples from https://www.adobe.com/go/pdftoolsapi_java_samples
 // Run the sample:
-// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.ExportPDFFormData
+// mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.pdfservices.operation.samples.exportpdfformdata.ExportPDFFormData
 
 public class ExportPDFFormData {
     // Initialize the logger
@@ -43,7 +43,9 @@ public class ExportPDFFormData {
     public static void main(String[] args) {
         try (InputStream inputStream = Files.newInputStream(new File("src/main/resources/exportPdfFormDataInput.pdf").toPath())) {
             // Initial setup, create credentials instance
-            Credentials credentials = new ServicePrincipalCredentials(System.getenv("PDF_SERVICES_CLIENT_ID"), System.getenv("PDF_SERVICES_CLIENT_SECRET"));
+            Credentials credentials = new ServicePrincipalCredentials(
+                    System.getenv("PDF_SERVICES_CLIENT_ID"), 
+                    System.getenv("PDF_SERVICES_CLIENT_SECRET"));
         
             // Creates a PDF Services instance
             PDFServices pdfServices = new PDFServices(credentials);
