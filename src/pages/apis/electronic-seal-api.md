@@ -10,6 +10,9 @@ import {NewsLetterBlade} from '../../components/news-letter-blade';
 import ExplorUsecase from './electronic-seal-api/explore-use-case.md';
 import SealAPIStepper from './electronic-seal-api/seal-api-stepper.md';
 import SealAPIAdobeDoc from './electronic-seal-api/seal-api-adobe-doc.md';
+import Template from "../../templates/index.og-image.js";
+
+<Template metaImage="e-seal-desktop.png" />
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variantsTypeSecondary='primary' variant="fullwidth"  className="eSealApibgImage Hero-Banner autoTagAPI-content"/>
 

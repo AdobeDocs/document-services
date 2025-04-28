@@ -13,6 +13,9 @@ import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 import {APIPixelRetargeting} from '../../components/retargetting';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 import EsealApiAnnouncement from './e-seal-api-announcement.md'
+import Template from "../../templates/index.og-image.js";
+
+<Template metaImage="home-carousel.png" />
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 

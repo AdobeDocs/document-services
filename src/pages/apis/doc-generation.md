@@ -15,6 +15,9 @@ import {AdobeMsBlade} from '../../components/adobeMicrosoftBlade'
 import '../../styles/doc-generation.css'
 import {APIPixelRetargeting} from '../../components/retargetting'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
+import Template from "../../templates/index.og-image.js";
+
+<Template metaImage="doc-gen-hero-tablet.png" />
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 

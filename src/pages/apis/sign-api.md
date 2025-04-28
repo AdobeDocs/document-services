@@ -10,6 +10,9 @@ import OurPartners from './sign-api/our-partners.md'
 import OurPartnersTwo from './sign-api/our-partners-two.md'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 import EsealApiAnnouncement from './e-seal-api-announcement.md'
+import Template from "../../templates/index.og-image.js";
+
+<Template metaImage="sign-up-meta.png" />
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth" primaryOutline variantsTypeSecondary='primary'  className="signApiHerobgImage Hero-Banner hero-btn-color"/>
 

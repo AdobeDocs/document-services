@@ -11,6 +11,8 @@
  */
 
 const webpack = require('webpack');
+const path = require("path");
+const { createOpenGraphImage } = require('gatsby-plugin-open-graph-images');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -96,4 +98,15 @@ exports.createPages = async ({ graphql, actions }) => {
             context: {},
         })
     })
+
+      // Generate Open Graph images (if needed)
+      await createOpenGraphImage(createPage, {
+        path: "og-image/*",
+        component: path.resolve("./src/templates/index.og-image.js"), // Make sure this file exists
+        size: { width: 1200, height: 630 },
+        context: {
+          description: "A beautiful OG image created from React!",
+        },
+        waitCondition: "networkidle0",
+      });
 };

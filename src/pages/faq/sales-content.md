@@ -16,9 +16,9 @@ If you are interested in using Adobe PDF Services API on a trial basis, consider
 
 </AccordionItem>
 
-<AccordionItem header="Why do I have to use a personal account when setting up a Free Tier or account? Why can't I use my company's existing enterprise email/account?" slot_id="account-management-why-i-do-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account">
+<AccordionItem header="Why do I have to use a personal account when setting up a Free Tier or account? Why can't I use my company's existing organization email/account?" slot_id="account-management-why-i-do-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account">
 
-Access to Adobe Acrobat Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are using the Free Tier, it may be easier and faster to use a personal email than your existing Adobe ID.
+Access to Adobe Acrobat Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) or Value Incentive Plan (VIP), and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are using the Free Tier, it may be easier and faster to use a personal email than your existing Adobe ID.
 
 </AccordionItem>
 
@@ -38,7 +38,7 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 You should not use your Free Tier credentials (Credential Key aka API Key) outside the Free Tier.
 
-When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free tier credentials with those new ETLA credentials.
+When you start your Enterprise Term Licensing Agreement (ETLA) or Value Incentive Plan (VIP) you will receive & create new credentials under your ETLA or VIP organization  — you will want to exchange your free tier credentials with those new credentials.
 
 </AccordionItem>
 
@@ -127,7 +127,7 @@ Ultimately, customers are responsible for ensuring compliance with their legal o
 
 <AccordionItem header="How do I get a copy of Adobe's DPA?" slot_id="data-security-privacy-how-do-i-get-acopy-of-adobe-DBA">
 
-To request a copy of our DPA, please contact our sales team for assistance at: <a href="<https://www.google.co.in/>">https://www.google.co.in/</a>
+To request a copy of our DPA, please contact our sales team for assistance at: _______
 
 </AccordionItem>
 
@@ -163,23 +163,21 @@ See the Adobe Trust Center (<a href="<https://www.adobe.com/trust.html>">https:/
 
 <AccordionItem header="What payment plans does Adobe offer? Which payment plan is right for me?" slot_id="which_payment_plan_is_right_for_me">
 
-At this moment, an Enterprise Term License Agreement (ETLA) is the only way to purchase our APIs. Please fill out our  <a href="https://developer.adobe.com/document-services/pricing/contact/sales/">contact us form</a> and connect with our expert sales team to get a quote.
+You can purchase Adobe Acrobat Services API via an Enterprise Term License Agreement (ETLA) or Value Incentive Plan (VIP).To get a quote, please fill out our contact form here at https://developer.adobe.com/document-services/pricing/contact/sales/ and our sales team will follow up with you.
 
-See additional information here: <a href="<https://developer.adobe.com/document-services/pricing/>">https://developer.adobe.com/document-services/pricing/</a>
-
-</AccordionItem>
-
-<AccordionItem header="Can I buy PDF Services API via a reseller?" slot_id="ordering-can-i-buy-pdf-services-api-via-a-reseller">
-
-No. The only way you can buy PDF Services API is via an Adobe Enterprise Term License Agreement (ETLA)
-
-For more details, see our pricing page: <a href="<https://developer.adobe.com/document-services/pricing/>">https://developer.adobe.com/document-services/pricing/</a>
+See additional information here: https://developer.adobe.com/document-services/pricing.
 
 </AccordionItem>
 
-<AccordionItem header="Can I buy PDF Services API transactions via the Microsoft PowerAutomate connectors?" slot_id="ordering-can-i-buy-pdf-services-api-transactions-via-the-microsoft-power-automate-connectors">
+<AccordionItem header="Can I buy Adobe Acrobat Services APIs via a reseller?" slot_id="ordering-can-i-buy-pdf-services-api-via-a-reseller">
 
-You can try PDF Services API via Microsoft PowerAutomate connector. However, at this time to buy you would choose volume pricing via an enterprise agreement directly with Adobe.
+Yes. You can buy Adobe Acrobat Services APIs via resellers. You can search for resellers in your region by visiting https://adobe.my.salesforce-sites.com/PartnerSearch.
+
+</AccordionItem>
+
+<AccordionItem header="Can I buy Adobe Acrobat Services API transactions via the Microsoft PowerAutomate connectors?" slot_id="ordering-can-i-buy-pdf-services-api-transactions-via-the-microsoft-power-automate-connectors">
+
+You can try the Adobe Acrobat Services API using the Microsoft Power Automate connector. Purchasing is only available through volume pricing via Adobe’s Value Incentive Plan (VIP) or an Enterprise Term License Agreement (ETLA), either directly from Adobe or an authorized reseller.
 
 </AccordionItem>
 
@@ -197,35 +195,35 @@ For details and examples on how to calculate the document transactions required,
 
 </AccordionItem>
 
-<AccordionItem header="Does Adobe offer any discounts for PDF Services API?" slot_id="pricing-does-adobe-offer-any-discussion-for-pdf-services-api">
+<AccordionItem header="Does Adobe offer any discounts for Adobe Acrobat Services API?" slot_id="pricing-does-adobe-offer-any-discussion-for-pdf-services-api">
 
-Volume pricing is available for annual usage exceeding 500,000 Document Transactions. See how document transactions are calculated here: <a href="<https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/>">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
+We offer annual plans with volume pricing for  Adobe Acrobat Services API usage. See how document transactions are calculated here: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/
 
-For a quote, you can contact our sales team at: <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
+For a quote, you can contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
 
 </AccordionItem>
 
 <AccordionItem header="Do non-profits receive special pricing?" slot_id="pricing-do-non-profits-recevie-special-pricing">
 
-Volume pricing is available for annual usage exceeding 500,000 Document Transactions. See how document transactions are calculated here: <a href="<https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/>">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
+We offer annual plans with volume pricing for  Adobe Acrobat Services API usage. See how document transactions are calculated here: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/
 
-For a quote, you can contact our sales team at: <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
+For a quote, you can contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
 
 </AccordionItem>
 
 <AccordionItem header="Do academic institutions receive special pricing?" slot_id="pricing-do-acadamic-institutions-receive-special-pricing">
 
-Volume pricing is available for annual usage exceeding 500,000 Document Transactions. See how document transactions are calculated here: <a href="<https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/>">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
+We offer annual plans with volume pricing for  Adobe Acrobat Services API usage.  See how document transactions are calculated here: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/
 
-For a quote, you can contact our sales team at: <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
+For a quote, you can contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
 
 </AccordionItem>
 
 <AccordionItem header="Do government institutions receive special pricing?" slot_id="pricing-do-government-institutions-receive-special-pricing">
 
-Volume pricing is available for annual usage exceeding 500,000 Document Transactions. See how document transactions are calculated here: <a href="<https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/>">https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/</a>
+We offer annual plans with volume pricing for Adobe Acrobat Services API usage. See how document transactions are calculated here: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/
 
-For a quote, you can contact our sales team at: <a href="<https://developer.adobe.com/document-services/pricing/contact/sales>">https://developer.adobe.com/document-services/pricing/contact/sales</a>
+For a quote, you can contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
 
 </AccordionItem>
 

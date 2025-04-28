@@ -12,6 +12,9 @@ import GetStarted from './microsoft-PA-integration/getStarted.md'
 import AdditionalResources from './microsoft-PA-integration/additional-resources.md'
 import MsAnnouncementBlock from './microsoft-PA-integration/ms-announcement.md'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
+import Template from "../../templates/index.og-image.js";
+
+<Template metaImage="Marquee_Image_Static_Desktop.png" />
 
 <Hero slots="icon, heading, text, assetsImg, buttons"  customLayout variant="halfwidth" variantsTypePrimary='primary' className="microsoftPAHerobgImage Hero-Banner ms-hero-img"/>
 

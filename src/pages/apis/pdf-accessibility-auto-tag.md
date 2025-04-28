@@ -1,6 +1,6 @@
 ---
 title: PDF Accessibility Auto-Tag
-description: Auto-tag PDF content to improve accessibility.
+description:  Improve PDF accessibility at scale with Adobe’s AI-powered Auto-Tag API. Automatically tag tables, headings, and more for better screen reader navigation and faster compliance with accessibility standards. Learn more now.
 ---
 
 import AutoTagAPI from './accessibility-auto-tag-api/auto-tag-api-key-feature.md';
@@ -13,6 +13,9 @@ import AccessibilityAdobeDoc from './accessibility-auto-tag-api/accessibility-ad
 import AccessibilityStepper from './accessibility-auto-tag-api/accessibility-stepper.md';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 import {AutoTag} from '../../components/auto-tag';
+import Template from "../../templates/index.og-image.js";
+
+<Template metaImage="VisualAutoTag.png" />
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variantsTypeSecondary='primary' variant="fullwidth"  className="autoTagherobgImage Hero-Banner autoTagAPI-content"/>
 
