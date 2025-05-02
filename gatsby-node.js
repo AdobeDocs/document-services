@@ -101,7 +101,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
       // Generate Open Graph images (if needed)
       await createOpenGraphImage(createPage, {
-        path: "og-image/*",
+        path: "og-image",
         component: path.resolve("./src/templates/index.og-image.js"), // Make sure this file exists
         size: { width: 1200, height: 630 },
         context: {
