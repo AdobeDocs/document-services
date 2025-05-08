@@ -385,6 +385,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [`gatsby-plugin-react-helmet`, `@adobe/gatsby-theme-aio`, `gatsby-plugin-open-graph-images`,],
+  plugins: [`@adobe/gatsby-theme-aio`],
   pathPrefix: process.env.PATH_PREFIX || '/document-services/'
 };
