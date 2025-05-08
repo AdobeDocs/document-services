@@ -25,9 +25,6 @@ const Template = ({ metaImage }) => {
 
   return (
     <Helmet>
-      {/* Fallback for scrapers: relative path */}
-      <meta property="og:image" content={`/og-image/${metaImage}`} />
-      {/* Browser: updated full path and dimensions */}
       <meta property="og:image" content={imagePath} />
       <meta property="og:image:width" content={dimensions.width} />
       <meta property="og:image:height" content={dimensions.height} />
