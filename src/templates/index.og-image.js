@@ -7,8 +7,15 @@ const Template = ({ metaImage }) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined' && metaImage) {
-      const domain = window.location.origin;
-      const fullPath = `${domain}/og-image/${metaImage}`;
+      const { origin, pathname } = window.location;
+
+      const isLocal = origin.includes('localhost');
+      
+      // In local, use root path. In prod/stage, use first path segment.
+      const basePath = isLocal ? '' : `/${pathname.split('/').filter(Boolean)[0]}`;
+      
+      const fullPath = `${origin}${basePath}/og-image/${metaImage}`;      
+
       setImagePath(fullPath);
 
       const img = new Image();
