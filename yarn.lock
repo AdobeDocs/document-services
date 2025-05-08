@@ -132,7 +132,7 @@ __metadata:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 846ee1128ccfee37bb36313ee594349369bba472f93ca7f6b6142b7ede79842f808f3458659abbbe7972171166a14674aa1860b8ca7539c1300a804f3794b54d
+  checksum: 9a23ff7173005290d867190dfa35e899b306c2942b2ff01c0881a91b0aa03575caf320261d7b3cd8ca35032cfaabe0f659ee801786d9650b1d330d70c4f7c449
   languageName: node
   linkType: hard
 
@@ -140,96 +140,6 @@ __metadata:
   version: 1.0.3
   resolution: "@adobe/prism-adobe@npm:1.0.3"
   checksum: d9f9fc96ef2f718c5328fd9f4cfbba69d7ea11f1e38eeb599c8a7c5221597e507aa6ade526284c86f6310f3737851c304078c613491c1db23b65be6f7b9bef9a
-  languageName: node
-  linkType: hard
-
-"@adobe/react-spectrum-ui@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@adobe/react-spectrum-ui@npm:1.2.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-  checksum: 18ad87c76e2019f22fa9f18df22fc06cb99e27d46fc82ed6974a4cab1d04c6a223ded51fae95d0890069cb7c9a10add468e5e9c62b9b33ac9b5ab9de25ff12e5
-  languageName: node
-  linkType: hard
-
-"@adobe/react-spectrum-workflow@npm:2.3.4":
-  version: 2.3.4
-  resolution: "@adobe/react-spectrum-workflow@npm:2.3.4"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-  checksum: 1c008fec02f19160a6a0589f9647d29b9652322b087ba521ba7e890747a23c70268c2e58799977823a65a8c44d832162743e0ecb3b082614bc70ba59a6eac2fc
-  languageName: node
-  linkType: hard
-
-"@adobe/react-spectrum@npm:^3.35.1":
-  version: 3.35.1
-  resolution: "@adobe/react-spectrum@npm:3.35.1"
-  dependencies:
-    "@internationalized/string": ^3.2.3
-    "@react-aria/i18n": ^3.11.1
-    "@react-aria/ssr": ^3.9.4
-    "@react-aria/utils": ^3.24.1
-    "@react-aria/visually-hidden": ^3.8.12
-    "@react-spectrum/actionbar": ^3.4.5
-    "@react-spectrum/actiongroup": ^3.10.5
-    "@react-spectrum/avatar": ^3.0.12
-    "@react-spectrum/badge": ^3.1.13
-    "@react-spectrum/breadcrumbs": ^3.9.7
-    "@react-spectrum/button": ^3.16.4
-    "@react-spectrum/buttongroup": ^3.6.13
-    "@react-spectrum/calendar": ^3.4.9
-    "@react-spectrum/checkbox": ^3.9.6
-    "@react-spectrum/combobox": ^3.12.5
-    "@react-spectrum/contextualhelp": ^3.6.11
-    "@react-spectrum/datepicker": ^3.9.6
-    "@react-spectrum/dialog": ^3.8.11
-    "@react-spectrum/divider": ^3.5.13
-    "@react-spectrum/dnd": ^3.3.10
-    "@react-spectrum/dropzone": ^3.0.1
-    "@react-spectrum/filetrigger": ^3.0.1
-    "@react-spectrum/form": ^3.7.6
-    "@react-spectrum/icon": ^3.7.13
-    "@react-spectrum/illustratedmessage": ^3.5.1
-    "@react-spectrum/image": ^3.5.1
-    "@react-spectrum/inlinealert": ^3.2.5
-    "@react-spectrum/labeledvalue": ^3.1.14
-    "@react-spectrum/layout": ^3.6.5
-    "@react-spectrum/link": ^3.6.7
-    "@react-spectrum/list": ^3.7.10
-    "@react-spectrum/listbox": ^3.12.9
-    "@react-spectrum/menu": ^3.19.1
-    "@react-spectrum/meter": ^3.5.1
-    "@react-spectrum/numberfield": ^3.9.3
-    "@react-spectrum/overlays": ^5.6.1
-    "@react-spectrum/picker": ^3.14.5
-    "@react-spectrum/progress": ^3.7.7
-    "@react-spectrum/provider": ^3.9.7
-    "@react-spectrum/radio": ^3.7.6
-    "@react-spectrum/searchfield": ^3.8.6
-    "@react-spectrum/slider": ^3.6.9
-    "@react-spectrum/statuslight": ^3.5.13
-    "@react-spectrum/switch": ^3.5.5
-    "@react-spectrum/table": ^3.12.10
-    "@react-spectrum/tabs": ^3.8.10
-    "@react-spectrum/tag": ^3.2.6
-    "@react-spectrum/text": ^3.5.5
-    "@react-spectrum/textfield": ^3.12.1
-    "@react-spectrum/theme-dark": ^3.5.10
-    "@react-spectrum/theme-default": ^3.5.10
-    "@react-spectrum/theme-light": ^3.4.10
-    "@react-spectrum/tooltip": ^3.6.7
-    "@react-spectrum/view": ^3.6.10
-    "@react-spectrum/well": ^3.4.13
-    "@react-stately/collections": ^3.10.7
-    "@react-stately/data": ^3.11.4
-    "@react-types/shared": ^3.23.1
-    client-only: ^0.0.1
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-  checksum: 856e4b720e44c0ad6027b02da01fdb22bd4532b222904dc05d4633f11a78bb959c9883808b746a4841d58c45884afb4fcd966077456cc9a156b685ad85477661
   languageName: node
   linkType: hard
 
@@ -2145,55 +2055,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/ecma402-abstract@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@formatjs/ecma402-abstract@npm:2.0.0"
-  dependencies:
-    "@formatjs/intl-localematcher": 0.5.4
-    tslib: ^2.4.0
-  checksum: 0bba3b4f1a966c72d3f53173d650294fe313825b6451396c1040fb92bb86b2f771729888a1dadbc0a0074ef809229033fe8ff17c86dcb07a8ad42253b0c3a269
-  languageName: node
-  linkType: hard
-
-"@formatjs/fast-memoize@npm:2.2.0":
-  version: 2.2.0
-  resolution: "@formatjs/fast-memoize@npm:2.2.0"
-  dependencies:
-    tslib: ^2.4.0
-  checksum: 8697fe72a7ece252d600a7d08105f2a2f758e2dd96f54ac0a4c508b1205a559fc08835635e1f8e5ca9dcc3ee61ce1fca4a0e7047b402f29fc96051e293a280ff
-  languageName: node
-  linkType: hard
-
-"@formatjs/icu-messageformat-parser@npm:2.7.8":
-  version: 2.7.8
-  resolution: "@formatjs/icu-messageformat-parser@npm:2.7.8"
-  dependencies:
-    "@formatjs/ecma402-abstract": 2.0.0
-    "@formatjs/icu-skeleton-parser": 1.8.2
-    tslib: ^2.4.0
-  checksum: 404d6732653632eae3b10cfa70dc57c4fb0fe500c6ef9e687e938e4cb29e18b4e5d46633c88a2c06864328eb2f4713fbb6be404c6033682370d568971e2dda0d
-  languageName: node
-  linkType: hard
-
-"@formatjs/icu-skeleton-parser@npm:1.8.2":
-  version: 1.8.2
-  resolution: "@formatjs/icu-skeleton-parser@npm:1.8.2"
-  dependencies:
-    "@formatjs/ecma402-abstract": 2.0.0
-    tslib: ^2.4.0
-  checksum: 8735322fa93ddd471822ba77400411660cb6221c87955cdcea159e8f9b72188106b4d4bf57d737d248810ae1974e1df4974914a6fb6045e91bf5ea22cc7fd30f
-  languageName: node
-  linkType: hard
-
-"@formatjs/intl-localematcher@npm:0.5.4":
-  version: 0.5.4
-  resolution: "@formatjs/intl-localematcher@npm:0.5.4"
-  dependencies:
-    tslib: ^2.4.0
-  checksum: a0af57874fcd163add5f7a0cb1c008e9b09feb1d24cbce1263379ae0393cddd6681197a7f2f512f351a97666fc8675ed52cc17d1834266ee8fc65e9edf3435f6
-  languageName: node
-  linkType: hard
-
 "@gatsbyjs/parcel-namer-relative-to-cwd@npm:1.7.0":
   version: 1.7.0
   resolution: "@gatsbyjs/parcel-namer-relative-to-cwd@npm:1.7.0"
@@ -2678,43 +2539,6 @@ __metadata:
   version: 0.33.0
   resolution: "@img/sharp-win32-x64@npm:0.33.0"
   conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@internationalized/date@npm:^3.5.4":
-  version: 3.5.4
-  resolution: "@internationalized/date@npm:3.5.4"
-  dependencies:
-    "@swc/helpers": ^0.5.0
-  checksum: df73fb4f11e5db918f5a76f94edcaadd34b67bd4160e8ee4e2a5f518e01cdfa7196fbcabd26bfa9d8376e4822a4a1c73d68fb08249cadfaaeba5bb1d41cff032
-  languageName: node
-  linkType: hard
-
-"@internationalized/message@npm:^3.1.4":
-  version: 3.1.4
-  resolution: "@internationalized/message@npm:3.1.4"
-  dependencies:
-    "@swc/helpers": ^0.5.0
-    intl-messageformat: ^10.1.0
-  checksum: 37990cf4fd666afe8d165f3c9042e88c2d95b4a03d6e67595a49d57aff938d19f91826c7c6e5cfa2863c3d8d555365e797d5979da575a835b533fd2e31876bef
-  languageName: node
-  linkType: hard
-
-"@internationalized/number@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "@internationalized/number@npm:3.5.3"
-  dependencies:
-    "@swc/helpers": ^0.5.0
-  checksum: f905cb5302d5a84660fbe0264930fadf286c7a5860373c289863bc2b9d003690552743da2b3155d65e3e9fd0e49b83673caf49c306b9bab39d6e871b6777c588
-  languageName: node
-  linkType: hard
-
-"@internationalized/string@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "@internationalized/string@npm:3.2.3"
-  dependencies:
-    "@swc/helpers": ^0.5.0
-  checksum: aad1dd1de52fa48f17e41ad0a502bab621a08aadb8ccfc02512211d05f7111920d094b49811394a930542a98fe22522c2b5818f6d64eb38aca9638b7b4f11ccd
   languageName: node
   linkType: hard
 
@@ -10835,9 +10659,12 @@ __metadata:
   dependencies:
     "@adobe/gatsby-theme-aio": ^4.14.4
     gatsby: 4.22.0
+    gatsby-plugin-open-graph-images: ^0.1.8
+    gatsby-plugin-react-helmet: ^6.14.0
     lottie-web: ^5.9.4
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   languageName: unknown
   linkType: soft
 
@@ -12879,6 +12706,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-open-graph-images@npm:^0.1.8":
+  version: 0.1.8
+  resolution: "gatsby-plugin-open-graph-images@npm:0.1.8"
+  dependencies:
+    express: ^4.17.1
+    puppeteer: ^3.3.0
+  checksum: f42c1231e53ba8885f33bc931df9efa74da683d4b753a9d7b9d9d3f9eb718c1dafc0aa95db6b35bafc3e04e75dbb8b367be07e37641bdd7900e71cc25467b6f2
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-page-creator@npm:^4.22.0":
   version: 4.24.1
   resolution: "gatsby-plugin-page-creator@npm:4.24.1"
@@ -12926,6 +12763,18 @@ __metadata:
     gatsby: ^4.0.0-next
     react-helmet: ^5.1.3 || ^6.0.0
   checksum: 9f9c44b3bc664edecb05e975506de61c5b60cf621a34c9c5c14a8fcc1e7bd7f5ed34e51ce05085fcb1025cc3c95ce9ba6436a9c2125a22bbf357bee7cb2ae22f
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-react-helmet@npm:^6.14.0":
+  version: 6.14.0
+  resolution: "gatsby-plugin-react-helmet@npm:6.14.0"
+  dependencies:
+    "@babel/runtime": ^7.20.13
+  peerDependencies:
+    gatsby: ^5.0.0-next
+    react-helmet: ^5.1.3 || ^6.0.0
+  checksum: e1bd95456db2a3ffa9582fc50167e22cfbd96a6a75d3ebcc0dc4e06e3257274326dcc657e3ac18654f7e278fd503b6bf27eb584a4a644491f17df4cdf59ff4fe
   languageName: node
   linkType: hard
 
@@ -18909,7 +18758,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.0, prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.0, prop-types@npm:^15.6.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -18954,6 +18803,13 @@ __metadata:
     forwarded: 0.2.0
     ipaddr.js: 1.9.1
   checksum: 29c6990ce9364648255454842f06f8c46fcd124d3e6d7c5066df44662de63cdc0bad032e9bf5a3d653ff72141cc7b6019873d685708ac8210c30458ad99f2b74
+  languageName: node
+  linkType: hard
+
+"proxy-from-env@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "proxy-from-env@npm:1.1.0"
+  checksum: ed7fcc2ba0a33404958e34d95d18638249a68c430e30fcb6c478497d72739ba64ce9810a24f53a7d921d0c065e5b78e3822759800698167256b04659366ca4d4
   languageName: node
   linkType: hard
 
@@ -19022,6 +18878,24 @@ __metadata:
   dependencies:
     escape-goat: ^2.0.0
   checksum: 49529e50372ffdb0cccf0efa0f3b3cb0a2c77805d0d9cc2725bd2a0f6bb414631e61c93a38561b26be1259550b7bb6c2cb92315aa09c8bf93f3bdcb49f2b2fb7
+  languageName: node
+  linkType: hard
+
+"puppeteer@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "puppeteer@npm:3.3.0"
+  dependencies:
+    debug: ^4.1.0
+    extract-zip: ^2.0.0
+    https-proxy-agent: ^4.0.0
+    mime: ^2.0.3
+    progress: ^2.0.1
+    proxy-from-env: ^1.0.0
+    rimraf: ^3.0.2
+    tar-fs: ^2.0.0
+    unbzip2-stream: ^1.3.3
+    ws: ^7.2.3
+  checksum: 468c51ceedf9da07780a17054c138d30642d833e5e04f1ef9fa709de844205a2e26831cebd2367d2839c2aed8dd826623c08f1d99b65ff6325477309ffdb2a24
   languageName: node
   linkType: hard
 
