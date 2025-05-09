@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Context from "@adobe/gatsby-theme-aio/src/components/Context";
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title, description, keywords }) => {
+const SEO = ({ title, description, keywords, ogImage }) => {
   // var today = new Date();
   // var dd = today.getDate();
   // var mm = today.getMonth() + 1;
@@ -31,6 +31,15 @@ const SEO = ({ title, description, keywords }) => {
   )
   const { siteUrl, productionDomain, pageImage, baseUrl, siteTitle, author, creator } = site.siteMetadata;
   const metaTitle = title ? `${title} - ${siteTitle}` : siteTitle;
+  const { origin, pathname } = window.location;
+
+  const isLocal = origin.includes('localhost');
+
+  // In local, use root path. In prod/stage, use first path segment.
+  const basePath = isLocal ? '' : `/${pathname.split('/').filter(Boolean)[0]}`;
+
+  const fullPath = `${origin}${basePath}/${ogImage}`;
+
   return(
     <Helmet>
       <html lang="en" />
@@ -44,7 +53,7 @@ const SEO = ({ title, description, keywords }) => {
       <title>{metaTitle}</title>
       <meta name="title" content={metaTitle} />
       {description && <meta name="description" content={description} />}
-      {keywords && <meta name="keywords" content={keywords.join(', ')} />}
+      {keywords && <meta name="keywords" content={keywords?.join(', ')} />}
 
       {/* props */}
       <meta itemprop="name" content={metaTitle} />
@@ -58,7 +67,7 @@ const SEO = ({ title, description, keywords }) => {
       <meta property="og:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
       <meta property="og:title" content={metaTitle} />
       {description && <meta property="og:description" content={description} /> }
-      <meta property="og:image" content={`${productionDomain}/gh-assets/img/page-thumbnails/${pageImage}`}/>
+      <meta property="og:image" content={`${fullPath}`}/>
       {/* <meta property="og:publish_date"  content={this_date} /> */}
 
       {/* twitter */}

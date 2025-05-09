@@ -1,6 +1,7 @@
 ---
 title: Adobe PDF Services | PDF Tools APIs | Adobe Acrobat Services
 description: Make life easier with our PDF Toolkit. Simplify workflows and improve UX. Our PDF Services API helps you create, convert, OCR PDFs and more. Learn more today.
+ogImage: og-image/home-carousel.png
 ---
 
 import WhyPDFServicesAPI from './pdf-services/why-pdf-services-api.md';
@@ -13,9 +14,6 @@ import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 import {APIPixelRetargeting} from '../../components/retargetting';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
 import EsealApiAnnouncement from './e-seal-api-announcement.md'
-import Template from "../../templates/index.og-image.js";
-
-<Template metaImage="home-carousel.png" />
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
