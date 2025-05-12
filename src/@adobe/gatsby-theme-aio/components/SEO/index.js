@@ -63,7 +63,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
       {/* props */}
       <meta itemprop="name" content={metaTitle} />
       {description && <meta itemprop="description" content={description} />}
-      <meta itemprop="image" content={`${productionDomain}/gh-assets/img/page-thumbnails/${pageImage}`} />
+      <meta itemprop="image" content={`${imagePath}`} />
       <meta property="article:author" content={author} />
       {/* <meta property="article:published_time" content={this_date} /> */}
 
@@ -82,7 +82,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
       <meta property="twitter:title" content={metaTitle} />
       <meta property="twitter:creator" content={creator} />
       {description && <meta property="twitter:description" content={description} />}
-      <meta property="twitter:image:src" content={`${productionDomain}/gh-assets/img/page-thumbnails/${pageImage}`} />
+      <meta property="twitter:image:src" content={`${imagePath}`} />
     </Helmet>
   )
 };
