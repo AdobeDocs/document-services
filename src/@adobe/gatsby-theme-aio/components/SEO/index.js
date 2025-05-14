@@ -32,27 +32,12 @@ const SEO = ({ title, description, keywords, ogImage }) => {
   const { siteUrl, productionDomain, pageImage, baseUrl, siteTitle, author, creator } = site.siteMetadata;
   const metaTitle = title ? `${title} - ${siteTitle}` : siteTitle;
 
-  const [imagePath, setImagePath] = useState(``);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && ogImage) {
-      const { origin, pathname } = window.location;
-      const isLocal = origin.includes('localhost');
-      // In local, use root path. In prod/stage, use first path segment.
-      const basePath = isLocal ? '' : `/${pathname.split('/').filter(Boolean)[0]}`;
-      const fullPath = `${origin}${basePath}/${ogImage}`;
-      setImagePath(fullPath)
-    }
-  }, [ogImage]);
-
-  console.log('productionDomain', productionDomain)
-
   return (
     <Helmet>
       <html lang="en" />
-      <meta property="og:image" content={`https://t4.ftcdn.net/jpg/10/94/45/81/240_F_1094458109_UecJvz3uBCVkmnuV2kx6viZukdIX0MGc.jpg`} />
-      <meta property="twitter:image:src" content={`https://t4.ftcdn.net/jpg/10/94/45/81/240_F_1094458109_UecJvz3uBCVkmnuV2kx6viZukdIX0MGc.jpg`} />
-      <meta itemprop="image" content={`https://t4.ftcdn.net/jpg/10/94/45/81/240_F_1094458109_UecJvz3uBCVkmnuV2kx6viZukdIX0MGc.jpg`} />
+      <meta property="og:image" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
+      <meta property="twitter:image:src" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
+      <meta itemprop="image" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
       <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
       <meta name="robots" content="noodp" />
       <link rel="canonical" href={`${productionDomain}${pageURL}`} />
