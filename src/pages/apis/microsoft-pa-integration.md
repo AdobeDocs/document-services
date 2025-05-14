@@ -1,6 +1,7 @@
 ---
 title: Microsoft Power Automate Integration | PDF Services API Connector | Adobe Acrobat Sign Connector
 description: Build low-code, end-to-end document workflows easily with Adobe Acrobat Services & Adobe Acrobat Sign on Microsoft Power Platform. From PDF creation and conversion to e-signatures, access over twenty PDF actions. Learn more and start a free tier today.
+ogImage: og-image/Marquee_Image_Static_Desktop.png
 ---
 
 import UplevelYourDocumentTitle from './microsoft-PA-integration/uplevel-your-document-title.md';
@@ -12,9 +13,6 @@ import GetStarted from './microsoft-PA-integration/getStarted.md'
 import AdditionalResources from './microsoft-PA-integration/additional-resources.md'
 import MsAnnouncementBlock from './microsoft-PA-integration/ms-announcement.md'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
-import Template from "../../templates/index.og-image.js";
-
-<Template metaImage="Marquee_Image_Static_Desktop.png" />
 
 <Hero slots="icon, heading, text, assetsImg, buttons"  customLayout variant="halfwidth" variantsTypePrimary='primary' className="microsoftPAHerobgImage Hero-Banner ms-hero-img"/>
 

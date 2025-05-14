@@ -12,6 +12,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
   // const this_date = `${yyyy}-${mm}-${dd}`;
 
   const { location } = useContext(Context);
+  console.log('location', location)
   const pageURL = location.pathname;
   const { site } = useStaticQuery(
     graphql`
@@ -31,49 +32,63 @@ const SEO = ({ title, description, keywords, ogImage }) => {
   )
   const { siteUrl, productionDomain, pageImage, baseUrl, siteTitle, author, creator } = site.siteMetadata;
   const metaTitle = title ? `${title} - ${siteTitle}` : siteTitle;
+  const isBrowser = typeof window !== "undefined";
+
+  let pathPrefix;
+
+  if (isBrowser) {
+    const { origin, pathname } = window.location;
+    const isLocal = origin.includes('localhost');
+    const basePath = isLocal ? '' : `/${pathname.split('/').filter(Boolean)[0]}`;
+    pathPrefix = `${origin}${basePath}`;
+  }
 
   return (
-    <Helmet>
-      <html lang="en" />
-      <meta property="og:image" content={`${siteUrl}document-services/${ogImage}`} />
-      <meta property="twitter:image:src" content={`${siteUrl}document-services/${ogImage}`} />
-      <meta itemprop="image" content={`${siteUrl}document-services/${ogImage}`} />
-      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
-      <meta name="robots" content="noodp" />
-      <link rel="canonical" href={`${productionDomain}${pageURL}`} />
-      <link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
-      <link rel="shortcut icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+    <>
+      {
+        isBrowser &&
+        <Helmet>
+          <html lang="en" />
+          <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+          <meta name="robots" content="noodp" />
+          <link rel="canonical" href={`${productionDomain}${pageURL}`} />
+          <link rel="icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
+          <link rel="shortcut icon" href="https://www.adobe.com/favicon.ico" type="image/x-icon" />
 
-      {/*  primary  */}
-      <title>{metaTitle}</title>
-      <meta name="title" content={metaTitle} />
-      {description && <meta name="description" content={description} />}
-      {keywords && <meta name="keywords" content={keywords?.join(', ')} />}
+          {/*  primary  */}
+          <title>{metaTitle}</title>
+          <meta name="title" content={metaTitle} />
+          {description && <meta name="description" content={description} />}
+          {keywords && <meta name="keywords" content={keywords?.join(', ')} />}
 
-      {/* props */}
-      <meta itemprop="name" content={metaTitle} />
-      {description && <meta itemprop="description" content={description} />}
-      {/* <meta itemprop="image" content={`${imagePath}`} /> */}
-      <meta property="article:author" content={author} />
-      {/* <meta property="article:published_time" content={this_date} /> */}
+          {/* props */}
+          <meta itemprop="name" content={metaTitle} />
+          {description && <meta itemprop="description" content={description} />}
+          {/* <meta itemprop="image" content={`${imagePath}`} /> */}
+          <meta property="article:author" content={author} />
+          <meta itemprop="image" content={`${pathPrefix}/${ogImage}`} />
+          {/* <meta property="article:published_time" content={this_date} /> */}
 
-      {/* open graph */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
-      <meta property="og:title" content={metaTitle} />
-      {description && <meta property="og:description" content={description} />}
-      {/* <meta property="og:image" content={`${imagePath}`} />  */}
-      {/* <meta property="og:publish_date"  content={this_date} /> */}
+          {/* open graph */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
+          <meta property="og:title" content={metaTitle} />
+          <meta property="og:image" content={`${pathPrefix}/${ogImage}`} />
+          {description && <meta property="og:description" content={description} />}
+          {/* <meta property="og:publish_date"  content={this_date} /> */}
 
-      {/* twitter */}
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:site" content={creator} />
-      <meta property="twitter:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
-      <meta property="twitter:title" content={metaTitle} />
-      <meta property="twitter:creator" content={creator} />
-      {description && <meta property="twitter:description" content={description} />}
-      {/* <meta property="twitter:image:src" content={`${imagePath}`} /> */}
-    </Helmet>
+          {/* twitter */}
+          <meta property="twitter:card" content="summary" />
+          <meta property="twitter:site" content={creator} />
+          <meta property="twitter:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
+          <meta property="twitter:title" content={metaTitle} />
+          <meta property="twitter:creator" content={creator} />
+          <meta property="twitter:image:src" content={`${pathPrefix}/${ogImage}`} />
+          {description && <meta property="twitter:description" content={description} />}
+
+        </Helmet>
+      }
+    </>
   )
 };
 

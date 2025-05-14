@@ -1,11 +1,8 @@
 ---
 title: Contact Sales | Adobe Acrobat Services
 description: Get info about pricing, billing, and licensing for Adobe Acrobat Services API
+ogImage: og-image/extract-hero-mobile.png
 ---
-
-import Template from "../../../../templates/index.og-image.js";
-
-<Template metaImage="extract-hero-mobile.png" />
 
 <Hero slots="heading" variant="fullwidth" theme="dark" customLayout className="contactUsHerobgImage Hero-Banner Sales-ContactUs" />
 

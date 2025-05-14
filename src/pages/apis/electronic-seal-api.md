@@ -1,6 +1,7 @@
 ---
 title: Electronic Seal API
 description: Electronically seal PDF documents at scale to provide document authenticity and identity.
+ogImage: og-image/e-seal-desktop.png
 ---
 
 import AutoTagAPI from './electronic-seal-api/e-seal-key-feature.md';
@@ -10,9 +11,6 @@ import {NewsLetterBlade} from '../../components/news-letter-blade';
 import ExplorUsecase from './electronic-seal-api/explore-use-case.md';
 import SealAPIStepper from './electronic-seal-api/seal-api-stepper.md';
 import SealAPIAdobeDoc from './electronic-seal-api/seal-api-adobe-doc.md';
-import Template from "../../templates/index.og-image.js";
-
-<Template metaImage="e-seal-desktop.png" />
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variantsTypeSecondary='primary' variant="fullwidth"  className="eSealApibgImage Hero-Banner autoTagAPI-content"/>
 

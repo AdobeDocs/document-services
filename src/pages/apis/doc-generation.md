@@ -1,6 +1,7 @@
 ---
 title: Automate Document Generation | Contract Generation
 description: Automatically generate custom branded sales proposals, legal contracts, and invoices from Word templates and your dynamic data. Learn more today.
+ogImage: og-image/doc-gen-hero-tablet.png
 ---
 
 import DgDownloadSample from './doc-generation/dg-download-sample'
@@ -15,9 +16,6 @@ import {AdobeMsBlade} from '../../components/adobeMicrosoftBlade'
 import '../../styles/doc-generation.css'
 import {APIPixelRetargeting} from '../../components/retargetting'
 import {NewsLetterBlade} from '../../components/news-letter-blade';
-import Template from "../../templates/index.og-image.js";
-
-<Template metaImage="doc-gen-hero-tablet.png" />
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
