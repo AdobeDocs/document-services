@@ -49,6 +49,10 @@ const SEO = ({ title, description, keywords, ogImage }) => {
         isBrowser &&
         <Helmet>
           <html lang="en" />
+          <meta property="og:image" content={`${pathPrefix}/${ogImage}`} />
+          <meta property="twitter:image:src" content={`${pathPrefix}/${ogImage}`} />
+          <meta itemprop="image" content={`${pathPrefix}/${ogImage}`} />
+
           <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
           <meta name="robots" content="noodp" />
           <link rel="canonical" href={`${productionDomain}${pageURL}`} />
@@ -66,14 +70,12 @@ const SEO = ({ title, description, keywords, ogImage }) => {
           {description && <meta itemprop="description" content={description} />}
           {/* <meta itemprop="image" content={`${imagePath}`} /> */}
           <meta property="article:author" content={author} />
-          <meta itemprop="image" content={`${pathPrefix}/${ogImage}`} />
           {/* <meta property="article:published_time" content={this_date} /> */}
 
           {/* open graph */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
           <meta property="og:title" content={metaTitle} />
-          <meta property="og:image" content={`${pathPrefix}/${ogImage}`} />
           {description && <meta property="og:description" content={description} />}
           {/* <meta property="og:publish_date"  content={this_date} /> */}
 
@@ -83,7 +85,6 @@ const SEO = ({ title, description, keywords, ogImage }) => {
           <meta property="twitter:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
           <meta property="twitter:title" content={metaTitle} />
           <meta property="twitter:creator" content={creator} />
-          <meta property="twitter:image:src" content={`${pathPrefix}/${ogImage}`} />
           {description && <meta property="twitter:description" content={description} />}
 
         </Helmet>
