@@ -35,9 +35,9 @@ const SEO = ({ title, description, keywords, ogImage }) => {
   return (
     <Helmet>
       <html lang="en" />
-      <meta property="og:image" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
-      <meta property="twitter:image:src" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
-      <meta itemprop="image" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
+      <meta property="og:image" content={`${siteUrl}document-services/${ogImage}`} />
+      <meta property="twitter:image:src" content={`${siteUrl}document-services/${ogImage}`} />
+      <meta itemprop="image" content={`${siteUrl}document-services/${ogImage}`} />
       <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
       <meta name="robots" content="noodp" />
       <link rel="canonical" href={`${productionDomain}${pageURL}`} />
