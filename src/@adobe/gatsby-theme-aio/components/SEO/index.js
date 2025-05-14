@@ -45,9 +45,14 @@ const SEO = ({ title, description, keywords, ogImage }) => {
     }
   }, [ogImage]);
 
+  console.log('productionDomain', productionDomain)
+
   return (
     <Helmet>
       <html lang="en" />
+      <meta property="og:image" content={`https://t4.ftcdn.net/jpg/10/94/45/81/240_F_1094458109_UecJvz3uBCVkmnuV2kx6viZukdIX0MGc.jpg`} />
+      <meta property="twitter:image:src" content={`https://t4.ftcdn.net/jpg/10/94/45/81/240_F_1094458109_UecJvz3uBCVkmnuV2kx6viZukdIX0MGc.jpg`} />
+      <meta itemprop="image" content={`https://t4.ftcdn.net/jpg/10/94/45/81/240_F_1094458109_UecJvz3uBCVkmnuV2kx6viZukdIX0MGc.jpg`} />
       <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
       <meta name="robots" content="noodp" />
       <link rel="canonical" href={`${productionDomain}${pageURL}`} />
@@ -63,7 +68,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
       {/* props */}
       <meta itemprop="name" content={metaTitle} />
       {description && <meta itemprop="description" content={description} />}
-      <meta itemprop="image" content={`${imagePath}`} />
+      {/* <meta itemprop="image" content={`${imagePath}`} /> */}
       <meta property="article:author" content={author} />
       {/* <meta property="article:published_time" content={this_date} /> */}
 
@@ -72,7 +77,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
       <meta property="og:url" content={`${siteUrl}${baseUrl}${pageURL}`} />
       <meta property="og:title" content={metaTitle} />
       {description && <meta property="og:description" content={description} />}
-      <meta property="og:image" content={`${imagePath}`} />
+      {/* <meta property="og:image" content={`${imagePath}`} />  */}
       {/* <meta property="og:publish_date"  content={this_date} /> */}
 
       {/* twitter */}
@@ -82,7 +87,7 @@ const SEO = ({ title, description, keywords, ogImage }) => {
       <meta property="twitter:title" content={metaTitle} />
       <meta property="twitter:creator" content={creator} />
       {description && <meta property="twitter:description" content={description} />}
-      <meta property="twitter:image:src" content={`${imagePath}`} />
+      {/* <meta property="twitter:image:src" content={`${imagePath}`} /> */}
     </Helmet>
   )
 };
