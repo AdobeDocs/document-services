@@ -34,24 +34,15 @@ const SEO = ({ title, description, keywords, ogImage }) => {
   const metaTitle = title ? `${title} - ${siteTitle}` : siteTitle;
   const isBrowser = typeof window !== "undefined";
 
-  let pathPrefix;
-
-  if (isBrowser) {
-    const { origin, pathname } = window.location;
-    const isLocal = origin.includes('localhost');
-    const basePath = isLocal ? '' : `/${pathname.split('/').filter(Boolean)[0]}`;
-    pathPrefix = `${origin}${basePath}`;
-  }
-
   return (
     <>
       {
         isBrowser &&
         <Helmet>
           <html lang="en" />
-          <meta property="og:image" content={`${pathPrefix}/${ogImage}`} />
-          <meta property="twitter:image:src" content={`${pathPrefix}/${ogImage}`} />
-          <meta itemprop="image" content={`${pathPrefix}/${ogImage}`} />
+          <meta property="og:image" content={`${siteUrl}/document-services/${ogImage}`} />
+          <meta property="twitter:image:src" content={`${siteUrl}/document-services/${ogImage}`} />
+          <meta itemprop="image" content={`${siteUrl}/document-services/${ogImage}`} />
 
           <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
           <meta name="robots" content="noodp" />
