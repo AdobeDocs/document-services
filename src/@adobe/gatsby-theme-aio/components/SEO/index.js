@@ -40,9 +40,9 @@ const SEO = ({ title, description, keywords, ogImage }) => {
         isBrowser &&
         <Helmet>
           <html lang="en" />
-          <meta property="og:image" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
-          <meta property="twitter:image:src" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
-          <meta itemprop="image" content={`https://developer-stage.adobe.com/document-services/${ogImage}`} />
+          <meta property="og:image" content={`https://developer-stage.adobe.com/document-services/og-image/home-carousel.png`} />
+          <meta property="twitter:image:src" content={`https://developer-stage.adobe.com/document-services/og-image/home-carousel.png`} />
+          <meta itemprop="image" content={`https://developer-stage.adobe.com/document-services/og-image/home-carousel.png`} />
 
           <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
           <meta name="robots" content="noodp" />
