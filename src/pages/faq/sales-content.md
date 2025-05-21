@@ -127,7 +127,7 @@ Ultimately, customers are responsible for ensuring compliance with their legal o
 
 <AccordionItem header="How do I get a copy of Adobe's DPA?" slot_id="data-security-privacy-how-do-i-get-acopy-of-adobe-DBA">
 
-To request a copy of our DPA, please contact our sales team for assistance at: _______
+To request a copy of our DPA, please contact our sales team by filing out the form here: [https://developer.adobe.com/document-services/pricing/contact/sales/](https://developer.adobe.com/document-services/pricing/contact/sales/)
 
 </AccordionItem>
 
@@ -163,7 +163,7 @@ See the Adobe Trust Center (<a href="<https://www.adobe.com/trust.html>">https:/
 
 <AccordionItem header="What payment plans does Adobe offer? Which payment plan is right for me?" slot_id="which_payment_plan_is_right_for_me">
 
-You can purchase Adobe Acrobat Services API via an Enterprise Term License Agreement (ETLA) or Value Incentive Plan (VIP).To get a quote, please fill out our contact form here at https://developer.adobe.com/document-services/pricing/contact/sales/ and our sales team will follow up with you.
+You can purchase Adobe Acrobat Services API via an Enterprise Term License Agreement (ETLA) or Value Incentive Plan (VIP). "To get a quote", please fill out our contact form here at https://developer.adobe.com/document-services/pricing/contact/sales/ and our sales team will follow up with you.
 
 See additional information here: https://developer.adobe.com/document-services/pricing.
 
