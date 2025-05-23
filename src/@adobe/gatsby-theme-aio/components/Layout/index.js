@@ -184,7 +184,6 @@ const searchIFrameSource = () => {
 };
 
 export default ({ children, pageContext, location }) => {
-  console.log('pageContext', pageContext)
   const [ims, setIms] = useState(null);
   const [isLoadingIms, setIsLoadingIms] = useState(true);
   // ["index1", "index2", ...]
