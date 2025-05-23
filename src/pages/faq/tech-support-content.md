@@ -16,9 +16,10 @@ If you are interested in using Adobe PDF Services API on a trial basis, consider
 
 </AccordionItem>
 
-<AccordionItem header="Why do I have to use a personal account when setting up a Free Tier or account? Why can't I use my company's existing enterprise email/account?" slot_id="account-management-why-do-i-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account">
+<AccordionItem header="Why do I have to use a personal account when setting up a Free Tier or account? Why can't I use my company's existing  organization email/account?
+" slot_id="account-management-why-do-i-have-to-use-a-personal-account-when-setting-up-a-free-tier-or-account">
 
-Access to Adobe Acrobat Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are using the Free Tier, it may be easier and faster to use a personal email than your existing Adobe ID.
+Access to Adobe Acrobat Services APIs or SDKs is only available when it is attached to an Enterprise Term License Agreement (ETLA) or Value Incentive Plan (VIP), and the organization's IT administrator has provisioned that user to have access to APIs. For this reason, if you are using the Free Tier, it may be easier and faster to use a personal email than your existing Adobe ID.
 
 </AccordionItem>
 
@@ -34,11 +35,11 @@ Both paid and trial customers can create new credentials, as well as edit existi
 
 </AccordionItem>
 
-<AccordionItem header='Can I continue using my same Free Tier credentials when I pay for Adobe Acrobat Services?' slot_id="account-management-can-i-continue-using-my-same-free-tier-credentials">
+<AccordionItem header=' Can I continue using my same Free Tier credentials when I pay for Adobe Acrobat Services?' slot_id="account-management-can-i-continue-using-my-same-free-tier-credentials">
 
 You should not use your Free Tier credentials (Credential Key aka API Key) outside the Free Tier.
 
-When you start your Enterprise Term Licensing Agreement (ETLA), you will receive & create new credentials under your ETLA ORG–you will want to exchange your free tier credentials with those new ETLA credentials.
+When you start your Enterprise Term Licensing Agreement (ETLA) or Value Incentive Plan (VIP) you will receive & create new credentials under your ETLA or VIP organization  — you will want to exchange your free tier credentials with those new credentials.
 
 </AccordionItem>
 

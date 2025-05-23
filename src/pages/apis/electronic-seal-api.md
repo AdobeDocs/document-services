@@ -1,6 +1,7 @@
 ---
 title: Electronic Seal API
 description: Electronically seal PDF documents at scale to provide document authenticity and identity.
+ogImage: og-image/e-seal-desktop.png
 ---
 
 import AutoTagAPI from './electronic-seal-api/e-seal-key-feature.md';

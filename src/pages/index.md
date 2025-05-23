@@ -1,6 +1,6 @@
 ---
 title: SDK Developer Kit | PDF Library | Adobe Acrobat Services
-description: Own the end-to-end customer experience. Our SDK Developer kits are customizable & built to last. Find an innovative solution with our PDF SDK here.
+description: Transform how your apps handle documents with Adobe Acrobat Services APIs—create, convert, extract into JSON, tag for accessibility, seal, and embed PDFs using powerful tools built for developers. Learn more now.
 ---
 
 import '../styles/main.css'

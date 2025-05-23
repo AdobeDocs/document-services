@@ -1,6 +1,7 @@
 ---
 title: Extract Text from PDF | Extract Data from PDF | Visualizer
-description: Extract the text, data and content elements of any PDF with a web service powered by Adobe Sensei's machine learning. Try a free tier of Adobe PDF Extract today!
+description:  Extract text, tables, and images from any PDF into structured JSON with Adobe PDF Extract API. Powered by Adobe Sensei's machine learning. Perfect for data analysis, RPA, and NLP workflows. Learn more now.
+ogImage: og-image/extract-hero-mobile.png
 ---
 
 import ExtractStepperComponent from './pdf-extract/extract-stepper.md';
@@ -11,7 +12,7 @@ import VisualizerHowItWorks from './pdf-extract/visualizer-how-it-works.md';
 import PdfExtractUseCases from './pdf-extract/pdf-extract-resource.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
 import {NewsLetterBlade} from '../../components/news-letter-blade';
-import EsealApiAnnouncement from './e-seal-api-announcement.md'
+import EsealApiAnnouncement from './e-seal-api-announcement.md';
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
 
