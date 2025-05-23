@@ -1,6 +1,7 @@
 ---
 title: Acrobat Sign API | Easy and Secure eSignature API
 description: Secure, powerful, and easy to use APIs to integrate e-signatures into your platform, app, or workflow quickly.
+ogImage: og-image/sign-up-meta.png
 ---
 import TakeYourProject from './sign-api/take-your-project-nxt-lvl.md'
 import TakeYourProjectCont from './sign-api/take-your-project-content.md'

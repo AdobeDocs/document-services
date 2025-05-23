@@ -1,6 +1,7 @@
 ---
 title: PDF Embed API | Embed PDF in HTML | Adobe Acrobat Services
 description: Adobe PDF Embed API is a free JavaScript library that allows you to quickly and easily embed PDFs in web applications with only a few lines of code. Learn more now.
+ogImage: og-image/home-carousel-one@2x.png
 ---
 
 import EmbedModes from './pdf-embed/embed-modes.md';
