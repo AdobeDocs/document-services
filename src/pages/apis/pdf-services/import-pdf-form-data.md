@@ -12,7 +12,7 @@ Effortlessly populate PDF forms using the Import PDF Form Data API. Provide form
 
 See our public [API Reference](https://developer.adobe.com/document-services/docs/apis/#tag/Import-PDF-Form-Data) and quickly try our APIs using the Postman collections
 
-<CodeBlock slots="heading, code" repeat="2" languages="curl,java" />
+<CodeBlock slots="heading, code" repeat="3" languages="curl,.NET,java" />
 
 #### REST API
 
@@ -46,6 +46,103 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/setformd
         }
     },
 }'
+```
+
+#### .Net
+
+```clike
+// Get the samples from https://www.adobe.com/go/pdftoolsapi_net_samples
+// Run the sample:
+// cd ImportPDFFormData/
+// dotnet run ImportPDFFormData.csproj
+
+namespace ImportPDFFormData
+{
+    class Program
+    {
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
+
+        static void Main()
+        {
+            //Configure the logging
+            ConfigureLogging();
+            try
+            {
+                // Initial setup, create credentials instance
+                ICredentials credentials = new ServicePrincipalCredentials(
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_ID"),
+                    Environment.GetEnvironmentVariable("PDF_SERVICES_CLIENT_SECRET"));
+
+                // Creates a PDF Services instance
+                PDFServices pdfServices = new PDFServices(credentials);
+
+                // Creates an asset(s) from source file(s) and upload
+                using Stream inputStream = File.OpenRead(@"importPdfFormDataInput.pdf");
+                IAsset asset = pdfServices.Upload(inputStream, PDFServicesMediaType.PDF.GetMIMETypeValue());
+
+                // Create parameters for the job
+                var formData = new JObject(
+                    new JProperty("option_two", "Yes"),
+                    new JProperty("option_one", "Yes"),
+                    new JProperty("name", "sufia"),
+                    new JProperty("option_three", "Off"),
+                    new JProperty("age", "25"),
+                    new JProperty("favorite_movie", "Star Wars Again")
+                );
+
+                ImportPDFFormDataParams importParams = ImportPDFFormDataParams.ImportPDFFormDataParamsBuilder()
+                    .WithJsonFormFieldsData(formData)
+                    .Build();
+
+                // Creates a new job instance
+                ImportPDFFormDataJob importPDFFormDataJob = new ImportPDFFormDataJob(asset);
+                importPDFFormDataJob.SetParams(importParams);
+
+                // Submits the job and gets the job result
+                String location = pdfServices.Submit(importPDFFormDataJob);
+                PDFServicesResponse<ImportPDFFormDataResult> pdfServicesResponse =
+                    pdfServices.GetJobResult<ImportPDFFormDataResult>(location, typeof(ImportPDFFormDataResult));
+
+                // Get content from the resulting asset(s)
+                IAsset resultAsset = pdfServicesResponse.Result.Asset;
+                StreamAsset streamAsset = pdfServices.GetContent(resultAsset);
+
+                // Creating output streams and copying stream asset's content to it
+                String outputFilePath = "/output/ImportPDFFormData.pdf";
+                new FileInfo(Directory.GetCurrentDirectory() + outputFilePath).Directory.Create();
+                Stream outputStream = File.OpenWrite(Directory.GetCurrentDirectory() + outputFilePath);
+                streamAsset.Stream.CopyTo(outputStream);
+                outputStream.Close();
+            }
+            catch (ServiceUsageException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (ServiceApiException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (SDKException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (IOException ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Exception encountered while executing operation", ex);
+            }
+        }
+
+        static void ConfigureLogging()
+        {
+            ILoggerRepository logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+            XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+        }
+    }
+}
 ```
 
 #### Java
