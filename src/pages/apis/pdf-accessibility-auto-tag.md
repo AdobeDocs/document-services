@@ -34,7 +34,7 @@ autoTagapiHeroAssetImg  accessibility-auto-tag-hero
 
 ### Try the PDF Accessibility Checker API
 
-Explore our latest API designed to check PDF accessibility according to the machine-verifiable requirements of PDF/UA and WCAG 2.0, generating an accessibility report.
+Explore our latest API designed to check PDF accessibility according to the machine-verifiable requirements of PDF/UA and the latest version of WCAG, generating an accessibility report.
 
 [Learn More](https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Accessibility-Checker)
 

@@ -31,7 +31,8 @@ curl --location --request POST 'https://pdf-services.adobe.io/operation/htmltopd
     "pageLayout": {
         "pageWidth": 11,
         "pageHeight": 8.5
-    }
+    },
+    "waitTimeToLoad": 100
 }'
 
 // Legacy API can be found here

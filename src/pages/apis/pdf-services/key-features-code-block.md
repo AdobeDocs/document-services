@@ -24,6 +24,9 @@ import RotatePDFPages from './rotate-pdf-pages.md';
 import HTMLToPDF from './html-to-pdf.md';
 import AccessibilityAutoTagApi from './accessibility-auto-tag-api.md'
 import EsealAPI from './e-seal.md'
+import ExportFormData from './export-pdf-form-data.md'
+import ImportFormData from './import-pdf-form-data.md'
+import './key-features-code-block.css'
 
 <!-- Key Features of Adobe PDF Services API -->
 
@@ -33,7 +36,7 @@ import EsealAPI from './e-seal.md'
 
 - [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?api=pdf-services-api)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" repeat="22"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
+<TabsBlock orientation="vertical" slots="heading, image, content" repeat="24"  theme="dark" className='bgBlue code-block-0 key-features-code-block service-code-block tabBlockAlign' />
 
 ### Extract PDF Content
 
@@ -166,3 +169,15 @@ import EsealAPI from './e-seal.md'
 ![EMPTY_ALT](../../images/rotate_page.svg)
 
 <RotatePDFPages/>
+
+### Import PDF Form Data
+
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
+
+<ImportFormData/>
+
+### Export PDF Form Data
+
+![EMPTY_ALT](../../images/s_createpdf_color_24.svg)
+
+<ExportFormData/>
