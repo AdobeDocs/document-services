@@ -173,23 +173,12 @@ public class ImportPDFFormData {
         // Create parameters for the job
         ImportPDFFormDataParams importPDFFormDataParams = ImportPDFFormDataParams.importPdfFormDataParamsBuilder()
                 .withJsonFormFieldsData(new JSONObject("{\n" +
-                    "  \"dob\": \"10/10/1989\",\n" +
-                    "  \"billTo\": {\n" +
-                    "    \"zip\": \"12401\",\n" +
-                    "    \"address\": {\n" +
-                    "      \"line\": {\n" +
-                    "        \"1\": \"132\",\n" +
-                    "        \"2\": \"My Street\"\n" +
-                    "      }\n" +
-                    "    },\n" +
-                    "    \"city\": \"Kingston\",\n" +
-                    "    \"state\": \"New York\"\n" +
-                    "  },\n" +
-                    "  \"name\": {\n" +
-                    "    \"middle\": \"\",\n" +
-                    "    \"last\": \"Smith\",\n" +
-                    "    \"first\": \"John\"\n" +
-                    "  }\n" +
+                    "  \"option_two\": \"Yes\",\n" +
+                    "  \"option_one\": \"Yes\",\n" +
+                    "  \"option_three\": \"Off\",\n" +
+                    "  \"name\": \"garvit\",\n" +
+                    "  \"favorite_movie\": \"Star Wars Again\",\n" +
+                    "  \"age\": \"24\",\n" +
                     "}"))
                 .build();
         
