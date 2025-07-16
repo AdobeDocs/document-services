@@ -173,23 +173,12 @@ public class ImportPDFFormData {
         // Create parameters for the job
         ImportPDFFormDataParams importPDFFormDataParams = ImportPDFFormDataParams.importPdfFormDataParamsBuilder()
                 .withJsonFormFieldsData(new JSONObject("{\n" +
-                    "  \"dob\": \"10/10/1989\",\n" +
-                    "  \"billTo\": {\n" +
-                    "    \"zip\": \"12401\",\n" +
-                    "    \"address\": {\n" +
-                    "      \"line\": {\n" +
-                    "        \"1\": \"132\",\n" +
-                    "        \"2\": \"My Street\"\n" +
-                    "      }\n" +
-                    "    },\n" +
-                    "    \"city\": \"Kingston\",\n" +
-                    "    \"state\": \"New York\"\n" +
-                    "  },\n" +
-                    "  \"name\": {\n" +
-                    "    \"middle\": \"\",\n" +
-                    "    \"last\": \"Smith\",\n" +
-                    "    \"first\": \"John\"\n" +
-                    "  }\n" +
+                    "  \"option_two\": \"Yes\",\n" +
+                    "  \"option_one\": \"Yes\",\n" +
+                    "  \"option_three\": \"Off\",\n" +
+                    "  \"name\": \"garvit\",\n" +
+                    "  \"favorite_movie\": \"Star Wars Again\",\n" +
+                    "  \"age\": \"24\",\n" +
                     "}"))
                 .build();
         
@@ -231,7 +220,7 @@ logging.basicConfig(level=logging.INFO)
 class ImportPDFFormData:
     def __init__(self):
         try:
-            file = open('../resources/importPdfFormDataInput.pdf', 'rb')
+            file = open('src/resources/importPdfFormDataInput.pdf', 'rb')
             input_stream = file.read()
             file.close()
 
@@ -288,8 +277,8 @@ class ImportPDFFormData:
     def create_output_file_path() -> str:
         now = datetime.now()
         time_stamp = now.strftime("%Y-%m-%dT%H-%M-%S")
-        os.makedirs("../../output/ImportPDFFormData", exist_ok=True)
-        return f"../../output/ImportPDFFormData/import{time_stamp}.pdf"
+        os.makedirs("output/ImportPDFFormData", exist_ok=True)
+        return f"output/ImportPDFFormData/import{time_stamp}.pdf"
 
 
 if __name__ == "__main__":
