@@ -111,37 +111,37 @@ module.exports = {
         menu: [
           {
             title: 'Overview',
-            path: 'document-services/docs/overview'
+            path: '/docs/overview'
           },
           {
             title: 'PDF Services API',
-            path: 'document-services/docs/overview/pdf-services-api/index.md'
+            path: '/docs/overview/pdf-services-api/index.md'
           },
           {
             title: 'PDF Accessibility Auto-Tag API',
-            path: 'document-services/docs/overview/pdf-accessibility-auto-tag-api/index.md'
+            path: '/docs/overview/pdf-accessibility-auto-tag-api/index.md'
           },
           {
             title: 'PDF Extract API',
-            path: 'document-services/docs/overview/pdf-extract-api/index.md'
+            path: '/docs/overview/pdf-extract-api/index.md'
           },
           {
             title: 'Document Generation API',
-            path: 'document-services/docs/overview/document-generation-api/index.md'
+            path: '/docs/overview/document-generation-api/index.md'
           },
           {
             title: 'PDF Electronic Seal API',
-            path: 'document-services/docs/overview/pdf-electronic-seal-api/index.md'
+            path: '/docs/overview/pdf-electronic-seal-api/index.md'
           },
           {
             title: 'PDF Embed API',
-            path: 'document-services/docs/overview/pdf-embed-api/index.md'
+            path: '/docs/overview/pdf-embed-api/index.md'
           },
         ]
       },
       {
         title: "REST APIs",
-        path: 'document-services/docs/apis/index.md'
+        path: '/docs/apis/index.md'
       }
     ],
     techSupportFAQMenus: [
