@@ -131,7 +131,7 @@ __metadata:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: ecaca48ce1714f23a042da1ac0446b14074520dcd99aea3f89c9c89f9284a1889edfb24d00701302cf69692b51ed61994262dcc7f209d110cc0224c72ffbca70
+  checksum: 5da97c2ba91ac028209271f637e4f54a964bfe4ec953d25dc80b104ef9cd99b61cb938d2170ce0c8a7e603e07e86ed848818a1939c96103fd6499e02140bbaf3
   languageName: node
   linkType: hard
 
