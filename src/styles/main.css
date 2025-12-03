@@ -542,6 +542,7 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
 }
 .volume-content {
     padding-left: var(--spectrum-global-dimension-size-400);
+    border-right: 1px solid var(--spectrum-global-color-gray-100);
 }
 
 .mediaSize div:first-child {
