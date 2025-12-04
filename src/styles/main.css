@@ -513,6 +513,7 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
 }
 .border-right > div > div > div {
     border-right: 1px solid var(--spectrum-global-color-gray-500);
+    width:40%;
 }
 .pb-1 {
     padding-bottom: var(--spectrum-global-dimension-size-300) !important;
@@ -542,7 +543,7 @@ pre:not(.prism-code) div[class^="spectrum"] div:first-child {
 }
 .volume-content {
     padding-left: var(--spectrum-global-dimension-size-400);
-    border-right: 1px solid var(--spectrum-global-color-gray-100);
+    /* border-left: 1px solid var(--spectrum-global-color-gray-500); */
 }
 
 .mediaSize div:first-child {
