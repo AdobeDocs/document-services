@@ -714,6 +714,10 @@ img[alt=thumbnail] {
     margin-top: var(--spectrum-global-dimension-size-250) !important;
 }
 
+.volume-content .css-1uxb13h {
+    width: 100% !important;
+}
+
 @media screen and (min-width: 1024px){
     .doc-services-hero {
         background-image:  url('../pages/images/doc-gen-hero-desktop@2x.png') !important;
