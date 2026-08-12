@@ -48,6 +48,8 @@
                     cuid: "",
                 },
 
+                copartnernames: "",
+
                 success: {
                     type: "message",
                     content: "Thank You",
@@ -108,7 +110,7 @@
                     },
 
                     field_filters: {
-                        functional_area: "hidden", // CHANGED from "hidden" — Functional area/department*
+                        functional_area: "all", // matches eLearning — sets mktoFormsFunctionalAreaCategory: "all"
                         // hidden:Hide Field (hidden),
                         // all: Show All Options(all),
                         // Functional Area- DX:
@@ -120,7 +122,7 @@
                         // POI-Dxonly:DX Products (POI-Dxonly),
                         // POI-Dxonly-area:DX Products as Area of Interest (POI-Dxonly-area)
                         //
-                        industry: "hidden", // CHANGED from "hidden" — Industry*
+                        industry: "all", // matches eLearning — sets mktoIndustryCategory: "all"
                         // hidden:Hide Field (hidden),
                         // all:Show Field (all),
                         // Industry-Gov-Edu:Gov Education (Industry-Gov-Edu),
@@ -128,7 +130,7 @@
                         // Industry-Finance:Finance (Industry-Finance),
                         // Industry-Manufacturing:Manufacturing (Industry-Manufacturing)
                         //
-                        job_role: "hidden",// CHANGED from "hidden" — Job title or role*
+                        job_role: "all",// rendered but hidden via CSS — value forced to "OTHER" on submit
                         // hidden:Hide Field (hidden),
                         // all:Show All Options (all),
                         // DX:DX Specific Roles (DX),
@@ -146,7 +148,7 @@
                     Country:   window.imsCountryCode,
                     pmProductionCampaignId: "7015Y0000048OFxQAM",
                     productofInterest: "Document Services",
-                    mktoFormsJobTitle : "Developer"
+                    mktoFormsJobTitle: "OTHER"
                 },
             },
 
@@ -272,6 +274,8 @@
                 } else {
                     e.preventDefault();
                     e.stopImmediatePropagation();
+                    const jobTitleEl = formEl.querySelector('[name="mktoFormsJobTitle"]');
+                    if (jobTitleEl) jobTitleEl.value = "OTHER";
                     form.submittable(true);
                     form.submit();
                 }
