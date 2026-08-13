@@ -179,9 +179,54 @@
                 document.head.appendChild(style);
             }
 
-            // Set job title in capture phase — fires before Marketo's button handler calls validate.
+            function showFieldError(input, message) {
+                input.nextElementSibling?.classList.contains('ica-field-error') && input.nextElementSibling.remove();
+                const err = document.createElement('div');
+                err.className = 'ica-field-error';
+                err.textContent = message;
+                input.insertAdjacentElement('afterend', err);
+            }
+
+            function clearFieldError(input) {
+                input.nextElementSibling?.classList.contains('ica-field-error') && input.nextElementSibling.remove();
+            }
+
             formEl.addEventListener('click', function (e) {
                 if (!e.target.classList.contains('mktoButton')) return;
+
+                const phoneInput = formEl.querySelector('[name="Phone"]');
+                const companyInput = formEl.querySelector('[name="mktoFormsCompany"]');
+                const phone = (phoneInput?.value || '').trim();
+                const company = (companyInput?.value || '').trim();
+                let valid = true;
+
+                if (!phone) {
+                    showFieldError(phoneInput, 'This field is required.');
+                    valid = false;
+                } else if (!/^\+?[\d\s\-().]{7,20}$/.test(phone)) {
+                    showFieldError(phoneInput, 'Please enter a valid phone number.');
+                    valid = false;
+                } else {
+                    clearFieldError(phoneInput);
+                }
+
+                if (!company) {
+                    showFieldError(companyInput, 'This field is required.');
+                    valid = false;
+                } else if (/^\d+$/.test(company)) {
+                    showFieldError(companyInput, 'Please enter a valid organization name.');
+                    valid = false;
+                } else {
+                    clearFieldError(companyInput);
+                }
+
+                if (!valid) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    return;
+                }
+
+                // Set job title before Marketo's button handler calls validate.
                 const jobTitleEl = formEl.querySelector('[name="mktoFormsJobTitle"]');
                 if (jobTitleEl) jobTitleEl.value = "OTHER";
             }, true);
