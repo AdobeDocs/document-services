@@ -94,7 +94,7 @@
                         // Industry-Finance:Finance (Industry-Finance),
                         // Industry-Manufacturing:Manufacturing (Industry-Manufacturing)
                         //
-                        job_role: "hidden",// rendered but hidden via CSS — value forced to "OTHER" on submit
+                        job_role: "all", // rendered but hidden via CSS — value forced to "OTHER" on submit
                         // hidden:Hide Field (hidden),
                         // all:Show All Options (all),
                         // DX:DX Specific Roles (DX),
@@ -145,14 +145,12 @@
             logInConsole("Inside Marketo form ready callback");
             document.querySelector(".ica-faas-header").style.display = "flex";
 
-            // Make the form visible — Marketo CSS hides it until mktoForm--fade-in is added
             const formEl = form.getFormElem && form.getFormElem()[0];
             if (formEl) {
                 formEl.classList.add("mktoForm--fade-in");
                 formEl.style.opacity = "1";
                 formEl.style.visibility = "visible";
 
-                // Inject CSS after Marketo's CSS — continuously hides/shows correct fields
                 const style = document.createElement('style');
                 style.textContent = `
                     #mktoForm_4061 { display: block !important; }
@@ -176,98 +174,24 @@
                     #mktoForm_4061 .mktoFieldDescriptor:has([name="LastName"]),
                     #mktoForm_4061 .mktoFieldDescriptor:has([name="Email"]),
                     #mktoForm_4061 .mktoFieldDescriptor:has([name="Country"]) { display: none !important; }
+                    #mktoForm_4061 .mktoFormRow:has([name="mktoFormsJobTitle"]) { display: none !important; }
                 `;
                 document.head.appendChild(style);
             }
 
-            // Disable browser HTML5 validation — mktoFormsJobTitle has required attr
-            // but is intentionally empty; browser would silently block submission.
-            formEl.noValidate = false;
-
-            // Marketo's validate() uses its own internal required list (not DOM attrs).
-            // Replace it entirely: pass when Phone and Company are filled.
-            form.validate = function () {
-                const phone = (formEl.querySelector('[name="Phone"]')?.value || '').trim();
-                const company = (formEl.querySelector('[name="mktoFormsCompany"]')?.value || '').trim();
-                return phone.length > 0 && company.length > 0;
-            };
-
-            function showFieldError(input, message) {
-                clearFieldError(input);
-                const err = document.createElement('div');
-                err.className = 'ica-field-error';
-                err.textContent = message;
-                input.insertAdjacentElement('afterend', err);
-            }
-
-            function clearFieldError(input) {
-                input.nextElementSibling?.classList.contains('ica-field-error') &&
-                    input.nextElementSibling.remove();
-            }
-
-            form.vals({ mktoProductionCampaignId: "7015Y0000048OFxQAM" });
-
-            form.submittable(true);
-
+            // Set job title in capture phase — fires before Marketo's button handler calls validate.
             formEl.addEventListener('click', function (e) {
                 if (!e.target.classList.contains('mktoButton')) return;
-
-                const phoneInput = formEl.querySelector('[name="Phone"]');
-                const companyInput = formEl.querySelector('[name="mktoFormsCompany"]');
-                const phone = (phoneInput?.value || '').trim();
-                const company = (companyInput?.value || '').trim();
-
-                let valid = true;
-
-                if (!phone) {
-                    showFieldError(phoneInput, 'This field is required.');
-                    valid = false;
-                } else if (!/^\+?[\d\s\-().]{7,20}$/.test(phone)) {
-                    showFieldError(phoneInput, 'Please enter a valid phone number.');
-                    valid = false;
-                } else {
-                    clearFieldError(phoneInput);
-                }
-
-                if (!company) {
-                    showFieldError(companyInput, 'This field is required.');
-                    valid = false;
-                } else if (/^\d+$/.test(company)) {
-                    showFieldError(companyInput, 'Please enter a valid organization name.');
-                    valid = false;
-                } else {
-                    clearFieldError(companyInput);
-                }
-
-                if (!valid) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                } else {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    form.submittable(true);
-                    form.submit();
-                }
+                const jobTitleEl = formEl.querySelector('[name="mktoFormsJobTitle"]');
+                if (jobTitleEl) jobTitleEl.value = "OTHER";
             }, true);
-
-            form.onSubmit(function () {
-                const consentEl = formEl.querySelector('.mktoFormRow.by-supplyingmycontac');
-                const consentText = consentEl ? consentEl.innerText.trim() : '';
-                form.vals({
-                    mktoConsentNotice: consentText,
-                    mktoProductionCampaignId: "7015Y0000048OFxQAM",
-                    mktoFormsJobTitle: "OTHER",
-                    mktoFormsFunctionalArea: "OTHER",
-                    mktodemandbaseIndustry: "OTHER",
-                });
-            });
 
             window.parent.postMessage('afterYiiLoadedCallback executed', '*');
 
             form.onSuccess(function () {
                 logInConsole("Inside Marketo form success callback");
                 window.parent.postMessage('afterSubmitCallback executed', '*');
-                return false; // prevent default redirect
+                return false;
             });
 
         }).catch((error) => {
