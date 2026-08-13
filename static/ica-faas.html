@@ -208,6 +208,10 @@
                 if (jobTitleEl) jobTitleEl.value = "OTHER";
             }, true);
 
+            form.onValidate(function (valid) {
+                if (valid) form.submittable(true);
+            });
+
             window.parent.postMessage('afterYiiLoadedCallback executed', '*');
 
             form.onSuccess(function () {
