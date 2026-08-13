@@ -66,41 +66,18 @@
                         phone: "required",
                         company: "required",
                         website: "hidden",
-                        state: "hidden", // CHANGED from "hidden" — State/province. Set "visible" (NOT "required"):
-                        postcode: "hidden", // CHANGED from "hidden" — ZIP/postal code shown (not required in image)
-                        company_size: "hidden", // CHANGED from "hidden" — Employees in organization* shown & required
-                        demo: "hidden", // CHANGED from "hidden" — "Contact me to schedule a product demonstration" checkbox
+                        state: "hidden",
+                        postcode: "hidden",
+                        company_size: "hidden",
+                        demo: "hidden",
                         comments: "hidden",
                     },
 
                     field_filters: {
-                        functional_area: "hidden", // matches eLearning — sets mktoFormsFunctionalAreaCategory: "all"
-                        // hidden:Hide Field (hidden),
-                        // all: Show All Options(all),
-                        // Functional Area- DX:
-                        // DX Specific Options(Functional Area- DX)
-                        //
-                        products: "hidden", // CHANGED from "hidden" — Primary Area of Interest* (POI-Combined)
-                        // hidden:Hide Field (hidden),
-                        // all:Show All Products (all),
-                        // POI-Dxonly:DX Products (POI-Dxonly),
-                        // POI-Dxonly-area:DX Products as Area of Interest (POI-Dxonly-area)
-                        //
-                        industry: "hidden", // matches eLearning — sets mktoIndustryCategory: "all"
-                        // hidden:Hide Field (hidden),
-                        // all:Show Field (all),
-                        // Industry-Gov-Edu:Gov Education (Industry-Gov-Edu),
-                        // Industry-Edu:Education (Industry-Edu),
-                        // Industry-Finance:Finance (Industry-Finance),
-                        // Industry-Manufacturing:Manufacturing (Industry-Manufacturing)
-                        //
-                        job_role: "all", // rendered but hidden via CSS — value forced to "OTHER" on submit
-                        // hidden:Hide Field (hidden),
-                        // all:Show All Options (all),
-                        // DX:DX Specific Roles (DX),
-                        // Job Role-HiLevel:High Level Job Roles Only (Job Role-HiLevel),
-                        // DX-Gov:Government Roles (DX-Gov)
-                        //
+                        functional_area: "hidden",
+                        products: "hidden",
+                        industry: "hidden",
+                        job_role: "all",
                     }
                 },
 
