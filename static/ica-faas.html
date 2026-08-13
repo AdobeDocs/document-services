@@ -63,54 +63,18 @@
                     create_inquiry: true,
                     field_visibility: {
                         name: "hidden",
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
-                        // required:Make Required (required)
-                        //
-                        phone: "required", // CHANGED from "hidden" — Business phone* shown & required
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
-                        // required:Make Required (required)
-                        //
+                        phone: "required",
                         company: "required",
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
-                        // required:Make Required (required)
-                        //
-                        website: "hidden", // CHANGED from "hidden" — Website* shown & required
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
-                        // required:Make Required (required)
-                        //
+                        website: "hidden",
                         state: "hidden", // CHANGED from "hidden" — State/province. Set "visible" (NOT "required"):
-                        //   the baseline module bundle makes it conditionally required per country — required for
-                        //   US, CA, IN, AU, NZ, MX, CN and hidden for others (see R3 mss.js validation). A blanket
-                        //   "required" would wrongly force it for every country.
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
-                        // required:Make Required (required)
-                        //
                         postcode: "hidden", // CHANGED from "hidden" — ZIP/postal code shown (not required in image)
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
-                        // required:Make Required (required)
-                        //
                         company_size: "hidden", // CHANGED from "hidden" — Employees in organization* shown & required
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
-                        // required:Make Required (required)
-                        //
                         demo: "hidden", // CHANGED from "hidden" — "Contact me to schedule a product demonstration" checkbox
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
-                        //
                         comments: "hidden",
-                        // hidden:Hide Field (hidden),
-                        // visible:Show Field (visible),
                     },
 
                     field_filters: {
-                        functional_area: "all", // matches eLearning — sets mktoFormsFunctionalAreaCategory: "all"
+                        functional_area: "hidden", // matches eLearning — sets mktoFormsFunctionalAreaCategory: "all"
                         // hidden:Hide Field (hidden),
                         // all: Show All Options(all),
                         // Functional Area- DX:
@@ -122,7 +86,7 @@
                         // POI-Dxonly:DX Products (POI-Dxonly),
                         // POI-Dxonly-area:DX Products as Area of Interest (POI-Dxonly-area)
                         //
-                        industry: "all", // matches eLearning — sets mktoIndustryCategory: "all"
+                        industry: "hidden", // matches eLearning — sets mktoIndustryCategory: "all"
                         // hidden:Hide Field (hidden),
                         // all:Show Field (all),
                         // Industry-Gov-Edu:Gov Education (Industry-Gov-Edu),
@@ -130,7 +94,7 @@
                         // Industry-Finance:Finance (Industry-Finance),
                         // Industry-Manufacturing:Manufacturing (Industry-Manufacturing)
                         //
-                        job_role: "all",// rendered but hidden via CSS — value forced to "OTHER" on submit
+                        job_role: "hidden",// rendered but hidden via CSS — value forced to "OTHER" on submit
                         // hidden:Hide Field (hidden),
                         // all:Show All Options (all),
                         // DX:DX Specific Roles (DX),
@@ -147,6 +111,10 @@
                     Email:     window.imsUserEmail,
                     Country:   window.imsCountryCode,
                     pmProductionCampaignId: "7015Y0000048OFxQAM",
+                    pmOnsiteCampaignId: "",
+                    pmRetouchCampaignId: "",
+                    pmExternalCampaignId: "",
+                    cGenTagId: "",
                     productofInterest: "Document Services",
                     mktoFormsJobTitle: "OTHER"
                 },
@@ -155,18 +123,21 @@
             demo_ux: {
                 snippetDestination:     null,
                 formDestinationElement: ".marketo-form-wrapper",
-                loadCss: false, // CSS loaded directly via <link> in <head>
+                loadCss: false,
             },
 
             form_architecture: {
-                previewMode: false, // TEMP: testing field_visibility with prod form
-                stage:       false, // TEMP: testing field_visibility with prod form
+                previewMode: true,
+                stage:       false,
                 munchkinId:     "360-KCI-804",
                 instanceDomain: "engage.adobe.com",
+                mktoFormJS:     "/js/forms2/js/forms2.min.js",
+                formSubmitPath: "/index.php/leadCapture/save2",
                 stageSettings: {
                     munchkinId:     "371-GBU-660",
                     formId:         1212,
                     instanceDomain: "371-GBU-660.mktoweb.com",
+                    formCss:        "https://business.adobe.com/libs/blocks/marketo/marketo.css",
                 },
             },
 
@@ -274,12 +245,22 @@
                 } else {
                     e.preventDefault();
                     e.stopImmediatePropagation();
-                    const jobTitleEl = formEl.querySelector('[name="mktoFormsJobTitle"]');
-                    if (jobTitleEl) jobTitleEl.value = "OTHER";
                     form.submittable(true);
                     form.submit();
                 }
             }, true);
+
+            form.onSubmit(function () {
+                const consentEl = formEl.querySelector('.mktoFormRow.by-supplyingmycontac');
+                const consentText = consentEl ? consentEl.innerText.trim() : '';
+                form.vals({
+                    mktoConsentNotice: consentText,
+                    mktoProductionCampaignId: "7015Y0000048OFxQAM",
+                    mktoFormsJobTitle: "OTHER",
+                    mktoFormsFunctionalArea: "OTHER",
+                    mktodemandbaseIndustry: "OTHER",
+                });
+            });
 
             window.parent.postMessage('afterYiiLoadedCallback executed', '*');
 
