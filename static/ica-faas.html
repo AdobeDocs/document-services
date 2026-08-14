@@ -57,7 +57,7 @@
 
                 templateOverrides: {
                     template: "",
-                    purpose: ["request_for_information"],
+                    purpose: ["whitepaper_form"],
                     known_visitor:  false,
                     auto_success:   false,
                     create_inquiry: true,
@@ -93,7 +93,8 @@
                     pmExternalCampaignId: "",
                     cGenTagId: "",
                     productofInterest: "Document Services",
-                    mktoFormsJobTitle: "OTHER"
+                    mktoFormsJobTitle: "OTHER",
+                    mktoConsentNotice: "",
                 },
             },
 
@@ -211,6 +212,26 @@
             form.onValidate(function (valid) {
                 if (valid) form.submittable(true);
             });
+
+            // Wait for MCZ to attach its Country change listener, then fire it so
+            // field_change_country() calculates and sets mktoConsentNotice automatically.
+            const countryField = formEl && formEl.querySelector('[name="Country"]');
+            if (countryField && countryField.value) {
+                const triggerConsent = () => {
+                    countryField.dispatchEvent(new Event('change', { bubbles: true }));
+                };
+                if (countryField.classList.contains('fnc_field_change_country')) {
+                    triggerConsent();
+                } else {
+                    const observer = new MutationObserver(() => {
+                        if (countryField.classList.contains('fnc_field_change_country')) {
+                            observer.disconnect();
+                            triggerConsent();
+                        }
+                    });
+                    observer.observe(countryField, { attributes: true, attributeFilter: ['class'] });
+                }
+            }
 
             window.parent.postMessage('afterYiiLoadedCallback executed', '*');
 
