@@ -193,6 +193,10 @@
             }, 500);
         }
 
+        form.onValidate(function (valid) {
+            if (valid) form.submittable(true);
+        });
+
         form.onSuccess(function () {
             top.location.href = "/document-services/pricing/contact/sales/confirmation";
             return false;
