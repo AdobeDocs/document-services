@@ -62,7 +62,7 @@
                     auto_success:   false,
                     create_inquiry: true,
                     field_visibility: {
-                        name: "hidden",
+                        name: "required",
                         phone: "required",
                         company: "required",
                         website: "hidden",
@@ -208,6 +208,7 @@
                 // Set job title before Marketo's button handler calls validate.
                 const jobTitleEl = formEl.querySelector('[name="mktoFormsJobTitle"]');
                 if (jobTitleEl) jobTitleEl.value = "OTHER";
+
             }, true);
 
             form.onValidate(function (valid) {
