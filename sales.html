@@ -2,190 +2,238 @@
 <html class="spectrum spectrum--light spectrum--medium" dir="ltr" lang="eng">
 
 <head>
-  <title> FaaS Test FaaS form </title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/lazy-styles.css">
+    <title> Sales Marketo form </title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/lazy-styles.css">
+    <link rel="stylesheet" href="styles/sales-styles.css">
+    <link rel="stylesheet" href="https://business.adobe.com/libs/blocks/marketo/marketo.css">
 </head>
 
-<script async src="https://www.adobe.com/marketingtech/main.min.js"></script>
+<body>
+
+<script src="marketo-form-loader.js"></script>
 <script>
-  function isStageOrProd(host) {
-    if (host.indexOf(('localhost') >= 0) || host.indexOf('developer-stage') >= 0) {
-      return 'dev';
-    } else if (host.indexOf('developer.adobe.com') >= 0) {
-      return 'production';
-    }
-  }
-
-  function setAnalytics() {
-    console.log('setting analytics');
-    if (isStageOrProd(window.location.host) === 'production') {
-      window.marketingtech = {
-        adobe: {
-          launch: {
-            property: 'global',
-            environment: 'production',
-          },
-          analytics: {
-            additionalAccounts: 'pgeo1xxpnwadobeio-prod',
-          }
+    function getEnvironment() {
+        const host = window.location.host;
+        if (host.indexOf('local') >= 0 || host.indexOf('developer-stage') >= 0) {
+            return 'stage';
+        } else if (host.indexOf('developer.adobe.com') >= 0) {
+            return 'prod';
         }
-      };
-    } else if (isStageOrProd(window.location.host) === 'dev') {
-      window.marketingtech = {
-        adobe: {
-          launch: {
-            property: 'global',
-            environment: 'dev',
-          },
-          analytics: {
-            additionalAccounts: 'pgeo1xxpnwadobeio-qa',
-          }
-        }
-      }
-
-      console.log(window.marketingtech)
     }
-  }
 
-  (function () {
-    setAnalytics();
-  })()
+    const env = getEnvironment();
+
+    document.addEventListener('DOMContentLoaded', function () {
+    // Clear Marketo's sessionStorage prefill so form starts fresh each load
+    sessionStorage.removeItem('mktoPreFillFields');
+
+    loadMarketoForm({
+        form_config: {
+            form_id_base: 2277,
+            form_id_program: 4061,
+
+            poi: "Document Services",
+
+            campaignIds: {
+                sfdc: "7015Y000003pFaCQAU",
+                external: "",
+                retouch: "",
+                onsite: "",
+                cgen: "",
+                cuid: "",
+            },
+
+            copartnernames: "",
+
+            success: {
+                type: "message",
+                content: "",
+            },
+
+            templateOverrides: {
+                template: "",
+                purpose: ["request_for_information"],
+                known_visitor:  false,
+                auto_success:   false,
+                create_inquiry: true,
+                field_visibility: {
+                    name: "required",
+                    phone: "required",
+                    company: "required",
+                    website: "required",
+                    state: "visible",
+                    postcode: "visible",
+                    company_size: "required",
+                    demo: "hidden",
+                    comments: "hidden",
+                },
+
+                field_filters: {
+                    functional_area: "all",
+                    products: "hidden",
+                    industry: "all",
+                    job_role: "all",
+                }
+            },
+
+            prefillFields: {
+                pmProductionCampaignId: "7015Y000003pFaCQAU",
+                pmOnsiteCampaignId: "",
+                pmRetouchCampaignId: "",
+                pmExternalCampaignId: "",
+                cGenTagId: "",
+                productofInterest: "Document Services",
+                mktoConsentNotice: "",
+            },
+        },
+
+        demo_ux: {
+            snippetDestination:     null,
+            formDestinationElement: ".marketo-form-wrapper",
+            loadCss: false,
+        },
+
+        form_architecture: {
+            previewMode: false,
+            stage:       false,
+            munchkinId:     "360-KCI-804",
+            instanceDomain: "engage.adobe.com",
+            mktoFormJS:     "/js/forms2/js/forms2.min.js",
+            formSubmitPath: "/index.php/leadCapture/save2",
+            stageSettings: {
+                munchkinId:     "371-GBU-660",
+                formId:         1212,
+                instanceDomain: "371-GBU-660.mktoweb.com",
+                formCss:        "https://business.adobe.com/libs/blocks/marketo/marketo.css",
+            },
+        },
+
+    }).then((form) => {
+        document.querySelector(".faas-header").style.display = "flex";
+
+        const formEl = form.getFormElem && form.getFormElem()[0];
+
+        if (formEl) {
+            const style = document.createElement('style');
+            style.textContent = `
+                .marketo-form-wrapper { max-width: none !important; width: calc(100% - 40px) !important; margin: 0 auto !important; }
+                #mktoForm_4061 { width: 100% !important; grid-template-columns: 1fr 1fr !important; }
+                #mktoForm_4061 .mktoField { width: 100% !important; box-sizing: border-box !important; }
+                #mktoForm_4061 .mktoFieldWrap { width: 100% !important; }
+                #mktoForm_4061 .mktoFormRow.by-supplyingmycontac { display: none !important; }
+                #mktoForm_4061 .mktoFormRow.adobe-privacy { display: none !important; }
+                #mktoForm_4061 .mktoButtonRow { display: none !important; }
+            `;
+            document.head.appendChild(style);
+
+            formEl.style.setProperty('width', '100%', 'important');
+            formEl.style.setProperty('grid-template-columns', '1fr 1fr', 'important');
+            formEl.setAttribute('autocomplete', 'off');
+
+            // Clear Marketo cookie-prefilled fields using the proper API
+            form.vals({
+                FirstName: '', LastName: '', Email: '', Phone: '',
+                mktoFormsCompany: '', Website: '', Country: '',
+                State: '', PostalCode: '', mktoCompanySize: '',
+                Industry: '', mktoFormsJobTitle: '', mktoFormsFunctionalArea: '',
+            });
+
+            // Inject everything outside the form to avoid Marketo's grid/style stripping
+            // Timeout needed to wait for MCZ to render the consent row legend
+            setTimeout(() => {
+                const consentRow = formEl.querySelector('.mktoFormRow.by-supplyingmycontac');
+                if (consentRow) consentRow.style.setProperty('display', 'none', 'important');
+                const legend = consentRow && consentRow.querySelector('legend');
+
+                // Use case textarea
+                const useCaseDiv = document.createElement('div');
+                useCaseDiv.style.cssText = 'margin: 8px 0;';
+                useCaseDiv.innerHTML = `
+                    <label style="display:block;font-size:14px;font-weight:normal;margin-bottom:4px;">Use case <span style="color:#464646;">*</span></label>
+                    <textarea id="custom-use-case" rows="6" style="width:100%;box-sizing:border-box;font-size:16px;padding:8px;border:1px solid #6e6e6e;border-radius:4px;"
+                        placeholder="Please describe your intended application of our PDF Services APIs."></textarea>`;
+
+                // Custom submit button
+                const submitDiv = document.createElement('div');
+                submitDiv.style.cssText = 'text-align:center; margin: 16px 0;';
+                submitDiv.innerHTML = `<button id="custom-submit" style="background-color:#1473e6;color:#fff;border:none;border-radius:16px;font-size:15px;font-weight:700;padding:8px 24px;cursor:pointer;">Submit</button>`;
+
+                // Consent text
+                const consentDiv = document.createElement('div');
+                consentDiv.style.cssText = 'font-size:12px; color:#444; line-height:1.5;';
+                if (legend) consentDiv.innerHTML = legend.innerHTML;
+
+                const container = formEl.parentNode;
+                const after = formEl.nextSibling;
+                container.insertBefore(useCaseDiv, after);
+                container.insertBefore(submitDiv, useCaseDiv.nextSibling);
+                container.insertBefore(consentDiv, submitDiv.nextSibling);
+
+                document.getElementById('custom-submit').addEventListener('click', () => {
+                    const ta = document.getElementById('custom-use-case');
+                    if (!ta.value.trim()) {
+                        ta.style.borderColor = '#d0021b';
+                        let err = document.getElementById('use-case-error');
+                        if (!err) {
+                            err = document.createElement('div');
+                            err.id = 'use-case-error';
+                            err.style.cssText = 'color:#d0021b; font-size:12px; margin-top:4px;';
+                            err.textContent = 'This field is required.';
+                            ta.after(err);
+                        }
+                        ta.focus();
+                        return;
+                    }
+                    ta.style.borderColor = '#6e6e6e';
+                    const err = document.getElementById('use-case-error');
+                    if (err) err.remove();
+                    form.addHiddenFields({ mktoQuestionComments: ta.value });
+                    formEl.querySelector('.mktoButton').click();
+                });
+            }, 500);
+        }
+
+        form.onValidate(function (valid) {
+            if (valid) form.submittable(true);
+        });
+
+        form.onSuccess(function () {
+            top.location.href = "/document-services/pricing/contact/sales/confirmation";
+            return false;
+        });
+
+    }).catch((error) => {
+        console.error("Failed to load Marketo form:", error);
+    });
+    }); // DOMContentLoaded
 </script>
 
-<body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" language="javascript"
-    src="https://apps.enterprise.adobe.com/faas/service/jquery.faas-current.js"></script>
-  <script type="text/javascript" language="javascript">
-      ; (function ($) {
-        $(document).ready(function (e) {
-          $("#form").faas({
-            "id": 54,
-            "l": "en_us", //locale
-            "d": "/document-services/pricing/contact/sales/confirmation", //thank you page url
-            "as": false, /*auto submit - optional*/
-            "pc": { //pre-populate sources
-              "1": "js",
-              "2": "faas_submission",
-              "3": "sfdc",
-              "4": 'demandbase'
-            },
-            "p": { // this is the prepopulation
-              "js": { // this is manual prepopulation...
-                "6": "marketing_web_form", //event type
-                "7": "request_for_information", //Channel subtype
-                "94": "3316", //SKU (DOCUMENT SERVICE)
-                "36": "7015Y000003pFaCQAU", //campaign ID
-                "77": "1", //allowmmmailind
-                "78": "1", //ok to call
-                "79": "1", //ok to mail
-                "90": "FAAS", //source system
-                "92": "2846",
-                "93": "2847"
-              }
-            },
-            e: {
-              /*put all callbacks here*/
-              afterYiiLoadedCallback: function () {
-                // Hide and set true as default value for 'Contact me to schedule a product demonstration' checkbox field
-                $('#Form54_35').prop('checked', true).closest('.FaaS-35').addClass('hide');
-
-                $(".faas-header").css("display", "flex");
-                $('label[for="Form54_26"]').html('Use case <span class="required">*</span>').addClass('required');
-                $("#Form54_26").addClass("required");
-                $("#Form54_26").attr("rows", 6);
-                $("#Form54_26").attr("placeholder", "Please describe your intended application of our PDF Services APIs.");
-                $("#Form54_26_em_").text("Use case cannot be blank.");
-
-                $('#Form54_14').on('change', function () {
-                  var $this = $(this);
-                  var $iframeContainer = $('.iframe-container', window.parent.document);
-                  setTimeout(() => {
-                    if($this.closest('#faas-form-54').find('.korean_disclaimers:visible').length){
-                      $iframeContainer.addClass('gdpr');
-                    } else {
-                      $iframeContainer.removeClass('gdpr');
-                    }
-                  }, 100);
-                });
-
-                $('#Form54_26').on('blur', function () {
-                  var $this = $(this);
-                  if (!$this.val()) {
-                    setTimeout(() => {
-                      $this.closest('.textarea').removeClass('success').addClass('error');
-                    }, 200);
-                    $('#Form54_submit').prop('disabled', true);
-                  } else {
-                    $('#Form54_submit').prop('disabled', false);
-                  }
-                });
-
-                $('#Form54_submit').on('click', function () {
-                  var $this = $(this);
-
-                  if ($('#Form54_1').val() && $('#Form54_8').val() && $('#Form54_9').val() && $('#Form54_10').val() && $('#Form54_11').val() && (($this.closest('#faas-form-54').find('.korean_disclaimers:visible').length && $('#Form54_84:checked').val() && $('#Form54_87:checked').val()) || $('#Form54_14').val()) && $('#Form54_16').val() && $('#Form54_17').val() && $('#Form54_18').val() && $('#Form54_19').val() && $('#Form54_20').val() && $('#Form54_33').val() && !$('#Form54_26').val()) {
-                    $('#Form54_26').closest('.textarea').removeClass('success').addClass('error');
-                    $this.prop('disabled', true);
-                  } else {
-                    $this.prop('disabled', false);
-                  }
-                });
-
-                $(".faas-header a").each(function () {
-                  var linkText = $(this).text();
-                  $(this).attr("data-ll", linkText.trim());
-                });
-                $(".faas-form a").each(function () {
-                  var linkText = $(this).text();
-                  $(this).attr("data-ll", linkText.trim());
-                });
-              },
-
-              beforeValidationCallback: function () {
-                var $useCaseField = $('#Form54_26');
-                if (!$useCaseField.val()) {
-                  setTimeout(function () {
-                    $useCaseField.closest('.textarea').removeClass('success').addClass('error');
-                    return false;
-                  }, 200)
-                }
-                return true;
-              },
-              afterSubmitCallback: function (data) {
-                // Redirect to the thank you page outside of the iframe
-                top.location.href = "/document-services/pricing/contact/sales/confirmation";
-              }
-            }
-          });
-        });
-      })(jQuery);
-  </script>
-  <div class="resource-form">
-    <div class="block faas white column2 faas-form-40">
-      <div class="faas-header">
-        <div class="caption">
-          Get info about pricing, billing, and licensing.
+<div class="resource-form">
+    <div class="block faas white">
+        <div class="faas-header" style="margin-top: 24px; margin-bottom: 24px;">
+            <div class="caption">
+                Get info about pricing, billing, and licensing.
+            </div>
+            <div class="faq-text">
+                Please visit our
+                <a class="link-content" target="_blank" href="/document-services/faq/sales/">
+                    FAQ
+                </a>
+                or fill out the form below to speak with an Adobe rep.
+            </div>
+            <div class="faq-text">
+                For technical inquiries, submit a tech support request
+                <a class="link-content" target="_blank" href="/document-services/pricing/contact/support/">
+                    here.
+                </a>
+            </div>
         </div>
-        <div class="faq-text">
-          Please visit our
-          <a class="link-content" target="_blank" href="/document-services/faq/sales/">
-            FAQ
-          </a>
-          or fill out the form below to speak with an Adobe rep.
+        <div class="marketo">
+            <section class="marketo-form-wrapper"></section>
         </div>
-        <div class="faq-text">
-          For technical inquiries, submit a tech support request
-          <a class="link-content" target="_blank" href="/document-services/pricing/contact/support/">
-            here.
-          </a>
-        </div>
-      </div>
-      <div class="faas faas-form" id="form">
-      </div>
     </div>
-  </div>
+</div>
 </body>
 
 </html>
