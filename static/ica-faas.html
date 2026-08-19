@@ -62,7 +62,7 @@
                     auto_success:   false,
                     create_inquiry: true,
                     field_visibility: {
-                        name: "hidden",
+                        name: "required",
                         phone: "required",
                         company: "required",
                         website: "hidden",
@@ -209,11 +209,6 @@
                 const jobTitleEl = formEl.querySelector('[name="mktoFormsJobTitle"]');
                 if (jobTitleEl) jobTitleEl.value = "OTHER";
 
-                // Re-inject IMS name fields since MCZ strips them when field_visibility name is "hidden"
-                form.addHiddenFields({
-                    FirstName: window.imsUserFirstName || '',
-                    LastName:  window.imsUserLastName  || '',
-                });
             }, true);
 
             form.onValidate(function (valid) {
