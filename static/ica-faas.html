@@ -208,6 +208,12 @@
                 // Set job title before Marketo's button handler calls validate.
                 const jobTitleEl = formEl.querySelector('[name="mktoFormsJobTitle"]');
                 if (jobTitleEl) jobTitleEl.value = "OTHER";
+
+                // Re-inject IMS name fields since MCZ strips them when field_visibility name is "hidden"
+                form.addHiddenFields({
+                    FirstName: window.imsUserFirstName || '',
+                    LastName:  window.imsUserLastName  || '',
+                });
             }, true);
 
             form.onValidate(function (valid) {
