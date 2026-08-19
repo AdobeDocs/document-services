@@ -1,0 +1,58 @@
+.marketo {
+    margin-left: 0 !important;
+}
+
+.marketo .marketo-form-wrapper {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+#mktoForm_4061 {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+#mktoForm_4061 input[type="text"],
+#mktoForm_4061 input[type="email"],
+#mktoForm_4061 input[type="tel"],
+#mktoForm_4061 select {
+    height: 30px !important;
+    box-sizing: border-box !important;
+    color: #959595 !important;
+}
+
+#mktoForm_4061 input::placeholder {
+    color: #959595 !important;
+}
+
+#custom-use-case {
+    font-family: inherit !important;
+    font-size: 14px !important;
+    color: #959595 !important;
+}
+
+.mktoForm label {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    color: #464646 !important;
+    font-size: 12px !important;
+}
+
+.marketo .mktoForm {
+    font-weight: normal !important;
+}
+
+a {
+    color: #0054b6 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+.mktoError,
+.mktoErrorMsg {
+    color: #d31510 !important;
+    margin: 5px 0 0 !important;
+    font-size: 12px !important;
+}
