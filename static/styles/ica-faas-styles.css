@@ -1,5 +1,5 @@
 html * {
-    color: #222;
+    /*color: #222;*/
     font-size: 14px;
 }
 
@@ -13,6 +13,14 @@ html * {
     margin-left: 0 !important;
 }
 
+.marketo .marketo-form-wrapper {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.marketo .marketo-overlay .retry-button, .marketo .mktoForm .mktoButton {
+    color: #FFFFFF !important;
+}
+
 #mktoForm_4061 {
     padding-left: 0 !important;
     margin-left: 0 !important;
@@ -22,11 +30,24 @@ html * {
     margin-bottom: 25px;
 }
 
+#mktoForm_4061 input[name="Phone"]::placeholder,
+#mktoForm_4061 input[name="mktoFormsCompany"]::placeholder {
+    color: transparent !important;
+}
+
 /* Field widths */
-.mktoForm input[name="Phone"],
-.mktoForm input[name="mktoFormsCompany"] {
-    width: 250px !important;
+#mktoForm_4061 input[name="Phone"],
+#mktoForm_4061 input[name="mktoFormsCompany"] {
+    width: 350px !important;
+    height: 30px !important;
     box-sizing: border-box !important;
+}
+
+#mktoForm_4061 .mktoFormRow:has([name="Phone"]) .mktoLabel,
+#mktoForm_4061 .mktoFormRow:has([name="mktoFormsCompany"]) .mktoLabel {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
 }
 
 .mktoForm label {
@@ -34,6 +55,10 @@ html * {
     margin-bottom: 5px !important;
     color: #464646 !important;
     font-size: 12px !important;
+}
+
+.marketo .mktoForm {
+    font-weight: normal !important;
 }
 
 /* Submit / Next button */
