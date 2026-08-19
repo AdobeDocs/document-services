@@ -139,6 +139,18 @@
                 Industry: '', mktoFormsJobTitle: '', mktoFormsFunctionalArea: '',
             });
 
+            const selectColorStyle = document.createElement('style');
+            document.head.appendChild(selectColorStyle);
+            document.addEventListener('change', (e) => {
+                if (e.target.tagName !== 'SELECT' || !formEl.contains(e.target)) return;
+                const name = e.target.name;
+                const color = e.target.value ? '#2c2c2c' : '#959595';
+                const existing = selectColorStyle.textContent;
+                const rule = `#mktoForm_4061 select[name="${name}"] { color: ${color} !important; }`;
+                const replaced = existing.replace(new RegExp(`#mktoForm_4061 select\\[name="${name}"\\][^}]+}`, 'g'), '');
+                selectColorStyle.textContent = replaced + rule;
+            }, true);
+
             // Inject everything outside the form to avoid Marketo's grid/style stripping
             // Timeout needed to wait for MCZ to render the consent row legend
             setTimeout(() => {
