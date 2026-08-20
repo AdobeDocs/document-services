@@ -62,7 +62,7 @@
                     phone: "required",
                     company: "required",
                     website: "required",
-                    state: "visible",
+                    state: "required",
                     postcode: "visible",
                     company_size: "required",
                     demo: "hidden",
@@ -182,7 +182,44 @@
                 container.insertBefore(submitDiv, useCaseDiv.nextSibling);
                 container.insertBefore(consentDiv, submitDiv.nextSibling);
 
+                function showFieldErr(field, msg) {
+                    const id = 'err-' + field.name;
+                    field.style.setProperty('border-color', '#d0021b', 'important');
+                    const existing = document.getElementById(id);
+                    if (existing) { existing.textContent = msg || 'This field is required.'; return; }
+                    const err = document.createElement('div');
+                    err.id = id;
+                    err.textContent = msg || 'This field is required.';
+                    field.closest('.mktoFieldWrap')?.insertAdjacentElement('afterend', err)
+                        ?? field.insertAdjacentElement('afterend', err);
+                }
+
+                function clearFieldErr(field) {
+                    field.style.removeProperty('border-color');
+                    const err = document.getElementById('err-' + field.name);
+                    if (err) err.remove();
+                }
+
                 document.getElementById('custom-submit').addEventListener('click', () => {
+                    let allValid = true;
+
+                    // Validate all Marketo required fields
+                    formEl.querySelectorAll('.mktoRequired').forEach(field => {
+                        if (!field.value.trim()) {
+                            showFieldErr(field);
+                            allValid = false;
+                        } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim())) {
+                            showFieldErr(field, 'Must be a valid email address.');
+                            allValid = false;
+                        } else if (field.name === 'Phone' && !/^\+?[\d\s\-().]{7,20}$/.test(field.value.trim())) {
+                            showFieldErr(field, 'Please enter a valid phone number.');
+                            allValid = false;
+                        } else {
+                            clearFieldErr(field);
+                        }
+                    });
+
+                    // Validate use case textarea
                     const ta = document.getElementById('custom-use-case');
                     if (!ta.value.trim()) {
                         ta.style.borderColor = '#d0021b';
@@ -194,14 +231,15 @@
                             err.textContent = 'This field is required.';
                             ta.after(err);
                         }
-                        ta.focus();
-                        return;
+                        allValid = false;
+                    } else {
+                        ta.style.borderColor = '#6e6e6e';
+                        const err = document.getElementById('use-case-error');
+                        if (err) err.remove();
+                        form.addHiddenFields({ mktoQuestionComments: ta.value });
                     }
-                    ta.style.borderColor = '#6e6e6e';
-                    const err = document.getElementById('use-case-error');
-                    if (err) err.remove();
-                    form.addHiddenFields({ mktoQuestionComments: ta.value });
-                    formEl.querySelector('.mktoButton').click();
+
+                    if (allValid) formEl.querySelector('.mktoButton').click();
                 });
             }, 500);
         }
