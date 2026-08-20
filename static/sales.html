@@ -182,16 +182,16 @@
                 container.insertBefore(submitDiv, useCaseDiv.nextSibling);
                 container.insertBefore(consentDiv, submitDiv.nextSibling);
 
-                function showFieldErr(field) {
+                function showFieldErr(field, msg) {
                     const id = 'err-' + field.name;
                     field.style.setProperty('border-color', '#d0021b', 'important');
-                    if (!document.getElementById(id)) {
-                        const err = document.createElement('div');
-                        err.id = id;
-                        err.textContent = 'This field is required.';
-                        field.closest('.mktoFieldWrap')?.insertAdjacentElement('afterend', err)
-                            ?? field.insertAdjacentElement('afterend', err);
-                    }
+                    const existing = document.getElementById(id);
+                    if (existing) { existing.textContent = msg || 'This field is required.'; return; }
+                    const err = document.createElement('div');
+                    err.id = id;
+                    err.textContent = msg || 'This field is required.';
+                    field.closest('.mktoFieldWrap')?.insertAdjacentElement('afterend', err)
+                        ?? field.insertAdjacentElement('afterend', err);
                 }
 
                 function clearFieldErr(field) {
@@ -207,6 +207,12 @@
                     formEl.querySelectorAll('.mktoRequired').forEach(field => {
                         if (!field.value.trim()) {
                             showFieldErr(field);
+                            allValid = false;
+                        } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim())) {
+                            showFieldErr(field, 'Must be a valid email address.');
+                            allValid = false;
+                        } else if (field.name === 'Phone' && !/^\+?[\d\s\-().]{7,20}$/.test(field.value.trim())) {
+                            showFieldErr(field, 'Please enter a valid phone number.');
                             allValid = false;
                         } else {
                             clearFieldErr(field);
