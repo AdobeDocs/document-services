@@ -1,6 +1,6 @@
 <TextBlock slots="heading, buttons, text" theme="dark" hasCodeBlock className="bgBlue showMobileView"/>
 
-##### Adobe PDF Accessibility Auto-Tag API
+##### Adobe PDF Accessibility APIs
 
 - [See documentation](/document-services/docs/overview/pdf-accessibility-auto-tag/)
 

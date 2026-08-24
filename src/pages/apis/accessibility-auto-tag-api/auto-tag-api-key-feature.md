@@ -1,7 +1,7 @@
 
 <TitleBlock slots="heading" theme="light" className="titleBlock-align-left accessibility-key-feature-title"/>
 
-## Key features of Adobe PDF Accessibility Auto-Tag API
+## Key features of Adobe PDF Accessibility APIs
 
 <TextBlock slots="image, heading, text" width="25%" theme="light" className="align-left iocn-size  horizontal-align-heading Benefits-one"/>
 

@@ -3,7 +3,6 @@ title: Adobe Support | Confirmation
 ---
 
 import SupportConfirmationContent from './support-confirmation-content.md'
-import {NewsLetterBlade} from '../../../../components/news-letter-blade'
 import {GoogleTagManager} from '../../../../components/retargetting'
 
 <GoogleTagManager/>
@@ -15,5 +14,3 @@ import {GoogleTagManager} from '../../../../components/retargetting'
 <WrapperComponent slots="content" theme="lightest" className="pdf-embed"/>
 
 <SupportConfirmationContent/>
-
-<NewsLetterBlade className="news-letter"/>

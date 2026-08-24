@@ -1,5 +1,5 @@
 ---
-title: PDF Accessibility APIs 
+title: PDF Accessibility APIs
 description:  Improve PDF accessibility at scale with Adobe’s AI-powered Auto-Tag API. Automatically tag tables, headings, and more for better screen reader navigation and faster compliance with accessibility standards. Learn more now.
 ogImage: og-image/VisualAutoTag.png
 ---

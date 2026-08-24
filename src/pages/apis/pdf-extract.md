@@ -11,7 +11,6 @@ import ExtractProductCard from './pdf-extract/extract-product.md';
 import VisualizerHowItWorks from './pdf-extract/visualizer-how-it-works.md';
 import PdfExtractUseCases from './pdf-extract/pdf-extract-resource.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
-import {NewsLetterBlade} from '../../components/news-letter-blade';
 import EsealApiAnnouncement from './e-seal-api-announcement.md';
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
@@ -56,8 +55,6 @@ apiHeroAssetImg doc-ext-invoice
 <WrapperComponent slots="content" repeat="1" theme="light" className="Explore-other-Adobe-Document-Services-APIs"/>
 
 <ExtractProductCard/>
-
-<NewsLetterBlade className="news-letter"/>
 
 <DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help"/>
 

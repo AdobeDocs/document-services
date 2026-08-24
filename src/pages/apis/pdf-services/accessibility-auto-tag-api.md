@@ -4,7 +4,7 @@ title: Adobe Developer — PDF Services API  —  Create PDF
 
 <TextBlock slots="heading, buttons, text, text1" theme="dark" hasCodeBlock className="bgBlue link linking auto-tag"/>
 
-##### Adobe PDF Accessibility Auto-Tag API
+##### Adobe PDF Accessibility APIs
 
 - [See documentation](/document-services/docs/overview/pdf-services-api/howtos/pdf-accessibility-auto-tag-pdf/)
 

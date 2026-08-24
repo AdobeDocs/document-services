@@ -17,7 +17,6 @@ import KeyFeatures from './pdf-embed/key-features.md'
 import ExploreAdobe from './pdf-embed/explore-adobe.md'
 import Integration from './pdf-embed/integration.md'
 import {APIPixelRetargeting} from '../../components/retargetting'
-import {NewsLetterBlade} from '../../components/news-letter-blade';
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
@@ -96,8 +95,6 @@ apiHeroAssetImg doc-embed-hero
 <WrapperComponent slots="content" theme="light" className="other-Adobe-Document-Services-APIs"/>
 
 <ExploreAdobe />
-
-<NewsLetterBlade className="news-letter"/>
 
 <DCSummaryBlock slots="heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
 

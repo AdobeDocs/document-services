@@ -550,11 +550,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", link.textContent);
         });
 
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-
       document.querySelector(".accessibility-summary-two")
         .setAttribute("daa-lh", "We're ready to help")
       document.querySelectorAll(".accessibility-summary-two a").forEach(link => {
@@ -726,14 +721,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
       })
 
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-      document.querySelectorAll(".news-letter a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
-
     } else if (window.location.pathname.indexOf("pdf-accessibility-auto-tag") >= 0) {
 
       document
@@ -813,14 +800,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         .forEach(link => {
           link.setAttribute("daa-ll", link.textContent);
         });
-
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-      document.querySelectorAll(".news-letter a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
       document
         .querySelector(".accessbility-stepper")
         .setAttribute("daa-lh", "Start embedding PDFs in a few minutes");
@@ -849,7 +828,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
         .querySelector(".hero-below-compo")
-        .setAttribute("daa-lh", "Let's work together to build incredible digital experience.")
+        ?.setAttribute("daa-lh", "Let's work together to build incredible digital experience.");
 
       document.querySelectorAll(".hero-below-compo a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
@@ -932,13 +911,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       })
       document.querySelectorAll('img[title="EMPTY_TITLE"]').forEach(link => {
         link.setAttribute("title", '');
-      });
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-      document.querySelectorAll(".news-letter a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
       });
 
     } else if (window.location.pathname.indexOf("interstitial") >= 0) {
@@ -1027,14 +999,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         .querySelector(".we-ready-to-help")
         .setAttribute("daa-lh", "We're ready to help");
       document.querySelectorAll(".we-ready-to-help a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
-
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-      document.querySelectorAll(".news-letter a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
@@ -1191,14 +1155,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         link.setAttribute("daa-ll", link.textContent);
       });
 
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-      document.querySelectorAll(".news-letter a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
-
     } else if (window.location.pathname.indexOf("doc-generation") >= 0) {
       document
         .querySelector(".Hero-Banner")
@@ -1297,14 +1253,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
         } else {
           link.setAttribute("daa-ll", `${link.textContent} | Body | UiPath`);
         }
-      });
-
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-      document.querySelectorAll(".news-letter a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
       });
       document.querySelectorAll(".extract-stepper-api-reference a").forEach(link => {
         if (link.textContent === 'View API Reference') {
@@ -1538,7 +1486,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
 
       document
         .querySelector(".AdobePDFExtractAPI")
-        .setAttribute("daa-lh", "Adobe PDF Extract API");
+        ?.setAttribute("daa-lh", "Adobe PDF Extract API");
       document.querySelectorAll("AdobePDFExtractAPI a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
@@ -1576,14 +1524,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".service-code-block div.tabItem").forEach(link => {
         link.setAttribute("daa-ll", link.title);
       })
-
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-      document.querySelectorAll(".news-letter a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
 
     } else if (window.location.pathname.indexOf("pdf-embed") >= 0) {
       document
@@ -1651,13 +1591,6 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       document.querySelectorAll(".How-to-get-started a").forEach(link => {
         link.setAttribute("daa-ll", link.textContent);
       });
-      document
-        .querySelector(".news-letter")
-        .setAttribute("daa-lh", "Newsletter");
-
-      document.querySelectorAll(".news-letter a").forEach(link => {
-        link.setAttribute("daa-ll", link.textContent);
-      });
     } else if (window.location.pathname.indexOf("pricing") >= 0) {
       // make sure to differentiate between pricing/contact and regular pricing pages
       if (window.location.pathname.indexOf("contact/sales/confirmation") >= 0) {
@@ -1693,32 +1626,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
           link.setAttribute("daa-ll", `Form-Data-API | ${link.textContent}`);
         });
 
-      }
-
-      else if (window.location.pathname.indexOf("contact/sales/auto-redact") >= 0) {
-
-        document
-          .querySelector(".Auto-Redact-Contact-Us")
-          .closest("main")
-          .setAttribute("daa-lh", "Body");
-
-        document
-          .querySelector(".Auto-Redact-Contact-Us")
-          .setAttribute("daa-lh", "Auto-Redact-Contact-Us");
-
-        document
-          .querySelector(".Auto-Redact-API")
-          .setAttribute("daa-lh", "Auto-Redact-API");
-
-        document.querySelectorAll(".Auto-Redact-API a").forEach((link) => {
-          link.setAttribute("daa-ll", `Auto-Redact-API | ${link.textContent}`);
-        });
-
       } else if (window.location.pathname.indexOf("contact/sales") >= 0) {
         document
           .querySelector(".Sales-ContactUs")
-          .closest("main")
-          .setAttribute("daa-lh", "Body");
+          ?.closest("main")
+          ?.setAttribute("daa-lh", "Body");
       } else if (window.location.pathname.indexOf("contact/support/confirmation") >= 0) {
         document
           .querySelector(".support-confirmation")

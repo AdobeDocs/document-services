@@ -10,7 +10,7 @@ title: Adobe Developer — DC Platform SDK Resources
 
 - 500 free Document Transactions per month
 
-- Access to all 15+ PDF Services including PDF Extract, PDF Accessibility Auto-Tag API, and Document Generation
+- Access to all 15+ PDF Services including PDF Extract, PDF Accessibility APIs, and Document Generation
 
 - Easy to sign up and create credentials in minutes
 

@@ -46,29 +46,16 @@ Do more with this API.
 
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Accessibility"/>
 
-### Adobe PDF Accessibility Auto-Tag API
+### Adobe PDF Accessibility APIs
 
 ### Auto-tag PDF content to improve accessibility.
 
 This AI-powered API automatically tag tables, paragraphs, lists, headings and more to improve the reading experience of native or scanned PDFs with assistive technologies. It also identifies the reading order to ensure the logical flow of information with multiple columns or elements across pages. Apply this to document backlogs or new document workflows and move towards compliance with greater ease.
 
 - [Try the demo](https://acrobatservices.adobe.com/dc-accessibility-playground/main.html)
-- [Learn more](/src/pages/apis/pdf-accessibility-auto-tag.md)
+- [Learn more](/src/pages/apis/pdf-accessibility-apis)
 
 ![EMPTY_ALT](images/Accessibility_API.png)
-
-<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding e-seal-api linking"/>
-
-![EMPTY_ALT](images/Electronic_Seal.jpg)
-
-### Adobe PDF Electronic Seal API
-
-### Apply an electronic seal to documents at scale easily.
-
-Apply an electronic seal to documents at scale using a certificate issued by certain TSPs (Trust Service Providers) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). The electronic seal helps verify the identity and integrity of documents. This can be used to e-seal documents at scale and is included with PDF Services API.
-
-- [Try the demo](https://acrobatservices.adobe.com/dc-eseal-playground/index.html#/)
-- [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
 
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
 
@@ -121,13 +108,18 @@ samples for Angular and React.
 
 ![EMPTY_ALT](images/pdfEmbed.jpg)
 
-<DCSummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
+<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding e-seal-api linking"/>
 
-## Designed for developers
+![EMPTY_ALT](images/Electronic_Seal.jpg)
 
-Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
+### Adobe PDF Electronic Seal API
 
-- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+### Apply an electronic seal to documents at scale easily.
+
+Apply an electronic seal to documents at scale using a certificate issued by certain TSPs (Trust Service Providers) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). The electronic seal helps verify the identity and integrity of documents. This can be used to e-seal documents at scale and is included with PDF Services API.
+
+- [Try the demo](https://acrobatservices.adobe.com/dc-eseal-playground/index.html#/)
+- [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
 
 <TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="6"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
 
@@ -137,17 +129,11 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <CreatePdfFromUrl/>
 
-### Dynamic PDF Document Generation
+### Auto-tag PDF
 
-![EMPTY_ALT](images/ic-dynamic-pdf-gen-40.svg)
+![EMPTY_ALT](images/autotagIcon.svg)
 
-<DynamicPdfDocumentGeneration/>
-
-### E-seal API
-
-![EMPTY_ALT](images/electronic-seal.svg)
-
-<ESealAPI/>
+<AccessibilityAutoTagApi/>
 
 ### Extract PDF Content & Structure
 
@@ -155,17 +141,23 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <ExtractPdfContentStructure/>
 
+### Dynamic PDF Document Generation
+
+![EMPTY_ALT](images/ic-dynamic-pdf-gen-40.svg)
+
+<DynamicPdfDocumentGeneration/>
+
 ### Embed PDF for viewing and analytics
 
 ![EMPTY_ALT](images/embed.svg)
 
 <EmbedPdfViewingAnalytics/>
 
-### Auto-tag PDF
+### E-seal API
 
-![EMPTY_ALT](images/autotagIcon.svg)
+![EMPTY_ALT](images/electronic-seal.svg)
 
-<AccessibilityAutoTagApi/>
+<ESealAPI/>
 
 <WrapperComponent slots="content" theme="lightest" className="why-docment-services"/>
 
