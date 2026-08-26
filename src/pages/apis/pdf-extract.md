@@ -15,7 +15,7 @@ import EsealApiAnnouncement from './e-seal-api-announcement.md';
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth"  variantsTypeSecondary='primary'  className="herobgImage Hero-Banner hero-btn-color"/>
 
-# Adobe PDF Extract API
+# Adobe PDF Extract API: JSON and Markdown
 
 Unlock the structure and content elements of any PDF with a web service powered by Adobe Sensei's machine learning.
 

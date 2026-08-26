@@ -18,7 +18,7 @@ import {AutoTag} from '../../components/auto-tag';
 
 # Adobe PDF Accessibility APIs
 
-Our API makes it easy to scale PDF accessibility. Auto-tag content more accurately with our Adobe Sensei-powered API and ensure every document is easy to navigate when accessed with screen readers and other reading devices.
+Improve PDF accessibility at scale with Adobe PDF Accessibility APIs. Use the Auto-Tag API to add document structure tags and establish a logical reading order for assistive technologies. Use the Checker API to evaluate PDFs against the machine-verifiable requirements of PDF/UA and WCAG and generate actionable accessibility reports.
 
 autoTagapiHeroAssetImg  accessibility-auto-tag-hero
 
@@ -31,9 +31,9 @@ autoTagapiHeroAssetImg  accessibility-auto-tag-hero
 
 <AnnouncementBlock slots="heading, text, button" theme="dark" />
 
-### Try the PDF Accessibility Checker API
+### PDF Accessibility Checker API
 
-Explore our latest API designed to check PDF accessibility according to the machine-verifiable requirements of PDF/UA and the latest version of WCAG, generating an accessibility report.
+Evaluate PDF accessibility at scale using the same technology as the Accessibility Checker in Adobe Acrobat Pro. The API checks more than 30 machine-verifiable requirements across PDF/UA and WCAG and generates a report showing which checks passed, failed, or need manual review, helping teams quickly identify issues and prioritize remediation.
 
 [Learn More](https://developer.adobe.com/document-services/docs/apis/#tag/PDF-Accessibility-Checker)
 
