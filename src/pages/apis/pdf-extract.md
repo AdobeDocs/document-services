@@ -6,10 +6,8 @@ ogImage: og-image/extract-hero-mobile.png
 
 import ExtractStepperComponent from './pdf-extract/extract-stepper.md';
 import WhyExtractAPI from './pdf-extract/why-extract-api.md';
-import PdfExtractResourceTitle from './pdf-extract/pdf-extract-resource-title.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';
 import VisualizerHowItWorks from './pdf-extract/visualizer-how-it-works.md';
-import PdfExtractUseCases from './pdf-extract/pdf-extract-resource.md';
 import {VisualizerCustomIframeBlock} from '../../components/visualizerCustomIframe';
 import EsealApiAnnouncement from './e-seal-api-announcement.md';
 
@@ -40,17 +38,6 @@ apiHeroAssetImg doc-ext-invoice
 
 <ExtractStepperComponent />
 
-<WrapperComponent slots="content" repeat="1" theme="lightest"/>
-
-<PdfExtractResourceTitle/>
-
-<WrapperComponent slots="content" repeat="1" theme="lightest" enableMaxWidth maxWidth='795px'/>
-
-<PdfExtractUseCases />
-
-<TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5'/>
-
-- [View all use cases](/src/pages/use-cases/content-and-data-extraction/)
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="Explore-other-Adobe-Document-Services-APIs"/>
 

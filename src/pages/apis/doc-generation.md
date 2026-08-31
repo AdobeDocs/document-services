@@ -5,7 +5,6 @@ ogImage: og-image/doc-gen-hero-tablet.png
 ---
 
 import DgDownloadSample from './doc-generation/dg-download-sample'
-import DgUseCaseDocServiceAPI from './doc-generation/dg-use-case-doc-service-api'
 import DgStartModifyingTitle from './doc-generation/dg-start-modifying-pdf.md'
 import DgWhyDocTitle from './doc-generation/dg-why-doc-gen-api.md'
 import DgKeyFeatures from './doc-generation/dg-key-features.md'
@@ -64,14 +63,6 @@ apiHeroAssetImg doc-gen-invoice
 
 <DgStartModifyingTitle/>
 
-<!-- Use case for Acrobat Services API -->
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="Use-cases-for-Document-Generation-API"/>
-
-<DgUseCaseDocServiceAPI className="Use-cases-for-Document-Generation-API"/>
-
-<TextBlock slots="buttons" theme="lightest" isCentered className="padding-5 Use-cases-for-Document-Generation-API"/>
-
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <!-- Explore other Adobe Document Cloud services -->
 

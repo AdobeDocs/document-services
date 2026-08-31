@@ -29,7 +29,7 @@ autoTagapiHeroAssetImg  accessibility-auto-tag-hero
 
 <AutoTagAPI />
 
-<AnnouncementBlock slots="heading, text, button" theme="dark" />
+<AnnouncementBlock slots="heading, text, button" theme="dark" className="pdf-accessibility-announcement" />
 
 ### PDF Accessibility Checker API
 

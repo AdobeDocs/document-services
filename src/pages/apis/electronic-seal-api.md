@@ -7,7 +7,6 @@ ogImage: og-image/e-seal-desktop.png
 import AutoTagAPI from './electronic-seal-api/e-seal-key-feature.md';
 import BenefitsOfEsealAPITitle from './electronic-seal-api/benefits-of-e-seal-api-title.md';
 import BenefitsOfEsealAPIContent from './electronic-seal-api/benefits-of-e-seal-api-contents.md';
-import ExplorUsecase from './electronic-seal-api/explore-use-case.md';
 import SealAPIStepper from './electronic-seal-api/seal-api-stepper.md';
 import SealAPIAdobeDoc from './electronic-seal-api/seal-api-adobe-doc.md';
 
@@ -32,9 +31,6 @@ e-Seal-API-HeroAssetImg  e-seal-api-hero
 
 <BenefitsOfEsealAPIContent/>
 
-<WrapperComponent slots="content" repeat="1" theme="light" className="why-pdf-services Why-PDF-Services-API"/>
-
-<ExplorUsecase/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API accessbility-stepper"/>
 

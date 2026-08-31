@@ -4,7 +4,7 @@
 
 <AccordionItem header="How do I see how many API transactions or calls I've used?" slot_id="account-management-how-do-i-see-how-many-api-transactions-or-calls-used">
 
-For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage.
+For Adobe Enterprise Term Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage. All customers, including Free Tier and VIP, can also check usage in real time using our usage tracking tool: https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?usage-dialog=true
 
 </AccordionItem>
 
@@ -50,7 +50,7 @@ When you start your Enterprise Term Licensing Agreement (ETLA) or Value Incentiv
 
 <AccordionItem header="My company has an existing Enterprise Agreement with Adobe. Can I add PDF Services API to that existing agreement?" slot_id="billing-my-company-has-an-existing-emterprise-agreement-with-adobe">
 
-Please contact your account representative to discuss your requirement. There is minimum threshold needs to be met for the Enterprise Agreement with Adobe PDF Services API.
+Please contact your account representative to discuss your requirements. A minimum threshold must be met to add PDF Services API to an existing Enterprise Agreement.
 
 </AccordionItem>
 
@@ -80,14 +80,6 @@ Adobe complies with applicable laws regarding cross-border data transfers as out
 
 </AccordionItem>
 
-<AccordionItem header="Can I use PDF Services API  for Sensitive Personal Data or PHI (Personal Health Information) data?" slot_id="data-security-privacy-can-i-use-pdf-services-for-sensitive-personal-data">
-
-Currently, we do not support use of Document Cloud Services SDK to collect, process, or store sensitive personal data such as protected health information under HIPAA, children’s personal information under COPPA, and other similar information as described in our General Terms (<a href="<https://www.adobe.com/legal/terms/enterprise-licensing/overview.html>">https://www.adobe.com/legal/terms/enterprise-licensing/overview.html</a>) and and Developer Terms of Use (<a href="<https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf>">https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf</a>).
-
-However, support for sensitive personal data is coming soon.
-
-</AccordionItem>
-
 <AccordionItem header="How does Adobe Acrobat Services use or store file content?" slot_id="data-security-privacy-how-does-acrobat-services-use-or-store-file-content">
 
 Documents are only transferred to the cloud for processing. Adobe Acrobat Services cloud infrastructure does not store the document but retains the document for a maximum of 24 hours as part of the processing. Documents are never stored permanently.
@@ -96,19 +88,13 @@ Documents are only transferred to the cloud for processing. Adobe Acrobat Servic
 
 <AccordionItem header="How does Adobe Acrobat Services manage content and identity data?" slot_id="data-security-privacy-how-does-adobe-acrobate-services-manage-content-identity-data">
 
-The geographic location of identity data is on the AWS network; stored in multi-region, load-balanced data centers located in Virginia (US-East). Identity data is replicated across all data centers.
-
-Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="<https://www.adobe.com/privacy/eudatatransfers.html>">https://www.adobe.com/privacy/eudatatransfers.html</a>
-
-You can also check out the Adobe Acrobat Services Security Overview: <a href="<https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf>">https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf</a>
+The geographic location of identity data is on the AWS network, stored in multi region, load balanced data centers located in Virginia (US East), Oregon (US West), Ireland (EU West), and Singapore (AP Southeast). Identity data is replicated across all data centers. Adobe complies with applicable laws regarding cross border data transfers as outlined in greater detail at https://www.adobe.com/privacy/eudatatransfers.html.
 
 </AccordionItem>
 
 <AccordionItem header="Can you host my data in a specific region (e.g. the EU)?" slot_id="data-security-privacy-can-you-host-my-data-in-specific-region">
 
-Currently, our data centers are in the United States. Adding data centers in EU is on our roadmap.
-
-Adobe complies with applicable laws regarding cross-border data transfers as outlined in greater detail at <a href="<https://www.adobe.com/privacy/eudatatransfers.html>">https://www.adobe.com/privacy/eudatatransfers.html</a>.
+Yes. Adobe Acrobat Services processes documents in the United States (US East) or the European Union (Ireland), and you can select the region for each API call. Adobe complies with applicable laws regarding cross border data transfers as outlined in greater detail at https://www.adobe.com/privacy/eudatatransfers.html
 
 </AccordionItem>
 
@@ -151,7 +137,7 @@ If you'd like to request an NDA, please contact our sales team for assistance at
 
 <AccordionItem header="Where can I learn more about Adobe PDF Services API's security policies?" slot_id="data-security-privacy-where-can-i-learn-more-about-adobe-pdf-services-api-security-policies">
 
-See the Adobe Trust Center (<a href="<https://www.adobe.com/trust.html>">https://www.adobe.com/trust.html</a>) and the Adobe Acrobat Services Security Overview (<a href="<https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf>">https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeDocumentServices_SecurityOverview.pdf</a>).
+See the Adobe Trust Center (<a href="<https://www.adobe.com/trust.html>">https://www.adobe.com/trust.html</a>).
 
 </AccordionItem>
 
@@ -177,7 +163,7 @@ Yes. You can buy Adobe Acrobat Services APIs via resellers. You can search for r
 
 <AccordionItem header="Can I buy Adobe Acrobat Services API transactions via the Microsoft PowerAutomate connectors?" slot_id="ordering-can-i-buy-pdf-services-api-transactions-via-the-microsoft-power-automate-connectors">
 
-You can try the Adobe Acrobat Services API using the Microsoft Power Automate connector. Purchasing is only available through volume pricing via Adobe’s Value Incentive Plan (VIP) or an Enterprise Term License Agreement (ETLA), either directly from Adobe or an authorized reseller.
+All of the Adobe Acrobat Services APIs can be called via Microsoft Power Automate connector. However, purchasing is only available through volume pricing via Adobe's Value Incentive Plan (VIP) or an Enterprise Term License Agreement (ETLA), either directly from Adobe or an authorized reseller.
 
 </AccordionItem>
 
@@ -205,25 +191,19 @@ For a quote, you can contact our sales team at: https://developer.adobe.com/docu
 
 <AccordionItem header="Do non-profits receive special pricing?" slot_id="pricing-do-non-profits-recevie-special-pricing">
 
-We offer annual plans with volume pricing for  Adobe Acrobat Services API usage. See how document transactions are calculated here: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/
-
-For a quote, you can contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
+We offer large volume discounts for high usage customers. For a quote, contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
 
 </AccordionItem>
 
 <AccordionItem header="Do academic institutions receive special pricing?" slot_id="pricing-do-acadamic-institutions-receive-special-pricing">
 
-We offer annual plans with volume pricing for  Adobe Acrobat Services API usage.  See how document transactions are calculated here: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/
-
-For a quote, you can contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
+We offer large volume discounts for high usage customers. For a quote, contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
 
 </AccordionItem>
 
 <AccordionItem header="Do government institutions receive special pricing?" slot_id="pricing-do-government-institutions-receive-special-pricing">
 
-We offer annual plans with volume pricing for Adobe Acrobat Services API usage. See how document transactions are calculated here: https://developer.adobe.com/document-services/docs/overview/pdf-services-api/dcserviceslicensing/
-
-For a quote, you can contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
+We offer large volume discounts for high usage customers. For a quote, contact our sales team at: https://developer.adobe.com/document-services/pricing/contact/sales
 
 </AccordionItem>
 

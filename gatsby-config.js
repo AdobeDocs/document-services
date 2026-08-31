@@ -75,10 +75,6 @@ module.exports = {
           },
         ]
       },
-      // {
-      //   title: 'Use Cases',
-      //   path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts.md'
-      // },
       {
         title: 'Pricing',
         path: 'pricing/main'
@@ -87,8 +83,8 @@ module.exports = {
       {
         title: 'Resources',
         menu: [{
-          title: 'Developer Resources',
-          path: 'resources/'
+          title: 'Customer Stories',
+          path: 'resources/customer-stories/'
         }, {
           title: 'Forum',
           path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'
@@ -110,37 +106,37 @@ module.exports = {
         title: 'Documentation',
         menu: [
           {
-            title: "REST APIs",
-            path: 'document-services/docs/apis/index.md'
-          },
-          {
             title: 'Overview',
-            path: 'document-services/docs/overview'
+            path: '/document-services/docs/overview'
           },
           {
             title: 'PDF Services API',
-            path: 'document-services/docs/overview/pdf-services-api/index.md'
+            path: '/document-services/docs/overview/pdf-services-api/index.md'
           },
           {
             title: 'PDF Accessibility APIs',
-            path: 'document-services/docs/overview/pdf-accessibility-auto-tag-api/index.md'
+            path: '/document-services/docs/overview/pdf-accessibility-auto-tag-api/index.md'
           },
           {
             title: 'PDF Extract API',
-            path: 'document-services/docs/overview/pdf-extract-api/index.md'
+            path: '/document-services/docs/overview/pdf-extract-api/index.md'
           },
           {
             title: 'Document Generation API',
-            path: 'document-services/docs/overview/document-generation-api/index.md'
+            path: '/document-services/docs/overview/document-generation-api/index.md'
           },
           {
             title: 'PDF Electronic Seal API',
-            path: 'document-services/docs/overview/pdf-electronic-seal-api/index.md'
+            path: '/document-services/docs/overview/pdf-electronic-seal-api/index.md'
           },
           {
             title: 'PDF Embed API',
-            path: 'document-services/docs/overview/pdf-embed-api/index.md'
+            path: '/document-services/docs/overview/pdf-embed-api/index.md'
           },
+          {
+            title: "REST APIs",
+            path: 'document-services/docs/apis/index.md'
+          }
         ]
       },
     ],
@@ -182,6 +178,10 @@ module.exports = {
       {
         title: 'Ordering',
         path: '/faq/sales/#ordering',
+      },
+      {
+        title: 'Pricing',
+        path: '/faq/sales/#pricing',
       },
       {
         title: 'Support',
@@ -226,6 +226,10 @@ module.exports = {
       {
         title: 'Ordering',
         path: '/faq/sales/#ordering',
+      },
+      {
+        title: 'Pricing',
+        path: '/faq/sales/#pricing',
       },
       {
         title: 'Support',

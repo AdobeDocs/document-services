@@ -39,7 +39,7 @@ const AdobeMsBlade = ({className}) => {
               </div>
               <div class="mp-cta-wrapper">
                 <a
-                  href="http://www.adobe.com/go/powerautomate_help"
+                  href="https://helpx.adobe.com/acrobat/web/use-acrobat-extensions/adobe-pdf-services-connector/connect-for-power-automate.html"
                   target="_parent"
                   class="button-link"
                   tabindex="0"

@@ -48,6 +48,18 @@ h1 {
     }
 }
 
+.pdf-accessibility-announcement > div {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdf-accessibility-announcement p {
+    margin-top: 0;
+    width: 80%;
+}
+
 .Container {
     height: 100%;
     top: 0;
@@ -1334,6 +1346,15 @@ pre .prism-code.spectrum-Code  span.token.string{
 }
 .how-it-work-richText > div > div > div {
     width: 100%;
+}
+.how-it-work-richText ul {
+    text-align: left;
+    padding-left: var(--spectrum-global-dimension-size-300);
+    margin-top: var(--spectrum-global-dimension-size-150);
+}
+.how-it-work-richText li {
+    text-align: left;
+    margin-bottom: var(--spectrum-global-dimension-size-100);
 }
 .landingResourceCard{
     background: none !important;

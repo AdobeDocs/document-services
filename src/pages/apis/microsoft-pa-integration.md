@@ -8,7 +8,6 @@ import UplevelYourDocumentTitle from './microsoft-PA-integration/uplevel-your-do
 import UplevelYourDocumentContent from './microsoft-PA-integration/uplevel-your-document-content.md';
 import BenefitsForEnterprises from './microsoft-PA-integration/benefits-for-enterprises.md';
 import GetHelpBlade from './microsoft-PA-integration/get-help-blade.md'
-import UseCases from './microsoft-PA-integration/use-cases.md'
 import GetStarted from './microsoft-PA-integration/getStarted.md'
 import AdditionalResources from './microsoft-PA-integration/additional-resources.md'
 import MsAnnouncementBlock from './microsoft-PA-integration/ms-announcement.md'
@@ -45,13 +44,6 @@ Start with the Free Tier and get 500 free Document Transactions per month.
 
 <BenefitsForEnterprises/>
 
-<WrapperComponent slots="content" theme="lightest" className="Use-Cases"/>
-
-<UseCases/>
-
-<TextBlock slots="buttons" isCentered theme="lightest" variantsTypePrimary='secondary' variantStyleFill = "outline"  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
-
-- [View all use cases](/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" theme="light" className="Get-Started"/>
 

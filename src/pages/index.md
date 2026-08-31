@@ -1,5 +1,5 @@
 ---
-title: SDK Developer Kit | PDF Library | Adobe Acrobat Services
+title: Adobe Acrobat Services
 description: Transform how your apps handle documents with Adobe Acrobat Services APIs—create, convert, extract into JSON, tag for accessibility, seal, and embed PDFs using powerful tools built for developers. Learn more now.
 ---
 
@@ -9,7 +9,6 @@ import AccessibilityAutoTagApi from './home/accessbility-auto-tag.md'
 import DynamicPdfDocumentGeneration from './home/dynamic-pdf-document-generation.md';
 import ExtractPdfContentStructure from './home/pdf-content-structure.md';
 import EmbedPdfViewingAnalytics from './home/embed-pdf-viewing-analytics.md';
-import HomeResourceCard from './home/home-resource.md';
 import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './home/home-storyies.md'
@@ -163,13 +162,6 @@ Apply an electronic seal to documents at scale using a certificate issued by cer
 
 <WhyDocument />
 
-<WrapperComponent slots="content" repeat="1" theme="light" className="Use-cases-for-Adobe-Document-Services"/>
-
-<HomeResourceCard />
-
-<TextBlock slots="buttons" isCentered theme="light"  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
-
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="Customer-Stories"/>
 
