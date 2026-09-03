@@ -53,6 +53,11 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
   }
 
   if (isBrowser) {
+    if (location.pathname.endsWith("/apis") || location.pathname.endsWith("/apis/")) {
+      window.location.replace("/document-services/");
+      return;
+    }
+
     let siteSection = location.pathname.split("/");
     try {
       if (
