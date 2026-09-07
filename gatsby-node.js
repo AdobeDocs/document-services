@@ -70,8 +70,8 @@ exports.createResolvers = ({ createResolvers, addFrontmatterType }) => {
         type: 'Boolean',
         resolve: addFrontmatterType
       },
-      ogImage : {
-        type : 'String',
+      ogImage: {
+        type: 'String',
         resolve: addFrontmatterType
       }
     }
@@ -88,9 +88,14 @@ exports.createResolvers = ({ createResolvers, addFrontmatterType }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   let temp = [
-    { filePath: './src/pages/index.md', url: 'homepage' },
-    { filePath: './src/pages/index.md', url: 'apis' }
+    { filePath: './src/pages/index.md', url: 'homepage' }
   ]
+  createRedirect({
+    fromPath: '/apis/',
+    toPath: '/',
+    isPermanent: true,
+    redirectInBrowser: true,
+  });
   // { filePath: './src/pages/pricing/index.md', url:'pricing/main' },
 
   temp.map(val => {
