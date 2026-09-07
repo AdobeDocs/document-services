@@ -28,5 +28,5 @@ When you’re ready to purchase, flexible options to suit your needs.
 
 Have questions about the Acrobat Services APIs?
 
-- [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
+- [Go to the Adobe Forum](https://community.adobe.com/acrobat-services-api-19)
 - [Contact us](/src/pages/pricing/contact.md/)

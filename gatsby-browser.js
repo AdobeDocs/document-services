@@ -106,6 +106,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     let baseurl = "https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html"
 
     let referenceBaseUrl = "https://developer-stage.adobe.com/document-services/docs/apis/"
+    let docOverviewBaseUrl = "https://developer-stage.adobe.com/document-services/docs/overview/"
     // stage/deploy
     if (window.location.host.indexOf("adobe.com") >= 0 || window.location.host.indexOf("github.io") >= 0) {
       isLocal = false;
@@ -118,6 +119,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       window.location.host.indexOf("adobe.io") >= 0
     ) {
       referenceBaseUrl = "https://developer.adobe.com/document-services/docs/apis/"
+      docOverviewBaseUrl = "https://developer.adobe.com/document-services/docs/overview/"
     }
 
     // set sales form iframe src to point to correct location
@@ -361,7 +363,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
       })
       document.querySelectorAll('.home-code-block a').forEach(link => {
         if (link.textContent === "API Reference") {
-          link.href = `${referenceBaseUrl}`;
+          link.href = `${docOverviewBaseUrl}`;
         }
       })
       document

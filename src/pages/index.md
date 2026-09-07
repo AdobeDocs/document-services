@@ -47,9 +47,9 @@ Do more with this API.
 
 ### Adobe PDF Accessibility APIs
 
-### Auto-tag PDF content to improve accessibility.
+### Create and evaluate accessible PDFs at scale.
 
-This AI-powered API automatically tag tables, paragraphs, lists, headings and more to improve the reading experience of native or scanned PDFs with assistive technologies. It also identifies the reading order to ensure the logical flow of information with multiple columns or elements across pages. Apply this to document backlogs or new document workflows and move towards compliance with greater ease.
+Use the Auto-Tag API to automatically tag tables, paragraphs, lists, headings, and more, and establish a logical reading order for native or scanned PDFs. Use the Checker API to evaluate PDFs and generate actionable reports showing which checks passed, failed, or require manual review.
 
 - [Try the demo](https://acrobatservices.adobe.com/dc-accessibility-playground/main.html)
 - [Learn more](/src/pages/apis/pdf-accessibility-apis)
@@ -58,15 +58,11 @@ This AI-powered API automatically tag tables, paragraphs, lists, headings and mo
 
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
 
-### Adobe PDF Extract API
+### Adobe PDF Extract API: JSON and Markdown
 
-### Unlock content structure in any PDF.
+### Transform PDFs into structured JSON or LLM-ready Markdown.
 
-PDF Extract API leverages AI to parse PDFs programmatically and extract data and content for
-analysis and processing. Text, images, tables, font styling, and more are extracted with relative
-positioning and natural reading order and placed into a structured JSON file for downstream
-processing in NLP, RPA, content republishing or data analysis solutions. PDF Extract API works
-on both scanned and native PDFs and is included with PDF Services API.
+PDF Extract provides two output formats through separate endpoints powered by the same Adobe extraction technology. Use the Extract PDF endpoint to extract text, tables, figures, styling, and positioning as structured JSON, with tables and figures also available as CSV, XLSX, and PNG files. Use the PDF to Markdown endpoint to convert PDF content into clean, well-structured Markdown that preserves document structure and reading order.
 
 - [Try the demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
@@ -120,7 +116,7 @@ Apply an electronic seal to documents at scale using a certificate issued by cer
 - [Try the demo](https://acrobatservices.adobe.com/dc-eseal-playground/index.html#/)
 - [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="6"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/overview/"  repeat="6"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
 
 ### Create PDF from Word
 

@@ -4,7 +4,7 @@
 
 <AccordionItem header="How do I see how many API transactions or calls I've used?" slot_id="account-management-how-do-i-see-how-many-api-transactions-or-calls-used">
 
-For Adobe Enterprise Term Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage. All customers, including Free Tier and VIP, can also check usage in real time using our usage tracking tool: https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?usage-dialog=true
+For Adobe Enterprise Term Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage. All customers, including Free Tier and VIP, can also check usage in real time using our usage [tracking tool](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?usage-dialog=true).
 
 </AccordionItem>
 

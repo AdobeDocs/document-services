@@ -2819,9 +2819,9 @@ img[alt=adobe-support] {
 }
 
 .spectrum-Accordion-itemHeader{
-    color: var(--spectrum-listitem-m-text-color-hover, var(--spectrum-alias-text-color));
-    font-size:  var(--spectrum-global-dimension-size-200);
-    font-weight: var(--spectrum-global-font-weight-bold);
+    color: var(--spectrum-alias-text-color, #343434) !important;
+    font-size: var(--spectrum-global-dimension-font-size-200, 16px) !important;
+    font-weight: var(--spectrum-global-font-weight-bold, 700) !important;
 }
 .spectrum-Accordion{
     padding-bottom: var(--spectrum-global-dimension-size-600);

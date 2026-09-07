@@ -40,12 +40,12 @@ module.exports = {
           },
           {
             title: 'PDF Accessibility APIs',
-            description: 'Auto-tag PDF content to improve accessibility',
+            description: 'Auto-Tag API and Checker API to improve accessibility',
             path: 'apis/pdf-accessibility-apis/'
           },
           {
             title: 'PDF Extract',
-            description: 'Extract text, tables, images, and document structure',
+            description: 'Extract text, tables, images, and document structure to JSON or Markdown',
             path: 'apis/pdf-extract/'
           },
           {
