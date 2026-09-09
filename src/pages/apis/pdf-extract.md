@@ -4,6 +4,7 @@ description:  Extract text, tables, and images from any PDF into structured JSON
 ogImage: og-image/extract-hero-mobile.png
 ---
 
+import '../../styles/developer-resource.css';
 import ExtractStepperComponent from './pdf-extract/extract-stepper.md';
 import WhyExtractAPI from './pdf-extract/why-extract-api.md';
 import ExtractProductCard from './pdf-extract/extract-product.md';

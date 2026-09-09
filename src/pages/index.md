@@ -56,7 +56,9 @@ Use the Auto-Tag API to automatically tag tables, paragraphs, lists, headings, a
 
 ![EMPTY_ALT](images/Accessibility_API.png)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
+
+![EMPTY_ALT](images/pdfExtract.jpg)
 
 ### Adobe PDF Extract API: JSON and Markdown
 
@@ -67,11 +69,7 @@ PDF Extract provides two output formats through separate endpoints powered by th
 - [Try the demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-![EMPTY_ALT](images/pdfExtract.jpg)
-
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
-
-![EMPTY_ALT](images/docGen.jpg)
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
 
 ### Adobe Document Generation API
 
@@ -86,7 +84,11 @@ Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
+![EMPTY_ALT](images/docGen.jpg)
+
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
+
+![EMPTY_ALT](images/pdfEmbed.jpg)
 
 ### Adobe PDF Embed API
 
@@ -101,11 +103,7 @@ samples for Angular and React.
 - [Try the demo](https://acrobatservices.adobe.com/view-sdk-demo/index.html)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
-![EMPTY_ALT](images/pdfEmbed.jpg)
-
-<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding e-seal-api linking"/>
-
-![EMPTY_ALT](images/Electronic_Seal.jpg)
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding e-seal-api linking"/>
 
 ### Adobe PDF Electronic Seal API
 
@@ -115,6 +113,8 @@ Apply an electronic seal to documents at scale using a certificate issued by cer
 
 - [Try the demo](https://acrobatservices.adobe.com/dc-eseal-playground/index.html#/)
 - [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
+
+![EMPTY_ALT](images/Electronic_Seal.jpg)
 
 <TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/overview/"  repeat="6"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
 
