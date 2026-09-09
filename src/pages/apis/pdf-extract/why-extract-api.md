@@ -13,9 +13,9 @@ title: Adobe Developer — Wrapper Components  —  API Extract Why Adobe PDF Ex
 
 ![EMPTY_ALT](../../images/comprehensive-content-extraction.svg)
 
-### Comprehensive content extraction
+### Flexible JSON and Markdown outputs
 
-Extract all PDF document elements including text, tables, and images within a structured JSON file to enable a variety of downstream solutions.
+Extract text, tables, and figures from PDFs using two output options powered by the same Adobe extraction technology: detailed structured JSON from the Extract PDF endpoint or clean, LLM-friendly Markdown from the PDF to Markdown endpoint.
 
 <TextBlock slots="image, heading, text" width="25%" theme="lightest"  className="align-left icon-xl-size padding-top-zero horizontal-align-heading"/>
 

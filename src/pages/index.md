@@ -1,5 +1,5 @@
 ---
-title: SDK Developer Kit | PDF Library | Adobe Acrobat Services
+title: Adobe Acrobat Services
 description: Transform how your apps handle documents with Adobe Acrobat Services APIs—create, convert, extract into JSON, tag for accessibility, seal, and embed PDFs using powerful tools built for developers. Learn more now.
 ---
 
@@ -9,7 +9,6 @@ import AccessibilityAutoTagApi from './home/accessbility-auto-tag.md'
 import DynamicPdfDocumentGeneration from './home/dynamic-pdf-document-generation.md';
 import ExtractPdfContentStructure from './home/pdf-content-structure.md';
 import EmbedPdfViewingAnalytics from './home/embed-pdf-viewing-analytics.md';
-import HomeResourceCard from './home/home-resource.md';
 import WhyDocument from './home/why-document.md';
 import HomeCarousel from './home/home-carousel.md'
 import CustomerStory from './home/home-storyies.md'
@@ -46,50 +45,31 @@ Do more with this API.
 
 <TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Accessibility"/>
 
-### Adobe PDF Accessibility Auto-Tag API
+### Adobe PDF Accessibility APIs
 
-### Auto-tag PDF content to improve accessibility.
+### Create and evaluate accessible PDFs at scale.
 
-This AI-powered API automatically tag tables, paragraphs, lists, headings and more to improve the reading experience of native or scanned PDFs with assistive technologies. It also identifies the reading order to ensure the logical flow of information with multiple columns or elements across pages. Apply this to document backlogs or new document workflows and move towards compliance with greater ease.
+Use the Auto-Tag API to automatically tag tables, paragraphs, lists, headings, and more, and establish a logical reading order for native or scanned PDFs. Use the Checker API to evaluate PDFs and generate actionable reports showing which checks passed, failed, or require manual review.
 
 - [Try the demo](https://acrobatservices.adobe.com/dc-accessibility-playground/main.html)
-- [Learn more](/src/pages/apis/pdf-accessibility-auto-tag.md)
+- [Learn more](/src/pages/apis/pdf-accessibility-apis)
 
 ![EMPTY_ALT](images/Accessibility_API.png)
 
-<TextBlock slots="image, heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding e-seal-api linking"/>
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
 
-![EMPTY_ALT](images/Electronic_Seal.jpg)
+![EMPTY_ALT](images/pdfExtract.jpg)
 
-### Adobe PDF Electronic Seal API
+### Adobe PDF Extract API: JSON and Markdown
 
-### Apply an electronic seal to documents at scale easily.
+### Transform PDFs into structured JSON or LLM-ready Markdown.
 
-Apply an electronic seal to documents at scale using a certificate issued by certain TSPs (Trust Service Providers) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). The electronic seal helps verify the identity and integrity of documents. This can be used to e-seal documents at scale and is included with PDF Services API.
-
-- [Try the demo](https://acrobatservices.adobe.com/dc-eseal-playground/index.html#/)
-- [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
-
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Extract-API" />
-
-### Adobe PDF Extract API
-
-### Unlock content structure in any PDF.
-
-PDF Extract API leverages AI to parse PDFs programmatically and extract data and content for
-analysis and processing. Text, images, tables, font styling, and more are extracted with relative
-positioning and natural reading order and placed into a structured JSON file for downstream
-processing in NLP, RPA, content republishing or data analysis solutions. PDF Extract API works
-on both scanned and native PDFs and is included with PDF Services API.
+PDF Extract provides two output formats through separate endpoints powered by the same Adobe extraction technology. Use the Extract PDF endpoint to extract text, tables, figures, styling, and positioning as structured JSON, with tables and figures also available as CSV, XLSX, and PNG files. Use the PDF to Markdown endpoint to convert PDF content into clean, well-structured Markdown that preserves document structure and reading order.
 
 - [Try the demo](https://acrobatservices.adobe.com/dc-visualizer-app/index.html)
 - [Learn more](/src/pages/apis/pdf-extract.md)
 
-![EMPTY_ALT](images/pdfExtract.jpg)
-
-<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
-
-![EMPTY_ALT](images/docGen.jpg)
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-Document-Generation-API"/>
 
 ### Adobe Document Generation API
 
@@ -104,7 +84,11 @@ Services API.
 - [Try the demo](https://acrobatservices.adobe.com/dc-docgen-playground/index.html)
 - [Learn more](/src/pages/apis/doc-generation.md)
 
-<TextBlock slots="heading,subHeading,text,buttons,image" theme="light"  primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
+![EMPTY_ALT](images/docGen.jpg)
+
+<TextBlock slots="image,heading,subHeading,text,buttons" theme="lightest" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding Adobe-PDF-Embed-API"/>
+
+![EMPTY_ALT](images/pdfEmbed.jpg)
 
 ### Adobe PDF Embed API
 
@@ -119,17 +103,20 @@ samples for Angular and React.
 - [Try the demo](https://acrobatservices.adobe.com/view-sdk-demo/index.html)
 - [Learn more](/src/pages/apis/pdf-embed.md)
 
-![EMPTY_ALT](images/pdfEmbed.jpg)
+<TextBlock slots="heading,subHeading,text,buttons,image" theme="light" primaryOutline headerElementType="h2" homeZigZag className="home-zigzag-comp-padding e-seal-api linking"/>
 
-<DCSummaryBlock slots="heading, text, buttons"  background="rgb(31, 42, 73)" buttonPositionRight className="Designed-for-developers" />
+### Adobe PDF Electronic Seal API
 
-## Designed for developers
+### Apply an electronic seal to documents at scale easily.
 
-Use our cloud-based REST APIs and SDKs designed for developers to build new, innovative document solutions. Pick and choose from over 15 different PDF and document manipulation APIs to build custom end-to-end agreements, content publishing, data analysis workflow experiences, and more. Get started in minutes with our SDKs for Node.js, .Net, Java, and sample Postman collection.
+Apply an electronic seal to documents at scale using a certificate issued by certain TSPs (Trust Service Providers) on [Adobe’s Approved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). The electronic seal helps verify the identity and integrity of documents. This can be used to e-seal documents at scale and is included with PDF Services API.
 
-- [Start for free](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html)
+- [Try the demo](https://acrobatservices.adobe.com/dc-eseal-playground/index.html#/)
+- [Learn more](https://developer.adobe.com/document-services/docs/overview/pdf-electronic-seal-api/)
 
-<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/apis/"  repeat="6"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
+![EMPTY_ALT](images/Electronic_Seal.jpg)
+
+<TabsBlock orientation="vertical" slots="heading, image, content" APIReference = "https://developer.adobe.com/document-services/docs/overview/"  repeat="6"  theme="dark" className='bgBlue code-block-0 Designed-for-developers  home-code-block tabBlockAlign'/>
 
 ### Create PDF from Word
 
@@ -137,17 +124,11 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <CreatePdfFromUrl/>
 
-### Dynamic PDF Document Generation
+### Auto-tag PDF
 
-![EMPTY_ALT](images/ic-dynamic-pdf-gen-40.svg)
+![EMPTY_ALT](images/autotagIcon.svg)
 
-<DynamicPdfDocumentGeneration/>
-
-### E-seal API
-
-![EMPTY_ALT](images/electronic-seal.svg)
-
-<ESealAPI/>
+<AccessibilityAutoTagApi/>
 
 ### Extract PDF Content & Structure
 
@@ -155,29 +136,28 @@ Use our cloud-based REST APIs and SDKs designed for developers to build new, inn
 
 <ExtractPdfContentStructure/>
 
+### Dynamic PDF Document Generation
+
+![EMPTY_ALT](images/ic-dynamic-pdf-gen-40.svg)
+
+<DynamicPdfDocumentGeneration/>
+
 ### Embed PDF for viewing and analytics
 
 ![EMPTY_ALT](images/embed.svg)
 
 <EmbedPdfViewingAnalytics/>
 
-### Auto-tag PDF
+### E-seal API
 
-![EMPTY_ALT](images/autotagIcon.svg)
+![EMPTY_ALT](images/electronic-seal.svg)
 
-<AccessibilityAutoTagApi/>
+<ESealAPI/>
 
 <WrapperComponent slots="content" theme="lightest" className="why-docment-services"/>
 
 <WhyDocument />
 
-<WrapperComponent slots="content" repeat="1" theme="light" className="Use-cases-for-Adobe-Document-Services"/>
-
-<HomeResourceCard />
-
-<TextBlock slots="buttons" isCentered theme="light"  className='padding-5 Use-cases-for-Adobe-Document-Services'/>
-
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="Customer-Stories"/>
 

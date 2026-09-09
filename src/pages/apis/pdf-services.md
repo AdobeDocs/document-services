@@ -8,11 +8,9 @@ import WhyPDFServicesAPI from './pdf-services/why-pdf-services-api.md';
 import KeyFeaturesCodeBlock from './pdf-services/key-features-code-block.md';
 import AWSMSCarousel from './pdf-services/aws-ms-carousel.md';
 import StartModifyingPDF from './pdf-services/start-modifying-pdf.md';
-import UseCasesResourceCard from './pdf-services/use-cases-resource-cards.md';
 import DocumentServicesProductCards from './pdf-services/document-services-product-cards.md';
 import AdobePDFExtractAPI from './pdf-services/adobe-pdf-extract-api.md';
 import {APIPixelRetargeting} from '../../components/retargetting';
-import {NewsLetterBlade} from '../../components/news-letter-blade';
 import EsealApiAnnouncement from './e-seal-api-announcement.md'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
@@ -36,33 +34,15 @@ apiHeroAssetImg doc-service-hero
 <!-- Key Features Code Block -->
 <KeyFeaturesCodeBlock />
 
-<!--Adobe PDF Extract API -->
-
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="AdobePDFExtractAPI"/>
-
-<AdobePDFExtractAPI />
-
 <!--Stepper Block -->
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="start-modifying-pdf"/>
 
 <StartModifyingPDF />
 
-<!--Resource Card Block -->
-
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="Use-cases-for-PDF-services-API"/>
-
-<UseCasesResourceCard />
-
-<TextBlock slots="buttons" isCentered theme="lightest"  className='padding-5 Use-cases-for-PDF-services-API'/>
-
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
-
 <WrapperComponent slots="content" repeat="1" theme="light" className="other-Adobe-Document-Services-APIs"/>
 
 <DocumentServicesProductCards />
-
-<NewsLetterBlade className="news-letter"/>
 
 <DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="How-to-get-started" />
 

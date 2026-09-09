@@ -12,7 +12,7 @@ carousel-micosoft
 
 ### Quickly automate document processes without writing any code using the new Adobe PDF Services Connector.
 
-- [Learn more](http://www.adobe.com/go/powerautomate_help)
+- [Learn more](https://helpx.adobe.com/acrobat/web/use-acrobat-extensions/adobe-pdf-services-connector/connect-for-power-automate.html)
 
 carousel-ui-path
 

@@ -12,7 +12,7 @@ carousel-micosoft
 
 ### Automate document generation processes across CRMs, forms, and apps using our PDF Services Connector
 
-- [Learn more](http://www.adobe.com/go/powerautomate_help)
+- [Learn more](https://helpx.adobe.com/acrobat/web/use-acrobat-extensions/adobe-pdf-services-connector/connect-for-power-automate.html)
 
 carousel-ui-path
 

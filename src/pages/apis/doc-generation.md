@@ -5,7 +5,6 @@ ogImage: og-image/doc-gen-hero-tablet.png
 ---
 
 import DgDownloadSample from './doc-generation/dg-download-sample'
-import DgUseCaseDocServiceAPI from './doc-generation/dg-use-case-doc-service-api'
 import DgStartModifyingTitle from './doc-generation/dg-start-modifying-pdf.md'
 import DgWhyDocTitle from './doc-generation/dg-why-doc-gen-api.md'
 import DgKeyFeatures from './doc-generation/dg-key-features.md'
@@ -15,7 +14,6 @@ import {MobileOptimize} from '../../components/mobileOptimize'
 import {AdobeMsBlade} from '../../components/adobeMicrosoftBlade'
 import '../../styles/doc-generation.css'
 import {APIPixelRetargeting} from '../../components/retargetting'
-import {NewsLetterBlade} from '../../components/news-letter-blade';
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
@@ -65,21 +63,11 @@ apiHeroAssetImg doc-gen-invoice
 
 <DgStartModifyingTitle/>
 
-<!-- Use case for Acrobat Services API -->
-<WrapperComponent slots="content" repeat="1" theme="lightest" className="Use-cases-for-Document-Generation-API"/>
-
-<DgUseCaseDocServiceAPI className="Use-cases-for-Document-Generation-API"/>
-
-<TextBlock slots="buttons" theme="lightest" isCentered className="padding-5 Use-cases-for-Document-Generation-API"/>
-
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <!-- Explore other Adobe Document Cloud services -->
 
 <WrapperComponent slots="content" repeat="1" theme="light" className="Explore-other-Adobe-Document-Services-APIs"/>
 <DgExploreOtherAdobeDoc/>
-
-<NewsLetterBlade className="news-letter"/>
 
 <!-- Summary Block -->
 <DCSummaryBlock slots="image, heading, text, buttons" theme="lightest" background="white" className="We-are-ready-to-help" />

@@ -4,7 +4,7 @@
 
 <AccordionItem header="How do I see how many API transactions or calls I've used?" slot_id="account-management-how-do-i-see-how-many-api-transactions-or-calls">
 
-For Adobe Enterprise Terms Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage.
+For Adobe Enterprise Term Licensing Agreement (ETLA) customers, you will receive monthly emails on your usage. All customers, including Free Tier and VIP, can also check usage in real time using our usage [tracking tool](https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/main.html?usage-dialog=true).
 
 </AccordionItem>
 
@@ -88,12 +88,6 @@ follow the workflow below:
 
 <Accordion>
 
-<AccordionItem header="Is Adobe Acrobat Services (PDF Services API and PDF Embed API) HIPAA compliant?" slot_id="data-security--privacy-is-adobe-document-services--hipaa-compliant">
-
-No, it is not. Customer may process certain sensitive personal information pursuant to the applicable terms enterprise <a href="https://www.adobe.com/legal/terms/enterprise-licensing/overview.html">General Terms</a> or the Developer <a href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20210125.pdf">Terms of Use</a>.
-
-</AccordionItem>
-
 <AccordionItem header="Where are the data centers for Adobe Acrobat Services based?" slot_id="data-security--privacy-where-are-the-data-centers-for-adobe-document-services-based">
 
 Data centers for Acrobat Services are hosted in United States and Europe. Customers can access the region of their choosing.
@@ -118,7 +112,7 @@ All server-side components of PDF Services API and PDF Embed API are hosted in t
 
 <AccordionItem header="How are data transfers by Adobe Acrobat Services secured?" slot_id="data-security--privacy-how-are-data-transfers-by-adobe-document-services-secured">
 
-The complete data transfer happens over sure HTTPS channel using TLS encryption.
+All data transfers happen over a secure HTTPS channel using TLS encryption.
 
 </AccordionItem>
 

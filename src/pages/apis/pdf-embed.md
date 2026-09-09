@@ -10,14 +10,12 @@ import PDFAnalytics from './pdf-embed/pdf-Analytics';
 import Collaborative from './pdf-embed/collaborative-settings.md';
 import SaveControls from './pdf-embed/save-controls.md';
 import MenuTool from './pdf-embed/menu-tool-options';
-import UseCase from './pdf-embed/use-case.md';
 import StartEmbedding from './pdf-embed/start-embedding.md';
 import WhyPdfEmbed from './pdf-embed/why-pdf-embed.md';
 import KeyFeatures from './pdf-embed/key-features.md'
 import ExploreAdobe from './pdf-embed/explore-adobe.md'
 import Integration from './pdf-embed/integration.md'
 import {APIPixelRetargeting} from '../../components/retargetting'
-import {NewsLetterBlade} from '../../components/news-letter-blade';
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout variant="fullwidth" className="herobgImage Hero-Banner"/>
 
@@ -85,19 +83,10 @@ apiHeroAssetImg doc-embed-hero
 
 <StartEmbedding/>
 
-<WrapperComponent slots="content" theme="lightest" className="Use-cases-for-PDF-services-API"/>
-
-<UseCase />
-
-<TextBlock slots="buttons" isCentered theme="lightest" className='padding-5 Use-cases-for-PDF-services-API'/>
-
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
 
 <WrapperComponent slots="content" theme="light" className="other-Adobe-Document-Services-APIs"/>
 
 <ExploreAdobe />
-
-<NewsLetterBlade className="news-letter"/>
 
 <DCSummaryBlock slots="heading, text, buttons" theme="lightest" background="white" className="How-to-get-started"/>
 

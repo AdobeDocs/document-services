@@ -4,9 +4,9 @@ title : Adobe Developer - Acrobat Services Accessibility Form - Form
 
 <TextBlock slots="heading, text" width="100%" theme="lightest"  alignment="yes"  className="py-0 text-align-left div-p-0 left-content accessibility-text-blade text-blade-header heading-accessibility" />
 
-## Interested in Early Access to the PDF Accessibility Auto-Tag API?
+## Interested in Early Access to the PDF Accessibility APIs?
 
-Use this form to request early access to the PDF Accessibility Auto-Tag API. The API, powered by Adobe Sensei AI, improves the accessibility of PDF files by auto-tagging content for better readability using screen readers and other assistive technology.
+Use this form to request early access to the PDF Accessibility APIs. The API, powered by Adobe Sensei AI, improves the accessibility of PDF files by auto-tagging content for better readability using screen readers and other assistive technology.
 
 <TextBlock slots="text" width="100%" theme="lightest"  alignment="yes" paddingTop="5" paddingBottom='5' className="py-0 div-p-0 left-content accessibility-text-blade"/>
 

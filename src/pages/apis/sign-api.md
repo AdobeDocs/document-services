@@ -6,10 +6,8 @@ ogImage: og-image/sign-up-meta.png
 import TakeYourProject from './sign-api/take-your-project-nxt-lvl.md'
 import TakeYourProjectCont from './sign-api/take-your-project-content.md'
 import PartnershipType from './sign-api/partnership-type.md'
-import Usecase from './sign-api/use-case.md'
 import OurPartners from './sign-api/our-partners.md'
 import OurPartnersTwo from './sign-api/our-partners-two.md'
-import {NewsLetterBlade} from '../../components/news-letter-blade';
 import EsealApiAnnouncement from './e-seal-api-announcement.md'
 
 <Hero slots="heading, text, assetsImg, buttons" customLayout primaryOutline variant="fullwidth" primaryOutline variantsTypeSecondary='primary'  className="signApiHerobgImage Hero-Banner hero-btn-color"/>
@@ -21,7 +19,7 @@ Adobe Acrobat Sign APIs make it easy for developers like you to integrate e-sign
 apiHeroAssetImg sign-api-hero
 
 - [Create account](https://www.adobe.com/sign/developer-form.html)
-- [View documentation](https://opensource.adobe.com/acrobat-sign/developer_guide/)
+- [View documentation](https://developer.adobe.com/acrobat-sign/)
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 
@@ -81,15 +79,6 @@ Add e-signatures as a feature or service within your own application and deliver
 
 - [Learn more](https://adobe.lookbookhq.com/adobesignpartnerpgm/buildtestdeliver)
 
-<WrapperComponent slots="content" repeat="1" theme="light" className="why-pdf-services Why-PDF-Services-API"/>
-
-<Usecase/>
-
-<TextBlock slots="buttons" isCentered theme="light" variantsTypePrimary='secondary' variantStyleFill = "outline"   className='padding-5 Use-cases-for-Adobe-Document-Services view-all-cta'/>
-
-- [View all use cases](/src/pages/use-cases/agreements-and-contracts/sales-proposals-and-contracts/)
-
-<NewsLetterBlade className="news-letter"/>
 
 <WrapperComponent slots="content" repeat="1" theme="lightest" className="why-pdf-services Why-PDF-Services-API"/>
 

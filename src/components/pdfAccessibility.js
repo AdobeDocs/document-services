@@ -271,7 +271,7 @@ const PdfAccessibility = ({}) => {
     <form className="form-container Sales-Form" id="my_form">
       <div className="head-container-accessibility">
         <div className="caption">
-          Request early access to the PDF Accessibility Auto-Tag API
+          Request early access to the PDF Accessibility APIs
         </div>
         <div className="faq-text">
           For technical inquiries, submit a tech support request{" "}

@@ -12,7 +12,7 @@
 
 module.exports = {
   siteMetadata: {
-    siteTitle:'Adobe Developers',
+    siteTitle: 'Adobe Developers',
     author: process.env.AUTHOR || 'Adobe I/O — Adobe Developers',
     creator: process.env.CREATOR || '@adobedevs',
     siteUrl: process.env.SITE_URL || 'https://developer.adobe.com/',
@@ -39,13 +39,13 @@ module.exports = {
             path: 'apis/pdf-services/'
           },
           {
-            title: 'PDF Accessibility Auto-Tag',
-            description: 'Auto-tag PDF content to improve accessibility',
-            path: 'apis/pdf-accessibility-auto-tag/'
+            title: 'PDF Accessibility APIs',
+            description: 'Auto-Tag API and Checker API to improve accessibility',
+            path: 'apis/pdf-accessibility-apis/'
           },
           {
             title: 'PDF Extract',
-            description: 'Extract text, tables, images, and document structure',
+            description: 'Extract text, tables, images, and document structure to JSON or Markdown',
             path: 'apis/pdf-extract/'
           },
           {
@@ -54,14 +54,14 @@ module.exports = {
             path: 'apis/doc-generation/'
           },
           {
-            title: 'Electronic Seal API',
-            description: 'Electronically seal PDF documents at scale to provide document athenticity and identity',
-            path: 'apis/electronic-seal-api/'
-          },
-          {
             title: 'PDF Embed',
             description: 'Embed high-fidelity PDFs in web apps with analytics',
             path: 'apis/pdf-embed/'
+          },
+          {
+            title: 'Power Automate Connector',
+            description: 'Build workflows on Microsoft Power Platform easily',
+            path: 'apis/microsoft-pa-integration/'
           },
           {
             title: 'Sign API',
@@ -69,15 +69,11 @@ module.exports = {
             path: 'apis/sign-api/'
           },
           {
-            title: 'Power Automate Connector',
-            description: 'Build workflows on Microsoft Power Platform easily',
-            path: 'apis/microsoft-pa-integration/'
+            title: 'Electronic Seal API',
+            description: 'Electronically seal PDF documents at scale to provide document athenticity and identity',
+            path: 'apis/electronic-seal-api/'
           },
         ]
-      },
-      {
-        title: 'Use Cases',
-        path: 'use-cases/agreements-and-contracts/sales-proposals-and-contracts.md'
       },
       {
         title: 'Pricing',
@@ -87,21 +83,21 @@ module.exports = {
       {
         title: 'Resources',
         menu: [{
-          title: 'Developer Resources',
-          path: 'resources/'
+          title: 'Customer Stories',
+          path: 'resources/customer-stories/'
         }, {
           title: 'Forum',
           path: 'https://community.adobe.com/t5/document-services-apis/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all'
         }, {
           title: 'Licensing',
           path: 'https://developer.adobe.com/document-services/docs/overview/limits/'
-        },{
+        }, {
           title: 'Sales FAQ',
           path: 'faq/sales/'
-        },{
+        }, {
           title: 'Tech Support FAQ',
           path: 'faq/tech-support/ '
-        },{
+        }, {
           title: 'Contact Us',
           path: 'pricing/contact/'
         }]
@@ -118,7 +114,7 @@ module.exports = {
             path: '/document-services/docs/overview/pdf-services-api/index.md'
           },
           {
-            title: 'PDF Accessibility Auto-Tag API',
+            title: 'PDF Accessibility APIs',
             path: '/document-services/docs/overview/pdf-accessibility-auto-tag-api/index.md'
           },
           {
@@ -137,12 +133,12 @@ module.exports = {
             title: 'PDF Embed API',
             path: '/document-services/docs/overview/pdf-embed-api/index.md'
           },
+          {
+            title: "REST APIs",
+            path: 'document-services/docs/apis/index.md'
+          }
         ]
       },
-      {
-        title: "REST APIs",
-        path: '/document-services/docs/apis/index.md'
-      }
     ],
     techSupportFAQMenus: [
       {
@@ -182,6 +178,10 @@ module.exports = {
       {
         title: 'Ordering',
         path: '/faq/sales/#ordering',
+      },
+      {
+        title: 'Pricing',
+        path: '/faq/sales/#pricing',
       },
       {
         title: 'Support',
@@ -226,6 +226,10 @@ module.exports = {
       {
         title: 'Ordering',
         path: '/faq/sales/#ordering',
+      },
+      {
+        title: 'Pricing',
+        path: '/faq/sales/#pricing',
       },
       {
         title: 'Support',
@@ -236,7 +240,7 @@ module.exports = {
       {
         title: 'Agreements and Contracts',
         path: 'use-cases/agreements-and-contracts',
-        icon:'ic-category-agreements',
+        icon: 'ic-category-agreements',
         pages: [
           {
             title: 'Sales Proposals and Contracts',
@@ -267,7 +271,7 @@ module.exports = {
       {
         title: 'Content & Data Extraction',
         path: 'use-cases/content-and-data-extraction',
-        icon:'ic-extract-40',
+        icon: 'ic-extract-40',
         pages: [
           {
             title: 'Content Based Process Automation',
@@ -286,7 +290,7 @@ module.exports = {
       {
         title: 'Content Publishing',
         path: 'use-cases/content-publishing',
-        icon:'ic-category-content-publishing',
+        icon: 'ic-category-content-publishing',
         pages: [
           {
             title: 'Digital Content Publishing',
@@ -333,7 +337,7 @@ module.exports = {
       {
         title: 'Collaboration',
         path: 'use-cases/collaboration',
-        icon:'ic-category-collaboration',
+        icon: 'ic-category-collaboration',
         pages: [
           {
             title: 'Student-Teacher Collaboration',
@@ -348,7 +352,7 @@ module.exports = {
       {
         title: 'Financial',
         path: 'use-cases/financial',
-        icon:'ic-category-financial',
+        icon: 'ic-category-financial',
         pages: [
           {
             title: 'Data Analysis',
@@ -375,7 +379,7 @@ module.exports = {
       {
         title: 'Archiving and Retrieval',
         path: 'use-cases/archiving-and-retrieval',
-        icon:'ic-category-archiving',
+        icon: 'ic-category-archiving',
         pages: [
           {
             title: 'Search and Indexing',

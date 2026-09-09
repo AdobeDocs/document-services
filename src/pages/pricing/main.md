@@ -1,6 +1,6 @@
 ---
 title: Adobe PDF Services API Pricing | PDF Embed API Pricing | Adobe Acrobat Services Pricing
-description: Create, convert, extract data, OCR PDFs and more with PDF Services API. Pay as you go and volume pricing plans. Get started today with a free tier of 500 Document Transactions for 6 months.
+description: Create, convert, extract data, OCR PDFs and more with PDF Services API. Pay as you go and volume pricing plans. Get started today with a free tier of 500 Document Transactions per month.
 ---
 
 import PDFEmbed from './pdf-embed-api.md'
@@ -28,5 +28,5 @@ When you’re ready to purchase, flexible options to suit your needs.
 
 Have questions about the Acrobat Services APIs?
 
-- [Go to the Adobe Forum](https://www.adobe.com/go/pdftoolsapi_forum)
+- [Go to the Adobe Forum](https://community.adobe.com/acrobat-services-api-19)
 - [Contact us](/src/pages/pricing/contact.md/)

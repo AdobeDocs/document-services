@@ -10,7 +10,7 @@ title: Adobe Developer — DC Platform SDK Resources
 
 - Volume and multi-product discounts
 
-- Access to all 15+ PDF Services, including PDF Extract, PDF Accessibility Auto-Tag API, Adobe PDF Electronic Seal API, and Document Generation
+- Access to all 15+ PDF Services, including PDF Extract, PDF Accessibility APIs, Adobe PDF Electronic Seal API, and Document Generation
 
 - Scalable for high volume needs
 
